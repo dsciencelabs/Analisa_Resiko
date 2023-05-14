@@ -11,26 +11,26 @@ rmd_files: ["index.Rmd",
            "chapters/02-Frequency.Rmd",
            "chapters/03-LossSeverity.Rmd",
            "chapters/04-ModelSelection.Rmd",
-           "chapters/05-AggregateLossModels.Rmd"
+           "chapters/05-AggregateLossModels.Rmd",
+           "chapters/06-SimulationNoKableExtra.Rmd",
+           "chapters/07-PremiumFoundations.Rmd",
+           "chapters/08-RiskClassification.Rmd",
+           "chapters/09-Credibility.Rmd",
+           "chapters/10-PortfolioMgt.Rmd",
+           "chapters/11-LossReserves.Rmd",
+           "chapters/12-ExpRatingBonusMalus.Rmd",
+           "chapters/13-DataSystems.Rmd",
+           "chapters/14-DependenceModels.Rmd",
+           "chapters/15-ReviewStatInference.Rmd",
+           "chapters/16-IteratedExpectations.Rmd",
+           "chapters/17-MaximumLikeTheory.Rmd",
+           "chapters/18-DistributionTable.Rmd",
+           "chapters/19-NotationConventions.Rmd",
+           "chapters/20-PdfGlossary.Rmd",
+           "chapters/21-Bibliography.Rmd"
           ]
 
 language:
   ui:
     chapter_name: "Bab "
-
-           # "chapters/SimulationNoKableExtra.Rmd", 
-           # "chapters/PremiumFoundations.Rmd",
-           # "chapters/RiskClassification.Rmd",
-           # "chapters/Credibility.Rmd",
-           # "chapters/PortfolioMgt.Rmd",
-           # "chapters/LossReserves.Rmd",
-           # "chapters/ExpRatingBonusMalus.Rmd",
-           # "chapters/DataSystems.Rmd",
-           # "chapters/DependenceModels.Rmd",
-           # "chapters/ReviewStatInference.Rmd", 
-           # "chapters/IteratedExpectations.Rmd", 
-           # "chapters/MaximumLikeTheory.Rmd", 
-           # "chapters/DistributionTable.Rmd",
-           # "chapters/NotationConventions.Rmd",
-           # "chapters/PdfGlossary.Rmd",
-           # "chapters/Bibliography.Rmd"
+ 
