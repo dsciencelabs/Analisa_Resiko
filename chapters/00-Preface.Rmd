@@ -46,16 +46,16 @@ Sebagian besar dari isi buku ini diadopsi dari **[Loss Data Analytics](https://o
 
 <img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/yosia.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
-- **Yosia** adalah salah satu mahasiwa terbaik di jurusan Statistika Universitas Matana. Dia juga memiliki minat dalam pembelajaran sains data dan akuturia khususnya melakukan komputasi dengan menggunakan R dan Python. Yosia bercita-cita suatu saat nanti akan menjadi seseorang yang ahli dibidang aktuaria maupun sain data. 
+- **Yosia** adalah salah satu mahasiwa terbaik di jurusan Statistika Universitas Matana. Dia juga memiliki minat dalam pembelajaran sains data dan akuturia khususnya melakukan komputasi dengan menggunakan R dan Python. Yosia bercita-cita suatu saat nanti akan menjadi seseorang yang ahli dibidang aktuaria maupun sain data. Yosia adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus.
 
 <img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/clara.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
-- **Clara Della** adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus.
+- **Clara Della** adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus. adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus.
 
 
 <img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/karen.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
-- **Karen** adalah mahasiswi jurusan Statistik di Universitas Matana yang memiliki keahlian penelitiannya dengan menggunakan teori pemodelan, manajemen risiko, dan optimasi.
+- **Karen** adalah mahasiswi jurusan Statistik di Universitas Matana yang memiliki keahlian penelitiannya dengan menggunakan teori pemodelan, manajemen risiko, dan optimasi. adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus.
 
 
 <img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/brigita.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
@@ -66,7 +66,7 @@ Sebagian besar dari isi buku ini diadopsi dari **[Loss Data Analytics](https://o
 
 <img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/naufal.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
-- **Naufal** adalah seorang profesor di Universitas Matana. Dia memiliki gelar di bidang Matematika dan Ph.D. dalam Sains: Matematika, diperoleh di University of Antwerp. Selama Ph.D., ia berhasil mengambil Magister Asuransi dan Magister Teknik Keuangan dan Aktuaria, keduanya di KU Leuven. Penelitiannya berfokus pada adaptasi dan penerapan metode statistik yang kuat untuk data asuransi dan keuangan.
+- **Naufal** adalah seorang profesor di Universitas Matana. Dia memiliki gelar di bidang Matematika dan Ph.D. dalam Sains: Matematika, diperoleh di University of Antwerp. Selama Ph.D., ia berhasil mengambil Magister Asuransi dan Magister Teknik Keuangan dan Aktuaria, keduanya di KU Leuven. Penelitiannya berfokus pada adaptasi dan penerapan metode statistik yang kuat untuk data asuransi dan keuangan. adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, ia juga sudah pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat **(PKM)**. Dia juga aktif dalam berbagai aktifitas organisasi kampus.
 
 <br/>
 
