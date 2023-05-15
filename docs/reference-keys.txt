@@ -18,3 +18,13 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+policy-deductibles
+policy-limit
+policy-deductible-and-policy-limit
+coinsurance-and-inflation
+reinsurance
+coinsurance-and-reinsurance
+mdmmm
+mdmem
+mdmm
+modifikasi-pertanggungan
