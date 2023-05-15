@@ -374,7 +374,72 @@ Tuliskan semua BAB 1 disini
 
 # Frequency Modeling
 
-Tuliskan semua Bab2 disini
+## 2.7 Goodness of Fit
+
+Dalam Materi ini akan mempelajari:
+
+- Perhitungan Statisik dengan menggunakan Goodness of fit dalam membandingkan distribusi distrik yang dihipotesiskan dengan sample pengamatan diskrit
+
+- Perbandingan Statistik dengan Distribusi referensi dalam menilai kecukupan atau keseluruhan dari fit tersebut. 
+
+
+Setelah membahas 3 Distribusi Frekuensi Dasar dengan beserta perluasan melalui Pemotongan dan modifikasi nol, pada kelas tersebut masih tetap parametrik dan karena pada dasarnya merupakan bagian kecil dari kelas dari semua distribusi frekuensi yang mungkin (himpunan distribusi pada bilangan bulat non-negatif). Maka dari itu meskipun metode untuk mengestimasi parameter yang tidak diketahui, distribusi yang cocok tidak menjadi representasi yang baik dari distribusi yang mendasari jika yang terakhir jauh dari kelas distribusi yang digunakan untuk pemodelan. Karena dapat dibuktikan dan ditunjukkan bahwa penaksir kemungkinan maksimum konvergen ke suatu nilai sehingga distribusi yang sesuai adalah proyeksi **Kullback-Leibler** dari distribusi yang mendasari pada kelas distribusi yang digunakan untuk pemodelan.Dalam metode pengujian statistik yang digunakan adalha chi-kuadrat Pearson ntuk memeriksa kecocokan dari distribusi. 
+
+
+- Pada tahun 1993 sebuah portofolio yang terdiri dari n = 7.483 polis asuransi mobil dari sebuah perusahaan asuransi besar di Singapura memiliki distribusi kecelakaan mobil per pemegang polis seperti yang diberikan pada Tabel 2.4.
+
+```{r image1, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("1.png")
+```
+
+Dengan menggunakan Distribusi Poisson maka  maximum likelihood estimator (mle) for λ dengan rata rata Poisson merupakan rata rata sampel yang diberikan :
+
+$$
+\begin{align}
+\bar{N}=\frac{0 ⋅ 6996 +1 ⋅  455 + 2⋅28+3⋅4+4⋅0}{7483}=0.06989
+\end{align}
+$$
+
+Jika menggunakan Poisson ($\hat{λ}MLE$) sebagai distribusi yang cocok, maka perbandingan tabel dari jumlah yang cocok dan jumlah yang diamati diberikan oleh Tabel 2.5 dengan $\hat{p}_k$ mewakili estimasi probabilitas di bawah distribusi Poisson yang sesuai.
+
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("2.png")
+```
+
+perbandingan tabel tidak cukup untuk menguji hipotesis secara statistik bahwa distribusi yang mendasarinya memang Poisson. Statistik chi-kuadrat Pearson adalah ukuran statistik kecocokan yang dapat digunakan. Untuk menjelaskan statistik ini,dapat dimisalkan sebuah set data berukuran $n$ yang dikelompokkan menjadi $k$  dengan $m_k/n$ dan $\hat{p}_k$ untuk $k = 1...,K$ masing-masing merupakan probabilitas observasi dan estimasi dari sebuah observasi yang termasuk dalam sel ke-k masing-masing. Statistik uji chi-square Pearson kemudian diberikan oleh
+
+$$
+\begin{align}
+\sum_{k=1}^{K}\frac{(m_k−n\hat{p}_k)^2}{n\hat{p}_k}
+\end{align}
+$$
+Motivasi untuk statistik di atas berasal dari fakta bahwa
+
+$$
+\begin{align}
+\sum_{k=1}^{K}\frac{(m_k−np_k)^2}{np_k}
+\end{align}
+$$
+ 
+Dimana memiliki distribusi chi-kuadrat pembatas dengan $K-1$  derajat kebebasan jika $p_k$ dengan $k = 1,...,K$ yang merupakan probabilitas sel yang sebenarnya. Selanjutnya menganggap bahwa hanya data yang dirangkum yang diwakili oleh $m_k$ dengan $k = 1,...,K$ yang tersedia. Selanjutnya, jika $(p_k)$ merupakan fungsi dari s parameter-parameter, maka dapat mengganti $(p_k)$ dengan probabilitas yang diestimasi secara efisien $(\hat{p}_k)$ yang akan menghasilkan statistik yang tetap memiliki distribusi chi-square yang membatasi tetapi dengan derajat kebebasan yang diberikan oleh $K-1-s$ Estimasi yang efisien tersebut dapat diturunkan misalnya dengan menggunakan metode mle (dengan multinomial likelihood) atau dengan menaksir parameter $s$ yang meminimumkan statistik chi-square Pearson di atas. Sebagai contoh, kode R di bawah ini menghitung estimasi untuk $λ$ dengan cara yang terakhir dan menghasilkan estimasi 0.06623153.
+
+
+```{r}
+m = c(6996,455,28,4,0)
+op =  m/sum(m)
+g= function(lam){sum((op-c(dpois(0:3,lam),1-ppois(3,lam)))^2)};
+optim(sum(op*(0:4)),g,method="Brent",lower=0,upper=10)$par
+
+```
+
+Ketika seseorang menggunakan data lengkap untuk mengestimasi probabilitas, distribusi asimtotik berada di antara distribusi chi-kuadrat dengan parameter $K-1$ dan $K-1-s$. Dalam praktiknya,  hal yang umum untuk mengabaikan kehalusan ini dan mengasumsikan chi-kuadrat pembatas memiliki $K-1-s$ derajat kebebasan. Menariknya, jalan pintas praktis ini bekerja dengan cukup baik dalam kasus distribusi Poisson.
+
+Untuk data otomotif Singapura, statistik chi-kuadrat Pearson sama dengan 41,98 dengan menggunakan $mle$ data lengkap untuk $λ$.Dengan menggunakan distribusi pembatas chi-kuadrat dengan $5-1-1=3$ derajat kebebasan, kita melihat bahwa nilai 41,98 berada jauh di bagian ekor (persentil ke-99 berada di bawah 12). Oleh karena itu, kita dapat menyimpulkan bahwa distribusi Poisson memberikan kecocokan yang tidak memadai untuk data tersebut.
+
+Selanjutya dalam mendefinisikan sel sedemikian rupa sehingga memiliki setidaknya 80%, jika tidak semua, sel memiliki jumlah yang diharapkan lebih besar dari 5. Selain itu, jelas bahwa jumlah sel yang lebih besar menghasilkan kekuatan yang lebih tinggi dari pengujian, dan karenanya aturan praktis yang sederhana adalah memaksimalkan jumlah sel sedemikian rupa sehingga setiap sel memiliki setidaknya 5 pengamatan.
+
+# Referensi 
+- https://openacttexts.github.io/Loss-Data-Analytics/ChapFrequency-Modeling.html#S:goodness-of-fit
 
 <!--chapter:end:chapters/02-Frequency.Rmd-->
 
