@@ -14,12 +14,32 @@ description: "Loss Data Analytics adalah teks yang interaktif, online, tersedia 
    - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah.
    - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia."
 ---
+<<<<<<< HEAD
+=======
+--- 
+title: "Analisis Resiko"
+author: "Bakti Siregar, M.Sc"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["references/LDAReference2020A.bib"]
+biblio-style: econPeriod
+link-citations: yes
+github-repo: dsciencelabs/Bookdown-Tempalate_R
+description: "Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas.
+   - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam.
+   - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah.
+   - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia."
+---
+>>>>>>> dfd4584bf4d442f4688a48833d60036cd9e16d8c
 
 
 
 <!--chapter:end:index.Rmd-->
 
 
+<<<<<<< HEAD
 ```{r include = FALSE}
 library("actuar")
 library("alabama")
@@ -178,11 +198,19 @@ HideProofTheory <- function(arg1,arg2){
 }
 
 ```
+=======
+
+
+<!--chapter:end:references/Packages.Rmd-->
+
+
+>>>>>>> dfd4584bf4d442f4688a48833d60036cd9e16d8c
 
 
 <!--chapter:end:references/Glossary.Rmd-->
 
 
+<<<<<<< HEAD
 ```{r echo = FALSE, eval = FALSE}
 # Make eval = TRUE for pdf output
 # Make eval = FALSE for html output
@@ -216,10 +244,13 @@ HideProofTheory <- function(arg1,arg2){
 }
 
 ```
+=======
+>>>>>>> dfd4584bf4d442f4688a48833d60036cd9e16d8c
 
 
 <!--chapter:end:references/PdfOutput.Rmd-->
 
+<<<<<<< HEAD
 # Kata Pengantar {-}
 
 
@@ -314,6 +345,22 @@ Berikut ini dilampirkan beberapa peninjau atau pembaca yang telah memberikan sar
 
 
 
+=======
+
+# Kata Pengantar {-}
+
+Placeholder
+
+
+## Deskripsi Buku {-}
+###  Petunjuk Penggunaan {-}
+### Manfaat {-}
+### Mengapa Analisa Resiko?  {-}
+## Ucapan Terima Kasih {-}
+## Kontributor {-}
+## Kritik & Saran {-}
+
+>>>>>>> dfd4584bf4d442f4688a48833d60036cd9e16d8c
 <!--chapter:end:chapters/00-Preface.Rmd-->
 
 # Introduction to Loss Data Analytics
