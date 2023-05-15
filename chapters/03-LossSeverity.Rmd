@@ -1,3 +1,118 @@
 # Modeling Loss Severity
 
-Tuliskan semua Bab3 disini
+# 3.4 modifikasi pertanggungan
+
+Coverage modifications atau modifikasi pertanggungan adalah perubahan yang dibuat pada syarat dan ketentuan polis asuransi. Perubahan ini dapat diprakarsai oleh pemegang polis atau perusahaan asuransi, dan dirancang untuk mengubah pertanggungan yang diberikan oleh polis.
+
+Modifikasi pertanggungan dapat dilakukan karena berbagai alasan. Sebagai contoh, pemegang polis mungkin ingin meningkatkan batas pertanggungan pada polis mereka untuk melindungi diri mereka sendiri dari potensi kerugian. Atau, mereka mungkin ingin menambah atau menghapus jenis pertanggungan tertentu, seperti menambahkan asuransi banjir pada polis pemilik rumah atau menghapus pertanggungan tabrakan dari polis mobil.
+
+pada bagian ini membahas mengenai
+
+## 1. policy deductibles
+
+pada polis deductible biasa, pemegang polis setuju untuk menanggung sejumlah klaim asuransi sebelum perusahaan asuransi membayarkan klaim. Sehingga bagian kerugian yang ditanggung dan menjadi tanggung jawab pemegang polis untuk membayar deductible dengan uang mereka sendiri.
+
+sebagai contoh jika sebuah polis memiliki daductible sebesar Rp.500 dan pemegang polis mengalami kerugian dengan biaya sebesar Rp.2500, maka perusahaan asuransi hanya akan membayar Rp.2000 (yaitu total biaya perbaikan dikurangi deductible Rp.500)
+
+deductible sendiri di notasikan dengan $d$, maka
+
+- jika kerugian melebihi $d$ atau nilai deductible, maka perusahaan asuransi bertanggung jawab untuk menanggung total kerugian dikurangin dengan deductible atau $d$
+
+- tergantung dengan perjanjiannya, deductible dapat berlaku untuk setiap kerugian atau total dari seluruh kerugian.
+
+jumlah dari deductible biasanya dipilih pada saat pemegang polis membeli polis dan disesuaikan dengan kebutuhannya selama masa berlaku polis. deductible yang lebih tinggi akan menghasilkan pembayaran premi yang lebih rendah, dikarenakan pemegang polis menanggung lebih banyak saat terjadinya kerugian.
+
+lalu jika $X$ di notasikan sebagai kerugian yang diterima oleh pemegang polis dan $Y$ dinotasikan sebagai jumlah klaim yang dibayarkan oleh perusahaan asuransi, maka ada dua variabel berdasarkan pembayarannya kepada pemegang polis.
+a. pembayaran per kerugian
+b. pembayaran per pembayaran
+
+pada variabel perbayaran per kerugian, dinotasikan sebagai $Y^L$ atau $(X-d)_+$ atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
+
+\begin{align*}
+Y^{L} = \left( X - d \right)_{+} 
+= \left\{ \begin{array}{cc}
+0 & X \le d, \\
+X - d & X > d  
+\end{array} \right. .
+\end{align*}
+
+disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai $Y^P$ didefinisikan ketika hanya terjadinya pembayaran, terutama $Y^P$ sama dengan $X-d$ dengan syarat $[X>d]$, atau dinotasikan sebagai $Y^P=X-d||X>d$ atau dituliskan sebagai
+
+\begin{align*}
+Y^{P} = \left\{ \begin{matrix}
+\text{Undefined} & X \le d \\
+X - d & X > d .
+\end{matrix}  \right.
+\end{align*}
+
+disini $Y^P$ disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari $d$ tidak dilaporkan dan nilai dari $d$ berubah sebesar $d$
+
+ketika nilai distribusi dari nilai kerugian bersifat kontinu, namun distribusi dari $Y^L$ adalah gabungan kombinasi dari komponen nilai diskrit dan kontinu. bagian diskrit terletak pada $Y=0$ atau saat $(X \leq d)$ dan komponen nilai kontinu terletak pada interval $Y>0$ atau saat $X>d$
+
+## 2. Policy Limit
+
+policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh perusahaan asuransi untuk pertanggungan tertentu berdasarkan polis asuransinya. sehingga kerugian yang ditanggung dinotasikan sebagai $X$, dan batas pertanggunannya atau batas polisnya dinotasikan sebagai $u$, jika kerugian melebihi batas polis $X-u$ harus dibayar oleh pemegang polis sendiri. batas polis yang lebih tinggi berarti premi yang dibayar oleh pemegang polis semakin besar.
+
+sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti  bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis. 
+dimana biaya kerugian pemegang polis dinotasikan sebagai $X$ dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai $Y$, dan variabel policy limit dinotasikan sebagai $X \land u$. atau disebut sebagai right censored variable dikarenakan nilai dari $u$ di set sama dengan $u$. maka variabel $Y$ didefinisikan sebagai 
+
+\begin{align*}
+Y = X \land u = \left\{ \begin{matrix}
+X & X \leq u \\
+u & X > u. \\
+\end{matrix} \right.\
+\end{align*}
+
+pada batas polis, perbedaan antara $Y^L$ dan $Y^P$ tidak dibutuhkan  dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
+
+dengan $(X-u)$ dan $(X \land u)$ maka expektasi dari pembayaran terjadi tanpa modifikasi pertangguangan $X$. jumlah ekspektasi pembayaran dari deductible $u$ dan limit $u$ maka, $X=(X-u)_++(X\land u)$
+
+jika kerugian merupakan subjek dari deductible $d$ dan  limit $u$, maka didefinisikan sebagai
+
+\begin{align*}
+Y^{L} = \left\{ \begin{matrix}
+0 & X \leq d \\
+X - d  & d <  X \leq u \\
+ u - d  & X > u. \\
+\end{matrix} \right.\
+\end{align*}
+
+maka, $Y^L$ dapat dinyatakan sebagai $Y^L=(X\land u)-(X\land u)$.
+
+## policy deductible and policy  limit
+
+- pada policy deductible atau pengurangan polis, jika kerugian yang dialami oleh pemegang polis kurang dari nilai deductible maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika lebih besar dari nilai deductible maka klaim yang dibayarkan merupakan total dari kerugian dikurangi dengan nilai deductible, sehingga sisa biaya kerugian ditanggung pemegang polis.
+semakin besar nilai deductible maka besar premi yang perlu dibayarkan oleh pemegang polis semakin rendah
+
+- pada policy limit atau pembatasaan polis, jika kerugian yang dialami oleh pemegang polis lebih besar dari nilai limit maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika masih dibawah dari batas limit maka perusahaan asuransi akan selalu membayarkan total kerugian tersebut. akan tetapi jika lebih besar dari limit sisa biaya kerugian ditanggung pemegang polis.
+semakin besar nilai limit maka besar premi yang dibayarkan oleh pemegang polis semakin besar
+
+## 3. Coinsurance and inflation
+
+coinsurance atau koasuransi adalah jenis pengaturan asuransi di mana dua atau lebih perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Dalam pengaturan koasuransi, setiap perusahaan asuransi mengasumsikan sebagian risiko yang terkait dengan polis dan bertanggung jawab untuk membayar bagian proporsional dari setiap klaim yang muncul. Coinsurance sering digunakan pada asuransi properti dan asuransi kecelakaan, di mana besarnya risiko dapat melebihi kapasitas penanggung tunggal untuk menanggungnya.
+
+pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis sampai dengan nilai dari deductible $d$. kerugian yang dapat ditanggung juga dapat berupa presentase dari klaim. presentase $\alpha$ sering disebut sebagai faktor koasuransi. jika polis merupakan subjek dari deductible dan limit polis, maka koasuransi mengacu pada presentase klaim yang harus ditanggung oleh perusahaan asuransi.
+
+setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau $Y^L$ didefinisikan sebagai:
+
+\begin{align*}
+Y^{L} = \left\{ \begin{matrix}
+0 & X \leq d, \\
+\alpha\left( X - d \right) & d <  X \leq u, \\
+\alpha\left( u - d \right) & X > u. \\
+\end{matrix} \right.\
+\end{align*}
+
+jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah $\alpha (u-d)$, dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible $d$ dan limit $u$ untuk variabel per kerugian atau $Y^L$, maka dapat dinyatakan sebagai $Y^L=(X\land u)-(X\land d)$, maka pada koasuransi $Y^L$ dapat dinyatakan sebagai$Y^L=\alpha[(X\land u)-(X\land d)]$.
+
+## 4. Reinsurance
+
+Reinsurance atau Reasuransi adalah jenis asuransi yang digunakan perusahaan asuransi untuk mengalihkan sebagian risiko yang telah mereka tanggung dalam menjamin polis asuransi kepada perusahaan asuransi lain. Dalam pengaturan reasuransi, perusahaan asuransi menyerahkan sebagian risiko yang terkait dengan polis atau portofolio polis kepada perusahaan reasuransi, yang mengasumsikan risiko tersebut dengan imbalan sebagian premi yang dibayarkan oleh pemegang polis. Reasuransi biasanya digunakan oleh perusahaan asuransi untuk melindungi diri mereka sendiri dari kerugian akibat bencana atau untuk mengelola eksposur mereka terhadap risiko di lini bisnis tertentu.
+
+pada Policy deductible berdasarkan polis tersebut, pemegang polis harus membayar semua kerugian hingga batas nilai deductible, dan perusahaan asuransi hanya membayar jumlah (jika ada) di atas batas nilai deductible. terdapat peraturan dimana di mana perusahaan asuransi mengalihkan sebagian risiko polis dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan membayarkan juga premi asuransi.
+
+Reasuransi adalah pengaturan kontrak di mana perusahaan asuransi mengalihkan sebagian dari risiko yang diasuransikan dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan imbalan premi reasuransi. Dalam kontrak tersebut, penanggung utama atau perusahaan asuransi awal harus melakukan semua pembayaran yang diperlukan kepada pemegang polis hingga total pembayaran penanggung utama mencapai deductible reasuransi yang telah ditetapkan. lalu Perusahaan asuransi lainnya kemudian hanya bertanggung jawab untuk membayar kerugian di atas deductible reasuransi. Jumlah maksimum yang dipertahankan oleh penanggung utama dalam perjanjian reasuransi disebut retensi.
+
+## Coinsurance and Reinsurance
+
+Perbedaan utama antara reasuransi dan koasuransi adalah arah pengalihan risiko. Dalam pengaturan reasuransi, perusahaan asuransi mengalihkan risiko kepada perusahaan asuransi lain, sedangkan dalam pengaturan koasuransi, beberapa perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Selain itu, reasuransi biasanya digunakan untuk melindungi penanggung dari kerugian akibat bencana atau untuk mengelola eksposur risiko mereka, sementara koasuransi sering digunakan untuk memungkinkan penanggung menanggung polis yang lebih besar daripada yang dapat mereka tangani sendiri.
