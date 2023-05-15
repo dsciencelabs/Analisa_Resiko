@@ -79,8 +79,10 @@ Tuliskan semua BAB 1 disini
 
 <!--chapter:end:chapters/01-Introduction.Rmd-->
 
+
 # Frequency Modeling
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Tuliskan semua Bab2 disini
 =======
@@ -152,6 +154,13 @@ Selanjutya dalam mendefinisikan sel sedemikian rupa sehingga memiliki setidaknya
 - https://openacttexts.github.io/Loss-Data-Analytics/ChapFrequency-Modeling.html#S:goodness-of-fit
 >>>>>>> 627aa615e75f3b01c3f28a02baf0e62cffded753
 
+=======
+Placeholder
+
+
+## 2.7 Goodness of Fit
+
+>>>>>>> 4785016cd88e3fa88f644f80f2946e928fff2714
 <!--chapter:end:chapters/02-Frequency.Rmd-->
 
 # Modeling Loss Severity
@@ -161,6 +170,8 @@ Tuliskan semua Bab3 disini
 <!--chapter:end:chapters/03-LossSeverity.Rmd-->
 
 # Model Selection and Estimation
+
+test
 
 <!--chapter:end:chapters/04-ModelSelection.Rmd-->
 
@@ -227,7 +238,7 @@ Tuliskan semua Bab3 disini
 `r if (knitr:::is_latex_output()) '# Glossary {#C:Glossary}'`
 
 ```{r, echo=FALSE, eval=GLOSSARY}
-glossary <- read.csv("References/GlossFct.csv", header=TRUE)
+glossary <- read.csv("references/GlossFct.csv", header=TRUE)
 terms <- glossary$Term
 
 # replace single quotes
