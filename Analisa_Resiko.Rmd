@@ -1,0 +1,172 @@
+--- 
+title: "Analisis Resiko"
+author: "Bakti Siregar, M.Sc"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["references/LDAReference2020A.bib"]
+biblio-style: econPeriod
+link-citations: yes
+github-repo: dsciencelabs/Bookdown-Tempalate_R
+description: "Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas.
+   - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam.
+   - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah.
+   - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia."
+---
+--- 
+title: "Analisis Resiko"
+author: "Bakti Siregar, M.Sc"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["references/LDAReference2020A.bib"]
+biblio-style: econPeriod
+link-citations: yes
+github-repo: dsciencelabs/Bookdown-Tempalate_R
+description: "Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas.
+   - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam.
+   - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah.
+   - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia."
+---
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+
+
+<!--chapter:end:references/Packages.Rmd-->
+
+
+
+
+<!--chapter:end:references/Glossary.Rmd-->
+
+
+
+
+<!--chapter:end:references/PdfOutput.Rmd-->
+
+
+# Kata Pengantar {-}
+
+Placeholder
+
+
+## Deskripsi Buku {-}
+###  Petunjuk Penggunaan {-}
+### Manfaat {-}
+### Mengapa Analisa Resiko?  {-}
+## Ucapan Terima Kasih {-}
+## Kontributor {-}
+## Kritik & Saran {-}
+
+<!--chapter:end:chapters/00-Preface.Rmd-->
+
+# Introduction to Loss Data Analytics
+
+
+Tuliskan semua BAB 1 disini
+
+
+
+<!--chapter:end:chapters/01-Introduction.Rmd-->
+
+# Frequency Modeling
+
+Tuliskan semua Bab2 disini
+
+<!--chapter:end:chapters/02-Frequency.Rmd-->
+
+# Modeling Loss Severity
+
+Tuliskan semua Bab3 disini
+
+<!--chapter:end:chapters/03-LossSeverity.Rmd-->
+
+# Model Selection and Estimation
+
+<!--chapter:end:chapters/04-ModelSelection.Rmd-->
+
+# Aggregate Loss Models
+
+<!--chapter:end:chapters/05-AggregateLossModels.Rmd-->
+
+# Simulation and Resampling
+
+<!--chapter:end:chapters/06-SimulationNoKableExtra.Rmd-->
+
+# Premium Foundations
+
+<!--chapter:end:chapters/07-PremiumFoundations.Rmd-->
+
+# Risk Classification
+
+<!--chapter:end:chapters/08-RiskClassification.Rmd-->
+
+# Experience Rating Using Credibility Theory
+
+<!--chapter:end:chapters/09-Credibility.Rmd-->
+
+# Insurance Portfolio Management including Reinsurance
+
+<!--chapter:end:chapters/10-PortfolioMgt.Rmd-->
+
+# Loss Reserving
+
+<!--chapter:end:chapters/11-LossReserves.Rmd-->
+
+# Experience Rating using Bonus-Malus
+
+<!--chapter:end:chapters/12-ExpRatingBonusMalus.Rmd-->
+
+# Aggregate Loss Models
+
+<!--chapter:end:chapters/13-DataSystems.Rmd-->
+
+# Dependence Modeling
+
+<!--chapter:end:chapters/14-DependenceModels.Rmd-->
+
+# Appendix A: Review of Statistical Inference
+
+<!--chapter:end:chapters/15-ReviewStatInference.Rmd-->
+
+# Appendix B: Iterated Expectations
+
+<!--chapter:end:chapters/16-IteratedExpectations.Rmd-->
+
+# Appendix C: Maximum Likelihood Theory
+
+<!--chapter:end:chapters/17-MaximumLikeTheory.Rmd-->
+
+# Appendix D: Summary of Distributions
+
+<!--chapter:end:chapters/18-DistributionTable.Rmd-->
+
+# Appendix E: Conventions for Notation
+
+<!--chapter:end:chapters/19-NotationConventions.Rmd-->
+
+`r if (knitr:::is_latex_output()) '# Glossary {#C:Glossary}'`
+
+```{r, echo=FALSE, eval=GLOSSARY}
+glossary <- read.csv("References/GlossFct.csv", header=TRUE)
+terms <- glossary$Term
+
+# replace single quotes
+knitr::kable(Gloss_data[,1:2], col.names = c("Term", "Definition"), longtable = T, format="latex") %>% 
+  kableExtra::column_spec(1, width = "10em") %>% 
+  kableExtra::column_spec(2, width = "30em")
+```
+
+
+<!--chapter:end:chapters/20-PdfGlossary.Rmd-->
+
+`r if (knitr:::is_html_output()) '# Bibliography {-}'`
+
+<!--chapter:end:chapters/21-Bibliography.Rmd-->
+
