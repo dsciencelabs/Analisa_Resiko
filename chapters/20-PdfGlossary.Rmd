@@ -1,7 +1,7 @@
 `r if (knitr:::is_latex_output()) '# Glossary {#C:Glossary}'`
 
 ```{r, echo=FALSE, eval=GLOSSARY}
-glossary <- read.csv("References/GlossFct.csv", header=TRUE)
+glossary <- read.csv("references/GlossFct.csv", header=TRUE)
 terms <- glossary$Term
 
 # replace single quotes
