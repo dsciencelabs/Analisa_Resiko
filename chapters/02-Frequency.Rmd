@@ -15,7 +15,11 @@ Setelah membahas 3 Distribusi Frekuensi Dasar dengan beserta perluasan melalui P
 - Pada tahun 1993 sebuah portofolio yang terdiri dari n = 7.483 polis asuransi mobil dari sebuah perusahaan asuransi besar di Singapura memiliki distribusi kecelakaan mobil per pemegang polis seperti yang diberikan pada Tabel 2.4.
 
 ```{r image1, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+<<<<<<< HEAD
+knitr::include_graphics("images\babdua.png")
+=======
 knitr::include_graphics("https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/babdua.png?raw=true")
+>>>>>>> 3ad7209c8a22a9d709dc730b0d39875d5e587794
 ```
 
 Dengan menggunakan Distribusi Poisson maka  maximum likelihood estimator (mle) for λ dengan rata rata Poisson merupakan rata rata sampel yang diberikan :
@@ -29,7 +33,11 @@ $$
 Jika menggunakan Poisson ($\hat{λ}MLE$) sebagai distribusi yang cocok, maka perbandingan tabel dari jumlah yang cocok dan jumlah yang diamati diberikan oleh Tabel 2.5 dengan $\hat{p}_k$ mewakili estimasi probabilitas di bawah distribusi Poisson yang sesuai.
 
 ```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+<<<<<<< HEAD
+knitr::include_graphics("images\babduaa.png")
+=======
 knitr::include_graphics("https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/babduaa.png?raw=true")
+>>>>>>> 3ad7209c8a22a9d709dc730b0d39875d5e587794
 ```
 
 perbandingan tabel tidak cukup untuk menguji hipotesis secara statistik bahwa distribusi yang mendasarinya memang Poisson. Statistik chi-kuadrat Pearson adalah ukuran statistik kecocokan yang dapat digunakan. Untuk menjelaskan statistik ini,dapat dimisalkan sebuah set data berukuran $n$ yang dikelompokkan menjadi $k$  dengan $m_k/n$ dan $\hat{p}_k$ untuk $k = 1...,K$ masing-masing merupakan probabilitas observasi dan estimasi dari sebuah observasi yang termasuk dalam sel ke-k masing-masing. Statistik uji chi-square Pearson kemudian diberikan oleh
