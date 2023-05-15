@@ -26,8 +26,7 @@ rmd_files: ["index.Rmd",
            "chapters/17-MaximumLikeTheory.Rmd",
            "chapters/18-DistributionTable.Rmd",
            "chapters/19-NotationConventions.Rmd",
-           "chapters/20-PdfGlossary.Rmd",
-           "chapters/21-Bibliography.Rmd"
+           "chapters/20-Bibliography.Rmd"
           ]
 
 language:
