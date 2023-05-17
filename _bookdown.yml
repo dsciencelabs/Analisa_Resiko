@@ -2,7 +2,7 @@ book_filename: "Analisa_Resiko"
 output_dir: docs
 delete_merged_file: true
 tables: yes
-rmd_files: ["index.Rmd", ,
+rmd_files: ["index.Rmd",
            "chapters/00-Preface.Rmd",
            "chapters/01-Introduction.Rmd",
            "chapters/02-Frequency.Rmd",
