@@ -33,7 +33,7 @@ Untuk melihat bagaimana validasi silang k-lipatan bekerja, kami membagi data sec
 ```{r, warning=FALSE}
 library(VGAM)
 library(MASS)
-claim_lev <- read.csv("CLAIMLEVEL.csv", header = TRUE) 
+claim_lev <- read.csv("data/CLAIMLEVEL.csv", header = TRUE) 
 claim_data <- subset(claim_lev, Year == 2010); 
 
 # Randomly re-order the data - "shuffle it"
@@ -125,7 +125,7 @@ Tabel 6.7 merangkum hasil estimasi jackknife. Tabel ini menunjukkan bahwa estima
 ```{r, warning=FALSE}
 library(boot)
 # Example from Derrig et al
-BIData <- read.csv("DerrigResampling.csv", header =T)
+BIData <- read.csv("data/DerrigResampling.csv", header =T)
 BIData$Censored <- 1*(BIData$AmountPaid >= BIData$PolicyLimit)
 BIDataUncensored <- subset(BIData, Censored == 0)
 LER.boot <- function(ded, data, indices){
