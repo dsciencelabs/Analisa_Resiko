@@ -23,3 +23,8 @@ appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
 section
+cross-validation
+k-fold-cross-validation
+leave-one-out-cross-validation
+cross-validation-and-bootstrap
+importance-sampling
