@@ -53,3 +53,4 @@ analytic-results
 example
 tweedie-distribution
 metode-penentuan-tarif-gabungan
+pengenalan-ratemaking
