@@ -28,3 +28,9 @@ k-fold-cross-validation
 leave-one-out-cross-validation
 cross-validation-and-bootstrap
 importance-sampling
+policy-deductibles
+policy-limit
+policy-deductible-and-policy-limit
+coinsurance-and-inflation
+reinsurance
+coinsurance-and-reinsurance
