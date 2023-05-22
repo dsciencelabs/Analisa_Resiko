@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bab 13 Insurance Portfolio Management including Reinsurance | Analisis Resiko</title>
+  <title>Bab 10 Insurance Portfolio Management including Reinsurance | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bab 13 Insurance Portfolio Management including Reinsurance | Analisis Resiko" />
+  <meta property="og:title" content="Bab 10 Insurance Portfolio Management including Reinsurance | Analisis Resiko" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bab 13 Insurance Portfolio Management including Reinsurance | Analisis Resiko" />
+  <meta name="twitter:title" content="Bab 10 Insurance Portfolio Management including Reinsurance | Analisis Resiko" />
   
   <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   
@@ -52,8 +52,76 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -119,35 +187,67 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
-<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="6" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html"><i class="fa fa-check"></i><b>6</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#metode-rekursif"><i class="fa fa-check"></i><b>6.1</b> metode rekursif</a>
+<li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#yosia"><i class="fa fa-check"></i><b>5.2</b> Yosia</a></li>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.3</b> Moments and Distribution</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#contoh"><i class="fa fa-check"></i><b>6.1.1</b> contoh</a></li>
+<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.3.1</b> 5.3.2 Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.3.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
+<li class="chapter" data-level="5.3.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.3.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.3.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.3.4</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.3.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.3.5</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#simulasi"><i class="fa fa-check"></i><b>6.2</b> simulasi</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>7</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="8" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>8</b> Premium Foundations</a></li>
-<li class="chapter" data-level="9" data-path="pengenalan-ratemaking.html"><a href="pengenalan-ratemaking.html"><i class="fa fa-check"></i><b>9</b> 7.1 Pengenalan Ratemaking</a></li>
-<li class="chapter" data-level="10" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html"><i class="fa fa-check"></i><b>10</b> 7.2 Metode Penentuan Tarif Gabungan</a>
+<li class="chapter" data-level="5.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.4</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>10.1</b> 7.2.1 Metode Penghitungan Premi Murni</a></li>
-<li class="chapter" data-level="10.2" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>10.2</b> 7.2.2 Metode Rasio Kerugian</a></li>
+<li class="chapter" data-level="5.4.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.4.1</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.4.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.4.2</b> simulasi</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>11</b> Risk Classification</a></li>
-<li class="chapter" data-level="12" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>12</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
-<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
-<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
-<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
-<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="10.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>10.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>10.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="10.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>10.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>10.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>10.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="10.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>10.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
+<li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a></li>
+<li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
+<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
@@ -170,9 +270,906 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="insurance-portfolio-management-including-reinsurance" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Bab 13</span> Insurance Portfolio Management including Reinsurance<a href="insurance-portfolio-management-including-reinsurance.html#insurance-portfolio-management-including-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="insurance-portfolio-management-including-reinsurance" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Bab 10</span> Insurance Portfolio Management including Reinsurance<a href="insurance-portfolio-management-including-reinsurance.html#insurance-portfolio-management-including-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Portofolio asuransi adalah kumpulan kontrak asuransi. Untuk membantu mengelola ketidakpastian portofolio, bab ini akan membahas mengenai:</p>
+<ol style="list-style-type: decimal">
+<li><p>Menghitung kewajiban yang luar biasa besar dengan memeriksa bagian ekor dari distribusi,</p></li>
+<li><p>Menghitung risiko secara keseluruhan dengan memperkenalkan ringkasan yang dikenal sebagai ukuran risiko, dan</p></li>
+<li><p>Membahas opsi-opsi penyebaran risiko portofolio melalui reasuransi, yaitu pembelian proteksi asuransi oleh perusahaan asuransi.</p></li>
+</ol>
+<div id="introduction-to-insurance-portfolios" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Introduction to Insurance Portfolios<a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Kontrak merupakan perjanjian antara pemegang polis dan perusahaan asuransi. Penanggung, dan mengelola, portofolio yang merupakan kumpulan kontrak. Seperti di bidang keuangan lainnya, ada pilihan pengambilan keputusan manajemen yang hanya terjadi di tingkat portofolio. Misalnya, pengambilan keputusan strategis tidak terjadi di tingkat kontrak. Itu terjadi di ruang konferensi, di mana manajemen meninjau data yang tersedia dan mungkin mengarahkan arah baru. Dari perspektif portofolio, perusahaan asuransi ingin melakukan perencanaan kapasitas, menetapkan kebijakan manajemen, dan menyeimbangkan bauran produk yang dipesan untuk meningkatkan pendapatan sambil mengendalikan volatilitas.</p>
+<p>Secara konseptual bahwa perusahaan asuransi tidak lebih dari sebuah kumpulan atau portofolio, kontrak asuransi. Pada Bab 5 telah mempelajari tentang pemodelan portofolio asuransi sebagai jumlah kontrak individu berdasarkan asumsi independensi antar kontrak. Karena pentingnya hal tersebut, bab ini berfokus langsung pada distribusi portofolio.</p>
+<ol style="list-style-type: decimal">
+<li><p>Portofolio asuransi (Kumpulan, atau agregasi, kontrak asuransi) mewakili kewajiban perusahaan asuransi dengan membahas probabilitas hasil yang besar dengan menggunakan gagasan distribusi heavy-tail di Bagian 10.2.</p></li>
+<li><p>Portofolio asuransi mewakili kewajiban perusahaan sehingga perusahaan asuransi menyimpan aset dalam jumlah yang setara untuk memenuhi kewajiban tersebut. Ukuran risiko yang diperkenalkan pada Bagian 10.3, meringkas distribusi portofolio asuransi dan ukuran ringkasan ini digunakan untuk mengukur jumlah aset yang perlu dipertahankan oleh perusahaan asuransi untuk memenuhi kewajiban.</p></li>
+<li><p>Pada Bagian 3.4 mempelajari mekanisme yang digunakan pemegang polis untuk menyebarkan risiko seperti deductible dan batasan polis. Dengan cara yang sama, perusahaan asuransi menggunakan mekanisme yang sama untuk menyebarkan risiko portofolio. Mereka membeli perlindungan risiko dari reasuradur, sebuah perusahaan asuransi untuk perusahaan asuransi.4.</p></li>
+</ol>
+</div>
+<div id="tails-of-distributions" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Tails of Distributions<a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pada subab ini akan membahas mengenai:</p>
+<ol style="list-style-type: decimal">
+<li><p>Menggambarkan distribusi ekor berat secara intuitif.</p></li>
+<li><p>Mengklasifikasikan berat ekor distribusi berdasarkan momen.</p></li>
+<li><p>Membandingkan ekor dari dua distribusi.</p></li>
+</ol>
+<p>Pada tahun 1998, hujan es turun di Ontario bagian timur, barat daya Quebec dan berlangsung selama enam hari. Peristiwa ini merupakan dua kali lipat dari curah hujan yang pernah terjadi pada badai es sebelumnya dan mengakibatkan bencana yang menghasilkan lebih dari 840.000 klaim asuransi. Jumlah ini adalah 20 lebih banyak daripada klaim yang disebabkan oleh Badai Andrew. Bencana ini menyebabkan sekitar 1,44 miliar dolar Kanada dalam penyelesaian asuransi yang merupakan beban kerugian tertinggi dalam sejarah Kanada. Ini bukan contoh yang terisolasi dengan peristiwa bencana serupa yang menyebabkan kerugian asuransi yang ekstrim adalah Badai Harvey, Superstorm Sandy, gempa bumi dan tsunami Jepang tahun 2011, dan lain sebagainya.</p>
+<p>Dalam konteks asuransi, beberapa kerugian besar yang menimpa portofolio dan kemudian dikonversi menjadi klaim biasanya mewakili bagian terbesar dari ganti rugi yang dibayarkan oleh perusahaan asuransi. Kerugian juga disebut ‘ekstrem’, dimodelkan secara kuantitatif oleh ekor dari distribusi probabilitas terkait. Misalnya, periode tekanan pada keuangan dapat muncul dengan frekuensi yang lebih tinggi dari yang diharapkan, dan kerugian asuransi dapat terjadi dengan tingkat keparahan yang lebih buruk. Oleh karena itu, studi tentang perilaku probabilistik pada bagian ekor model aktuaria sangat penting dalam kerangka kerja modern manajemen risiko kuantitatif. Untuk alasan ini, bagian ini dikhususkan untuk pengenalan beberapa gagasan matematika yang mencirikan bobot ekor variabel acak.</p>
+<p>Secara formal, definisikan X sebagai kewajiban (acak) yang muncul dari kumpulan (portofolio) kontrak asuransi. (Pada bab-bab sebelumnya telah menggunakan S untuk kerugian agregat). Pada bagian ini mempelajari ekor kanan dari distribusi X yang merepresentasikan terjadinya kerugian besar. Secara informal, sebuah variabel acak dikatakan berekor berat jika probabilitas tinggi diberikan pada nilai yang besar. Perhatikan bahwa ini tidak berarti bahwa densitas probabilitas/fungsi massa meningkat ketika nilai X menuju tak terhingga. Memang untuk variabel acak bernilai riil, pdf/pmf harus berkurang hingga tak terhingga untuk menjamin probabilitas total sama dengan satu. Namun, yang menjadi perhatian adalah laju peluruhan pdf/pmf. Hasil yang tidak diinginkan lebih mungkin terjadi pada portofolio asuransi yang digambarkan oleh variabel acak kerugian yang memiliki ekor yang lebih berat (kanan). Bobot ekor dapat berupa konsep absolut atau relatif. Khususnya, untuk yang pertamadapat menganggap variabel acak memiliki ekor yang berat jika sifat matematis tertentu dari distribusi probabilitas terpenuhi. Maka dapat dikatakan ekor dari satu distribusi lebih berat/ringan dari yang lain jika beberapa ukuran ekor lebih besar/kecil.</p>
+<p>Beberapa pendekatan kuantitatif telah diusulkan untuk mengklasifikasikan dan membandingkan bobot ekor. Di antara sebagian besar pendekatan ini, fungsi kelangsungan hidup berfungsi sebagai blok bangunan. Berikut ini merupakan memperkenalkan dua metode klasifikasi ekor yang sederhana namun berguna, yang keduanya didasarkan pada perilaku fungsi kelangsungan hidup X.</p>
+<div id="classification-based-on-moments" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Classification Based on Moments<a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Salah satu cara untuk mengklasifikasikan bobot ekor dari suatu distribusi adalah dengan menilai keberadaan momen-momen sesaae. Karena tujuan utama terletak pada ekor kanan distribusi, maka mengasumsikan variabel acak kewajiban atau kerugian <span class="math inline">\(X\)</span> bernilai positif. Pada awalnya, momen sesaat ke-k dari peubah acak kontinu <span class="math inline">\(X\)</span> yang diperkenalkan pada Bagian 3.1, dapat dihitung sebagai berikut.</p>
+<p><span class="math display">\[\mu_k&#39; =  \int_0^{\infty} x^k f(x) ~dx = k \int_0^{\infty} x^{k-1} S(x) ~dx, \\\]</span></p>
+<p>di mana <span class="math inline">\(S(\cdot)\)</span> menyatakan fungsi survival dari <span class="math inline">\(X\)</span> . Ungkapan ini menekankan bahwa keberadaan momen mentah bergantung pada perilaku asimtotik dari fungsi survival di tak terhingga. Yakni, semakin cepat fungsi survival meluruh ke nol, semakin tinggi orde momen berhingga <span class="math inline">\((k)\)</span> yang dimiliki oleh variabel acak terkait. Anda dapat menafsirkan <span class="math inline">\(k^{\ast}\)</span> sebagai nilai terbesar dari <span class="math inline">\(k\)</span> sehingga momennya terbatas. Secara formal, definisikan <span class="math inline">\(k^{\ast}=\sup\{k &gt; 0:\mu_k&#39;&lt;\infty \}\)</span> , dimana sup mewakili supremum.</p>
+<p><code>Definisi 10.1.</code> Pertimbangkan variabel acak kerugian non-negatif <span class="math inline">\(X\)</span> .</p>
+<ol style="list-style-type: decimal">
+<li><p>Jika semua momen baku positif ada, yaitu orde maksimal dari momen berhingga <span class="math inline">\(k^{\ast}=\infty\)</span> , maka <span class="math inline">\(X\)</span> dikatakan berekor ringan berdasarkan metode momen.</p></li>
+<li><p>Jika <span class="math inline">\(k^{\ast} &lt; \infty\)</span>, maka <span class="math inline">\(X\)</span> dikatakan berekor berat (dikatakan berekor berat jika probabilitas tinggi diberikan pada nilai yang besar) berdasarkan metode momen.</p></li>
+<li><p>Selain itu, untuk dua variabel acak rugi positif <span class="math inline">\(X_1\)</span> dan <span class="math inline">\(X_2\)</span> dengan orde maksimal momen masing-masing <span class="math inline">\(k^{\ast}_1\)</span> dan <span class="math inline">\(k^{\ast}_1\)</span>, dengan mengatakan <span class="math inline">\(X_1\)</span> memiliki ekor (kanan) yang lebih berat daripada <span class="math inline">\(X_2\)</span> jika <span class="math inline">\(k^{\ast}_1\leq k^{\ast}_2\)</span>.</p></li>
+</ol>
+<p>bagian pertama dari Definisi 10.1 adalah konsep absolut dari bobot ekor, sedangkan bagian kedua adalah konsep relatif dari bobot ekor yang membandingkan ekor (kanan) di antara dua distribusi. Selanjutnya, kami menyajikan beberapa contoh yang mengilustrasikan aplikasi metode berbasis momen untuk membandingkan bobot ekor.</p>
+<p><code>contoh 10.2.1.</code> Sifat ekor ringan dari distribusi gamma.</p>
+<p>Misalkan <span class="math inline">\(X\sim gamma(\alpha,\theta)\)</span>, dengan <span class="math inline">\(\alpha&gt;0\)</span> dan <span class="math inline">\(\theta&gt;0\)</span> , maka untuk semua <span class="math inline">\(k&gt;0\)</span> , tunjukkan bahwa <span class="math inline">\(\mu_k&#39; &lt; \infty\)</span>.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \mu_k&#39; &amp;=&amp; \int_0^{\infty} x^k \frac{x^{\alpha-1} e^{-x/\theta}}{\Gamma(\alpha) \theta^{\alpha}} dx \\
+    &amp;=&amp; \int_0^{\infty} (y\theta)^k  \frac{(y\theta)^{\alpha-1} e^{-y}}{\Gamma(\alpha) \theta^{\alpha}} \theta dy \\
+    &amp;=&amp; \frac{\theta^k}{\Gamma(\alpha)} \Gamma(\alpha+k) &lt; \infty.
+\end{eqnarray*}\]</span></p>
+<p>karena semua momen positif ada, yaitu <span class="math inline">\(k^{\ast}=\infty\)</span>, sesuai dengan metode klasifikasi berbasis momen pada Definisi 10.1, maka distribusi gamma berekor ringan</p>
+<p><code>Contoh 10.2.2.</code> Sifat ekor ringan dari distribusi Weibull.</p>
+<p>Misalkan <span class="math inline">\(X\sim Weibull(\theta,\tau)\)</span>, dengan <span class="math inline">\(\theta&gt;0\)</span> dan <span class="math inline">\(\tau&gt;0\)</span> , maka untuk semua <span class="math inline">\(k&gt;0\)</span> , tunjukkan bahwa <span class="math inline">\(\mu_k&#39; &lt; \infty\)</span>.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \mu_k&#39; &amp;=&amp; \int_0^{\infty} x^k \frac{\tau x^{\tau-1} }{\theta^{\tau}} e^{-(x/\theta)^{\tau}}dx \\
+    &amp;=&amp; \int_0^{\infty}  \frac{ y^{k/\tau} }{\theta^{\tau}} e^{-y/\theta^{\tau}}dy \\
+    &amp;=&amp; \theta^{k} \Gamma(1+k/\tau) &lt; \infty.
+\end{eqnarray*}\]</span></p>
+<p>Sekali lagi, karena adanya semua momen positif, distribusi Weibull berekor ringan.</p>
+<p>distribusi gamma dan Weibull digunakan secara luas dalam praktik aktuaria. Aplikasi dari kedua distribusi ini sangat luas, termasuk, namun tidak terbatas pada, pemodelan tingkat keparahan klaim asuransi, penilaian solvabilitas, pencadangan kerugian, perkiraan risiko agregat, rekayasa keandalan, dan analisis kegagalan. Sejauh ini kami telah melihat dua contoh penggunaan metode berbasis momen untuk menganalisis distribusi ekor ringan. Kami mendokumentasikan contoh distribusi ekor berat sebagai berikut.</p>
+<p><code>Contoh 10.2.3.</code> Sifat ekor yang berat dari distribusi Pareto.</p>
+<p>Misalkan <span class="math inline">\(X\sim Pareto(\alpha,\theta)\)</span> , dengan <span class="math inline">\(\alpha&gt;0\)</span> dan <span class="math inline">\(\theta&gt;0\)</span> , maka untuk <span class="math inline">\(k&gt;0\)</span></p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \mu_k^{&#39;} &amp;=&amp; \int_0^{\infty} x^k \frac{\alpha \theta^{\alpha}}{(x+\theta)^{\alpha+1}} dx \\
+    &amp;=&amp; \alpha \theta^{\alpha} \int_{\theta}^{\infty} (y-\theta)^k {y^{-(\alpha+1)}} dy.
+\end{eqnarray*}\]</span></p>
+<p>mempertimbangkan integrasi serupa:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+  g_k=\int_{\theta}^{\infty} {y^{k-\alpha-1}} dy=\left\{
+  \begin{array}{ll}
+    &lt;\infty, &amp; \hbox{for } k&lt;\alpha;\\
+    =\infty, &amp; \hbox{for } k\geq \alpha.
+  \end{array}
+\right.
+\end{eqnarray*}\]</span></p>
+<p><span class="math display">\[\lim_{y\rightarrow \infty} \frac{(y-\theta)^k {y^{-(\alpha+1)}}}{y^{k-\alpha-1}}=\lim_{y\rightarrow \infty}
+(1-\theta/y)^{k}=1.\]</span></p>
+<p>Penerapan teorema perbandingan limit untuk integral tak tentu menghasilkan μ′k terbatas jika dan hanya jika gk terbatas. Oleh karena itu, kita dapat menyimpulkan bahwa momen mentah dari variabel acak Pareto hanya ada sampai k &lt; α , yaitu, k∗ = α , dan dengan demikian distribusinya berekor berat. Terlebih lagi, orde maksimal dari momen berhingga hanya bergantung pada parameter bentuk α dan merupakan fungsi yang meningkat dari α . Dengan kata lain, berdasarkan metode momen, bobot ekor dari variabel acak Pareto hanya dimanipulasi oleh α - semakin kecil nilai α , semakin berat bobot ekornya. Karena k∗&lt;∞ , ekor dari distribusi Pareto lebih berat dibandingkan dengan distribusi gamma dan Weibull.</p>
+<p>kami menyimpulkan bagian ini dengan diskusi terbuka tentang keterbatasan metode berbasis momen. Meskipun implementasinya sederhana dan interpretasi intuitif, ada beberapa keadaan tertentu di mana penerapan metode berbasis momen tidak cocok. Pertama, untuk model probabilistik yang lebih rumit, momen mentah ke-k mungkin tidak mudah untuk diperoleh, dan dengan demikian identifikasi urutan maksimal dari momen hingga dapat menjadi tantangan. Kedua, metode berbasis momen tidak sesuai dengan bagian utama dari teori heavy tail yang sudah mapan dalam literatur. Secara khusus, keberadaan fungsi pembangkit momen merupakan metode yang paling populer untuk mengklasifikasikan heavy tail versus light tail di dalam komunitas aktuaris akademis. Namun, untuk beberapa variabel acak seperti variabel acak lognormal, fungsi pembangkit momennya tidak ada bahkan semua momen positifnya terbatas. Dalam kasus ini, penerapan metode berbasis momen dapat menghasilkan penilaian bobot ekor yang berbeda. Ketiga, ketika kita perlu membandingkan bobot ekor antara dua distribusi berekor ringan yang memiliki semua momen positif, metode berbasis momen tidak lagi informatif (lihat, misalnya, Contoh 10.2.1 dan 10.2.2).</p>
+</div>
+<div id="comparison-based-on-limiting-tail-behavior" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Comparison Based on Limiting Tail Behavior<a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk mengatasi masalah-masalah yang disebutkan di atas pada metode klasifikasi berbasis momen, sebuah pendekatan alternatif untuk membandingkan bobot ekor adalah dengan secara langsung mempelajari perilaku pembatas dari fungsi-fungsi survival.</p>
+<p>Definisi 10.2. Untuk dua variabel acak <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> , misalkan</p>
+<p><span class="math display">\[\gamma=\lim_{t\rightarrow \infty}\frac{S_X(t)}{S_Y(t)}.\]</span></p>
+<p>Dengan :</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(X\)</span> memiliki ekor kanan yang lebih berat daripada <span class="math inline">\(Y\)</span> jika <span class="math inline">\(\gamma=\infty\)</span>;</p></li>
+<li><p><span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> secara proporsional ekuivalen pada ekor kanan jika <span class="math inline">\(\gamma =c \in (0, \infty)\)</span>;</p></li>
+<li><p><span class="math inline">\(X\)</span> memiliki ekor kanan yang lebih ringan daripada <span class="math inline">\(Y\)</span> jika <span class="math inline">\(\gamma=0\)</span>.</p></li>
+</ol>
+<p><code>Contoh 10.2.4.</code> Perbandingan distribusi Pareto dan distribusi Weibull.</p>
+<p>Misalkan <span class="math inline">\(X\sim Pareto(\alpha, \theta)\)</span> dan <span class="math inline">\(Y\sim Weibull(\tau, \theta)\)</span>, untuk <span class="math inline">\(\alpha&gt;0\)</span>, <span class="math inline">\(\tau&gt;0\)</span>, dan <span class="math inline">\(\theta&gt;0\)</span>. Tunjukkan bahwa Pareto memiliki ekor kanan yang lebih berat daripada Weibull.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \lim_{t\rightarrow \infty}\frac{S_X(t)}{S_Y(t)} &amp;=&amp; \lim_{t\rightarrow \infty}\frac{(1+t/\theta)^{-\alpha}}{\exp\{-(t/\theta)^{\tau}\}} \\
+    &amp;=&amp; \lim_{t\rightarrow \infty}\frac{\exp\{t/\theta^{\tau} \}}{(1+t^{1/\tau}/\theta)^{\alpha}} \\
+    &amp;=&amp; \lim_{t\rightarrow \infty}\frac{\sum_{i=0}^{\infty}\left(\frac{t}{\theta^{\tau}}\right)^{i}/i!}{(1+t^{1/\tau}/\theta)^{\alpha}}\\
+    &amp;=&amp; \lim_{t\rightarrow \infty} \sum_{i=0}^{\infty} \left(t^{-i/\alpha}+\frac{t^{(1/\tau-i/\alpha)}}{\theta} \right)^{-\alpha}/\theta^{\tau i}i!\\
+    &amp;=&amp; \infty.
+\end{eqnarray*}\]</span></p>
+<p>Oleh karena itu, distribusi Pareto memiliki ekor yang lebih berat daripada distribusi Weibull. Kita juga dapat menyadari bahwa eksponensial mencapai tak terhingga lebih cepat daripada polinomial, oleh karena itu, batas yang disebutkan di atas haruslah tak terhingga.</p>
+<p>untuk beberapa distribusi yang fungsi-fungsi kelangsungan hidupnya tidak dapat diekspresikan secara eksplisit, kita dapat menggunakan rumus alternatif berikut ini:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \lim_{t\to \infty} \frac{S_X(t)}{S_Y(t)} &amp;=&amp; \lim_{t \to \infty} \frac{S_X^{&#39;}(t)}{S_Y^{&#39;}(t)} \\
+    &amp;=&amp; \lim_{t \to \infty} \frac{-f_X(t)}{-f_Y(t)}\\
+&amp;=&amp; \lim_{t\to \infty} \frac{f_X(t)}{f_Y(t)}.
+\end{eqnarray*}\]</span></p>
+<p>mengingat bahwa fungsi kepadatannya ada. Ini adalah aplikasi dari Aturan L’Hôpital dari kalkulus</p>
+<p><code>Contoh 10.2.5.</code> Perbandingan distribusi Pareto dengan distribusi gamma.</p>
+<p>Misalkan <span class="math inline">\(X\sim Pareto(\alpha, \theta)\)</span> dan <span class="math inline">\(Y\sim gamma(\alpha, \theta)\)</span>, untuk <span class="math inline">\(\alpha&gt;0\)</span> dan <span class="math inline">\(\theta&gt;0\)</span> . Tunjukkan bahwa Pareto memiliki ekor kanan yang lebih berat daripada gamma.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    \lim_{t\to \infty} \frac{f_{X}(t)}{f_{Y}(t)} &amp;=&amp; \lim_{t \to \infty} \frac{\alpha \theta^{\alpha} (t+ \theta)^{-\alpha-1}}{t^{\tau-1} e^{-t/\lambda} \lambda^{-\tau} \Gamma(\tau)^{-1}} \\
+&amp;\propto&amp;  \lim_{t\to \infty} \frac{e^{t/\lambda}}{(t+\theta)^{\alpha+1} t^{\tau-1}} \\
+    &amp;=&amp; \infty,
+\end{eqnarray*}\]</span></p>
+<p>karena eksponensial menuju tak terhingga lebih cepat daripada polinomial.</p>
+</div>
+</div>
+<div id="risk-measures" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Risk Measures<a href="insurance-portfolio-management-including-reinsurance.html#risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Materi ini akan mempelajari :</p>
+<ul>
+<li><p>Mendefinisikan ide koherensi dan menentukan apakah suatu ukuran risiko koheren atau tidak.</p></li>
+<li><p>Mendefinisikan nilai-at-risiko dan menghitung kuantitas ini untuk distribusi tertentu.</p></li>
+<li><p>Mendefinisikan nilai-at-risiko ekor dan menghitung besaran ini untuk distribusi tertentu.</p></li>
+</ul>
+<p>Dapat menyatakan bahwa risiko yang terkait dengan satu distribusi lebih berbahaya (secara asimtotik) dibandingkan distribusi lainnya jika ekornya lebih berat. Namun, mengetahui bahwa satu risiko lebih berbahaya (secara asimtotik) daripada risiko lainnya mungkin tidak memberikan informasi yang cukup untuk tujuan manajemen risiko yang canggih, dan sebagai tambahan, kita juga tertarik untuk mengukur seberapa besar risiko tersebut. Faktanya, besarnya risiko yang terkait dengan distribusi kerugian yang diberikan merupakan input penting untuk banyak aplikasi asuransi, seperti penentuan harga aktuaria, pemesanan, lindung nilai, pengawasan peraturan asuransi, dan sebagainya.</p>
+<div id="coherent-risk-measures" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Coherent Risk Measures<a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk membandingkan besarnya risiko dengan cara yang praktis, kami mencari fungsi yang memetakan variabel acak kerugian yang diminati ke nilai numerik yang menunjukkan tingkat risiko, yang disebut ukuran risiko. Secara matematis, ukuran risiko secara sederhana meringkas fungsi distribusi variabel acak sebagai satu angka. Dua ukuran risiko sederhana adalah rata-rata <span class="math inline">\(\mathrm{E}[X]\)</span> dan deviasi standar <span class="math inline">\(\mathrm{SD}(X)=\sqrt{\mathrm{Var}(X)}\)</span>. Contoh klasik lain dari ukuran risiko termasuk prinsip deviasi standar</p>
+<p><span class="math display">\[
+\begin{equation}
+H_{\mathrm{SD}}(X)=\mathrm{E}[X]+\alpha \mathrm{SD}(X),\text{ for } \alpha\geq 0,
+\tag{10.1}
+\end{equation}
+\]</span></p>
+<p>dan prinsip varians</p>
+<p><span class="math display">\[H_{\mathrm{Var}}(X)=\mathrm{E}[X]+\alpha \mathrm{Var}(X),\text{ for } \alpha\geq 0.\]</span></p>
+<p>Untuk memeriksa bahwa semua fungsi yang disebutkan di atas dapat menggunakan ukuran risiko di mana dengan memasukkan variabel acak kerugian dan fungsi-fungsi tersebut menghasilkan nilai numerik. Dengan catatan yang berbeda, fungsi <span class="math inline">\(H^{\ast}(X)=\alpha X^{\beta}\)</span> untuk setiap <span class="math inline">\(\alpha,\beta\neq 0\)</span> yang bernilai riil, β≠0 bukan merupakan ukuran risiko karena <span class="math inline">\(H^{\ast}\)</span> menghasilkan variabel acak lain dan bukan nilai numerik tunggal.</p>
+<p>Karena ukuran risiko adalah ukuran skalar yang bertujuan untuk menggunakan nilai numerik tunggal untuk menggambarkan sifat stokastik dari variabel acak kerugian, maka tidak mengherankan jika tidak ada ukuran risiko yang dapat menangkap semua informasi risiko dari variabel acak yang terkait. Oleh karena itu, ketika mencari ukuran risiko yang berguna, dalam mengingat bahwa ukuran tersebut setidaknya</p>
+<ul>
+<li>harus dapat ditafsirkan secara praktis;</li>
+<li>dapat dihitung dengan mudah; dan</li>
+<li>mampu merefleksikan informasi risiko yang paling penting yang mendasari distribusi kerugian.</li>
+</ul>
+<p>Beberapa ukuran risiko telah dikembangkan dalam literatur. Namun, tidak ada ukuran risiko terbaik yang dapat mengungguli yang lain, dan pemilihan ukuran risiko yang tepat sangat bergantung pada pertanyaan aplikasi yang dihadapi. Dalam hal ini, sangat penting untuk menekankan bahwa risiko adalah konsep yang subyektif, dan dengan demikian, bahkan dengan masalah yang sama, ada berbagai pendekatan untuk menilai risiko. Namun, untuk banyak aplikasi manajemen risiko, ada kesepakatan luas bahwa ukuran risiko yang masuk akal secara ekonomi harus memenuhi empat aksioma utama yang akan kami jelaskan secara rinci selanjutnya. Ukuran risiko yang memenuhi aksioma-aksioma ini disebut sebagai ukuran risiko yang koheren.</p>
+<p>Pertimbangkan sebuah ukuran risiko <span class="math inline">\(H(\cdot)\)</span>. Ukuran ini dikatakan sebagai ukuran risiko yang koheren untuk dua variabel acak <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> jika aksioma-aksioma berikut ini terpenuhi.</p>
+<ul>
+<li><em>Aksioma 1. Subaditifitas</em>:</li>
+</ul>
+<p><span class="math inline">\(H(X+Y)\leq H(X)+H(Y)\)</span>
+Implikasi ekonomi dari aksioma ini adalah bahwa manfaat diversifikasi ada jika risiko-risiko yang berbeda digabungkan.</p>
+<ul>
+<li><p><em>Aksioma 2. Monotonisitas</em>:
+jika <span class="math inline">\(Pr[X≤Y]=1\)</span>. maka H(X)≤H(Y). Ingat bahwa X dan Y adalah variabel acak yang mewakili kerugian, implikasi ekonomi yang mendasarinya adalah bahwa kerugian yang lebih tinggi pada dasarnya mengarah ke tingkat risiko yang lebih tinggi.</p></li>
+<li><p><em>Aksioma 3. Homogenitas positif</em>:
+<span class="math inline">\(H(cX) = cH(X)\)</span> untuk setiap konstanta positif c. Implikasi ekonomi yang potensial dari aksioma ini adalah bahwa ukuran risiko harus independen dari unit moneter yang digunakan untuk mengukur risiko. Sebagai contoh, misalkan c adalah nilai tukar mata uang antara dolar AS dan dolar Kanada, maka risiko kerugian acak yang diukur dalam satuan dolar AS (yaitu, X) dan dolar Kanada (yaitu, <span class="math inline">\(cX\)</span>) seharusnya hanya berbeda sampai dengan nilai tukar c (yaitu, <span class="math inline">\(cH(x)=H(cX)\)</span>).</p></li>
+<li><p><em>Aksioma 4. Ketidakvariasian terjemahan</em>:<br />
+<span class="math inline">\(H(X + c) = H(X) + c\)</span> untuk setiap konstanta positif c. Jika konstanta c diinterpretasikan sebagai uang tunai bebas risiko dan X adalah portofolio asuransi, maka penambahan uang tunai ke dalam portofolio hanya meningkatkan risiko portofolio sebesar jumlah uang tunai.</p></li>
+</ul>
+<p>Memverifikasi sifat koheren untuk beberapa ukuran risiko bisa sangat mudah, tetapi terkadang sangat menantang. Sebagai contoh, adalah hal yang mudah untuk memeriksa apakah rata-rata adalah ukuran risiko yang koheren.</p>
+<p><em>SPECIAL CASE</em>
+Rata-rata adalah ukuran risiko yang koheren.</p>
+<p>Untuk setiap pasangan variabel acak X dan Y yang memiliki mean berhingga dan konstanta <span class="math inline">\(c&gt;0\)</span></p>
+<ul>
+<li><p>validasi subaditifitas: <span class="math inline">\(E[X+Y]=E[X]+E[Y]\)</span></p></li>
+<li><p>validasi monotonitas: jika <span class="math inline">\(Pr[X≤Y]=1\)</span> maka <span class="math inline">\(E[X]≤E[Y]\)</span></p></li>
+<li><p>validasi homogenitas positif: <span class="math inline">\(E[cX]=cE[X]\)</span></p></li>
+<li><p>validasi invariansi penerjemahan: <span class="math inline">\(E[X+c]=E[X]+c\)</span></p></li>
+</ul>
+<p>Untuk melihat bahwa deviasi standar bukanlah ukuran risiko yang koheren, mulailah dengan memeriksa apakah deviasi standar memenuhi</p>
+<p><em>Verification of the Special Case</em></p>
+<p>Untuk melihat bahwa deviasi standar bukanlah ukuran risiko yang koheren, mulailah dengan memeriksa apakah deviasi standar memenuhi</p>
+<ul>
+<li>validasi subaditifitas:</li>
+</ul>
+<p><span class="math display">\[
+\begin{eqnarray*}
+\mathrm{SD}[X+Y]&amp;=&amp;\sqrt{\mathrm{Var}(X)+\mathrm{Var}(Y)+2\mathrm{Cov}(X,Y)}\\
+      &amp;\leq&amp; \sqrt{\mathrm{SD}(X)^2+\mathrm{SD}(Y)^2+2\mathrm{SD}(X)\mathrm{SD}(Y)}\\
+      &amp;=&amp; \mathrm{SD}(X)+\mathrm{SD}(Y);
+\end{eqnarray*}
+\]</span></p>
+<ul>
+<li>validasi homogenitas positif:</li>
+</ul>
+<p><span class="math inline">\(\mathrm{SD}[cX]=c~\mathrm{SD}[X]\)</span></p>
+<p>Namun, deviasi standar tidak memenuhi sifat invariansi terjemahan karena untuk setiap konstanta positif c</p>
+<p><span class="math inline">\(\mathrm{SD}(X+c)=\mathrm{SD}(X)&lt;\mathrm{SD}(X)+c.\)</span></p>
+<p>Selain itu, deviasi standar juga tidak memenuhi sifat monotonitas. Untuk melihat hal ini, pertimbangkan dua variabel acak berikut:</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+X=\left\{
+    \begin{array}{ll}
+      0, &amp; \hbox{with probability $0.25$;} \\
+      4, &amp; \hbox{with probability $0.75$,}
+    \end{array}
+  \right.
+\tag{10.2}
+\end{eqnarray}
+\]</span></p>
+<p>dan Y adalah variabel acak yang merosot sedemikian sehingga</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+\Pr[Y = 4] = 1.
+\tag{10.3}
+\end{eqnarray}
+\]</span></p>
+<p>Dapat Memeriksa <span class="math inline">\(\Pr[X\leq Y]=1\)</span>, tapi</p>
+<p><span class="math display">\[
+\mathrm{SD}(X)=\sqrt{4^2\cdot 0.25\cdot 0.75}=\sqrt{3}&gt;\mathrm{SD}(Y)=0
+\]</span></p>
+<p><em>Special Case. The Standard Deviation Principle (10.1) is a Coherent Risk Measure.</em></p>
+<p>Untuk tujuan ini, untuk sebuah <span class="math inline">\(α&gt;0\)</span> dapat meriksa empat aksioma untuk <span class="math inline">\(H_{SD}(X+Y)\)</span> satu per satu:</p>
+<ul>
+<li>validasi subaditifitas :</li>
+</ul>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  H_{\mathrm{SD}}(X+Y) &amp;=&amp; \mathrm{E}[X+Y]+\alpha \mathrm{SD}(X+Y) \\
+  &amp;\leq&amp; \mathrm{E}[X]+\mathrm{E}[Y]+\alpha [\mathrm{SD}(X) +\mathrm{SD}(Y)]\\
+  &amp;=&amp; H_{\mathrm{SD}}(X)+ H_{\mathrm{SD}}(Y);
+\end{eqnarray*}
+\]</span>
+- validasi homogenitas positif:</p>
+<p><span class="math inline">\(H_{\mathrm{SD}}(cX)=c\mathrm{E}[X]+c\alpha\mathrm{SD}(X)=cH_{\mathrm{SD}}(X);\)</span></p>
+<ul>
+<li>validasi invariansi terjemahan:</li>
+</ul>
+<p><span class="math inline">\(H_{\mathrm{SD}}(X+c)=\mathrm{E}[X]+c+\alpha\mathrm{SD}(X)=H_{\mathrm{SD}}(X)+c.\)</span></p>
+<p>Hanya untuk memverifikasi properti monotonitas, yang mungkin terpenuhi atau tidak, tergantung pada nilai α. Untuk melihat hal ini, mempertimbangkan rumus diatas di mana <span class="math inline">\(Pr[X≤Y]=1\)</span>. Dengan memisalkan <span class="math inline">\(\alpha=0.1\cdot \sqrt{3}\)</span> maka <span class="math inline">\(H_{\mathrm{SD}}(X)=3+0.3=3.3&lt; H_{\mathrm{SD}}(Y)=4\)</span> dan kondisi monotonitas terpenuhi. Di sisi lain, misalkan <span class="math inline">\(\alpha=\sqrt{3}\)</span>. maka <span class="math inline">\(H_{\mathrm{SD}}(X)=3+3=6&gt; H_{\mathrm{SD}}(Y)=4\)</span> dan kondisi monotonitas tidak terpenuhi. Lebih tepatnya, dengan menetapkan</p>
+<p><span class="math display">\[
+H_{\mathrm{SD}}(X) = 3+\alpha\sqrt{3} \leq4= H_{\mathrm{SD}}(Y)
+\]</span></p>
+<p>Dapt menemukan bahwa kondisi monotonitas hanya terpenuhi untuk <span class="math inline">\(0\leq\alpha\leq 1/\sqrt{3}\)</span> dan dengan demikian prinsip deviasi standar <span class="math inline">\(H_{SD}\)</span> adalah koheren. Hasil ini tampak sangat intuitif bagi kami karena prinsip deviasi standar <span class="math inline">\(H_{SD}\)</span> adalah kombinasi linier dari dua ukuran risiko yang satu koheren dan yang lainnya tidak koheren. Jika <span class="math inline">\(\alpha\leq 1/\sqrt{3}\)</span> maka ukuran yang koheren mendominasi ukuran yang tidak koheren, sehingga ukuran yang dihasilkan <span class="math inline">\(H_{SD}\)</span> yang dihasilkan adalah koheren dan sebaliknya. Perlu dicatat bahwa kesimpulan di atas tidak dapat digeneralisasi untuk setiap pasangan variabel acak X dan Y.</p>
+<p>Literatur mengenai ukuran risiko telah berkembang pesat dalam hal popularitas dan kepentingannya. Dalam dua subbab berikutnya, kami memperkenalkan dua indeks yang baru-baru ini mendapatkan perhatian yang belum pernah terjadi sebelumnya di antara para ahli teori, praktisi, dan regulator. Kedua indeks tersebut adalah Value-at-Risk (<span class="math inline">\(VaR\)</span>) dan Tail Value-at-Risk (<span class="math inline">\(TVaR\)</span>). Alasan ekonomi di balik dua ukuran risiko populer ini mirip dengan metode klasifikasi ekor yang diperkenalkan pada bagian sebelumnya, yang dengannya kami berharap dapat menangkap risiko kerugian ekstrem yang diwakili oleh ekor distribusi.</p>
+</div>
+<div id="value-at-risk" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Value-at-Risk<a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dengan mempertimbangkan variabel acak kerugian asuransi <span class="math inline">\(X\)</span> . Ukuran nilai-at-risiko dari <span class="math inline">\(X\)</span> dengan tingkat kepercayaan <span class="math inline">\(q∈(0,1)\)</span> dirumuskan sebagai</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+VaR_q[X]=\inf\{x:F_X(x)\geq q\}.
+\tag{10.4}
+\end{eqnarray}
+\]</span></p>
+<p>Di sini, <span class="math inline">\(inf\)</span> adalah operator infimum sehingga ukuran <span class="math inline">\(VaR\)</span> menghasilkan nilai terkecil dari <span class="math inline">\(X\)</span> sedemikian rupa sehingga cdf yang terkait pertama kali melebihi atau sama dengan q .</p>
+<p>Selanjutnya dapat menginterpretasikan VaR dalam konteks aplikasi aktuarial. VaR adalah ukuran dari ‘kerugian maksimal’ yang mungkin terjadi pada produk asuransi/portfolio atau investasi berisiko, terjadi sebesar q × 100% waktu, selama periode waktu tertentu (biasanya satu tahun). Misalnya, jika X adalah variabel acak kerugian tahunan dari produk asuransi, VaR0.95 [X] = 100 juta berarti tidak lebih dari 5% peluang bahwa kerugian akan melebihi 100 juta selama satu tahun tertentu. Karena interpretasi yang bermakna ini, VaR telah menjadi standar industri untuk mengukur risiko keuangan dan asuransi sejak tahun 1990-an. Konglomerasi keuangan, regulator, dan akademisi sering menggunakan VaR untuk mengukur modal risiko, memastikan kepatuhan dengan aturan regulasi, dan mengungkapkan posisi keuangan.</p>
+<div id="example-10.3.1.-var-for-the-exponential-distribution" class="section level4 hasAnchor" number="10.3.2.1">
+<h4><span class="header-section-number">10.3.2.1</span> Example 10.3.1. VaR for the exponential distribution<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.1.-var-for-the-exponential-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dengan mempertimbangkan variabel acak kerugian asuransi X dengan distribusi eksponensial yang memiliki parameter <span class="math inline">\(θ\)</span> untuk <span class="math inline">\(θ&gt;0\)</span>, maka cdf dari <span class="math inline">\(X\)</span> diberikan oleh</p>
+<p><span class="math display">\[
+F_X(x)=1-e^{-x/\theta}, \text{ for } x&gt;0.
+\]</span></p>
+<p>Mencari ekspresi bentuk tertutup untuk VaR</p>
+<p><em>JAWAB</em></p>
+<p>Karena distribusi eksponensial adalah distribusi kontinu, nilai terkecil di mana cdf pertama kali melebihi atau sama dengan <span class="math inline">\(q ∈ (0,1)\)</span> harus berada pada titik xq yang memenuhi.</p>
+<p><span class="math inline">\(q=F_X(x_q)=1-\exp\{-x_q/\theta \}.\)</span></p>
+<p>Maka</p>
+<p><span class="math inline">\(VaR_q[X]=F_X^{-1}(q)=-\theta[\log(1-q)].\)</span></p>
+<p>Hasil yang didapat pada rumus diatas dapat digeneralisasikan untuk variabel acak kontinu apa pun yang memiliki cdf yang ketat meningkat. Secara khusus, <span class="math inline">\(VaR\)</span> dari variabel acak kontinu mana pun adalah kebalikan dari cdf yang sesuai. Mari kita pertimbangkan contoh lain dari variabel acak kontinu yang memiliki dukungan dari negatif tak terhingga hingga positif tak terhingga.</p>
+</div>
+</div>
+<div id="example-10.3.2.-var-for-the-normal-distribution." class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Example 10.3.2. VaR for the normal distribution.<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dengan mempertimbangkan variabel acak kerugian asuransi <span class="math inline">\(X\sim Normal(\mu,\sigma^2)\)</span> dengan <span class="math inline">\(σ&gt;0\)</span>. Dalam kasus ini, seseorang dapat menginterpretasikan nilai negatif dari X sebagai keuntungan atau pendapatan. Berikan ekspresi bentuk tertutup untuk VaR.</p>
+<p>Karena distribusi normal adalah distribusi kontinu, maka VaR dari X harus memenuhi</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+q &amp;=&amp; F_X(VaR_q[X])\\
+&amp;=&amp;\Pr\left[(X-\mu)/\sigma\leq (VaR_q[X]-\mu)/\sigma\right]\\
+&amp;=&amp;\Phi((VaR_q[X]-\mu)/\sigma).
+\end{eqnarray*}
+\]</span>
+Maka didapat</p>
+<p><span class="math display">\[
+VaR_q[X]=\Phi^{-1}(q)\ \sigma+\mu.
+\]</span></p>
+<p>Dalam banyak aplikasi asuransi, kita harus menangani transformasi dari variabel acak. Misalnya, pada Contoh 10.3.2, variabel acak kerugian <span class="math inline">\(X\sim Normal(\mu, \sigma^2)\)</span> dapat dilihat sebagai transformasi linier dari variabel acak normal standar <span class="math inline">\(Z\sim Normal(0,1)\)</span>, yaitu <span class="math inline">\(X=Z\sigma+\mu\)</span>. Dengan mengatur <span class="math inline">\(μ = 0\)</span> dan <span class="math inline">\(σ = 1\)</span>, Dapar mempermudah untuk memeriksa <span class="math inline">\(VaR_q[Z]=\Phi^{-1}(q).\)</span>. Transformasi linier dari variabel acak normal setara dengan transformasi linier dari VaR dari variabel acak asli. Temuan ini dapat digeneralisasikan lebih lanjut ke variabel acak mana pun selama transformasinya ketat meningkat.</p>
+<div id="example-10.3.3.-var-for-transformed-variables." class="section level4 hasAnchor" number="10.3.3.1">
+<h4><span class="header-section-number">10.3.3.1</span> Example 10.3.3. VaR for transformed variables.<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.3.-var-for-transformed-variables." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Pertimbangkan variabel acak kerugian asuransi Y dengan distribusi lognormal dengan parameter <span class="math inline">\(μ∈R\)</span> dan <span class="math inline">\(σ^2&gt;0\)</span> Mencari ekspresi <span class="math inline">\(VaR\)</span> dari Y dalam hal invers cdf normal standar.</p>
+<p>Dengan memperhatikan bahwa <span class="math inline">\(\log Y\sim Normal(\mu,\sigma^2)\)</span>, atau setara dengan membiarkan <span class="math inline">\(X\sim Normal(\mu,\sigma^2)\)</span>, maka <span class="math inline">\(Y\overset{d}{=}e^{X}\)</span> yang merupakan transformasi ketat meningkat. Di sini, notasi <span class="math inline">\(\overset{d}{=}\)</span> berarti kesamaan dalam distribusi. <span class="math inline">\(VaR\)</span> dari<span class="math inline">\(Y\)</span> diberikan oleh transformasi eksponensial dari VaR dari X. Secara tepat, untuk <span class="math inline">\(q∈(0,1)\)</span>,</p>
+<p><span class="math inline">\(VaR_{q}[Y]= e^{VaR_q[X]}=\exp\{\Phi^{-1}(q)\ \sigma+\mu\}.\)</span></p>
+<p>Sejauh ini telah melihat beberapa contoh tentang VaR untuk variabel acak kontinu, selanjutnya dengan mempertimbangkan contoh mengenai VaR untuk variabel acak diskrit.</p>
+</div>
+<div id="example-10.3.4.-var-for-a-discrete-random-variable" class="section level4 hasAnchor" number="10.3.3.2">
+<h4><span class="header-section-number">10.3.3.2</span> Example 10.3.4. VaR for a discrete random variable<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.4.-var-for-a-discrete-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dengan mempertimbangkan variabel acak kerugian asuransi dengan distribusi probabilitas sebagai berikut:</p>
+<p><span class="math display">\[
+{\small
+\Pr[X=x] = \left\{
+                  \begin{array}{ll}
+                    0.75, &amp; \text{for }x=1 \\
+                    0.20, &amp; \text{for }x=3 \\
+                    0.05, &amp; \text{for }x=4.
+                  \end{array}
+                \right.
+}
+\]</span></p>
+<p>Menemukan <span class="math inline">\(VaR\)</span> pada <span class="math inline">\(q = 0.6, 0.9, 0.95, 0.95001\)</span></p>
+<p><em>JAWAB</em></p>
+<p>Nilai cdf yang sesuai dari X adalah</p>
+<p><span class="math display">\[
+F_X(x)=\left\{
+         \begin{array}{ll}
+           0, &amp; \hbox{ $x&lt;1$;} \\
+           0.75, &amp; \hbox{ $1\leq x&lt;3$;} \\
+           0.95, &amp; \hbox{ $3\leq x&lt;4$;} \\
+           1, &amp; \hbox{ $4\leq x$.}
+         \end{array}
+       \right.
+\]</span>
+Berdasarkan definisi VaR dengan demikian, maka memiliki</p>
+<ul>
+<li><p><span class="math inline">\(VaR_{0.6}[X]=1\)</span></p></li>
+<li><p><span class="math inline">\(VaR_{0.9}[X]=3\)</span></p></li>
+<li><p><span class="math inline">\(VaR_{0.95}[X]=3\)</span></p></li>
+<li><p><span class="math inline">\(VaR_{0.950001}[X]=4\)</span></p></li>
+</ul>
+<p>Selanjutnya adalah ringkasan dari bagian tentang ukuran VaR. Beberapa keuntungan dalam menggunakan VaR antara lain:</p>
+<ul>
+<li><p>memiliki interpretasi yang bermakna secara praktis;</p></li>
+<li><p>relatif mudah untuk dihitung untuk banyak distribusi dengan fungsi distribusi tertutup;</p></li>
+<li><p>tidak ada asumsi tambahan yang diperlukan untuk penghitungan VaR.</p></li>
+</ul>
+<p>Namun, ada beberapa keterbatasan dalam penggunaan VaR dalam praktik manajemen risiko, di antaranya adalah:</p>
+<ul>
+<li><p>pemilihan tingkat kepercayaan <span class="math inline">\(q∈(0,1)\)</span> sangat subjektif, sementara <span class="math inline">\(VaR\)</span> dapat sangat sensitif terhadap pilihan q</p></li>
+<li><p>skenario/informasi kerugian yang berada di atas <span class="math inline">\((1-q)\times 100\%\)</span> peristiwa terburuk, sepenuhnya diabaikan;</p></li>
+<li><p>VaR bukanlah ukuran risiko yang koheren (terutama, ukuran VaR tidak memenuhi aksioma subadditivitas, artinya manfaat diversifikasi mungkin tidak sepenuhnya tercermin).</p></li>
+</ul>
+</div>
+</div>
+<div id="tail-value-at-risk" class="section level3 hasAnchor" number="10.3.4">
+<h3><span class="header-section-number">10.3.4</span> Tail Value-at-Risk<a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dengan mengingat bahwa VaR mewakili kerugian maksimal dengan peluang <span class="math inline">\((1-q)\times 100\%\)</span>. Seperti yang disebutkan pada bagian sebelumnya, satu kelemahan utama dari pengukuran VaR adalah tidak mencerminkan kerugian ekstrem yang terjadi di luar skenario terburuk dengan peluang <span class="math inline">\((1-q)\times 100\%\)</span>. Untuk tujuan ilustrasi, mari kita pertimbangkan contoh yang sedikit tidak realistis namun inspiratif berikut.</p>
+<div id="example-10.3.5" class="section level4 hasAnchor" number="10.3.4.1">
+<h4><span class="header-section-number">10.3.4.1</span> Example 10.3.5<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dengan mempertimbangkan dua variabel kerugian, <span class="math inline">\(X\sim Uniform [0,100]\)</span>, dan <span class="math inline">\(Y\)</span> dengan distribusi eksponensial yang memiliki parameter <span class="math inline">\(θ = 31,71\)</span>. Kami menggunakan <span class="math inline">\(VaR\)</span> pada tingkat kepercayaan <span class="math inline">\(95%\)</span> untuk mengukur tingkat risiko dari <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span>. Perhitungan sederhana memberikan</p>
+<p><span class="math display">\[
+VaR_{0.95}[X]=VaR_{0.95}[Y]=95,
+\]</span></p>
+<p>dan dengan demikian kedua distribusi kerugian ini memiliki tingkat risiko yang sama menurut <span class="math inline">\(VaR_{0.95}\)</span>. Namun, Y lebih berisiko daripada X jika kerugian ekstrem menjadi masalah utama karena X dibatasi di atas sedangkan Y tidak dibatasi. Hanya memperkirakan risiko dengan menggunakan VaR pada tingkat kepercayaan tertentu bisa menyesatkan dan mungkin tidak mencerminkan sifat sebenarnya dari risiko.</p>
+<p>Sebagai solusinya, Tail Value-at-Risk (<span class="math inline">\(TVaR\)</span>) diusulkan untuk mengukur kerugian ekstrem yang berada di atas suatu tingkat <span class="math inline">\(VaR\)</span> tertentu sebagai rata-rata. Kami mendokumentasikan definisi TVaR dalam apa yang mengikuti. Untuk kesederhanaan, kami akan membatasi diri pada variabel acak positif kontinu saja, yang lebih sering digunakan dalam konteks manajemen risiko asuransi. Kami merujuk pembaca yang tertarik ke Hardy (2006) untuk diskusi yang lebih komprehensif tentang TVaR untuk variabel acak diskrit dan kontinu.</p>
+<p>Menetapkan <span class="math inline">\(q ∈ (0,1)\)</span>, nilai Tail Value-at-Risk dari variabel acak (kontinu) X dirumuskan sebagai</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  TVaR_q[X] &amp;=&amp; \mathrm{E}[X|X&gt;VaR_q[X]],
+\end{eqnarray*}
+\]</span></p>
+<p>yang diasumsikan harapan eksistensi.</p>
+<p>Perhitungan <span class="math inline">\(TVaR\)</span> biasanya terdiri dari dua komponen utama - <span class="math inline">\(VaR\)</span> dan rata-rata kerugian yang berada di atas <span class="math inline">\(VaR\)</span>. <span class="math inline">\(TVaR\)</span> dapat dihitung melalui sejumlah formula. Pertimbangkan variabel acak positif kontinu X, untuk kenyamanan notional, mari kita tulis <span class="math inline">\(\pi_q=VaR_q[X]\)</span>. Sesuai definisi, <span class="math inline">\(TVaR\)</span> dapat dihitung melalui</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+TVaR_{q}[X]=\frac{1}{(1-q)}\int_{\pi_q}^{\infty}xf_X(x)dx.
+\tag{10.5}
+\end{eqnarray}
+\]</span></p>
+</div>
+<div id="example-10.3.6.-tvar-for-a-normal-distribution" class="section level4 hasAnchor" number="10.3.4.2">
+<h4><span class="header-section-number">10.3.4.2</span> Example 10.3.6. TVaR for a normal distribution<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.6.-tvar-for-a-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dengan mempertimbangkan variabel acak kerugian asuransi <span class="math inline">\(X\sim Normal (\mu,\sigma^2)\)</span> dengan μ ∈ R dan <span class="math inline">\(σ &gt; 0\)</span>. Mencari ekspresi <span class="math inline">\(TVaR\)</span></p>
+<p>Biarkan Z adalah variabel acak normal standar. Untuk <span class="math inline">\(q∈(0,1)\)</span> , maka <span class="math inline">\(TVaR\)</span> dari <span class="math inline">\(X\)</span> dapat dihitung melalui</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  TVaR_q[X] &amp;=&amp; \mathrm{E}[X|X&gt;VaR_q[X]]\\
+&amp;=&amp;\mathrm{E}[\sigma Z+\mu|\sigma Z+\mu&gt;VaR_q[X]]\\
+&amp;=&amp; \sigma\mathrm{E}[Z|Z&gt;(VaR_q[X]-\mu)/\sigma]+\mu\\
+&amp;\overset{(1)}{=}&amp; \sigma\mathrm{E}[Z|Z&gt;VaR_q[Z]]+\mu,
+\end{eqnarray*}
+\]</span></p>
+<p>dimana <span class="math inline">\(\overset{(1)}{=}\)</span> berlaku karena hasil yang dilaporkan pada contoh diatas. Selanjutnya, kita beralih untuk mempelajari <span class="math inline">\(TVaR_q[Z]=\mathrm{E}[Z|Z&gt;VaR_q[Z]]\)</span> dengan <span class="math inline">\(\omega(q)=(\Phi^{-1}(q))^2/2\)</span>, maka kami dapat</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  (1-q)\ TVaR_q[Z] &amp;=&amp; \int_{\Phi^{-1}(q)}^{\infty} z \frac{1}{\sqrt{2\pi}} e^{-z^2/2}dz\\
+&amp;=&amp; \int_{\omega(q)}^{\infty}  \frac{1}{\sqrt{2\pi}} e^{-x}dx\\
+&amp;=&amp; \frac{1}{\sqrt{2\pi}} e^{-\omega(q)}\\
+&amp;=&amp; \phi(\Phi^{-1}(q)).
+\end{eqnarray*}
+\]</span>
+Maka</p>
+<p><span class="math inline">\(TVaR_q[X]=\sigma\frac{\phi(\Phi^{-1}(q))}{1-q}+\mu.\)</span></p>
+<p>Sebelumya telah diseebutkan pada subseksi sebelumnya bahwa VaR dari fungsi acak yang ketat meningkat sama dengan fungsi VaR dari variabel acak asli.Seseorang dapat menunjukkan bahwa TVaR dari transformasi linier variabel acak yang ketat meningkat sama dengan fungsi VaR dari variabel acak asli. Hal ini disebabkan oleh sifat linearitas dari harapan. Namun, temuan tersebut tidak dapat diperluas ke fungsi non-linear. Contoh variabel acak lognormal berikut menjadi contoh yang berlawanan.</p>
+</div>
+<div id="example-10.3.7.-tvar-of-a-lognormal-distribution" class="section level4 hasAnchor" number="10.3.4.3">
+<h4><span class="header-section-number">10.3.4.3</span> Example 10.3.7. TVaR of a lognormal distribution<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.7.-tvar-of-a-lognormal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dengan memertimbangkan sebuah variabel acak kerugian asuransi <span class="math inline">\(X\)</span> dengan distribusi lognormal dengan parameter <span class="math inline">\(μ∈R\)</span> dan <span class="math inline">\(σ&gt;0\)</span>. dapat menunjukkan</p>
+<p><span class="math inline">\(TVaR_q[X] = \frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\Phi^{-1}(q)-\sigma).\)</span></p>
+<p><em>JAWAB</em></p>
+<p>Dengan mengingat bahwa pdf dari distribusi lognormal dirumuskan sebagai</p>
+<p><span class="math display">\[
+f_X(x)=\frac{1}{\sigma\sqrt{2\pi} x}\exp\{-(\log x-\mu )^2/2\sigma^2 \}, \text{ for } x&gt;0.
+\]</span></p>
+<p>Menetapkan <span class="math inline">\(q∈(0,1)\)</span>, maka <span class="math inline">\(TVaR\)</span> dari <span class="math inline">\(X\)</span> dapat dihitung melalui</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+  TVaR_q[X] &amp;=&amp; \frac{1}{(1-q)} \int_{\pi_q}^{\infty} x f_X(x)dx \nonumber\\
+&amp;=&amp;\frac{1}{(1-q)} \int_{\pi_q}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{(\log x-\mu)^2}{2\sigma^2}
+\right\}dx\nonumber\\
+&amp;\overset{(1)}{=}&amp;\frac{1}{(1-q)} \int_{\omega(q)}^{\infty} \frac{1}{\sqrt{2\pi}} e^{ -\frac{1}{2}w^2+\sigma w+\mu}dw\nonumber\\
+&amp;=&amp;\frac{e^{\mu+\sigma^2/2}}{(1-q)} \int_{\omega(q)}^{\infty} \frac{1}{\sqrt{2\pi}} e^{ -\frac{1}{2}(w-\sigma)^2}dw\nonumber\\
+&amp;=&amp;\frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\omega(q)-\sigma),
+\tag{10.6}
+\end{eqnarray}
+\]</span></p>
+<p>Di sini, <span class="math inline">\(\overset{(1)}{=}\)</span> terpenuhi dengan menerapkan perubahan variabel <span class="math inline">\(w=(logx−μ)/σ\)</span>, dan <span class="math inline">\(ω(q)=(logπq−μ)/σ\)</span>. Dengan memanggil rumus <span class="math inline">\(VaR\)</span> untuk variabel acak lognormal dapat menyederhanakan menjadi</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  TVaR_q[X] &amp;=&amp; \frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\Phi^{-1}(q)-\sigma).
+\end{eqnarray*}
+\]</span>
+<span class="math inline">\(TVaR\)</span> dari variabel acak lognormal bukanlah eksponensial dari <span class="math inline">\(TVaR\)</span> dari variabel acak normal.</p>
+<p>Untuk distribusi di mana fungsi distribusi kelangsungan hidupnya lebih mudah untuk dikerjakan, dapat menerapkan teknik integrasi dengan bagian (asumsikan rata-ratanya terbatas) untuk menulis ulang persamaan (10.5) sebagai</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+TVaR_{q}[X]&amp;=&amp;\left[-x S_X(x)\big |_{\pi_q}^{\infty}+\int_{\pi_q}^{\infty}S_X(x)dx\right]\frac{1}{(1-q)}\\
+&amp;=&amp; \pi_q +\frac{1}{(1-q)}\int_{\pi_q}^{\infty}S_X(x)dx.
+\end{eqnarray*}
+\]</span></p>
+</div>
+<div id="example-10.3.8.-tvar-of-an-exponential-distribution" class="section level4 hasAnchor" number="10.3.4.4">
+<h4><span class="header-section-number">10.3.4.4</span> Example 10.3.8. TVaR of an exponential distribution<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.8.-tvar-of-an-exponential-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Pertimbangkan sebuah variabel acak kerugian asuransi X dengan distribusi eksponensial yang memiliki parameter θ untuk <span class="math inline">\(θ&gt;0\)</span>. Mencari suatu ekspresi untuk TVaR.</p>
+<p><strong>JAWAB</strong></p>
+<p>Dari subseksi sebelumnya, telah melihat bahwa</p>
+<p><span class="math inline">\(\pi_q=-\theta[\log(1-q)].\)</span></p>
+<p>Dengan mempertimbangkan <span class="math inline">\(TVaR\)</span>:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  TVaR_q[X] &amp;=&amp; \pi_q+\int_{\pi_q}^{\infty} e^{-x/\theta}dx/(1-q)\\
+&amp;=&amp; \pi_q+\theta e^{-\pi_q/\theta}/(1-q)\\
+&amp;=&amp; \pi_q+\theta.
+\end{eqnarray*}
+\]</span></p>
+<p>Pengukuran berikut erat kaitannya dengan TVaR
+Juga dapat membantu untuk menyatakan <span class="math inline">\(TVaR\)</span> dalam bentuk nilai harapan terbatas. Secara khusus, kita memiliki</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+  TVaR_q[X] &amp;=&amp; \int_{\pi_q}^{\infty} (x-\pi_q+\pi_q)f_X(x)dx/(1-q) \nonumber\\
+&amp;=&amp; \pi_q+\frac{1}{(1-q)}\int_{\pi_q}^{\infty} (x-\pi_q)f_X(x)dx\nonumber\\
+&amp;=&amp; \pi_q+e_X(\pi_q)\nonumber\\
+&amp;=&amp; \pi_q +\frac{\left({\mathrm{E}[X]-\mathrm{E}[X\wedge\pi_q]}\right)}{(1-q)},
+\tag{10.7}
+\end{eqnarray}
+\]</span></p>
+<p>Dimana <span class="math inline">\(e_X(d)=\mathrm{E}[X-d|X&gt;d]\)</span> untuk <span class="math inline">\(d&gt;0\)</span> menyatakan fungsi kerugian berlebih rata-rata. Untuk banyak distribusi parametrik yang umum digunakan, rumus-rumus untuk menghitung <span class="math inline">\(E[X\)</span>] dan <span class="math inline">\(E[X∧π_q]\)</span>
+dapat ditemukan dalam tabel distribusi.</p>
+</div>
+<div id="example-10.3.9.-tvar-of-a-pareto-distribution" class="section level4 hasAnchor" number="10.3.4.5">
+<h4><span class="header-section-number">10.3.4.5</span> Example 10.3.9. TVaR of a Pareto distribution<a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.9.-tvar-of-a-pareto-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Pertimbangkan sebuah variabel acak kerugian <span class="math inline">\(X\sim Pareto(\theta,\alpha)\)</span> dengan <span class="math inline">\(θ&gt;0\)</span> dan <span class="math inline">\(α&gt;0\)</span>. Fungsi distribusi kumulatif (cdf) dari X diberikan oleh</p>
+<p><span class="math inline">\(F_X(x)=1-\left(\frac{\theta}{\theta+x} \right)^{\alpha}, \text{ for } x&gt;0 .\)</span></p>
+<p>menetapkan <span class="math inline">\(q∈(0,1)\)</span> dan atur <span class="math inline">\(F_X(π_q)=q\)</span>
+, maka kita dapat dengan mudah memperoleh</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+\pi_q=\theta\left[(1-q)^{-1/\alpha}-1 \right].
+\tag{10.8}
+\end{eqnarray}
+\]</span></p>
+<p>Sebelumnya diketahui bahwa</p>
+<p><span class="math display">\[
+\mathrm{E}[X]=\frac{\theta}{\alpha-1},
+\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[
+\mathrm{E}[X\wedge \pi_q]=\frac{\theta}{\alpha-1}\left[
+1-\left(\frac{\theta}{\theta+\pi_q}\right)^{\alpha-1}
+\right].
+\]</span></p>
+<p>Dengan memanfaatkan persamaan sebelumnya menghasilkan</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+  TVaR_q[X] &amp;=&amp; \pi_q+\frac{\theta}{\alpha-1} \frac{(\theta/(\theta+\pi_q))^{\alpha-1}}
+{(\theta/(\theta+\pi_q))^{\alpha}}\\
+&amp;=&amp;\pi_q +\frac{\theta}{\alpha-1}\left( \frac{\pi_q+\theta}{\theta} \right)\\
+&amp;=&amp; \pi_q+\frac{\pi_q+\theta}{\alpha-1},
+\end{eqnarray*}
+\]</span></p>
+<p>Menyesuaikan <span class="math inline">\(q∈(0,1)\)</span>, nilai risiko bersyarat untuk sebuah variabel acak X diformulasikan sebagai</p>
+<p><span class="math display">\[CVaR_q[X] = \frac{1}{1-q}\int_{q}^{1} VaR_{\alpha}[X]\ d\alpha .\]</span></p>
+<p>Nilai risiko bersyarat juga dikenal sebagai rata-rata nilai risiko (<span class="math inline">\(AVaR\)</span>) dan kegagalan yang diharapkan (<span class="math inline">\(ES\)</span>). Dapat ditunjukkan bahwa <span class="math inline">\(CVaR_q[X] = TVaR_q[X]\)</span> ketika <span class="math inline">\(\Pr(X=VaR_q[X])=0\)</span>, yang berlaku untuk variabel acak kontinu. Artinya, jika X kontinu, maka melalui perubahan variabel, kita dapat menulis ulang persamaan sebagai</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+  TVaR_{q}[X] &amp;=&amp; \frac{1}{1-q}\int_{q}^{1} VaR_{\alpha}[X]\ d\alpha.
+  \tag{10.9}
+\end{eqnarray}
+\]</span></p>
+<p>Formula alternatif (10.9) ini memberitahu bahwa <span class="math inline">\(TVaR\)</span> adalah rata-rata dari <span class="math inline">\(VaR_α[X]\)</span> dengan tingkat kepercayaan yang bervariasi di atas <span class="math inline">\(α∈[q,1]\)</span>. Oleh karena itu, <span class="math inline">\(TVaR\)</span> secara efektif menyelesaikan sebagian besar keterbatasan dari VaR yang diuraikan pada subbab sebelumnya. Pertama, karena efek rata-rata, TVaR mungkin kurang sensitif terhadap perubahan tingkat kepercayaan dibandingkan dengan VaR. Kedua, semua kerugian ekstrem yang berada di atas peristiwa terburuk <span class="math inline">\((1-q)\times 100\%\)</span> yang paling mungkin dihitung.</p>
+<p>Dalam hal ini, seseorang dapat melihat bahwa untuk setiap <span class="math inline">\(q∈(0,1)\)</span></p>
+<p><span class="math inline">\(TVaR_q[X]\geq VaR_q[X].\)</span></p>
+<p>Ketiga dan mungkin yang paling penting, TVaR adalah ukuran risiko koheren dan dengan demikian mampu menangkap efek diversifikasi dari portofolio asuransi dengan lebih akurat.</p>
+</div>
+</div>
+</div>
+<div id="reinsurance-1" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Reinsurance<a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>reasuransi adalah asuransi yang dibeli oleh perusahaan asuransi. Berbeda dengan asuransi yang dibeli oleh individu, reasuransi biasanya dirancang khusus untuk pembeli dan memiliki fleksibilitas kontrak yang lebih besar. Ada dua jenis reasuransi, yaitu reasuransi proporsional dan non-proporsional. Reasuransi proporsional melibatkan persentase tertentu dari kerugian dan premi yang diambil oleh perusahaan reasuransi. Sedangkan reasuransi non-proporsional mencakup kontrak stop-loss dan excess of loss.</p>
+<p>semua jenis kontrak reasuransi membagi risiko total menjadi dua bagian, yaitu risiko yang ditanggung oleh perusahaan reasuransi dan risiko yang ditahan oleh perusahaan asuransi. Dalam hal ini, <span class="math inline">\(X\)</span> adalah risiko total, <span class="math inline">\(Y_{reinsurer}\)</span> adalah risiko yang ditanggung oleh perusahaan reasuransi, dan <span class="math inline">\(Y_{insurer}\)</span> adalah risiko yang ditahan oleh perusahaan asuransi. Dinyatakan dalam <span class="math inline">\(X = Y_{insurer}+Y_{reinsurer}\)</span></p>
+<p>struktur matematika dasar dari sebuah perjanjian reasuransi sama dengan modifikasi cakupan dalam asuransi personal yang diperkenalkan dalam Bab 3. Dalam reasuransi proporsional, transformasi <span class="math inline">\(Y_{insurer} = cX\)</span> identik dengan penyesuaian co-insurance dalam asuransi personal. Dalam reasuransi stop-loss, transformasi <span class="math inline">\(Y_{reinsurer} = max(0, X-M)\)</span> sama dengan pembayaran asuransi dengan nilai retensi (deductible) <span class="math inline">\(M\)</span>, sedangkan <span class="math inline">\(Y_{insurer} = min(X, M)\)</span> setara dengan apa yang dibayarkan oleh pemegang polis dengan nilai retensi <span class="math inline">\(M\)</span>.</p>
+<p>Namun, dalam aplikasi praktis matematika, fokus dalam asuransi personal umumnya pada harapan sebagai bahan utama yang digunakan dalam penetapan harga. Sedangkan dalam reasuransi, fokusnya adalah pada seluruh distribusi risiko, karena peristiwa ekstrim menjadi perhatian utama untuk stabilitas keuangan perusahaan asuransi dan reasuransi.</p>
+<div id="proportional-reinsurance" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Proportional Reinsurance<a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jumlah yang dibayarkan oleh perusahaan asuransi utama dan perusahaan reasuransi dituliskan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+Y_{insurer} = c X \ \ \text{and} \ \ \ Y_{reinsurer} = (1-c) X,
+\end{equation}\]</span></p>
+<p>dimana <span class="math inline">\(c\in (0,1)\)</span> menunjukkan proporsi yang disimpan oleh perusahaan asuransi. Perhatikan bahwa <span class="math inline">\(Y_{insurer}+Y_{reinsurer}=X\)</span></p>
+<p>contoh 10.4.1 akan menunjukkan bagaimana perjanjian quota-share mempengaruhi distribusi kerugian melalui demonstrasi <span class="math inline">\(r\)</span> singkat menggunakan simulasi. Gambar yang disertakan memberikan bentuk relatif dari distribusi kerugian total, bagian yang ditahan oleh perusahaan asuransi, dan bagian yang ditanggung oleh perusahaan reasuransi.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2018</span>)</span>
+<span id="cb1-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb1-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb1-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb1-3" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb1-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb1-4" aria-hidden="true" tabindex="-1"></a>nSim <span class="ot">=</span> <span class="dv">10000</span></span>
+<span id="cb1-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;actuar&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     sd, var</code></pre>
+<pre><code>## The following object is masked from &#39;package:grDevices&#39;:
+## 
+##     cm</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span>  <span class="fu">rpareto</span>(nSim, <span class="at">shape =</span> alpha, <span class="at">scale =</span> theta)</span>
+<span id="cb5-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb5-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(X), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span><span class="sc">*</span>theta), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.008</span>), <span class="at">main=</span><span class="st">&quot;Total Loss&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span>
+<span id="cb5-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(<span class="fl">0.75</span><span class="sc">*</span>X), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span><span class="sc">*</span>theta), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.008</span>), <span class="at">main=</span><span class="st">&quot;Insurer (75%)&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span>
+<span id="cb5-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(<span class="fl">0.25</span><span class="sc">*</span>X), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span><span class="sc">*</span>theta), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.008</span>), <span class="at">main=</span><span class="st">&quot;Reinsurer (25%)&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="quota-share-is-desirable-for-reinsurers" class="section level4 hasAnchor" number="10.4.1.1">
+<h4><span class="header-section-number">10.4.1.1</span> Quota Share is Desirable for Reinsurers<a href="insurance-portfolio-management-including-reinsurance.html#quota-share-is-desirable-for-reinsurers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Kontrak bagian kuota (quota share) sangat diinginkan bagi reinsurer. Untuk melihat ini, asumsikan bahwa perusahaan asuransi dan reinsurer ingin memasuki kontrak untuk berbagi total kerugian <span class="math inline">\(X\)</span></p>
+<p><span class="math display">\[\begin{equation}
+Y_{insurer}=g(X) \ \ \ \text{and} \ \ \ \ Y_{reinsurer}=X-g(X),
+\end{equation}\]</span></p>
+<p>Dalam kontrak quota share, diasumsikan ada sebuah fungsi generik <span class="math inline">\(g(\cdot)\)</span> (dikenal sebagai fungsi retensi) yang digunakan untuk membagi kerugian antara perusahaan asuransi dan reinsurer. Fungsi retensi tersebut harus memastikan bahwa perusahaan asuransi tidak mempertahankan lebih banyak kerugian daripada yang sebenarnya terjadi, sehingga hanya fungsi yang memenuhi <span class="math inline">\(g(x) ≤ x\)</span> yang dianggap. Selanjutnya, diasumsikan bahwa perusahaan asuransi hanya peduli dengan variabilitas klaim yang dipertahankan dan tidak memperdulikan pilihan fungsi <span class="math inline">\(g\)</span> selama <span class="math inline">\(variansi (Y_{insurer})\)</span> tetap sama dan sama dengan <span class="math inline">\(Q\)</span>, sebagai contoh. Kemudian, hasil berikut menunjukkan bahwa kontrak reasuransi quota share meminimalkan ketidakpastian reinsurer sebagaimana diukur dengan <span class="math inline">\(Var(Y_{reinsurer})\)</span>.</p>
+<p>Proposisi. Misalkan <span class="math inline">\(Var(Y_{insurer}) =Q\)</span> maka <span class="math inline">\(Var((1-c)X) \le Var (g(X))\)</span> untuk semua <span class="math inline">\(g(\cdot)\)</span> sehingga <span class="math inline">\(E[g(X)]=K\)</span> dimana <span class="math inline">\(c=Q/Var(X)\)</span></p>
+<p>Proposisi ini memiliki daya tarik secara intuitif - dengan asuransi quota share, reinsurer membagi tanggung jawab untuk klaim yang sangat besar pada ekor distribusi. Ini berbeda dengan perjanjian non-proportional di mana reinsurer bertanggung jawab atas klaim yang sangat besar.</p>
+</div>
+<div id="optimizing-quota-share-agreements-for-insurers" class="section level4 hasAnchor" number="10.4.1.2">
+<h4><span class="header-section-number">10.4.1.2</span> Optimizing Quota Share Agreements for Insurers<a href="insurance-portfolio-management-including-reinsurance.html#optimizing-quota-share-agreements-for-insurers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dalam kasus di mana ada <span class="math inline">\(n\)</span> risiko dalam suatu portofolio, di mana setiap risiko dinyatakan oleh <span class="math inline">\(X_i\)</span>, kita dapat mempertimbangkan variasi dari kesepakatan kuota bersama di mana jumlah yang ditahan oleh perusahaan asuransi dapat bervariasi dengan setiap risiko, disebut ci. Dalam hal ini, bagian perusahaan asuransi dari risiko portofolio adalah <span class="math inline">\(Y_{insurer} = \sum_{i=1}^n c_i X_i\)</span>. Kami mencari nilai-nilai <span class="math inline">\(c_i\)</span> yang meminimalkan <span class="math inline">\(Var(Y_{insurer})\)</span> dengan batasan bahwa <span class="math inline">\(E(Y_{insurer}) = K\)</span>. Ini berarti bahwa perusahaan asuransi ingin mempertahankan pendapatan setidaknya sebesar konstanta <span class="math inline">\(K\)</span> dan sejalan dengan batasan ini, ingin meminimalkan ketidakpastian risiko yang ditahan dalam hal varians.</p>
+<p>Kasus ini dapat diterapkan pada berbagai aplikasi di mana risiko individu dapat didefinisikan sebagai risiko kebijakan atau klaim individu atau subportofolio, tergantung pada aplikasi spesifik. Sebagai contoh, perusahaan asuransi dapat membagi portofolionya menjadi subportofolio yang terdiri dari beberapa jenis bisnis, seperti (1) mobil pribadi, (2) mobil komersial, (3) pemilik rumah, (4) kompensasi pekerja, dan lain-lain.</p>
+<p>Dari hasil perhitungan matematika, diketahui bahwa konstanta untuk risiko ke-<span class="math inline">\(i\)</span>, <span class="math inline">\(c_i\)</span>, berkorelasi dengan rasio <span class="math inline">\(\frac{E(X_i)}{Var(X_i)}\)</span>. Secara intuitif, jika <span class="math inline">\(E(X_i)\)</span> lebih besar, maka nilai <span class="math inline">\(c_i\)</span> akan semakin besar pula, dan sebaliknya, jika <span class="math inline">\(Var(X_i)\)</span> semakin besar, maka nilai <span class="math inline">\(c_i\)</span> akan semakin kecil. Faktor pengali proporsional ditentukan oleh persyaratan pendapatan <span class="math inline">\(E(Y_{insurer})=K\)</span>. Contoh yang diberikan membantu memahami hubungan ini.</p>
+<p>Contohnya, terdapat tiga risiko yang masing-masing memiliki distribusi Pareto dengan parameter yang berbeda.</p>
+<ul>
+<li><span class="math inline">\(\alpha_1 =3\)</span>, _1=1000 untuk resiko pertama <span class="math inline">\(X_1\)</span>,</li>
+<li><span class="math inline">\(\alpha_2 =3\)</span>, _2=2000 untuk resiko kedua <span class="math inline">\(X_2\)</span>, dan</li>
+<li><span class="math inline">\(\alpha_3 =4\)</span>, _3=3000 untuk resiko ketiga <span class="math inline">\(X_3\)</span>.</li>
+</ul>
+<p>Grafik disediakan untuk menunjukkan nilai <span class="math inline">\(c_1\)</span>, <span class="math inline">\(c_2\)</span>, dan <span class="math inline">\(c_3\)</span> untuk pendapatan yang dibutuhkan sebesar <span class="math inline">\(K\)</span>. Perlu diperhatikan bahwa nilai-nilai ini meningkat secara linear dengan <span class="math inline">\(K\)</span>.</p>
+<p>solusi:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-1" aria-hidden="true" tabindex="-1"></a>theta1 <span class="ot">=</span> <span class="dv">1000</span>; theta2 <span class="ot">=</span> <span class="dv">2000</span>; theta3 <span class="ot">=</span> <span class="dv">3000</span>;</span>
+<span id="cb6-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-2" aria-hidden="true" tabindex="-1"></a>alpha1 <span class="ot">=</span> <span class="dv">3</span>; alpha2 <span class="ot">=</span> <span class="dv">3</span>; alpha3 <span class="ot">=</span> <span class="dv">4</span>;</span>
+<span id="cb6-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span>
+<span id="cb6-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-4" aria-hidden="true" tabindex="-1"></a>propnfct <span class="ot">&lt;-</span> <span class="cf">function</span>(alpha,theta){</span>
+<span id="cb6-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  mu    <span class="ot">&lt;-</span> <span class="fu">mpareto</span>(<span class="at">shape=</span>alpha, <span class="at">scale=</span>theta, <span class="at">order=</span><span class="dv">1</span>)</span>
+<span id="cb6-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  var   <span class="ot">&lt;-</span> <span class="fu">mpareto</span>(<span class="at">shape=</span>alpha, <span class="at">scale=</span>theta, <span class="at">order=</span><span class="dv">2</span>) <span class="sc">-</span> mu<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb6-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-7" aria-hidden="true" tabindex="-1"></a>  mu<span class="sc">/</span>var</span>
+<span id="cb6-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-9" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">propnfct</span>(alpha1, theta1)<span class="sc">*</span><span class="fu">mpareto</span>(<span class="at">shape=</span>alpha1, <span class="at">scale=</span>theta1, <span class="at">order=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb6-10"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">propnfct</span>(alpha2, theta2)<span class="sc">*</span><span class="fu">mpareto</span>(<span class="at">shape=</span>alpha2, <span class="at">scale=</span>theta2, <span class="at">order=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb6-11"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">propnfct</span>(alpha3, theta3)<span class="sc">*</span><span class="fu">mpareto</span>(<span class="at">shape=</span>alpha3, <span class="at">scale=</span>theta3, <span class="at">order=</span><span class="dv">1</span>)  </span>
+<span id="cb6-12"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-12" aria-hidden="true" tabindex="-1"></a>KVec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">2500</span>, <span class="at">length.out=</span><span class="dv">20</span>)</span>
+<span id="cb6-13"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-13" aria-hidden="true" tabindex="-1"></a>Lambdavec <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>KVec<span class="sc">/</span>temp</span>
+<span id="cb6-14"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-14" aria-hidden="true" tabindex="-1"></a>c1 <span class="ot">&lt;-</span> <span class="fu">propnfct</span>(alpha1, theta1)</span>
+<span id="cb6-15"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-15" aria-hidden="true" tabindex="-1"></a>c2 <span class="ot">&lt;-</span> <span class="fu">propnfct</span>(alpha2, theta2)</span>
+<span id="cb6-16"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-16" aria-hidden="true" tabindex="-1"></a>c3 <span class="ot">&lt;-</span> <span class="fu">propnfct</span>(alpha3, theta3)</span>
+<span id="cb6-17"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-17" aria-hidden="true" tabindex="-1"></a>c1Vec <span class="ot">&lt;-</span> c2Vec <span class="ot">&lt;-</span> c3Vec <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">*</span>KVec </span>
+<span id="cb6-18"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) {</span>
+<span id="cb6-19"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-19" aria-hidden="true" tabindex="-1"></a>  c1Vec[j] <span class="ot">&lt;-</span> (Lambdavec[j]<span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">propnfct</span>(alpha1, theta1)</span>
+<span id="cb6-20"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-20" aria-hidden="true" tabindex="-1"></a>  c2Vec[j] <span class="ot">&lt;-</span> (Lambdavec[j]<span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">propnfct</span>(alpha2, theta2)</span>
+<span id="cb6-21"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-21" aria-hidden="true" tabindex="-1"></a>  c3Vec[j] <span class="ot">&lt;-</span> (Lambdavec[j]<span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">propnfct</span>(alpha3, theta3)</span>
+<span id="cb6-22"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-23"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(KVec, c1Vec, <span class="at">type=</span><span class="st">&quot;l&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;proportion&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;required revenue (K)&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span>
+<span id="cb6-24"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(KVec, c2Vec)</span>
+<span id="cb6-25"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(KVec, c3Vec)</span>
+<span id="cb6-26"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">1200</span>,<span class="fl">0.80</span>, <span class="fu">expression</span>(c[<span class="dv">1</span>]))</span>
+<span id="cb6-27"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">2000</span>,<span class="fl">0.75</span>, <span class="fu">expression</span>(c[<span class="dv">2</span>]))</span>
+<span id="cb6-28"><a href="insurance-portfolio-management-including-reinsurance.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">1500</span>,<span class="fl">0.30</span>, <span class="fu">expression</span>(c[<span class="dv">3</span>]))</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+</div>
+<div id="non-proportional-reinsurance" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Non-Proportional Reinsurance<a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-optimality-of-stop-loss-insurance" class="section level4 hasAnchor" number="10.4.2.1">
+<h4><span class="header-section-number">10.4.2.1</span> The Optimality of Stop-Loss Insurance<a href="insurance-portfolio-management-including-reinsurance.html#the-optimality-of-stop-loss-insurance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dalam sebuah perjanjian stop-loss, asuransi menetapkan level retensi <span class="math inline">\(M (&gt; 0)\)</span> dan membayar seluruh klaim untuk nilai <span class="math inline">\(X ≤ M\)</span>. Selanjutnya, untuk klaim dengan nilai <span class="math inline">\(X &gt; M\)</span>, asuransi primer membayar <span class="math inline">\(M\)</span> dan reasuransi membayar sisanya, yaitu <span class="math inline">\(X - M\)</span>. Oleh karena itu, asuransi menanggung risiko sebesar <span class="math inline">\(M\)</span>. Singkatnya, jumlah yang dibayar oleh asuransi primer dan reasuransi adalah sebagai berikut:</p>
+<p><span class="math display">\[\begin{equation}
+Y_{insurer} =
+\begin{cases}
+X &amp; \text{for } X \le M\\
+M &amp; \text{for } X &gt;M \\
+\end{cases} \ \ \ \ = \min(X,M) = X \wedge M
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+Y_{reinsurer} =
+\begin{cases}
+0 &amp; \text{for } X \le M\\
+X- M &amp;  \text{for } X &gt;M \\
+\end{cases} \ \ \ \  = \max(0,X-M)
+\end{equation}\]</span></p>
+<p>sama seperti sebelumnya <span class="math inline">\(Y_{insurer}+Y_{reinsurer}=X\)</span></p>
+<p>Kontrak tipe stop-loss sangat diinginkan oleh perusahaan asuransi. Dalam hal ini, perusahaan asuransi dan reasuransi ingin memasuki kontrak sehingga <span class="math inline">\(Y_{insurer} = g(X)\)</span> dan <span class="math inline">\(Y_{reinsurer} = X - g(X)\)</span> untuk beberapa fungsi retensi generik <span class="math inline">\(g(\cdot)\)</span>. Dengan asumsi bahwa perusahaan asuransi hanya peduli tentang variabilitas klaim yang disimpan dan tidak peduli dengan pilihan <span class="math inline">\(g\)</span> selama <span class="math inline">\(Var(Y_{insurer})\)</span> dapat diminimalkan. Kembali, kita mengenakan batasan bahwa <span class="math inline">\(E(Y_{insurer}) = K\)</span> ; perusahaan asuransi perlu mempertahankan pendapatan <span class="math inline">\(K\)</span>. Dalam rangka untuk memenuhi batasan ini, perusahaan asuransi ingin meminimalkan ketidakpastian risiko yang disimpan (sebagaimana diukur oleh varians). Kemudian, hasil berikut menunjukkan bahwa perjanjian reasuransi stop-loss meminimalkan ketidakpastian reinsurer sebagaimana diukur oleh <span class="math inline">\(Var(Y_{reinsurer})\)</span>.</p>
+<p>Proposisi. Anggaplah <span class="math inline">\(E(Y_{insurer})=K\)</span>. Maka, <span class="math inline">\(Var(X\wedge M)\le Var(g(X))\)</span> untuk semua <span class="math inline">\(g(\cdot)\)</span>, di mana <span class="math inline">\(M\)</span> adalah nilai sedemikian rupa sehingga <span class="math inline">\(E(X\wedge M)=K\)</span>.</p>
+</div>
+<div id="excess-of-loss" class="section level4 hasAnchor" number="10.4.2.2">
+<h4><span class="header-section-number">10.4.2.2</span> Excess of Loss<a href="insurance-portfolio-management-including-reinsurance.html#excess-of-loss" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dalam reasuransi non-proporsional, terdapat jenis polis excess of loss. Dalam polis ini, risiko total <span class="math inline">\(X\)</span> diasumsikan terdiri dari <span class="math inline">\(n\)</span> risiko terpisah <span class="math inline">\(X_1,...,X_n\)</span>, dimana masing-masing risiko tersebut memiliki batas atas, misalnya <span class="math inline">\(M_i\)</span>. Pada polis ini, perusahaan asuransi menahan risiko</p>
+<p><span class="math display">\[\begin{equation}
+Y_{insurer} = \sum_{i=1}^n Y_{i,insurer}, \ \ \ \ \text{dengan} \ \ \ \ \ Y_{i,insurer} = X_i \wedge M_i.
+\end{equation}\]</span></p>
+<p>Sedangkan, untuk bagian risiko yang melebihi batas tersebut, reinsurer bertanggung jawab menanggungnya, yaitu <span class="math inline">\(Y_{reinsurer}=X−Y_{insurer}\)</span>. Batas retensi dapat bervariasi untuk setiap risiko atau dapat sama untuk semua risiko, yaitu <span class="math inline">\(M_i=M\)</span> untuk semua <span class="math inline">\(i\)</span>.</p>
+</div>
+<div id="optimal-choice-for-excess-of-loss-retention-limits" class="section level4 hasAnchor" number="10.4.2.3">
+<h4><span class="header-section-number">10.4.2.3</span> Optimal Choice for Excess of Loss Retention Limits<a href="insurance-portfolio-management-including-reinsurance.html#optimal-choice-for-excess-of-loss-retention-limits" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>apa pilihan terbaik dari batas retensi excess of loss <span class="math inline">\(M_i\)</span>? Untuk menjawab pertanyaan ini, kita perlu mencari nilai-nilai <span class="math inline">\(M_i\)</span> yang meminimalkan <span class="math inline">\(Var(Y_{insurer})\)</span> dengan mempertahankan konstrain bahwa <span class="math inline">\(E(Y_{insurer})=K\)</span>. Dalam rangka mempertahankan konstrain pendapatan ini, perusahaan asuransi ingin meminimalkan ketidakpastian risiko yang dipertahankan (yang diukur dengan variansinya).</p>
+<p>Dari perhitungan matematika, terungkap bahwa selisih antara batas retensi dan klaim rata-rata yang diharapkan oleh insurer, <span class="math inline">\(M_i−E(X_i\wedge M_i)\)</span>, adalah sama untuk semua risiko. Hal ini secara intuitif menarik.</p>
+<p>Contoh 10.4.3. Excess of loss untuk tiga risiko Pareto. Pertimbangkan tiga risiko yang memiliki distribusi Pareto, masing-masing memiliki set parameter yang berbeda (sehingga mereka independen tetapi tidak identik). Gunakan set parameter yang sama seperti pada Contoh 10.4.2. Untuk contoh ini:</p>
+<p>A. Tunjukkan secara numerik bahwa batas retensi optimal <span class="math inline">\(M_1\)</span>, <span class="math inline">\(M_2\)</span>, dan <span class="math inline">\(M_3\)</span> (dikurangi klaim rata-rata yang diharapkan oleh insurer, <span class="math inline">\(M_i−E(X_i\wedge M_i))\)</span> adalah sama untuk semua risiko, seperti yang kita turunkan secara teoritis.</p>
+<p>B. Selanjutnya, bandingkan secara grafis distribusi total risiko dengan risiko yang disimpan oleh insurer dan oleh reinsurer.</p>
+<p>solusi:</p>
+<p>A. mengoptimasi Lagrangian menggunakan paket R alabama untuk Algoritma Minimasi Barrier Adaptif Lagrangian.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-1" aria-hidden="true" tabindex="-1"></a>theta1 <span class="ot">=</span> <span class="dv">1000</span>;theta2 <span class="ot">=</span> <span class="dv">2000</span>;theta3 <span class="ot">=</span> <span class="dv">3000</span>;</span>
+<span id="cb7-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-2" aria-hidden="true" tabindex="-1"></a>alpha1 <span class="ot">=</span> <span class="dv">3</span>;   alpha2 <span class="ot">=</span> <span class="dv">3</span>;   alpha3 <span class="ot">=</span> <span class="dv">4</span>;</span>
+<span id="cb7-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-3" aria-hidden="true" tabindex="-1"></a>Pmin <span class="ot">&lt;-</span> <span class="dv">2000</span></span>
+<span id="cb7-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span>
+<span id="cb7-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-5" aria-hidden="true" tabindex="-1"></a>VarFct <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb7-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-6" aria-hidden="true" tabindex="-1"></a>  M1<span class="ot">=</span>M[<span class="dv">1</span>];M2<span class="ot">=</span>M[<span class="dv">2</span>];M3<span class="ot">=</span>M[<span class="dv">3</span>]</span>
+<span id="cb7-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-7" aria-hidden="true" tabindex="-1"></a>  mu1    <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M1,<span class="at">shape=</span>alpha1, <span class="at">scale=</span>theta1, <span class="at">order=</span><span class="dv">1</span>)</span>
+<span id="cb7-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-8" aria-hidden="true" tabindex="-1"></a>  var1   <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M1,<span class="at">shape=</span>alpha1, <span class="at">scale=</span>theta1, <span class="at">order=</span><span class="dv">2</span>)<span class="sc">-</span>mu1<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb7-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-9" aria-hidden="true" tabindex="-1"></a>  mu2    <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M2,<span class="at">shape=</span>alpha2, <span class="at">scale=</span>theta2, <span class="at">order=</span><span class="dv">1</span>)</span>
+<span id="cb7-10"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-10" aria-hidden="true" tabindex="-1"></a>  var2   <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M2,<span class="at">shape=</span>alpha2, <span class="at">scale=</span>theta2, <span class="at">order=</span><span class="dv">2</span>)<span class="sc">-</span>mu2<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb7-11"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-11" aria-hidden="true" tabindex="-1"></a>  mu3    <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M3,<span class="at">shape=</span>alpha3, <span class="at">scale=</span>theta3, <span class="at">order=</span><span class="dv">1</span>)</span>
+<span id="cb7-12"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-12" aria-hidden="true" tabindex="-1"></a>  var3   <span class="ot">&lt;-</span> <span class="fu">levpareto</span>(<span class="at">limit=</span>M3,<span class="at">shape=</span>alpha3, <span class="at">scale=</span>theta3, <span class="at">order=</span><span class="dv">2</span>)<span class="sc">-</span>mu3<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb7-13"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-13" aria-hidden="true" tabindex="-1"></a>  varFct <span class="ot">&lt;-</span> var1 <span class="sc">+</span>var2<span class="sc">+</span>var3</span>
+<span id="cb7-14"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-14" aria-hidden="true" tabindex="-1"></a>  meanFct <span class="ot">&lt;-</span> mu1<span class="sc">+</span>mu2<span class="sc">+</span>mu3</span>
+<span id="cb7-15"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanFct,varFct)</span>
+<span id="cb7-16"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-17"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-17" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(M){<span class="fu">VarFct</span>(M)[<span class="dv">2</span>]}</span>
+<span id="cb7-18"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-18" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="cf">function</span>(M){<span class="fu">VarFct</span>(M)[<span class="dv">1</span>] <span class="sc">-</span> Pmin}</span>
+<span id="cb7-19"><a href="insurance-portfolio-management-including-reinsurance.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(alabama)</span></code></pre></div>
+<pre><code>## Loading required package: numDeriv</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb9-1" aria-hidden="true" tabindex="-1"></a>par0<span class="ot">=</span><span class="fu">rep</span>(<span class="dv">1000</span>,<span class="dv">3</span>)</span>
+<span id="cb9-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb9-2" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">auglag</span>(<span class="at">par=</span>par0,<span class="at">fn=</span>f,<span class="at">hin=</span>h,<span class="at">control.outer=</span><span class="fu">list</span>(<span class="at">trace=</span><span class="cn">FALSE</span>))</span></code></pre></div>
+<p>Batas retensi optimal <span class="math inline">\(M_1\)</span>, <span class="math inline">\(M_2\)</span>, dan <span class="math inline">\(M_3\)</span> yang menghasilkan batas retensi dikurangi klaim yang diharapkan dari perusahaan asuransi, <span class="math inline">\(M_i-E(X_i\wedge M_i)\)</span>, sama untuk semua risiko, seperti yang kita dapatkan secara teoritis.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb10-1" aria-hidden="true" tabindex="-1"></a>M1star <span class="ot">=</span> op<span class="sc">$</span>par[<span class="dv">1</span>];M2star <span class="ot">=</span> op<span class="sc">$</span>par[<span class="dv">2</span>];M3star <span class="ot">=</span> op<span class="sc">$</span>par[<span class="dv">3</span>]</span>
+<span id="cb10-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb10-2" aria-hidden="true" tabindex="-1"></a>M1star <span class="sc">-</span><span class="fu">levpareto</span>(M1star,<span class="at">shape=</span>alpha1, <span class="at">scale=</span>theta1,<span class="at">order=</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 1344.135</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb12-1" aria-hidden="true" tabindex="-1"></a>M2star <span class="sc">-</span><span class="fu">levpareto</span>(M2star,<span class="at">shape=</span>alpha2, <span class="at">scale=</span>theta2,<span class="at">order=</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 1344.133</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb14-1" aria-hidden="true" tabindex="-1"></a>M3star <span class="sc">-</span><span class="fu">levpareto</span>(M3star,<span class="at">shape=</span>alpha3, <span class="at">scale=</span>theta3,<span class="at">order=</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 1344.133</code></pre>
+<p>B. membandingkan secara grafis distribusi risiko total dengan yang dipertahankan oleh perusahaan asuransi dan perusahaan reasuransi.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2018</span>)</span>
+<span id="cb16-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-2" aria-hidden="true" tabindex="-1"></a>nSim <span class="ot">=</span> <span class="dv">10000</span></span>
+<span id="cb16-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span>
+<span id="cb16-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-4" aria-hidden="true" tabindex="-1"></a>Y1 <span class="ot">&lt;-</span> <span class="fu">rpareto</span>(nSim, <span class="at">shape =</span> alpha1, <span class="at">scale =</span> theta1)</span>
+<span id="cb16-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-5" aria-hidden="true" tabindex="-1"></a>Y2 <span class="ot">&lt;-</span> <span class="fu">rpareto</span>(nSim, <span class="at">shape =</span> alpha2, <span class="at">scale =</span> theta2)</span>
+<span id="cb16-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-6" aria-hidden="true" tabindex="-1"></a>Y3 <span class="ot">&lt;-</span> <span class="fu">rpareto</span>(nSim, <span class="at">shape =</span> alpha3, <span class="at">scale =</span> theta3)</span>
+<span id="cb16-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-7" aria-hidden="true" tabindex="-1"></a>YTotal <span class="ot">&lt;-</span> Y1 <span class="sc">+</span> Y2 <span class="sc">+</span> Y3</span>
+<span id="cb16-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-8" aria-hidden="true" tabindex="-1"></a>Yinsur <span class="ot">&lt;-</span>  <span class="fu">pmin</span>(Y1,M1star)<span class="sc">+</span><span class="fu">pmin</span>(Y2,M2star)<span class="sc">+</span><span class="fu">pmin</span>(Y3,M3star)</span>
+<span id="cb16-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-9" aria-hidden="true" tabindex="-1"></a>Yreinsur <span class="ot">&lt;-</span> YTotal <span class="sc">-</span> Yinsur</span>
+<span id="cb16-10"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb16-12"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(YTotal),   <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10000</span>), <span class="at">main=</span><span class="st">&quot;Total Loss&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span>
+<span id="cb16-13"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Yinsur),   <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10000</span>), <span class="at">main=</span><span class="st">&quot;Insurer&quot;</span>,    <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span>
+<span id="cb16-14"><a href="insurance-portfolio-management-including-reinsurance.html#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Yreinsur), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10000</span>), <span class="at">main=</span><span class="st">&quot;Reinsurer&quot;</span>,  <span class="at">xlab=</span><span class="st">&quot;Losses&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+</div>
+<div id="additional-reinsurance-treaties" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> Additional Reinsurance Treaties<a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="surplus-share-proportional-treaty" class="section level4 hasAnchor" number="10.4.3.1">
+<h4><span class="header-section-number">10.4.3.1</span> Surplus Share Proportional Treaty<a href="insurance-portfolio-management-including-reinsurance.html#surplus-share-proportional-treaty" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Jenis perjanjian reasuransi proposional lainnya adalah surplus share, yang umum digunakan dalam asuransi properti komersial.</p>
+<ul>
+<li>Perjanjian surplus share memungkinkan reinsured untuk membatasi eksposurnya pada risiko dengan jumlah tertentu (retained line).</li>
+<li>Reinsurer mengambil bagian dari risiko secara proporsional terhadap jumlah nilai yang diasuransikan melebihi retained line, hingga batas tertentu (dinyatakan sebagai kelipatan dari retained line, atau jumlah line).</li>
+</ul>
+<p>Sebagai contoh, jika retained line adalah 100.000 dan batas yang diberikan adalah 4 line (400.000), maka jika <span class="math inline">\(X\)</span> adalah kerugian, bagian dari reinsurer adalah <span class="math inline">\(min(400000,(X−100000)_+)\)</span>.</p>
+</div>
+<div id="layers-of-coverage" class="section level4 hasAnchor" number="10.4.3.2">
+<h4><span class="header-section-number">10.4.3.2</span> Layers of Coverage<a href="insurance-portfolio-management-including-reinsurance.html#layers-of-coverage" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dalam reasuransi non-proporsional stop-loss, kita dapat memperluas kontrak dengan menambahkan pihak lain ke dalam kontrak. Sebagai contoh, selain hanya ada perusahaan asuransi dan reasuransi atau perusahaan asuransi dan pemegang polis, kita bisa mempertimbangkan situasi di mana ada tiga pihak, yaitu pemegang polis, perusahaan asuransi, dan reasuransi, yang sepakat untuk berbagi risiko. Secara umum, kita dapat mempertimbangkan keberadaan <span class="math inline">\(k\)</span> pihak. Jika <span class="math inline">\(k = 3\)</span>, maka bisa jadi perusahaan asuransi dan dua reasuransi yang berbeda.</p>
+<p>Contoh 10.4.4. Lapisan perlindungan untuk tiga pihak.</p>
+<p>Misalkan ada <span class="math inline">\(k = 3\)</span> pihak. Pihak pertama bertanggung jawab atas klaim pertama senilai 100, pihak kedua bertanggung jawab atas klaim dari 100 hingga 3000, dan pihak ketiga bertanggung jawab atas klaim di atas 3000. Jika ada empat klaim masing-masing senilai 50, 600, 1800, dan 4000, maka klaim tersebut akan dialokasikan ke pihak-pihak sebagai berikut:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb17-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-3" aria-hidden="true" tabindex="-1"></a>tabel <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb17-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Buyer =</span> <span class="fu">c</span>(<span class="st">&quot;0-100&quot;</span>, <span class="st">&quot;100-3000&quot;</span>, <span class="st">&quot;3000-∞&quot;</span>, <span class="st">&quot;total&quot;</span>),</span>
+<span id="cb17-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">claim_1 =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">50</span>),</span>
+<span id="cb17-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">claim_2 =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">500</span>, <span class="dv">0</span>, <span class="dv">600</span>),</span>
+<span id="cb17-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">claim_3 =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1700</span>, <span class="dv">0</span>, <span class="dv">1800</span>),</span>
+<span id="cb17-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">claim_4 =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">2900</span>, <span class="dv">1000</span>,<span class="dv">4000</span>),</span>
+<span id="cb17-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">total =</span> <span class="fu">c</span>(<span class="dv">350</span>, <span class="dv">5100</span>, <span class="dv">1000</span>, <span class="dv">6450</span>)</span>
+<span id="cb17-10"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-11"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tabel, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Tabel Klaim&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-13"><a href="insurance-portfolio-management-including-reinsurance.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">&quot;striped&quot;</span>)</span></code></pre></div>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 10.1: </span>Tabel Klaim
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Buyer
+</th>
+<th style="text-align:center;">
+claim_1
+</th>
+<th style="text-align:center;">
+claim_2
+</th>
+<th style="text-align:center;">
+claim_3
+</th>
+<th style="text-align:center;">
+claim_4
+</th>
+<th style="text-align:center;">
+total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+0-100
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+350
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+100-3000
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+500
+</td>
+<td style="text-align:center;">
+1700
+</td>
+<td style="text-align:center;">
+2900
+</td>
+<td style="text-align:center;">
+5100
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3000-∞
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1000
+</td>
+<td style="text-align:center;">
+1000
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+total
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+600
+</td>
+<td style="text-align:center;">
+1800
+</td>
+<td style="text-align:center;">
+4000
+</td>
+<td style="text-align:center;">
+6450
+</td>
+</tr>
+</tbody>
+</table>
+<p>Untuk menangani situasi umum dengan <span class="math inline">\(k\)</span> kelompok, partisi garis bilangan real positif menjadi <span class="math inline">\(k\)</span> interval menggunakan titik potong</p>
+<p><span class="math display">\[\begin{equation}
+0 = M_0 &lt; M_1 &lt; \cdots &lt; M_{k-1} &lt; M_k = \infty.
+\end{equation}\]</span></p>
+<p>Perhatikan bahwa interval ke-<span class="math inline">\(j\)</span> adalah <span class="math inline">\((M_{j−1},M_j]\)</span>. Sekarang biarkan <span class="math inline">\(Y_j\)</span> menjadi jumlah risiko yang dibagi oleh pihak ke-<span class="math inline">\(j\)</span>. Untuk mengilustrasikan, jika kerugian <span class="math inline">\(x\)</span> adalah sehingga <span class="math inline">\(M_{j−1}&lt;x≤M_j\)</span>, maka</p>
+<p><span class="math display">\[\begin{equation}
+\left(\begin{array}{c}
+    Y_1\\ Y_2 \\ \vdots \\ Y_j \\Y_{j+1} \\ \vdots \\Y_k
+    \end{array}\right)
+    =\left(\begin{array}{c}
+    M_1-M_0 \\ M_2-M_1  \\ \vdots \\ x-M_{j-1}  \\ 0 \\ \vdots \\0
+    \end{array}\right)
+\end{equation}\]</span></p>
+<p>kita dapat menuliskannya sebagai</p>
+<p><span class="math display">\[\begin{equation}
+Y_j = \min(X,M_j) - \min(X,M_{j-1}) .
+\end{equation}\]</span></p>
+<p>Dengan ungkapan <span class="math inline">\(Y_j=min(X,M_j)−min(X,M_{j−1})\)</span>, kita dapat melihat bahwa pihak ke-<span class="math inline">\(j\)</span> bertanggung jawab atas klaim dalam interval <span class="math inline">\((M_{j−1},M_j]\)</span>. Dengan ini, Anda dapat memeriksa bahwa <span class="math inline">\(X=Y_1+Y_2+⋯+Y_k\)</span>. Seperti yang ditekankan dalam contoh berikut, kami juga mencatat bahwa pihak-pihak yang terlibat tidak harus berbeda.</p>
+</div>
+<div id="portfolio-management-example" class="section level4 hasAnchor" number="10.4.3.3">
+<h4><span class="header-section-number">10.4.3.3</span> Portfolio Management Example<a href="insurance-portfolio-management-including-reinsurance.html#portfolio-management-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Banyak variasi kontrak yang mendasar mungkin terjadi. Untuk satu ilustrasi lagi, pertimbangkan yang berikut ini.</p>
+<p>Contoh 10.4.6. Manajemen Portofolio. Anda adalah Kepala Petugas Risiko dari sebuah perusahaan telekomunikasi. Perusahaan Anda memiliki beberapa risiko properti dan tanggung jawab. Kami akan mempertimbangkan:</p>
+<p><span class="math inline">\(X_1\)</span> - gedung, dimodelkan menggunakan distribusi gamma dengan rata-rata 200 dan parameter skala 100.
+<span class="math inline">\(X_2\)</span> - kendaraan bermotor, dimodelkan menggunakan distribusi gamma dengan rata-rata 400 dan parameter skala 200.
+<span class="math inline">\(X_3\)</span> - risiko direktur dan pejabat eksekutif, dimodelkan menggunakan distribusi Pareto dengan rata-rata 1000 dan parameter skala 1000.
+<span class="math inline">\(X_4\)</span> - risiko siber, dimodelkan menggunakan distribusi Pareto dengan rata-rata 1000 dan parameter skala 2000.</p>
+<p>Sebutkan total risiko sebagai <span class="math inline">\(X = X_1 + X_2 + X_3 + X_4\)</span>. Untuk kesederhanaan, Anda mengasumsikan bahwa risiko ini independen. (Nanti, di Bagian 14.6, kami akan mempertimbangkan kasus yang lebih kompleks dari ketergantungan.)</p>
+<p>Untuk mengelola risiko, Anda mencari perlindungan asuransi. Anda ingin mengelola jumlah bangunan dan kendaraan bermotor yang kecil secara internal, hingga M1 dan M2, masing-masing. Anda mencari asuransi untuk menutupi semua risiko lain. Secara khusus, bagian dari perusahaan asuransi adalah</p>
+<p><span class="math display">\[\begin{equation}
+Y_{insurer} = (X_1 - M_1)_+ + (X_2 - M_2)_+ + X_3 + X_4 ,
+\end{equation}\]</span></p>
+<p>sehingga risiko yang Anda tanggung adalah <span class="math inline">\(Y_{retained} = X-Y_{insurer} = min(X_1,M_1)+min(X_2,M_2)\)</span>. Menggunakan deductible <span class="math inline">\(M_1=100\)</span> dan <span class="math inline">\(M_2=200\)</span>:</p>
+<p>A. Tentukan jumlah klaim yang diharapkan dari (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.
+B. Tentukan persentil ke-80, ke-90, ke-95, dan ke-99 untuk (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.
+C. Bandingkan distribusi dengan memplotting densitas untuk (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.</p>
+<p>Solusi</p>
+<p>menyiapkan parameter</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For the gamma distributions, use</span></span>
+<span id="cb18-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-2" aria-hidden="true" tabindex="-1"></a>alpha1 <span class="ot">&lt;-</span> <span class="dv">2</span>;      theta1 <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb18-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-3" aria-hidden="true" tabindex="-1"></a>alpha2 <span class="ot">&lt;-</span> <span class="dv">2</span>;      theta2 <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb18-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># For the Pareto distributions, use</span></span>
+<span id="cb18-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-5" aria-hidden="true" tabindex="-1"></a>alpha3 <span class="ot">&lt;-</span> <span class="dv">2</span>;      theta3 <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb18-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-6" aria-hidden="true" tabindex="-1"></a>alpha4 <span class="ot">&lt;-</span> <span class="dv">3</span>;      theta4 <span class="ot">&lt;-</span> <span class="dv">2000</span></span>
+<span id="cb18-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Limits</span></span>
+<span id="cb18-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-8" aria-hidden="true" tabindex="-1"></a>M1     <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb18-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb18-9" aria-hidden="true" tabindex="-1"></a>M2     <span class="ot">&lt;-</span> <span class="dv">200</span></span></code></pre></div>
+<p>dengan parameter ini, selanjutnya mensimulasikan realisasi dari risiko-risiko dalam portofolio</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate the risks</span></span>
+<span id="cb19-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-2" aria-hidden="true" tabindex="-1"></a>nSim <span class="ot">&lt;-</span> <span class="dv">10000</span>  <span class="co">#number of simulations</span></span>
+<span id="cb19-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2017</span>) <span class="co">#set seed to reproduce work </span></span>
+<span id="cb19-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-4" aria-hidden="true" tabindex="-1"></a>X1 <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(nSim,alpha1,<span class="at">scale =</span> theta1)  </span>
+<span id="cb19-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-5" aria-hidden="true" tabindex="-1"></a>X2 <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(nSim,alpha2,<span class="at">scale =</span> theta2)  </span>
+<span id="cb19-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For the Pareto Distribution, use</span></span>
+<span id="cb19-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span>
+<span id="cb19-8"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-8" aria-hidden="true" tabindex="-1"></a>X3 <span class="ot">&lt;-</span> <span class="fu">rpareto</span>(nSim,<span class="at">scale=</span>theta3,<span class="at">shape=</span>alpha3)</span>
+<span id="cb19-9"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-9" aria-hidden="true" tabindex="-1"></a>X4 <span class="ot">&lt;-</span> <span class="fu">rpareto</span>(nSim,<span class="at">scale=</span>theta4,<span class="at">shape=</span>alpha4)</span>
+<span id="cb19-10"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Portfolio Risks</span></span>
+<span id="cb19-11"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-11" aria-hidden="true" tabindex="-1"></a>X         <span class="ot">&lt;-</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> X3 <span class="sc">+</span> X4</span>
+<span id="cb19-12"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-12" aria-hidden="true" tabindex="-1"></a>Yretained <span class="ot">&lt;-</span> <span class="fu">pmin</span>(X1,M1) <span class="sc">+</span> <span class="fu">pmin</span>(X2,M2)</span>
+<span id="cb19-13"><a href="insurance-portfolio-management-including-reinsurance.html#cb19-13" aria-hidden="true" tabindex="-1"></a>Yinsurer  <span class="ot">&lt;-</span> X <span class="sc">-</span> Yretained</span></code></pre></div>
+<p>A. hasil dari jumlah ekspektasi klaim</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected Claim Amounts</span></span>
+<span id="cb20-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb20-2" aria-hidden="true" tabindex="-1"></a>ExpVec <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">as.matrix</span>(<span class="fu">c</span>(<span class="fu">mean</span>(Yretained),<span class="fu">mean</span>(Yinsurer),<span class="fu">mean</span>(X))))</span>
+<span id="cb20-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ExpVec) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Retained&quot;</span>, <span class="st">&quot;Insurer&quot;</span>,<span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb20-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(ExpVec,<span class="at">digits=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##      Retained Insurer   Total
+## [1,]   269.05 2274.41 2543.46</code></pre>
+<p>B. hasil untuk kuantilnya</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantiles</span></span>
+<span id="cb22-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-2" aria-hidden="true" tabindex="-1"></a>quantMat <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb22-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quantile</span>(Yretained, <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">0.90</span>, <span class="fl">0.95</span>, <span class="fl">0.99</span>)),</span>
+<span id="cb22-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quantile</span>(Yinsurer,  <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">0.90</span>, <span class="fl">0.95</span>, <span class="fl">0.99</span>)),</span>
+<span id="cb22-5"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quantile</span>(X       ,  <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">0.90</span>, <span class="fl">0.95</span>, <span class="fl">0.99</span>)))</span>
+<span id="cb22-6"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(quantMat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Retained&quot;</span>, <span class="st">&quot;Insurer&quot;</span>,<span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb22-7"><a href="insurance-portfolio-management-including-reinsurance.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(quantMat,<span class="at">digits=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##              80%     90%     95%      99%
+## Retained  300.00  300.00  300.00   300.00
+## Insurer  3075.67 4399.80 6172.69 11859.02
+## Total    3351.35 4675.04 6464.20 12159.02</code></pre>
+<p>C. Berikut adalah hasil plot densitas risiko yang dipertahankan, diasuransikan, dan total portofolio.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="insurance-portfolio-management-including-reinsurance.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb24-2"><a href="insurance-portfolio-management-including-reinsurance.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Yretained), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">500</span>), <span class="at">main=</span><span class="st">&quot;Retained Portfolio Risk&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Loss (Note the different horizontal scale)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Density (Note different vertical scale)&quot;</span>)</span>
+<span id="cb24-3"><a href="insurance-portfolio-management-including-reinsurance.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Yinsurer), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">15000</span>), <span class="at">main=</span><span class="st">&quot;Insurer Portfolio Risk&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Loss&quot;</span>)</span>
+<span id="cb24-4"><a href="insurance-portfolio-management-including-reinsurance.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(X), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">15000</span>), <span class="at">main=</span><span class="st">&quot;Total Portfolio Risk&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Loss&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 
+</div>
+</div>
+</div>
 </div>
             </section>
 

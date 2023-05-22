@@ -21,17 +21,23 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
+introduction
+yosia
+actuarial-exam-question
+example-5.3.2.-actuarial-exam-question
+stop-loss-insurance
+actuarial-exam-question---continued
+analytic-results
+example
+tweedie-distribution
 menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh
 simulasi
 simulation-and-resampling
 premium-foundations
-<<<<<<< HEAD
 pengenalan-ratemaking
 metode-penentuan-tarif-gabungan
-=======
->>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
 risk-classification
@@ -46,22 +52,36 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
-<<<<<<< HEAD
-=======
-introduction
-yosia
+tab:unnamed-chunk-8
 moments-and-distribution
-actuarial-exam-question
-example-5.3.2.-actuarial-exam-question
-stop-loss-insurance
 actuarial-exam-question-1
-actuarial-exam-question---continued
-analytic-results
-example
-tweedie-distribution
-metode-penentuan-tarif-gabungan
-<<<<<<< HEAD
-pengenalan-ratemaking
-=======
->>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
->>>>>>> 857fa390d39bdd446cf0cc9881f0f9c1d53d5d9b
+insurance-portfolio-management-including-reinsurance-1
+introduction-to-insurance-portfolios
+tails-of-distributions
+classification-based-on-moments
+comparison-based-on-limiting-tail-behavior
+risk-measures
+coherent-risk-measures
+value-at-risk
+example-10.3.1.-var-for-the-exponential-distribution
+example-10.3.2.-var-for-the-normal-distribution.
+example-10.3.3.-var-for-transformed-variables.
+example-10.3.4.-var-for-a-discrete-random-variable
+tail-value-at-risk
+example-10.3.5
+example-10.3.6.-tvar-for-a-normal-distribution
+example-10.3.7.-tvar-of-a-lognormal-distribution
+example-10.3.8.-tvar-of-an-exponential-distribution
+example-10.3.9.-tvar-of-a-pareto-distribution
+reinsurance-1
+proportional-reinsurance
+quota-share-is-desirable-for-reinsurers
+optimizing-quota-share-agreements-for-insurers
+non-proportional-reinsurance
+the-optimality-of-stop-loss-insurance
+excess-of-loss
+optimal-choice-for-excess-of-loss-retention-limits
+additional-reinsurance-treaties
+surplus-share-proportional-treaty
+layers-of-coverage
+portfolio-management-example
