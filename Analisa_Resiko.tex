@@ -211,10 +211,194 @@ Berikut ini dilampirkan beberapa peninjau atau pembaca yang telah memberikan sar
   mahasiswa 6
 \end{itemize}
 
+<<<<<<< HEAD
 \hypertarget{introduction-to-loss-data-analytics}{%
 \chapter{Introduction to Loss Data Analytics}\label{introduction-to-loss-data-analytics}}
 
 Chapter Preview. This book introduces readers to methods of analyzing insurance data. Section 1.1 begins with a discussion of why the use of data is important in the insurance industry. Section 1.2 gives a general overview of the purposes of analyzing insurance data which is reinforced in the Section 1.3 case study. Naturally, there is a huge gap between the broad goals summarized in the overview and a case study application; this gap is covered through the methods and techniques of data analysis covered in the rest of the text.
+=======
+\hypertarget{pengantar-analitika-data-kerugian}{%
+\chapter{Pengantar Analitika Data Kerugian}\label{pengantar-analitika-data-kerugian}}
+
+Preview Bab. Buku ini memperkenalkan pada metode analisis data asuransi. Bagian 1.1 dimulai dengan pembahasan mengapa penggunaan data itu penting dalam industri asuransi. Bagian 1.2 memberikan gambaran umum tentang tujuan analisis data asuransi yang diperkuat dalam studi kasus Bagian 1.3. Secara alami, ada kesenjangan besar antara tujuan umum yang dirangkum dalam gambaran dan aplikasi studi kasus. Kesenjangan ini dibahas melalui metode dan teknik analisis data yang tercakup dalam penjelasan berikutnya.
+
+\hypertarget{relevansi-analitika-dalam-aktivitas-asuransi}{%
+\section{Relevansi Analitika dalam Aktivitas Asuransi}\label{relevansi-analitika-dalam-aktivitas-asuransi}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+yang akan dipelajari dalam bab ini yaitu:
+
+\begin{itemize}
+\tightlist
+\item
+  Meringkas pentingnya asuransi bagi konsumen dan ekonomi
+\item
+  Menggambarkan analitika
+\item
+  Mengidentifikasi peristiwa penghasil data yang terkait dengan jangka waktu kontrak asuransi yang umum
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sifat-dan-relevansi-asuransi}{%
+\subsection{Sifat dan Relevansi Asuransi}\label{sifat-dan-relevansi-asuransi}}
+
+Buku ini memperkenalkan proses penggunaan data untuk mengambil keputusan dalam konteks asuransi. Buku ini tidak berasumsi bahwa pembaca sudah familiar dengan asuransi, tetapi memperkenalkan konsep-konsep asuransi sesuai kebutuhan. Jika baru mengenal asuransi, mungkin yang paling mudah adalah memikirkan sebuah polis asuransi yang mencakup isi apartemen atau rumah yang dapat di sewa (dikenal sebagai asuransi penyewa) atau isi dan properti dari bangunan yang dimiliki pribadi atau seorang teman (dikenal sebagai asuransi pemilik rumah). Contoh umum lainnya adalah asuransi mobil. Dalam kejadian kecelakaan, polis ini dapat mencakup kerusakan pada kendaraan pribadi, kerusakan pada kendaraan lain dalam kecelakaan tersebut, serta biaya medis bagi mereka yang terluka dalam kecelakaan.
+
+Salah satu cara untuk memahami sifat asuransi adalah dengan melihat siapa yang membelinya. Asuransi penyewa, pemilik rumah, dan asuransi mobil adalah contoh asuransi personal, karena polis-polis ini diterbitkan untuk individu. Bisnis juga membeli asuransi, seperti perlindungan atas properti mereka, dan ini dikenal sebagai asuransi komersial. Penjualnya, perusahaan asuransi, juga dikenal sebagai penanggung. Bahkan perusahaan asuransi pun membutuhkan asuransi. Hal ini dikenal sebagai reasuransi.
+
+Cara lain untuk memahami sifat asuransi adalah dengan jenis risiko yang dicakup. Di Amerika Serikat, kebijakan seperti asuransi penyewa dan pemilik rumah dikenal sebagai asuransi properti, sedangkan kebijakan seperti asuransi mobil yang mencakup kerusakan medis pada orang disebut asuransi kecelakaan. Di negara lain, keduanya dikenal sebagai asuransi non-hidup atau umum, untuk membedakannya dari asuransi jiwa.
+
+Baik asuransi jiwa maupun asuransi non-hidup adalah komponen penting dalam ekonomi dunia. Institut Informasi Asuransi (2016) memperkirakan premi asuransi langsung di dunia untuk tahun 2014 sebesar 2.654.549 juta dolar AS untuk asuransi jiwa dan 2.123.699 juta dolar AS untuk asuransi non-hidup; angka-angka ini dalam jutaan dolar AS. Total tersebut mewakili 6,2\% dari produk domestik bruto (PDB) dunia. Dengan kata lain, asuransi jiwa menyumbang 55,5\% dari premi asuransi dan 3,4\% dari PDB dunia, sedangkan asuransi non-hidup menyumbang 44,5\% dari premi asuransi dan 2,8\% dari PDB dunia. Baik asuransi jiwa maupun asuransi non-hidup merupakan kegiatan ekonomi penting.
+
+Asuransi mungkin tidak semenarik industri olahraga, tetapi asuransi memengaruhi kehidupan keuangan banyak orang. Dalam segala ukuran, asuransi merupakan kegiatan ekonomi yang besar. Seperti yang telah disebutkan sebelumnya, secara global, premi asuransi mencakup sekitar 6,2\% dari PDB dunia pada tahun 2014 (Institut Informasi Asuransi 2016). Sebagai contoh, premi asuransi menyumbang 18,9\% dari PDB di Taiwan (yang tertinggi dalam studi ini) dan mewakili 7,3\% dari PDB di Amerika Serikat. Pada tingkat pribadi, hampir setiap orang yang memiliki rumah memiliki asuransi untuk melindungi diri mereka dalam kejadian kebakaran, badai es, atau peristiwa bencana lainnya. Hampir setiap negara mengharuskan asuransi bagi mereka yang mengemudikan mobil. Secara keseluruhan, meskipun tidak terlalu menghibur, asuransi memainkan peran penting dalam perekonomian negara-negara dan kehidupan individu.
+
+\hypertarget{apa-itu-analitika}{%
+\subsection{Apa itu Analitika?}\label{apa-itu-analitika}}
+
+Asuransi merupakan industri yang mengandalkan data. Seperti perusahaan-perusahaan besar dan organisasi lainnya, perusahaan asuransi menggunakan data ketika mencoba untuk menentukan berapa banyak yang harus dibayarkan kepada karyawan, berapa banyak karyawan yang harus dipertahankan, bagaimana cara memasarkan layanan dan produk mereka, bagaimana meramalkan tren keuangan, dan sebagainya. Hal ini mewakili bidang-bidang aktivitas umum yang tidak spesifik hanya untuk industri asuransi. Meskipun setiap industri memiliki nuansa dan kebutuhan data yang berbeda, pengumpulan, analisis, dan penggunaan data merupakan kegiatan yang dibagikan oleh semua, mulai dari raksasa internet hingga bisnis kecil, oleh organisasi publik dan pemerintah, dan tidak spesifik hanya untuk industri asuransi. Anda akan menemukan bahwa metode dan alat pengumpulan dan analisis data yang diperkenalkan dalam teks ini relevan untuk semua industri.
+
+Dalam industri yang mengandalkan data, analitika merupakan kunci untuk mendapatkan dan mengekstraksi informasi dari data. Namun, apa itu analitika? Pengambilan keputusan bisnis yang didasarkan pada data telah dijelaskan sebagai analitika bisnis, inteligensi bisnis, dan ilmu data. Istilah-istilah ini, antara lain, kadang-kadang digunakan secara bergantian dan kadang-kadang mengacu pada aplikasi yang berbeda. Inteligensi bisnis mungkin fokus pada proses pengumpulan data, sering kali melalui basis data dan gudang data, sedangkan analitika bisnis menggunakan alat dan metode untuk analisis statistik data. Berbeda dengan dua istilah tersebut yang menekankan aplikasi bisnis, istilah ilmu data dapat mencakup aplikasi data yang lebih luas dalam berbagai domain ilmiah. Untuk tujuan kami, kami menggunakan istilah analitika untuk merujuk pada proses penggunaan data dalam pengambilan keputusan. Proses ini melibatkan pengumpulan data, pemahaman konsep dan model ketidakpastian, membuat inferensi umum, dan mengkomunikasikan hasil.
+
+Ketika memperkenalkan metode data dalam teks ini, kami fokus pada kerugian yang timbul dari, atau terkait dengan, kewajiban dalam kontrak asuransi. Hal ini bisa berupa jumlah kerusakan pada apartemen seseorang dalam perjanjian asuransi penyewa, jumlah yang dibutuhkan untuk mengganti rugi seseorang yang Anda cedera dalam kecelakaan berkendara, dan sejenisnya. Kami menyebut jenis kewajiban ini sebagai klaim asuransi. Dengan fokus ini, kami dapat memperkenalkan dan langsung menggunakan alat dan teknik statistik yang umumnya berlaku.
+
+\hypertarget{proses-asuransi}{%
+\subsection{Proses Asuransi}\label{proses-asuransi}}
+
+Cara lain untuk memahami sifat asuransi adalah melalui durasi kontrak asuransi, yang dikenal sebagai masa berlaku. Teks ini akan berfokus pada kontrak asuransi jangka pendek. Dalam konteks jangka pendek, kontrak asuransi umumnya memberikan perlindungan selama satu tahun atau enam bulan. Sebagian besar kontrak komersial dan personal berlaku selama satu tahun, sehingga itu adalah durasi default kami. Namun, terdapat pengecualian penting seperti kebijakan asuransi mobil di Amerika Serikat yang sering kali berlaku selama enam bulan.
+
+Sebaliknya, biasanya kita menganggap asuransi jiwa sebagai kontrak jangka panjang di mana durasi default adalah beberapa tahun. Sebagai contoh, jika seseorang berusia 25 tahun membeli polis asuransi jiwa yang memberikan pembayaran saat meninggalnya tertanggung dan orang tersebut tidak meninggal sampai usia 100 tahun, maka kontrak tersebut berlaku selama 75 tahun.
+
+Terdapat perbedaan penting lainnya antara produk asuransi jiwa dan non-jiwa. Dalam asuransi jiwa, jumlah manfaat sering ditetapkan dalam ketentuan kontrak. Sebaliknya, sebagian besar kontrak non-jiwa memberikan kompensasi atas kerugian tertanggung yang tidak diketahui sebelum terjadinya kecelakaan. (Biasanya terdapat batasan jumlah kompensasi yang ditetapkan.) Dalam kontrak asuransi jiwa yang berlaku selama bertahun-tahun, nilai waktu uang memainkan peran penting. Dalam kontrak non-jiwa, jumlah kompensasi yang acak menjadi prioritas.
+
+Baik dalam asuransi jiwa maupun asuransi non-jiwa, frekuensi klaim sangat penting. Untuk banyak kontrak asuransi jiwa, peristiwa yang diasuransikan (seperti kematian) hanya terjadi sekali. Sebaliknya, dalam asuransi non-jiwa seperti asuransi mobil, umum bagi individu (terutama pengemudi pria muda) untuk mengalami lebih dari satu kecelakaan dalam setahun. Oleh karena itu, model-model kita perlu mencerminkan pengamatan ini; kami memperkenalkan berbagai model frekuensi yang juga mungkin Anda temui saat mempelajari asuransi jiwa.
+
+Untuk asuransi jangka pendek, kerangka model probabilistiknya sederhana. Hanya mempertimbangkan model satu periode (panjang periode, misalnya satu tahun, akan ditentukan dalam situasi tersebut).
+
+\begin{itemize}
+\tightlist
+\item
+  Pada awal periode, tertanggung membayar premi yang diketahui kepada perusahaan asuransi sesuai kesepakatan antara kedua belah pihak dalam kontrak.
+\item
+  Pada akhir periode, perusahaan asuransi mengganti rugi tertanggung atas kerugian (mungkin multivariat) yang acak.
+\end{itemize}
+
+Kerangka kerja ini akan dikembangkan seiring berjalannya waktu, tetapi yang pertama fokus pada mengintegrasikan kerangka kerja ini dengan kekhawatiran tentang bagaimana data dapat muncul. Dari sudut pandang perusahaan asuransi, kontrak mungkin hanya berlaku selama satu tahun tetapi cenderung diperpanjang. Selain itu, pembayaran yang timbul dari klaim selama setahun dapat meluas jauh melebihi satu tahun. Salah satu cara untuk menggambarkan data yang muncul dari operasional perusahaan asuransi adalah dengan menggunakan pendekatan granular dengan garis waktu. Pendekatan proses memberikan gambaran keseluruhan tentang peristiwa yang terjadi selama masa berlaku kontrak asuransi, dan sifatnya - acak atau direncanakan, peristiwa kerugian (klaim) dan peristiwa perubahan kontrak, dan sebagainya. Dalam pandangan mikro ini, kita dapat memikirkan apa yang terjadi pada suatu kontrak pada berbagai tahap keberadaannya.
+
+Gambar 1.1 menggambarkan garis waktu dari suatu kontrak asuransi yang khas. Sepanjang masa berlakunya kontrak, perusahaan secara rutin memproses peristiwa seperti pengumpulan premi dan penilaian, yang dijelaskan dalam Bagian 1.2; peristiwa-peristiwa ini ditandai dengan tanda \emph{x} pada garis waktu. Peristiwa-peristiwa yang tidak teratur dan tak terduga juga terjadi. Sebagai contoh, \(t_2\) dan \(t_4\) menandai peristiwa klaim asuransi (beberapa kontrak, seperti asuransi jiwa, mungkin hanya memiliki satu klaim). Waktu \(t_3\) dan \(t_5\) menandai peristiwa ketika pemegang polis ingin mengubah fitur-fitur tertentu dalam kontrak, seperti pilihan klaim dan jumlah perlindungan. Dari perspektif perusahaan, kita bahkan dapat mempertimbangkan inisiasi kontrak (kedatangan, waktu \(t_1\)) dan terminasi kontrak (kepergian, waktu \(t_6\)) sebagai peristiwa yang tidak pasti. (Sebagai alternatif, untuk beberapa tujuan, Anda dapat mengkondisikan peristiwa-peristiwa ini dan memperlakukannya sebagai pasti.)
+
+( Gambar 1)
+
+\hypertarget{operasi-perusahaan-asuransi}{%
+\section{Operasi Perusahaan Asuransi}\label{operasi-perusahaan-asuransi}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+pada bab ini yang akan dipelajari adalah:
+
+\begin{itemize}
+\tightlist
+\item
+  Menggambarkan lima area operasional utama perusahaan asuransi.
+\item
+  Mengidentifikasi peran data dan peluang analitik dalam setiap area operasional.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Berdasarkan data asuransi, tujuan akhirnya adalah menggunakan data untuk mengambil keputusan. Kita akan mempelajari lebih lanjut tentang metode analisis dan ekstrapolasi data di bab-bab berikutnya. Untuk memulainya, mari kita pikirkan mengapa kita ingin melakukan analisis. Kita mengambil sudut pandang perusahaan asuransi (bukan orang yang diasuransikan) dan memperkenalkan cara untuk mendapatkan uang, membayarnya, mengelola biaya, dan memastikan bahwa kita memiliki cukup uang untuk memenuhi kewajiban. Penekanannya adalah pada operasi khusus asuransi daripada pada kegiatan bisnis umum seperti periklanan, pemasaran, dan manajemen sumber daya manusia.
+
+Secara khusus, dalam banyak perusahaan asuransi, umumnya praktik untuk menggabungkan proses asuransi yang terperinci ke dalam unit operasional yang lebih besar; banyak perusahaan menggunakan area fungsional ini untuk memisahkan aktivitas karyawan dan tanggung jawab area tertentu. Aktuaris, analis keuangan lainnya, dan regulator asuransi bekerja dalam unit-unit ini dan menggunakan data untuk kegiatan-kegiatan berikut ini:
+
+\emph{1. Memulai Asuransi}. Pada tahap ini, perusahaan membuat keputusan untuk menerima atau menolak risiko (tahap underwriting) dan menentukan premi yang sesuai (atau tarif). Analitik asuransi memiliki akar aktuaria dalam pembuatan tarif, di mana para analis berusaha untuk menentukan harga yang tepat untuk risiko yang tepat.
+
+\emph{2. Memperbaharui Asuransi}. Banyak kontrak, terutama dalam asuransi umum, memiliki durasi yang relatif pendek seperti 6 bulan atau 1 tahun. Meskipun ada harapan implisit bahwa kontrak-kontrak tersebut akan diperbaharui, perusahaan asuransi memiliki kesempatan untuk menolak jaminan dan menyesuaikan premi. Analitik juga digunakan pada tahap perpanjangan polis ini di mana tujuannya adalah untuk mempertahankan pelanggan yang menguntungkan.
+
+\emph{3. Manajemen Klaim}. Analitik telah lama digunakan dalam (1) mendeteksi dan mencegah penipuan klaim, (2) mengelola biaya klaim, termasuk mengidentifikasi dukungan yang tepat untuk biaya penanganan klaim, serta (3) memahami lapisan kelebihan untuk reasuransi dan retensi.
+
+\emph{4. Reserving Kerugian}. Alat analitik digunakan untuk memberikan perkiraan yang tepat kepada manajemen mengenai kewajiban di masa depan dan untuk mengkuantifikasi ketidakpastian perkiraan tersebut.
+
+\emph{5. Kesolvenan dan Alokasi Modal}. Menentukan jumlah modal yang diperlukan dan cara mengalokasikan modal di antara investasi-alternatif juga merupakan kegiatan analitik penting. Perusahaan harus memahami berapa banyak modal yang dibutuhkan agar mereka memiliki aliran kas yang cukup tersedia untuk memenuhi kewajiban mereka pada saat yang diharapkan (kesolvenan). Ini adalah pertanyaan penting yang tidak hanya menyangkut manajer perusahaan tetapi juga pelanggan, pemegang saham perusahaan, otoritas pengawas, serta masyarakat secara umum. Terkait dengan isu berapa banyak modal adalah pertanyaan tentang bagaimana mengalokasikan modal ke proyek keuangan yang berbeda, biasanya untuk memaksimalkan pengembalian investor. Meskipun pertanyaan ini dapat muncul pada beberapa tingkat, perusahaan asuransi umumnya tertarik dengan cara mengalokasikan modal ke berbagai lini bisnis dalam perusahaan dan ke anak perusahaan dari perusahaan induk.
+
+Meskipun data merupakan komponen penting dari kesolvenan dan alokasi modal, komponen lain termasuk kerangka ekonomi lokal dan global, lingkungan investasi keuangan, dan persyaratan yang sangat spesifik sesuai dengan lingkungan regulasi saat ini, juga penting. Karena latar belakang yang diperlukan untuk mengatasi komponen-komponen ini, kami tidak membahas isu-isu kesolvenan, alokasi modal, dan regulasi dalam teks ini.
+
+Namun demikian, untuk semua fungsi operasional, kami menekankan bahwa analitik dalam industri asuransi bukanlah latihan yang dapat dilakukan oleh sekelompok kecil analis sendiri. Hal ini membutuhkan perusahaan asuransi untuk melakukan investasi yang signifikan dalam teknologi informasi, pemasaran, underwriting, dan aktuaria. Karena area-area ini merupakan tujuan akhir utama dari analisis data, penjelasan tambahan tentang masing-masing unit operasional diberikan dalam subseksi berikutnya.
+
+\hypertarget{memulai-asuransi}{%
+\subsection{Memulai Asuransi}\label{memulai-asuransi}}
+
+Menentukan harga produk asuransi bisa menjadi masalah yang membingungkan. Hal ini berbeda dengan industri lain seperti manufaktur di mana biaya suatu produk (relatif) diketahui dan menjadi acuan untuk menilai harga permintaan pasar. Demikian pula, dalam bidang layanan keuangan lainnya, harga pasar tersedia dan menjadi dasar untuk struktur penetapan harga yang sesuai dengan pasar produk. Namun, untuk banyak jenis asuransi, biaya suatu produk tidak pasti dan harga pasar tidak tersedia. Harapan atas biaya acak adalah tempat yang wajar untuk memulai penetapan harga. (Jika Anda telah mempelajari keuangan, maka Anda akan mengingat bahwa harapan adalah harga optimal untuk perusahaan asuransi yang netral terhadap risiko.) Dalam penetapan harga asuransi, sudah menjadi tradisi untuk memulai dengan biaya yang diharapkan. Perusahaan asuransi kemudian menambahkan margin untuk memperhitungkan tingkat risiko produk, biaya yang dikeluarkan dalam pelayanan produk, dan alokasi keuntungan/surplus perusahaan.
+
+Penggunaan biaya yang diharapkan sebagai dasar penetapan harga umum terjadi dalam beberapa jenis bisnis asuransi. Ini termasuk asuransi mobil dan asuransi pemilik rumah. Dalam jenis asuransi ini, analitik telah membantu meningkatkan ketepatan perhitungan biaya yang diharapkan dari produk. Ketersediaan internet yang semakin luas bagi konsumen juga mendorong transparansi dalam penetapan harga; di pasar saat ini, konsumen memiliki akses mudah ke kutipan kompetitif dari sejumlah perusahaan asuransi. Perusahaan asuransi berusaha meningkatkan pangsa pasarnya dengan menyempurnakan sistem klasifikasi risiko mereka, sehingga mencapai perkiraan yang lebih baik mengenai harga produk dan memungkinkan strategi underwriting yang selektif (``cream-skimming'' adalah istilah yang digunakan ketika perusahaan asuransi hanya mengasuransikan risiko terbaik). Survei (misalnya, Earnix (2013)) menunjukkan bahwa penetapan harga adalah penggunaan analitik yang paling umum di kalangan perusahaan asuransi.
+
+Underwriting, yaitu proses mengklasifikasikan risiko ke dalam kategori homogen dan mengalokasikan pemegang polis ke dalam kategori-kategori tersebut, merupakan inti dari penetapan tarif. Pemegang polis dalam satu kelas (kategori) memiliki profil risiko yang serupa sehingga dikenakan tarif asuransi yang sama. Ini adalah konsep premi yang adil secara aktuaria; adil untuk mengenakan tarif yang berbeda kepada pemegang polis hanya jika mereka dapat dibedakan berdasarkan faktor risiko yang dapat diidentifikasi. Sebuah artikel awal, Two Studies in Automobile Insurance Ratemaking (Bailey dan LeRoy 1960), memberikan dorongan bagi penerimaan metode analitik dalam industri asuransi. Makalah ini membahas masalah klasifikasi penetapan tarif asuransi mobil. Artikel tersebut menggambarkan contoh asuransi mobil yang memiliki lima kelas penggunaan yang saling berkaitan dengan empat kelas rating prestasi. Pada saat itu, kontribusi premi untuk kelas penggunaan dan rating prestasi ditentukan secara independen satu sama lain. Memikirkan efek interaksi dari variabel klasifikasi yang berbeda merupakan masalah yang lebih rumit.
+
+Saat risiko pertama kali diperoleh, kewajiban perusahaan asuransi dapat dikelola dengan menerapkan parameter kontrak yang mengubah pembayaran kontrak. Bab 3 menjelaskan modifikasi umum termasuk co-insurance, deduktibel, dan batas atas kebijakan.
+
+\hypertarget{memperbarui-asuransi}{%
+\subsection{Memperbarui Asuransi}\label{memperbarui-asuransi}}
+
+Asuransi merupakan jenis layanan keuangan dan, seperti banyak kontrak layanan lainnya, cakupan asuransi sering kali disepakati untuk jangka waktu terbatas di mana komitmen cakupan diselesaikan. Terutama untuk asuransi umum, kebutuhan akan cakupan terus berlanjut, dan oleh karena itu upaya dilakukan untuk mengeluarkan kontrak baru yang memberikan cakupan serupa ketika kontrak yang ada mencapai akhir masa berlakunya. Ini disebut perpanjangan polis. Isu perpanjangan juga dapat muncul dalam asuransi jiwa, misalnya, asuransi jiwa berjangka (sementara). Pada saat yang sama, kontrak lain seperti pensiun dini berakhir pada saat kematian tertanggung, sehingga masalah perpanjangan tidak relevan.
+
+Dalam ketiadaan pembatasan hukum, saat perpanjangan polis, perusahaan asuransi memiliki kesempatan untuk:
+
+\begin{itemize}
+\tightlist
+\item
+  menerima atau menolak menerbitkan risiko tersebut; dan
+\item
+  menentukan premi baru, mungkin dengan melakukan klasifikasi ulang terhadap risiko tersebut.
+\end{itemize}
+
+Klasifikasi risiko dan penilaian saat perpanjangan didasarkan pada dua jenis informasi. Pertama, pada tahap awal, perusahaan asuransi memiliki banyak variabel penilaian yang dapat digunakan untuk pengambilan keputusan. Banyak variabel yang kemungkinan tidak akan berubah, misalnya jenis kelamin, sedangkan yang lain kemungkinan akan berubah, misalnya usia, dan yang lainnya mungkin berubah atau tidak, misalnya skor kredit. Kedua, berbeda dengan tahap awal, saat perpanjangan, perusahaan asuransi memiliki riwayat pengalaman kerugian dari pemegang polis, dan riwayat ini dapat memberikan wawasan tentang pemegang polis yang tidak tersedia dari variabel penilaian. Modifikasi premi berdasarkan riwayat klaim dikenal sebagai penilaian berdasarkan pengalaman, juga kadang-kadang disebut sebagai penilaian berdasarkan prestasi.
+
+Metode penilaian berdasarkan pengalaman dapat diterapkan secara retrospektif atau prospektif. Dengan metode retrospektif, sebagian premi dikembalikan kepada pemegang polis dalam kejadian pengalaman yang menguntungkan bagi perusahaan asuransi. Premi retrospektif umum dalam perjanjian asuransi jiwa (di mana pemegang polis memperoleh dividen di Amerika Serikat, bonus di Inggris, dan pembagian keuntungan dalam cakupan asuransi jiwa sementara di Israel). Pada umumnya, metode prospektif lebih umum digunakan dalam asuransi umum, di mana pengalaman yang menguntungkan bagi pemegang polis akan dihargai melalui premi perpanjangan yang lebih rendah.
+
+Riwayat klaim dapat memberikan informasi tentang minat risiko pemegang polis. Sebagai contoh, dalam asuransi personal, umumnya digunakan variabel untuk menunjukkan apakah klaim telah terjadi dalam tiga tahun terakhir atau tidak. Sebagai contoh lain, dalam asuransi komersial seperti asuransi kecelakaan kerja, dapat dilihat frekuensi atau tingkat keparahan klaim rata-rata pemegang polis selama tiga tahun terakhir. Riwayat klaim dapat mengungkapkan informasi yang sebaliknya tersembunyi (bagi perusahaan asuransi) tentang pemegang polis.
+
+\hypertarget{pengelolaan-klaim-dan-produk}{%
+\subsection{Pengelolaan Klaim dan Produk}\label{pengelolaan-klaim-dan-produk}}
+
+Dalam beberapa jenis asuransi, proses pembayaran klaim untuk peristiwa yang diasuransikan relatif sederhana. Misalnya, dalam asuransi jiwa, sertifikat kematian sederhana sudah cukup untuk membayarkan jumlah manfaat sesuai dengan kontrak. Namun, dalam bidang asuransi properti dan kecelakaan, prosesnya bisa jauh lebih kompleks. Bayangkan peristiwa yang diasuransikan yang relatif sederhana seperti kecelakaan mobil. Di sini, seringkali diperlukan untuk menentukan pihak yang bertanggung jawab dan kemudian perlu mengevaluasi kerusakan pada semua kendaraan dan orang yang terlibat dalam insiden, baik yang diasuransikan maupun yang tidak diasuransikan. Selain itu, biaya yang dikeluarkan dalam mengevaluasi kerusakan juga harus dinilai, dan sebagainya. Proses menentukan cakupan, tanggung jawab hukum, dan penyelesaian klaim dikenal sebagai penyesuaian klaim.
+
+Manajer asuransi terkadang menggunakan istilah ``kebocoran klaim'' untuk merujuk pada dolar yang hilang melalui ketidakefisienan pengelolaan klaim. Ada banyak cara di mana analitik dapat membantu mengelola proses klaim, lihat Gorman dan Swenson (2013). Secara historis, yang paling penting adalah pendeteksian penipuan. Proses penyesuaian klaim melibatkan mengurangi asimetri informasi (klaiman mengetahui apa yang terjadi; perusahaan mengetahui sebagian dari apa yang terjadi). Mengurangi penipuan adalah bagian penting dari proses pengelolaan klaim.
+
+Deteksi penipuan hanyalah satu aspek dari pengelolaan klaim. Lebih luas lagi, kita dapat mempertimbangkan pengelolaan klaim terdiri dari komponen-komponen berikut:
+
+\emph{- Pemilahan klaim.} Seperti dalam dunia medis, identifikasi dini dan penanganan yang tepat terhadap klaim dengan biaya tinggi (pasien, dalam dunia medis) dapat menghasilkan penghematan yang dramatis. Misalnya, dalam asuransi kecelakaan kerja, perusahaan asuransi berupaya untuk mengidentifikasi secara dini klaim-klaim yang berisiko mengakibatkan biaya medis tinggi dan periode pembayaran yang lama. Intervensi dini dalam kasus-kasus ini dapat memberikan perusahaan asuransi lebih banyak kendali atas penanganan klaim, perawatan medis, dan biaya secara keseluruhan dengan kembalinya pekerja lebih awal.
+
+\emph{- Pengolahan klaim.} Tujuannya adalah menggunakan analitik untuk mengidentifikasi situasi rutin yang diperkirakan memiliki pembayaran kecil. Situasi yang lebih kompleks mungkin memerlukan penyesuaian oleh penyelesaian klaim yang berpengalaman dan bantuan hukum untuk menangani klaim dengan potensi pembayaran besar.
+
+\emph{- Keputusan penyesuaian.} Setelah klaim kompleks diidentifikasi dan ditugaskan kepada penyelesaian klaim, rutinitas yang didorong oleh analitik dapat dibentuk untuk membantu proses pengambilan keputusan berikutnya. Proses tersebut juga dapat membantu penyelesaian klaim dalam mengembangkan cadangan kasus, perkiraan kewajiban finansial perusahaan asuransi di masa depan. Ini adalah masukan penting untuk cadangan kerugian perusahaan asuransi, yang dijelaskan dalam Bagian 1.2.4.
+
+Selain penggantian kerugian kepada tertanggung, perusahaan asuransi juga perlu memperhatikan sumber lain yang mengalirkan pendapatan, yaitu biaya. Biaya penyesuaian kerugian merupakan bagian dari biaya pengelolaan klaim oleh perusahaan asuransi. Analitik dapat digunakan untuk mengurangi biaya yang terkait langsung dengan penanganan klaim (dialokasikan) serta waktu staf umum untuk mengawasi proses klaim (tidak dialokasikan). Industri asuransi memiliki biaya operasional yang tinggi dibandingkan dengan sektor jasa keuangan lainnya.
+
+Selain pembayaran klaim, terdapat banyak cara lain di mana perusahaan asuransi menggunakan data untuk mengelola produk mereka. Kami telah membahas kebutuhan analitik dalam penjaminan, yaitu klasifikasi risiko pada tahap akuisisi awal dan tahap perpanjangan. Perusahaan asuransi juga tertarik untuk mengetahui pemegang polis mana yang memilih untuk memperpanjang kontrak mereka dan, seperti halnya dengan produk lainnya, memantau loyalitas pelanggan.
+
+Analitik juga dapat digunakan untuk mengelola portofolio atau kumpulan risiko yang telah diperoleh oleh perusahaan asuransi. Seperti yang dijelaskan dalam Bab 10, setelah kontrak disepakati dengan tertanggung, perusahaan asuransi masih dapat mengubah kewajibannya bersih dengan melakukan perjanjian reasuransi. Jenis perjanjian ini melibatkan perusahaan reasuransi, yaitu perusahaan asuransi bagi perusahaan asuransi lainnya. Umum bagi perusahaan asuransi untuk membeli asuransi atas portofolio risiko mereka guna mendapatkan perlindungan dari peristiwa yang tidak biasa, sama seperti individu dan perusahaan lainnya.
+
+\hypertarget{penyisihan-klaim}{%
+\subsection{Penyisihan Klaim}\label{penyisihan-klaim}}
+
+Fitur penting yang membedakan asuransi dari sektor lain dalam ekonomi adalah waktu pertukaran pertimbangan. Dalam industri manufaktur, pembayaran untuk barang umumnya dilakukan pada saat transaksi. Sebaliknya, dalam asuransi, uang yang diterima dari pelanggan terjadi sebelum manfaat atau layanan diberikan; ini diberikan pada tanggal yang lebih kemudian jika terjadi peristiwa tertanggung. Hal ini mengakibatkan kebutuhan untuk memiliki cadangan kekayaan guna memenuhi kewajiban di masa depan sehubungan dengan kewajiban yang dibuat, dan untuk memperoleh kepercayaan dari tertanggung bahwa perusahaan akan mampu memenuhi komitmennya. Besarannya cadangan kekayaan ini, dan pentingnya memastikan kecukupannya, merupakan perhatian utama bagi industri asuransi.
+
+Mengalokasikan uang untuk klaim yang belum dibayar dikenal sebagai penyisihan kerugian; di beberapa yurisdiksi, cadangan ini juga dikenal sebagai ketentuan teknis. Seperti yang terlihat pada Gambar 1.1 beberapa kali di mana perusahaan merangkum posisi keuangannya; waktu-waktu ini dikenal sebagai tanggal penilaian. Klaim yang muncul sebelum tanggal penilaian telah dibayarkan, sedang dalam proses pembayaran, atau akan segera dibayarkan; klaim di masa depan setelah tanggal penilaian ini tidak diketahui. Perusahaan harus memperkirakan kewajiban yang belum diselesaikan ini ketika menentukan kekuatan keuangannya. Menentukan dengan tepat penyisihan kerugian penting bagi perusahaan asuransi atas banyak alasan.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Penyisihan kerugian merupakan klaim yang diantisipasi yang perusahaan asuransi harus bayarkan kepada pelanggannya. Ketidakcukupan penyisihan dapat mengakibatkan ketidakmampuan untuk memenuhi kewajiban klaim. Sebaliknya, perusahaan asuransi dengan penyisihan berlebihan dapat menunjukkan perkiraan kelebihan cadangan yang konservatif dan dengan demikian menggambarkan posisi keuangan yang lebih lemah daripada yang sebenarnya.
+\item
+  Penyisihan memberikan perkiraan untuk biaya asuransi yang belum dibayar yang dapat digunakan untuk penetapan harga kontrak.
+\item
+  Penyisihan kerugian ini diperlukan oleh hukum dan peraturan. Masyarakat memiliki kepentingan yang kuat terhadap kekuatan keuangan dan solvabilitas perusahaan asuransi.
+\item
+  Selain regulator, pemangku kepentingan lain seperti manajemen perusahaan asuransi, investor, dan pelanggan membuat keputusan yang bergantung pada penyisihan kerugian perusahaan. Sementara regulator dan pelanggan menghargai perkiraan yang konservatif terkait klaim yang belum dibayar, manajer dan investor mencari perkiraan yang lebih objektif untuk mewakili kesehatan keuangan yang sebenarnya dari perusahaan.
+\end{enumerate}
+
+Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan antara asuransi jiwa dan asuransi umum (juga dikenal sebagai asuransi harta benda dan kecelakaan, atau asuransi non-jiwa). Dalam asuransi jiwa, tingkat keparahan (besaran kerugian) seringkali bukan sumber ketidakpastian karena pembayaran telah ditentukan dalam kontrak. Tingkat kejadian, yang dipengaruhi oleh kematian tertanggung, menjadi perhatian. Namun, karena waktu yang lama untuk penyelesaian kontrak asuransi jiwa, ketidakpastian nilai waktu uang yang diukur dari penerbitan hingga tanggal pembayaran dapat mendominasi perhatian tingkat kejadian. Sebagai contoh, bagi seorang tertanggung yang membeli kontrak asuransi jiwa pada usia 20 tahun, tidak jarang kontrak masih berlaku setelah 60 tahun, ketika tertanggung merayakan ulang tahun ke-80. Lihat, misalnya, Bowers et al.~(1986) atau Dickson, Hardy, dan Waters (2013) untuk pengenalan terhadap penyisihan kerugian dalam asuransi jiwa. Sebaliknya, untuk sebagian besar jenis bisnis asuransi non-jiwa, tingkat keparahan adalah sumber ketidakpastian utama dan durasi kontrak cenderung lebih singkat.
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 \hypertarget{frequency-modeling}{%
 \chapter{Frequency Modeling}\label{frequency-modeling}}
@@ -225,6 +409,12 @@ Chapter Preview. This book introduces readers to methods of analyzing insurance 
 \hypertarget{modeling-loss-severity}{%
 \chapter{Modeling Loss Severity}\label{modeling-loss-severity}}
 
+<<<<<<< HEAD
+=======
+\hypertarget{basic-distributional-quantities}{%
+\section{Basic Distributional Quantities}\label{basic-distributional-quantities}}
+
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 \hypertarget{modifikasi-pertanggungan}{%
 \section{modifikasi pertanggungan}\label{modifikasi-pertanggungan}}
 
@@ -258,22 +448,38 @@ b. pembayaran per pembayaran
 
 pada variabel perbayaran per kerugian, dinotasikan sebagai \(Y^L\) atau \((X-d)_+\) atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
 
+<<<<<<< HEAD
 \[
+=======
+\begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left( X - d \right)_{+} 
 = \left\{ \begin{array}{cc}
 0 & X \le d, \\
 X - d & X > d  
 \end{array} \right. .
+<<<<<<< HEAD
 \]
 
 disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
 
 \[
+=======
+\end{align*}
+
+disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
+
+\begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{P} = \left\{ \begin{matrix}
 \text{Undefined} & X \le d \\
 X - d & X > d .
 \end{matrix}  \right.
+<<<<<<< HEAD
 \]
+=======
+\end{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 disini \(Y^P\) disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari \(d\) tidak dilaporkan dan nilai dari \(d\) berubah sebesar \(d\)
 
@@ -287,12 +493,20 @@ policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh
 sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis.
 dimana biaya kerugian pemegang polis dinotasikan sebagai \(X\) dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai \(Y\), dan variabel policy limit dinotasikan sebagai \(X \land u\). atau disebut sebagai right censored variable dikarenakan nilai dari \(u\) di set sama dengan \(u\). maka variabel \(Y\) didefinisikan sebagai
 
+<<<<<<< HEAD
 \[
+=======
+\begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y = X \land u = \left\{ \begin{matrix}
 X & X \leq u \\
 u & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
 \]
+=======
+\end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 pada batas polis, perbedaan antara \(Y^L\) dan \(Y^P\) tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
 
@@ -300,13 +514,21 @@ dengan \((X-u)\) dan \((X \land u)\) maka expektasi dari pembayaran terjadi tanp
 
 jika kerugian merupakan subjek dari deductible \(d\) dan limit \(u\), maka didefinisikan sebagai
 
+<<<<<<< HEAD
 \[
+=======
+\begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d \\
 X - d  & d <  X \leq u \\
  u - d  & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
 \]
+=======
+\end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 maka, \(Y^L\) dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land u)\).
 
@@ -331,13 +553,21 @@ pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis samp
 
 setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau \(Y^L\) didefinisikan sebagai:
 
+<<<<<<< HEAD
 \[
+=======
+\begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d, \\
 \alpha\left( X - d \right) & d <  X \leq u, \\
 \alpha\left( u - d \right) & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
 \]
+=======
+\end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah \(\alpha (u-d)\), dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible \(d\) dan limit \(u\) untuk variabel per kerugian atau \(Y^L\), maka dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land d)\), maka pada koasuransi \(Y^L\) dapat dinyatakan sebagai\(Y^L=\alpha[(X\land u)-(X\land d)]\).
 
