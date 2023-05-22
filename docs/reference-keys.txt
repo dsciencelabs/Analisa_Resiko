@@ -41,3 +41,15 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+introduction
+yosia
+moments-and-distribution
+actuarial-exam-question
+example-5.3.2.-actuarial-exam-question
+stop-loss-insurance
+actuarial-exam-question-1
+actuarial-exam-question---continued
+analytic-results
+example
+tweedie-distribution
+metode-penentuan-tarif-gabungan

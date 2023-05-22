@@ -1,5 +1,5 @@
 # Premium Foundations
-# 7.1 Pengenalan Ratemaking
+7.1 Pengenalan Ratemaking
 
 Pada bagian ini, Anda akan belajar cara:
 
