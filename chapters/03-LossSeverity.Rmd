@@ -28,22 +28,22 @@ b. pembayaran per pembayaran
 
 pada variabel perbayaran per kerugian, dinotasikan sebagai $Y^L$ atau $(X-d)_+$ atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
 
-\begin{align*}
+$$
 Y^{L} = \left( X - d \right)_{+} 
 = \left\{ \begin{array}{cc}
 0 & X \le d, \\
 X - d & X > d  
 \end{array} \right. .
-\end{align*}
+$$
 
 disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai $Y^P$ didefinisikan ketika hanya terjadinya pembayaran, terutama $Y^P$ sama dengan $X-d$ dengan syarat $[X>d]$, atau dinotasikan sebagai $Y^P=X-d||X>d$ atau dituliskan sebagai
 
-\begin{align*}
+\[
 Y^{P} = \left\{ \begin{matrix}
 \text{Undefined} & X \le d \\
 X - d & X > d .
 \end{matrix}  \right.
-\end{align*}
+\]
 
 disini $Y^P$ disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari $d$ tidak dilaporkan dan nilai dari $d$ berubah sebesar $d$
 
@@ -56,12 +56,12 @@ policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh
 sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti  bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis. 
 dimana biaya kerugian pemegang polis dinotasikan sebagai $X$ dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai $Y$, dan variabel policy limit dinotasikan sebagai $X \land u$. atau disebut sebagai right censored variable dikarenakan nilai dari $u$ di set sama dengan $u$. maka variabel $Y$ didefinisikan sebagai 
 
-\begin{align*}
+\[
 Y = X \land u = \left\{ \begin{matrix}
 X & X \leq u \\
 u & X > u. \\
 \end{matrix} \right.\
-\end{align*}
+\]
 
 pada batas polis, perbedaan antara $Y^L$ dan $Y^P$ tidak dibutuhkan  dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
 
@@ -69,13 +69,13 @@ dengan $(X-u)$ dan $(X \land u)$ maka expektasi dari pembayaran terjadi tanpa mo
 
 jika kerugian merupakan subjek dari deductible $d$ dan  limit $u$, maka didefinisikan sebagai
 
-\begin{align*}
+\[
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d \\
 X - d  & d <  X \leq u \\
  u - d  & X > u. \\
 \end{matrix} \right.\
-\end{align*}
+\]
 
 maka, $Y^L$ dapat dinyatakan sebagai $Y^L=(X\land u)-(X\land u)$.
 
@@ -95,13 +95,13 @@ pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis samp
 
 setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau $Y^L$ didefinisikan sebagai:
 
-\begin{align*}
+\[
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d, \\
 \alpha\left( X - d \right) & d <  X \leq u, \\
 \alpha\left( u - d \right) & X > u. \\
 \end{matrix} \right.\
-\end{align*}
+\]
 
 jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah $\alpha (u-d)$, dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible $d$ dan limit $u$ untuk variabel per kerugian atau $Y^L$, maka dapat dinyatakan sebagai $Y^L=(X\land u)-(X\land d)$, maka pada koasuransi $Y^L$ dapat dinyatakan sebagai$Y^L=\alpha[(X\land u)-(X\land d)]$.
 

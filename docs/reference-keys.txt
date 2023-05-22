@@ -11,8 +11,16 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
+menghitung-distribusi-klaim-agregat
+metode-rekursif
+contoh
+simulasi
 simulation-and-resampling
 premium-foundations
+pengenalan-ratemaking
+metode-penentuan-tarif-gabungan
+metode-penghitungan-premi-murni
+metode-rasio-kerugian
 risk-classification
 experience-rating-using-credibility-theory
 insurance-portfolio-management-including-reinsurance
@@ -25,29 +33,3 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
-<<<<<<< HEAD
-<<<<<<< HEAD
-section
-cross-validation
-k-fold-cross-validation
-leave-one-out-cross-validation
-cross-validation-and-bootstrap
-importance-sampling
-policy-deductibles
-policy-limit
-policy-deductible-and-policy-limit
-coinsurance-and-inflation
-reinsurance
-coinsurance-and-reinsurance
-=======
->>>>>>> 05f40d9e245bcaa540c3b262fbabb3f1f50ab66e
-menghitung-distribusi-klaim-agregat
-metode-rekursif
-contoh
-simulasi
-pengenalan-ratemaking
-metode-penentuan-tarif-gabungan
-metode-penghitungan-premi-murni
-metode-rasio-kerugian
-=======
->>>>>>> 50b7c26d8206e557155a37d009c99c495afc7703
