@@ -25,3 +25,13 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+pengantar-analitika-data-kerugian
+relevansi-analitika-dalam-aktivitas-asuransi
+sifat-dan-relevansi-asuransi
+apa-itu-analitika
+proses-asuransi
+operasi-perusahaan-asuransi
+memulai-asuransi
+memperbarui-asuransi
+pengelolaan-klaim-dan-produk
+penyisihan-klaim
