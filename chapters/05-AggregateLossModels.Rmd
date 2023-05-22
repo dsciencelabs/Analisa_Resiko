@@ -18,3 +18,125 @@ Misalnya, mungkin ada banyak klaim yang timbul dari satu kontrak. Itu wajar untu
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5.4 Menghitung Distribusi Klaim Agregat
+
+Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
+
+## metode rekursif
+
+penggunaan metode rekursif untuk membangun model majemuk dengan komponen frekuensi $N$ yang termasuk dalam kelas $(a,b,0)$ atau $(a,b,1)$, dan komponen tingkat keparahan $X$ yang memiliki distribusi diskrit.
+
+Namun, jika distribusi tingkat keparahan $X$ kontinu, praktik yang umum dilakukan adalah mendiskritkan distribusinya terlebih dahulu agar metode rekursif dapat diterapkan.
+
+Dalam hal ini, diasumsikan bahwa N termasuk dalam kelas $(a,b,1)$, sehingga nilai probabilitas $N$ pada waktu $k$ dinyatakan sebagai $pk = (a + bk) pk-1$. Selanjutnya, diasumsikan bahwa support (nilai yang mungkin) dari $X$ terbatas pada ${0,1,...,m}$, dan distribusinya diskrit. Oleh karena itu, fungsi probabilitas dari $S_N$ dapat dinyatakan dalam 
+
+\begin{aligned}
+f_{S_N}(s)&=\Pr (S_N=s) \\
+&=\frac{1}{1-af_{X}(0)}\left\{ \left[ p_1 -(a+b)p_{0}\right]
+f_X (s)+\sum_{x=1}^{s\wedge m}\left( a+\frac{bx}{s} \right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{aligned}
+
+Jika $N$ berada dalam kelas $(a,b,0)$ maka $p1 = (a + b)p0$ dan seterusnya
+
+\begin{align*}
+f_{S_N}(s)=\frac{1}{1-af_X (0)}\left\{ \sum_{x=1}^{s\wedge m}\left( a+\frac{bx
+}{s}\right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{align*}
+
+karena model ARIMA yang digunakan berbeda. Persamaan tersebut hanya memperhitungkan faktor skala $a$ dan $b$ dan mengakumulasi probabilitas dari setiap nilai $x$ dari $X$ hingga mencapai nilai $s$ yang diinginkan
+
+### contoh
+
+Jumlah klaim dalam suatu periode  $N$ memiliki distribusi geometrik dengan mean 4. Besarnya setiap klaim $X$ mengikuti $Pr(X=x)=0.25$, untuk $x=1,2,3,4$. Jumlah klaim dan jumlah klaim bersifat independen. $S_N$ adalah jumlah klaim keseluruhan pada periode tersebut. 
+
+Hitunglah $F_{S_N}(3)$.
+
+Solusi Distribusi tingkat keparahan $X$ adalah sebagai berikut
+$f_X(x)=\frac14$,  $x=1,2,3,4$. Distribusi frekuensi $N$ adalah geometris dengan rata-rata 4, yang merupakan anggota dari kelas $(a,b,0)$ dengan $b=0$, $a=\frac\beta{1+\beta}=\frac45$, dan $p0=\frac1{1+\beta}=\frac15$. nilai dari komponen tingkat keparahan $X$ adalah ${1,…,m=4}$, yang bersifat diskrit dan terbatas. Dengan demikian, kita dapat menggunakan metode rekursif
+
+\begin{aligned}
+f_{S_N} (x) &= 1 \sum_{y=1}^{x\wedge m} (a+0) f_X (y) f_{S_N} (x-y) \\
+&= \frac{4}{5} \sum_{y=1}^{x\wedge m} f_X (y) f_{S_N} (x-y) .
+\end{aligned}
+
+Solusi ditemukan dengan menggunakan metode rekursif, di mana fungsi probabilitas $f_{S_N}(x)$ untuk setiap nilai $x$ dihitung menggunakan rumus $f_{S_N}(x) = \sum_{y=1}^{x\wedge m} (a+0) f_X(y) f_{S_N}(x-y)$, di mana $m=4$ adalah nilai maksimum dari distribusi nilai klaim $X$, dan $a=\frac{\beta}{1+\beta}=\frac{4}{5}$ dan $p_0=\frac{1}{1+\beta}=\frac{1}{5}$ adalah parameter dari distribusi frekuensi geometri yang diberikan.
+
+khususnya kita memiliki
+
+\begin{aligned}
+f_{S_N} (0) &= \Pr(N=0) = p_0=\frac{1}{5}\\
+f_{S_N} (1) &= \frac{4}{5}\sum_{y=1}^{1} f_X (y) f_{S_N} (1-y) = \frac{4}{5} f_X(1) f_{S_N}(0)\\
+&= \frac{4}{5}\left( \frac{1}{4}\right)\left(\frac{1}{5} \right) = \frac{1}{25}\\
+f_{S_N} (2) &=  \frac{4}{5}\sum_{y=1}^{2} f_X (y) f_{S_N} (2-y) = \frac{4}{5} \left[ f_X(1)f_{S_N}(1) + f_X(2) f_{S_N}(0) \right] \\
+&= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5}\right) \right] =
+\frac{4}{5}\left( \frac{6}{100}\right) = \frac{6}{125}\\
+f_{S_N} (3) &= \frac{4}{5} \left[ f_X(1) f_{S_N}(2) + f_X(2)f_{S_N}(1) + f_X(3) f_{S_N}(0) \right]\\
+&= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5} +
+\frac{6}{125}\right) \right] = \frac{1}{5}\left( \frac{5+25+6}{125}\right) = 0.0576\\
+\Rightarrow \ F_{S_N} (3) &= f_{S_N} (0)+f_{S_N} (1)+f_{S_N} (2) +f_{S_N} (3) = 0.3456 .
+\end{aligned}
+
+Setelah menghitung nilai $f_{S_N}(0)$, $f_{S_N}(1)$, $f_{S_N}(2)$, dan $f_{S_N}(3)$, fungsi distribusi kumulatif $F_{S_N}(3)$ diperoleh dengan menjumlahkan nilai-nilai tersebut. Hasil akhirnya adalah $F_{S_N}(3) = 0.3456$.
+
+## simulasi
+
+Distribusi kerugian agregat dapat dievaluasi dengan menggunakan simulasi Monte Carlo. Untuk kerugian agregat, Simulasi Monte Carlo digunakan untuk menghasilkan sampel acak dari kerugian keseluruhan berdasarkan distribusi probabilitas yang dianggap sesuai untuk distribusi frekuensi dan tingkat keparahan klaim.
+
+gunanya adalah seseorang dapat menghitung distribusi empiris dari $S_N$ dengan menggunakan sampel acak. Nilai ekspektasi dan varians dari kerugian agregat juga dapat diperkirakan dengan menggunakan rata-rata sampel dan varians sampel dari nilai simulasi.
+
+Sekarang kita rangkum prosedur simulasi untuk model kerugian agregat. Misalkan $m$ adalah ukuran sampel acak yang dihasilkan dari kerugian agregat.
+
+Individual Risk Model: $S_n = X_1 + ⋯ + X_n $
+
+- misalkan $j=1,...,m$ menjadi penghitung, dimulai dari $j = 1$
+- Hitung setiap realisasi kerugian individu $x_{ij}$ untuk $i=1,...,n$ . Sebagai contoh, hal ini dapat dilakukan dengan menggunakan metode transformasi invers
+- Hitung kerugian keseluruhan $s_j = x_{1j} + ⋯ + x_{nj}$.
+- terkahir Ulangi dua langkah di atas untuk $j=2,...,m$ untuk mendapatkan sampel berukuran $m$ dari $S_n$, dengan kata lain ${s_1,...,s_m}$.
+
+Collective Risk Model : $S_n = X_1 + ... + X_n$
+
+- misalkan $j=1,...,m$ menjadi penghitung, dimulai dari $j = 1$
+- Hitung jumlah klaim $n_j$ dari distribusi frekuensi $N$.
+- Diberikan $n_j$, hasilkan jumlah setiap klaim secara independen dari distribusi tingkat keparahan $X$, dilambangkan dengan $x_{1j},...,x_{{n_j}j}$.
+- Hitung kerugian keseluruhan $s_j = x_{1j} + ⋯ + x_{{n_j}j}$.
+- Ulangi tiga langkah di atas untuk $j=2,...,m$ untuk mendapatkan sampel berukuran $m$ dari $S_N$, dengan kata lain ${s_1,...,s_m}$
+
+Dengan sampel acak $S$, distribusi empiris dapat dihitung sebagai
+
+\begin{aligned}
+\hat{F}_S(s)=\frac{1}{m}\sum_{i=1}^{m}I(s_i\leq s),
+\end{aligned}
+
+Untuk individual risk model, kerugian keseluruhan dihitung sebagai jumlah kerugian individu yang acak, 
+
+sedangkan untuk collective Risk Model, kerugian keseluruhan dihitung sebagai jumlah kerugian dari sejumlah klaim. 
+
+Dalam kedua kasus, sampel acak dihasilkan dari distribusi probabilitas yang dianggap sesuai, dan kemudian distribusi empiris dari sampel tersebut dihitung untuk memperkirakan distribusi probabilitas dari kerugian agregat.
+
+dimana $I(\cdot)$ adalah fungsi indikator. distribusi empiris $\hat{F}_S(s)$ akan dikonvergen ke ${F}_S(s)$, dikarenakan ukuran sampel $m\rightarrow \infty$
+
+Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas dan parameter-parameternya, kemudian model-model ini diestimasi menggunakan data yang tersedia dan kualitas kecocokan model dievaluasi menggunakan alat validasi model. Proses ini memberikan cara yang berguna untuk memperkirakan risiko yang terkait dengan kerugian agregat, dan dapat membantu perusahaan atau organisasi dalam merencanakan dan mengelola risiko mereka.
+
+Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim $N$ dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim $X$ dari data jumlah klaim.
+
+(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry

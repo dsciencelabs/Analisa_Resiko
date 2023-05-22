@@ -37,3 +37,11 @@ reinsurance
 coinsurance-and-reinsurance
 =======
 >>>>>>> 05f40d9e245bcaa540c3b262fbabb3f1f50ab66e
+menghitung-distribusi-klaim-agregat
+metode-rekursif
+contoh
+simulasi
+pengenalan-ratemaking
+metode-penentuan-tarif-gabungan
+metode-penghitungan-premi-murni
+metode-rasio-kerugian
