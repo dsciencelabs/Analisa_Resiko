@@ -2,10 +2,13 @@ introduction-to-loss-data-analytics
 frequency-modeling
 goodness-of-fit
 modeling-loss-severity
-mdmmm
-mdmem
-mdmm
 modifikasi-pertanggungan
+policy-deductibles
+policy-limit
+policy-deductible-and-policy-limit
+coinsurance-and-inflation
+reinsurance
+coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
 simulation-and-resampling
@@ -22,6 +25,7 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
 <<<<<<< HEAD
 section
 cross-validation
@@ -45,3 +49,5 @@ pengenalan-ratemaking
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
+=======
+>>>>>>> 50b7c26d8206e557155a37d009c99c495afc7703
