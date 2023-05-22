@@ -542,29 +542,11 @@ Hal ini memungkinkan kita untuk menggunakan distribusi Tweedie dengan model line
 
 =======
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 5.4 Menghitung Distribusi Klaim Agregat
+## 5.4 Menghitung Distribusi Klaim Agregat
 
 Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
 
-## metode rekursif
+### metode rekursif
 
 penggunaan metode rekursif untuk membangun model majemuk dengan komponen frekuensi $N$ yang termasuk dalam kelas $(a,b,0)$ atau $(a,b,1)$, dan komponen tingkat keparahan $X$ yang memiliki distribusi diskrit.
 
@@ -587,7 +569,7 @@ f_{S_N}(s)=\frac{1}{1-af_X (0)}\left\{ \sum_{x=1}^{s\wedge m}\left( a+\frac{bx
 
 karena model ARIMA yang digunakan berbeda. Persamaan tersebut hanya memperhitungkan faktor skala $a$ dan $b$ dan mengakumulasi probabilitas dari setiap nilai $x$ dari $X$ hingga mencapai nilai $s$ yang diinginkan
 
-### contoh
+#### contoh
 
 Jumlah klaim dalam suatu periode  $N$ memiliki distribusi geometrik dengan mean 4. Besarnya setiap klaim $X$ mengikuti $Pr(X=x)=0.25$, untuk $x=1,2,3,4$. Jumlah klaim dan jumlah klaim bersifat independen. $S_N$ adalah jumlah klaim keseluruhan pada periode tersebut. 
 
@@ -620,7 +602,7 @@ f_{S_N} (3) &= \frac{4}{5} \left[ f_X(1) f_{S_N}(2) + f_X(2)f_{S_N}(1) + f_X(3) 
 
 Setelah menghitung nilai $f_{S_N}(0)$, $f_{S_N}(1)$, $f_{S_N}(2)$, dan $f_{S_N}(3)$, fungsi distribusi kumulatif $F_{S_N}(3)$ diperoleh dengan menjumlahkan nilai-nilai tersebut. Hasil akhirnya adalah $F_{S_N}(3) = 0.3456$.
 
-## simulasi
+### simulasi
 
 Distribusi kerugian agregat dapat dievaluasi dengan menggunakan simulasi Monte Carlo. Untuk kerugian agregat, Simulasi Monte Carlo digunakan untuk menghasilkan sampel acak dari kerugian keseluruhan berdasarkan distribusi probabilitas yang dianggap sesuai untuk distribusi frekuensi dan tingkat keparahan klaim.
 
@@ -661,6 +643,3 @@ Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas 
 
 Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim $N$ dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim $X$ dari data jumlah klaim.
 
-(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
-tertanda -Garry
->>>>>>> 2b09625cdda42bc7616694d1293a79593ab87092
