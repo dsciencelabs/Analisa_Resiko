@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bab 16 Aggregate Loss Models | Analisis Resiko</title>
+  <title>Bab 10 7.2 Metode Penentuan Tarif Gabungan | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bab 16 Aggregate Loss Models | Analisis Resiko" />
+  <meta property="og:title" content="Bab 10 7.2 Metode Penentuan Tarif Gabungan | Analisis Resiko" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bab 16 Aggregate Loss Models | Analisis Resiko" />
+  <meta name="twitter:title" content="Bab 10 7.2 Metode Penentuan Tarif Gabungan | Analisis Resiko" />
   
   <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="experience-rating-using-bonus-malus.html"/>
-<link rel="next" href="dependence-modeling.html"/>
+<link rel="prev" href="pengenalan-ratemaking.html"/>
+<link rel="next" href="risk-classification.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -170,17 +170,136 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="aggregate-loss-models-1" class="section level1 hasAnchor" number="16">
-<h1><span class="header-section-number">Bab 16</span> Aggregate Loss Models<a href="aggregate-loss-models-1.html#aggregate-loss-models-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="metode-penentuan-tarif-gabungan" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Bab 10</span> 7.2 Metode Penentuan Tarif Gabungan<a href="metode-penentuan-tarif-gabungan.html#metode-penentuan-tarif-gabungan" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Pada bagian ini, Anda akan belajar tentang:</p>
+<ul>
+<li>Definisi pure premium sebagai biaya kerugian serta dalam hal frekuensi dan keparahan.</li>
+<li>Menghitung tarif yang diindikasikan menggunakan pure premiums, biaya, dan beban keuntungan.</li>
+<li>Definisi rasio kerugian.</li>
+<li>Menghitung perubahan tarif yang diindikasikan menggunakan rasio kerugian.</li>
+<li>Membandingkan metode pure premium dan rasio kerugian untuk menentukan premi.</li>
+</ul>
+<p>Dalam kasus ini, diasumsikan terdapat <span class="math inline">\(n\)</span> kontrak asuransi dengan kerugian (losses) <span class="math inline">\(X1,...,Xn\)</span>. Kontrak-kontrak tersebut memiliki distribusi kerugian yang sama dan dianggap sebagai portofolio homogen yang terdiri dari kontrak-kontrak yang sama. Hal ini dapat diterapkan pada asuransi pribadi seperti asuransi mobil atau asuransi rumah di mana perusahaan asuransi menulis banyak kontrak pada risiko yang sangat mirip. Selain itu, asumsi tentang distribusi yang identik tidak terlalu membatasi karena dalam bagian selanjutnya akan diperkenalkan variabel paparan yang memungkinkan pengalaman dapat diskalakan agar dapat dibandingkan. Dalam kasus ini, diasumsikan bahwa <span class="math inline">\(X1,...,Xn\)</span> adalah iid (independen dan identik terdistribusi).</p>
+<div id="metode-penghitungan-premi-murni" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> 7.2.1 Metode Penghitungan Premi Murni<a href="metode-penentuan-tarif-gabungan.html#metode-penghitungan-premi-murni" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dalam metode ini, diperoleh estimasi kerugian yang diharapkan dengan menghitung rata-rata dari kerugian yang terjadi pada seluruh polis dalam suatu kumpulan (n polis).</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\mathrm{E}(X) \approx \frac{\sum_{i=1}^n X_i}{n} = \frac{\text{Kerugian}}{\text{Eksposur}} = \text{Premi Murni}.
+}
+\end{equation}\]</span></p>
+<p>Dalam kasus risiko homogen, di mana semua polis dianggap sama, jumlah polis n dapat digunakan sebagai ukuran eksposur. Namun, pada Bagian 7.4.1, konsep eksposur diperluas ketika polis tidak memiliki karakteristik yang sama.</p>
+<p>Untuk mendapatkan premi murni, kita juga dapat menggunakan pendekatan frekuensi-keparahan. Dalam hal ini, premi murni dihitung sebagai hasil kali antara frekuensi klaim dan besar kerugian.</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\text{Premi Murni} = \frac{\text{jumlah klaim}}{\text{Eksposur}} \times \frac{\text{Kerugian}}{\text{jumlah klaim}} = \text{frekuensi} \times \text{keparahan}.
+}
+\end{equation}\]</span></p>
+<p>Ketika menggunakan metode premi murni, dapat digunakan baik rata-rata kerugian (biaya kerugian) maupun pendekatan frekuensi-keparahan untuk menentukan premi.</p>
+<p>Untuk lebih mendekatkan diri pada aplikasi dalam praktik, sekarang kita kembali ke persamaan (7.1) yang menyertakan biaya. Persamaan (7.1) juga mengacu pada Laba UW untuk laba underwriting. Ketika diskalakan dengan premi, ini dikenal sebagai pembebanan laba. Karena klaim tidak pasti, perusahaan asuransi harus memiliki modal untuk memastikan bahwa semua klaim dibayar. Memegang modal ekstra ini adalah biaya menjalankan bisnis, investor di perusahaan perlu dikompensasi untuk ini, dengan demikian pemuatan ekstra.</p>
+<p>Sekarang kita menguraikan Beban menjadi beban yang bervariasi berdasarkan premi, Variabel, beban yang tidak bervariasi,dan Premi Tetap, sehingga Beban = Variabel + Premi Tetap. Dengan menganggap biaya variabel dan laba sebagai bagian dari premi, kita mendefinisikan</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+V =  \frac{\text{Variable}}{\text{Premium}} ~~~ \text{and}~~~
+Q = \frac{\text{UW Profit}}{\text{Premium}} ~.
+}
+\end{equation}\]</span></p>
+<p>Dengan definisi dan persamaan (7.1) ini, kita dapat menulis</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\begin{matrix}
+\begin{array}{ll}
+\text{Premium} &amp;= \text{Losses + Fixed} + \text{Premium} \times \frac{\text{Variable + UW Profit}}{\text{Premium}}  \\
+&amp; = \text{Losses + Fixed} + \text{Premium} \times (V+Q) .
+\end{array}
+\end{matrix}
+}
+\end{equation}\]</span></p>
+<p>Penyelesaian untuk hasil premi</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\text{Premium} = \frac{\text{Losses + Fixed}}{1-V-Q} .
+}
+\end{equation}\]</span></p>
+<p>Dibagi dengan eksposur, tarif dapat dihitung sebagai</p>
+<p><span class="math display">\[\begin{equation}
+\begin{matrix}
+\begin{array}{ll}
+\text{Rate} &amp;= \frac{\text{Premium}}{\text{Exposure}} = \frac{\text{Losses/Exposure + Fixed/Exposure}}{1-V-Q} \\
+&amp;=   \frac{\text{Pure Premium + Fixed/Exposure}}{1-V-Q} ~.
+\end{array}
+\end{matrix}
+\end{equation}\]</span></p>
+<p>Dengan kata lain, ini adalah</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\text{Rate} =\frac{\text{pure premium + fixed expense per exposure}}{\text{1 - variable expense factor - profit and contingencies factor}}  .
+}
+\end{equation}\]</span></p>
+</div>
+<div id="metode-rasio-kerugian" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> 7.2.2 Metode Rasio Kerugian<a href="metode-penentuan-tarif-gabungan.html#metode-rasio-kerugian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Rasio kerugian adalah rasio jumlah kerugian terhadap premi</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\text{Loss Ratio} = \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}\]</span></p>
+<p>Ketika menentukan premi, agak berlawanan dengan intuisi untuk menekankan rasio ini karena komponen premi dimasukkan ke dalam penyebut. Seperti yang akan kita lihat, metode rasio kerugian mengembangkan perubahan tingkat daripada tingkat; kita dapat menggunakan perubahan tingkat untuk memperbarui pengalaman masa lalu untuk mendapatkan tingkat saat ini. Untuk melakukan hal ini, perubahan tingkat terdiri dari rasio rasio kerugian pengalaman terhadap rasio kerugian target. Faktor penyesuaian ini kemudian diterapkan pada rate saat ini untuk mendapatkan rate yang baru.</p>
+<p>Untuk melihat cara kerjanya dalam konteks yang sederhana, mari kita kembali ke persamaan (7.1) tetapi sekarang abaikan biaya untuk mendapatkan $ Premi = Kerugian + Keuntungan UW $. Membagi dengan premi menghasilkan</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\frac{\text{UW Profit}}{\text{Premium}} = 1 - LR = 1 - \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}\]</span></p>
+<p>Misalkan kita memiliki pemuatan laba “target” baru, katakanlah <span class="math inline">\(Q_{target}\)</span> . Dengan asumsi bahwa kerugian, eksposur, dan hal-hal lain mengenai kontrak tetap sama, maka untuk mencapai target pemuatan laba yang baru, kita akan menyesuaikan premi. Gunakan ICF untuk faktor perubahan yang ditunjukkan yang didefinisikan melalui ekspresi</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+\frac{\text{New UW Profit}}{\text{Premium}} = Q_{target} =  1 - \frac{\text{Loss}}{ICF \times \text{Premium}}.
+}
+\end{equation}\]</span></p>
+<p>Menyelesaikan untuk <span class="math inline">\(ICF\)</span>, kita mendapatkan</p>
+<p>}<span class="math display">\[\begin{equation}
+\small{
+ICF =  \frac{\text{Loss}}{\text{Premium} \times (1-Q_{target})} = \frac{LR}{1-Q_{target}}.
+}
+\end{equation}\]</span></p>
+<p>Jadi, sebagai contoh, jika kita memiliki rasio kerugian saat ini = 85% dan target keuntungan <span class="math inline">\(Q_{target} = 0,20\)</span>, maka <span class="math inline">\(ICF = 0,85/0,80 = 1,0625\)</span>, yang berarti kita meningkatkan premi sebesar 6,25%.</p>
+<p>Sekarang mari kita lihat bagaimana hal ini bekerja dengan biaya dalam persamaan (7.1). Kita dapat menggunakan pengembangan yang sama seperti pada Bagian 7.2.1 dan mulai dengan persamaan (7.2), selesaikan pembebanan laba untuk mendapatkan</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+Q = 1 - \frac{\text{Loss+Fixed}}{\text{Premium}} - V .
+}
+\end{equation}\]</span></p>
+<p>Kita menginterpretasikan kuantitas <span class="math inline">\(Rugi + Premi Tetap + V\)</span> sebagai “rasio biaya operasional”. Sekarang, tetapkan persentase keuntungan Q pada target dan sesuaikan premi melalui “faktor perubahan yang ditunjukkan” $ ICF</p>
+<p><span class="math display">\[\begin{equation}
+\small{
+Q_{target} = 1
+-\frac{\text{Loss + Fixed}}{\text{Premium}\times ICF} - V .
+}
+\end{equation}\]</span></p>
+<p>Menyelesaikan untuk hasil $ ICF$</p>
+<p><span class="math display">\[\begin{equation}
+{\small
+\begin{array}{ll}
+ICF &amp;= \frac{\text{Loss + Fixed}}{\text{Premium} \times (1 - V - Q_{target})} \\
+&amp;= \frac{\text{Loss Ratio + Fixed Expense Ratio}}{1 - V - Q_{target}} .
+\end{array}
+}
+\end{equation}\]</span></p>
+<p>(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="experience-rating-using-bonus-malus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dependence-modeling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pengenalan-ratemaking.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="risk-classification.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -211,7 +330,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dsciencelabs/Analisa_Resiko/edit/master/chapters/13-DataSystems.Rmd",
+"link": "https://github.com/dsciencelabs/Analisa_Resiko/edit/master/chapters/07-PremiumFoundations.Rmd",
 "text": "Edit"
 },
 "history": {

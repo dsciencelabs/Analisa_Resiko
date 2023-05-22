@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bab 5 Aggregate Loss Models | Analisis Resiko</title>
+  <title>Bab 6 5.4 Menghitung Distribusi Klaim Agregat | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bab 5 Aggregate Loss Models | Analisis Resiko" />
+  <meta property="og:title" content="Bab 6 5.4 Menghitung Distribusi Klaim Agregat | Analisis Resiko" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bab 5 Aggregate Loss Models | Analisis Resiko" />
+  <meta name="twitter:title" content="Bab 6 5.4 Menghitung Distribusi Klaim Agregat | Analisis Resiko" />
   
   <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="model-selection-and-estimation.html"/>
-<link rel="next" href="menghitung-distribusi-klaim-agregat.html"/>
+<link rel="prev" href="aggregate-loss-models.html"/>
+<link rel="next" href="simulation-and-resampling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -168,24 +168,94 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="aggregate-loss-models" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Bab 5</span> Aggregate Loss Models<a href="aggregate-loss-models.html#aggregate-loss-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Sub bab ini membahas mengenai pembangunan model probabilitas untuk menggambarkan klaim agregat oleh sistem asuransi yang terjadi dalam periode waktu tertentu. Sistem asuransi dapat berupa polis tunggal, kontrak asuransi kelompok, lini bisnis , atau seluruh buku bisnis perusahaan asuransi. Dalam bab ini, klaim agregat mengacu pada jumlah klaim dari portofolio kontrak asuransi.</p>
-<p>Pertimbangkan portofolio asuransi dari <span class="math inline">\(N\)</span> kontrak individu, dan <span class="math inline">\(S\)</span> menunjukkan kerugian agregat portofolio dalam jangka waktu tertentu. Ada dua pendekatan untuk memodelkan kerugian agregat <span class="math inline">\(S\)</span> , model risiko individu dan model risiko kolektif. Model risiko individu menekankan kerugian dari masing-masing kontrak individu dan mewakili kerugian agregat sebagai:</p>
-<p><span class="math display">\[S_n=X_1 +X_2 +\cdots+X_n,\]</span></p>
-<p>Di mana <span class="math inline">\(X_i~(i=1,\ldots,n)\)</span> diinterpretasikan sebagai jumlah kerugian dari <span class="math inline">\(X_i\)</span> kontrak. <span class="math inline">\(N\)</span> menunjukkan jumlah kontrak dalam portofolio dan dengan demikian merupakan angka tetap daripada variabel acak. Untuk model risiko individu, biasanya diasumsikan <span class="math inline">\(X_i\)</span> ini independen. Karena fitur kontrak yang berbeda seperti cakupan dan paparan , <span class="math inline">\(X_i\)</span> belum tentu terdistribusi secara identik. Fitur penting dari distribusi masing-masing <span class="math inline">\(X_i\)</span> adalah massa probabilitas pada nol yang sesuai dengan peristiwa tidak adanya klai</p>
-<p>Model risiko kolektif mewakili kerugian agregat dalam hal distribusi frekuensi dan distribusi keparahan:</p>
-<p><span class="math display">\[S_N=X_1 +X_2 + \cdots + X_N .\]</span></p>
-<p>Sejumlah klaim acak <span class="math inline">\(N\)</span> yang dapat mewakili baik jumlah kerugian atau jumlah pembayaran. Sebaliknya, dalam model risiko individual biasanya menggunakan sejumlah kontrak tetap <span class="math inline">\(N\)</span>.<span class="math inline">\(X_1, X_2, \ldots, X_N\)</span> sebagai representasi dari jumlah masing-masing kerugian. Setiap kerugian mungkin atau mungkin tidak sesuai dengan kontrak unik.</p>
-<p>Misalnya, mungkin ada banyak klaim yang timbul dari satu kontrak. Itu wajar untuk dipikirkan <span class="math inline">\(X_i&gt;0\)</span> karena jika <span class="math inline">\(X_i=0\)</span> maka tidak ada klaim yang terjadi. Biasanya kita menganggap bahwa kondisional pada <span class="math inline">\(X_{1},X_{2},\ldots ,X_{n}\)</span> adalah iid variabel acak. Distribusi dari N dikenal sebagai distribusi frekuensi , dan distribusi umum dari <span class="math inline">\(X\)</span> dikenal sebagai distribusi keparahan . Dengan berasumsi <span class="math inline">\(N\)</span> Dan <span class="math inline">\(X\)</span> sendiri. Dengan model risiko kolektif, sehingga dapat menguraikan kerugian agregat menjadi frekuensi <span class="math inline">\(( N )\)</span> proses dan tingkat keparahan <span class="math inline">\(( X )\)</span> model. Fleksibilitas ini memungkinkan analis untuk mengomentari dua komponen terpisah ini. Misalnya, pertumbuhan penjualan karena standar penjaminan emisi yang lebih rendah dapat menyebabkan frekuensi kerugian yang lebih tinggi tetapi mungkin tidak memengaruhi keparahan. Demikian pula, inflasi atau kekuatan ekonomi lainnya dapat berdampak pada keparahan tetapi tidak pada frekuensi.</p>
+<div id="menghitung-distribusi-klaim-agregat" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Bab 6</span> 5.4 Menghitung Distribusi Klaim Agregat<a href="menghitung-distribusi-klaim-agregat.html#menghitung-distribusi-klaim-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.</p>
+<div id="metode-rekursif" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> metode rekursif<a href="menghitung-distribusi-klaim-agregat.html#metode-rekursif" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>penggunaan metode rekursif untuk membangun model majemuk dengan komponen frekuensi <span class="math inline">\(N\)</span> yang termasuk dalam kelas <span class="math inline">\((a,b,0)\)</span> atau <span class="math inline">\((a,b,1)\)</span>, dan komponen tingkat keparahan <span class="math inline">\(X\)</span> yang memiliki distribusi diskrit.</p>
+<p>Namun, jika distribusi tingkat keparahan <span class="math inline">\(X\)</span> kontinu, praktik yang umum dilakukan adalah mendiskritkan distribusinya terlebih dahulu agar metode rekursif dapat diterapkan.</p>
+<p>Dalam hal ini, diasumsikan bahwa N termasuk dalam kelas <span class="math inline">\((a,b,1)\)</span>, sehingga nilai probabilitas <span class="math inline">\(N\)</span> pada waktu <span class="math inline">\(k\)</span> dinyatakan sebagai <span class="math inline">\(pk = (a + bk) pk-1\)</span>. Selanjutnya, diasumsikan bahwa support (nilai yang mungkin) dari <span class="math inline">\(X\)</span> terbatas pada <span class="math inline">\({0,1,...,m}\)</span>, dan distribusinya diskrit. Oleh karena itu, fungsi probabilitas dari <span class="math inline">\(S_N\)</span> dapat dinyatakan dalam</p>
+<span class="math display">\[\begin{aligned}
+f_{S_N}(s)&amp;=\Pr (S_N=s) \\
+&amp;=\frac{1}{1-af_{X}(0)}\left\{ \left[ p_1 -(a+b)p_{0}\right]
+f_X (s)+\sum_{x=1}^{s\wedge m}\left( a+\frac{bx}{s} \right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{aligned}\]</span>
+<p>Jika <span class="math inline">\(N\)</span> berada dalam kelas <span class="math inline">\((a,b,0)\)</span> maka <span class="math inline">\(p1 = (a + b)p0\)</span> dan seterusnya</p>
+<p><span class="math display">\[\begin{align*}
+f_{S_N}(s)=\frac{1}{1-af_X (0)}\left\{ \sum_{x=1}^{s\wedge m}\left( a+\frac{bx
+}{s}\right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{align*}\]</span></p>
+<p>karena model ARIMA yang digunakan berbeda. Persamaan tersebut hanya memperhitungkan faktor skala <span class="math inline">\(a\)</span> dan <span class="math inline">\(b\)</span> dan mengakumulasi probabilitas dari setiap nilai <span class="math inline">\(x\)</span> dari <span class="math inline">\(X\)</span> hingga mencapai nilai <span class="math inline">\(s\)</span> yang diinginkan</p>
+<div id="contoh" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> contoh<a href="menghitung-distribusi-klaim-agregat.html#contoh" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jumlah klaim dalam suatu periode <span class="math inline">\(N\)</span> memiliki distribusi geometrik dengan mean 4. Besarnya setiap klaim <span class="math inline">\(X\)</span> mengikuti <span class="math inline">\(Pr(X=x)=0.25\)</span>, untuk <span class="math inline">\(x=1,2,3,4\)</span>. Jumlah klaim dan jumlah klaim bersifat independen. <span class="math inline">\(S_N\)</span> adalah jumlah klaim keseluruhan pada periode tersebut.</p>
+<p>Hitunglah <span class="math inline">\(F_{S_N}(3)\)</span>.</p>
+<p>Solusi Distribusi tingkat keparahan <span class="math inline">\(X\)</span> adalah sebagai berikut
+<span class="math inline">\(f_X(x)=\frac14\)</span>, <span class="math inline">\(x=1,2,3,4\)</span>. Distribusi frekuensi <span class="math inline">\(N\)</span> adalah geometris dengan rata-rata 4, yang merupakan anggota dari kelas <span class="math inline">\((a,b,0)\)</span> dengan <span class="math inline">\(b=0\)</span>, <span class="math inline">\(a=\frac\beta{1+\beta}=\frac45\)</span>, dan <span class="math inline">\(p0=\frac1{1+\beta}=\frac15\)</span>. nilai dari komponen tingkat keparahan <span class="math inline">\(X\)</span> adalah <span class="math inline">\({1,…,m=4}\)</span>, yang bersifat diskrit dan terbatas. Dengan demikian, kita dapat menggunakan metode rekursif</p>
+<span class="math display">\[\begin{aligned}
+f_{S_N} (x) &amp;= 1 \sum_{y=1}^{x\wedge m} (a+0) f_X (y) f_{S_N} (x-y) \\
+&amp;= \frac{4}{5} \sum_{y=1}^{x\wedge m} f_X (y) f_{S_N} (x-y) .
+\end{aligned}\]</span>
+<p>Solusi ditemukan dengan menggunakan metode rekursif, di mana fungsi probabilitas <span class="math inline">\(f_{S_N}(x)\)</span> untuk setiap nilai <span class="math inline">\(x\)</span> dihitung menggunakan rumus <span class="math inline">\(f_{S_N}(x) = \sum_{y=1}^{x\wedge m} (a+0) f_X(y) f_{S_N}(x-y)\)</span>, di mana <span class="math inline">\(m=4\)</span> adalah nilai maksimum dari distribusi nilai klaim <span class="math inline">\(X\)</span>, dan <span class="math inline">\(a=\frac{\beta}{1+\beta}=\frac{4}{5}\)</span> dan <span class="math inline">\(p_0=\frac{1}{1+\beta}=\frac{1}{5}\)</span> adalah parameter dari distribusi frekuensi geometri yang diberikan.</p>
+<p>khususnya kita memiliki</p>
+<span class="math display">\[\begin{aligned}
+f_{S_N} (0) &amp;= \Pr(N=0) = p_0=\frac{1}{5}\\
+f_{S_N} (1) &amp;= \frac{4}{5}\sum_{y=1}^{1} f_X (y) f_{S_N} (1-y) = \frac{4}{5} f_X(1) f_{S_N}(0)\\
+&amp;= \frac{4}{5}\left( \frac{1}{4}\right)\left(\frac{1}{5} \right) = \frac{1}{25}\\
+f_{S_N} (2) &amp;=  \frac{4}{5}\sum_{y=1}^{2} f_X (y) f_{S_N} (2-y) = \frac{4}{5} \left[ f_X(1)f_{S_N}(1) + f_X(2) f_{S_N}(0) \right] \\
+&amp;= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5}\right) \right] =
+\frac{4}{5}\left( \frac{6}{100}\right) = \frac{6}{125}\\
+f_{S_N} (3) &amp;= \frac{4}{5} \left[ f_X(1) f_{S_N}(2) + f_X(2)f_{S_N}(1) + f_X(3) f_{S_N}(0) \right]\\
+&amp;= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5} +
+\frac{6}{125}\right) \right] = \frac{1}{5}\left( \frac{5+25+6}{125}\right) = 0.0576\\
+\Rightarrow \ F_{S_N} (3) &amp;= f_{S_N} (0)+f_{S_N} (1)+f_{S_N} (2) +f_{S_N} (3) = 0.3456 .
+\end{aligned}\]</span>
+<p>Setelah menghitung nilai <span class="math inline">\(f_{S_N}(0)\)</span>, <span class="math inline">\(f_{S_N}(1)\)</span>, <span class="math inline">\(f_{S_N}(2)\)</span>, dan <span class="math inline">\(f_{S_N}(3)\)</span>, fungsi distribusi kumulatif <span class="math inline">\(F_{S_N}(3)\)</span> diperoleh dengan menjumlahkan nilai-nilai tersebut. Hasil akhirnya adalah <span class="math inline">\(F_{S_N}(3) = 0.3456\)</span>.</p>
+</div>
+</div>
+<div id="simulasi" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> simulasi<a href="menghitung-distribusi-klaim-agregat.html#simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Distribusi kerugian agregat dapat dievaluasi dengan menggunakan simulasi Monte Carlo. Untuk kerugian agregat, Simulasi Monte Carlo digunakan untuk menghasilkan sampel acak dari kerugian keseluruhan berdasarkan distribusi probabilitas yang dianggap sesuai untuk distribusi frekuensi dan tingkat keparahan klaim.</p>
+<p>gunanya adalah seseorang dapat menghitung distribusi empiris dari <span class="math inline">\(S_N\)</span> dengan menggunakan sampel acak. Nilai ekspektasi dan varians dari kerugian agregat juga dapat diperkirakan dengan menggunakan rata-rata sampel dan varians sampel dari nilai simulasi.</p>
+<p>Sekarang kita rangkum prosedur simulasi untuk model kerugian agregat. Misalkan <span class="math inline">\(m\)</span> adalah ukuran sampel acak yang dihasilkan dari kerugian agregat.</p>
+<p>Individual Risk Model: $S_n = X_1 + ⋯ + X_n $</p>
+<ul>
+<li>misalkan <span class="math inline">\(j=1,...,m\)</span> menjadi penghitung, dimulai dari <span class="math inline">\(j = 1\)</span></li>
+<li>Hitung setiap realisasi kerugian individu <span class="math inline">\(x_{ij}\)</span> untuk <span class="math inline">\(i=1,...,n\)</span> . Sebagai contoh, hal ini dapat dilakukan dengan menggunakan metode transformasi invers</li>
+<li>Hitung kerugian keseluruhan <span class="math inline">\(s_j = x_{1j} + ⋯ + x_{nj}\)</span>.</li>
+<li>terkahir Ulangi dua langkah di atas untuk <span class="math inline">\(j=2,...,m\)</span> untuk mendapatkan sampel berukuran <span class="math inline">\(m\)</span> dari <span class="math inline">\(S_n\)</span>, dengan kata lain <span class="math inline">\({s_1,...,s_m}\)</span>.</li>
+</ul>
+<p>Collective Risk Model : <span class="math inline">\(S_n = X_1 + ... + X_n\)</span></p>
+<ul>
+<li>misalkan <span class="math inline">\(j=1,...,m\)</span> menjadi penghitung, dimulai dari <span class="math inline">\(j = 1\)</span></li>
+<li>Hitung jumlah klaim <span class="math inline">\(n_j\)</span> dari distribusi frekuensi <span class="math inline">\(N\)</span>.</li>
+<li>Diberikan <span class="math inline">\(n_j\)</span>, hasilkan jumlah setiap klaim secara independen dari distribusi tingkat keparahan <span class="math inline">\(X\)</span>, dilambangkan dengan <span class="math inline">\(x_{1j},...,x_{{n_j}j}\)</span>.</li>
+<li>Hitung kerugian keseluruhan <span class="math inline">\(s_j = x_{1j} + ⋯ + x_{{n_j}j}\)</span>.</li>
+<li>Ulangi tiga langkah di atas untuk <span class="math inline">\(j=2,...,m\)</span> untuk mendapatkan sampel berukuran <span class="math inline">\(m\)</span> dari <span class="math inline">\(S_N\)</span>, dengan kata lain <span class="math inline">\({s_1,...,s_m}\)</span></li>
+</ul>
+<p>Dengan sampel acak <span class="math inline">\(S\)</span>, distribusi empiris dapat dihitung sebagai</p>
+<span class="math display">\[\begin{aligned}
+\hat{F}_S(s)=\frac{1}{m}\sum_{i=1}^{m}I(s_i\leq s),
+\end{aligned}\]</span>
+<p>Untuk individual risk model, kerugian keseluruhan dihitung sebagai jumlah kerugian individu yang acak,</p>
+<p>sedangkan untuk collective Risk Model, kerugian keseluruhan dihitung sebagai jumlah kerugian dari sejumlah klaim.</p>
+<p>Dalam kedua kasus, sampel acak dihasilkan dari distribusi probabilitas yang dianggap sesuai, dan kemudian distribusi empiris dari sampel tersebut dihitung untuk memperkirakan distribusi probabilitas dari kerugian agregat.</p>
+<p>dimana <span class="math inline">\(I(\cdot)\)</span> adalah fungsi indikator. distribusi empiris <span class="math inline">\(\hat{F}_S(s)\)</span> akan dikonvergen ke <span class="math inline">\({F}_S(s)\)</span>, dikarenakan ukuran sampel <span class="math inline">\(m\rightarrow \infty\)</span></p>
+<p>Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas dan parameter-parameternya, kemudian model-model ini diestimasi menggunakan data yang tersedia dan kualitas kecocokan model dievaluasi menggunakan alat validasi model. Proses ini memberikan cara yang berguna untuk memperkirakan risiko yang terkait dengan kerugian agregat, dan dapat membantu perusahaan atau organisasi dalam merencanakan dan mengelola risiko mereka.</p>
+<p>Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim <span class="math inline">\(N\)</span> dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim <span class="math inline">\(X\)</span> dari data jumlah klaim.</p>
+<p>(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="model-selection-and-estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="menghitung-distribusi-klaim-agregat.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="aggregate-loss-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="simulation-and-resampling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
