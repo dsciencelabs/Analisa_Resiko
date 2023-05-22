@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bab 1 Pengantar Analitika Data Kerugian | Analisis Resiko</title>
+  <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bab 1 Pengantar Analitika Data Kerugian | Analisis Resiko" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bab 1 Pengantar Analitika Data Kerugian | Analisis Resiko" />
+  
+  <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  
+
+<meta name="author" content="Bakti Siregar, M.Sc" />
+
+
+<meta name="date" content="2023-05-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="kata-pengantar.html"/>
+<link rel="next" href="frequency-modeling.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/Logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html"><i class="fa fa-check"></i>Kata Pengantar</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#deskripsi-buku"><i class="fa fa-check"></i>Deskripsi Buku</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#petunjuk-penggunaan"><i class="fa fa-check"></i>Petunjuk Penggunaan</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#manfaat"><i class="fa fa-check"></i>Manfaat</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#mengapa-analisa-resiko"><i class="fa fa-check"></i>Mengapa Analisa Resiko?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#ucapan-terima-kasih"><i class="fa fa-check"></i>Ucapan Terima Kasih</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kontributor"><i class="fa fa-check"></i>Kontributor</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kritik-saran"><i class="fa fa-check"></i>Kritik &amp; Saran</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html"><i class="fa fa-check"></i><b>1</b> Pengantar Analitika Data Kerugian</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#relevansi-analitika-dalam-aktivitas-asuransi"><i class="fa fa-check"></i><b>1.1</b> Relevansi Analitika dalam Aktivitas Asuransi</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#sifat-dan-relevansi-asuransi"><i class="fa fa-check"></i><b>1.1.1</b> Sifat dan Relevansi Asuransi</a></li>
+<li class="chapter" data-level="1.1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#apa-itu-analitika"><i class="fa fa-check"></i><b>1.1.2</b> Apa itu Analitika?</a></li>
+<li class="chapter" data-level="1.1.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#proses-asuransi"><i class="fa fa-check"></i><b>1.1.3</b> Proses Asuransi</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#operasi-perusahaan-asuransi"><i class="fa fa-check"></i><b>1.2</b> Operasi Perusahaan Asuransi</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memulai-asuransi"><i class="fa fa-check"></i><b>1.2.1</b> Memulai Asuransi</a></li>
+<li class="chapter" data-level="1.2.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memperbarui-asuransi"><i class="fa fa-check"></i><b>1.2.2</b> Memperbarui Asuransi</a></li>
+<li class="chapter" data-level="1.2.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#pengelolaan-klaim-dan-produk"><i class="fa fa-check"></i><b>1.2.3</b> Pengelolaan Klaim dan Produk</a></li>
+<li class="chapter" data-level="1.2.4" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#penyisihan-klaim"><i class="fa fa-check"></i><b>1.2.4</b> Penyisihan Klaim</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.2</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.2.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.2.2</b> 2. Policy Limit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.2.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.2.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.2.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.2.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.2.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.2.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
+<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="6" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html"><i class="fa fa-check"></i><b>6</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#metode-rekursif"><i class="fa fa-check"></i><b>6.1</b> metode rekursif</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#contoh"><i class="fa fa-check"></i><b>6.1.1</b> contoh</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#simulasi"><i class="fa fa-check"></i><b>6.2</b> simulasi</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>7</b> Simulation and Resampling</a></li>
+<li class="chapter" data-level="8" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>8</b> Premium Foundations</a></li>
+<li class="chapter" data-level="9" data-path="pengenalan-ratemaking.html"><a href="pengenalan-ratemaking.html"><i class="fa fa-check"></i><b>9</b> 7.1 Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="10" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html"><i class="fa fa-check"></i><b>10</b> 7.2 Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>10.1</b> 7.2.1 Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="10.2" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>10.2</b> 7.2.2 Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>11</b> Risk Classification</a></li>
+<li class="chapter" data-level="12" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>12</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a></li>
+<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
+<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
+<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
+<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
+<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+<li><a href="section.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dsciencelabs/Analisa_Resiko" target="blank">Published with Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analisis Resiko</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pengantar-analitika-data-kerugian" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Bab 1</span> Pengantar Analitika Data Kerugian<a href="pengantar-analitika-data-kerugian.html#pengantar-analitika-data-kerugian" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Preview Bab. Buku ini memperkenalkan pada metode analisis data asuransi. Bagian 1.1 dimulai dengan pembahasan mengapa penggunaan data itu penting dalam industri asuransi. Bagian 1.2 memberikan gambaran umum tentang tujuan analisis data asuransi yang diperkuat dalam studi kasus Bagian 1.3. Secara alami, ada kesenjangan besar antara tujuan umum yang dirangkum dalam gambaran dan aplikasi studi kasus. Kesenjangan ini dibahas melalui metode dan teknik analisis data yang tercakup dalam penjelasan berikutnya.</p>
+<div id="relevansi-analitika-dalam-aktivitas-asuransi" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Relevansi Analitika dalam Aktivitas Asuransi<a href="pengantar-analitika-data-kerugian.html#relevansi-analitika-dalam-aktivitas-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p>yang akan dipelajari dalam bab ini yaitu:</p>
+<ul>
+<li>Meringkas pentingnya asuransi bagi konsumen dan ekonomi</li>
+<li>Menggambarkan analitika</li>
+<li>Mengidentifikasi peristiwa penghasil data yang terkait dengan jangka waktu kontrak asuransi yang umum</li>
+</ul>
+<hr />
+<div id="sifat-dan-relevansi-asuransi" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Sifat dan Relevansi Asuransi<a href="pengantar-analitika-data-kerugian.html#sifat-dan-relevansi-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Buku ini memperkenalkan proses penggunaan data untuk mengambil keputusan dalam konteks asuransi. Buku ini tidak berasumsi bahwa pembaca sudah familiar dengan asuransi, tetapi memperkenalkan konsep-konsep asuransi sesuai kebutuhan. Jika baru mengenal asuransi, mungkin yang paling mudah adalah memikirkan sebuah polis asuransi yang mencakup isi apartemen atau rumah yang dapat di sewa (dikenal sebagai asuransi penyewa) atau isi dan properti dari bangunan yang dimiliki pribadi atau seorang teman (dikenal sebagai asuransi pemilik rumah). Contoh umum lainnya adalah asuransi mobil. Dalam kejadian kecelakaan, polis ini dapat mencakup kerusakan pada kendaraan pribadi, kerusakan pada kendaraan lain dalam kecelakaan tersebut, serta biaya medis bagi mereka yang terluka dalam kecelakaan.</p>
+<p>Salah satu cara untuk memahami sifat asuransi adalah dengan melihat siapa yang membelinya. Asuransi penyewa, pemilik rumah, dan asuransi mobil adalah contoh asuransi personal, karena polis-polis ini diterbitkan untuk individu. Bisnis juga membeli asuransi, seperti perlindungan atas properti mereka, dan ini dikenal sebagai asuransi komersial. Penjualnya, perusahaan asuransi, juga dikenal sebagai penanggung. Bahkan perusahaan asuransi pun membutuhkan asuransi. Hal ini dikenal sebagai reasuransi.</p>
+<p>Cara lain untuk memahami sifat asuransi adalah dengan jenis risiko yang dicakup. Di Amerika Serikat, kebijakan seperti asuransi penyewa dan pemilik rumah dikenal sebagai asuransi properti, sedangkan kebijakan seperti asuransi mobil yang mencakup kerusakan medis pada orang disebut asuransi kecelakaan. Di negara lain, keduanya dikenal sebagai asuransi non-hidup atau umum, untuk membedakannya dari asuransi jiwa.</p>
+<p>Baik asuransi jiwa maupun asuransi non-hidup adalah komponen penting dalam ekonomi dunia. Institut Informasi Asuransi (2016) memperkirakan premi asuransi langsung di dunia untuk tahun 2014 sebesar 2.654.549 juta dolar AS untuk asuransi jiwa dan 2.123.699 juta dolar AS untuk asuransi non-hidup; angka-angka ini dalam jutaan dolar AS. Total tersebut mewakili 6,2% dari produk domestik bruto (PDB) dunia. Dengan kata lain, asuransi jiwa menyumbang 55,5% dari premi asuransi dan 3,4% dari PDB dunia, sedangkan asuransi non-hidup menyumbang 44,5% dari premi asuransi dan 2,8% dari PDB dunia. Baik asuransi jiwa maupun asuransi non-hidup merupakan kegiatan ekonomi penting.</p>
+<p>Asuransi mungkin tidak semenarik industri olahraga, tetapi asuransi memengaruhi kehidupan keuangan banyak orang. Dalam segala ukuran, asuransi merupakan kegiatan ekonomi yang besar. Seperti yang telah disebutkan sebelumnya, secara global, premi asuransi mencakup sekitar 6,2% dari PDB dunia pada tahun 2014 (Institut Informasi Asuransi 2016). Sebagai contoh, premi asuransi menyumbang 18,9% dari PDB di Taiwan (yang tertinggi dalam studi ini) dan mewakili 7,3% dari PDB di Amerika Serikat. Pada tingkat pribadi, hampir setiap orang yang memiliki rumah memiliki asuransi untuk melindungi diri mereka dalam kejadian kebakaran, badai es, atau peristiwa bencana lainnya. Hampir setiap negara mengharuskan asuransi bagi mereka yang mengemudikan mobil. Secara keseluruhan, meskipun tidak terlalu menghibur, asuransi memainkan peran penting dalam perekonomian negara-negara dan kehidupan individu.</p>
+</div>
+<div id="apa-itu-analitika" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Apa itu Analitika?<a href="pengantar-analitika-data-kerugian.html#apa-itu-analitika" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Asuransi merupakan industri yang mengandalkan data. Seperti perusahaan-perusahaan besar dan organisasi lainnya, perusahaan asuransi menggunakan data ketika mencoba untuk menentukan berapa banyak yang harus dibayarkan kepada karyawan, berapa banyak karyawan yang harus dipertahankan, bagaimana cara memasarkan layanan dan produk mereka, bagaimana meramalkan tren keuangan, dan sebagainya. Hal ini mewakili bidang-bidang aktivitas umum yang tidak spesifik hanya untuk industri asuransi. Meskipun setiap industri memiliki nuansa dan kebutuhan data yang berbeda, pengumpulan, analisis, dan penggunaan data merupakan kegiatan yang dibagikan oleh semua, mulai dari raksasa internet hingga bisnis kecil, oleh organisasi publik dan pemerintah, dan tidak spesifik hanya untuk industri asuransi. Anda akan menemukan bahwa metode dan alat pengumpulan dan analisis data yang diperkenalkan dalam teks ini relevan untuk semua industri.</p>
+<p>Dalam industri yang mengandalkan data, analitika merupakan kunci untuk mendapatkan dan mengekstraksi informasi dari data. Namun, apa itu analitika? Pengambilan keputusan bisnis yang didasarkan pada data telah dijelaskan sebagai analitika bisnis, inteligensi bisnis, dan ilmu data. Istilah-istilah ini, antara lain, kadang-kadang digunakan secara bergantian dan kadang-kadang mengacu pada aplikasi yang berbeda. Inteligensi bisnis mungkin fokus pada proses pengumpulan data, sering kali melalui basis data dan gudang data, sedangkan analitika bisnis menggunakan alat dan metode untuk analisis statistik data. Berbeda dengan dua istilah tersebut yang menekankan aplikasi bisnis, istilah ilmu data dapat mencakup aplikasi data yang lebih luas dalam berbagai domain ilmiah. Untuk tujuan kami, kami menggunakan istilah analitika untuk merujuk pada proses penggunaan data dalam pengambilan keputusan. Proses ini melibatkan pengumpulan data, pemahaman konsep dan model ketidakpastian, membuat inferensi umum, dan mengkomunikasikan hasil.</p>
+<p>Ketika memperkenalkan metode data dalam teks ini, kami fokus pada kerugian yang timbul dari, atau terkait dengan, kewajiban dalam kontrak asuransi. Hal ini bisa berupa jumlah kerusakan pada apartemen seseorang dalam perjanjian asuransi penyewa, jumlah yang dibutuhkan untuk mengganti rugi seseorang yang Anda cedera dalam kecelakaan berkendara, dan sejenisnya. Kami menyebut jenis kewajiban ini sebagai klaim asuransi. Dengan fokus ini, kami dapat memperkenalkan dan langsung menggunakan alat dan teknik statistik yang umumnya berlaku.</p>
+</div>
+<div id="proses-asuransi" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Proses Asuransi<a href="pengantar-analitika-data-kerugian.html#proses-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cara lain untuk memahami sifat asuransi adalah melalui durasi kontrak asuransi, yang dikenal sebagai masa berlaku. Teks ini akan berfokus pada kontrak asuransi jangka pendek. Dalam konteks jangka pendek, kontrak asuransi umumnya memberikan perlindungan selama satu tahun atau enam bulan. Sebagian besar kontrak komersial dan personal berlaku selama satu tahun, sehingga itu adalah durasi default kami. Namun, terdapat pengecualian penting seperti kebijakan asuransi mobil di Amerika Serikat yang sering kali berlaku selama enam bulan.</p>
+<p>Sebaliknya, biasanya kita menganggap asuransi jiwa sebagai kontrak jangka panjang di mana durasi default adalah beberapa tahun. Sebagai contoh, jika seseorang berusia 25 tahun membeli polis asuransi jiwa yang memberikan pembayaran saat meninggalnya tertanggung dan orang tersebut tidak meninggal sampai usia 100 tahun, maka kontrak tersebut berlaku selama 75 tahun.</p>
+<p>Terdapat perbedaan penting lainnya antara produk asuransi jiwa dan non-jiwa. Dalam asuransi jiwa, jumlah manfaat sering ditetapkan dalam ketentuan kontrak. Sebaliknya, sebagian besar kontrak non-jiwa memberikan kompensasi atas kerugian tertanggung yang tidak diketahui sebelum terjadinya kecelakaan. (Biasanya terdapat batasan jumlah kompensasi yang ditetapkan.) Dalam kontrak asuransi jiwa yang berlaku selama bertahun-tahun, nilai waktu uang memainkan peran penting. Dalam kontrak non-jiwa, jumlah kompensasi yang acak menjadi prioritas.</p>
+<p>Baik dalam asuransi jiwa maupun asuransi non-jiwa, frekuensi klaim sangat penting. Untuk banyak kontrak asuransi jiwa, peristiwa yang diasuransikan (seperti kematian) hanya terjadi sekali. Sebaliknya, dalam asuransi non-jiwa seperti asuransi mobil, umum bagi individu (terutama pengemudi pria muda) untuk mengalami lebih dari satu kecelakaan dalam setahun. Oleh karena itu, model-model kita perlu mencerminkan pengamatan ini; kami memperkenalkan berbagai model frekuensi yang juga mungkin Anda temui saat mempelajari asuransi jiwa.</p>
+<p>Untuk asuransi jangka pendek, kerangka model probabilistiknya sederhana. Hanya mempertimbangkan model satu periode (panjang periode, misalnya satu tahun, akan ditentukan dalam situasi tersebut).</p>
+<ul>
+<li>Pada awal periode, tertanggung membayar premi yang diketahui kepada perusahaan asuransi sesuai kesepakatan antara kedua belah pihak dalam kontrak.</li>
+<li>Pada akhir periode, perusahaan asuransi mengganti rugi tertanggung atas kerugian (mungkin multivariat) yang acak.</li>
+</ul>
+<p>Kerangka kerja ini akan dikembangkan seiring berjalannya waktu, tetapi yang pertama fokus pada mengintegrasikan kerangka kerja ini dengan kekhawatiran tentang bagaimana data dapat muncul. Dari sudut pandang perusahaan asuransi, kontrak mungkin hanya berlaku selama satu tahun tetapi cenderung diperpanjang. Selain itu, pembayaran yang timbul dari klaim selama setahun dapat meluas jauh melebihi satu tahun. Salah satu cara untuk menggambarkan data yang muncul dari operasional perusahaan asuransi adalah dengan menggunakan pendekatan granular dengan garis waktu. Pendekatan proses memberikan gambaran keseluruhan tentang peristiwa yang terjadi selama masa berlaku kontrak asuransi, dan sifatnya - acak atau direncanakan, peristiwa kerugian (klaim) dan peristiwa perubahan kontrak, dan sebagainya. Dalam pandangan mikro ini, kita dapat memikirkan apa yang terjadi pada suatu kontrak pada berbagai tahap keberadaannya.</p>
+<p>Gambar 1.1 menggambarkan garis waktu dari suatu kontrak asuransi yang khas. Sepanjang masa berlakunya kontrak, perusahaan secara rutin memproses peristiwa seperti pengumpulan premi dan penilaian, yang dijelaskan dalam Bagian 1.2; peristiwa-peristiwa ini ditandai dengan tanda <em>x</em> pada garis waktu. Peristiwa-peristiwa yang tidak teratur dan tak terduga juga terjadi. Sebagai contoh, <span class="math inline">\(t_2\)</span> dan <span class="math inline">\(t_4\)</span> menandai peristiwa klaim asuransi (beberapa kontrak, seperti asuransi jiwa, mungkin hanya memiliki satu klaim). Waktu <span class="math inline">\(t_3\)</span> dan <span class="math inline">\(t_5\)</span> menandai peristiwa ketika pemegang polis ingin mengubah fitur-fitur tertentu dalam kontrak, seperti pilihan klaim dan jumlah perlindungan. Dari perspektif perusahaan, kita bahkan dapat mempertimbangkan inisiasi kontrak (kedatangan, waktu <span class="math inline">\(t_1\)</span>) dan terminasi kontrak (kepergian, waktu <span class="math inline">\(t_6\)</span>) sebagai peristiwa yang tidak pasti. (Sebagai alternatif, untuk beberapa tujuan, Anda dapat mengkondisikan peristiwa-peristiwa ini dan memperlakukannya sebagai pasti.)</p>
+<p>( Gambar 1)</p>
+</div>
+</div>
+<div id="operasi-perusahaan-asuransi" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Operasi Perusahaan Asuransi<a href="pengantar-analitika-data-kerugian.html#operasi-perusahaan-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p>pada bab ini yang akan dipelajari adalah:</p>
+<ul>
+<li>Menggambarkan lima area operasional utama perusahaan asuransi.</li>
+<li>Mengidentifikasi peran data dan peluang analitik dalam setiap area operasional.</li>
+</ul>
+<hr />
+<p>Berdasarkan data asuransi, tujuan akhirnya adalah menggunakan data untuk mengambil keputusan. Kita akan mempelajari lebih lanjut tentang metode analisis dan ekstrapolasi data di bab-bab berikutnya. Untuk memulainya, mari kita pikirkan mengapa kita ingin melakukan analisis. Kita mengambil sudut pandang perusahaan asuransi (bukan orang yang diasuransikan) dan memperkenalkan cara untuk mendapatkan uang, membayarnya, mengelola biaya, dan memastikan bahwa kita memiliki cukup uang untuk memenuhi kewajiban. Penekanannya adalah pada operasi khusus asuransi daripada pada kegiatan bisnis umum seperti periklanan, pemasaran, dan manajemen sumber daya manusia.</p>
+<p>Secara khusus, dalam banyak perusahaan asuransi, umumnya praktik untuk menggabungkan proses asuransi yang terperinci ke dalam unit operasional yang lebih besar; banyak perusahaan menggunakan area fungsional ini untuk memisahkan aktivitas karyawan dan tanggung jawab area tertentu. Aktuaris, analis keuangan lainnya, dan regulator asuransi bekerja dalam unit-unit ini dan menggunakan data untuk kegiatan-kegiatan berikut ini:</p>
+<p><em>1. Memulai Asuransi</em>. Pada tahap ini, perusahaan membuat keputusan untuk menerima atau menolak risiko (tahap underwriting) dan menentukan premi yang sesuai (atau tarif). Analitik asuransi memiliki akar aktuaria dalam pembuatan tarif, di mana para analis berusaha untuk menentukan harga yang tepat untuk risiko yang tepat.</p>
+<p><em>2. Memperbaharui Asuransi</em>. Banyak kontrak, terutama dalam asuransi umum, memiliki durasi yang relatif pendek seperti 6 bulan atau 1 tahun. Meskipun ada harapan implisit bahwa kontrak-kontrak tersebut akan diperbaharui, perusahaan asuransi memiliki kesempatan untuk menolak jaminan dan menyesuaikan premi. Analitik juga digunakan pada tahap perpanjangan polis ini di mana tujuannya adalah untuk mempertahankan pelanggan yang menguntungkan.</p>
+<p><em>3. Manajemen Klaim</em>. Analitik telah lama digunakan dalam (1) mendeteksi dan mencegah penipuan klaim, (2) mengelola biaya klaim, termasuk mengidentifikasi dukungan yang tepat untuk biaya penanganan klaim, serta (3) memahami lapisan kelebihan untuk reasuransi dan retensi.</p>
+<p><em>4. Reserving Kerugian</em>. Alat analitik digunakan untuk memberikan perkiraan yang tepat kepada manajemen mengenai kewajiban di masa depan dan untuk mengkuantifikasi ketidakpastian perkiraan tersebut.</p>
+<p><em>5. Kesolvenan dan Alokasi Modal</em>. Menentukan jumlah modal yang diperlukan dan cara mengalokasikan modal di antara investasi-alternatif juga merupakan kegiatan analitik penting. Perusahaan harus memahami berapa banyak modal yang dibutuhkan agar mereka memiliki aliran kas yang cukup tersedia untuk memenuhi kewajiban mereka pada saat yang diharapkan (kesolvenan). Ini adalah pertanyaan penting yang tidak hanya menyangkut manajer perusahaan tetapi juga pelanggan, pemegang saham perusahaan, otoritas pengawas, serta masyarakat secara umum. Terkait dengan isu berapa banyak modal adalah pertanyaan tentang bagaimana mengalokasikan modal ke proyek keuangan yang berbeda, biasanya untuk memaksimalkan pengembalian investor. Meskipun pertanyaan ini dapat muncul pada beberapa tingkat, perusahaan asuransi umumnya tertarik dengan cara mengalokasikan modal ke berbagai lini bisnis dalam perusahaan dan ke anak perusahaan dari perusahaan induk.</p>
+<p>Meskipun data merupakan komponen penting dari kesolvenan dan alokasi modal, komponen lain termasuk kerangka ekonomi lokal dan global, lingkungan investasi keuangan, dan persyaratan yang sangat spesifik sesuai dengan lingkungan regulasi saat ini, juga penting. Karena latar belakang yang diperlukan untuk mengatasi komponen-komponen ini, kami tidak membahas isu-isu kesolvenan, alokasi modal, dan regulasi dalam teks ini.</p>
+<p>Namun demikian, untuk semua fungsi operasional, kami menekankan bahwa analitik dalam industri asuransi bukanlah latihan yang dapat dilakukan oleh sekelompok kecil analis sendiri. Hal ini membutuhkan perusahaan asuransi untuk melakukan investasi yang signifikan dalam teknologi informasi, pemasaran, underwriting, dan aktuaria. Karena area-area ini merupakan tujuan akhir utama dari analisis data, penjelasan tambahan tentang masing-masing unit operasional diberikan dalam subseksi berikutnya.</p>
+<div id="memulai-asuransi" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Memulai Asuransi<a href="pengantar-analitika-data-kerugian.html#memulai-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Menentukan harga produk asuransi bisa menjadi masalah yang membingungkan. Hal ini berbeda dengan industri lain seperti manufaktur di mana biaya suatu produk (relatif) diketahui dan menjadi acuan untuk menilai harga permintaan pasar. Demikian pula, dalam bidang layanan keuangan lainnya, harga pasar tersedia dan menjadi dasar untuk struktur penetapan harga yang sesuai dengan pasar produk. Namun, untuk banyak jenis asuransi, biaya suatu produk tidak pasti dan harga pasar tidak tersedia. Harapan atas biaya acak adalah tempat yang wajar untuk memulai penetapan harga. (Jika Anda telah mempelajari keuangan, maka Anda akan mengingat bahwa harapan adalah harga optimal untuk perusahaan asuransi yang netral terhadap risiko.) Dalam penetapan harga asuransi, sudah menjadi tradisi untuk memulai dengan biaya yang diharapkan. Perusahaan asuransi kemudian menambahkan margin untuk memperhitungkan tingkat risiko produk, biaya yang dikeluarkan dalam pelayanan produk, dan alokasi keuntungan/surplus perusahaan.</p>
+<p>Penggunaan biaya yang diharapkan sebagai dasar penetapan harga umum terjadi dalam beberapa jenis bisnis asuransi. Ini termasuk asuransi mobil dan asuransi pemilik rumah. Dalam jenis asuransi ini, analitik telah membantu meningkatkan ketepatan perhitungan biaya yang diharapkan dari produk. Ketersediaan internet yang semakin luas bagi konsumen juga mendorong transparansi dalam penetapan harga; di pasar saat ini, konsumen memiliki akses mudah ke kutipan kompetitif dari sejumlah perusahaan asuransi. Perusahaan asuransi berusaha meningkatkan pangsa pasarnya dengan menyempurnakan sistem klasifikasi risiko mereka, sehingga mencapai perkiraan yang lebih baik mengenai harga produk dan memungkinkan strategi underwriting yang selektif (“cream-skimming” adalah istilah yang digunakan ketika perusahaan asuransi hanya mengasuransikan risiko terbaik). Survei (misalnya, Earnix (2013)) menunjukkan bahwa penetapan harga adalah penggunaan analitik yang paling umum di kalangan perusahaan asuransi.</p>
+<p>Underwriting, yaitu proses mengklasifikasikan risiko ke dalam kategori homogen dan mengalokasikan pemegang polis ke dalam kategori-kategori tersebut, merupakan inti dari penetapan tarif. Pemegang polis dalam satu kelas (kategori) memiliki profil risiko yang serupa sehingga dikenakan tarif asuransi yang sama. Ini adalah konsep premi yang adil secara aktuaria; adil untuk mengenakan tarif yang berbeda kepada pemegang polis hanya jika mereka dapat dibedakan berdasarkan faktor risiko yang dapat diidentifikasi. Sebuah artikel awal, Two Studies in Automobile Insurance Ratemaking (Bailey dan LeRoy 1960), memberikan dorongan bagi penerimaan metode analitik dalam industri asuransi. Makalah ini membahas masalah klasifikasi penetapan tarif asuransi mobil. Artikel tersebut menggambarkan contoh asuransi mobil yang memiliki lima kelas penggunaan yang saling berkaitan dengan empat kelas rating prestasi. Pada saat itu, kontribusi premi untuk kelas penggunaan dan rating prestasi ditentukan secara independen satu sama lain. Memikirkan efek interaksi dari variabel klasifikasi yang berbeda merupakan masalah yang lebih rumit.</p>
+<p>Saat risiko pertama kali diperoleh, kewajiban perusahaan asuransi dapat dikelola dengan menerapkan parameter kontrak yang mengubah pembayaran kontrak. Bab 3 menjelaskan modifikasi umum termasuk co-insurance, deduktibel, dan batas atas kebijakan.</p>
+</div>
+<div id="memperbarui-asuransi" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Memperbarui Asuransi<a href="pengantar-analitika-data-kerugian.html#memperbarui-asuransi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Asuransi merupakan jenis layanan keuangan dan, seperti banyak kontrak layanan lainnya, cakupan asuransi sering kali disepakati untuk jangka waktu terbatas di mana komitmen cakupan diselesaikan. Terutama untuk asuransi umum, kebutuhan akan cakupan terus berlanjut, dan oleh karena itu upaya dilakukan untuk mengeluarkan kontrak baru yang memberikan cakupan serupa ketika kontrak yang ada mencapai akhir masa berlakunya. Ini disebut perpanjangan polis. Isu perpanjangan juga dapat muncul dalam asuransi jiwa, misalnya, asuransi jiwa berjangka (sementara). Pada saat yang sama, kontrak lain seperti pensiun dini berakhir pada saat kematian tertanggung, sehingga masalah perpanjangan tidak relevan.</p>
+<p>Dalam ketiadaan pembatasan hukum, saat perpanjangan polis, perusahaan asuransi memiliki kesempatan untuk:</p>
+<ul>
+<li>menerima atau menolak menerbitkan risiko tersebut; dan</li>
+<li>menentukan premi baru, mungkin dengan melakukan klasifikasi ulang terhadap risiko tersebut.</li>
+</ul>
+<p>Klasifikasi risiko dan penilaian saat perpanjangan didasarkan pada dua jenis informasi. Pertama, pada tahap awal, perusahaan asuransi memiliki banyak variabel penilaian yang dapat digunakan untuk pengambilan keputusan. Banyak variabel yang kemungkinan tidak akan berubah, misalnya jenis kelamin, sedangkan yang lain kemungkinan akan berubah, misalnya usia, dan yang lainnya mungkin berubah atau tidak, misalnya skor kredit. Kedua, berbeda dengan tahap awal, saat perpanjangan, perusahaan asuransi memiliki riwayat pengalaman kerugian dari pemegang polis, dan riwayat ini dapat memberikan wawasan tentang pemegang polis yang tidak tersedia dari variabel penilaian. Modifikasi premi berdasarkan riwayat klaim dikenal sebagai penilaian berdasarkan pengalaman, juga kadang-kadang disebut sebagai penilaian berdasarkan prestasi.</p>
+<p>Metode penilaian berdasarkan pengalaman dapat diterapkan secara retrospektif atau prospektif. Dengan metode retrospektif, sebagian premi dikembalikan kepada pemegang polis dalam kejadian pengalaman yang menguntungkan bagi perusahaan asuransi. Premi retrospektif umum dalam perjanjian asuransi jiwa (di mana pemegang polis memperoleh dividen di Amerika Serikat, bonus di Inggris, dan pembagian keuntungan dalam cakupan asuransi jiwa sementara di Israel). Pada umumnya, metode prospektif lebih umum digunakan dalam asuransi umum, di mana pengalaman yang menguntungkan bagi pemegang polis akan dihargai melalui premi perpanjangan yang lebih rendah.</p>
+<p>Riwayat klaim dapat memberikan informasi tentang minat risiko pemegang polis. Sebagai contoh, dalam asuransi personal, umumnya digunakan variabel untuk menunjukkan apakah klaim telah terjadi dalam tiga tahun terakhir atau tidak. Sebagai contoh lain, dalam asuransi komersial seperti asuransi kecelakaan kerja, dapat dilihat frekuensi atau tingkat keparahan klaim rata-rata pemegang polis selama tiga tahun terakhir. Riwayat klaim dapat mengungkapkan informasi yang sebaliknya tersembunyi (bagi perusahaan asuransi) tentang pemegang polis.</p>
+</div>
+<div id="pengelolaan-klaim-dan-produk" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Pengelolaan Klaim dan Produk<a href="pengantar-analitika-data-kerugian.html#pengelolaan-klaim-dan-produk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam beberapa jenis asuransi, proses pembayaran klaim untuk peristiwa yang diasuransikan relatif sederhana. Misalnya, dalam asuransi jiwa, sertifikat kematian sederhana sudah cukup untuk membayarkan jumlah manfaat sesuai dengan kontrak. Namun, dalam bidang asuransi properti dan kecelakaan, prosesnya bisa jauh lebih kompleks. Bayangkan peristiwa yang diasuransikan yang relatif sederhana seperti kecelakaan mobil. Di sini, seringkali diperlukan untuk menentukan pihak yang bertanggung jawab dan kemudian perlu mengevaluasi kerusakan pada semua kendaraan dan orang yang terlibat dalam insiden, baik yang diasuransikan maupun yang tidak diasuransikan. Selain itu, biaya yang dikeluarkan dalam mengevaluasi kerusakan juga harus dinilai, dan sebagainya. Proses menentukan cakupan, tanggung jawab hukum, dan penyelesaian klaim dikenal sebagai penyesuaian klaim.</p>
+<p>Manajer asuransi terkadang menggunakan istilah “kebocoran klaim” untuk merujuk pada dolar yang hilang melalui ketidakefisienan pengelolaan klaim. Ada banyak cara di mana analitik dapat membantu mengelola proses klaim, lihat Gorman dan Swenson (2013). Secara historis, yang paling penting adalah pendeteksian penipuan. Proses penyesuaian klaim melibatkan mengurangi asimetri informasi (klaiman mengetahui apa yang terjadi; perusahaan mengetahui sebagian dari apa yang terjadi). Mengurangi penipuan adalah bagian penting dari proses pengelolaan klaim.</p>
+<p>Deteksi penipuan hanyalah satu aspek dari pengelolaan klaim. Lebih luas lagi, kita dapat mempertimbangkan pengelolaan klaim terdiri dari komponen-komponen berikut:</p>
+<p><em>- Pemilahan klaim.</em> Seperti dalam dunia medis, identifikasi dini dan penanganan yang tepat terhadap klaim dengan biaya tinggi (pasien, dalam dunia medis) dapat menghasilkan penghematan yang dramatis. Misalnya, dalam asuransi kecelakaan kerja, perusahaan asuransi berupaya untuk mengidentifikasi secara dini klaim-klaim yang berisiko mengakibatkan biaya medis tinggi dan periode pembayaran yang lama. Intervensi dini dalam kasus-kasus ini dapat memberikan perusahaan asuransi lebih banyak kendali atas penanganan klaim, perawatan medis, dan biaya secara keseluruhan dengan kembalinya pekerja lebih awal.</p>
+<p><em>- Pengolahan klaim.</em> Tujuannya adalah menggunakan analitik untuk mengidentifikasi situasi rutin yang diperkirakan memiliki pembayaran kecil. Situasi yang lebih kompleks mungkin memerlukan penyesuaian oleh penyelesaian klaim yang berpengalaman dan bantuan hukum untuk menangani klaim dengan potensi pembayaran besar.</p>
+<p><em>- Keputusan penyesuaian.</em> Setelah klaim kompleks diidentifikasi dan ditugaskan kepada penyelesaian klaim, rutinitas yang didorong oleh analitik dapat dibentuk untuk membantu proses pengambilan keputusan berikutnya. Proses tersebut juga dapat membantu penyelesaian klaim dalam mengembangkan cadangan kasus, perkiraan kewajiban finansial perusahaan asuransi di masa depan. Ini adalah masukan penting untuk cadangan kerugian perusahaan asuransi, yang dijelaskan dalam Bagian 1.2.4.</p>
+<p>Selain penggantian kerugian kepada tertanggung, perusahaan asuransi juga perlu memperhatikan sumber lain yang mengalirkan pendapatan, yaitu biaya. Biaya penyesuaian kerugian merupakan bagian dari biaya pengelolaan klaim oleh perusahaan asuransi. Analitik dapat digunakan untuk mengurangi biaya yang terkait langsung dengan penanganan klaim (dialokasikan) serta waktu staf umum untuk mengawasi proses klaim (tidak dialokasikan). Industri asuransi memiliki biaya operasional yang tinggi dibandingkan dengan sektor jasa keuangan lainnya.</p>
+<p>Selain pembayaran klaim, terdapat banyak cara lain di mana perusahaan asuransi menggunakan data untuk mengelola produk mereka. Kami telah membahas kebutuhan analitik dalam penjaminan, yaitu klasifikasi risiko pada tahap akuisisi awal dan tahap perpanjangan. Perusahaan asuransi juga tertarik untuk mengetahui pemegang polis mana yang memilih untuk memperpanjang kontrak mereka dan, seperti halnya dengan produk lainnya, memantau loyalitas pelanggan.</p>
+<p>Analitik juga dapat digunakan untuk mengelola portofolio atau kumpulan risiko yang telah diperoleh oleh perusahaan asuransi. Seperti yang dijelaskan dalam Bab 10, setelah kontrak disepakati dengan tertanggung, perusahaan asuransi masih dapat mengubah kewajibannya bersih dengan melakukan perjanjian reasuransi. Jenis perjanjian ini melibatkan perusahaan reasuransi, yaitu perusahaan asuransi bagi perusahaan asuransi lainnya. Umum bagi perusahaan asuransi untuk membeli asuransi atas portofolio risiko mereka guna mendapatkan perlindungan dari peristiwa yang tidak biasa, sama seperti individu dan perusahaan lainnya.</p>
+</div>
+<div id="penyisihan-klaim" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Penyisihan Klaim<a href="pengantar-analitika-data-kerugian.html#penyisihan-klaim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Fitur penting yang membedakan asuransi dari sektor lain dalam ekonomi adalah waktu pertukaran pertimbangan. Dalam industri manufaktur, pembayaran untuk barang umumnya dilakukan pada saat transaksi. Sebaliknya, dalam asuransi, uang yang diterima dari pelanggan terjadi sebelum manfaat atau layanan diberikan; ini diberikan pada tanggal yang lebih kemudian jika terjadi peristiwa tertanggung. Hal ini mengakibatkan kebutuhan untuk memiliki cadangan kekayaan guna memenuhi kewajiban di masa depan sehubungan dengan kewajiban yang dibuat, dan untuk memperoleh kepercayaan dari tertanggung bahwa perusahaan akan mampu memenuhi komitmennya. Besarannya cadangan kekayaan ini, dan pentingnya memastikan kecukupannya, merupakan perhatian utama bagi industri asuransi.</p>
+<p>Mengalokasikan uang untuk klaim yang belum dibayar dikenal sebagai penyisihan kerugian; di beberapa yurisdiksi, cadangan ini juga dikenal sebagai ketentuan teknis. Seperti yang terlihat pada Gambar 1.1 beberapa kali di mana perusahaan merangkum posisi keuangannya; waktu-waktu ini dikenal sebagai tanggal penilaian. Klaim yang muncul sebelum tanggal penilaian telah dibayarkan, sedang dalam proses pembayaran, atau akan segera dibayarkan; klaim di masa depan setelah tanggal penilaian ini tidak diketahui. Perusahaan harus memperkirakan kewajiban yang belum diselesaikan ini ketika menentukan kekuatan keuangannya. Menentukan dengan tepat penyisihan kerugian penting bagi perusahaan asuransi atas banyak alasan.</p>
+<ol style="list-style-type: decimal">
+<li><p>Penyisihan kerugian merupakan klaim yang diantisipasi yang perusahaan asuransi harus bayarkan kepada pelanggannya. Ketidakcukupan penyisihan dapat mengakibatkan ketidakmampuan untuk memenuhi kewajiban klaim. Sebaliknya, perusahaan asuransi dengan penyisihan berlebihan dapat menunjukkan perkiraan kelebihan cadangan yang konservatif dan dengan demikian menggambarkan posisi keuangan yang lebih lemah daripada yang sebenarnya.</p></li>
+<li><p>Penyisihan memberikan perkiraan untuk biaya asuransi yang belum dibayar yang dapat digunakan untuk penetapan harga kontrak.</p></li>
+<li><p>Penyisihan kerugian ini diperlukan oleh hukum dan peraturan. Masyarakat memiliki kepentingan yang kuat terhadap kekuatan keuangan dan solvabilitas perusahaan asuransi.</p></li>
+<li><p>Selain regulator, pemangku kepentingan lain seperti manajemen perusahaan asuransi, investor, dan pelanggan membuat keputusan yang bergantung pada penyisihan kerugian perusahaan. Sementara regulator dan pelanggan menghargai perkiraan yang konservatif terkait klaim yang belum dibayar, manajer dan investor mencari perkiraan yang lebih objektif untuk mewakili kesehatan keuangan yang sebenarnya dari perusahaan.</p></li>
+</ol>
+<p>Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan antara asuransi jiwa dan asuransi umum (juga dikenal sebagai asuransi harta benda dan kecelakaan, atau asuransi non-jiwa). Dalam asuransi jiwa, tingkat keparahan (besaran kerugian) seringkali bukan sumber ketidakpastian karena pembayaran telah ditentukan dalam kontrak. Tingkat kejadian, yang dipengaruhi oleh kematian tertanggung, menjadi perhatian. Namun, karena waktu yang lama untuk penyelesaian kontrak asuransi jiwa, ketidakpastian nilai waktu uang yang diukur dari penerbitan hingga tanggal pembayaran dapat mendominasi perhatian tingkat kejadian. Sebagai contoh, bagi seorang tertanggung yang membeli kontrak asuransi jiwa pada usia 20 tahun, tidak jarang kontrak masih berlaku setelah 60 tahun, ketika tertanggung merayakan ulang tahun ke-80. Lihat, misalnya, Bowers et al. (1986) atau Dickson, Hardy, dan Waters (2013) untuk pengenalan terhadap penyisihan kerugian dalam asuransi jiwa. Sebaliknya, untuk sebagian besar jenis bisnis asuransi non-jiwa, tingkat keparahan adalah sumber ketidakpastian utama dan durasi kontrak cenderung lebih singkat.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="kata-pengantar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="frequency-modeling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dsciencelabs/Analisa_Resiko/edit/master/chapters/01-Introduction.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Analisa_Resiko.pdf", "Analisa_Resiko.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
