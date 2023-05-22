@@ -1,4 +1,13 @@
-introduction-to-loss-data-analytics
+pengantar-analitika-data-kerugian
+relevansi-analitika-dalam-aktivitas-asuransi
+sifat-dan-relevansi-asuransi
+apa-itu-analitika
+proses-asuransi
+operasi-perusahaan-asuransi
+memulai-asuransi
+memperbarui-asuransi
+pengelolaan-klaim-dan-produk
+penyisihan-klaim
 frequency-modeling
 goodness-of-fit
 modeling-loss-severity
@@ -11,8 +20,26 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
-simulation-and-resampling
+menghitung-distribusi-klaim-agregat
+metode-rekursif
+contoh
+simulasi
+simulasi-dan-pengambilan-sampel-ulang
+dasar-dasar-simulasi
+menghasilkan-pengamatan-seragam-independen
+metode-transformasi-invers
+presisi-simulasi
+imulasi-dan-inferensi-statistik
+bootstrap-dan-resampling
+dasar-dasar-bootstrap
+presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error
+interval-keyakinan
+bootstrap-parametrik
 premium-foundations
+pengenalan-ratemaking
+metode-penentuan-tarif-gabungan
+metode-penghitungan-premi-murni
+metode-rasio-kerugian
 risk-classification
 experience-rating-using-credibility-theory
 insurance-portfolio-management-including-reinsurance
@@ -25,42 +52,3 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
-<<<<<<< HEAD
-pengantar-analitika-data-kerugian
-relevansi-analitika-dalam-aktivitas-asuransi
-sifat-dan-relevansi-asuransi
-apa-itu-analitika
-proses-asuransi
-operasi-perusahaan-asuransi
-memulai-asuransi
-memperbarui-asuransi
-pengelolaan-klaim-dan-produk
-penyisihan-klaim
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-section
-cross-validation
-k-fold-cross-validation
-leave-one-out-cross-validation
-cross-validation-and-bootstrap
-importance-sampling
-policy-deductibles
-policy-limit
-policy-deductible-and-policy-limit
-coinsurance-and-inflation
-reinsurance
-coinsurance-and-reinsurance
-=======
->>>>>>> 05f40d9e245bcaa540c3b262fbabb3f1f50ab66e
-menghitung-distribusi-klaim-agregat
-metode-rekursif
-contoh
-simulasi
-pengenalan-ratemaking
-metode-penentuan-tarif-gabungan
-metode-penghitungan-premi-murni
-metode-rasio-kerugian
-=======
->>>>>>> 50b7c26d8206e557155a37d009c99c495afc7703
->>>>>>> bb80aca0a77011cc7fe310969bc18247c580a6fb
