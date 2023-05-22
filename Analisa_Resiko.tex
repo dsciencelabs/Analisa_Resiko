@@ -211,6 +211,12 @@ Berikut ini dilampirkan beberapa peninjau atau pembaca yang telah memberikan sar
   mahasiswa 6
 \end{itemize}
 
+<<<<<<< HEAD
+\hypertarget{introduction-to-loss-data-analytics}{%
+\chapter{Introduction to Loss Data Analytics}\label{introduction-to-loss-data-analytics}}
+
+Chapter Preview. This book introduces readers to methods of analyzing insurance data. Section 1.1 begins with a discussion of why the use of data is important in the insurance industry. Section 1.2 gives a general overview of the purposes of analyzing insurance data which is reinforced in the Section 1.3 case study. Naturally, there is a huge gap between the broad goals summarized in the overview and a case study application; this gap is covered through the methods and techniques of data analysis covered in the rest of the text.
+=======
 \hypertarget{pengantar-analitika-data-kerugian}{%
 \chapter{Pengantar Analitika Data Kerugian}\label{pengantar-analitika-data-kerugian}}
 
@@ -392,6 +398,7 @@ Mengalokasikan uang untuk klaim yang belum dibayar dikenal sebagai penyisihan ke
 \end{enumerate}
 
 Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan antara asuransi jiwa dan asuransi umum (juga dikenal sebagai asuransi harta benda dan kecelakaan, atau asuransi non-jiwa). Dalam asuransi jiwa, tingkat keparahan (besaran kerugian) seringkali bukan sumber ketidakpastian karena pembayaran telah ditentukan dalam kontrak. Tingkat kejadian, yang dipengaruhi oleh kematian tertanggung, menjadi perhatian. Namun, karena waktu yang lama untuk penyelesaian kontrak asuransi jiwa, ketidakpastian nilai waktu uang yang diukur dari penerbitan hingga tanggal pembayaran dapat mendominasi perhatian tingkat kejadian. Sebagai contoh, bagi seorang tertanggung yang membeli kontrak asuransi jiwa pada usia 20 tahun, tidak jarang kontrak masih berlaku setelah 60 tahun, ketika tertanggung merayakan ulang tahun ke-80. Lihat, misalnya, Bowers et al.~(1986) atau Dickson, Hardy, dan Waters (2013) untuk pengenalan terhadap penyisihan kerugian dalam asuransi jiwa. Sebaliknya, untuk sebagian besar jenis bisnis asuransi non-jiwa, tingkat keparahan adalah sumber ketidakpastian utama dan durasi kontrak cenderung lebih singkat.
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 \hypertarget{frequency-modeling}{%
 \chapter{Frequency Modeling}\label{frequency-modeling}}
@@ -402,9 +409,12 @@ Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan anta
 \hypertarget{modeling-loss-severity}{%
 \chapter{Modeling Loss Severity}\label{modeling-loss-severity}}
 
+<<<<<<< HEAD
+=======
 \hypertarget{basic-distributional-quantities}{%
 \section{Basic Distributional Quantities}\label{basic-distributional-quantities}}
 
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 \hypertarget{modifikasi-pertanggungan}{%
 \section{modifikasi pertanggungan}\label{modifikasi-pertanggungan}}
 
@@ -438,22 +448,38 @@ b. pembayaran per pembayaran
 
 pada variabel perbayaran per kerugian, dinotasikan sebagai \(Y^L\) atau \((X-d)_+\) atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
 
+<<<<<<< HEAD
+\[
+=======
 \begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left( X - d \right)_{+} 
 = \left\{ \begin{array}{cc}
 0 & X \le d, \\
 X - d & X > d  
 \end{array} \right. .
+<<<<<<< HEAD
+\]
+
+disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
+
+\[
+=======
 \end{align*}
 
 disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
 
 \begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{P} = \left\{ \begin{matrix}
 \text{Undefined} & X \le d \\
 X - d & X > d .
 \end{matrix}  \right.
+<<<<<<< HEAD
+\]
+=======
 \end{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 disini \(Y^P\) disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari \(d\) tidak dilaporkan dan nilai dari \(d\) berubah sebesar \(d\)
 
@@ -467,12 +493,20 @@ policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh
 sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis.
 dimana biaya kerugian pemegang polis dinotasikan sebagai \(X\) dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai \(Y\), dan variabel policy limit dinotasikan sebagai \(X \land u\). atau disebut sebagai right censored variable dikarenakan nilai dari \(u\) di set sama dengan \(u\). maka variabel \(Y\) didefinisikan sebagai
 
+<<<<<<< HEAD
+\[
+=======
 \begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y = X \land u = \left\{ \begin{matrix}
 X & X \leq u \\
 u & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
+\]
+=======
 \end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 pada batas polis, perbedaan antara \(Y^L\) dan \(Y^P\) tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
 
@@ -480,13 +514,21 @@ dengan \((X-u)\) dan \((X \land u)\) maka expektasi dari pembayaran terjadi tanp
 
 jika kerugian merupakan subjek dari deductible \(d\) dan limit \(u\), maka didefinisikan sebagai
 
+<<<<<<< HEAD
+\[
+=======
 \begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d \\
 X - d  & d <  X \leq u \\
  u - d  & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
+\]
+=======
 \end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 maka, \(Y^L\) dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land u)\).
 
@@ -511,13 +553,21 @@ pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis samp
 
 setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau \(Y^L\) didefinisikan sebagai:
 
+<<<<<<< HEAD
+\[
+=======
 \begin{align*}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d, \\
 \alpha\left( X - d \right) & d <  X \leq u, \\
 \alpha\left( u - d \right) & X > u. \\
 \end{matrix} \right.\
+<<<<<<< HEAD
+\]
+=======
 \end{align*}\textbackslash end\{align*\}
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 
 jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah \(\alpha (u-d)\), dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible \(d\) dan limit \(u\) untuk variabel per kerugian atau \(Y^L\), maka dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land d)\), maka pada koasuransi \(Y^L\) dapat dinyatakan sebagai\(Y^L=\alpha[(X\land u)-(X\land d)]\).
 

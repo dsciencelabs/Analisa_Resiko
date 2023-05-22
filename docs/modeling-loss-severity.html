@@ -194,20 +194,20 @@
 a. pembayaran per kerugian
 b. pembayaran per pembayaran</p>
 <p>pada variabel perbayaran per kerugian, dinotasikan sebagai <span class="math inline">\(Y^L\)</span> atau <span class="math inline">\((X-d)_+\)</span> atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
 Y^{L} = \left( X - d \right)_{+}
-= \left\{ \begin{array}{cc}
+= \left\{ \[{cc}
 0 &amp; X \le d, \\
 X - d &amp; X &gt; d  
-\end{array} \right. .
-\end{align*}\]</span></p>
+\]</span> . .
+]</p>
 <p>disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai <span class="math inline">\(Y^P\)</span> didefinisikan ketika hanya terjadinya pembayaran, terutama <span class="math inline">\(Y^P\)</span> sama dengan <span class="math inline">\(X-d\)</span> dengan syarat <span class="math inline">\([X&gt;d]\)</span>, atau dinotasikan sebagai <span class="math inline">\(Y^P=X-d||X&gt;d\)</span> atau dituliskan sebagai</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
 Y^{P} = \left\{ \begin{matrix}
 \text{Undefined} &amp; X \le d \\
 X - d &amp; X &gt; d .
 \end{matrix}  \right.
-\end{align*}\]</span></p>
+\]</span></p>
 <p>disini <span class="math inline">\(Y^P\)</span> disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari <span class="math inline">\(d\)</span> tidak dilaporkan dan nilai dari <span class="math inline">\(d\)</span> berubah sebesar <span class="math inline">\(d\)</span></p>
 <p>ketika nilai distribusi dari nilai kerugian bersifat kontinu, namun distribusi dari <span class="math inline">\(Y^L\)</span> adalah gabungan kombinasi dari komponen nilai diskrit dan kontinu. bagian diskrit terletak pada <span class="math inline">\(Y=0\)</span> atau saat <span class="math inline">\((X \leq d)\)</span> dan komponen nilai kontinu terletak pada interval <span class="math inline">\(Y&gt;0\)</span> atau saat <span class="math inline">\(X&gt;d\)</span></p>
 </div>
@@ -216,22 +216,22 @@ X - d &amp; X &gt; d .
 <p>policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh perusahaan asuransi untuk pertanggungan tertentu berdasarkan polis asuransinya. sehingga kerugian yang ditanggung dinotasikan sebagai <span class="math inline">\(X\)</span>, dan batas pertanggunannya atau batas polisnya dinotasikan sebagai <span class="math inline">\(u\)</span>, jika kerugian melebihi batas polis <span class="math inline">\(X-u\)</span> harus dibayar oleh pemegang polis sendiri. batas polis yang lebih tinggi berarti premi yang dibayar oleh pemegang polis semakin besar.</p>
 <p>sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis.
 dimana biaya kerugian pemegang polis dinotasikan sebagai <span class="math inline">\(X\)</span> dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai <span class="math inline">\(Y\)</span>, dan variabel policy limit dinotasikan sebagai <span class="math inline">\(X \land u\)</span>. atau disebut sebagai right censored variable dikarenakan nilai dari <span class="math inline">\(u\)</span> di set sama dengan <span class="math inline">\(u\)</span>. maka variabel <span class="math inline">\(Y\)</span> didefinisikan sebagai</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
 Y = X \land u = \left\{ \begin{matrix}
 X &amp; X \leq u \\
 u &amp; X &gt; u. \\
 \end{matrix} \right.\
-\end{align*}\]</span>\end{align*}</p>
+\]</span></p>
 <p>pada batas polis, perbedaan antara <span class="math inline">\(Y^L\)</span> dan <span class="math inline">\(Y^P\)</span> tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.</p>
 <p>dengan <span class="math inline">\((X-u)\)</span> dan <span class="math inline">\((X \land u)\)</span> maka expektasi dari pembayaran terjadi tanpa modifikasi pertangguangan <span class="math inline">\(X\)</span>. jumlah ekspektasi pembayaran dari deductible <span class="math inline">\(u\)</span> dan limit <span class="math inline">\(u\)</span> maka, <span class="math inline">\(X=(X-u)_++(X\land u)\)</span></p>
 <p>jika kerugian merupakan subjek dari deductible <span class="math inline">\(d\)</span> dan limit <span class="math inline">\(u\)</span>, maka didefinisikan sebagai</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
 Y^{L} = \left\{ \begin{matrix}
 0 &amp; X \leq d \\
 X - d  &amp; d &lt;  X \leq u \\
 u - d  &amp; X &gt; u. \\
 \end{matrix} \right.\
-\end{align*}\]</span>\end{align*}</p>
+\]</span></p>
 <p>maka, <span class="math inline">\(Y^L\)</span> dapat dinyatakan sebagai <span class="math inline">\(Y^L=(X\land u)-(X\land u)\)</span>.</p>
 </div>
 <div id="policy-deductible-and-policy-limit" class="section level3 hasAnchor" number="3.2.3">
@@ -248,13 +248,13 @@ semakin besar nilai limit maka besar premi yang dibayarkan oleh pemegang polis s
 <p>coinsurance atau koasuransi adalah jenis pengaturan asuransi di mana dua atau lebih perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Dalam pengaturan koasuransi, setiap perusahaan asuransi mengasumsikan sebagian risiko yang terkait dengan polis dan bertanggung jawab untuk membayar bagian proporsional dari setiap klaim yang muncul. Coinsurance sering digunakan pada asuransi properti dan asuransi kecelakaan, di mana besarnya risiko dapat melebihi kapasitas penanggung tunggal untuk menanggungnya.</p>
 <p>pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis sampai dengan nilai dari deductible <span class="math inline">\(d\)</span>. kerugian yang dapat ditanggung juga dapat berupa presentase dari klaim. presentase <span class="math inline">\(\alpha\)</span> sering disebut sebagai faktor koasuransi. jika polis merupakan subjek dari deductible dan limit polis, maka koasuransi mengacu pada presentase klaim yang harus ditanggung oleh perusahaan asuransi.</p>
 <p>setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau <span class="math inline">\(Y^L\)</span> didefinisikan sebagai:</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
 Y^{L} = \left\{ \begin{matrix}
 0 &amp; X \leq d, \\
 \alpha\left( X - d \right) &amp; d &lt;  X \leq u, \\
 \alpha\left( u - d \right) &amp; X &gt; u. \\
 \end{matrix} \right.\
-\end{align*}\]</span>\end{align*}</p>
+\]</span></p>
 <p>jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah <span class="math inline">\(\alpha (u-d)\)</span>, dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible <span class="math inline">\(d\)</span> dan limit <span class="math inline">\(u\)</span> untuk variabel per kerugian atau <span class="math inline">\(Y^L\)</span>, maka dapat dinyatakan sebagai <span class="math inline">\(Y^L=(X\land u)-(X\land d)\)</span>, maka pada koasuransi <span class="math inline">\(Y^L\)</span> dapat dinyatakan sebagai<span class="math inline">\(Y^L=\alpha[(X\land u)-(X\land d)]\)</span>.</p>
 </div>
 <div id="reinsurance" class="section level3 hasAnchor" number="3.2.5">

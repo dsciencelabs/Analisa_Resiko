@@ -27,6 +27,11 @@ contoh
 simulasi
 simulation-and-resampling
 premium-foundations
+<<<<<<< HEAD
+pengenalan-ratemaking
+metode-penentuan-tarif-gabungan
+=======
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
 risk-classification
@@ -41,6 +46,8 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
+=======
 introduction
 yosia
 moments-and-distribution
@@ -53,4 +60,8 @@ analytic-results
 example
 tweedie-distribution
 metode-penentuan-tarif-gabungan
+<<<<<<< HEAD
 pengenalan-ratemaking
+=======
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 857fa390d39bdd446cf0cc9881f0f9c1d53d5d9b
