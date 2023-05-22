@@ -22,6 +22,7 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
 section
 cross-validation
 k-fold-cross-validation
@@ -34,3 +35,5 @@ policy-deductible-and-policy-limit
 coinsurance-and-inflation
 reinsurance
 coinsurance-and-reinsurance
+=======
+>>>>>>> 05f40d9e245bcaa540c3b262fbabb3f1f50ab66e
