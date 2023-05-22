@@ -1,1 +1,183 @@
 # Premium Foundations
+# 7.1 Pengenalan Ratemaking
+
+Pada bagian ini, Anda akan belajar cara:
+
+Menggambarkan ekspektasi sebagai metode dasar untuk menentukan premi asuransi
+Menganalisis persamaan akuntansi untuk menghubungkan premi dengan kerugian, biaya, dan keuntungan
+Merangkum strategi untuk memperluas penetapan harga untuk mencakup risiko heterogen dan tren dari waktu ke waktu.
+
+Bab ini menjelaskan bagaimana menentukan harga yang tepat untuk produk asuransi, yang dikenal sebagai premi. Premi adalah jumlah uang yang dibebankan untuk perlindungan asuransi terhadap kejadian yang tidak pasti. Dalam asuransi, harga/premi ini dikenal sebagai tarif karena dinyatakan dalam unit standar, misalnya harga per seribu dolar pertanggungan atas rumah atau manfaat jika terjadi kematian.
+
+Namun, keunikan asuransi adalah bahwa biaya perlindungan asuransi tidak diketahui pada saat penjualan kontrak. Biaya mungkin tidak terungkap selama berbulan-bulan atau bertahun-tahun, tergantung pada kejadian yang diasuransikan. Oleh karena itu, penetapan harga asuransi berbeda dengan pendekatan ekonomi pada umumnya.
+
+Dalam pendekatan penetapan harga aktuaria tradisional, harga ditentukan sebagai fungsi dari biaya asuransi. Premi dianggap sebagai sumber pendapatan yang menyediakan pembayaran klaim, biaya kontrak, dan margin operasi, yang dapat dirumuskan dalam persamaan akuntansi:
+
+\begin{equation}
+\small{
+\text{Premium = Loss + Expense + UW Profit} .
+}
+\end{equation}
+
+Namun, ada pasar asuransi di mana harga aktuaria hanya memberikan masukan untuk harga pasar umum. Untuk memperkuat perbedaan ini, premi berbasis biaya aktuaria kadang-kadang dikenal sebagai harga teknis. Oleh karena itu, keputusan perusahaan seperti penetapan harga harus dievaluasi dengan mengacu pada dampaknya terhadap nilai pasar perusahaan. Tujuan ini lebih komprehensif daripada gagasan statis tentang maksimalisasi laba.
+
+Istilah Biaya dapat dibagi menjadi biaya yang bervariasi berdasarkan premi, seperti komisi penjualan, dan yang tidak, seperti biaya bangunan dan gaji karyawan. Istilah Keuntungan UW adalah singkatan dari keuntungan underwriting dan dapat mencakup biaya modal. Persamaan ini berlaku untuk jumlah banyak kontrak, atau portofolio, dan digunakan untuk membantu menetapkan premi, seperti dengan menetapkan tujuan laba.
+
+Istilah kerugian dalam persamaan tersebut didasarkan pada biaya yang diharapkan, karena sulit untuk memprediksi kerugian yang tepat untuk masing-masing kontrak. Namun, teks tersebut mengakui bahwa pendekatan ini mengasumsikan adanya ketidakpastian dan memperkenalkan prinsip-prinsip premi alternatif yang memasukkan ketidakpastian ke dalam penetapan harga. Bab ini juga memperluas pertimbangan penetapan harga ke kumpulan risiko yang heterogen dan membahas perkembangan dan tren pengalaman kerugian untuk mengembangkan tingkat suku bunga ke depan.
+
+Terakhir, bab ini memperkenalkan metode untuk memilih premi dengan membandingkan metode pemeringkatan premi dengan kerugian dari portofolio yang ditahan dan memilih metode yang menghasilkan kecocokan terbaik dengan data yang ditahan. Bab ini juga mencakup suplemen teknis mengenai peraturan pemerintah tentang tarif asuransi.
+
+# 7.2 Metode Penentuan Tarif Gabungan
+Pada bagian ini, Anda akan belajar tentang:
+
+- Definisi pure premium sebagai biaya kerugian serta dalam hal frekuensi dan keparahan.
+- Menghitung tarif yang diindikasikan menggunakan pure premiums, biaya, dan beban keuntungan.
+- Definisi rasio kerugian.
+- Menghitung perubahan tarif yang diindikasikan menggunakan rasio kerugian.
+- Membandingkan metode pure premium dan rasio kerugian untuk menentukan premi.
+
+Dalam kasus ini, diasumsikan terdapat $n$ kontrak asuransi dengan kerugian (losses) $X1,...,Xn$. Kontrak-kontrak tersebut memiliki distribusi kerugian yang sama dan dianggap sebagai portofolio homogen yang terdiri dari kontrak-kontrak yang sama. Hal ini dapat diterapkan pada asuransi pribadi seperti asuransi mobil atau asuransi rumah di mana perusahaan asuransi menulis banyak kontrak pada risiko yang sangat mirip. Selain itu, asumsi tentang distribusi yang identik tidak terlalu membatasi karena dalam bagian selanjutnya akan diperkenalkan variabel paparan yang memungkinkan pengalaman dapat diskalakan agar dapat dibandingkan. Dalam kasus ini, diasumsikan bahwa $X1,...,Xn$ adalah iid (independen dan identik terdistribusi).
+
+## 7.2.1 Metode Penghitungan Premi Murni
+
+Dalam metode ini, diperoleh estimasi kerugian yang diharapkan dengan menghitung rata-rata dari kerugian yang terjadi pada seluruh polis dalam suatu kumpulan (n polis).
+
+\begin{equation}
+\small{
+\mathrm{E}(X) \approx \frac{\sum_{i=1}^n X_i}{n} = \frac{\text{Kerugian}}{\text{Eksposur}} = \text{Premi Murni}.
+}
+\end{equation}
+
+Dalam kasus risiko homogen, di mana semua polis dianggap sama, jumlah polis n dapat digunakan sebagai ukuran eksposur. Namun, pada Bagian 7.4.1, konsep eksposur diperluas ketika polis tidak memiliki karakteristik yang sama.
+
+Untuk mendapatkan premi murni, kita juga dapat menggunakan pendekatan frekuensi-keparahan. Dalam hal ini, premi murni dihitung sebagai hasil kali antara frekuensi klaim dan besar kerugian.
+
+\begin{equation}
+\small{
+\text{Premi Murni} = \frac{\text{jumlah klaim}}{\text{Eksposur}} \times \frac{\text{Kerugian}}{\text{jumlah klaim}} = \text{frekuensi} \times \text{keparahan}.
+}
+\end{equation}
+
+Ketika menggunakan metode premi murni, dapat digunakan baik rata-rata kerugian (biaya kerugian) maupun pendekatan frekuensi-keparahan untuk menentukan premi.
+
+Untuk lebih mendekatkan diri pada aplikasi dalam praktik, sekarang kita kembali ke persamaan (7.1) yang menyertakan biaya. Persamaan (7.1) juga mengacu pada Laba UW untuk laba underwriting. Ketika diskalakan dengan premi, ini dikenal sebagai pembebanan laba. Karena klaim tidak pasti, perusahaan asuransi harus memiliki modal untuk memastikan bahwa semua klaim dibayar. Memegang modal ekstra ini adalah biaya menjalankan bisnis, investor di perusahaan perlu dikompensasi untuk ini, dengan demikian pemuatan ekstra.
+
+Sekarang kita menguraikan Beban menjadi beban yang bervariasi berdasarkan premi, Variabel, beban yang tidak bervariasi,dan Premi Tetap, sehingga Beban = Variabel + Premi Tetap. Dengan menganggap biaya variabel dan laba sebagai bagian dari premi, kita mendefinisikan
+
+\begin{equation}
+\small{
+V =  \frac{\text{Variable}}{\text{Premium}} ~~~ \text{and}~~~
+Q = \frac{\text{UW Profit}}{\text{Premium}} ~.
+}
+\end{equation}
+
+Dengan definisi dan persamaan (7.1) ini, kita dapat menulis
+
+\begin{equation}
+\small{
+\begin{matrix}
+\begin{array}{ll}
+\text{Premium} &= \text{Losses + Fixed} + \text{Premium} \times \frac{\text{Variable + UW Profit}}{\text{Premium}}  \\
+& = \text{Losses + Fixed} + \text{Premium} \times (V+Q) .
+\end{array}
+\end{matrix}
+}
+\end{equation}
+
+Penyelesaian untuk hasil premi
+
+\begin{equation}
+\small{
+\text{Premium} = \frac{\text{Losses + Fixed}}{1-V-Q} .
+}
+\end{equation}
+
+Dibagi dengan eksposur, tarif dapat dihitung sebagai
+
+\begin{equation}
+\begin{matrix}
+\begin{array}{ll}
+\text{Rate} &= \frac{\text{Premium}}{\text{Exposure}} = \frac{\text{Losses/Exposure + Fixed/Exposure}}{1-V-Q} \\
+&=   \frac{\text{Pure Premium + Fixed/Exposure}}{1-V-Q} ~.
+\end{array}
+\end{matrix}
+\end{equation}
+
+Dengan kata lain, ini adalah
+
+\begin{equation}
+\small{
+\text{Rate} =\frac{\text{pure premium + fixed expense per exposure}}{\text{1 - variable expense factor - profit and contingencies factor}}  .
+}
+\end{equation}
+
+## 7.2.2 Metode Rasio Kerugian
+
+Rasio kerugian adalah rasio jumlah kerugian terhadap premi
+
+\begin{equation}
+\small{
+\text{Loss Ratio} = \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}
+
+Ketika menentukan premi, agak berlawanan dengan intuisi untuk menekankan rasio ini karena komponen premi dimasukkan ke dalam penyebut. Seperti yang akan kita lihat, metode rasio kerugian mengembangkan perubahan tingkat daripada tingkat; kita dapat menggunakan perubahan tingkat untuk memperbarui pengalaman masa lalu untuk mendapatkan tingkat saat ini. Untuk melakukan hal ini, perubahan tingkat terdiri dari rasio rasio kerugian pengalaman terhadap rasio kerugian target. Faktor penyesuaian ini kemudian diterapkan pada rate saat ini untuk mendapatkan rate yang baru.
+
+Untuk melihat cara kerjanya dalam konteks yang sederhana, mari kita kembali ke persamaan (7.1) tetapi sekarang abaikan biaya untuk mendapatkan $ Premi = Kerugian + Keuntungan UW $. Membagi dengan premi menghasilkan
+
+\begin{equation}
+\small{
+\frac{\text{UW Profit}}{\text{Premium}} = 1 - LR = 1 - \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}
+
+Misalkan kita memiliki pemuatan laba "target" baru, katakanlah $Q_{target}$ . Dengan asumsi bahwa kerugian, eksposur, dan hal-hal lain mengenai kontrak tetap sama, maka untuk mencapai target pemuatan laba yang baru, kita akan menyesuaikan premi. Gunakan ICF untuk faktor perubahan yang ditunjukkan yang didefinisikan melalui ekspresi
+
+\begin{equation}
+\small{
+\frac{\text{New UW Profit}}{\text{Premium}} = Q_{target} =  1 - \frac{\text{Loss}}{ICF \times \text{Premium}}.
+}
+\end{equation}
+
+Menyelesaikan untuk $ICF$, kita mendapatkan
+
+}\begin{equation}
+\small{
+ICF =  \frac{\text{Loss}}{\text{Premium} \times (1-Q_{target})} = \frac{LR}{1-Q_{target}}.
+}
+\end{equation}
+
+Jadi, sebagai contoh, jika kita memiliki rasio kerugian saat ini = 85% dan target keuntungan $Q_{target} = 0,20$, maka $ICF = 0,85/0,80 = 1,0625$, yang berarti kita meningkatkan premi sebesar 6,25%.
+
+Sekarang mari kita lihat bagaimana hal ini bekerja dengan biaya dalam persamaan (7.1). Kita dapat menggunakan pengembangan yang sama seperti pada Bagian 7.2.1 dan mulai dengan persamaan (7.2), selesaikan pembebanan laba untuk mendapatkan
+
+\begin{equation}
+\small{
+Q = 1 - \frac{\text{Loss+Fixed}}{\text{Premium}} - V .
+}
+\end{equation}
+
+Kita menginterpretasikan kuantitas $Rugi + Premi Tetap + V$ sebagai "rasio biaya operasional". Sekarang, tetapkan persentase keuntungan Q pada target dan sesuaikan premi melalui "faktor perubahan yang ditunjukkan" $ ICF
+
+\begin{equation}
+\small{
+Q_{target} = 1
+-\frac{\text{Loss + Fixed}}{\text{Premium}\times ICF} - V .
+}
+\end{equation}
+
+Menyelesaikan untuk hasil $ ICF$
+
+\begin{equation}
+{\small
+\begin{array}{ll}
+ICF &= \frac{\text{Loss + Fixed}}{\text{Premium} \times (1 - V - Q_{target})} \\
+&= \frac{\text{Loss Ratio + Fixed Expense Ratio}}{1 - V - Q_{target}} .
+\end{array}
+}
+\end{equation}
+
+
+
+(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry
