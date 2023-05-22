@@ -4,7 +4,7 @@
 
 - Bagian 6.2 memperkenalkan resampling dalam konteks bootstrap untuk menentukan ketepatan estimator. Resampling merupakan proses simulasi untuk menggambar dari distribusi empiris.
 
-## (6.1) Dasar-Dasar Simulasi
+## Dasar-Dasar Simulasi
 
 1. Menghasilkan sekitar realisasi independen yang terdistribusi secara merata
 
@@ -13,7 +13,7 @@
 3. Hitung jumlah bunga dan tentukan ketepatan jumlah yang dihitung
 
 
-### (6.1.1) Menghasilkan Pengamatan Seragam Independen
+### Menghasilkan Pengamatan Seragam Independen
 
 `Generator Kongruensi Linier.` 
 
@@ -39,7 +39,7 @@ U <- runif(3)
 knitr::kable(U, digits=5, align = "c", col.names = "Uniform")
 ```
 
-### (6.1.2) Metode Transformasi Invers
+### Metode Transformasi Invers
 
 Metode transformasi invers digunakan untuk membangkitkan data acak dari distribusi peluang kontinu yang diketahui bentuk fungsinya.
 
@@ -348,7 +348,7 @@ Tabel berikut merupakan rangkuman dari empat pilihan $h(\cdot)$ Dan $f(\cdot)$) 
 knitr::include_graphics("images/6.1.3-3.png")
 ```
 
-### (6.1.4) imulasi dan Inferensi Statistik
+### Simulasi dan Inferensi Statistik
 
 Simulasi tidak hanya membantu dalam memperkirakan nilai yang diharapkan tetapi juga berguna dalam menghitung aspek lain dari fungsi distribusi. Secara khusus, ini sangat berguna ketika distribusi statistik uji terlalu rumit untuk diturunkan. Dalam hal ini, seseorang dapat menggunakan simulasi untuk memperkirakan distribusi referensi.
 
@@ -423,7 +423,7 @@ Meskipun hanya perkiraan, pendekatan simulasi bekerja dalam berbagai distribusi 
 
 3. Dari sampel statistik pada Langkah 2, $\{\hat{\theta}^1, \ldots,\hat{\theta}^R\}$, hitung ukuran ringkasan minat, seperti p-value.
 
-## (6.2) Bootstrap dan Resampling
+## Bootstrap dan Resampling
 
 Subbab ini akan mempelajari :
 
@@ -433,7 +433,7 @@ Subbab ini akan mempelajari :
 
 3. Lakukan analisis bootstrap untuk distribusi parametrik
 
-### (6.2.1) Dasar-dasar Bootstrap
+### Dasar-dasar Bootstrap
 
 Metode bootstrap adalah metode berbasis resampling data sampel dengan syarat pengembalian pada datanya dalam menyelesaikan statistik ukuran suatu sampel dengan harapan sampel tersebut mewakili data populai sebenarnya, biasanya ukuran resampling diambil secara ribuan kali agar dapat mewakili data populasinya. Algoritma resamplign umum dengan $\{X_1, \ldots, X_n\}$ untuk menunjukkan sampel asli dan $\{X_1^*, \ldots, X_n^*\}$ menunjukkan undian yang disimulasikan.
 
@@ -473,7 +473,7 @@ m <- 8
 bootvalues <- sample(x, size=m, replace=TRUE)
 ```
 
-### (6.2.2) Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error
+### Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error
 
 Berikut adalah rangkuman prosedur bootstrap nonparametrik sebagai berikut:
 
@@ -621,7 +621,7 @@ knitr::include_graphics("images/6.2.2-3.png")
 
 Hasil perbandingan dirangkum dalam gambar diatas menunjukkan bahwa estimator bootstrap mendekati nilai parameter sebenarnya untuk hampir semua ukuran sampel. Bias dari ketiga estimator berkurang dengan meningkatnya ukuran sampel.
 
-### (6.2.3) Interval Keyakinan
+### Interval Keyakinan
 
 Prosedur bootstrap menghasilkan $B$ bentuk ulang dari $\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*$ dari penaksir $\hat{\theta}$ . Dalam Contoh 6.2.1, dapat dilihat bagaimana menggunakan pendekatan normal standar untuk membuat interval kepercayaan untuk parameter yang diinginkan. Namun, mengingat poin utamanya adalah menggunakan bootstrapping untuk menghindari ketergantungan pada asumsi perkiraan normalitas, tidak mengherankan jika tersedia interval kepercayaan alternatif.
 
@@ -721,7 +721,7 @@ knitr::include_graphics("images/6.2.3-2.png")
 
 Tabel di atas menunjukkan kalkulasi serupa untuk tail value-at-risk. Dalam setiap kasus, dapat melihat bahwa deviasi standar bootstrap meningkat seiring dengan peningkatan fraksi. Hal ini karena ada lebih sedikit pengamatan untuk memperkirakan kuantil seiring meningkatnya fraksi, yang menyebabkan ketidaktepatan yang lebih besar. Interval kepercayaan juga menjadi lebih lebar. Menariknya, tampaknya tidak ada pola yang sama dalam estimasi bias tersebut.
 
-### (6.2.4) Bootstrap Parametrik
+### Bootstrap Parametrik
 
 Gagasan dari bootstrap nonparametrik adalah untuk mengambil sampel ulang dengan menggambar variabel independen dari fungsi distribusi kumulatif empiris $F_n$. Sebaliknya, dengan bootstrap parametrik, kami menarik variabel independen dari $F_{\widehat{\theta}}$ di mana distribusi yang mendasarinya diasumsikan dalam keluarga parametrik $\mathcal{F}=\{F_{\theta},\theta\in\Theta\}$ . Biasanya, parameter dari distribusi ini diperkirakan berdasarkan sampel dan dinotasikan sebagai $\hat{\theta}$.
 
