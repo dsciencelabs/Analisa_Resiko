@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bab 7 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko</title>
+  <title>Bab 6 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bab 7 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko" />
+  <meta property="og:title" content="Bab 6 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bab 7 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko" />
+  <meta name="twitter:title" content="Bab 6 SIMULASI DAN PENGAMBILAN SAMPEL ULANG | Analisis Resiko" />
   
   <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="menghitung-distribusi-klaim-agregat.html"/>
+<link rel="prev" href="aggregate-loss-models.html"/>
 <link rel="next" href="premium-foundations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -171,62 +171,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.1</b> modifikasi pertanggungan</a>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.2</b> modifikasi pertanggungan</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.1.1</b> policy deductibles</a></li>
-<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.1.2</b> 2. Policy Limit</a></li>
-<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.1.3</b> policy deductible and policy limit</a></li>
-<li class="chapter" data-level="3.1.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.1.4</b> Coinsurance and inflation</a></li>
-<li class="chapter" data-level="3.1.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.1.5</b> Reinsurance</a></li>
-<li class="chapter" data-level="3.1.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.1.6</b> Coinsurance and Reinsurance</a></li>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.2.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.2.2</b> 2. Policy Limit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.2.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.2.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.2.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.2.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.2.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.2.6</b> Coinsurance and Reinsurance</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
-<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="6" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html"><i class="fa fa-check"></i><b>6</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#metode-rekursif"><i class="fa fa-check"></i><b>6.1</b> metode rekursif</a>
+<li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#yosia"><i class="fa fa-check"></i><b>5.2</b> Yosia</a></li>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.3</b> Moments and Distribution</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#contoh"><i class="fa fa-check"></i><b>6.1.1</b> contoh</a></li>
+<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.3.1</b> 5.3.2 Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.3.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
+<li class="chapter" data-level="5.3.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.3.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.3.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.3.4</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.3.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.3.5</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html#simulasi"><i class="fa fa-check"></i><b>6.2</b> simulasi</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html"><i class="fa fa-check"></i><b>7</b> SIMULASI DAN PENGAMBILAN SAMPEL ULANG</a>
+<li class="chapter" data-level="5.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.4</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>7.1</b> (6.1) Dasar-Dasar Simulasi</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>7.1.1</b> (6.1.1) Menghasilkan Pengamatan Seragam Independen</a></li>
-<li class="chapter" data-level="7.1.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>7.1.2</b> (6.1.2) Metode Transformasi Invers</a></li>
-<li class="chapter" data-level="7.1.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-simulasi"><i class="fa fa-check"></i><b>7.1.3</b> (6.1.3) Presisi Simulasi</a></li>
-<li class="chapter" data-level="7.1.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#imulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>7.1.4</b> (6.1.4) imulasi dan Inferensi Statistik</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>7.2</b> (6.2) Bootstrap dan Resampling</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>7.2.1</b> (6.2.1) Dasar-dasar Bootstrap</a></li>
-<li class="chapter" data-level="7.2.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>7.2.2</b> (6.2.2) Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
-<li class="chapter" data-level="7.2.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#interval-keyakinan"><i class="fa fa-check"></i><b>7.2.3</b> (6.2.3) Interval Keyakinan</a></li>
-<li class="chapter" data-level="7.2.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>7.2.4</b> (6.2.4) Bootstrap Parametrik</a></li>
+<li class="chapter" data-level="5.4.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.4.1</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.4.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.4.2</b> simulasi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>8</b> Premium Foundations</a></li>
-<li class="chapter" data-level="9" data-path="pengenalan-ratemaking.html"><a href="pengenalan-ratemaking.html"><i class="fa fa-check"></i><b>9</b> 7.1 Pengenalan Ratemaking</a></li>
-<li class="chapter" data-level="10" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html"><i class="fa fa-check"></i><b>10</b> 7.2 Metode Penentuan Tarif Gabungan</a>
+<li class="chapter" data-level="6" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html"><i class="fa fa-check"></i><b>6</b> SIMULASI DAN PENGAMBILAN SAMPEL ULANG</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>10.1</b> 7.2.1 Metode Penghitungan Premi Murni</a></li>
-<li class="chapter" data-level="10.2" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>10.2</b> 7.2.2 Metode Rasio Kerugian</a></li>
+<li class="chapter" data-level="6.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>6.1</b> Dasar-Dasar Simulasi</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>6.1.1</b> Menghasilkan Pengamatan Seragam Independen</a></li>
+<li class="chapter" data-level="6.1.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>6.1.2</b> Metode Transformasi Invers</a></li>
+<li class="chapter" data-level="6.1.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-simulasi"><i class="fa fa-check"></i><b>6.1.3</b> (6.1.3) Presisi Simulasi</a></li>
+<li class="chapter" data-level="6.1.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#simulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>6.1.4</b> Simulasi dan Inferensi Statistik</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>11</b> Risk Classification</a></li>
-<li class="chapter" data-level="12" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>12</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
-<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
-<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
-<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
-<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+<li class="chapter" data-level="6.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>6.2</b> Bootstrap dan Resampling</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>6.2.1</b> Dasar-dasar Bootstrap</a></li>
+<li class="chapter" data-level="6.2.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>6.2.2</b> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
+<li class="chapter" data-level="6.2.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
+<li class="chapter" data-level="6.2.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="10.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>10.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>10.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="10.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>10.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>10.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>10.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="10.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>10.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
+<li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a></li>
+<li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
+<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
@@ -249,21 +282,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="simulasi-dan-pengambilan-sampel-ulang" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Bab 7</span> SIMULASI DAN PENGAMBILAN SAMPEL ULANG<a href="simulasi-dan-pengambilan-sampel-ulang.html#simulasi-dan-pengambilan-sampel-ulang" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="simulasi-dan-pengambilan-sampel-ulang" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Bab 6</span> SIMULASI DAN PENGAMBILAN SAMPEL ULANG<a href="simulasi-dan-pengambilan-sampel-ulang.html#simulasi-dan-pengambilan-sampel-ulang" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li><p>Bagian 6.1 memperkenalkan simulasi, alat komputasi luar biasa yang sangat berguna dalam pengaturan multivariat yang kompleks.</p></li>
 <li><p>Bagian 6.2 memperkenalkan resampling dalam konteks bootstrap untuk menentukan ketepatan estimator. Resampling merupakan proses simulasi untuk menggambar dari distribusi empiris.</p></li>
 </ul>
-<div id="dasar-dasar-simulasi" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> (6.1) Dasar-Dasar Simulasi<a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dasar-dasar-simulasi" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Dasar-Dasar Simulasi<a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Menghasilkan sekitar realisasi independen yang terdistribusi secara merata</p></li>
 <li><p>Ubah realisasi yang terdistribusi secara seragam menjadi pengamatan dari distribusi probabilitas yang menarik</p></li>
 <li><p>Hitung jumlah bunga dan tentukan ketepatan jumlah yang dihitung</p></li>
 </ol>
-<div id="menghasilkan-pengamatan-seragam-independen" class="section level3 hasAnchor" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> (6.1.1) Menghasilkan Pengamatan Seragam Independen<a href="simulasi-dan-pengambilan-sampel-ulang.html#menghasilkan-pengamatan-seragam-independen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="menghasilkan-pengamatan-seragam-independen" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Menghasilkan Pengamatan Seragam Independen<a href="simulasi-dan-pengambilan-sampel-ulang.html#menghasilkan-pengamatan-seragam-independen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>Generator Kongruensi Linier.</code></p>
 <p>Linear Congruential Generators (LCG) adalah sebuah metode yang membangkitkan bilangan acak yang banyak dipergunakan dalam program komputer. Pada metode ini, dilakukan perulangan pada periode waktu tertentu atau setelah sekian kali pembangkitan.Untuk menghasilkan urutan angka acak, mulailah dengan <span class="math inline">\(B_0\)</span> , nilai awal yang dikenal sebagai ‘seed’ . Nilai ini diperbarui menggunakan hubungan rekursif</p>
 <p><span class="math display">\[B_{n+1} = (a B_n + c)  \text{ modulo }m, ~~ n=0, 1, 2, \ldots .\]</span></p>
@@ -294,8 +327,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="metode-transformasi-invers" class="section level3 hasAnchor" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> (6.1.2) Metode Transformasi Invers<a href="simulasi-dan-pengambilan-sampel-ulang.html#metode-transformasi-invers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="metode-transformasi-invers" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Metode Transformasi Invers<a href="simulasi-dan-pengambilan-sampel-ulang.html#metode-transformasi-invers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Metode transformasi invers digunakan untuk membangkitkan data acak dari distribusi peluang kontinu yang diketahui bentuk fungsinya.</p>
 <p>Dengan urutan bilangan acak seragam, kemudian diubah menjadi distribution of interest (<span class="math inline">\(F\)</span>).</p>
 <p><span class="math display">\[X_i=F^{-1}\left( U_i \right) .\]</span></p>
@@ -397,8 +430,8 @@ X = F^{-1}(U) = \left\{ \begin{array}{cc}
             \end{array} \right.
 \end{aligned}\]</span></p>
 </div>
-<div id="presisi-simulasi" class="section level3 hasAnchor" number="7.1.3">
-<h3><span class="header-section-number">7.1.3</span> (6.1.3) Presisi Simulasi<a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="presisi-simulasi" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> (6.1.3) Presisi Simulasi<a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Setelah mengetahui cara menghasilkan realisasi simulasi independen dari distribusi bunga, maka dapat menyusun distribusi empiris (distribusi empiris mengelompokkan data ke dalam suatu interval, di mana frekuensi data dalam setiap interval dapat digunakan untuk menentukan frekuensi relatifnya) dan memperkirakan distribusi yang diperlukan.</p>
 <p>Banyak dari aplikasi ini dapat direduksi menjadi masalah perkiraan <span class="math inline">\(\mathrm{E~}[h(X)]\)</span> , Di mana <span class="math inline">\(h(\cdot)\)</span> adalah beberapa fungsi yang diketahui. Berdasarkan simulasi R (replikasi), sehingga didapatkan <span class="math inline">\(X_1,\ldots,X_R\)</span>. Dari sampel yang disimulasikan ini, dapat menghitung rata-rata sebagai berikut.</p>
 <p><span class="math display">\[\overline{h}_R=\frac{1}{R}\sum_{i=1}^{R} h(X_i)\]</span></p>
@@ -497,8 +530,8 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 <p>Tabel berikut merupakan rangkuman dari empat pilihan <span class="math inline">\(h(\cdot)\)</span> Dan <span class="math inline">\(f(\cdot)\)</span>) untuk memperkirakan <span class="math inline">\(\Pr[X&gt;2] = 0,14758\)</span>. Kesalahan standar bervariasi. Jadi, jika memiliki tingkat akurasi yang diinginkan, maka jumlah simulasi sangat bergantung pada bagaimana menulis integral yang akan diaproksimasi.</p>
 <p><img src="images/6.1.3-3.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="imulasi-dan-inferensi-statistik" class="section level3 hasAnchor" number="7.1.4">
-<h3><span class="header-section-number">7.1.4</span> (6.1.4) imulasi dan Inferensi Statistik<a href="simulasi-dan-pengambilan-sampel-ulang.html#imulasi-dan-inferensi-statistik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="simulasi-dan-inferensi-statistik" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Simulasi dan Inferensi Statistik<a href="simulasi-dan-pengambilan-sampel-ulang.html#simulasi-dan-inferensi-statistik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Simulasi tidak hanya membantu dalam memperkirakan nilai yang diharapkan tetapi juga berguna dalam menghitung aspek lain dari fungsi distribusi. Secara khusus, ini sangat berguna ketika distribusi statistik uji terlalu rumit untuk diturunkan. Dalam hal ini, seseorang dapat menggunakan simulasi untuk memperkirakan distribusi referensi.</p>
 <p><code>Contoh 6.1.10.</code> Uji Distribusi Kolmogorov-Smirnov.</p>
 <p>Misalkan terdapata <span class="math inline">\(n = 100\)</span> observasi <span class="math inline">\(\{x_1,\cdots,x_n\}\)</span> yang, tidak diketahui oleh analis, dihasilkan dari distribusi gamma dengan parameter <span class="math inline">\(\alpha = 6\)</span> Dan <span class="math inline">\(\theta=2\)</span> . Analis percaya bahwa data berasal dari distribusi lognormal dengan parameter 1 dan 0,4 dan ingin menguji asumsi ini.</p>
@@ -557,16 +590,16 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 </ol>
 </div>
 </div>
-<div id="bootstrap-dan-resampling" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> (6.2) Bootstrap dan Resampling<a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-dan-resampling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bootstrap-dan-resampling" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Bootstrap dan Resampling<a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-dan-resampling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Subbab ini akan mempelajari :</p>
 <ol style="list-style-type: decimal">
 <li><p>Hasilkan distribusi bootstrap nonparametrik untuk statistik minat</p></li>
 <li><p>Gunakan distribusi bootstrap untuk menghasilkan estimasi presisi untuk statistik yang diminati, termasuk bias, standar deviasi, dan interval kepercayaan</p></li>
 <li><p>Lakukan analisis bootstrap untuk distribusi parametrik</p></li>
 </ol>
-<div id="dasar-dasar-bootstrap" class="section level3 hasAnchor" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> (6.2.1) Dasar-dasar Bootstrap<a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-bootstrap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="dasar-dasar-bootstrap" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Dasar-dasar Bootstrap<a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-bootstrap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Metode bootstrap adalah metode berbasis resampling data sampel dengan syarat pengembalian pada datanya dalam menyelesaikan statistik ukuran suatu sampel dengan harapan sampel tersebut mewakili data populai sebenarnya, biasanya ukuran resampling diambil secara ribuan kali agar dapat mewakili data populasinya. Algoritma resamplign umum dengan <span class="math inline">\(\{X_1, \ldots, X_n\}\)</span> untuk menunjukkan sampel asli dan <span class="math inline">\(\{X_1^*, \ldots, X_n^*\}\)</span> menunjukkan undian yang disimulasikan.</p>
 <p>Untuk setiap sampel, <span class="math inline">\(n\)</span> merupakan undian simulasi, jumlah yang sama dengan ukuran sampel asli. Untuk membedakan prosedur ini dari simulasi, biasanya digunakan <span class="math inline">\(B\)</span> (untuk bootstrap) sebagai jumlah sampel yang disimulasikan. Sehingga dapat dituliskan <span class="math inline">\(\{X_1^{(b)}, \ldots, X_n^{(b)}\}\)</span>.</p>
 <p>Ada dua metode resampling dasar, model-free dan model-based , masing-masing sebagai nonparametrik dan parametrik . Pengundian yang disimulasikan berasal dari fungsi distribusi empiris <span class="math inline">\(F_n(\cdot)\)</span> , jadi setiap undian berasal <span class="math inline">\(\{X_1, \ldots, X_n\}\)</span> dengan probabilitas <span class="math inline">\(1/n\)</span>.</p>
@@ -590,8 +623,8 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 <span id="cb23-4"><a href="simulasi-dan-pengambilan-sampel-ulang.html#cb23-4" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb23-5"><a href="simulasi-dan-pengambilan-sampel-ulang.html#cb23-5" aria-hidden="true" tabindex="-1"></a>bootvalues <span class="ot">&lt;-</span> <span class="fu">sample</span>(x, <span class="at">size=</span>m, <span class="at">replace=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
-<div id="presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error" class="section level3 hasAnchor" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> (6.2.2) Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error<a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error<a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut adalah rangkuman prosedur bootstrap nonparametrik sebagai berikut:</p>
 <ol style="list-style-type: decimal">
 <li><p>Dari sampel <span class="math inline">\(\{X_1, \ldots, X_n\}\)</span>, gambar sampel berukuran n (dengan penggantian), katakanlah, <span class="math inline">\(X_1^*, \ldots, X_n^*\)</span> . Dari undian yang disimulasikan, hitung statistik minat, dilambangkan sebagai <span class="math inline">\(\hat{\theta}(X_1^*, \ldots, X_n^*)\)</span> . Panggil ini <span class="math inline">\(\hat{\theta}_b^*\)</span> untuk ulangan ke-b .</p></li>
@@ -684,8 +717,8 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 <p><img src="images/6.2.2-3.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Hasil perbandingan dirangkum dalam gambar diatas menunjukkan bahwa estimator bootstrap mendekati nilai parameter sebenarnya untuk hampir semua ukuran sampel. Bias dari ketiga estimator berkurang dengan meningkatnya ukuran sampel.</p>
 </div>
-<div id="interval-keyakinan" class="section level3 hasAnchor" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> (6.2.3) Interval Keyakinan<a href="simulasi-dan-pengambilan-sampel-ulang.html#interval-keyakinan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="interval-keyakinan" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Interval Keyakinan<a href="simulasi-dan-pengambilan-sampel-ulang.html#interval-keyakinan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Prosedur bootstrap menghasilkan <span class="math inline">\(B\)</span> bentuk ulang dari <span class="math inline">\(\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\)</span> dari penaksir <span class="math inline">\(\hat{\theta}\)</span> . Dalam Contoh 6.2.1, dapat dilihat bagaimana menggunakan pendekatan normal standar untuk membuat interval kepercayaan untuk parameter yang diinginkan. Namun, mengingat poin utamanya adalah menggunakan bootstrapping untuk menghindari ketergantungan pada asumsi perkiraan normalitas, tidak mengherankan jika tersedia interval kepercayaan alternatif.</p>
 <p>Untuk estimator <span class="math inline">\(\hat{\theta}\)</span> , interval kepercayaan bootstrap dasar adalah</p>
 <p><span class="math display">\[\begin{equation}
@@ -758,8 +791,8 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 <p><img src="images/6.2.3-2.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Tabel di atas menunjukkan kalkulasi serupa untuk tail value-at-risk. Dalam setiap kasus, dapat melihat bahwa deviasi standar bootstrap meningkat seiring dengan peningkatan fraksi. Hal ini karena ada lebih sedikit pengamatan untuk memperkirakan kuantil seiring meningkatnya fraksi, yang menyebabkan ketidaktepatan yang lebih besar. Interval kepercayaan juga menjadi lebih lebar. Menariknya, tampaknya tidak ada pola yang sama dalam estimasi bias tersebut.</p>
 </div>
-<div id="bootstrap-parametrik" class="section level3 hasAnchor" number="7.2.4">
-<h3><span class="header-section-number">7.2.4</span> (6.2.4) Bootstrap Parametrik<a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-parametrik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="bootstrap-parametrik" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Bootstrap Parametrik<a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-parametrik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Gagasan dari bootstrap nonparametrik adalah untuk mengambil sampel ulang dengan menggambar variabel independen dari fungsi distribusi kumulatif empiris <span class="math inline">\(F_n\)</span>. Sebaliknya, dengan bootstrap parametrik, kami menarik variabel independen dari <span class="math inline">\(F_{\widehat{\theta}}\)</span> di mana distribusi yang mendasarinya diasumsikan dalam keluarga parametrik <span class="math inline">\(\mathcal{F}=\{F_{\theta},\theta\in\Theta\}\)</span> . Biasanya, parameter dari distribusi ini diperkirakan berdasarkan sampel dan dinotasikan sebagai <span class="math inline">\(\hat{\theta}\)</span>.</p>
 <p><code>contoh 6.2.4.</code> distribusi lognormal. Pertimbangkan lagi kumpulan datanya</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="simulasi-dan-pengambilan-sampel-ulang.html#cb35-1" aria-hidden="true" tabindex="-1"></a>sample_x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.46</span>,<span class="fl">2.80</span>,<span class="fl">3.28</span>,<span class="fl">3.86</span>,<span class="fl">2.85</span>,<span class="fl">3.67</span>,<span class="fl">3.37</span>,<span class="fl">3.40</span>,</span>
@@ -822,7 +855,7 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
           </div>
         </div>
       </div>
-<a href="menghitung-distribusi-klaim-agregat.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aggregate-loss-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="premium-foundations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

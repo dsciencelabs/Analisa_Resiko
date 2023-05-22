@@ -1,4 +1,4 @@
-# SIMULASI DAN PENGAMBILAN SAMPEL ULANG
+# Simulation and Resampling
 
 - Bagian 6.1 memperkenalkan simulasi, alat komputasi luar biasa yang sangat berguna dalam pengaturan multivariat yang kompleks.
 
