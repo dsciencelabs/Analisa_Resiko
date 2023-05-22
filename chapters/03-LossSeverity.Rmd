@@ -1,5 +1,7 @@
 # Modeling Loss Severity
 
+## Basic Distributional Quantities
+
 ## modifikasi pertanggungan
 
 Coverage modifications atau modifikasi pertanggungan adalah perubahan yang dibuat pada syarat dan ketentuan polis asuransi. Perubahan ini dapat diprakarsai oleh pemegang polis atau perusahaan asuransi, dan dirancang untuk mengubah pertanggungan yang diberikan oleh polis.
