@@ -11,6 +11,7 @@ penyisihan-klaim
 frequency-modeling
 goodness-of-fit
 modeling-loss-severity
+basic-distributional-quantities
 modifikasi-pertanggungan
 policy-deductibles
 policy-limit
@@ -20,10 +21,23 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
+<<<<<<< HEAD
+=======
+introduction
+yosia
+actuarial-exam-question
+example-5.3.2.-actuarial-exam-question
+stop-loss-insurance
+actuarial-exam-question---continued
+analytic-results
+example
+tweedie-distribution
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh
 simulasi
+<<<<<<< HEAD
 simulasi-dan-pengambilan-sampel-ulang
 dasar-dasar-simulasi
 menghasilkan-pengamatan-seragam-independen
@@ -37,6 +51,10 @@ interval-keyakinan
 bootstrap-parametrik
 premium-foundations
 pengenalan-ratemaking
+=======
+simulation-and-resampling
+premium-foundations
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
@@ -52,3 +70,21 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
+=======
+moments-and-distribution
+actuarial-exam-question-1
+<<<<<<< HEAD
+=======
+actuarial-exam-question---continued
+analytic-results
+example
+tweedie-distribution
+metode-penentuan-tarif-gabungan
+<<<<<<< HEAD
+pengenalan-ratemaking
+=======
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 857fa390d39bdd446cf0cc9881f0f9c1d53d5d9b
+>>>>>>> ff86535024daa8949d76711e56209bbf2ad81882
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
