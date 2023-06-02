@@ -33,6 +33,46 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -411,10 +451,13 @@ Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan anta
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 \hypertarget{basic-distributional-quantities}{%
 \section{Basic Distributional Quantities}\label{basic-distributional-quantities}}
 
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 \hypertarget{modifikasi-pertanggungan}{%
 \section{modifikasi pertanggungan}\label{modifikasi-pertanggungan}}
 
@@ -449,37 +492,51 @@ b. pembayaran per pembayaran
 pada variabel perbayaran per kerugian, dinotasikan sebagai \(Y^L\) atau \((X-d)_+\) atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
 
 <<<<<<< HEAD
+\begin{align*}
+=======
+<<<<<<< HEAD
 \[
 =======
 \begin{align*}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 Y^{L} = \left( X - d \right)_{+} 
 = \left\{ \begin{array}{cc}
 0 & X \le d, \\
 X - d & X > d  
 \end{array} \right. .
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 \]
 
 disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
 
 \[
 =======
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 \end{align*}
 
 disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
 
 \begin{align*}
+<<<<<<< HEAD
+=======
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 Y^{P} = \left\{ \begin{matrix}
 \text{Undefined} & X \le d \\
 X - d & X > d .
 \end{matrix}  \right.
 <<<<<<< HEAD
+\end{align*}
+=======
+<<<<<<< HEAD
 \]
 =======
 \end{align*}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 
 disini \(Y^P\) disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari \(d\) tidak dilaporkan dan nilai dari \(d\) berubah sebesar \(d\)
 
@@ -494,19 +551,27 @@ sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.0
 dimana biaya kerugian pemegang polis dinotasikan sebagai \(X\) dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai \(Y\), dan variabel policy limit dinotasikan sebagai \(X \land u\). atau disebut sebagai right censored variable dikarenakan nilai dari \(u\) di set sama dengan \(u\). maka variabel \(Y\) didefinisikan sebagai
 
 <<<<<<< HEAD
+\begin{align*}
+=======
+<<<<<<< HEAD
 \[
 =======
 \begin{align*}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 Y = X \land u = \left\{ \begin{matrix}
 X & X \leq u \\
 u & X > u. \\
 \end{matrix} \right.\
 <<<<<<< HEAD
+\end{align*}\textbackslash end\{align*\}
+=======
+<<<<<<< HEAD
 \]
 =======
 \end{align*}\textbackslash end\{align*\}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 
 pada batas polis, perbedaan antara \(Y^L\) dan \(Y^P\) tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
 
@@ -515,20 +580,28 @@ dengan \((X-u)\) dan \((X \land u)\) maka expektasi dari pembayaran terjadi tanp
 jika kerugian merupakan subjek dari deductible \(d\) dan limit \(u\), maka didefinisikan sebagai
 
 <<<<<<< HEAD
+\begin{align*}
+=======
+<<<<<<< HEAD
 \[
 =======
 \begin{align*}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d \\
 X - d  & d <  X \leq u \\
  u - d  & X > u. \\
 \end{matrix} \right.\
 <<<<<<< HEAD
+\end{align*}\textbackslash end\{align*\}
+=======
+<<<<<<< HEAD
 \]
 =======
 \end{align*}\textbackslash end\{align*\}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 
 maka, \(Y^L\) dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land u)\).
 
@@ -554,20 +627,28 @@ pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis samp
 setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau \(Y^L\) didefinisikan sebagai:
 
 <<<<<<< HEAD
+\begin{align*}
+=======
+<<<<<<< HEAD
 \[
 =======
 \begin{align*}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 Y^{L} = \left\{ \begin{matrix}
 0 & X \leq d, \\
 \alpha\left( X - d \right) & d <  X \leq u, \\
 \alpha\left( u - d \right) & X > u. \\
 \end{matrix} \right.\
 <<<<<<< HEAD
+\end{align*}\textbackslash end\{align*\}
+=======
+<<<<<<< HEAD
 \]
 =======
 \end{align*}\textbackslash end\{align*\}
 >>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 
 jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah \(\alpha (u-d)\), dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible \(d\) dan limit \(u\) untuk variabel per kerugian atau \(Y^L\), maka dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land d)\), maka pada koasuransi \(Y^L\) dapat dinyatakan sebagai\(Y^L=\alpha[(X\land u)-(X\land d)]\).
 
@@ -732,8 +813,1085 @@ Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai par
 (edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
 tertanda -Garry
 
+<<<<<<< HEAD
+\hypertarget{simulasi-dan-pengambilan-sampel-ulang}{%
+\chapter{SIMULASI DAN PENGAMBILAN SAMPEL ULANG}\label{simulasi-dan-pengambilan-sampel-ulang}}
+
+\begin{itemize}
+\item
+  Bagian 6.1 memperkenalkan simulasi, alat komputasi luar biasa yang sangat berguna dalam pengaturan multivariat yang kompleks.
+\item
+  Bagian 6.2 memperkenalkan resampling dalam konteks bootstrap untuk menentukan ketepatan estimator. Resampling merupakan proses simulasi untuk menggambar dari distribusi empiris.
+\end{itemize}
+
+\hypertarget{dasar-dasar-simulasi}{%
+\section{(6.1) Dasar-Dasar Simulasi}\label{dasar-dasar-simulasi}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Menghasilkan sekitar realisasi independen yang terdistribusi secara merata
+\item
+  Ubah realisasi yang terdistribusi secara seragam menjadi pengamatan dari distribusi probabilitas yang menarik
+\item
+  Hitung jumlah bunga dan tentukan ketepatan jumlah yang dihitung
+\end{enumerate}
+
+\hypertarget{menghasilkan-pengamatan-seragam-independen}{%
+\subsection{(6.1.1) Menghasilkan Pengamatan Seragam Independen}\label{menghasilkan-pengamatan-seragam-independen}}
+
+\texttt{Generator\ Kongruensi\ Linier.}
+
+Linear Congruential Generators (LCG) adalah sebuah metode yang membangkitkan bilangan acak yang banyak dipergunakan dalam program komputer. Pada metode ini, dilakukan perulangan pada periode waktu tertentu atau setelah sekian kali pembangkitan.Untuk menghasilkan urutan angka acak, mulailah dengan \(B_0\) , nilai awal yang dikenal sebagai `seed' . Nilai ini diperbarui menggunakan hubungan rekursif
+
+\[B_{n+1} = (a B_n + c)  \text{ modulo }m, ~~ n=0, 1, 2, \ldots .\]
+
+Algoritma ini disebut \(a\). Kasus \(c = 0\) disebut generator kongruensial perkalian
+
+Untuk nilai ilustrasi dari \(a\) Dan \$m4 , menggunakan Microsoft Visual Basic \(m=2^{24}\) , \(a = 1 , 140 , 671 , 485\) , Dan \(c = 12 , 820 , 163\). Ini adalah mesin yang mendasari pembuatan angka acak dalam program Microsoft Excel.
+
+Urutan yang digunakan oleh analis didefinisikan sebagai \(U_n=B_n/m.\). Analis dapat menginterpretasikan urutan \(U_{i}\) menjadi (kira-kira) identik dan independen terdistribusi secara seragam pada interval (0,1). Untuk mengilustrasikan algoritme, maka pertimbangkan hal berikut.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/enamsatu} 
+
+}
+
+\end{figure}
+
+\texttt{Contoh\ 6.1.2.} Menghasilkan Nomor Acak Seragam di \emph{R}. Kode berikut menunjukkan cara menghasilkan tiga angka seragam (0,1) dalam R menggunakan perintah \emph{runif}. Fungsi \emph{set.seed()} di R digunakan untuk membuat hasil yang dapat direproduksi saat menulis kode yang melibatkan pembuatan variabel yang mengambil nilai acak.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{U }\OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(U, }\AttributeTok{digits=}\DecValTok{5}\NormalTok{, }\AttributeTok{align =} \StringTok{"c"}\NormalTok{, }\AttributeTok{col.names =} \StringTok{"Uniform"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{tabular}{c}
+\hline
+Uniform\\
+\hline
+0.92424\\
+\hline
+0.53718\\
+\hline
+0.46920\\
+\hline
+\end{tabular}
+
+\hypertarget{metode-transformasi-invers}{%
+\subsection{(6.1.2) Metode Transformasi Invers}\label{metode-transformasi-invers}}
+
+Metode transformasi invers digunakan untuk membangkitkan data acak dari distribusi peluang kontinu yang diketahui bentuk fungsinya.
+
+Dengan urutan bilangan acak seragam, kemudian diubah menjadi distribution of interest (\(F\)).
+
+\[X_i=F^{-1}\left( U_i \right) .\]
+
+\[F^{-1}(y) = \inf_x ~ \{ F(x) \ge y \}\]
+
+\emph{inf} singkatan dari *infimum atau batas bawah terbesar. Ini pada dasarnya adalah nilai \(x\) terkecil yang memenuhi pertidaksamaan \(\{F(x) \ge y\}\). Hasilnya adalah urutan \(X_{i}\) kira-kira iid dengan fungsi distribusi \(F\) jika \(U_{i}\) adalah iid dengan fungsi distribusi seragam ( 0 , 1 ).
+
+\texttt{Contoh\ 6.1.3.} Menghasilkan Bilangan Acak Eksponensial. Misalkan ingin menghasilkan pengamatan dari distribusi eksponensial dengan parameter skala \(θ\) sehingga \(F(x) = 1 - e^{-x/\theta}\). Untuk menghitung transformasi invers, maka dapat menggunakan langkah-langkah berikut:
+
+\[\begin{aligned}
+ y = F(x) &\Leftrightarrow  y = 1-e^{-x/\theta} \\
+  &\Leftrightarrow -\theta \ln(1-y) = x = F^{-1}(y) .
+\end{aligned}\]
+
+Jadi, jika \(U\) memiliki distribusi seragam (0,1), maka \(X = -\theta \ln(1-U)\) memiliki distribusi eksponensial dengan parameter \(θ\).
+
+Seperti pada Contoh 6.1.2 kemudian mengubahnya menjadi variabel acak terdistribusi eksponensial independen dengan rata-rata \(10\). Sebagai alternatif, menggunakan fungsi \emph{rexp} pada R digunakan untuk mensimulasikan sekumpulan bilangan acak yang diambil dari distribusi eksponensial.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{U }\OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\NormalTok{X1 }\OtherTok{\textless{}{-}} \SpecialCharTok{{-}}\DecValTok{10}\SpecialCharTok{*}\FunctionTok{log}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{U)}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{X2 }\OtherTok{\textless{}{-}} \FunctionTok{rexp}\NormalTok{(}\DecValTok{3}\NormalTok{, }\AttributeTok{rate =} \DecValTok{1}\SpecialCharTok{/}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-1} 
+
+}
+
+\end{figure}
+
+\texttt{Contoh\ 6.1.4.} Menghasilkan Angka Acak Pareto. Misalkan ingin menghasilkan pengamatan dari distribusi Pareto dengan parameter \(α\) dan \(θ\) sehingga \(F(x) = 1 - \left(\frac{\theta}{x+\theta} \right)^{\alpha}\). Untuk menghitung transformasi invers, maka dapat menggunakan langkah-langkah berikut:
+
+\[\begin{aligned}
+ y = F(x) &\Leftrightarrow 1-y = \left(\frac{\theta}{x+\theta} \right)^{\alpha} \\
+  &\Leftrightarrow \left(1-y\right)^{-1/\alpha} = \frac{x+\theta}{\theta} = \frac{x}{\theta} +1 \\
+    &\Leftrightarrow \theta \left((1-y)^{-1/\alpha} - 1\right) = x = F^{-1}(y) .\end{aligned}\]
+
+Dengan demikian, \(X = \theta \left((1-U)^{-1/\alpha} - 1\right)\) memiliki distribusi Pareto dengan parameter \(α\) dan \(θ\) .
+
+\texttt{Contoh\ 6.1.5.} Menghasilkan Bilangan Acak Bernoulli. Misalkan ingin mensimulasikan variabel acak dari distribusi Bernoulli dengan parameter \(Q= 0,85\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-2} 
+
+}
+
+\end{figure}
+
+Grafik fungsi distribusi kumulatif pada Gambar diatas menunjukkan bahwa fungsi kuantil dapat ditulis sebagai berikut.
+
+\[\begin{aligned}
+F^{-1}(y) = \left\{ \begin{array}{cc}
+              0 & 0<y \leq 0.85 \\
+              1 & 0.85 < y  \leq  1.0 .
+            \end{array} \right.
+\end{aligned}\]
+
+Jadi, dengan transformasi invers kita dapat mendefinisikan
+
+\[\begin{aligned}
+X = \left\{ \begin{array}{cc}
+              0 & 0<U \leq 0.85  \\
+              1 &  0.85 < U  \leq  1.0
+            \end{array} \right.
+\end{aligned}\]
+
+Misalnya, ingin menghasilkan tiga angka acak untuk diperoleh
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{U }\OtherTok{\textless{}{-}} \FunctionTok{runif}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\NormalTok{X }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{*}\NormalTok{(U }\SpecialCharTok{\textgreater{}} \FloatTok{0.85}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-3} 
+
+}
+
+\end{figure}
+
+\texttt{Contoh\ 6.1.6.} Menghasilkan Angka Acak dari Distribusi Diskrit. Pertimbangkan waktu kegagalan mesin dalam lima tahun pertama. Distribusi waktu kegagalan diberikan sebagai:
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-4} 
+
+}
+
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-5} 
+
+}
+
+\end{figure}
+
+Dengan menggunakan grafik fungsi distribusi pada gambar diatas , dengan transformasi invers dapat definisikan
+
+\[\small{
+\begin{aligned}
+X = \left\{ \begin{array}{cc}
+              1 &   0<U  \leq 0.1  \\
+              2 &  0.1 < U  \leq  0.3\\
+              3 &  0.3 < U  \leq  0.4\\
+              4 &  0.4 < U  \leq  0.8  \\
+              5 &  0.8 < U  \leq  1.0     .
+            \end{array} \right.
+\end{aligned}
+}\]
+
+Untuk variabel acak diskrit umum mungkin tidak ada urutan hasil. Misalnya, seseorang dapat memiliki salah satu dari lima jenis produk asuransi jiwa dan dapat menggunakan algoritme berikut untuk menghasilkan hasil acak:
+
+\[{\small
+\begin{aligned}
+X = \left\{ \begin{array}{cc}
+  \textrm{whole life} &   0<U  \leq 0.1  \\
+ \textrm{endowment} &  0.1 < U  \leq  0.3\\
+\textrm{term life} &  0.3 < U  \leq  0.4\\
+  \textrm{universal life} &  0.4 < U  \leq  0.8  \\
+  \textrm{variable life} &  0.8 < U  \leq  1.0 .
+            \end{array} \right.
+\end{aligned}
+}\]
+
+Analis lain dapat menggunakan prosedur alternatif seperti:
+
+\[{\small
+\begin{aligned}
+X = \left\{ \begin{array}{cc}
+  \textrm{whole life} &   0.9<U<1.0  \\
+ \textrm{endowment} &  0.7 \leq U < 0.9\\
+\textrm{term life} &  0.6 \leq U < 0.7\\
+  \textrm{universal life} &  0.2 \leq U < 0.6  \\
+  \textrm{variable life} &  0 \leq U < 0.2 .
+            \end{array} \right.
+\end{aligned}
+}\]
+
+Kedua algoritma menghasilkan (dalam jangka panjang) probabilitas yang sama, misalnya, \(\Pr(\textrm{whole life})=0.1\) , Dan seterusnya. Jadi, tidak ada yang salah ini menunjukkan bahwa ada lebih dari satu cara untuk mencapai suatu tujuan. Demikian pula, dapat menggunakan algoritme alternatif untuk hasil yang diurutkan (seperti waktu kegagalan 1, 2, 3, 4, atau 5, di atas).
+
+\texttt{Contoh\ 6.1.7.} Menghasilkan Angka Acak dari Distribusi Hybrid. Pertimbangkan variabel acak yaitu 0 dengan probabilitas 70\% dan terdistribusi secara eksponensial dengan parameter \(\theta= 10,000\) dengan probabilitas 30\%. Dalam aplikasi asuransi, ini mungkin sesuai dengan peluang 70\% tidak memiliki klaim asuransi dan peluang klaim 30\% - jika klaim terjadi, maka itu didistribusikan secara eksponensial. Fungsi distribusi, digambarkan pada gambar dibawah ini , diberikan sebagai
+
+\[\begin{aligned}
+F(y) = \left\{ \begin{array}{cc}
+              0 &  x<0  \\
+              1 - 0.3 \exp(-x/10000) & x \ge 0 .
+            \end{array} \right.
+\end{aligned}\]
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.2-6} 
+
+}
+
+\end{figure}
+
+Dari Gambar diatas dapat dilihat bahwa transformasi invers untuk membangkitkan variabel acak dengan fungsi distribusi ini adalah
+
+\[\begin{aligned}
+X = F^{-1}(U) = \left\{ \begin{array}{cc}
+              0 &  0< U  \leq  0.7  \\
+              -1000 \ln (\frac{1-U}{0.3}) & 0.7 < U < 1 .
+            \end{array} \right.
+\end{aligned}\]
+
+\hypertarget{presisi-simulasi}{%
+\subsection{(6.1.3) Presisi Simulasi}\label{presisi-simulasi}}
+
+Setelah mengetahui cara menghasilkan realisasi simulasi independen dari distribusi bunga, maka dapat menyusun distribusi empiris (distribusi empiris mengelompokkan data ke dalam suatu interval, di mana frekuensi data dalam setiap interval dapat digunakan untuk menentukan frekuensi relatifnya) dan memperkirakan distribusi yang diperlukan.
+
+Banyak dari aplikasi ini dapat direduksi menjadi masalah perkiraan \(\mathrm{E~}[h(X)]\) , Di mana \(h(\cdot)\) adalah beberapa fungsi yang diketahui. Berdasarkan simulasi R (replikasi), sehingga didapatkan \(X_1,\ldots,X_R\). Dari sampel yang disimulasikan ini, dapat menghitung rata-rata sebagai berikut.
+
+\[\overline{h}_R=\frac{1}{R}\sum_{i=1}^{R} h(X_i)\]
+
+sebagai perkiraan simulasi dari \(\mathrm{E~}[h(X)]\). Untuk memperkirakan ketepatan perkiraan tersebut, maka menggunakan varians simulasi
+
+\[s_{h,R}^2 = \frac{1}{R-1} \sum_{i=1}^{R}\left( h(X_i) -\overline{h}_R
+\right) ^2.\]
+
+Dari independensi, kesalahan standar estimasi adalah \(s_{h,R}/\sqrt{R}\). Kesalahan standar estimasi dapat dibuat sekecil dengan meningkatkan jumlah replikasi \(R\).
+
+\texttt{Contoh\ 6.1.8.} Manajemen portofolio. Pada Bagian 3.4 telah mempelajari cara menghitung nilai ekspektasi polis dengan deductible. Sebagai contoh dari sesuatu yang tidak dapat dilakukan dengan ekspresi bentuk tertutup, kemudian akan mempertimbangkan dua risiko. (Ini adalah variasi dari contoh yang lebih kompleks yang akan dibahas sebagai Contoh 10.3.6).
+
+Dengan mempertimbangkan dua risiko properti dari perusahaan telekomunikasi:
+
+\begin{itemize}
+\item
+  \(X_1\) - bangunan, dimodelkan menggunakan distribusi gamma dengan rata-rata 200 dan parameter skala 100.
+\item
+  \(X_2\) - kendaraan bermotor, dimodelkan menggunakan distribusi gamma dengan mean 400 dan parameter skala 200.
+\end{itemize}
+
+Nyatakan risiko total sebagai \(X = X_1 + X_2\). Untuk penyederhanaan, dapat diasumsikan bahwa risiko ini tidak bergantung.
+
+Untuk mengelola risiko maka diperlukan perlindungan atau penjamin asuransi dan bersedia mempertahankan jumlah bangunan dan kendaraan bermotor kecil secara internal, hingga \(M\). Jumlah acak lebih dari \(M\) akan memiliki pengaruh yang tidak terduga pada anggaran dan karenanya untuk jumlah ini dapat mencari perlindungan asuransi. Dinyatakan secara matematis, risiko yang dipertahankan adalah \(Y_{retained}=\min(X_1 + X_2,M)\) dan bagian penanggung adalah \(Y_{insurer} = X- Y_{retained}\).
+
+Misalnya \(M= 400\) serta \(R = 1000000\).
+
+\texttt{A.} Dengan pengaturan tersebut, ingin menentukan perkiraan jumlah klaim dan standar deviasi terkait dari (i) yang ditahan, (ii) yang diterima oleh perusahaan asuransi, dan (iii) total jumlah keseluruhan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Simulate the risks}
+\NormalTok{nSim }\OtherTok{\textless{}{-}} \FloatTok{1e6}  \CommentTok{\#number of simulations}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{) }\CommentTok{\#set seed to reproduce work }
+\NormalTok{X1 }\OtherTok{\textless{}{-}} \FunctionTok{rgamma}\NormalTok{(nSim ,alpha1,}\AttributeTok{scale =}\NormalTok{ theta1)  }
+\NormalTok{X2 }\OtherTok{\textless{}{-}} \FunctionTok{rgamma}\NormalTok{(nSim ,alpha2,}\AttributeTok{scale =}\NormalTok{ theta2) }
+
+\CommentTok{\# Portfolio Risks}
+\NormalTok{X         }\OtherTok{\textless{}{-}}\NormalTok{ X1 }\SpecialCharTok{+}\NormalTok{ X2 }
+\NormalTok{Yretained }\OtherTok{\textless{}{-}} \FunctionTok{pmin}\NormalTok{(X, M)}
+\NormalTok{Yinsurer  }\OtherTok{\textless{}{-}}\NormalTok{ X }\SpecialCharTok{{-}}\NormalTok{ Yretained}
+\end{Highlighting}
+\end{Shaded}
+
+Kemudian jumlah klaim yang diharapkan adalah
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Expected Claim Amounts}
+\NormalTok{ExpVec }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(}\FunctionTok{as.matrix}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{mean}\NormalTok{(Yretained),}\FunctionTok{mean}\NormalTok{(Yinsurer),}\FunctionTok{mean}\NormalTok{(X))))}
+\NormalTok{sdVec }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(}\FunctionTok{as.matrix}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{sd}\NormalTok{(Yretained),}\FunctionTok{sd}\NormalTok{(Yinsurer),}\FunctionTok{sd}\NormalTok{(X))))}
+\NormalTok{outMat }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(ExpVec, sdVec)}
+\FunctionTok{colnames}\NormalTok{(outMat) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Retained"}\NormalTok{, }\StringTok{"Insurer"}\NormalTok{,}\StringTok{"Total"}\NormalTok{)}
+\FunctionTok{row.names}\NormalTok{(outMat) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Mean"}\NormalTok{,}\StringTok{"Standard Deviation"}\NormalTok{)}
+\FunctionTok{round}\NormalTok{(outMat,}\AttributeTok{digits=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.3-1} 
+
+}
+
+\end{figure}
+
+\texttt{B.} Untuk klaim yang diasuransikan, kesalahan standar perkiraan simulasi adalah \(s_{h,R}/\sqrt{1000000} =/\sqrt{1000000} =0.281\). Untuk contoh ini, simulasi cepat dan nilai yang besar seperti 1000000 adalah pilihan yang mudah. Namun, untuk masalah yang lebih kompleks, ukuran simulasi mungkin menjadi masalah.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Yinsurefct }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(numSim)\{}
+\NormalTok{X1 }\OtherTok{\textless{}{-}} \FunctionTok{rgamma}\NormalTok{(numSim,alpha1,}\AttributeTok{scale =}\NormalTok{ theta1)  }
+\NormalTok{X2 }\OtherTok{\textless{}{-}} \FunctionTok{rgamma}\NormalTok{(numSim,alpha2,}\AttributeTok{scale =}\NormalTok{ theta2)  }
+\CommentTok{\# Portfolio Risks}
+\NormalTok{X         }\OtherTok{\textless{}{-}}\NormalTok{ X1 }\SpecialCharTok{+}\NormalTok{ X2 }
+\NormalTok{Yinsurer }\OtherTok{\textless{}{-}}\NormalTok{ X }\SpecialCharTok{{-}} \FunctionTok{pmin}\NormalTok{(X, M)}
+\FunctionTok{return}\NormalTok{(Yinsurer)}
+\NormalTok{\}}
+\NormalTok{R }\OtherTok{\textless{}{-}} \FloatTok{1e3}
+\NormalTok{nPath }\OtherTok{\textless{}{-}} \DecValTok{20}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{simU }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\FunctionTok{Yinsurefct}\NormalTok{(R}\SpecialCharTok{*}\NormalTok{nPath),R,nPath)}
+\NormalTok{sumP2 }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(simU, }\DecValTok{2}\NormalTok{, cumsum)}\SpecialCharTok{/}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{R)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{matplot}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{R,sumP2[,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{20}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{col=}\FunctionTok{rgb}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{0}\NormalTok{,.}\DecValTok{2}\NormalTok{), }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{100}\NormalTok{, }\DecValTok{400}\NormalTok{),}
+        \AttributeTok{xlab=}\FunctionTok{expression}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{"Number of Simulations ("}\NormalTok{, }\FunctionTok{italic}\NormalTok{(}\StringTok{\textquotesingle{}R\textquotesingle{}}\NormalTok{), }\StringTok{")"}\NormalTok{)), }
+        \AttributeTok{ylab=}\StringTok{"Expected Insurer Claims"}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h=}\FunctionTok{mean}\NormalTok{(Yinsurer),}\AttributeTok{lty=}\DecValTok{2}\NormalTok{)}
+\NormalTok{bonds }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(}\FloatTok{1.96}\SpecialCharTok{*}\FunctionTok{sd}\NormalTok{(Yinsurer)}\SpecialCharTok{*}\FunctionTok{sqrt}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{R)),}\SpecialCharTok{{-}}\FloatTok{1.96}\SpecialCharTok{*}\FunctionTok{sd}\NormalTok{(Yinsurer)}\SpecialCharTok{*}\FunctionTok{sqrt}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{R)))}
+\FunctionTok{matlines}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{R,bonds}\SpecialCharTok{+}\FunctionTok{mean}\NormalTok{(Yinsurer),}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lty=}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.3-2} 
+
+}
+
+\end{figure}
+
+Dari grafik diatas dapat dilihat, semakin banyak jumlah simulasi R maka semakin sedikit jumlah klaim yang diharapkan.
+
+\texttt{Penentuan\ Jumlah\ Simulasi}
+
+Misalkan ingin berada dalam 1\% dari rata-rata dengan kepastian 95\%. Artinya, \(\Pr \left( |\overline{h}_R - \mathrm{E~}[h(X)]| \le 0.01 \mathrm{E~}[h(X)] \right) \ge 0.95\). Menurut teorema limit pusat, perkiraan harus terdistribusi secara normal dan mengharapkan R cukup besar untuk \(0.01 \mathrm{E~}[h(X)]/\sqrt{\mathrm{Var~}[h(X)]/R}) \ge 1.96\) . (Ingat bahwa 1,96 adalah persentil ke-97,5 dari distribusi normal standar.) Mengganti \(\mathrm{E~}[h(X)]\) Dan \(\mathrm{Var~}[h(X)]\) dengan estimasi,sehingga
+
+\[\frac{.01\overline{h}_R}{s_{h,R}/\sqrt{R}}\geq 1.96\]
+
+\[\begin{equation}
+R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
+\tag{6.1}
+\end{equation}\]
+
+\texttt{Contoh\ 6.1.9.} Pilihan Perkiraan.
+
+Sebuah aplikasi penting dari simulasi adalah pendekatan dari \(\mathrm{E~}[h(X)]\). Dalam contoh ini, kami menunjukkan bahwa pilihan dari \(h(\cdot)\) fungsi dan distribusi \(X\) dapat berperan.
+
+Pertimbangkan pertanyaan berikut: apa itu \(\Pr[X>2]\). Kapan \(X\) mempunyai sebuah distribusi Cauchy (distribusi probabilitas kontinu), dengan fungsi kepadatan \(f(x) =\left(\pi(1+x^2)\right)^{-1}\), pada garis sebenarnya? Nilai sebenarnya adalah
+
+\[\Pr\left[X>2\right] = \int_2^\infty \frac{dx}{\pi(1+x^2)} .\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{true\_value }\OtherTok{\textless{}{-}} \FunctionTok{integrate}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(x) }\DecValTok{1}\SpecialCharTok{/}\NormalTok{(pi}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{+}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)),}\AttributeTok{lower=}\DecValTok{2}\NormalTok{,}\AttributeTok{upper=}\ConstantTok{Inf}\NormalTok{)}\SpecialCharTok{$}\NormalTok{value}
+\NormalTok{true\_value }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.1475836
+\end{verbatim}
+
+\texttt{Perkiraan\ 1.} Sebagai alternatif, seseorang dapat menggunakan teknik simulasi untuk memperkirakan besaran tersebut. Dari kalkulus, dapat memeriksa bahwa fungsi kuantil dari distribusi Cauchy adalah \(F^{-1}(y) = \tan \left( \pi(y-0.5) \right)\) . Kemudian, dengan variasi seragam (0,1) yang disimulasikan, \(U_1, \ldots, U_R\), sehingga dapat membangun estimator
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Q }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(u) }\FunctionTok{tan}\NormalTok{(pi}\SpecialCharTok{*}\NormalTok{(u}\FloatTok{{-}.5}\NormalTok{))}
+\NormalTok{R }\OtherTok{\textless{}{-}} \FloatTok{1e6}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{X }\OtherTok{\textless{}{-}} \FunctionTok{Q}\NormalTok{(}\FunctionTok{runif}\NormalTok{(R))}
+\NormalTok{p1 }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(X}\SpecialCharTok{\textgreater{}}\DecValTok{2}\NormalTok{)}
+\NormalTok{se.p1 }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(X}\SpecialCharTok{\textgreater{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{/}\FunctionTok{sqrt}\NormalTok{(R)}
+\NormalTok{p1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.147439
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{se.p1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.0003545432
+\end{verbatim}
+
+Dengan satu juta simulasi, diperoleh estimasi sebesar 0,14744 dengan standard error 0,355 (dibagi 1000). Dapat dibuktikan bahwa varian dari \(P_1\) teratur \(0.127/R\).
+
+\texttt{Perkiraan\ 2.} Dengan pilihan lain dari \(h(\cdot)\) Dan \(f(\cdot)\) adalah mungkin untuk mengurangi ketidakpastian bahkan dengan menggunakan jumlah simulasi yang sama \(R\) . Untuk memulai, seseorang dapat menggunakan simetri distribusi Cauchy untuk menulis \(\Pr[X>2]=0.5\cdot\Pr[|X|>2]\) . Dengan ini, dapat membuat estimator baru
+
+\[p_2 = \frac{1}{2R}\sum_{i=1}^R \mathrm{I}(|F^{-1}(U_i)|>2) .\]
+
+Dengan satu juta simulasi, diperoleh estimasi sebesar 0,14748 dengan standard error 0,228 (dibagi 1000). Dapat dibuktikan bahwa varian dari \(P_2\) teratur \(0.052/R\).
+
+\texttt{Perkiraan\ 3.} Integral tak wajar dapat ditulis dengan sifat simetri sederhana (karena fungsinya simetris dan integral pada garis real sama dengan 1 ).
+
+\[\int_2^\infty \frac{dx}{\pi(1+x^2)}=\frac{1}{2}-\int_0^2\frac{dx}{\pi(1+x^2)} .\]
+
+\[p_3 = \frac{1}{2}-\frac{1}{R}\sum_{i=1}^R h_3(2U_i), ~~~~~~\text{where}~h_3(x)=\frac{2}{\pi(1+x^2)} .\]
+
+Dengan satu juta simulasi, diperoleh estimasi sebesar 0,14756 dengan standard error 0,169 (dibagi 1000). Dapat dibuktikan bahwa varian dari \(P_3\) teratur \(0,0285 / R\).
+
+\texttt{Perkiraan\ 4.} Akhirnya, seseorang juga dapat mempertimbangkan beberapa perubahan variabel dalam integral.
+
+\[\int_2^\infty \frac{dx}{\pi(1+x^2)}=\int_0^{1/2}\frac{y^{-2}dy}{\pi(1-y^{-2})} .\]
+
+\[p_4 = \frac{1}{R}\sum_{i=1}^R h_4(U_i/2),~~~~~\text{where}~h_4(x)=\frac{1}{2\pi(1+x^2)} .\]
+
+Dengan satu juta simulasi, diperoleh estimasi sebesar 0,14759 dengan standard error 0,01 (dibagi 1000). Dapat dibuktikan bahwa varian dari \(P_4\) teratur \(0,00009 / R\) , yang jauh lebih kecil dari yang lainnya.
+
+Tabel berikut merupakan rangkuman dari empat pilihan \(h(\cdot)\) Dan \(f(\cdot)\)) untuk memperkirakan \(\Pr[X>2] = 0,14758\). Kesalahan standar bervariasi. Jadi, jika memiliki tingkat akurasi yang diinginkan, maka jumlah simulasi sangat bergantung pada bagaimana menulis integral yang akan diaproksimasi.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.1.3-3} 
+
+}
+
+\end{figure}
+
+\hypertarget{imulasi-dan-inferensi-statistik}{%
+\subsection{(6.1.4) imulasi dan Inferensi Statistik}\label{imulasi-dan-inferensi-statistik}}
+
+Simulasi tidak hanya membantu dalam memperkirakan nilai yang diharapkan tetapi juga berguna dalam menghitung aspek lain dari fungsi distribusi. Secara khusus, ini sangat berguna ketika distribusi statistik uji terlalu rumit untuk diturunkan. Dalam hal ini, seseorang dapat menggunakan simulasi untuk memperkirakan distribusi referensi.
+
+\texttt{Contoh\ 6.1.10.} Uji Distribusi Kolmogorov-Smirnov.
+
+Misalkan terdapata \(n = 100\) observasi \(\{x_1,\cdots,x_n\}\) yang, tidak diketahui oleh analis, dihasilkan dari distribusi gamma dengan parameter \(\alpha = 6\) Dan \(\theta=2\) . Analis percaya bahwa data berasal dari distribusi lognormal dengan parameter 1 dan 0,4 dan ingin menguji asumsi ini.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{100}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rgamma}\NormalTok{(n, }\DecValTok{6}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+
+\NormalTok{u}\OtherTok{=}\FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{7}\NormalTok{,}\AttributeTok{by=}\NormalTok{.}\DecValTok{01}\NormalTok{)}
+\NormalTok{vx }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FunctionTok{sort}\NormalTok{(x))}
+\NormalTok{vy }\OtherTok{=}\NormalTok{ (}\DecValTok{0}\SpecialCharTok{:}\NormalTok{n)}\SpecialCharTok{/}\NormalTok{n}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow=}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\FunctionTok{hist}\NormalTok{(x,}\AttributeTok{probability =} \ConstantTok{TRUE}\NormalTok{,}\AttributeTok{main=}\StringTok{"Histogram"}\NormalTok{, }\AttributeTok{col=}\StringTok{"light blue"}\NormalTok{,}
+     \AttributeTok{border=}\StringTok{"white"}\NormalTok{,}\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{7}\NormalTok{),}\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,.}\DecValTok{4}\NormalTok{))}
+\FunctionTok{lines}\NormalTok{(u,}\FunctionTok{dlnorm}\NormalTok{(u,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{),}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lty=}\DecValTok{2}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(vx,vy,}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"x"}\NormalTok{,}\AttributeTok{ylab=}\StringTok{"Cumulative Distribution"}\NormalTok{,}\AttributeTok{main=}\StringTok{"Empirical cdf"}\NormalTok{)}
+\FunctionTok{lines}\NormalTok{(u,}\FunctionTok{plnorm}\NormalTok{(u,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{),}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lty=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Analisa_Resiko_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+Dari grafik diatas dapat dilihat bahwa garis putus-putus merah tersebut sesuai dengan distribusi lognormal yang dihipotesiskan.
+
+Perlu digaris bawahi bahwa statistik Kolmogorov-Smirnov sama dengan perbedaan terbesar antara distribusi empiris dan hipotesis. Ini \(\max_x |F_n(x)-F_0(x)|\), Di mana \(F_0\) adalah distribusi lognormal yang dihipotesiskan, sehingga
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# test statistic}
+\NormalTok{D }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(data, F0)\{}
+\NormalTok{   F }\OtherTok{\textless{}{-}} \FunctionTok{Vectorize}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{mean}\NormalTok{((data}\SpecialCharTok{\textless{}=}\NormalTok{x)))}
+\NormalTok{   n }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(data)}
+\NormalTok{   x }\OtherTok{\textless{}{-}} \FunctionTok{sort}\NormalTok{(data)}
+\NormalTok{   d1}\OtherTok{=}\FunctionTok{abs}\NormalTok{(}\FunctionTok{F}\NormalTok{(x}\FloatTok{+1e{-}6}\NormalTok{)}\SpecialCharTok{{-}}\FunctionTok{F0}\NormalTok{(x}\FloatTok{+1e{-}6}\NormalTok{))}
+\NormalTok{   d2}\OtherTok{=}\FunctionTok{abs}\NormalTok{(}\FunctionTok{F}\NormalTok{(x}\FloatTok{{-}1e{-}6}\NormalTok{)}\SpecialCharTok{{-}}\FunctionTok{F0}\NormalTok{(x}\FloatTok{{-}1e{-}6}\NormalTok{))}
+   \FunctionTok{return}\NormalTok{(}\FunctionTok{max}\NormalTok{(}\FunctionTok{c}\NormalTok{(d1,d2)))}
+\NormalTok{\}}
+\FunctionTok{D}\NormalTok{(x,}\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{plnorm}\NormalTok{(x,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.09703627
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ks.test}\NormalTok{(x, plnorm, }\AttributeTok{mean=}\DecValTok{1}\NormalTok{, }\AttributeTok{sd=}\FloatTok{0.4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Asymptotic one-sample Kolmogorov-Smirnov test
+## 
+## data:  x
+## D = 0.097037, p-value = 0.3031
+## alternative hypothesis: two-sided
+\end{verbatim}
+
+Secara khusus, untuk menghitung P-value, maka hasilkan ribuan sampel acak dari \(LN(1,0.4)\) distribusi (dengan ukuran yang sama), dan menghitung secara empiris distribusi statistik,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ns }\OtherTok{\textless{}{-}} \FloatTok{1e4}
+\NormalTok{d\_KS }\OtherTok{\textless{}{-}} \FunctionTok{rep}\NormalTok{(}\ConstantTok{NA}\NormalTok{,ns)}
+\CommentTok{\# compute the test statistics for a large (ns) number of simulated samples}
+\ControlFlowTok{for}\NormalTok{(s }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{ns) d\_KS[s] }\OtherTok{\textless{}{-}} \FunctionTok{D}\NormalTok{(}\FunctionTok{rlnorm}\NormalTok{(n,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{),}\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{plnorm}\NormalTok{(x,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{))}
+
+\FunctionTok{mean}\NormalTok{(d\_KS}\SpecialCharTok{\textgreater{}}\FunctionTok{D}\NormalTok{(x,}\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{plnorm}\NormalTok{(x,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.2843
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(d\_KS,}\AttributeTok{probability =} \ConstantTok{TRUE}\NormalTok{,}\AttributeTok{col=}\StringTok{"light blue"}\NormalTok{,}\AttributeTok{border=}\StringTok{"white"}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"Test Statistic"}\NormalTok{,}\AttributeTok{main=}\StringTok{""}\NormalTok{)}
+\FunctionTok{lines}\NormalTok{(}\FunctionTok{density}\NormalTok{(d\_KS),}\AttributeTok{col=}\StringTok{"red"}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\FunctionTok{D}\NormalTok{(x,}\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{plnorm}\NormalTok{(x,}\DecValTok{1}\NormalTok{,.}\DecValTok{4}\NormalTok{)),}\AttributeTok{lty=}\DecValTok{2}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Analisa_Resiko_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+Distribusi yang disimulasikan berdasarkan 10.000 sampel acak dirangkum grafik diatas. Di sini, statistik melebihi nilai empiris (0,09704) dalam 28,43\%, sedangkan P-value adalah 0,3031. Baik untuk simulasi maupun teoretis P-value, kesimpulannya adalah data tidak memberikan bukti yang cukup untuk menolak hipotesis distribusi lognormal.
+
+Meskipun hanya perkiraan, pendekatan simulasi bekerja dalam berbagai distribusi dan uji statistik tanpa perlu mengembangkan nuansa teori yang mendasari untuk setiap situasi. Berikut ringkasan prosedur untuk mengembangkan distribusi simulasi dan p-value sebagai berikut:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Gambarlah sampel berukuran n , katakanlah, \(X_1, \ldots, X_n\), dari fungsi distribusi yang diketahui \(F\). Hitung statistik minat, dilambangkan sebagai \(\hat{\theta}(X_1, \ldots, X_n)\). Panggil ini \(\hat{\theta}^r\) untuk replikasi ke -r .
+\item
+  Ulangi ini \(r=1, \ldots, R\) kali untuk mendapatkan sampel statistik, \(\hat{\theta}^1, \ldots,\hat{\theta}^R\).
+\item
+  Dari sampel statistik pada Langkah 2, \(\{\hat{\theta}^1, \ldots,\hat{\theta}^R\}\), hitung ukuran ringkasan minat, seperti p-value.
+\end{enumerate}
+
+\hypertarget{bootstrap-dan-resampling}{%
+\section{(6.2) Bootstrap dan Resampling}\label{bootstrap-dan-resampling}}
+
+Subbab ini akan mempelajari :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Hasilkan distribusi bootstrap nonparametrik untuk statistik minat
+\item
+  Gunakan distribusi bootstrap untuk menghasilkan estimasi presisi untuk statistik yang diminati, termasuk bias, standar deviasi, dan interval kepercayaan
+\item
+  Lakukan analisis bootstrap untuk distribusi parametrik
+\end{enumerate}
+
+\hypertarget{dasar-dasar-bootstrap}{%
+\subsection{(6.2.1) Dasar-dasar Bootstrap}\label{dasar-dasar-bootstrap}}
+
+Metode bootstrap adalah metode berbasis resampling data sampel dengan syarat pengembalian pada datanya dalam menyelesaikan statistik ukuran suatu sampel dengan harapan sampel tersebut mewakili data populai sebenarnya, biasanya ukuran resampling diambil secara ribuan kali agar dapat mewakili data populasinya. Algoritma resamplign umum dengan \(\{X_1, \ldots, X_n\}\) untuk menunjukkan sampel asli dan \(\{X_1^*, \ldots, X_n^*\}\) menunjukkan undian yang disimulasikan.
+
+Untuk setiap sampel, \(n\) merupakan undian simulasi, jumlah yang sama dengan ukuran sampel asli. Untuk membedakan prosedur ini dari simulasi, biasanya digunakan \(B\) (untuk bootstrap) sebagai jumlah sampel yang disimulasikan. Sehingga dapat dituliskan \(\{X_1^{(b)}, \ldots, X_n^{(b)}\}\).
+
+Ada dua metode resampling dasar, model-free dan model-based , masing-masing sebagai nonparametrik dan parametrik . Pengundian yang disimulasikan berasal dari fungsi distribusi empiris \(F_n(\cdot)\) , jadi setiap undian berasal \(\{X_1, \ldots, X_n\}\) dengan probabilitas \(1/n\).
+
+\texttt{Bootstrap\ Nonparametrik}
+
+Gagasan bootstrap nonparametrik adalah menggunakan metode transformasi terbalik \(F_N\) , fungsi distribusi kumulatif empiris, digambarkan pada grafik dibawah ini.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.1-1} 
+
+}
+
+\end{figure}
+
+Karena \(F_N\) adalah step-function, \(F_n^{-1}\) subtitusi nilai-nilai \(\{x_1,\cdots,x_n\}\) sehingga
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  jika \(y\in(0,1/n)\) (dengan probabilitas \(1 / n\) ) dengan menggambar nilai terkecil ( \(\min\{x_i\}\) )
+\item
+  jika \(y\in(1/n,2/n)\) (dengan probabilitas \(1 / n\) ) dengan menggambar nilai terkecil kedua,
+\end{enumerate}
+
+\ldots{}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  jika \(y\in((n-1)/n,1)\) (dengan probabilitas \(1 / n\) ) kami menggambar nilai terbesar ( \(\max\{x_i\}\) )
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.1-2} 
+
+}
+
+\end{figure}
+
+Menggunakan metode transformasi terbalik dengan \(F_N\) berarti pengambilan sampel dari \(\{x_1,\cdots,x_n\}\), dengan probabilitas \(1 / n\) . Menghasilkan sampel ukuran bootstrap \(B\) berarti pengambilan sampel dari \(\{x_1,\cdots,x_n\}\) , dengan probabilitas \(1 / n\) , dengan penggantian.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rexp}\NormalTok{(n, }\DecValTok{1}\SpecialCharTok{/}\DecValTok{6}\NormalTok{)}
+\NormalTok{m }\OtherTok{\textless{}{-}} \DecValTok{8}
+\NormalTok{bootvalues }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(x, }\AttributeTok{size=}\NormalTok{m, }\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error}{%
+\subsection{(6.2.2) Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error}\label{presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error}}
+
+Berikut adalah rangkuman prosedur bootstrap nonparametrik sebagai berikut:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Dari sampel \(\{X_1, \ldots, X_n\}\), gambar sampel berukuran n (dengan penggantian), katakanlah, \(X_1^*, \ldots, X_n^*\) . Dari undian yang disimulasikan, hitung statistik minat, dilambangkan sebagai \(\hat{\theta}(X_1^*, \ldots, X_n^*)\) . Panggil ini \(\hat{\theta}_b^*\) untuk ulangan ke-b .
+\item
+  Ulangi ini \(b=1, \ldots, B\) kali untuk mendapatkan sampel statistik \(\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\).
+\item
+  Dari sampel statistik pada Langkah 2,\(\{\hat{\theta}_1^*, \ldots, \hat{\theta}_B^*\}\) hitung ukuran ringkasan minat.
+\end{enumerate}
+
+Pada bagian ini, ada tiga langkah ringkasan yaitu bias, standar deviasi, dan mean square error ( MSE ). Tabel dibawah ini merangkum ketiga ukuran. Di Sini, \(\overline{\hat{\theta^*}}\) adalah rata-rata dari \(\{\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\}\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.1-3} 
+
+}
+
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Example from Derrig et al}
+\NormalTok{BIData }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"Data/DerrigResampling.csv"}\NormalTok{, }\AttributeTok{header =}\NormalTok{T)}
+\NormalTok{BIData}\SpecialCharTok{$}\NormalTok{Censored }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{*}\NormalTok{(BIData}\SpecialCharTok{$}\NormalTok{AmountPaid }\SpecialCharTok{\textgreater{}=}\NormalTok{ BIData}\SpecialCharTok{$}\NormalTok{PolicyLimit)}
+\NormalTok{BIDataUncensored }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(BIData, Censored }\SpecialCharTok{==} \DecValTok{0}\NormalTok{)}
+\NormalTok{LER.boot }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(ded, data, indices)\{}
+\NormalTok{  resample.data }\OtherTok{\textless{}{-}}\NormalTok{ data[indices,]}
+\NormalTok{  sumClaims }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(resample.data}\SpecialCharTok{$}\NormalTok{AmountPaid)}
+\NormalTok{  sumClaims\_d }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(}\FunctionTok{pmin}\NormalTok{(resample.data}\SpecialCharTok{$}\NormalTok{AmountPaid,ded))}
+\NormalTok{  LER }\OtherTok{\textless{}{-}}\NormalTok{   sumClaims\_d}\SpecialCharTok{/}\NormalTok{sumClaims}
+  \FunctionTok{return}\NormalTok{(LER)  }
+\NormalTok{\}}
+
+\DocumentationTok{\#\#Derrig et al}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2019}\NormalTok{)}
+\NormalTok{dVec2 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{4000}\NormalTok{, }\DecValTok{5000}\NormalTok{, }\DecValTok{10500}\NormalTok{, }\DecValTok{11500}\NormalTok{, }\DecValTok{14000}\NormalTok{, }\DecValTok{18500}\NormalTok{)}
+\NormalTok{OutBoot }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FunctionTok{length}\NormalTok{(dVec2),}\DecValTok{6}\NormalTok{)}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(dVec2)) \{}
+\NormalTok{OutBoot[i,}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ dVec2[i]}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{boot}\NormalTok{(}\AttributeTok{data=}\NormalTok{BIDataUncensored, }\AttributeTok{statistic=}\NormalTok{LER.boot, }\AttributeTok{R=}\DecValTok{1000}\NormalTok{, }\AttributeTok{ded=}\NormalTok{dVec2[i])}
+\NormalTok{OutBoot[i,}\DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ results}\SpecialCharTok{$}\NormalTok{t0}
+\NormalTok{biasboot }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t)}\SpecialCharTok{{-}}\NormalTok{results}\SpecialCharTok{$}\NormalTok{t0 }\OtherTok{{-}\textgreater{}}\NormalTok{ OutBoot[i,}\DecValTok{3}\NormalTok{]}
+\NormalTok{sdboot }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t) }\OtherTok{{-}\textgreater{}}\NormalTok{ OutBoot[i,}\DecValTok{4}\NormalTok{]}
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{boot.ci}\NormalTok{(results)}
+\NormalTok{OutBoot[i,}\DecValTok{5}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{2}\NormalTok{]}
+\NormalTok{OutBoot[i,}\DecValTok{6}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{3}\NormalTok{]}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.1-4} 
+
+}
+
+\end{figure}
+
+Berdasarkan tabel diatas hasil estimasi bootstrap. Misalnya, di D= 14000 , estimasi nonparametrik LER adalah 0,97678. Ini memiliki perkiraan bias 0,00018 dengan standar deviasi 0,00701. Untuk beberapa aplikasi, mungkin ingin menerapkan estimasi bias ke estimasi asli untuk memberikan estimator yang dikoreksi bias. Untuk ilustrasi ini, biasnya kecil sehingga koreksi semacam itu tidak relevan.
+
+Standar deviasi bootstrap memberikan ukuran presisi. Untuk satu penerapan standar deviasi dapat menggunakan pendekatan normal untuk membuat selang kepercayaan. Misalnya, pada \emph{R} fungsi \emph{boot.ci} menghasilkan interval kepercayaan normal sebesar 95\%. Ini dihasilkan dengan membuat interval dua kali panjang standar deviasi bootstrap 1,95994, berpusat di sekitar estimator yang dikoreksi bias (1,95994 adalah kuantil ke-97,5 dari distribusi normal). Misalnya, CI 95\% normal yang lebih rendah di \(D= 14000\) adalah \((0.97678-0.00018)- 1.95994*0.00701\).
+
+\texttt{Contoh\ 6.2.2.} Memperkirakan \(\exp(\mu)\) . Bootstrap dapat digunakan untuk mengukur bias estimator, misalnya. Pertimbangkan di sini sampel \(\mathbf{x}=\{x_1,\cdots,x_n\}\) adalah rata-rata μ .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sample\_x }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{2.46}\NormalTok{,}\FloatTok{2.80}\NormalTok{,}\FloatTok{3.28}\NormalTok{,}\FloatTok{3.86}\NormalTok{,}\FloatTok{2.85}\NormalTok{,}\FloatTok{3.67}\NormalTok{,}\FloatTok{3.37}\NormalTok{,}\FloatTok{3.40}\NormalTok{,}\FloatTok{5.22}\NormalTok{,}\FloatTok{2.55}\NormalTok{,}
+              \FloatTok{2.79}\NormalTok{,}\FloatTok{4.50}\NormalTok{,}\FloatTok{3.37}\NormalTok{,}\FloatTok{2.88}\NormalTok{,}\FloatTok{1.44}\NormalTok{,}\FloatTok{2.56}\NormalTok{,}\FloatTok{2.00}\NormalTok{,}\FloatTok{2.07}\NormalTok{,}\FloatTok{2.19}\NormalTok{,}\FloatTok{1.77}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Misalkan kuantitas bunga adalah \(\theta=\exp(\mu)\). Penaksir alami akan menjadi \(\widehat{\theta}_1=\exp(\overline{x})\). Estimator ini bias (karena ketidaksetaraan Jensen) tetapi tidak bias secara asimtotik. Untuk sampel, perkiraannya adalah sebagai berikuT
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(theta\_1 }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(sample\_x)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 19.13463
+\end{verbatim}
+
+Seseorang dapat menggunakan teorema limit pusat untuk mendapatkan koreksi menggunakan
+
+\[\overline{X}\approx\mathcal{N}\left(\mu,\frac{\sigma^2}{n}\right)\text{ where }\sigma^2=\text{Var}[X_i] ,\]
+
+sehingga dengan fungsi pembangkit momen normal didapatkan
+
+\[\mathrm{E}~\left[\exp(\overline{X})\right] \approx \exp\left(\mu+\frac{\sigma^2}{2n}\right) .\]
+
+Oleh karena itu, seseorang dapat mempertimbangkan secara alami
+
+\[\widehat{\theta}_2=\exp\left(\overline{x}-\frac{\widehat{\sigma}^2}{2n}\right) .\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(sample\_x)}
+\NormalTok{(theta\_2 }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(sample\_x)}\SpecialCharTok{{-}}\FunctionTok{var}\NormalTok{(sample\_x)}\SpecialCharTok{/}\NormalTok{(}\DecValTok{2}\SpecialCharTok{*}\NormalTok{n)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 18.73334
+\end{verbatim}
+
+Sebagai strategi lain, seseorang juga dapat menggunakan pendekatan Taylor untuk mendapatkan penaksir yang lebih akurat (seperti dalam metode delta)
+
+\[g(\overline{x})=g(\mu)+(\overline{x}-\mu)g'(\mu)+(\overline{x}-\mu)^2\frac{g''(\mu)}{2}+\cdots\]
+
+Alternatif selanjutnya adalah menggunakan strategi bootstrap dengan sampel bootstrap \(\mathbf{x}^{\ast}_{b}\) sehingga \(\overline{x}^{\ast}_{b}\).
+
+\[\widehat{\theta}_3=\frac{1}{B}\sum_{b=1}^B\exp(\overline{x}^{\ast}_{b}) .\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(boot)}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{boot}\NormalTok{(}\AttributeTok{data=}\NormalTok{sample\_x, }
+                \AttributeTok{statistic=}\ControlFlowTok{function}\NormalTok{(y,indices) }\FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(y[indices])), }
+                \AttributeTok{R=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{theta\_3 }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.2-1} 
+
+}
+
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.2-2} 
+
+}
+
+\end{figure}
+
+Ini menghasilkan tiga estimator, estimator mentah \(\widehat{\theta}_1=19.135\), koreksi urutan kedua \(\widehat{\theta}_2= 18.733\), dan estimator bootstrap \(\widehat{\theta}_3= 19.388\).
+
+Bagaimana cara kerjanya dengan ukuran sampel yang berbeda? Diasumsikan bahwa \(X_i\) dihasilkan dari distribusi lognormal \(LN(0,1)\) , sehingga \(\mu = \exp(0 + 1/2) = 1.648721\) Dan \(\theta = \exp(1.648721)= 5,200326\). Dengan menggunakan simulasi untuk menggambar ukuran sampel.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{param }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x)\{}
+\NormalTok{  n }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(x)}
+\NormalTok{  theta\_1 }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(x))}
+\NormalTok{  theta\_2 }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(x)}\SpecialCharTok{{-}}\FunctionTok{var}\NormalTok{(x)}\SpecialCharTok{/}\NormalTok{(}\DecValTok{2}\SpecialCharTok{*}\NormalTok{n))}
+\NormalTok{  results }\OtherTok{\textless{}{-}} \FunctionTok{boot}\NormalTok{(}\AttributeTok{data=}\NormalTok{x, }
+                \AttributeTok{statistic=}\ControlFlowTok{function}\NormalTok{(y,indices) }\FunctionTok{exp}\NormalTok{(}\FunctionTok{mean}\NormalTok{(y[indices])), }
+                \AttributeTok{R=}\DecValTok{999}\NormalTok{)}
+\NormalTok{  theta\_3 }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t)}
+  \FunctionTok{return}\NormalTok{(}\FunctionTok{c}\NormalTok{(theta\_1,theta\_2,theta\_3))}
+\NormalTok{\}}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2074}\NormalTok{)}
+\NormalTok{ns}\OtherTok{\textless{}{-}} \DecValTok{200}
+\NormalTok{est }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(n)\{}
+\NormalTok{call\_param }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(i) }\FunctionTok{param}\NormalTok{(}\FunctionTok{rlnorm}\NormalTok{(n,}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\NormalTok{V }\OtherTok{\textless{}{-}} \FunctionTok{Vectorize}\NormalTok{(call\_param)(}\DecValTok{1}\SpecialCharTok{:}\NormalTok{ns)}
+\FunctionTok{apply}\NormalTok{(V,}\DecValTok{1}\NormalTok{,median)}
+\NormalTok{\}}
+\NormalTok{VN}\OtherTok{=}\FunctionTok{seq}\NormalTok{(}\DecValTok{15}\NormalTok{,}\DecValTok{100}\NormalTok{,}\AttributeTok{by=}\DecValTok{5}\NormalTok{)}
+\NormalTok{Est }\OtherTok{\textless{}{-}} \FunctionTok{Vectorize}\NormalTok{(est)(VN)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{matplot}\NormalTok{(VN,}\FunctionTok{t}\NormalTok{(Est),}\AttributeTok{type=}\StringTok{"l"}\NormalTok{, }\AttributeTok{col=}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\AttributeTok{lty=}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\AttributeTok{ylim=}\FunctionTok{exp}\NormalTok{(}\FunctionTok{exp}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\DecValTok{2}\NormalTok{))}\SpecialCharTok{+}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{),}
+        \AttributeTok{xlab=}\StringTok{"sample size (n)"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"estimator"}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h=}\FunctionTok{exp}\NormalTok{(}\FunctionTok{exp}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\DecValTok{2}\NormalTok{)),}\AttributeTok{lty=}\DecValTok{1}\NormalTok{, }\AttributeTok{col=}\DecValTok{1}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topleft"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{"raw estimator"}\NormalTok{, }\StringTok{"second order correction"}\NormalTok{, }\StringTok{"bootstrap"}\NormalTok{),}
+       \AttributeTok{col=}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{,}\AttributeTok{lty=}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\AttributeTok{bty=}\StringTok{"n"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.2-3} 
+
+}
+
+\end{figure}
+
+Hasil perbandingan dirangkum dalam gambar diatas menunjukkan bahwa estimator bootstrap mendekati nilai parameter sebenarnya untuk hampir semua ukuran sampel. Bias dari ketiga estimator berkurang dengan meningkatnya ukuran sampel.
+
+\hypertarget{interval-keyakinan}{%
+\subsection{(6.2.3) Interval Keyakinan}\label{interval-keyakinan}}
+
+Prosedur bootstrap menghasilkan \(B\) bentuk ulang dari \(\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\) dari penaksir \(\hat{\theta}\) . Dalam Contoh 6.2.1, dapat dilihat bagaimana menggunakan pendekatan normal standar untuk membuat interval kepercayaan untuk parameter yang diinginkan. Namun, mengingat poin utamanya adalah menggunakan bootstrapping untuk menghindari ketergantungan pada asumsi perkiraan normalitas, tidak mengherankan jika tersedia interval kepercayaan alternatif.
+
+Untuk estimator \(\hat{\theta}\) , interval kepercayaan bootstrap dasar adalah
+
+\[\begin{equation} 
+  \left(2 \hat{\theta} - q_U, 2 \hat{\theta} - q_L \right) ,
+\tag{6.2}
+\end{equation}\]
+
+Di mana \(q_L\) Dan \(q_U\) adalah kuantil 2,5\% bawah dan atas dari sampel bootstrap \(\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\)
+
+Untuk melihat dari mana asalnya, mula-mula \((q_L, q_U)\) menyediakan interval 95\% untuk \(\hat{\theta}_1^*, \ldots,\hat{\theta}_B^*\) . Jadi, untuk acak \(\hat{\theta}_b^*\), ada kemungkinan 95\% itu \(q_L \le \hat{\theta}_b^* \le q_U\). Membalikkan pertidaksamaan dan menjumlahkan \(\hat{\theta}\) ke setiap sisi memberikan interval 95\%
+
+\[\hat{\theta} -q_U \le \hat{\theta} - \hat{\theta}_b^* \le  \hat{\theta} -q_L .\]
+
+Jadi, \(\left( \hat{\theta}-q_U, \hat{\theta} -q_L\right)\) adalah interval 95\% untuk \(\hat{\theta} - \hat{\theta}_b^*\). Ide perkiraan bootstrap mengatakan bahwa ini juga merupakan interval 95\% untuk \(\theta - \hat{\theta}\). Dengan menambahkan \(\hat{\theta}\) ke setiap sisi memberikan interval 95\% dalam persamaan diatas.
+
+Banyak alternatif interval bootstrap yang tersedia. Yang paling mudah dijelaskan adalah interval bootstrap persentil yang didefinisikan sebagai \((q_L,q_U)\).
+
+\texttt{Contoh\ 6.2.3.} Klaim Cidera Tubuh dan Tindakan Risiko. Untuk melihat bagaimana interval kepercayaan bootstrap bekerja, dengan kembali ke klaim otomatis cedera tubuh yang dipertimbangkan dalam Contoh 6.2.1 . Alih-alih rasio eliminasi kerugian, misalkan ingin memperkirakan persentil ke-95 \(F^{-1}(0.95)\) dan ukuran didefinisikan sebagai
+
+\[TVaR_{0.95}[X] = \mathrm{E}[X | X > F^{-1}(0.95)] .\]
+
+Pengukuran ini disebut dengan ekor nilai berisiko; itu adalah nilai yang diharapkan dari X bersyarat X melebihi persentil ke-95. Bagian 10.2 menjelaskan bagaimana quantiles dan tail value-at-risk adalah dua contoh paling penting dari apa yang disebut sebagai ukuran risiko . Untuk saat ini, hanya akan menganggap ini sebagai ukuran yang ingin diperkirakan. Untuk persentil, dengan menggunakan estimator nonparametrik \(F^{-1}_n(0.95)\) didefinisikan dalam Bagian 4.1.1.3 . Untuk tail value-at-risk, menggunakan prinsip plug-in untuk menentukan estimator nonparametrik
+
+\[TVaR_{n,0.95}[X] = \frac{\sum_{i=1}^n X_i I(X_i > F^{-1}_n(0.95))}{\sum_{i=1}^n I(X_i > F^{-1}_n(0.95))} ~.\]
+
+Dalam ungkapan ini, penyebut menghitung jumlah pengamatan yang melebihi persentil ke-95 \(F^{-1}_n(0.95)\) . Pembilang menjumlahkan kerugian untuk pengamatan yang melebihi \(F^{-1}_n(0.95)\) . Tabel dibawah ini merangkum penaksir untuk pecahan terpilih.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Example from Derrig et al}
+\CommentTok{\#BIData \textless{}{-} read.csv("Data/DerrigResampling.csv", header =T)}
+\NormalTok{BIData}\SpecialCharTok{$}\NormalTok{Censored }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{*}\NormalTok{(BIData}\SpecialCharTok{$}\NormalTok{AmountPaid }\SpecialCharTok{\textgreater{}=}\NormalTok{ BIData}\SpecialCharTok{$}\NormalTok{PolicyLimit)}
+\NormalTok{BIDataUncensored }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(BIData, Censored }\SpecialCharTok{==} \DecValTok{0}\NormalTok{)}
+
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)}
+\NormalTok{PercentVec }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.50}\NormalTok{, }\FloatTok{0.80}\NormalTok{, }\FloatTok{0.90}\NormalTok{, }\FloatTok{0.95}\NormalTok{, }\FloatTok{0.98}\NormalTok{)}
+\NormalTok{OutBoot1 }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{10}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(PercentVec)) \{}
+\NormalTok{OutBoot1[i,}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ PercentVec[i]}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{boot}\NormalTok{(}\AttributeTok{data=}\NormalTok{BIDataUncensored}\SpecialCharTok{$}\NormalTok{AmountPaid,}
+                \AttributeTok{statistic=}\ControlFlowTok{function}\NormalTok{(X,indices)}
+                    \FunctionTok{quantile}\NormalTok{(X[indices],PercentVec[i]),}
+                 \AttributeTok{R=}\DecValTok{1000}\NormalTok{)}
+\ControlFlowTok{if}\NormalTok{ (i}\SpecialCharTok{==}\DecValTok{1}\NormalTok{)\{bootreal }\OtherTok{\textless{}{-}}\NormalTok{ results}\SpecialCharTok{$}\NormalTok{t\}}
+\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ results}\SpecialCharTok{$}\NormalTok{t0}
+\NormalTok{OutBoot1[i,}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t)}\SpecialCharTok{{-}}\NormalTok{results}\SpecialCharTok{$}\NormalTok{t0 }
+\NormalTok{OutBoot1[i,}\DecValTok{4}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t) }
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{boot.ci}\NormalTok{(results, }\AttributeTok{type =} \FunctionTok{c}\NormalTok{(}\StringTok{"norm"}\NormalTok{, }\StringTok{"basic"}\NormalTok{, }\StringTok{"perc"}\NormalTok{))}
+\NormalTok{OutBoot1[i,}\DecValTok{5}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{2}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{6}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{3}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{7}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{basic[}\DecValTok{4}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{8}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{basic[}\DecValTok{5}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{9}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{percent[}\DecValTok{4}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{10}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{percent[}\DecValTok{5}\NormalTok{]}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.3-1} 
+
+}
+
+\end{figure}
+
+Misalnya, ketika pecahannya adalah 0,50, dapat melihat bahwa kuantil 2,5 bawah dan atas dari simulasi bootstrap adalah \(q_L= 6000\) dan \(q_U= 6700\). Ini membentuk interval kepercayaan bootstrap persentil. Dengan estimator nonparametrik \(6500\), ini menghasilkan batas bawah dan atas interval kepercayaan dasar masing-masing \(6300\) dan \(7000\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CTE.boot }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(data, indices, RiskLevel)\{}
+\NormalTok{  resample.data }\OtherTok{\textless{}{-}}\NormalTok{ data[indices,]}
+\NormalTok{  X }\OtherTok{\textless{}{-}}\NormalTok{ resample.data}\SpecialCharTok{$}\NormalTok{AmountPaid}
+\NormalTok{  cutoff }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(X, RiskLevel)}
+\NormalTok{  CTE }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(X}\SpecialCharTok{*}\NormalTok{(X }\SpecialCharTok{\textgreater{}}\NormalTok{ cutoff))}\SpecialCharTok{/}\FunctionTok{sum}\NormalTok{(X }\SpecialCharTok{\textgreater{}}\NormalTok{ cutoff)}
+  \FunctionTok{return}\NormalTok{(CTE) }
+\NormalTok{\}}
+
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2017}\NormalTok{)  }
+\NormalTok{PercentVec }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.50}\NormalTok{, }\FloatTok{0.80}\NormalTok{, }\FloatTok{0.90}\NormalTok{, }\FloatTok{0.95}\NormalTok{, }\FloatTok{0.98}\NormalTok{)}
+\NormalTok{OutBoot1 }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{10}\NormalTok{)}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(PercentVec)) \{}
+\NormalTok{OutBoot1[i,}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ PercentVec[i]}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{boot}\NormalTok{(}\AttributeTok{data=}\NormalTok{BIDataUncensored, }\AttributeTok{statistic=}\NormalTok{CTE.boot, }\AttributeTok{R=}\DecValTok{1000}\NormalTok{, }\AttributeTok{RiskLevel=}\NormalTok{PercentVec[i])}
+\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ results}\SpecialCharTok{$}\NormalTok{t0}
+\NormalTok{OutBoot1[i,}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t)}\SpecialCharTok{{-}}\NormalTok{results}\SpecialCharTok{$}\NormalTok{t0 }
+\NormalTok{OutBoot1[i,}\DecValTok{4}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(results}\SpecialCharTok{$}\NormalTok{t) }
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{boot.ci}\NormalTok{(results, }\AttributeTok{type =} \FunctionTok{c}\NormalTok{(}\StringTok{"norm"}\NormalTok{, }\StringTok{"basic"}\NormalTok{, }\StringTok{"perc"}\NormalTok{))}
+\NormalTok{OutBoot1[i,}\DecValTok{5}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{2}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{6}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{normal[}\DecValTok{3}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{7}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{basic[}\DecValTok{4}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{8}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{basic[}\DecValTok{5}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{9}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{percent[}\DecValTok{4}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{10}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{percent[}\DecValTok{5}\NormalTok{]}
+\NormalTok{  \}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.3-2} 
+
+}
+
+\end{figure}
+
+Tabel di atas menunjukkan kalkulasi serupa untuk tail value-at-risk. Dalam setiap kasus, dapat melihat bahwa deviasi standar bootstrap meningkat seiring dengan peningkatan fraksi. Hal ini karena ada lebih sedikit pengamatan untuk memperkirakan kuantil seiring meningkatnya fraksi, yang menyebabkan ketidaktepatan yang lebih besar. Interval kepercayaan juga menjadi lebih lebar. Menariknya, tampaknya tidak ada pola yang sama dalam estimasi bias tersebut.
+
+\hypertarget{bootstrap-parametrik}{%
+\subsection{(6.2.4) Bootstrap Parametrik}\label{bootstrap-parametrik}}
+
+Gagasan dari bootstrap nonparametrik adalah untuk mengambil sampel ulang dengan menggambar variabel independen dari fungsi distribusi kumulatif empiris \(F_n\). Sebaliknya, dengan bootstrap parametrik, kami menarik variabel independen dari \(F_{\widehat{\theta}}\) di mana distribusi yang mendasarinya diasumsikan dalam keluarga parametrik \(\mathcal{F}=\{F_{\theta},\theta\in\Theta\}\) . Biasanya, parameter dari distribusi ini diperkirakan berdasarkan sampel dan dinotasikan sebagai \(\hat{\theta}\).
+
+\texttt{contoh\ 6.2.4.} distribusi lognormal. Pertimbangkan lagi kumpulan datanya
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sample\_x }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{2.46}\NormalTok{,}\FloatTok{2.80}\NormalTok{,}\FloatTok{3.28}\NormalTok{,}\FloatTok{3.86}\NormalTok{,}\FloatTok{2.85}\NormalTok{,}\FloatTok{3.67}\NormalTok{,}\FloatTok{3.37}\NormalTok{,}\FloatTok{3.40}\NormalTok{,}
+              \FloatTok{5.22}\NormalTok{,}\FloatTok{2.55}\NormalTok{,}\FloatTok{2.79}\NormalTok{,}\FloatTok{4.50}\NormalTok{,}\FloatTok{3.37}\NormalTok{,}\FloatTok{2.88}\NormalTok{,}\FloatTok{1.44}\NormalTok{,}\FloatTok{2.56}\NormalTok{,}\FloatTok{2.00}\NormalTok{,}\FloatTok{2.07}\NormalTok{,}\FloatTok{2.19}\NormalTok{,}\FloatTok{1.77}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Bootstrap klasik (nonparametrik) didasarkan pada contoh berikut.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(sample\_x,}\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Sebagai gantinya, untuk bootstrap parametrik harus mengasumsikan bahwa distribusi dari \(x_i\) adalah dari kelompok tertentu. Sebagai contoh, kode berikut menggunakan distribusi lognormal.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(MASS)}
+\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{fitdistr}\NormalTok{(sample\_x, dlnorm, }\FunctionTok{list}\NormalTok{(}\AttributeTok{meanlog =} \DecValTok{1}\NormalTok{, }\AttributeTok{sdlog =} \DecValTok{1}\NormalTok{))}
+\NormalTok{fit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.4-1} 
+
+}
+
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rlnorm}\NormalTok{(}\FunctionTok{length}\NormalTok{(sample\_x), }\AttributeTok{meanlog=}\NormalTok{fit}\SpecialCharTok{$}\NormalTok{estimate[}\DecValTok{1}\NormalTok{], }\AttributeTok{sdlog=}\NormalTok{fit}\SpecialCharTok{$}\NormalTok{estimate[}\DecValTok{2}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2074}\NormalTok{)}
+\NormalTok{CV }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\ConstantTok{NA}\NormalTok{,}\FloatTok{1e5}\NormalTok{,}\DecValTok{2}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{(s }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{nrow}\NormalTok{(CV))\{}
+\NormalTok{x1 }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(sample\_x,}\AttributeTok{replace=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{x2 }\OtherTok{\textless{}{-}} \FunctionTok{rlnorm}\NormalTok{(}\FunctionTok{length}\NormalTok{(sample\_x), }\AttributeTok{meanlog=}\NormalTok{fit}\SpecialCharTok{$}\NormalTok{estimate[}\DecValTok{1}\NormalTok{], }\AttributeTok{sdlog=}\NormalTok{fit}\SpecialCharTok{$}\NormalTok{estimate[}\DecValTok{2}\NormalTok{])}
+\NormalTok{CV[s,] }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FunctionTok{sd}\NormalTok{(x1)}\SpecialCharTok{/}\FunctionTok{mean}\NormalTok{(x1),}\FunctionTok{sd}\NormalTok{(x2)}\SpecialCharTok{/}\FunctionTok{mean}\NormalTok{(x2))}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(}\FunctionTok{density}\NormalTok{(CV[,}\DecValTok{1}\NormalTok{]),}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{main=}\StringTok{""}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"Coefficient of Variation"}\NormalTok{, }\AttributeTok{lty=}\DecValTok{1}\NormalTok{)}
+\FunctionTok{lines}\NormalTok{(}\FunctionTok{density}\NormalTok{(CV[,}\DecValTok{2}\NormalTok{]),}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{lty=}\DecValTok{2}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\FunctionTok{sd}\NormalTok{(sample\_x)}\SpecialCharTok{/}\FunctionTok{mean}\NormalTok{(sample\_x),}\AttributeTok{lty=}\DecValTok{3}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topright"}\NormalTok{,}\FunctionTok{c}\NormalTok{(}\StringTok{"nonparametric"}\NormalTok{,}\StringTok{"parametric(LN)"}\NormalTok{),}
+       \AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{,}\StringTok{"blue"}\NormalTok{),}\AttributeTok{lty=}\DecValTok{1}\SpecialCharTok{:}\DecValTok{2}\NormalTok{,}\AttributeTok{bty=}\StringTok{"n"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.3-3} 
+
+}
+
+\end{figure}
+
+Grafik di atas membandingkan distribusi bootstrap untuk koefisien variasi, yang satu berdasarkan pendekatan nonparametrik dan yang lainnya berdasarkan pendekatan parametrik, dengan asumsi distribusi lognormal.
+
+\texttt{Contoh\ 6.2.5.} Pengamatan yang Disensor Bootstrap.
+
+Bootstrap parametrik menarik realisasi simulasi dari perkiraan parametrik dari fungsi distribusi. Dengan cara yang sama, sehingga dapat menggambar realisasi simulasi dari estimasi fungsi distribusi. Sebagai salah satu contoh, dengan mengambil dari estimasi yang dihaluskan dari fungsi distribusi yang diperkenalkan di Bagian 4.1.1.4 . Kasus khusus lainnya, yang dipertimbangkan di sini adalah menggambar estimasi dari estimator Kaplan-Meier yang dibahas di Bagian 4.3.2.2. Dengan cara ini, dapat ditangani pengamatan yang disensor.
+
+Secara khusus, kembali ke data cedera tubuh pada Contoh 6.2.1 dan 6.2.3 tetapi sekarang menyertakan 17 klaim yang disensor oleh batasan kebijakan. Dalam Contoh 4.3.6 menggunakan kumpulan data lengkap ini untuk mengestimasi estimator Kaplan-Meier dari fungsi survival yang diperkenalkan di Bagian 4.3.2.2 . Tabel 6.6 menyajikan estimasi bootstrap kuantil dari estimator fungsi survival Kaplan-Meier. Ini termasuk perkiraan presisi bootstrap, bias dan standar deviasi, serta interval kepercayaan dasar 95\%.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Example from Derrig et al}
+\FunctionTok{library}\NormalTok{(survival)                }\CommentTok{\# for Surv(), survfit()}
+\NormalTok{BIData}\SpecialCharTok{$}\NormalTok{UnCensored }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{*}\NormalTok{(BIData}\SpecialCharTok{$}\NormalTok{AmountPaid }\SpecialCharTok{\textless{}}\NormalTok{ BIData}\SpecialCharTok{$}\NormalTok{PolicyLimit)}
+\DocumentationTok{\#\# KM estimate}
+\NormalTok{KM0 }\OtherTok{\textless{}{-}} \FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(AmountPaid, UnCensored) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{,  }
+               \AttributeTok{type=}\StringTok{"kaplan{-}meier"}\NormalTok{, }\AttributeTok{data=}\NormalTok{BIData)}
+
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2019}\NormalTok{)}
+\NormalTok{PercentVec }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.50}\NormalTok{, }\FloatTok{0.80}\NormalTok{, }\FloatTok{0.90}\NormalTok{, }\FloatTok{0.95}\NormalTok{, }\FloatTok{0.98}\NormalTok{)}
+\NormalTok{OutBoot1 }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\ConstantTok{NA}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)}
+\NormalTok{KM.survobj }\OtherTok{\textless{}{-}} \FunctionTok{Surv}\NormalTok{(BIData}\SpecialCharTok{$}\NormalTok{AmountPaid, BIData}\SpecialCharTok{$}\NormalTok{UnCensored) }
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(PercentVec)) \{}
+\NormalTok{OutBoot1[i,}\DecValTok{1}\NormalTok{] }\OtherTok{\textless{}{-}}\NormalTok{ PercentVec[i]}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{bootkm}\NormalTok{(KM.survobj, }\AttributeTok{q=}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{PercentVec[i], }\AttributeTok{B=}\DecValTok{1000}\NormalTok{, }\AttributeTok{pr =} \ConstantTok{FALSE}\NormalTok{)}
+\ControlFlowTok{if}\NormalTok{ (i}\SpecialCharTok{==}\DecValTok{1}\NormalTok{)\{bootreal }\OtherTok{\textless{}{-}}\NormalTok{ results\}}
+\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(KM0, PercentVec[i])}\SpecialCharTok{$}\NormalTok{quantile}
+\NormalTok{OutBoot1[i,}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(results)}\SpecialCharTok{{-}}\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{]}
+\NormalTok{OutBoot1[i,}\DecValTok{4}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(results) }
+\CommentTok{\# temp \textless{}{-} boot.ci(results, type = c("norm",  "basic","perc"))}
+\NormalTok{OutBoot1[i,}\DecValTok{5}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{*}\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{]}\SpecialCharTok{{-}}\FunctionTok{quantile}\NormalTok{(results,.}\DecValTok{975}\NormalTok{, }\AttributeTok{type=}\DecValTok{6}\NormalTok{)}
+\NormalTok{OutBoot1[i,}\DecValTok{6}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{*}\NormalTok{OutBoot1[i,}\DecValTok{2}\NormalTok{]}\SpecialCharTok{{-}}\FunctionTok{quantile}\NormalTok{(results,.}\DecValTok{025}\NormalTok{, }\AttributeTok{type=}\DecValTok{6}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/6.2.3-4} 
+
+}
+
+\end{figure}
+
+Hasil pada tabel di atas konsisten dengan hasil untuk subsampel tanpa sensor pada Tabel 6.4 . Pada tabel di atas tercatat kesulitan dalam memperkirakan kuantil pada pecahan besar karena penyensoran. Namun, untuk fraksi berukuran sedang (0,50, 0,80, dan 0,90), estimasi nonparametrik Kaplan-Meier (KM NP) dari kuantil konsisten dengan Tabel 6.4 . Standar Deviasi bootstrap lebih kecil pada 0,50 (sesuai dengan median) tetapi lebih besar pada level 0,80 dan 0,90. Analisis data tersensor yang dirangkum dalam tabel di atas menggunakan lebih banyak data daripada analisis subsampel tanpa sensor pada Tabel 6.4 , tetapi juga mengalami kesulitan dalam mengekstraksi informasi untuk kuantil besar.
+=======
 \hypertarget{simulation-and-resampling}{%
 \chapter{Simulation and Resampling}\label{simulation-and-resampling}}
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 
 \hypertarget{premium-foundations}{%
 \chapter{Premium Foundations}\label{premium-foundations}}

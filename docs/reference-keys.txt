@@ -21,6 +21,9 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
+<<<<<<< HEAD
+=======
+>>>>>>> b050dc4bbcf1da0e8e83f8d06b5d09eda301f2c2
 introduction
 yosia
 actuarial-exam-question
@@ -30,13 +33,28 @@ actuarial-exam-question---continued
 analytic-results
 example
 tweedie-distribution
+>>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh
 simulasi
-simulation-and-resampling
+simulasi-dan-pengambilan-sampel-ulang
+dasar-dasar-simulasi
+menghasilkan-pengamatan-seragam-independen
+metode-transformasi-invers
+presisi-simulasi
+imulasi-dan-inferensi-statistik
+bootstrap-dan-resampling
+dasar-dasar-bootstrap
+presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error
+interval-keyakinan
+bootstrap-parametrik
 premium-foundations
 pengenalan-ratemaking
+<<<<<<< HEAD
+=======
+simulation-and-resampling
+>>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
@@ -52,3 +70,43 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
+=======
+tab:unnamed-chunk-8
+moments-and-distribution
+actuarial-exam-question-1
+insurance-portfolio-management-including-reinsurance-1
+introduction-to-insurance-portfolios
+tails-of-distributions
+classification-based-on-moments
+comparison-based-on-limiting-tail-behavior
+risk-measures
+coherent-risk-measures
+value-at-risk
+example-10.3.1.-var-for-the-exponential-distribution
+example-10.3.2.-var-for-the-normal-distribution.
+example-10.3.3.-var-for-transformed-variables.
+example-10.3.4.-var-for-a-discrete-random-variable
+tail-value-at-risk
+example-10.3.5
+example-10.3.6.-tvar-for-a-normal-distribution
+example-10.3.7.-tvar-of-a-lognormal-distribution
+example-10.3.8.-tvar-of-an-exponential-distribution
+example-10.3.9.-tvar-of-a-pareto-distribution
+reinsurance-1
+proportional-reinsurance
+quota-share-is-desirable-for-reinsurers
+optimizing-quota-share-agreements-for-insurers
+non-proportional-reinsurance
+the-optimality-of-stop-loss-insurance
+excess-of-loss
+optimal-choice-for-excess-of-loss-retention-limits
+additional-reinsurance-treaties
+surplus-share-proportional-treaty
+layers-of-coverage
+portfolio-management-example
+>>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
+>>>>>>> 857fa390d39bdd446cf0cc9881f0f9c1d53d5d9b
+>>>>>>> ff86535024daa8949d76711e56209bbf2ad81882
+simulasi-dan-inferensi-statistik
+>>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9

@@ -18,10 +18,7 @@ Sejumlah klaim acak $N$ yang dapat mewakili baik jumlah kerugian atau jumlah pem
 
 Misalnya, mungkin ada banyak klaim yang timbul dari satu kontrak. Itu wajar untuk dipikirkan $X_i>0$ karena jika $X_i=0$ maka tidak ada klaim yang terjadi. Biasanya kita menganggap bahwa kondisional pada $X_{1},X_{2},\ldots ,X_{n}$ adalah iid variabel acak. Distribusi dari N dikenal sebagai distribusi frekuensi , dan distribusi umum dari $X$ dikenal sebagai distribusi keparahan . Dengan berasumsi $N$ Dan $X$ sendiri. Dengan model risiko kolektif, sehingga dapat menguraikan kerugian agregat menjadi frekuensi $( N )$ proses dan tingkat keparahan $( X )$ model. Fleksibilitas ini memungkinkan analis untuk mengomentari dua komponen terpisah ini. Misalnya, pertumbuhan penjualan karena standar penjaminan emisi yang lebih rendah dapat menyebabkan frekuensi kerugian yang lebih tinggi tetapi mungkin tidak memengaruhi keparahan. Demikian pula, inflasi atau kekuatan ekonomi lainnya dapat berdampak pada keparahan tetapi tidak pada frekuensi.
 
-## Yosia
 
-
-<<<<<<< HEAD
 ## Moments and Distribution
 
 Jadi model risiko keleksif $SN=X_1+...+X_N$ dan tidak bergantung pada N
