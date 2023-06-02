@@ -6,15 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 5 Aggregate Loss Models | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
-=======
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
-=======
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
->>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
->>>>>>> b050dc4bbcf1da0e8e83f8d06b5d09eda301f2c2
 
   <meta property="og:title" content="Bab 5 Aggregate Loss Models | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -60,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -127,9 +123,12 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="toc.css" type="text/css" />
 </head>
 
 <body>
@@ -194,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#yosia"><i class="fa fa-check"></i><b>5.2</b> Yosia</a>
+<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
 <li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
@@ -202,14 +201,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
-<<<<<<< HEAD
-=======
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
 <li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
+<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>6.1</b> Dasar-Dasar Simulasi</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>6.1.1</b> Menghasilkan Pengamatan Seragam Independen</a></li>
+<li class="chapter" data-level="6.1.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>6.1.2</b> Metode Transformasi Invers</a></li>
+<li class="chapter" data-level="6.1.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-simulasi"><i class="fa fa-check"></i><b>6.1.3</b> (6.1.3) Presisi Simulasi</a></li>
+<li class="chapter" data-level="6.1.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#simulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>6.1.4</b> Simulasi dan Inferensi Statistik</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>6.2</b> Bootstrap dan Resampling</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>6.2.1</b> Dasar-dasar Bootstrap</a></li>
+<li class="chapter" data-level="6.2.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>6.2.2</b> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
+<li class="chapter" data-level="6.2.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
+<li class="chapter" data-level="6.2.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
@@ -218,50 +231,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
 <li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
 </ul></li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<li class="chapter" data-level="7" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html"><i class="fa fa-check"></i><b>7</b> SIMULASI DAN PENGAMBILAN SAMPEL ULANG</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>7.1</b> (6.1) Dasar-Dasar Simulasi</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>7.1.1</b> (6.1.1) Menghasilkan Pengamatan Seragam Independen</a></li>
-<li class="chapter" data-level="7.1.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>7.1.2</b> (6.1.2) Metode Transformasi Invers</a></li>
-<li class="chapter" data-level="7.1.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-simulasi"><i class="fa fa-check"></i><b>7.1.3</b> (6.1.3) Presisi Simulasi</a></li>
-<li class="chapter" data-level="7.1.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#imulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>7.1.4</b> (6.1.4) imulasi dan Inferensi Statistik</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>7.2</b> (6.2) Bootstrap dan Resampling</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>7.2.1</b> (6.2.1) Dasar-dasar Bootstrap</a></li>
-<li class="chapter" data-level="7.2.2" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>7.2.2</b> (6.2.2) Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
-<li class="chapter" data-level="7.2.3" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#interval-keyakinan"><i class="fa fa-check"></i><b>7.2.3</b> (6.2.3) Interval Keyakinan</a></li>
-<li class="chapter" data-level="7.2.4" data-path="simulasi-dan-pengambilan-sampel-ulang.html"><a href="simulasi-dan-pengambilan-sampel-ulang.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>7.2.4</b> (6.2.4) Bootstrap Parametrik</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>8</b> Premium Foundations</a></li>
-<li class="chapter" data-level="9" data-path="pengenalan-ratemaking.html"><a href="pengenalan-ratemaking.html"><i class="fa fa-check"></i><b>9</b> 7.1 Pengenalan Ratemaking</a></li>
-<li class="chapter" data-level="10" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html"><i class="fa fa-check"></i><b>10</b> 7.2 Metode Penentuan Tarif Gabungan</a>
->>>>>>> b050dc4bbcf1da0e8e83f8d06b5d09eda301f2c2
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
-<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
-</ul></li>
-<<<<<<< HEAD
-</ul></li>
-<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
-<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
-<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
-</ul></li>
->>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
 <li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a></li>
+<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="10.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>10.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>10.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="10.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>10.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>10.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>10.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="10.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>10.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
 <li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
@@ -271,37 +265,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
 <li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
 <li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
-<<<<<<< HEAD
-=======
-=======
-<li class="chapter" data-level="11" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>11</b> Risk Classification</a></li>
-<li class="chapter" data-level="12" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>12</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
-<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
-<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
-<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
-<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
-=======
-<li class="chapter" data-level="9" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>9</b> Risk Classification</a></li>
-<li class="chapter" data-level="10" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>10</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="11" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>11</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="12" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>12</b> Loss Reserving</a></li>
-<li class="chapter" data-level="13" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>13</b> Experience Rating using Bonus-Malus</a></li>
-<li class="chapter" data-level="14" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>14</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="15" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>15</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="16" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>16</b> Appendix A: Review of Statistical Inference</a></li>
-<li class="chapter" data-level="17" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>17</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="18" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>18</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="19" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>19</b> Appendix D: Summary of Distributions</a></li>
-<li class="chapter" data-level="20" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>20</b> Appendix E: Conventions for Notation</a></li>
->>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
->>>>>>> b050dc4bbcf1da0e8e83f8d06b5d09eda301f2c2
->>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
@@ -337,10 +300,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Sejumlah klaim acak <span class="math inline">\(N\)</span> yang dapat mewakili baik jumlah kerugian atau jumlah pembayaran. Sebaliknya, dalam model risiko individual biasanya menggunakan sejumlah kontrak tetap <span class="math inline">\(N\)</span>.<span class="math inline">\(X_1, X_2, \ldots, X_N\)</span> sebagai representasi dari jumlah masing-masing kerugian. Setiap kerugian mungkin atau mungkin tidak sesuai dengan kontrak unik.</p>
 <p>Misalnya, mungkin ada banyak klaim yang timbul dari satu kontrak. Itu wajar untuk dipikirkan <span class="math inline">\(X_i&gt;0\)</span> karena jika <span class="math inline">\(X_i=0\)</span> maka tidak ada klaim yang terjadi. Biasanya kita menganggap bahwa kondisional pada <span class="math inline">\(X_{1},X_{2},\ldots ,X_{n}\)</span> adalah iid variabel acak. Distribusi dari N dikenal sebagai distribusi frekuensi , dan distribusi umum dari <span class="math inline">\(X\)</span> dikenal sebagai distribusi keparahan . Dengan berasumsi <span class="math inline">\(N\)</span> Dan <span class="math inline">\(X\)</span> sendiri. Dengan model risiko kolektif, sehingga dapat menguraikan kerugian agregat menjadi frekuensi <span class="math inline">\(( N )\)</span> proses dan tingkat keparahan <span class="math inline">\(( X )\)</span> model. Fleksibilitas ini memungkinkan analis untuk mengomentari dua komponen terpisah ini. Misalnya, pertumbuhan penjualan karena standar penjaminan emisi yang lebih rendah dapat menyebabkan frekuensi kerugian yang lebih tinggi tetapi mungkin tidak memengaruhi keparahan. Demikian pula, inflasi atau kekuatan ekonomi lainnya dapat berdampak pada keparahan tetapi tidak pada frekuensi.</p>
 </div>
-<div id="yosia" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Yosia<a href="aggregate-loss-models.html#yosia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-## Moments and Distribution</p>
+<div id="moments-and-distribution" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Moments and Distribution<a href="aggregate-loss-models.html#moments-and-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Jadi model risiko keleksif <span class="math inline">\(SN=X_1+...+X_N\)</span> dan tidak bergantung pada N
 Misalkan <span class="math inline">\(μ = E(X_i)\)</span> dan <span class="math inline">\(σ^2=Var(X_i)\)</span> untuk semua <span class="math inline">\(i\)</span></p>
 <p>Dengan demikian, bersyarat pada <code>N</code> kita memiliki ekspektasi jumlah adalah jumlah ekspektasi dan varians.</p>

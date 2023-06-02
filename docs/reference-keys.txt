@@ -1,3 +1,4 @@
+tab:unnamed-chunk-40
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -21,11 +22,8 @@ reinsurance
 coinsurance-and-reinsurance
 model-selection-and-estimation
 aggregate-loss-models
-<<<<<<< HEAD
-=======
->>>>>>> b050dc4bbcf1da0e8e83f8d06b5d09eda301f2c2
 introduction
-yosia
+moments-and-distribution
 actuarial-exam-question
 example-5.3.2.-actuarial-exam-question
 stop-loss-insurance
@@ -33,17 +31,16 @@ actuarial-exam-question---continued
 analytic-results
 example
 tweedie-distribution
->>>>>>> 1507448987ea466b9753eba8674625da5f907a7f
 menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh
 simulasi
-simulasi-dan-pengambilan-sampel-ulang
+simulation-and-resampling
 dasar-dasar-simulasi
 menghasilkan-pengamatan-seragam-independen
 metode-transformasi-invers
 presisi-simulasi
-imulasi-dan-inferensi-statistik
+simulasi-dan-inferensi-statistik
 bootstrap-dan-resampling
 dasar-dasar-bootstrap
 presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error
@@ -51,31 +48,12 @@ interval-keyakinan
 bootstrap-parametrik
 premium-foundations
 pengenalan-ratemaking
-<<<<<<< HEAD
-=======
-simulation-and-resampling
->>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
 risk-classification
 experience-rating-using-credibility-theory
 insurance-portfolio-management-including-reinsurance
-loss-reserving
-experience-rating-using-bonus-malus
-aggregate-loss-models-1
-dependence-modeling
-appendix-a-review-of-statistical-inference
-appendix-b-iterated-expectations
-appendix-c-maximum-likelihood-theory
-appendix-d-summary-of-distributions
-appendix-e-conventions-for-notation
-<<<<<<< HEAD
-=======
-tab:unnamed-chunk-8
-moments-and-distribution
-actuarial-exam-question-1
-insurance-portfolio-management-including-reinsurance-1
 introduction-to-insurance-portfolios
 tails-of-distributions
 classification-based-on-moments
@@ -105,8 +83,12 @@ additional-reinsurance-treaties
 surplus-share-proportional-treaty
 layers-of-coverage
 portfolio-management-example
->>>>>>> 8262f607f9dc7e5f0fc37260e399a3d9592a7925
->>>>>>> 857fa390d39bdd446cf0cc9881f0f9c1d53d5d9b
->>>>>>> ff86535024daa8949d76711e56209bbf2ad81882
-simulasi-dan-inferensi-statistik
->>>>>>> d36714e59b68237bbbc6913e3e72785576a137d9
+loss-reserving
+experience-rating-using-bonus-malus
+aggregate-loss-models-1
+dependence-modeling
+appendix-a-review-of-statistical-inference
+appendix-b-iterated-expectations
+appendix-c-maximum-likelihood-theory
+appendix-d-summary-of-distributions
+appendix-e-conventions-for-notation
