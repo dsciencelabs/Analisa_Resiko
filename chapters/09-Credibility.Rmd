@@ -1,4 +1,5 @@
-# Pengantar Aplikasi Teori Kredibilitas
+# Experience Rating Using Credibility Theory
+## Pengantar Aplikasi Teori Kredibilitas
 
 Berapa premi yang harus dibebankan untuk menyediakan asuransi? Jawabannya tergantung pada eksposur risiko kerugian. Metode yang umum digunakan untuk menghitung premi asuransi adalah dengan menilai tertanggung menggunakan <abbr title="Rencana pemeringkatan yang menggunakan karakterisitik risiko tertanggung untuk menentukan">**rencana peringkat klasifikasi**.</abbr>  Rencana klasifikasi digunakan untuk memilih tarif asuransi berdasarkan karakteristik peringkat tertanggung seperti wilayah geografis, usia, dll. Semua rencana pemeringkatan klasifikasi menggunakan seperangkat kriteria terbatas untuk mengelompokkan tertanggung ke dalam "kelas" dan akan ada variasi risiko kerugian di antara tertanggung di dalam kelas tersebut.
 
@@ -17,7 +18,7 @@ Teori kredibilitas juga digunakan untuk menghitung tingkat untuk masing-masing k
 
 Menghitung nilai numerik untuk $Z$ membutuhkan analisis dan pemahaman data. Apa saja varians dalam jumlah kerugian dan ukuran kerugian untuk risiko? Berapa varians antara nilai yang diharapkan di seluruh risiko?
 
-# Limited Fluctuation Credibility
+## Limited Fluctuation Credibility
 
 Di bagian ini, kita akan mempelajari cara:
 
@@ -27,7 +28,7 @@ Di bagian ini, kita akan mempelajari cara:
 
 <abbr title="Metode kredibilitas yang berupaya membatasi fluktuasi dalam perkiraannya">**Kredibilitas fluktuasi terbatas**</abbr>, juga disebut "kredibilitas klasik" dan "kredibilitas Amerika", diberi nama ini karena metode ini secara eksplisit mencoba untuk membatasi fluktuasi dalam estimasi frekuensi klaim, tingkat keparahan, atau kerugian. Sebagai contoh, anggaplah Anda ingin memperkirakan jumlah klaim yang diharapkan sebanyak $N$ untuk sekelompok risiko dalam suatu kelas peringkat asuransi. Berapa banyak risiko yang diperlukan dalam kelas tersebut untuk memastikan bahwa tingkat akurasi tertentu dapat dicapai dalam estimasi? Pertama, pertanyaan ini akan dipertimbangkan dari perspektif berapa banyak klaim yang dibutuhkan.
 
-## Kredibilitas Penuh untuk Frekuensi Klaim
+### Kredibilitas Penuh untuk Frekuensi Klaim
 
 Misalkan N adalah variabel acak yang mewakili jumlah klaim untuk sekelompok risiko, misalnya, risiko dalam klasifikasi peringkat tertentu. Jumlah klaim yang teramati akan digunakan untuk mengestimasi $\mu_N=\mathrm{E}[N]$, jumlah klaim yang diharapkan. Seberapa besar $μ_N$ yang dibutuhkan untuk mendapatkan estimasi yang baik? Salah satu cara untuk mengukur keakuratan estimasi adalah dengan pernyataan seperti: "Nilai $N$ yang teramati harus berada dalam rentang 5% dari μN setidaknya 90% dari waktu." Menuliskan ini sebagai ekspresi matematis akan menghasilkan $\Pr[0.95 \mu_N \leq N \leq 1.05 \mu_N] \geq 0.90$. Menggeneralisasi pernyataan ini dengan membiarkan parameter rentang k menggantikan 5% dan tingkat probabilitas $p$ menggantikan 0,90 memberikan persamaan
 
@@ -69,7 +70,7 @@ Jika jumlah klaim yang diharapkan $μ_N$ lebih besar atau sama dengan $\lambda_{
 **Solusi**. Mengacu pada tabel distribusi normal standar,
 $y_p=\Phi^{-1}((p+1)/2)=\Phi^{-1}((0.95+1)/2)$$\Phi^{-1}(0.975)=1.960$. Dengan menggunakan nilai ini dan $k=.05$ lalu $\lambda_{kp} = (y_p/k)^{2}=(1.960/0.05)^{2}=1,536.64$. Setelah dibulatkan, standar kredibilitas penuhnya adalah 1.537.
 
-## Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni
+### Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni
 
 Kerugian agregat adalah total dari semua jumlah kerugian untuk risiko atau kelompok risiko. Membiarkan  $S$ mewakili kerugian agregat
 
@@ -106,7 +107,7 @@ n_S=\left(\frac{y_p}{k}\right)^2\left[\left(\frac{\sigma_N^2}{\mu_N}\right)+\lef
 
 **Solusi**. Karena jumlah klaim berdistribusi Poisson, maka $(\sigma_N^2/\mu_N)=1$. Rata-rata dari distribusi Pareto adalah $\mu_X=\theta/(\alpha-1)$ dan variansinya adalah $\sigma_X^2=\theta^{2}\alpha/[(\alpha-1)^{2}(\alpha-2)]$, sehingga $(\sigma_X/\mu_X)^2=\alpha/(\alpha-2)$. Menggabungkan istilah frekuensi dan severity memberikan $[(\sigma_N^2/\mu_N)+(\sigma_X/\mu_X)^2]=2(\alpha-1)/(\alpha-2)$. Dari tabel distribusi normal standar, didapatkan $y_p=\Phi^{-1}((0.95+1)/2)=1.960$. Standar kredibilitas penuh adalah $n_S=(1.96/0.05)^{2}[2(\alpha-1)/(\alpha-2)]=3,073.28(\alpha-1)/(\alpha-2)$. Jika $α=3$ maka $n_S=6,146.56$ untuk standar kredibilitas penuh sebesar 6.147. Perlu diperhatikan bahwa jumlah klaim yang jauh lebih banyak diperlukan untuk kredibilitas penuh untuk kerugian agregat dibandingkan dengan frekuensi saja.
 
-## Kredibilitas Penuh untuk Tingkat Keparahan
+### Kredibilitas Penuh untuk Tingkat Keparahan
 
 Misalkan X adalah variabel acak yang merepresentasikan besarnya satu klaim. Severity klaim adalah $\mu_X=\mathrm{E}(X)$. Anggaplah ${X_1,X_2, \ldots, X_n}$ adalah sampel acak dari n klaim yang akan digunakan untuk mengestimasi severity klaim $μ_X$. Klaim-klaim tersebut diasumsikan iid. Nilai rata-rata dari sampel adalah
 
@@ -135,7 +136,7 @@ Perhatikan bahwa istilah $\sigma_X/\mu_X$ adalah koefisien variasi untuk klaim i
 
 **Solusi**. Rata-rata Pareto adalah $\mu_X=\theta/(\alpha-1)$ dan variansnya adalah $\sigma_X^2=\theta^{2}\alpha/[(\alpha-1)^{2}(\alpha-2)]$ sehingga $(\sigma_X/\mu_X)^2=\alpha/(\alpha-2)$. Dari tabel distribusi normal standar, kita dapat menggunakan $y_p=\Phi^{-1}((0.95+1)/2)=1.960$. Standar kredibilitas penuh adalah $n_X=(1.96/0.05)^{2}[\alpha/(\alpha-2)]=1,536.64\alpha/(\alpha-2)$. Misalkan $α=3$ maka $n_X=4,609.92$ untuk standar kredibilitas penuh sebesar 4.610.
 
-## Kredibilitas parsial
+### Kredibilitas parsial
 
 Pada bagian sebelumnya, standar kredibilitas penuh dihitung untuk memperkirakan frekuensi ($n_f$), premi murni ($n_{PP}$), dan tingkat keparahan ($n_X$) - pada bagian ini, standar kredibilitas penuh ini akan ditandai dengan $n_0$. Dalam setiap kasus, standar kredibilitas penuh adalah jumlah klaim yang diharapkan untuk mencapai tingkat akurasi tertentu saat menggunakan data empiris untuk memperkirakan nilai yang diharapkan. Jika jumlah klaim yang diamati lebih besar atau sama dengan standar kredibilitas penuh, maka bobot kredibilitas penuh $Z = 1$ diberikan pada data.
 
@@ -176,7 +177,7 @@ $$\mathrm{Var}(\hat{\mu}_X)=\frac{n}{n_0}\mathrm{Var}(\bar{X})=\frac{n}{n_0}\fra
 
 Term terakhir adalah varians tepat dari rata-rata sampel $\bar{X}$ ketika ukuran sampel sama dengan standar kredibilitas penuh $n_0=n_X$.
 
-# Bühlmann Credibility
+## Bühlmann Credibility
 
 ***
 
@@ -247,7 +248,7 @@ Perlu diperhatikan bahwa pada kedua contoh tersebut, parameter risiko adalah kua
 
 Meskipun formula (9.7) diperkenalkan dengan menggunakan rating pengalaman sebagai contoh, model kredibilitas Bühlmann memiliki aplikasi yang lebih luas. Misalkan ada rencana rating dengan beberapa kelas. Formula kredibilitas (9.7) dapat digunakan untuk menentukan tarif kelas individu. Rata-rata keseluruhan $μ$ akan menjadi rata-rata kerugian untuk semua kelas yang digabungkan, $\bar{X}$ akan menjadi pengalaman untuk kelas individu, dan $μ^(θ)$ akan menjadi perkiraan kerugian untuk kelas tersebut.
 
-## Credibility Z, EPV, and VHM
+### Credibility Z, EPV, and VHM
 
 Ketika menghitung estimasi kredibilitas $μ^(θ)=Z\bar{X}+(1−Z)μ$, berapa bobot $Z$ yang harus diberikan pada pengalaman $\bar{X}$ dan berapa bobot $(1−Z)$ pada rata-rata keseluruhan $μ$? Dalam kredibilitas Bühlmann, terdapat tiga faktor yang perlu dipertimbangkan:
 
@@ -286,7 +287,7 @@ $$Z=\frac{VHM}{VHM+(EPV/n)} .$$
 
 Jumlah pengamatan $n$ tertangkap dalam istilah $(EPV/n)$. Seperti yang ditunjukkan di bullet (1) di awal bagian, $E(Var(\bar{X}|θ)) = EPV/n$. Seiring dengan bertambahnya jumlah pengamatan, varians yang diharapkan dari $\bar{X}$ menjadi lebih kecil dan kredibilitas $Z$ meningkat sehingga lebih banyak bobot diberikan pada $\bar{X}$ dalam perkiraan yang dibobotkan kredibilitas $μ^(θ)$.
 
-# Bühlmann-Straub Credibility
+## Bühlmann-Straub Credibility
 
 ***
 
