@@ -1,4 +1,5 @@
 # Experience Rating Using Credibility Theory
+
 ## Pengantar Aplikasi Teori Kredibilitas
 
 Berapa premi yang harus dibebankan untuk menyediakan asuransi? Jawabannya tergantung pada eksposur risiko kerugian. Metode yang umum digunakan untuk menghitung premi asuransi adalah dengan menilai tertanggung menggunakan <abbr title="Rencana pemeringkatan yang menggunakan karakterisitik risiko tertanggung untuk menentukan">**rencana peringkat klasifikasi**.</abbr>  Rencana klasifikasi digunakan untuk memilih tarif asuransi berdasarkan karakteristik peringkat tertanggung seperti wilayah geografis, usia, dll. Semua rencana pemeringkatan klasifikasi menggunakan seperangkat kriteria terbatas untuk mengelompokkan tertanggung ke dalam "kelas" dan akan ada variasi risiko kerugian di antara tertanggung di dalam kelas tersebut.
