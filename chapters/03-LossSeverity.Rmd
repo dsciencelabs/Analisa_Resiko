@@ -756,7 +756,7 @@ Reasuransi adalah pengaturan kontrak di mana perusahaan asuransi mengalihkan seb
 
 Perbedaan utama antara reasuransi dan koasuransi adalah arah pengalihan risiko. Dalam pengaturan reasuransi, perusahaan asuransi mengalihkan risiko kepada perusahaan asuransi lain, sedangkan dalam pengaturan koasuransi, beberapa perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Selain itu, reasuransi biasanya digunakan untuk melindungi penanggung dari kerugian akibat bencana atau untuk mengelola eksposur risiko mereka, sementara koasuransi sering digunakan untuk memungkinkan penanggung menanggung polis yang lebih besar daripada yang dapat mereka tangani sendiri.
 
-
+## Maximum Likelihood Estimation
 
 $$\begin{equation}
 
