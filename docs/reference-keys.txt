@@ -92,3 +92,13 @@ appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+actuarial-exam-question-1
+pengantar-aplikasi-teori-kredibilitas
+limited-fluctuation-credibility
+kredibilitas-penuh-untuk-frekuensi-klaim
+kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni
+kredibilitas-penuh-untuk-tingkat-keparahan
+kredibilitas-parsial
+bühlmann-credibility
+credibility-z-epv-and-vhm
+bühlmann-straub-credibility
