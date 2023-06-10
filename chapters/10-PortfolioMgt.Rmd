@@ -3,7 +3,7 @@
 Portofolio asuransi adalah kumpulan kontrak asuransi. Untuk membantu mengelola ketidakpastian portofolio, bab ini akan membahas mengenai:
 
 1. Menghitung kewajiban yang luar biasa besar dengan memeriksa bagian ekor dari distribusi,
-
+ 
 2. Menghitung risiko secara keseluruhan dengan memperkenalkan ringkasan yang dikenal sebagai ukuran risiko, dan
 
 3. Membahas opsi-opsi penyebaran risiko portofolio melalui reasuransi, yaitu pembelian proteksi asuransi oleh perusahaan asuransi.
