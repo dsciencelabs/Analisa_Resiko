@@ -6,11 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 6 Simulation and Resampling | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
-=======
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
->>>>>>> ba9f0d39632695941ca33dd0e276ee6d6606a0e5
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 6 Simulation and Resampling | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -27,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-02" />
+<meta name="date" content="2023-06-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -182,15 +174,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a></li>
-<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.2</b> modifikasi pertanggungan</a>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.2.1</b> policy deductibles</a></li>
-<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.2.2</b> 2. Policy Limit</a></li>
-<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.2.3</b> policy deductible and policy limit</a></li>
-<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.2.4</b> Coinsurance and inflation</a></li>
-<li class="chapter" data-level="3.2.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.2.5</b> Reinsurance</a></li>
-<li class="chapter" data-level="3.2.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.2.6</b> Coinsurance and Reinsurance</a></li>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
@@ -200,9 +218,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
@@ -226,6 +245,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
 <li class="chapter" data-level="6.2.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
 </ul></li>
+<li class="chapter" data-level="6.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation"><i class="fa fa-check"></i><b>6.3</b> Cross Validation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#k-fold-cross-validation"><i class="fa fa-check"></i><b>6.3.1</b> k-Fold Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#leave-one-out-cross-validation"><i class="fa fa-check"></i><b>6.3.2</b> 6.3.2 Leave-One-Out Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation-and-bootstrap"><i class="fa fa-check"></i><b>6.3.3</b> Cross-Validation and Bootstrap</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#importance-sampling"><i class="fa fa-check"></i><b>6.4</b> Importance Sampling</a></li>
+<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> 6.5.1 Metropolis Hastings</a></li>
+<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> 6.5.2 Gibbs Sampler</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
 <ul>
@@ -237,7 +265,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
@@ -264,7 +307,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
 <li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
 <li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
@@ -855,8 +924,565 @@ R \geq 38,416\frac{s_{h,R}^2}{\overline{h}_R^2}.
 <span id="cb41-22"><a href="simulation-and-resampling.html#cb41-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p><img src="images/6.2.3-4.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Hasil pada tabel di atas konsisten dengan hasil untuk subsampel tanpa sensor pada Tabel 6.4 . Pada tabel di atas tercatat kesulitan dalam memperkirakan kuantil pada pecahan besar karena penyensoran. Namun, untuk fraksi berukuran sedang (0,50, 0,80, dan 0,90), estimasi nonparametrik Kaplan-Meier (KM NP) dari kuantil konsisten dengan Tabel 6.4 . Standar Deviasi bootstrap lebih kecil pada 0,50 (sesuai dengan median) tetapi lebih besar pada level 0,80 dan 0,90. Analisis data tersensor yang dirangkum dalam tabel di atas menggunakan lebih banyak data daripada analisis subsampel tanpa sensor pada Tabel 6.4 , tetapi juga mengalami kesulitan dalam mengekstraksi informasi untuk kuantil besar.</p>
-
 </div>
+</div>
+<div id="cross-validation" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Cross Validation<a href="simulation-and-resampling.html#cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dalam bagian ini, kita akan mempelajari caranya:</p>
+<ul>
+<li><p>Membandingkan dan membedakan validasi silang dengan teknik simulasi dan metode bootstrap.</p></li>
+<li><p>Menggunakan teknik validasi silang untuk pemilihan model</p></li>
+<li><p>Menjelaskan metode jackknife sebagai kasus khusus validasi silang dan menghitung estimasi bias dan kesalahan standar jackknife</p></li>
+</ul>
+<p>Validasi silang, yang diperkenalkan secara singkat pada Bagian 4.2.4, adalah teknik yang didasarkan pada hasil simulasi. Sekarang kita akan membandingkan dan membedakan validasi silang dengan teknik simulasi lain yang telah diperkenalkan dalam bab ini.”</p>
+<ul>
+<li><p>Simulasi, atau Monte-Carlo, yang diperkenalkan pada Bagian 6.1, memungkinkan kita untuk menghitung nilai ekspektasi dan rangkuman distribusi statistik lainnya, seperti nilai-p, dengan mudah.</p></li>
+<li><p>Bootstrap, dan metode resampling lainnya yang diperkenalkan pada Bagian 6.2, menyediakan estimator presisi, atau variabilitas, statistik.</p></li>
+<li><p>Validasi silang penting ketika menilai seberapa akurat model prediktif akan bekerja dalam praktiknya.</p></li>
+</ul>
+<p>Tumpang tindih memang ada, namun tetap saja akan sangat membantu untuk memikirkan tujuan luas yang terkait dengan setiap metode statistik.</p>
+<p>Untuk membahas validasi silang, mari kita ingat kembali dari Bagian 4.2 beberapa ide kunci dari validasi model. Ketika menilai, atau memvalidasi, sebuah model, kita melihat kinerja yang diukur pada data baru, atau setidaknya bukan data yang digunakan untuk mencocokkan model. Pendekatan klasik, yang dijelaskan di Bagian 4.2.3, adalah membagi sampel menjadi dua: satu bagian (dataset pelatihan) digunakan untuk menyesuaikan model dan bagian lainnya (dataset pengujian) digunakan untuk memvalidasi. Namun, keterbatasan dari pendekatan ini adalah bahwa hasilnya bergantung pada pembagian; meskipun keseluruhan sampel tetap, pembagian antara sub-sampel pelatihan dan pengujian bervariasi secara acak. Sampel pelatihan yang berbeda berarti parameter estimasi model akan berbeda. Parameter model yang berbeda dan sampel uji yang berbeda berarti statistik validasi akan berbeda. Dua orang analis dapat menggunakan data yang sama dan model yang sama, namun mencapai kesimpulan yang berbeda tentang kelayakan suatu model (berdasarkan pembagian acak yang berbeda), sebuah situasi yang membuat frustasi.</p>
+<div id="k-fold-cross-validation" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> k-Fold Cross-Validation<a href="simulation-and-resampling.html#k-fold-cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk mengurangi kesulitan ini, biasanya digunakan pendekatan validasi silang seperti yang diperkenalkan di Bagian 4.2.4. Ide utamanya adalah meniru pendekatan pengujian/pelatihan dasar untuk validasi model dengan mengulanginya berkali-kali melalui rata-rata dari beberapa bagian data yang berbeda. Keuntungan utamanya adalah bahwa statistik validasi tidak terikat pada model parametrik (atau nonparametrik) tertentu - seseorang dapat menggunakan statistik nonparametrik atau statistik yang memiliki interpretasi ekonomi - sehingga dapat digunakan untuk membandingkan model yang tidak bersarang (tidak seperti prosedur rasio kemungkinan).</p>
+<p><strong>Contoh 6.3.1. Dana Properti Wisconsin.</strong> Untuk data dana properti 2010 yang diperkenalkan pada Bagian 1.3, kami mencocokkan distribusi gamma dan Pareto dengan 1.377 data klaim. Untuk rincian kecocokan terkait, lihat Lampiran Bagian 15.4.4. Sekarang kita mempertimbangkan statistik Kolmogorov-Smirnov yang diperkenalkan di Bagian 4.1.2.2. Ketika seluruh dataset telah sesuai, statistik kecocokan Kolmogorov-Smirnov untuk distribusi gamma adalah 0,2639 dan untuk distribusi Pareto adalah 0,0478. Nilai yang lebih rendah untuk distribusi Pareto menunjukkan bahwa distribusi ini lebih cocok daripada gamma.</p>
+<p>Untuk melihat bagaimana validasi silang k-lipatan bekerja, kami membagi data secara acak menjadi <span class="math inline">\(k=8\)</span> kelompok, atau lipatan, yang masing-masing memiliki sekitar <span class="math inline">\(1377/8≈172\)</span> pengamatan. Kemudian, kami mencocokkan model gamma dan Pareto pada set data dengan tujuh lipatan pertama (sekitar $172⋅7 = 120$4 pengamatan), menentukan estimasi parameter, dan kemudian menggunakan model-model yang cocok dengan data yang ditahan untuk menentukan statistik Kolmogorov-Smirnov.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="simulation-and-resampling.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(VGAM)</span></code></pre></div>
+<pre><code>## Loading required package: stats4</code></pre>
+<pre><code>## Loading required package: splines</code></pre>
+<pre><code>## 
+## Attaching package: &#39;VGAM&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:boot&#39;:
+## 
+##     logit, simplex</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="simulation-and-resampling.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb47-2"><a href="simulation-and-resampling.html#cb47-2" aria-hidden="true" tabindex="-1"></a>claim_lev <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/CLAIMLEVEL.csv&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb47-3"><a href="simulation-and-resampling.html#cb47-3" aria-hidden="true" tabindex="-1"></a>claim_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(claim_lev, Year <span class="sc">==</span> <span class="dv">2010</span>); </span>
+<span id="cb47-4"><a href="simulation-and-resampling.html#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="simulation-and-resampling.html#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Randomly re-order the data - &quot;shuffle it&quot;</span></span>
+<span id="cb47-6"><a href="simulation-and-resampling.html#cb47-6" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(claim_data)</span>
+<span id="cb47-7"><a href="simulation-and-resampling.html#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12347</span>)</span>
+<span id="cb47-8"><a href="simulation-and-resampling.html#cb47-8" aria-hidden="true" tabindex="-1"></a>cvdata <span class="ot">&lt;-</span> claim_data[<span class="fu">sample</span>(n), ]</span>
+<span id="cb47-9"><a href="simulation-and-resampling.html#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of folds</span></span>
+<span id="cb47-10"><a href="simulation-and-resampling.html#cb47-10" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">8</span></span>
+<span id="cb47-11"><a href="simulation-and-resampling.html#cb47-11" aria-hidden="true" tabindex="-1"></a>cvalvec <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>,<span class="dv">2</span>,k)</span>
+<span id="cb47-12"><a href="simulation-and-resampling.html#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k) {</span>
+<span id="cb47-13"><a href="simulation-and-resampling.html#cb47-13" aria-hidden="true" tabindex="-1"></a>  indices <span class="ot">&lt;-</span> (((i<span class="dv">-1</span>) <span class="sc">*</span> <span class="fu">round</span>((<span class="dv">1</span><span class="sc">/</span>k)<span class="sc">*</span><span class="fu">nrow</span>(cvdata))) <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>((i<span class="sc">*</span><span class="fu">round</span>((<span class="dv">1</span><span class="sc">/</span>k) <span class="sc">*</span> <span class="fu">nrow</span>(cvdata))))</span>
+<span id="cb47-14"><a href="simulation-and-resampling.html#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Pareto</span></span>
+<span id="cb47-15"><a href="simulation-and-resampling.html#cb47-15" aria-hidden="true" tabindex="-1"></a>  fit.pareto <span class="ot">&lt;-</span> <span class="fu">vglm</span>(Claim <span class="sc">~</span> <span class="dv">1</span>, paretoII, <span class="at">loc =</span> <span class="dv">0</span>, <span class="at">data =</span> cvdata[<span class="sc">-</span>indices,])</span>
+<span id="cb47-16"><a href="simulation-and-resampling.html#cb47-16" aria-hidden="true" tabindex="-1"></a>  ksResultPareto <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(cvdata[indices,]<span class="sc">$</span>Claim, <span class="st">&quot;pparetoII&quot;</span>, <span class="at">loc =</span> <span class="dv">0</span>, <span class="at">shape =</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.pareto)[<span class="dv">2</span>]), </span>
+<span id="cb47-17"><a href="simulation-and-resampling.html#cb47-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">scale =</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.pareto)[<span class="dv">1</span>]))</span>
+<span id="cb47-18"><a href="simulation-and-resampling.html#cb47-18" aria-hidden="true" tabindex="-1"></a>  cvalvec[<span class="dv">1</span>,i] <span class="ot">&lt;-</span> ksResultPareto<span class="sc">$</span>statistic</span>
+<span id="cb47-19"><a href="simulation-and-resampling.html#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Gamma</span></span>
+<span id="cb47-20"><a href="simulation-and-resampling.html#cb47-20" aria-hidden="true" tabindex="-1"></a>  fit.gamma <span class="ot">&lt;-</span> <span class="fu">glm</span>(Claim <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> cvdata[<span class="sc">-</span>indices,], <span class="at">family =</span> <span class="fu">Gamma</span>(<span class="at">link =</span> log)) </span>
+<span id="cb47-21"><a href="simulation-and-resampling.html#cb47-21" aria-hidden="true" tabindex="-1"></a>  gamma_theta <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.gamma)) <span class="sc">*</span> <span class="fu">gamma.dispersion</span>(fit.gamma)  </span>
+<span id="cb47-22"><a href="simulation-and-resampling.html#cb47-22" aria-hidden="true" tabindex="-1"></a>  alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">gamma.dispersion</span>(fit.gamma)</span>
+<span id="cb47-23"><a href="simulation-and-resampling.html#cb47-23" aria-hidden="true" tabindex="-1"></a>  ksResultGamma <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(cvdata[indices,]<span class="sc">$</span>Claim, <span class="st">&quot;pgamma&quot;</span>, <span class="at">shape =</span> alpha, <span class="at">scale =</span> gamma_theta)</span>
+<span id="cb47-24"><a href="simulation-and-resampling.html#cb47-24" aria-hidden="true" tabindex="-1"></a>  cvalvec[<span class="dv">2</span>,i] <span class="ot">&lt;-</span> ksResultGamma<span class="sc">$</span>statistic</span>
+<span id="cb47-25"><a href="simulation-and-resampling.html#cb47-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb47-26"><a href="simulation-and-resampling.html#cb47-26" aria-hidden="true" tabindex="-1"></a>KScv <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(cvalvec)<span class="sc">/</span>k</span></code></pre></div>
+<p>Hasilnya tampak pada Gambar 6.12 di mana sumbu horizontal adalah Fold=1. Proses ini diulangi untuk tujuh lipatan lainnya. Hasil yang dirangkum dalam Gambar 6.12 menunjukkan bahwa Pareto secara konsisten memberikan distribusi prediktif yang lebih dapat diandalkan daripada gamma.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="simulation-and-resampling.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the statistics</span></span>
+<span id="cb48-2"><a href="simulation-and-resampling.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(<span class="dv">1</span><span class="sc">:</span>k,<span class="fu">t</span>(cvalvec),<span class="at">type=</span><span class="st">&quot;b&quot;</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="at">lty=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, </span>
+<span id="cb48-3"><a href="simulation-and-resampling.html#cb48-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.4</span>), <span class="at">pch =</span> <span class="dv">0</span>, <span class="at">xlab=</span><span class="st">&quot;Fold&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;KS Statistic&quot;</span>)</span>
+<span id="cb48-4"><a href="simulation-and-resampling.html#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;left&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Pareto&quot;</span>, <span class="st">&quot;Gamma&quot;</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="at">lty=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">bty=</span><span class="st">&quot;n&quot;</span>)</span></code></pre></div>
+<img src="Analisa_Resiko_files/figure-html/unnamed-chunk-34-1.png" width="672" />
+<p class="caption">
+“Figure 6.2:”
+<strong>
+Statistik Kolmogorov-Smirnov (KS) yang telah divalidasi silang untuk Data Klaim Dana Asuransi.
+</strong>
+Garis hitam solid untuk distribusi Pareto, garis putus-putus hijau untuk distribusi gamma. Statistik KS mengukur deviasi terbesar antara distribusi yang sesuai dengan distribusi empiris untuk masing-masing dari 8 kelompok, atau lipatan, data yang dipilih secara acak.
+</p>
+</div>
+<div id="leave-one-out-cross-validation" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> 6.3.2 Leave-One-Out Cross-Validation<a href="simulation-and-resampling.html#leave-one-out-cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kasus khusus di mana <span class="math inline">\(k=n\)</span> dikenal sebagai validasi silang tinggalkan-satu-keluar. Kasus ini secara historis sangat menonjol dan terkait erat dengan jackknifestatistik yang merupakan pendahulu dari teknik bootstrap.</p>
+<p>Meskipun kita menyajikannya sebagai kasus khusus validasi silang, akan sangat membantu jika kami memberikan definisi eksplisit. Pertimbangkan sebuah statistik umum <span class="math inline">\(θˆ = t(x)\)</span> yang merupakan penaksir untuk sebuah parameter yang diminati <span class="math inline">\(θ\)</span>. Ide dari jackknife adalah menghitung n nilai <span class="math inline">\(θˆ_{-i} = t(x-i)\)</span>, di mana <span class="math inline">\(x-i\)</span> adalah subsampel dari <span class="math inline">\(x\)</span> dengan nilai <span class="math inline">\(ke-i\)</span> dihilangkan. Rata-rata dari nilai-nilai ini dilambangkan sebagai</p>
+<p><span class="math display">\[\overline{\widehat{\theta}}_{(\cdot)}=\frac{1}{n}\sum_{i=1}^n \widehat{\theta}_{-i} .\]</span></p>
+<p>Nilai-nilai ini dapat digunakan untuk membuat estimasi bias dari statistik <span class="math inline">\(\hatθ\)</span></p>
+<p><span class="math display">\[\begin{equation}
+Bias_{jack} = (n-1) \left(\overline{\widehat{\theta}}_{(\cdot)} - \widehat{\theta}\right)
+\tag{6.3}
+\end{equation}\]</span></p>
+<p>serta estimasi standar deviasi</p>
+<p><span class="math display">\[\begin{equation}
+s_{jack} =\sqrt{\frac{n-1}{n}\sum_{i=1}^n \left(\widehat{\theta}_{-i} -\overline{\widehat{\theta}}_{(\cdot)}\right)^2} ~.
+\tag{6.4}
+\end{equation}\]</span></p>
+<p><strong>Contoh 6.3.2. Koefisien Variasi.</strong> Sebagai ilustrasi, pertimbangkan sebuah sampel fiktif kecil <span class="math inline">\(x = {x_1,...,x_n}\)</span> dengan realisasi</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="simulation-and-resampling.html#cb49-1" aria-hidden="true" tabindex="-1"></a>sample_x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.46</span>,<span class="fl">2.80</span>,<span class="fl">3.28</span>,<span class="fl">3.86</span>,<span class="fl">2.85</span>,<span class="fl">3.67</span>,<span class="fl">3.37</span>,<span class="fl">3.40</span>,</span>
+<span id="cb49-2"><a href="simulation-and-resampling.html#cb49-2" aria-hidden="true" tabindex="-1"></a>              <span class="fl">5.22</span>,<span class="fl">2.55</span>,<span class="fl">2.79</span>,<span class="fl">4.50</span>,<span class="fl">3.37</span>,<span class="fl">2.88</span>,<span class="fl">1.44</span>,<span class="fl">2.56</span>,<span class="fl">2.00</span>,<span class="fl">2.07</span>,<span class="fl">2.19</span>,<span class="fl">1.77</span>)</span></code></pre></div>
+<p>Misalkan kita tertarik dengan <span class="math inline">\(\theta = CV = \sqrt{\mathrm{Var~}[X]}/\mathrm{E~}[X]\)</span></p>
+<p>Dengan dataset ini, estimator koefisien variasi menjadi 0,31196. Namun, seberapa handalkah estimasi tersebut? Untuk menjawab pertanyaan ini, kita dapat menghitung estimator pisau lipat dari bias dan deviasi standarnya. Kode berikut ini menunjukkan bahwa penaksir jackknife untuk bias adalah <span class="math inline">\(Bias_{jack} = -0,00627\)</span> dan standar deviasi jackknife adalah <span class="math inline">\(s_{jack} = 0,01293\)</span>.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="simulation-and-resampling.html#cb50-1" aria-hidden="true" tabindex="-1"></a>CVar <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sqrt</span>(<span class="fu">var</span>(x))<span class="sc">/</span><span class="fu">mean</span>(x)</span>
+<span id="cb50-2"><a href="simulation-and-resampling.html#cb50-2" aria-hidden="true" tabindex="-1"></a>JackCVar <span class="ot">&lt;-</span> <span class="cf">function</span>(i) <span class="fu">sqrt</span>(<span class="fu">var</span>(sample_x[<span class="sc">-</span>i]))<span class="sc">/</span><span class="fu">mean</span>(sample_x[<span class="sc">-</span>i])</span>
+<span id="cb50-3"><a href="simulation-and-resampling.html#cb50-3" aria-hidden="true" tabindex="-1"></a>JackTheta <span class="ot">&lt;-</span> <span class="fu">Vectorize</span>(JackCVar)(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(sample_x))</span>
+<span id="cb50-4"><a href="simulation-and-resampling.html#cb50-4" aria-hidden="true" tabindex="-1"></a>BiasJack <span class="ot">&lt;-</span> (<span class="fu">length</span>(sample_x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>(<span class="fu">mean</span>(JackTheta) <span class="sc">-</span> <span class="fu">CVar</span>(sample_x))</span>
+<span id="cb50-5"><a href="simulation-and-resampling.html#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(JackTheta)</span></code></pre></div>
+<pre><code>## [1] 0.01293001</code></pre>
+<p><strong>Contoh 6.3.3. Klaim Cidera Badan dan Rasio Eliminasi Kerugian.</strong> Pada Contoh 6.2.1, kita telah menunjukkan bagaimana menghitung estimasi bootstrap dari bias dan deviasi standar untuk rasio eliminasi kerugian dengan menggunakan data klaim cedera badan pada Contoh 4.1.11. Sekarang kita menindaklanjuti dengan memberikan jumlah yang sebanding dengan menggunakan statistik jackknife.</p>
+<p>Tabel 6.7 merangkum hasil estimasi jackknife. Tabel ini menunjukkan bahwa estimasi jackknife terhadap bias dan deviasi standar dari rasio eliminasi kerugian <span class="math inline">\(E [min (X, d)]/E [X]\)</span> sebagian besar konsisten dengan metodologi bootstrap. Selain itu, kita dapat menggunakan standar deviasi untuk membangun interval kepercayaan berbasis normal, yang berpusat di sekitar penaksir yang dikoreksi bias. Sebagai contoh, pada <span class="math inline">\(d = 14000\)</span>, kita melihat pada Contoh 4.1.11 bahwa estimasi nonparametrik dari <span class="math inline">\(LER\)</span> adalah 0.97678. Estimasi ini memiliki bias sebesar 0,00010, sehingga menghasilkan estimator terkoreksi-bias sebesar 0,97688. Interval kepercayaan 95% dihasilkan dengan membuat interval dua kali panjang 1,96 deviasi standar jackknife, yang berpusat pada estimator terkoreksi bias (1,96 adalah perkiraan kuantil ke-97,5 dari distribusi normal standar).</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="simulation-and-resampling.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb52-2"><a href="simulation-and-resampling.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Example from Derrig et al</span></span>
+<span id="cb52-3"><a href="simulation-and-resampling.html#cb52-3" aria-hidden="true" tabindex="-1"></a>BIData <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/DerrigResampling.csv&quot;</span>, <span class="at">header =</span>T)</span>
+<span id="cb52-4"><a href="simulation-and-resampling.html#cb52-4" aria-hidden="true" tabindex="-1"></a>BIData<span class="sc">$</span>Censored <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">*</span>(BIData<span class="sc">$</span>AmountPaid <span class="sc">&gt;=</span> BIData<span class="sc">$</span>PolicyLimit)</span>
+<span id="cb52-5"><a href="simulation-and-resampling.html#cb52-5" aria-hidden="true" tabindex="-1"></a>BIDataUncensored <span class="ot">&lt;-</span> <span class="fu">subset</span>(BIData, Censored <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb52-6"><a href="simulation-and-resampling.html#cb52-6" aria-hidden="true" tabindex="-1"></a>LER.boot <span class="ot">&lt;-</span> <span class="cf">function</span>(ded, data, indices){</span>
+<span id="cb52-7"><a href="simulation-and-resampling.html#cb52-7" aria-hidden="true" tabindex="-1"></a>  resample.data <span class="ot">&lt;-</span> data[indices,]</span>
+<span id="cb52-8"><a href="simulation-and-resampling.html#cb52-8" aria-hidden="true" tabindex="-1"></a>  sumClaims <span class="ot">&lt;-</span> <span class="fu">sum</span>(resample.data<span class="sc">$</span>AmountPaid)</span>
+<span id="cb52-9"><a href="simulation-and-resampling.html#cb52-9" aria-hidden="true" tabindex="-1"></a>  sumClaims_d <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">pmin</span>(resample.data<span class="sc">$</span>AmountPaid,ded))</span>
+<span id="cb52-10"><a href="simulation-and-resampling.html#cb52-10" aria-hidden="true" tabindex="-1"></a>  LER <span class="ot">&lt;-</span>   sumClaims_d<span class="sc">/</span>sumClaims</span>
+<span id="cb52-11"><a href="simulation-and-resampling.html#cb52-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(LER)  </span>
+<span id="cb52-12"><a href="simulation-and-resampling.html#cb52-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb52-13"><a href="simulation-and-resampling.html#cb52-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-14"><a href="simulation-and-resampling.html#cb52-14" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> BIDataUncensored<span class="sc">$</span>AmountPaid</span>
+<span id="cb52-15"><a href="simulation-and-resampling.html#cb52-15" aria-hidden="true" tabindex="-1"></a>LER.jack<span class="ot">&lt;-</span> <span class="cf">function</span>(ded,i){</span>
+<span id="cb52-16"><a href="simulation-and-resampling.html#cb52-16" aria-hidden="true" tabindex="-1"></a>  LER <span class="ot">&lt;-</span>   <span class="fu">sum</span>(<span class="fu">pmin</span>(x[<span class="sc">-</span>i],ded))<span class="sc">/</span><span class="fu">sum</span>(x[<span class="sc">-</span>i])</span>
+<span id="cb52-17"><a href="simulation-and-resampling.html#cb52-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(LER)  </span>
+<span id="cb52-18"><a href="simulation-and-resampling.html#cb52-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb52-19"><a href="simulation-and-resampling.html#cb52-19" aria-hidden="true" tabindex="-1"></a>LER <span class="ot">&lt;-</span> <span class="cf">function</span>(ded) <span class="fu">sum</span>(<span class="fu">pmin</span>(x,ded))<span class="sc">/</span><span class="fu">sum</span>(x)</span>
+<span id="cb52-20"><a href="simulation-and-resampling.html#cb52-20" aria-hidden="true" tabindex="-1"></a><span class="do">##Derrig et al</span></span>
+<span id="cb52-21"><a href="simulation-and-resampling.html#cb52-21" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2019</span>)</span>
+<span id="cb52-22"><a href="simulation-and-resampling.html#cb52-22" aria-hidden="true" tabindex="-1"></a>dVec2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">5000</span>, <span class="dv">10500</span>, <span class="dv">11500</span>, <span class="dv">14000</span>, <span class="dv">18500</span>)</span>
+<span id="cb52-23"><a href="simulation-and-resampling.html#cb52-23" aria-hidden="true" tabindex="-1"></a>OutJack <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>,<span class="fu">length</span>(dVec2),<span class="dv">8</span>)</span>
+<span id="cb52-24"><a href="simulation-and-resampling.html#cb52-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(dVec2)) {</span>
+<span id="cb52-25"><a href="simulation-and-resampling.html#cb52-25" aria-hidden="true" tabindex="-1"></a>OutJack[j,<span class="dv">1</span>] <span class="ot">&lt;-</span> dVec2[j]</span>
+<span id="cb52-26"><a href="simulation-and-resampling.html#cb52-26" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data=</span>BIDataUncensored, <span class="at">statistic=</span>LER.boot, <span class="at">R=</span><span class="dv">1000</span>, <span class="at">ded=</span>dVec2[j])</span>
+<span id="cb52-27"><a href="simulation-and-resampling.html#cb52-27" aria-hidden="true" tabindex="-1"></a>OutJack[j,<span class="dv">2</span>] <span class="ot">&lt;-</span> results<span class="sc">$</span>t0</span>
+<span id="cb52-28"><a href="simulation-and-resampling.html#cb52-28" aria-hidden="true" tabindex="-1"></a>biasboot <span class="ot">&lt;-</span> <span class="fu">mean</span>(results<span class="sc">$</span>t)<span class="sc">-</span>results<span class="sc">$</span>t0 <span class="ot">-&gt;</span> OutJack[j,<span class="dv">3</span>]</span>
+<span id="cb52-29"><a href="simulation-and-resampling.html#cb52-29" aria-hidden="true" tabindex="-1"></a>sdboot <span class="ot">&lt;-</span> <span class="fu">sd</span>(results<span class="sc">$</span>t) <span class="ot">-&gt;</span> OutJack[j,<span class="dv">4</span>]</span>
+<span id="cb52-30"><a href="simulation-and-resampling.html#cb52-30" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(results)</span>
+<span id="cb52-31"><a href="simulation-and-resampling.html#cb52-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-32"><a href="simulation-and-resampling.html#cb52-32" aria-hidden="true" tabindex="-1"></a>LER.jack.ded<span class="ot">&lt;-</span> <span class="cf">function</span>(i) <span class="fu">LER.jack</span>(<span class="at">ded=</span>dVec2[j],i)</span>
+<span id="cb52-33"><a href="simulation-and-resampling.html#cb52-33" aria-hidden="true" tabindex="-1"></a>JackTheta.ded <span class="ot">&lt;-</span> <span class="fu">Vectorize</span>(LER.jack.ded)(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(x))</span>
+<span id="cb52-34"><a href="simulation-and-resampling.html#cb52-34" aria-hidden="true" tabindex="-1"></a>OutJack[j,<span class="dv">5</span>] <span class="ot">&lt;-</span> BiasJack.ded <span class="ot">&lt;-</span> (<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>(<span class="fu">mean</span>(JackTheta.ded) <span class="sc">-</span> <span class="fu">LER</span>(<span class="at">ded=</span>dVec2[j]))</span>
+<span id="cb52-35"><a href="simulation-and-resampling.html#cb52-35" aria-hidden="true" tabindex="-1"></a>OutJack[j,<span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="fu">sd</span>(JackTheta.ded)</span>
+<span id="cb52-36"><a href="simulation-and-resampling.html#cb52-36" aria-hidden="true" tabindex="-1"></a>OutJack[j,<span class="dv">7</span><span class="sc">:</span><span class="dv">8</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(JackTheta.ded)<span class="sc">+</span><span class="fu">qt</span>(<span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>),<span class="fu">length</span>(x)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">*</span>OutJack[j,<span class="dv">6</span>]</span>
+<span id="cb52-37"><a href="simulation-and-resampling.html#cb52-37" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<p><a id=tab:67></a></p>
+<p>Table 6.7. <strong>Estimasi Jackknife dari LER pada Deductible yang Dipilih</strong></p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 10px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+d
+</th>
+<th style="text-align:right;">
+NP Estimate
+</th>
+<th style="text-align:right;">
+Bootstrap Bias
+</th>
+<th style="text-align:right;">
+Bootstrap SD
+</th>
+<th style="text-align:right;">
+Jackknife Bias
+</th>
+<th style="text-align:right;">
+Jackknife SD
+</th>
+<th style="text-align:right;">
+Lower Jackknife 95% CI
+</th>
+<th style="text-align:right;">
+Upper Jackknife 95% CI
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+4000
+</td>
+<td style="text-align:right;">
+0.54113
+</td>
+<td style="text-align:right;">
+0.00011
+</td>
+<td style="text-align:right;">
+0.01237
+</td>
+<td style="text-align:right;">
+0.00031
+</td>
+<td style="text-align:right;">
+0.00061
+</td>
+<td style="text-align:right;">
+0.53993
+</td>
+<td style="text-align:right;">
+0.54233
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5000
+</td>
+<td style="text-align:right;">
+0.64960
+</td>
+<td style="text-align:right;">
+0.00027
+</td>
+<td style="text-align:right;">
+0.01412
+</td>
+<td style="text-align:right;">
+0.00033
+</td>
+<td style="text-align:right;">
+0.00068
+</td>
+<td style="text-align:right;">
+0.64825
+</td>
+<td style="text-align:right;">
+0.65094
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10500
+</td>
+<td style="text-align:right;">
+0.93563
+</td>
+<td style="text-align:right;">
+0.00004
+</td>
+<td style="text-align:right;">
+0.01017
+</td>
+<td style="text-align:right;">
+0.00019
+</td>
+<td style="text-align:right;">
+0.00053
+</td>
+<td style="text-align:right;">
+0.93460
+</td>
+<td style="text-align:right;">
+0.93667
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11500
+</td>
+<td style="text-align:right;">
+0.95281
+</td>
+<td style="text-align:right;">
+-0.00003
+</td>
+<td style="text-align:right;">
+0.00941
+</td>
+<td style="text-align:right;">
+0.00016
+</td>
+<td style="text-align:right;">
+0.00047
+</td>
+<td style="text-align:right;">
+0.95189
+</td>
+<td style="text-align:right;">
+0.95373
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14000
+</td>
+<td style="text-align:right;">
+0.97678
+</td>
+<td style="text-align:right;">
+0.00016
+</td>
+<td style="text-align:right;">
+0.00687
+</td>
+<td style="text-align:right;">
+0.00010
+</td>
+<td style="text-align:right;">
+0.00034
+</td>
+<td style="text-align:right;">
+0.97612
+</td>
+<td style="text-align:right;">
+0.97745
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18500
+</td>
+<td style="text-align:right;">
+0.99382
+</td>
+<td style="text-align:right;">
+0.00014
+</td>
+<td style="text-align:right;">
+0.00331
+</td>
+<td style="text-align:right;">
+0.00003
+</td>
+<td style="text-align:right;">
+0.00017
+</td>
+<td style="text-align:right;">
+0.99350
+</td>
+<td style="text-align:right;">
+0.99415
+</td>
+</tr>
+</tbody>
+</table>
+<p>Diskusi. Salah satu dari banyak hal menarik tentang kasus khusus leave-one-out adalah kemampuan untuk mereplikasi estimasi dengan tepat. Artinya, ketika ukuran lipatan hanya satu, maka tidak ada ketidakpastian tambahan yang disebabkan oleh validasi silang. Ini berarti bahwa para analis dapat mereplikasi pekerjaan satu sama lain dengan tepat, sebuah pertimbangan yang penting.</p>
+<p>Statistik Jackknife dikembangkan untuk memahami ketepatan estimator, menghasilkan estimator bias dan deviasi standar pada persamaan (6.3) dan (6.4). Hal ini sesuai dengan tujuan yang telah kita kaitkan dengan teknik bootstrap, bukan metode validasi silang. Hal ini menunjukkan bagaimana teknik statistik dapat digunakan untuk mencapai tujuan yang berbeda.</p>
+</div>
+<div id="cross-validation-and-bootstrap" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Cross-Validation and Bootstrap<a href="simulation-and-resampling.html#cross-validation-and-bootstrap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Bootstrap berguna untuk memberikan estimator presisi, atau variabilitas, dari statistik. Hal ini juga berguna untuk validasi model. Pendekatan bootstrap untuk validasi model mirip dengan prosedur validasi leave-one-out dan <em>k</em>-fold:</p>
+<ul>
+<li><p>Buat sampel bootstrap dengan mengambil sampel ulang (dengan penggantian) <span class="math inline">\(n\)</span> indeks dalam <span class="math inline">\({1, ⋯, n}\)</span>. Ini akan menjadi sampel pelatihan kita. Perkirakan model yang sedang dipertimbangkan berdasarkan sampel ini.</p></li>
+<li><p><em>Uji</em>, atau <em>sampel validasi</em>, terdiri dari pengamatan yang tidak dipilih untuk pelatihan. Mengevaluasi model yang cocok (berdasarkan data pelatihan) dengan menggunakan data uji.</p></li>
+</ul>
+<p>Ulangi proses ini beberapa kali (katakanlah <span class="math inline">\(B\)</span>). Ambil rata-rata dari hasil-hasilnya dan pilih model berdasarkan statistik evaluasi rata-rata.</p>
+<p><strong>Contoh 6.3.4. Dana Properti Wisconsin</strong>. Kembali ke Contoh 6.3.1 di mana kita menyelidiki kecocokan distribusi gamma dan Pareto pada data dana properti. Kita kembali membandingkan kinerja prediksi menggunakan statistik Kolmogorov-Smirnov (KS), namun kali ini menggunakan prosedur bootstrap untuk membagi data antara sampel pelatihan dan pengujian. Berikut ini adalah kode ilustrasinya.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="simulation-and-resampling.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(goftest)</span>
+<span id="cb53-2"><a href="simulation-and-resampling.html#cb53-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(claim_data)</span>
+<span id="cb53-3"><a href="simulation-and-resampling.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12347</span>)</span>
+<span id="cb53-4"><a href="simulation-and-resampling.html#cb53-4" aria-hidden="true" tabindex="-1"></a>indices <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>n</span>
+<span id="cb53-5"><a href="simulation-and-resampling.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of Bootstrap Samples</span></span>
+<span id="cb53-6"><a href="simulation-and-resampling.html#cb53-6" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb53-7"><a href="simulation-and-resampling.html#cb53-7" aria-hidden="true" tabindex="-1"></a>cvalvec <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>,<span class="dv">2</span>,B)</span>
+<span id="cb53-8"><a href="simulation-and-resampling.html#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb53-9"><a href="simulation-and-resampling.html#cb53-9" aria-hidden="true" tabindex="-1"></a>  bootindex <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">sample</span>(indices, <span class="at">size=</span>n, <span class="at">replace=</span> <span class="cn">TRUE</span>))</span>
+<span id="cb53-10"><a href="simulation-and-resampling.html#cb53-10" aria-hidden="true" tabindex="-1"></a>  traindata <span class="ot">&lt;-</span> claim_data[bootindex,]</span>
+<span id="cb53-11"><a href="simulation-and-resampling.html#cb53-11" aria-hidden="true" tabindex="-1"></a>  testdata  <span class="ot">&lt;-</span> claim_data[<span class="sc">-</span>bootindex,]</span>
+<span id="cb53-12"><a href="simulation-and-resampling.html#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Pareto</span></span>
+<span id="cb53-13"><a href="simulation-and-resampling.html#cb53-13" aria-hidden="true" tabindex="-1"></a>  fit.pareto <span class="ot">&lt;-</span> <span class="fu">vglm</span>(Claim <span class="sc">~</span> <span class="dv">1</span>, paretoII, <span class="at">loc =</span> <span class="dv">0</span>, <span class="at">data =</span> traindata)</span>
+<span id="cb53-14"><a href="simulation-and-resampling.html#cb53-14" aria-hidden="true" tabindex="-1"></a>  ksResultPareto <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(testdata<span class="sc">$</span>Claim, <span class="st">&quot;pparetoII&quot;</span>, <span class="at">loc =</span> <span class="dv">0</span>, <span class="at">shape =</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.pareto)[<span class="dv">2</span>]), </span>
+<span id="cb53-15"><a href="simulation-and-resampling.html#cb53-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">scale =</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.pareto)[<span class="dv">1</span>]))</span>
+<span id="cb53-16"><a href="simulation-and-resampling.html#cb53-16" aria-hidden="true" tabindex="-1"></a>  cvalvec[<span class="dv">1</span>,i] <span class="ot">&lt;-</span> ksResultPareto<span class="sc">$</span>statistic</span>
+<span id="cb53-17"><a href="simulation-and-resampling.html#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Gamma</span></span>
+<span id="cb53-18"><a href="simulation-and-resampling.html#cb53-18" aria-hidden="true" tabindex="-1"></a>  fit.gamma <span class="ot">&lt;-</span> <span class="fu">glm</span>(Claim <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> traindata, <span class="at">family =</span> <span class="fu">Gamma</span>(<span class="at">link =</span> log)) </span>
+<span id="cb53-19"><a href="simulation-and-resampling.html#cb53-19" aria-hidden="true" tabindex="-1"></a>  gamma_theta <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="fu">coef</span>(fit.gamma)) <span class="sc">*</span> <span class="fu">gamma.dispersion</span>(fit.gamma)  </span>
+<span id="cb53-20"><a href="simulation-and-resampling.html#cb53-20" aria-hidden="true" tabindex="-1"></a>  alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">gamma.dispersion</span>(fit.gamma)</span>
+<span id="cb53-21"><a href="simulation-and-resampling.html#cb53-21" aria-hidden="true" tabindex="-1"></a>  ksResultGamma <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(testdata<span class="sc">$</span>Claim, <span class="st">&quot;pgamma&quot;</span>, <span class="at">shape =</span> alpha, <span class="at">scale =</span> gamma_theta)</span>
+<span id="cb53-22"><a href="simulation-and-resampling.html#cb53-22" aria-hidden="true" tabindex="-1"></a>  cvalvec[<span class="dv">2</span>,i] <span class="ot">&lt;-</span> ksResultGamma<span class="sc">$</span>statistic</span>
+<span id="cb53-23"><a href="simulation-and-resampling.html#cb53-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb53-24"><a href="simulation-and-resampling.html#cb53-24" aria-hidden="true" tabindex="-1"></a>KSBoot <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(cvalvec)<span class="sc">/</span>B</span></code></pre></div>
+<p>Kami melakukan pengambilan sampel dengan menggunakan B= 100 ulangan. Statistik KS rata-rata untuk distribusi Pareto adalah 0,058 dibandingkan dengan rata-rata untuk distribusi gamma, 0,262. Hal ini konsisten dengan hasil sebelumnya dan memberikan bukti lain bahwa Pareto adalah model yang lebih baik untuk data ini dibandingkan dengan gamma.</p>
+</div>
+</div>
+<div id="importance-sampling" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Importance Sampling<a href="simulation-and-resampling.html#importance-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bagian 6.1 memperkenalkan teknik Monte Carlo dengan menggunakan teknik inversi: untuk membangkitkan sebuah variabel acak <span class="math inline">\(X\)</span> dengan distribusi <span class="math inline">\(F\)</span>, terapkan <span class="math inline">\(F^{-1}\)</span> pada pemanggilan sebuah generator acak (seragam pada interval satuan). Bagaimana jika kita ingin menggambar sesuai dengan <span class="math inline">\(X\)</span>, dengan syarat <span class="math inline">\(X∈[a,b]\)</span>?</p>
+<p>Seseorang dapat menggunakan mekanisme terima-tolak: menarik <span class="math inline">\(x\)</span> dari distribusi <span class="math inline">\(F\)</span></p>
+<ul>
+<li><p>jika <span class="math inline">\(x\in[a,b]\)</span>: simpan (“terima”)</p></li>
+<li><p>jika <span class="math inline">\(x\notin[a,b]\)</span>: gambar yang lain (“tolak”)</p></li>
+</ul>
+<p>Amati bahwa dari n nilai yang awalnya dihasilkan, kita simpan di sini hanya <span class="math inline">\([F(b)-F(a)] ⋅ n\)</span> hasil imbang, rata-rata.</p>
+<p><strong>Contoh 6.4.1. Penarikan dari Distribusi Normal.</strong> Misalkan kita menggambar dari distribusi normal dengan rata-rata 2,5 dan varians 1, <span class="math inline">\(N(2,5,1)\)</span>, tetapi hanya tertarik pada gambar yang lebih besar dari <span class="math inline">\(a≥2\)</span> dan kurang dari <span class="math inline">\(b≤4\)</span>. Artinya, kita hanya dapat menggunakan <span class="math inline">\(F(4)-F(2)=Φ(4-2.5)-Φ(2-2.5) = 0.9332 - 0.3085 = 0.6247\)</span> proporsi undian. Gambar 6.13 menunjukkan bahwa beberapa hasil undian berada di dalam interval <span class="math inline">\((2,4)\)</span> dan beberapa di luarnya.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="simulation-and-resampling.html#cb54-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">=</span> <span class="fl">2.5</span></span>
+<span id="cb54-2"><a href="simulation-and-resampling.html#cb54-2" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb54-3"><a href="simulation-and-resampling.html#cb54-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb54-4"><a href="simulation-and-resampling.html#cb54-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb54-5"><a href="simulation-and-resampling.html#cb54-5" aria-hidden="true" tabindex="-1"></a>Fa <span class="ot">=</span> <span class="fu">pnorm</span>(a,mu,sigma)</span>
+<span id="cb54-6"><a href="simulation-and-resampling.html#cb54-6" aria-hidden="true" tabindex="-1"></a>Fb <span class="ot">=</span> <span class="fu">pnorm</span>(b,mu,sigma)</span>
+<span id="cb54-7"><a href="simulation-and-resampling.html#cb54-7" aria-hidden="true" tabindex="-1"></a>pic_ani <span class="ot">=</span> <span class="cf">function</span>(){</span>
+<span id="cb54-8"><a href="simulation-and-resampling.html#cb54-8" aria-hidden="true" tabindex="-1"></a>  u<span class="ot">=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="at">by=</span>.<span class="dv">01</span>)</span>
+<span id="cb54-9"><a href="simulation-and-resampling.html#cb54-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb54-10"><a href="simulation-and-resampling.html#cb54-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">2</span>),<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb54-11"><a href="simulation-and-resampling.html#cb54-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(a,Fa,b,Fb,<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb54-12"><a href="simulation-and-resampling.html#cb54-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb54-13"><a href="simulation-and-resampling.html#cb54-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(a,b),<span class="at">lty=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb54-14"><a href="simulation-and-resampling.html#cb54-14" aria-hidden="true" tabindex="-1"></a>  ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb54-15"><a href="simulation-and-resampling.html#cb54-15" aria-hidden="true" tabindex="-1"></a>  clr <span class="ot">&lt;-</span> <span class="st">&quot;red&quot;</span></span>
+<span id="cb54-16"><a href="simulation-and-resampling.html#cb54-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>((<span class="fu">qnorm</span>(ru,mu,sigma)<span class="sc">&gt;=</span>a)<span class="sc">&amp;</span>(<span class="fu">qnorm</span>(ru,mu,sigma)<span class="sc">&lt;=</span>b)) clr <span class="ot">&lt;-</span> <span class="st">&quot;blue&quot;</span></span>
+<span id="cb54-17"><a href="simulation-and-resampling.html#cb54-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(<span class="sc">-</span><span class="dv">1</span>,ru,<span class="fu">qnorm</span>(ru,mu,sigma),ru,<span class="at">col=</span>clr,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb54-18"><a href="simulation-and-resampling.html#cb54-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="fu">qnorm</span>(ru,mu,sigma),ru,<span class="fu">qnorm</span>(ru,mu,sigma),<span class="dv">0</span>,<span class="at">col=</span>clr,<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">length =</span> .<span class="dv">1</span>)</span>
+<span id="cb54-19"><a href="simulation-and-resampling.html#cb54-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="simulation-and-resampling.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>numAnimation) {<span class="fu">pic_ani</span>()}</span></code></pre></div>
+<p><br></p>
+<p><img src="images/sampleani1-.gif" alt="" width="400" height="300" align="middle"></p>
+<p>Sebagai gantinya, seseorang dapat menggambar menurut distribusi bersyarat <span class="math inline">\(F^⋆\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[F^{\star}(x) = \Pr(X \le x | a &lt; X \le b) =\frac{F(x)-F(a)}{F(b)-F(a)}, \ \  \ \text{for } a &lt; x \le b .\]</span>
+Dengan menggunakan metode inverse transform pada Bagian 6.1.2, kita mendapatkan hasil imbang</p>
+<p><span class="math display">\[X^\star=F^{\star-1}\left( U \right) = F^{-1}\left(F(a)+U\cdot[F(b)-F(a)]\right)\]</span></p>
+<p>memiliki distribusi <span class="math inline">\(F⋆^\)</span>. Dinyatakan dengan cara lain, definisikan</p>
+<p><span class="math display">\[\tilde{U} = (1-U)\cdot F(a)+U\cdot F(b)\]</span></p>
+<p>dan kemudian gunakan <span class="math inline">\(F^{-1}(\tilde{U})\)</span>. Dengan pendekatan ini, setiap undian dihitung.</p>
+<p>Hal ini dapat dikaitkan dengan mekanisme pengambilan sampel kepentingan: kita menarik lebih sering di wilayah yang kita harapkan memiliki kuantitas yang memiliki kepentingan. Transformasi ini dapat dianggap sebagai “perubahan ukuran.”</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="simulation-and-resampling.html#cb56-1" aria-hidden="true" tabindex="-1"></a>pic_ani <span class="ot">=</span> <span class="cf">function</span>(){</span>
+<span id="cb56-2"><a href="simulation-and-resampling.html#cb56-2" aria-hidden="true" tabindex="-1"></a>  u<span class="ot">=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="at">by=</span>.<span class="dv">01</span>)</span>
+<span id="cb56-3"><a href="simulation-and-resampling.html#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb56-4"><a href="simulation-and-resampling.html#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">2</span>),<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb56-5"><a href="simulation-and-resampling.html#cb56-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(a,Fa,b,Fb,<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb56-6"><a href="simulation-and-resampling.html#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb56-7"><a href="simulation-and-resampling.html#cb56-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h=</span><span class="fu">pnorm</span>(<span class="fu">c</span>(a,b),mu,sigma),<span class="at">lty=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb56-8"><a href="simulation-and-resampling.html#cb56-8" aria-hidden="true" tabindex="-1"></a>  ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb56-9"><a href="simulation-and-resampling.html#cb56-9" aria-hidden="true" tabindex="-1"></a>  rutilde <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">-</span>ru)<span class="sc">*</span>Fa<span class="sc">+</span>ru<span class="sc">*</span>Fb</span>
+<span id="cb56-10"><a href="simulation-and-resampling.html#cb56-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(<span class="sc">-</span><span class="dv">1</span>,rutilde,<span class="fu">qnorm</span>(rutilde,mu,sigma),rutilde,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb56-11"><a href="simulation-and-resampling.html#cb56-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="fu">qnorm</span>(rutilde,mu,sigma),rutilde,<span class="fu">qnorm</span>(rutilde,mu,sigma),<span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">length =</span> .<span class="dv">1</span>)</span>
+<span id="cb56-12"><a href="simulation-and-resampling.html#cb56-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="simulation-and-resampling.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>numAnimation) {<span class="fu">pic_ani</span>()}</span></code></pre></div>
+<p><br></p>
+<p><img src="images/sampleani_IS_2-.gif" alt="" width="400" height="300" align="middle"></p>
+<p>Pada Contoh 6.4.1., kebalikan dari distribusi normal sudah tersedia (dalam <code>R</code>, fungsinya adalah <code>qnorm</code>). Namun, untuk aplikasi lain, hal ini tidak terjadi. Kemudian, kita cukup menggunakan metode numerik untuk menentukan <span class="math inline">\(X^⋆\)</span> sebagai solusi dari persamaan <span class="math inline">\(F(X^\star) =\tilde{U}\)</span> di mana <span class="math inline">\(\tilde{U}=(1-U)\cdot F(a)+U\cdot F(b)\)</span>). Lihat kode ilustrasi berikut ini.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="simulation-and-resampling.html#cb58-1" aria-hidden="true" tabindex="-1"></a>pic_ani <span class="ot">=</span> <span class="cf">function</span>(){</span>
+<span id="cb58-2"><a href="simulation-and-resampling.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  u<span class="ot">=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="at">by=</span>.<span class="dv">01</span>)</span>
+<span id="cb58-3"><a href="simulation-and-resampling.html#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb58-4"><a href="simulation-and-resampling.html#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">2</span>),<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb58-5"><a href="simulation-and-resampling.html#cb58-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="dv">2</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;white&quot;</span>,<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb58-6"><a href="simulation-and-resampling.html#cb58-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(u,<span class="fu">pnorm</span>(u,mu,sigma),<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb58-7"><a href="simulation-and-resampling.html#cb58-7" aria-hidden="true" tabindex="-1"></a>  pnormstar <span class="ot">&lt;-</span> <span class="fu">Vectorize</span>(<span class="cf">function</span>(x){</span>
+<span id="cb58-8"><a href="simulation-and-resampling.html#cb58-8" aria-hidden="true" tabindex="-1"></a>    y<span class="ot">=</span>(<span class="fu">pnorm</span>(x,mu,sigma)<span class="sc">-</span>Fa)<span class="sc">/</span>(Fb<span class="sc">-</span>Fa)</span>
+<span id="cb58-9"><a href="simulation-and-resampling.html#cb58-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(x<span class="sc">&lt;=</span>a) y <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb58-10"><a href="simulation-and-resampling.html#cb58-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(x<span class="sc">&gt;=</span>b) y <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb58-11"><a href="simulation-and-resampling.html#cb58-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(y)</span>
+<span id="cb58-12"><a href="simulation-and-resampling.html#cb58-12" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb58-13"><a href="simulation-and-resampling.html#cb58-13" aria-hidden="true" tabindex="-1"></a>  qnormstar <span class="ot">&lt;-</span> <span class="cf">function</span>(u) <span class="fu">as.numeric</span>(<span class="fu">uniroot</span>((<span class="cf">function</span> (x) <span class="fu">pnormstar</span>(x) <span class="sc">-</span> u), <span class="at">lower =</span> <span class="dv">2</span>, <span class="at">upper =</span> <span class="dv">4</span>)[<span class="dv">1</span>])</span>
+<span id="cb58-14"><a href="simulation-and-resampling.html#cb58-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(u,<span class="fu">pnormstar</span>(u),<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb58-15"><a href="simulation-and-resampling.html#cb58-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>),<span class="at">lty=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb58-16"><a href="simulation-and-resampling.html#cb58-16" aria-hidden="true" tabindex="-1"></a>  ru <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb58-17"><a href="simulation-and-resampling.html#cb58-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(<span class="sc">-</span><span class="dv">1</span>,ru,<span class="fu">qnormstar</span>(ru),ru,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb58-18"><a href="simulation-and-resampling.html#cb58-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="fu">qnormstar</span>(ru),ru,<span class="fu">qnormstar</span>(ru),<span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">length =</span> .<span class="dv">1</span>)</span>
+<span id="cb58-19"><a href="simulation-and-resampling.html#cb58-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="simulation-and-resampling.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>numAnimation) {<span class="fu">pic_ani</span>()}</span></code></pre></div>
+<p><br>
+<img src="images/sampleani_IS_1-.gif" alt="" width="400" height="300" align="middle"></p>
+<p>Sebenarnya materi yang dari web untuk 6.5 itu masih sedang dalam penulisan dan belum selesai dalam pengeditan. Jadi apa yang ditulis disini hanya memberikan gambaran besarnya saja.</p>
+<p>Ide dari teknik Monte Carlo bergantung pada hukum bilangan besar (yang menjamin konvergensi rata-rata terhadap integral) dan teorema limit pusat (yang digunakan untuk mengukur ketidakpastian dalam perhitungan). Perlu diingat kembali jika (<span class="math inline">\(X_i\)</span>) adalah urutan ke-i dari variabel acak dengan distribusi F, maka</p>
+<p><span class="math display">\[
+\frac{1}{\sqrt{n}}\left(\sum_{i=1}^n h(X_i)-\int h(x)dF(x)\right)\overset{\mathcal{L}}{\rightarrow }\mathcal{N}(0,\sigma^2),\text{ as }n\rightarrow\infty ,
+\]</span></p>
+<p>atau beberapa varian <span class="math inline">\(σ^2&gt;0\)</span> . Namun sebenarnya, teorema ergodik dapat digunakan untuk melemahkan hasil sebelumnya, karena independensi variabel tidak diperlukan. Lebih tepatnya, jika (<span class="math inline">\(X_i\)</span>) adalah Proses Markov dengan ukuran invarian <span class="math inline">\(μ\)</span> , di bawah beberapa asumsi teknis tambahan, maka dapat diperoleh</p>
+<p><span class="math display">\[
+\frac{1}{\sqrt{n}}\left(\sum_{i=1}^n h(X_i)-\int h(x)d\mu(x)\right)\overset{\mathcal{L}}{\rightarrow }\mathcal{N}(0,\sigma_\star^2),\text{ as }n\rightarrow\infty.
+\]</span></p>
+<p>untuk beberapa varian <span class="math inline">\(σ^2_⋆&gt;0\)</span> .</p>
+<p>Oleh karena itu, dari sifat ini, dapat melihat bahwa tidak selalu mungkin untuk menghasilkan nilai-nilai independen dari F , tetapi untuk menghasilkan proses Markov dengan ukuran invarian F , dan untuk mempertimbangkan rata-rata dari proses (tidak harus independen).</p>
+<p>Dengan mempertimbangkan kasus vektor Gaussian terkendala: kami ingin menghasilkan pasangan acak dari vektor acak <span class="math inline">\(X\)</span> , tetapi kami hanya tertarik pada kasus di mana jumlah komposisinya cukup besar, yang dapat ditulis <span class="math inline">\(X^T1&gt;m\)</span> untuk nilai nyata <span class="math inline">\(m\)</span> . Tentu saja, dimungkinkan untuk menggunakan algoritme terima-tolak, tetapi kami telah melihat bahwa ini mungkin sangat tidak efisien. Satu dapat menggunakan Metropolis Hastingsand Gibbs sampler untuk menghasilkan proses Markov dengan ukuran invarian tersebut.</p>
+</div>
+<div id="metropolis-hastings" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> 6.5.1 Metropolis Hastings<a href="simulation-and-resampling.html#metropolis-hastings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Algoritma agak sederhana untuk dihasilkan dari <span class="math inline">\(f\)</span> : dapat dimulai dengan nilai layak <span class="math inline">\(x_1\)</span> . Kemudian, pada langkah <span class="math inline">\(t\)</span> , kita perlu menentukan kernel transisi : diberikan <span class="math inline">\(x_t\)</span> , kita memerlukan distribusi bersyarat untuk <span class="math inline">\(X_{t+1}\)</span> diberikan <span class="math inline">\(x_t\)</span> . Algoritme akan bekerja dengan baik jika distribusi bersyarat itu dapat dengan mudah disimulasikan. dengan <span class="math inline">\(π(⋅|xt)\)</span> menunjukkan probabilitas itu.</p>
+<p>Gambarkan nilai potensial <span class="math inline">\(x^⋆_{t+1}\)</span> , dan <span class="math inline">\(u\)</span> , dari
+distribusi seragam. Selanjutnya Menghitung</p>
+<p><span class="math inline">\(R= \frac{f(x_{t+1}^\star)}{f(x_t)}\)</span></p>
+<p>jika <span class="math inline">\(u&lt;r\)</span> , lalu atur <span class="math inline">\(x_{t+1}=x^⋆_t\)</span>
+jika <span class="math inline">\(u≤r\)</span> , maka atur <span class="math inline">\(x_{t+1}=x_t\)</span></p>
+<p>Di sini r disebut rasio penerimaan selanjutnya menerima nilai baru dengan probabilitas r (atau sebenarnya yang terkecil antara 1 dan r karena r dapat melebihi 1 ).</p>
+<p>Misalnya, asumsikan bahwa <span class="math inline">\(f(⋅|xt)\)</span> seragam pada <span class="math inline">\([x_t−ε,x_t+ε]\)</span> untuk beberapa <span class="math inline">\(ε&gt;0\)</span> , dan di mana$ $f (distribusi target kita) adalah <span class="math inline">\(N(0,1)\)</span> . Kami tidak akan pernah menarik dari <span class="math inline">\(f\)</span> , tetapi kami akan menggunakannya untuk menghitung rasio penerimaan kami di setiap langkah.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="simulation-and-resampling.html#cb60-1" aria-hidden="true" tabindex="-1"></a>metrop1 <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">n=</span><span class="dv">1000</span>,<span class="at">eps=</span><span class="fl">0.5</span>){</span>
+<span id="cb60-2"><a href="simulation-and-resampling.html#cb60-2" aria-hidden="true" tabindex="-1"></a> vec <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, n, <span class="dv">3</span>)</span>
+<span id="cb60-3"><a href="simulation-and-resampling.html#cb60-3" aria-hidden="true" tabindex="-1"></a> x<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb60-4"><a href="simulation-and-resampling.html#cb60-4" aria-hidden="true" tabindex="-1"></a> vec[<span class="dv">1</span>] <span class="ot">&lt;-</span> x</span>
+<span id="cb60-5"><a href="simulation-and-resampling.html#cb60-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n) {</span>
+<span id="cb60-6"><a href="simulation-and-resampling.html#cb60-6" aria-hidden="true" tabindex="-1"></a> innov <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>,<span class="sc">-</span>eps,eps)</span>
+<span id="cb60-7"><a href="simulation-and-resampling.html#cb60-7" aria-hidden="true" tabindex="-1"></a> mov <span class="ot">&lt;-</span> x<span class="sc">+</span>innov</span>
+<span id="cb60-8"><a href="simulation-and-resampling.html#cb60-8" aria-hidden="true" tabindex="-1"></a> R <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="dv">1</span>,<span class="fu">dnorm</span>(mov)<span class="sc">/</span><span class="fu">dnorm</span>(x))</span>
+<span id="cb60-9"><a href="simulation-and-resampling.html#cb60-9" aria-hidden="true" tabindex="-1"></a> u <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb60-10"><a href="simulation-and-resampling.html#cb60-10" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> (u <span class="sc">&lt;</span> R) x <span class="ot">&lt;-</span> mov</span>
+<span id="cb60-11"><a href="simulation-and-resampling.html#cb60-11" aria-hidden="true" tabindex="-1"></a> vec[i,] <span class="ot">&lt;-</span> <span class="fu">c</span>(x,mov,R)</span>
+<span id="cb60-12"><a href="simulation-and-resampling.html#cb60-12" aria-hidden="true" tabindex="-1"></a> }</span>
+<span id="cb60-13"><a href="simulation-and-resampling.html#cb60-13" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(vec)}</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="simulation-and-resampling.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&#39;gifski&#39;)</span></span>
+<span id="cb61-2"><a href="simulation-and-resampling.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co">#if (packageVersion(&#39;knitr&#39;) &lt; &#39;1.20.14&#39;) {</span></span>
+<span id="cb61-3"><a href="simulation-and-resampling.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  remotes::install_github(&#39;yihui/knitr&#39;)</span></span>
+<span id="cb61-4"><a href="simulation-and-resampling.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co">#}</span></span>
+<span id="cb61-5"><a href="simulation-and-resampling.html#cb61-5" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">metrop1</span>(<span class="dv">25</span>)</span>
+<span id="cb61-6"><a href="simulation-and-resampling.html#cb61-6" aria-hidden="true" tabindex="-1"></a>u<span class="ot">=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>,<span class="at">by=</span>.<span class="dv">01</span>)</span>
+<span id="cb61-7"><a href="simulation-and-resampling.html#cb61-7" aria-hidden="true" tabindex="-1"></a>pic_ani <span class="ot">=</span> <span class="cf">function</span>(k){</span>
+<span id="cb61-8"><a href="simulation-and-resampling.html#cb61-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span>k,vec[<span class="dv">1</span><span class="sc">:</span>k,<span class="dv">1</span>],<span class="at">pch=</span><span class="dv">19</span>,<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">25</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb61-9"><a href="simulation-and-resampling.html#cb61-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">1</span>]<span class="sc">==</span>vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>]) <span class="fu">points</span>(k<span class="sc">+</span><span class="dv">1</span>,vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">1</span>],<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">pch=</span><span class="dv">19</span>)</span>
+<span id="cb61-10"><a href="simulation-and-resampling.html#cb61-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">1</span>]<span class="sc">!=</span>vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>]) <span class="fu">points</span>(k<span class="sc">+</span><span class="dv">1</span>,vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">1</span>],<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">pch=</span><span class="dv">19</span>)</span>
+<span id="cb61-11"><a href="simulation-and-resampling.html#cb61-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(k<span class="sc">+</span><span class="dv">1</span>,vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>],<span class="at">cex=</span><span class="fl">1.5</span>)</span>
+<span id="cb61-12"><a href="simulation-and-resampling.html#cb61-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(k<span class="sc">+</span><span class="dv">1</span>,vec[k,<span class="dv">1</span>]<span class="sc">-</span>.<span class="dv">5</span>,k<span class="sc">+</span><span class="dv">1</span>,vec[k,<span class="dv">1</span>]<span class="sc">+</span>.<span class="dv">5</span>,<span class="at">col=</span><span class="st">&quot;green&quot;</span>,<span class="at">angle=</span><span class="dv">90</span>,<span class="at">code =</span> <span class="dv">3</span>,<span class="at">length=</span>.<span class="dv">1</span>)</span>
+<span id="cb61-13"><a href="simulation-and-resampling.html#cb61-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">polygon</span>(<span class="fu">c</span>(k<span class="sc">+</span><span class="fu">dnorm</span>(u)<span class="sc">*</span><span class="dv">10</span>,<span class="fu">rep</span>(k,<span class="fu">length</span>(u))),<span class="fu">c</span>(u,<span class="fu">rev</span>(u)),<span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">3</span>),</span>
+<span id="cb61-14"><a href="simulation-and-resampling.html#cb61-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">border=</span><span class="cn">NA</span>)  </span>
+<span id="cb61-15"><a href="simulation-and-resampling.html#cb61-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(k,vec[k,<span class="dv">1</span>],k<span class="sc">+</span><span class="fu">dnorm</span>(vec[k,<span class="dv">1</span>])<span class="sc">*</span><span class="dv">10</span>,vec[k,<span class="dv">1</span>])</span>
+<span id="cb61-16"><a href="simulation-and-resampling.html#cb61-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(k,vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>],k<span class="sc">+</span><span class="fu">dnorm</span>(vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>])<span class="sc">*</span><span class="dv">10</span>,vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">2</span>])</span>
+<span id="cb61-17"><a href="simulation-and-resampling.html#cb61-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(k,<span class="dv">2</span>,<span class="fu">round</span>(vec[k<span class="sc">+</span><span class="dv">1</span>,<span class="dv">3</span>],<span class="at">digits=</span><span class="dv">3</span>))</span>
+<span id="cb61-18"><a href="simulation-and-resampling.html#cb61-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb61-19"><a href="simulation-and-resampling.html#cb61-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">23</span>) {<span class="fu">pic_ani</span>(k)}</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-1.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-2.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-3.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-4.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-5.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-6.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-7.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-8.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-9.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-10.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-11.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-12.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-13.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-14.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-15.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-16.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-17.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-18.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-19.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-20.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-21.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-47-22.png" width="672" /></p>
+<p>Selanjutnya dapat menggunakan simulasi, maka didapat</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="simulation-and-resampling.html#cb62-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">metrop1</span>(<span class="dv">10000</span>)</span>
+<span id="cb62-2"><a href="simulation-and-resampling.html#cb62-2" aria-hidden="true" tabindex="-1"></a>simx <span class="ot">&lt;-</span> vec[<span class="dv">1000</span><span class="sc">:</span><span class="dv">10000</span>,<span class="dv">1</span>]</span>
+<span id="cb62-3"><a href="simulation-and-resampling.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>))</span>
+<span id="cb62-4"><a href="simulation-and-resampling.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(simx,<span class="at">type=</span><span class="st">&quot;l&quot;</span>)</span>
+<span id="cb62-5"><a href="simulation-and-resampling.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(simx,<span class="at">probability =</span> <span class="cn">TRUE</span>,<span class="at">col=</span><span class="st">&quot;light blue&quot;</span>,<span class="at">border=</span><span class="st">&quot;white&quot;</span>)</span>
+<span id="cb62-6"><a href="simulation-and-resampling.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(u,<span class="fu">dnorm</span>(u),<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb62-7"><a href="simulation-and-resampling.html#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(simx)</span>
+<span id="cb62-8"><a href="simulation-and-resampling.html#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="fu">acf</span>(simx,<span class="at">lag=</span><span class="dv">100</span>,<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;light blue&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+</div>
+<div id="gibbs-sampler" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> 6.5.2 Gibbs Sampler<a href="simulation-and-resampling.html#gibbs-sampler" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dapat mempertimbangkan beberapa vektor <span class="math inline">\(X=(X_1,⋯,X_d)\)</span> dengan komponen independen, <span class="math inline">\(X_i∼E(λ_i)\)</span> . Selanjutnya mengambil sampel untuk sampel dari <span class="math inline">\(X\)</span> yang diberikan <span class="math inline">\(X^T1&gt;s\)</span> untuk beberapa ambang batas <span class="math inline">\(s&gt;0\)</span> .</p>
+<ul>
+<li>beberapa titik awal x0 ,</li>
+<li>Mengambil secara acak <span class="math inline">\(i∈{1,⋯,d}\)</span></li>
+<li><span class="math inline">\(X_i\)</span> mengingat <span class="math inline">\(X_i&gt;s−x^T_{(−i)}1\)</span> berdistribusi Eksponensial <span class="math inline">\(E(λ_i)\)</span></li>
+<li>Menggambar <span class="math inline">\(Y∼E(λ_i)\)</span> dan atur <span class="math inline">\(x_i=y+(s−x^T_{(−i)}1)_+\)</span> hingga <span class="math inline">\(x^T_{(−i)}1+x_i&gt;s\)</span></li>
+</ul>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="simulation-and-resampling.html#cb63-1" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb63-2"><a href="simulation-and-resampling.html#cb63-2" aria-hidden="true" tabindex="-1"></a> lambda <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb63-3"><a href="simulation-and-resampling.html#cb63-3" aria-hidden="true" tabindex="-1"></a> X <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>)</span>
+<span id="cb63-4"><a href="simulation-and-resampling.html#cb63-4" aria-hidden="true" tabindex="-1"></a> s <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb63-5"><a href="simulation-and-resampling.html#cb63-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
+<span id="cb63-6"><a href="simulation-and-resampling.html#cb63-6" aria-hidden="true" tabindex="-1"></a> i <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb63-7"><a href="simulation-and-resampling.html#cb63-7" aria-hidden="true" tabindex="-1"></a> X[i] <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1</span>,lambda[i])<span class="sc">+</span><span class="fu">max</span>(<span class="dv">0</span>,s<span class="sc">-</span><span class="fu">sum</span>(X[<span class="sc">-</span>i]))</span>
+<span id="cb63-8"><a href="simulation-and-resampling.html#cb63-8" aria-hidden="true" tabindex="-1"></a> <span class="cf">while</span>(<span class="fu">sum</span>(X)<span class="sc">&lt;</span>s){</span>
+<span id="cb63-9"><a href="simulation-and-resampling.html#cb63-9" aria-hidden="true" tabindex="-1"></a> X[i] <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1</span>,lambda[i])<span class="sc">+</span><span class="fu">max</span>(<span class="dv">0</span>,s<span class="sc">-</span><span class="fu">sum</span>(X[<span class="sc">-</span>i])) }</span>
+<span id="cb63-10"><a href="simulation-and-resampling.html#cb63-10" aria-hidden="true" tabindex="-1"></a> sim <span class="ot">&lt;-</span> <span class="fu">rbind</span>(sim,X) }</span>
+<span id="cb63-11"><a href="simulation-and-resampling.html#cb63-11" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb63-12"><a href="simulation-and-resampling.html#cb63-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sim,<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">11</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">4.3</span>))</span>
+<span id="cb63-13"><a href="simulation-and-resampling.html#cb63-13" aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>),<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="sc">-</span><span class="dv">1</span>),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">density=</span><span class="dv">15</span>,<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb63-14"><a href="simulation-and-resampling.html#cb63-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">5</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p>Konstruksi urutan (algoritma MCMC bersifat iteratif) dapat divisualisasikan di bawah ini</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="simulation-and-resampling.html#cb64-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb64-2"><a href="simulation-and-resampling.html#cb64-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>)</span>
+<span id="cb64-3"><a href="simulation-and-resampling.html#cb64-3" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> X</span>
+<span id="cb64-4"><a href="simulation-and-resampling.html#cb64-4" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb64-5"><a href="simulation-and-resampling.html#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
+<span id="cb64-6"><a href="simulation-and-resampling.html#cb64-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">set.seed</span>(k)</span>
+<span id="cb64-7"><a href="simulation-and-resampling.html#cb64-7" aria-hidden="true" tabindex="-1"></a> i <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb64-8"><a href="simulation-and-resampling.html#cb64-8" aria-hidden="true" tabindex="-1"></a> X[i] <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1</span>,lambda[i])<span class="sc">+</span><span class="fu">max</span>(<span class="dv">0</span>,s<span class="sc">-</span><span class="fu">sum</span>(X[<span class="sc">-</span>i]))</span>
+<span id="cb64-9"><a href="simulation-and-resampling.html#cb64-9" aria-hidden="true" tabindex="-1"></a> <span class="cf">while</span>(<span class="fu">sum</span>(X)<span class="sc">&lt;</span>s){</span>
+<span id="cb64-10"><a href="simulation-and-resampling.html#cb64-10" aria-hidden="true" tabindex="-1"></a> X[i] <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1</span>,lambda[i])<span class="sc">+</span><span class="fu">max</span>(<span class="dv">0</span>,s<span class="sc">-</span><span class="fu">sum</span>(X[<span class="sc">-</span>i])) }</span>
+<span id="cb64-11"><a href="simulation-and-resampling.html#cb64-11" aria-hidden="true" tabindex="-1"></a> sim <span class="ot">&lt;-</span> <span class="fu">rbind</span>(sim,X) }</span>
+<span id="cb64-12"><a href="simulation-and-resampling.html#cb64-12" aria-hidden="true" tabindex="-1"></a>pic_ani <span class="ot">=</span> <span class="cf">function</span>(n){</span>
+<span id="cb64-13"><a href="simulation-and-resampling.html#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sim[<span class="dv">1</span><span class="sc">:</span>n,],<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">11</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb64-14"><a href="simulation-and-resampling.html#cb64-14" aria-hidden="true" tabindex="-1"></a>i<span class="ot">=</span><span class="fu">which</span>(<span class="fu">apply</span>(sim[(n<span class="dv">-1</span>)<span class="sc">:</span>n,],<span class="dv">2</span>,diff)<span class="sc">==</span><span class="dv">0</span>)</span>
+<span id="cb64-15"><a href="simulation-and-resampling.html#cb64-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(i<span class="sc">==</span><span class="dv">1</span>) <span class="fu">abline</span>(<span class="at">v=</span>sim[n,<span class="dv">1</span>],<span class="at">col=</span><span class="st">&quot;grey&quot;</span>)</span>
+<span id="cb64-16"><a href="simulation-and-resampling.html#cb64-16" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(i<span class="sc">==</span><span class="dv">2</span>) <span class="fu">abline</span>(<span class="at">h=</span>sim[n,<span class="dv">2</span>],<span class="at">col=</span><span class="st">&quot;grey&quot;</span>)</span>
+<span id="cb64-17"><a href="simulation-and-resampling.html#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(n<span class="sc">&gt;=</span><span class="dv">1</span>) <span class="fu">points</span>(sim[n,<span class="dv">1</span>],sim[n,<span class="dv">2</span>],<span class="at">pch=</span><span class="dv">19</span>,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">cex=</span><span class="fl">1.4</span>)</span>
+<span id="cb64-18"><a href="simulation-and-resampling.html#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(n<span class="sc">&gt;=</span><span class="dv">2</span>) <span class="fu">points</span>(sim[n<span class="dv">-1</span>,<span class="dv">1</span>],sim[n<span class="dv">-1</span>,<span class="dv">2</span>],<span class="at">pch=</span><span class="dv">19</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">cex=</span><span class="fl">1.4</span>)</span>
+<span id="cb64-19"><a href="simulation-and-resampling.html#cb64-19" aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>),<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="sc">-</span><span class="dv">1</span>),<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">density=</span><span class="dv">15</span>,<span class="at">border=</span><span class="cn">NA</span>)</span>
+<span id="cb64-20"><a href="simulation-and-resampling.html#cb64-20" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">5</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb64-21"><a href="simulation-and-resampling.html#cb64-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb64-22"><a href="simulation-and-resampling.html#cb64-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">100</span>) {<span class="fu">pic_ani</span>(i)}</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-1.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-2.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-3.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-4.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-5.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-6.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-7.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-8.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-9.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-10.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-11.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-12.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-13.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-14.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-15.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-16.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-17.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-18.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-19.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-20.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-21.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-22.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-23.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-24.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-25.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-26.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-27.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-28.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-29.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-30.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-31.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-32.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-33.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-34.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-35.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-36.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-37.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-38.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-39.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-40.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-41.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-42.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-43.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-44.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-45.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-46.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-47.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-48.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-49.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-50.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-51.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-52.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-53.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-54.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-55.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-56.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-57.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-58.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-59.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-60.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-61.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-62.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-63.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-64.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-65.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-66.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-67.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-68.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-69.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-70.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-71.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-72.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-73.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-74.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-75.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-76.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-77.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-78.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-79.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-80.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-81.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-82.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-83.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-84.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-85.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-86.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-87.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-88.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-89.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-90.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-91.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-92.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-93.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-94.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-95.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-96.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-97.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-98.png" width="672" /><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-50-99.png" width="672" /></p>
+
 </div>
 </div>
             </section>
