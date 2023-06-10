@@ -153,3 +153,16 @@ uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
 metropolis-hastings
 gibbs-sampler
+fig:unnamed-chunk-2
+fig:unnamed-chunk-4
+fig:TransitionSwitz
+ChapBonusMalus
+S:ERBM:Intro
+S:ERBM:NCD
+ncd-system-in-malaysia
+ncd-systems-in-other-countries
+S:ERBM:BMS
+transition-probability
+S:ERBM:StatDist
+stationary-distribution
+r-code-for-a-stationary-distribution
