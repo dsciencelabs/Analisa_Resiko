@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 12 Experience Rating using Bonus-Malus | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 12 Experience Rating using Bonus-Malus | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-10" />
+<meta name="date" content="2023-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -229,17 +233,24 @@ div.csl-indent {
 <li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
+<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-nonparametrik"><i class="fa fa-check"></i><b>4.1.1</b> Estimasi Nonparametrik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#alat-untuk-pemilihan-model-dan-diagnostik"><i class="fa fa-check"></i><b>4.1.2</b> Alat untuk Pemilihan Model dan Diagnostik</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nilai-awal"><i class="fa fa-check"></i><b>4.1.3</b> Nilai Awal</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
@@ -321,7 +332,32 @@ div.csl-indent {
 <li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="loss-reserving.html"><a href="loss-reserving.html#motivation"><i class="fa fa-check"></i><b>11.1</b> Motivation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="loss-reserving.html"><a href="loss-reserving.html#closed-ibnr-and-rbns-claims"><i class="fa fa-check"></i><b>11.1.1</b> Closed, IBNR, and RBNS Claims</a></li>
+<li class="chapter" data-level="11.1.2" data-path="loss-reserving.html"><a href="loss-reserving.html#why-reserving"><i class="fa fa-check"></i><b>11.1.2</b> Why Reserving?</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-data"><i class="fa fa-check"></i><b>11.2</b> Loss Reserve Data</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="loss-reserving.html"><a href="loss-reserving.html#from-micro-to-macro"><i class="fa fa-check"></i><b>11.2.1</b> From Micro to Macro</a></li>
+<li class="chapter" data-level="11.2.2" data-path="loss-reserving.html"><a href="loss-reserving.html#run-off-triangles"><i class="fa fa-check"></i><b>11.2.2</b> Run-off Triangles</a></li>
+<li class="chapter" data-level="11.2.3" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-notation"><i class="fa fa-check"></i><b>11.2.3</b> Loss Reserve Notation</a></li>
+<li class="chapter" data-level="11.2.4" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data"><i class="fa fa-check"></i><b>11.2.4</b> R Code to Summarize Loss Reserve Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="loss-reserving.html"><a href="loss-reserving.html#the-chain-ladder-method"><i class="fa fa-check"></i><b>11.3</b> The Chain-Ladder Method</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="loss-reserving.html"><a href="loss-reserving.html#the-deterministic-chain-ladder"><i class="fa fa-check"></i><b>11.3.1</b> The Deterministic Chain-Ladder</a></li>
+<li class="chapter" data-level="11.3.2" data-path="loss-reserving.html"><a href="loss-reserving.html#macks-distribution-free-chain-ladder-model"><i class="fa fa-check"></i><b>11.3.2</b> Mack’s Distribution-Free Chain-Ladder Model</a></li>
+<li class="chapter" data-level="11.3.3" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-for-chain-ladder-predictions"><i class="fa fa-check"></i><b>11.3.3</b> R code for Chain-Ladder Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="loss-reserving.html"><a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves"><i class="fa fa-check"></i><b>11.4</b> GLMs and Bootstrap for Loss Reserves</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="loss-reserving.html"><a href="loss-reserving.html#model-specification"><i class="fa fa-check"></i><b>11.4.1</b> Model Specification</a></li>
+<li class="chapter" data-level="11.4.2" data-path="loss-reserving.html"><a href="loss-reserving.html#model-estimation-and-prediction"><i class="fa fa-check"></i><b>11.4.2</b> Model Estimation and Prediction</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="12" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:Intro"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
@@ -370,7 +406,25 @@ div.csl-indent {
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions"><i class="fa fa-check"></i><b>17.1.1</b> Likelihood and Log-likelihood Functions</a></li>
+<li class="chapter" data-level="17.1.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#properties-of-likelihood-functions"><i class="fa fa-check"></i><b>17.1.2</b> Properties of Likelihood Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>17.2</b> Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#definition-and-derivation-of-mle"><i class="fa fa-check"></i><b>17.2.1</b> Definition and Derivation of MLE</a></li>
+<li class="chapter" data-level="17.2.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#asymptotic-properties-of-mle"><i class="fa fa-check"></i><b>17.2.2</b> Asymptotic Properties of MLE</a></li>
+<li class="chapter" data-level="17.2.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.2.3</b> Use of Maximum Likelihood Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.3</b> Statistical Inference Based on Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#hypothesis-testing"><i class="fa fa-check"></i><b>17.3.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="17.3.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
 <li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
@@ -473,9 +527,14 @@ year, and moving to the highest class after having one or more claims.
 For an illustration purpose, <a href="#fig:12.1">Figure 12.1</a>
 <!-- \@ref(fig:TransitionMsia)  -->
 shows the classes and the transition diagram for the Malaysian <em>NCD</em> system.</p>
+<pre><code>## 
+## Attaching package: &#39;gridExtra&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     combine</code></pre>
 <p><a id=fig:12.1></a></p>
 
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-85"></span>
 <img src="images/FigureTransitionMsia.png" alt="Transition Diagram for NCD Classes (Malaysia)" width="45%" /><img src="images/gridMalayTable.png" alt="Transition Diagram for NCD Classes (Malaysia)" width="45%" />
 <p class="caption">
 Figure 12.1: <strong>Transition Diagram for NCD Classes (Malaysia)</strong>
@@ -519,7 +578,7 @@ of -1/+1, that is, a class of bonus for a claim-free year, and a class of malus
 for each claim reported.</p>
 <p><a id=fig:12.2></a></p>
 
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-87"></span>
 <img src="images/FigureTransitionBrazil.png" alt="Transition Diagram for NCD Classes (Brazil)" width="45%" /><img src="images/gridBrazilTable.png" alt="Transition Diagram for NCD Classes (Brazil)" width="45%" />
 <p class="caption">
 Figure 12.2: <strong>Transition Diagram for <em>NCD</em> Classes (Brazil)</strong>
@@ -794,23 +853,23 @@ insureds will eventually belong to class 5.</p>
 <p>We can use the left eigenvector of a transition matrix to calculate a stationary distribution. The following <code>R</code> code can be used to
 calculate the left eigenvector:</p>
 <p><strong>1. Create a Transition Matrix</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ChapBonusMalus.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
-<span id="cb1-2"><a href="ChapBonusMalus.html#cb1-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb1-3"><a href="ChapBonusMalus.html#cb1-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb1-4"><a href="ChapBonusMalus.html#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb1-5"><a href="ChapBonusMalus.html#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,</span>
-<span id="cb1-6"><a href="ChapBonusMalus.html#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,</span>
-<span id="cb1-7"><a href="ChapBonusMalus.html#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>)</span>
-<span id="cb1-8"><a href="ChapBonusMalus.html#cb1-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="ChapBonusMalus.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
+<span id="cb114-2"><a href="ChapBonusMalus.html#cb114-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb114-3"><a href="ChapBonusMalus.html#cb114-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb114-4"><a href="ChapBonusMalus.html#cb114-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb114-5"><a href="ChapBonusMalus.html#cb114-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,</span>
+<span id="cb114-6"><a href="ChapBonusMalus.html#cb114-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,</span>
+<span id="cb114-7"><a href="ChapBonusMalus.html#cb114-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>)</span>
+<span id="cb114-8"><a href="ChapBonusMalus.html#cb114-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
 <p><strong>LeftEigen.1’, ’Show R Output</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="ChapBonusMalus.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
-<span id="cb2-2"><a href="ChapBonusMalus.html#cb2-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb2-3"><a href="ChapBonusMalus.html#cb2-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb2-4"><a href="ChapBonusMalus.html#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb2-5"><a href="ChapBonusMalus.html#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,</span>
-<span id="cb2-6"><a href="ChapBonusMalus.html#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,</span>
-<span id="cb2-7"><a href="ChapBonusMalus.html#cb2-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>)</span>
-<span id="cb2-8"><a href="ChapBonusMalus.html#cb2-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="ChapBonusMalus.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
+<span id="cb115-2"><a href="ChapBonusMalus.html#cb115-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb115-3"><a href="ChapBonusMalus.html#cb115-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb115-4"><a href="ChapBonusMalus.html#cb115-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb115-5"><a href="ChapBonusMalus.html#cb115-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,</span>
+<span id="cb115-6"><a href="ChapBonusMalus.html#cb115-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,</span>
+<span id="cb115-7"><a href="ChapBonusMalus.html#cb115-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>)</span>
+<span id="cb115-8"><a href="ChapBonusMalus.html#cb115-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6]
 [1,]  0.1  0.9  0.0  0.0  0.0  0.0
 [2,]  0.1  0.0  0.9  0.0  0.0  0.0
