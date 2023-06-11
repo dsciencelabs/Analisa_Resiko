@@ -336,7 +336,7 @@ $$\mu_{ij} =  \exp{(\mu + \alpha_i + \beta_j)}.$$
 ### Model Estimation and Prediction
 
 kami sekarang mengestimasi parameter regresi $\phi$, $\alpha_{i}$, dan $\beta_j$ dalam GLM yang diusulkan. Di `R`, fungsi `glm` tersedia untuk mengestimasi parameter-parameter ini melalui estimasi maximum likelihood (mle) atau estimasi quasi-likelihood (dalam kasus Poisson over-dispersed). Dengan adanya estimasi parameter $\hat{\phi}$, $\hat{\alpha_i}$, dan$\hat{\beta}_j$, kita dapat menghasilkan estimasi titik untuk setiap sel dalam segitiga atas.
-
+ 
 $$\hat{X}_{ij} =\hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j\leq I.$$
 
 $$\hat{X}_{ij} = \hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j> I.$$
