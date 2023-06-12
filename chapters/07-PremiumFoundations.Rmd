@@ -351,7 +351,9 @@ Dengan basis data terperinci ini, dalam prinsipnya mudah untuk menjumlahkan deta
 
 Periode pelaporan keuangan adalah jangka waktu yang tetap dalam kalender; kami menggunakan 1 Januari hingga 31 Desember untuk contoh dalam buku ini meskipun periode pelaporan lain juga umum. Periode pelaporan adalah tetap tetapi kebijakan dapat dimulai kapan saja selama setahun. Meskipun semua kebijakan memiliki durasi kontrak yang sama selama satu tahun (misalnya), karena waktu mulai yang berbeda, kebijakan dapat berakhir kapan saja selama pelaporan keuangan. Gambar 7.1 menunjukkan empat kebijakan yang menggambarkan. Perlu adanya standar mengenai jenis-jenis ukuran yang paling berguna untuk merangkum pengalaman dalam periode pelaporan tertentu karena perbedaan waktu mulai dan berakhir ini.
 
-<img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+```{r image1, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/tujuhsatu.png")
+```
 
 Beberapa ukuran paparan yang umum digunakan adalah:
 -	Paparan tertulis, jumlah paparan pada kebijakan yang diterbitkan (ditulis) selama periode yang dimaksud,
@@ -419,7 +421,9 @@ Untuk menggambarkan terminologi tambahan, sangat membantu untuk mengikuti kronol
 
 Setelah pemberitahuan klaim, mungkin ada satu atau lebih pembayaran kerugian. Tidak semua pembayaran dapat dilakukan sebelum tanggal penilaian berikutnya (t4). Saat klaim berkembang, akhirnya perusahaan menganggap kewajiban keuangannya terhadap klaim telah selesai dan menyatakan klaim ditutup. Namun, mungkin muncul fakta baru dan klaim harus dibuka kembali, yang menghasilkan pembayaran kerugian tambahan sebelum ditutup kembali.
 
-<img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/tujuhdua.png")
+```
 
 -	Tanggal kecelakaan - tanggal kejadian yang menyebabkan klaim. Ini juga dikenal sebagai tanggal kerugian atau tanggal kejadian.
 -	Tanggal laporan - tanggal dimana perusahaan asuransi menerima pemberitahuan tentang klaim. Klaim yang saat ini tidak diketahui oleh perusahaan asuransi disebut sebagai klaim yang tidak dilaporkan atau klaim yang terjadi tetapi belum dilaporkan (IBNR).
@@ -569,7 +573,9 @@ Dalam ekonomi kesejahteraan, umumnya digunakan untuk membandingkan distribusi me
 
 Contoh - Kurva Lorenz Klasik. Untuk contoh asuransi, Gambar 7.3 menunjukkan distribusi kerugian asuransi. Gambar ini didasarkan pada sampel acak 2000 kerugian. Panel sebelah kiri menunjukkan histogram yang condong ke kanan dari kerugian. Panel sebelah kanan menunjukkan kurva Lorenz yang sesuai, yang juga menunjukkan distribusi yang condong. Misalnya, panah menandai titik di mana 60 persen pemegang polis memiliki 30 persen kerugian. Garis 45 derajat adalah garis kesetaraan; jika setiap pemegang polis memiliki kerugian yang sama, maka distribusi kerugian akan berada pada garis ini. Indeks Gini, dua kali lipat dari luas antara kurva Lorenz dan garis 45 derajat, adalah 37,6 persen untuk kumpulan data ini.
 
-<img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+```{r image3, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/tujuhtiga.png")
+```
 
 ### Performance Curve and a Gini Statistic
 
@@ -601,7 +607,9 @@ $$\begin{equation}
 
 di mana  $I(⋅$) adalah fungsi indikator, menghasilkan 1 jika peristiwa benar dan nol sebaliknya. Untuk nilai tertentu  $s$,  $\hat{F}_P(s)$ memberikan proporsi premi kurang dari atau sama dengan  $s$, dan  $\hat{F}_P(s)$  memberikan proporsi kerugian bagi pemegang kebijakan dengan premi kurang dari atau sama dengan  $s$ . Grafik  $\left(\hat{F}_P(s),\hat{F}_{L}(s) \right)$ dikenal sebagai kurva kinerja.
 
-<img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.2-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+```{r image4, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/tujuhempat.png")
+```
 
 `Gambar di atas membandingkan Kurva Lorenz dengan kurva kinerja. Panel sebelah kiri menunjukkan kurva Lorenz. Sumbu horizontal adalah proporsi kumulatif pemegang kebijakan (0, 0,2, 0,4, 0,6, 0,8, 1,0) dan sumbu vertikal adalah proporsi kumulatif kerugian (0, 2/36, 7/36, 13/36, 19/39, 36/36). Untuk kurva Lorenz, Anda pertama-tama mengurutkan berdasarkan ukuran kerugian (yang ternyata sama urutannya dengan premi untuk dataset sederhana ini). Gambar ini menunjukkan pemisahan besar antara distribusi kerugian dan pemegang kebijakan.
 

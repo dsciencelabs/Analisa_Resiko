@@ -788,15 +788,14 @@ Dengan basis data terperinci ini, dalam prinsipnya mudah untuk menjumlahkan deta
 <div id="paparan-dan-premi" class="section level3 hasAnchor" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> Paparan dan Premi<a href="premium-foundations.html#paparan-dan-premi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Periode pelaporan keuangan adalah jangka waktu yang tetap dalam kalender; kami menggunakan 1 Januari hingga 31 Desember untuk contoh dalam buku ini meskipun periode pelaporan lain juga umum. Periode pelaporan adalah tetap tetapi kebijakan dapat dimulai kapan saja selama setahun. Meskipun semua kebijakan memiliki durasi kontrak yang sama selama satu tahun (misalnya), karena waktu mulai yang berbeda, kebijakan dapat berakhir kapan saja selama pelaporan keuangan. Gambar 7.1 menunjukkan empat kebijakan yang menggambarkan. Perlu adanya standar mengenai jenis-jenis ukuran yang paling berguna untuk merangkum pengalaman dalam periode pelaporan tertentu karena perbedaan waktu mulai dan berakhir ini.</p>
-<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<p><img src="images/tujuhsatu.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Beberapa ukuran paparan yang umum digunakan adalah:
 - Paparan tertulis, jumlah paparan pada kebijakan yang diterbitkan (ditulis) selama periode yang dimaksud,
 - Paparan diperoleh, unit paparan yang benar-benar terpapar risiko selama periode tersebut, yaitu, di mana perlindungan telah diberikan
 - Paparan belum diperoleh, mewakili bagian dari paparan tertulis di mana perlindungan belum diberikan sampai saat itu, dan
 - Paparan dalam kekuatan, unit paparan yang terpapar risiko pada titik waktu tertentu.</p>
 <p>Tabel di bawah memberikan perhitungan terperinci untuk empat kebijakan ilustratif:</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<span class="math display">\[\small{
+<p><span class="math display">\[\small{
 \begin{matrix}
 \begin{array}{cl|cc|cc|cc|c}
   \hline
@@ -842,7 +841,7 @@ E. &amp; 900 &amp; 750 &amp; 900 \\\hline
 <p>Teks ini akan mengikuti poin kedua. Namun, ketika membaca sumber lain, Anda perlu berhati-hati dalam memahami definisi untuk istilah kerugian dan klaim.</p>
 <p>Untuk menggambarkan terminologi tambahan, sangat membantu untuk mengikuti kronologi klaim saat berkembang. Pada Gambar 7.2, klaim terjadi pada waktu t1 dan perusahaan asuransi diberitahu pada waktu t3. Ada celah yang panjang antara kejadian dan pemberitahuan sehingga akhir periode pelaporan keuangan perusahaan, yang dikenal sebagai tanggal penilaian, terjadi (t2) sebelum kerugian dilaporkan. Dalam kasus ini, klaim dikatakan terjadi tetapi belum dilaporkan pada tanggal penilaian ini.</p>
 <p>Setelah pemberitahuan klaim, mungkin ada satu atau lebih pembayaran kerugian. Tidak semua pembayaran dapat dilakukan sebelum tanggal penilaian berikutnya (t4). Saat klaim berkembang, akhirnya perusahaan menganggap kewajiban keuangannya terhadap klaim telah selesai dan menyatakan klaim ditutup. Namun, mungkin muncul fakta baru dan klaim harus dibuka kembali, yang menghasilkan pembayaran kerugian tambahan sebelum ditutup kembali.</p>
-<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<p><img src="images/tujuhdua.png" width="100%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>Tanggal kecelakaan - tanggal kejadian yang menyebabkan klaim. Ini juga dikenal sebagai tanggal kerugian atau tanggal kejadian.</li>
 <li>Tanggal laporan - tanggal dimana perusahaan asuransi menerima pemberitahuan tentang klaim. Klaim yang saat ini tidak diketahui oleh perusahaan asuransi disebut sebagai klaim yang tidak dilaporkan atau klaim yang terjadi tetapi belum dilaporkan (IBNR).</li>
@@ -971,7 +970,7 @@ Premium_{experience}
 <h3><span class="header-section-number">7.6.1</span> Kurva Lorenz Klasik<a href="premium-foundations.html#kurva-lorenz-klasik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Dalam ekonomi kesejahteraan, umumnya digunakan untuk membandingkan distribusi melalui kurva Lorenz, yang dikembangkan oleh Max Otto Lorenz (Lorenz 1905). Kurva Lorenz adalah grafik proporsi populasi pada sumbu horizontal dan fungsi distribusi yang diminati pada sumbu vertikal. Biasanya digunakan untuk mewakili distribusi pendapatan. Ketika distribusi pendapatan sepenuhnya sejalan dengan distribusi populasi, kurva Lorenz menghasilkan garis 45 derajat yang dikenal sebagai garis kesetaraan. Karena grafik membandingkan dua fungsi distribusi, kurva Lorenz juga dapat dianggap sebagai jenis plot pp yang diperkenalkan dalam Bagian 4.1.2.1. Luas antara kurva Lorenz dan garis kesetaraan adalah ukuran ketidaksesuaian antara distribusi pendapatan dan distribusi populasi. Dua kali lipat dari luas ini dikenal sebagai indeks Gini, yang diperkenalkan oleh Corrado Gini pada tahun 1912.</p>
 <p>Contoh - Kurva Lorenz Klasik. Untuk contoh asuransi, Gambar 7.3 menunjukkan distribusi kerugian asuransi. Gambar ini didasarkan pada sampel acak 2000 kerugian. Panel sebelah kiri menunjukkan histogram yang condong ke kanan dari kerugian. Panel sebelah kanan menunjukkan kurva Lorenz yang sesuai, yang juga menunjukkan distribusi yang condong. Misalnya, panah menandai titik di mana 60 persen pemegang polis memiliki 30 persen kerugian. Garis 45 derajat adalah garis kesetaraan; jika setiap pemegang polis memiliki kerugian yang sama, maka distribusi kerugian akan berada pada garis ini. Indeks Gini, dua kali lipat dari luas antara kurva Lorenz dan garis 45 derajat, adalah 37,6 persen untuk kumpulan data ini.</p>
-<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<p><img src="images/tujuhtiga.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="performance-curve-and-a-gini-statistic" class="section level3 hasAnchor" number="7.6.2">
 <h3><span class="header-section-number">7.6.2</span> Performance Curve and a Gini Statistic<a href="premium-foundations.html#performance-curve-and-a-gini-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -995,7 +994,7 @@ Premium_{experience}
 \tag{7.6}
 \end{equation}\]</span></p>
 <p>di mana <span class="math inline">\(I(⋅\)</span>) adalah fungsi indikator, menghasilkan 1 jika peristiwa benar dan nol sebaliknya. Untuk nilai tertentu <span class="math inline">\(s\)</span>, <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi premi kurang dari atau sama dengan <span class="math inline">\(s\)</span>, dan <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi kerugian bagi pemegang kebijakan dengan premi kurang dari atau sama dengan <span class="math inline">\(s\)</span> . Grafik <span class="math inline">\(\left(\hat{F}_P(s),\hat{F}_{L}(s) \right)\)</span> dikenal sebagai kurva kinerja.</p>
-<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.2-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<p><img src="images/tujuhempat.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>`Gambar di atas membandingkan Kurva Lorenz dengan kurva kinerja. Panel sebelah kiri menunjukkan kurva Lorenz. Sumbu horizontal adalah proporsi kumulatif pemegang kebijakan (0, 0,2, 0,4, 0,6, 0,8, 1,0) dan sumbu vertikal adalah proporsi kumulatif kerugian (0, 2/36, 7/36, 13/36, 19/39, 36/36). Untuk kurva Lorenz, Anda pertama-tama mengurutkan berdasarkan ukuran kerugian (yang ternyata sama urutannya dengan premi untuk dataset sederhana ini). Gambar ini menunjukkan pemisahan besar antara distribusi kerugian dan pemegang kebijakan.</p>
 <pre><code>Panel sebelah kanan menunjukkan kurva kinerja. Karena pengamatan diurutkan berdasarkan premi, titik pertama setelah titik asal (dibaca dari kiri ke kanan) adalah (2/34, 2/36). Titik kedua adalah (6/34, 7/36), dengan pola berlanjut. Dari gambar, kita melihat bahwa ada sedikit pemisahan antara kerugian dan premi.</code></pre>
 <p>Kurva kinerja dapat membantu analis dalam merancang portofolio yang menguntungkan bagi perusahaan asuransi. Sebagai contoh, anggaplah bahwa s dipilih untuk mewakili persentil ke-95 dari distribusi premi. Maka, sumbu horizontal, F^P(s), mewakili fraksi premi untuk portofolio ini dan sumbu vertikal, F^L(s), mewakili fraksi kerugian untuk portofolio ini. Ketika mengembangkan prinsip premi, para analis ingin menghindari situasi yang tidak menguntungkan dan mencapai keuntungan, atau setidaknya impas.</p>
@@ -1021,8 +1020,6 @@ Premium_{experience}
 <li>Gunakan variabel penjelas dari sampel validasi untuk membentuk premi dalam bentuk P(xi)</li>
 <li>Hitung statistik Gini untuk setiap model. Pilih model dengan statistik Gini terendah.</li>
 </ul>
-<p>=======
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e</p>
 
 </div>
 </div>
