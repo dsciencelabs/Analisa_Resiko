@@ -962,4 +962,3 @@ $$
 
 Untuk distribusi konjugasi, posterior dan sebelumnya milik keluarga distribusi yang sama. Ilustrasi berikut melihat kasus khusus gamma-Poisson, yang paling terkenal dalam aplikasi aktuaria.
 
->>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641

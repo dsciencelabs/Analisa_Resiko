@@ -339,7 +339,24 @@ Dengan kata lain, perusahaan asuransi diizinkan untuk menetapkan tarif yang berb
 
 Selain kriteria statistik untuk menilai signifikansi faktor rating, analis harus memperhatikan masalah bisnis perusahaan (misalnya, apakah mahal untuk menerapkan faktor rating?), kriteria sosial (apakah variabel berada di bawah kendali pemegang polis?), kriteria hukum (apakah ada regulasi yang melarang penggunaan faktor rating seperti gender?), dan masalah sosial lainnya. Pertanyaan-pertanyaan ini sebagian besar di luar cakupan teks ini. Namun demikian, karena mereka sangat mendasar untuk penetapan harga asuransi, gambaran singkat diberikan di Bab 8, termasuk Lampiran Teknis TS 8.B.
 
-<<<<<<< HEAD
-=======
+## Development and Trending
 
->>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
+Seperti yang telah kita lihat di Bagian 7.2, perusahaan asuransi mempertimbangkan informasi agregat untuk penetapan tarif seperti paparan risiko, premi, biaya, klaim, dan pembayaran. Informasi agregat ini juga berguna untuk mengelola aktivitas perusahaan asuransi; laporan keuangan umumnya dibuat setidaknya setahun sekali dan seringkali secara triwulanan. Pada setiap tanggal pelaporan keuangan yang diberikan, informasi tentang kebijakan dan klaim terbaru akan terus berlanjut dan tidak lengkap; bagian ini memperkenalkan konsep-konsep untuk memproyeksikan informasi risiko agar berguna untuk tujuan penetapan tarif. Informasi tentang risiko, seperti paparan, premi, jumlah klaim, kerugian, dan faktor rating, biasanya diorganisir ke dalam tiga basis data:
+-	Basis data kebijakan - berisi informasi tentang risiko yang diasuransikan, pemegang polis, dan ketentuan kontrak
+-	Basis data klaim - berisi informasi tentang setiap klaim; ini terhubung dengan basis data kebijakan.
+-	Basis data pembayaran - berisi informasi tentang setiap transaksi klaim, biasanya pembayaran tetapi juga perubahan pada cadangan kasus. Ini terhubung dengan basis data klaim.
+Dengan basis data terperinci ini, dalam prinsipnya mudah untuk menjumlahkan detail tingkat kebijakan menjadi informasi agregat yang diperlukan untuk laporan keuangan. Bagian ini menggambarkan berbagai ukuran ringkasan yang umum digunakan.
+
+### Paparan dan Premi
+
+Periode pelaporan keuangan adalah jangka waktu yang tetap dalam kalender; kami menggunakan 1 Januari hingga 31 Desember untuk contoh dalam buku ini meskipun periode pelaporan lain juga umum. Periode pelaporan adalah tetap tetapi kebijakan dapat dimulai kapan saja selama setahun. Meskipun semua kebijakan memiliki durasi kontrak yang sama selama satu tahun (misalnya), karena waktu mulai yang berbeda, kebijakan dapat berakhir kapan saja selama pelaporan keuangan. Gambar 7.1 menunjukkan empat kebijakan yang menggambarkan. Perlu adanya standar mengenai jenis-jenis ukuran yang paling berguna untuk merangkum pengalaman dalam periode pelaporan tertentu karena perbedaan waktu mulai dan berakhir ini.
+
+(gambar 7.5-1)
+
+Beberapa ukuran paparan yang umum digunakan adalah:
+-	Paparan tertulis, jumlah paparan pada kebijakan yang diterbitkan (ditulis) selama periode yang dimaksud,
+-	Paparan diperoleh, unit paparan yang benar-benar terpapar risiko selama periode tersebut, yaitu, di mana perlindungan telah diberikan
+-	Paparan belum diperoleh, mewakili bagian dari paparan tertulis di mana perlindungan belum diberikan sampai saat itu, dan
+-	Paparan dalam kekuatan, unit paparan yang terpapar risiko pada titik waktu tertentu.
+
+Tabel di bawah memberikan perhitungan terperinci untuk empat kebijakan ilustratif:
