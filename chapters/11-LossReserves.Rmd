@@ -1,1 +1,342 @@
 # Loss Reserving
+
+1. Pratinjau Bab. Bab ini memperkenalkan pereservasi kerugian (juga dikenal sebagai pereservasi klaim) untuk produk asuransi harta benda dan kecelakaan (P&C, atau umum, non-hidup). Secara khusus, bab ini menggambarkan beberapa alat analitik dasar, meskipun penting, untuk menilai cadangan pada portofolio produk asuransi P&C. Pertama, Bagian 11.1 memberikan motivasi tentang perlunya pereservasi kerugian, kemudian Bagian 11.2 mempelajari sumber data yang tersedia dan memperkenalkan beberapa notasi formal untuk menangani pereservasi kerugian sebagai tantangan prediksi. Selanjutnya, Bagian 11.3 membahas metode tangga rantai (chain-ladder method) dan model tangga rantai tanpa distribusi Mack. Bagian 11.4 kemudian mengembangkan pendekatan yang sepenuhnya stokastik untuk menentukan cadangan yang belum diselesaikan dengan menggunakan model linear generalisasi (GLM), termasuk teknik bootstrapping untuk mendapatkan distribusi prediktif cadangan yang belum diselesaikan melalui simulasi.
+
+## Motivation
+
+Titik awal adalah masa hidup klaim asuransi P&C. Gambar 11.1 menggambarkan perkembangan klaim tersebut dari waktu ke waktu dan mengidentifikasi peristiwa yang menarik perhatian:
+
+Kejadian yang diasuransikan atau kecelakaan terjadi pada waktu tocc. Kejadian ini dilaporkan kepada perusahaan asuransi pada waktu trep, setelah beberapa keterlambatan. Jika klaim yang diajukan diterima oleh perusahaan asuransi, pembayaran akan dilakukan untuk mengganti kerugian keuangan pemegang polis. Dalam contoh ini, perusahaan asuransi mengganti kerugian yang terjadi dengan pembayaran kerugian pada waktu t1, t2, dan t3. Pada akhirnya, klaim diselesaikan atau ditutup pada waktu tset.
+
+Seringkali klaim tidak langsung diselesaikan karena adanya keterlambatan dalam pelaporan klaim, keterlambatan dalam proses penyelesaian, atau keduanya. Keterlambatan pelaporan adalah waktu yang berlalu antara terjadinya kejadian yang diasuransikan dan pelaporan kejadian ini kepada perusahaan asuransi. Waktu antara pelaporan dan penyelesaian klaim dikenal sebagai keterlambatan penyelesaian. Misalnya, secara intuitif dapat dipahami bahwa klaim kerusakan material atau properti diselesaikan lebih cepat daripada klaim cedera tubuh yang melibatkan jenis cedera yang kompleks. Klaim yang ditutup juga dapat dibuka kembali karena perkembangan baru, misalnya cedera yang membutuhkan perawatan tambahan. Secara keseluruhan, perkembangan klaim biasanya membutuhkan waktu. Adanya keterlambatan ini dalam penyelesaian klaim membutuhkan perusahaan asuransi untuk memiliki modal guna menyelesaikan klaim-kilaim ini di masa depan.
+
+### Closed, IBNR, and RBNS Claims
+
+Berdasarkan status run-off klaim, kami membedakan tiga jenis klaim dalam catatan perusahaan asuransi. Jenis pertama adalah klaim yang ditutup. Untuk klaim-klaim ini, perkembangan lengkap telah diamati. Dengan garis merah pada Gambar 11.2 menunjukkan saat ini, semua peristiwa dalam perkembangan klaim terjadi sebelum saat ini. Oleh karena itu, peristiwa-peristiwa ini diamati pada saat ini. Untuk kenyamanan, kami akan mengasumsikan bahwa klaim yang ditutup tidak dapat dibuka kembali.
+
+Klaim RBNS adalah klaim yang Sudah Dilaporkan, Tetapi Belum sepenuhnya Diselesaikan pada saat ini atau saat evaluasi (tanggal penilaian), yaitu saat di mana cadangan harus dihitung dan dicatat oleh perusahaan asuransi. Kejadian, pelaporan, dan mungkin beberapa pembayaran kerugian terjadi sebelum saat ini, tetapi penyelesaian klaim terjadi di masa depan, setelah saat ini.
+
+
+Klaim IBNR adalah klaim yang Telah Terjadi di masa lalu, Tetapi Belum Dilaporkan. Untuk klaim seperti ini, kejadian yang diasuransikan telah terjadi, tetapi perusahaan asuransi belum menyadari adanya klaim terkait. Klaim ini akan dilaporkan di masa depan dan perkembangannya yang lengkap (dari pelaporan hingga penyelesaian) terjadi di masa depan.
+
+Perusahaan asuransi akan melakukan reservasi modal untuk memenuhi kewajiban masa depan mereka terkait dengan klaim RBNS dan juga klaim IBNR. Perkembangan masa depan dari klaim-klaim tersebut tidak pasti, dan teknik pemodelan prediktif akan digunakan untuk menghitung cadangan yang tepat, berdasarkan data perkembangan historis yang diamati pada klaim-klaim serupa.
+
+### Why Reserving?
+
+Siklus produksi terbalik dalam pasar asuransi dan dinamika klaim yang digambarkan dalam Bagian 11.1.1 menjadi motivasi untuk perlunya pereservasi dan perancangan alat pemodelan prediktif untuk mengestimasi cadangan. Dalam asuransi, pendapatan premi mendahului biaya. Seorang perusahaan asuransi akan mengenakan premi kepada klien sebelum sebenarnya mengetahui seberapa mahal kebijakan atau kontrak asuransi tersebut akan menjadi. Hal ini berbeda dengan industri manufaktur yang biasanya seorang produsen mengetahui - sebelum menjual produk - berapa biaya produksi produk tersebut. Pada saat evaluasi yang ditentukan τ, perusahaan asuransi akan memprediksi kewajiban yang belum diselesaikan terkait dengan kontrak yang terjual di masa lalu. Ini adalah cadangan klaim atau cadangan kerugian; ini adalah modal yang diperlukan untuk menyelesaikan klaim terbuka dari paparan masa lalu. Ini adalah elemen yang sangat penting dalam neraca perusahaan asuransi, lebih khususnya pada sisi kewajiban neraca perusahaan.
+
+## Loss Reserve Data
+
+### From Micro to Macro
+
+Sekarang kami akan menjelaskan data yang tersedia untuk mengestimasi cadangan yang belum diselesaikan untuk portofolio kontrak asuransi P&C. Perusahaan asuransi biasanya mencatat data mengenai perkembangan klaim individual seperti yang digambarkan dalam garis waktu di sebelah kiri Gambar 11.5. Kami menyebut data yang tercatat pada tingkat ini sebagai data granular atau mikro-level. Biasanya, seorang aktuaris menggabungkan informasi yang tercatat mengenai perkembangan klaim individual dari seluruh klaim dalam sebuah portofolio. Penggabungan ini menghasilkan data yang terstruktur dalam format segitiga seperti yang ditunjukkan di sebelah kanan Gambar 11.5. Data seperti ini disebut data agregat atau makro-level karena setiap sel di segitiga menampilkan informasi yang diperoleh dengan menggabungkan perkembangan dari beberapa klaim.
+
+Tampilan segitiga yang digunakan dalam pereservasi kerugian disebut segitiga run-off atau segitiga perkembangan. Pada sumbu vertikal, segitiga tersebut mencantumkan tahun kejadian atau kecelakaan yang diikuti oleh sebuah portofolio. Pembayaran kerugian yang tercatat untuk klaim tertentu terhubung dengan tahun dimana kejadian yang diasuransikan terjadi. Sumbu horizontal mengindikasikan keterlambatan pembayaran sejak terjadinya kejadian yang diasuransikan.
+
+### Run-off Triangles
+
+Contoh pertama dari segitiga run-off dengan pembayaran bertambah ditampilkan dalam Gambar 11.6 (diambil dari Wüthrich dan Merz (2008), Tabel 2.2, juga digunakan dalam Wüthrich dan Merz (2015), Tabel 1.4). Tahun kecelakaan (atau tahun kejadian) ditampilkan pada sumbu vertikal dan mulai dari tahun 2004 hingga 2013. Ini merujuk pada tahun dimana kejadian yang diasuransikan terjadi. Sumbu horizontal mengindikasikan keterlambatan pembayaran dalam tahun sejak terjadinya kejadian yang diasuransikan. Keterlambatan 0 digunakan untuk pembayaran yang dilakukan pada tahun terjadinya kecelakaan atau kejadian yang diasuransikan. Keterlambatan satu tahun digunakan untuk pembayaran yang dilakukan pada tahun setelah terjadinya kecelakaan.
+
+Sementara segitiga pada Gambar 11.6 menampilkan data pembayaran bertambah, Gambar 11.7 menunjukkan informasi yang sama dalam format akumulatif. Sekarang, sel (2004,1) menampilkan total jumlah klaim yang dibayarkan hingga keterlambatan pembayaran 1 untuk semua klaim yang terjadi pada tahun 2004. Oleh karena itu, itu merupakan jumlah dari jumlah yang dibayarkan pada tahun 2004 dan jumlah yang dibayarkan pada tahun 2005 atas kecelakaan yang terjadi pada tahun 2004.
+
+Berbagai informasi dapat disimpan dalam segitiga run-off seperti yang ditunjukkan dalam Gambar 11.6 dan Gambar 11.7. Tergantung pada jenis data yang disimpan, segitiga akan digunakan untuk mengestimasi jumlah yang berbeda.
+
+Sebagai contoh, dalam format bertambah, sebuah sel dapat menampilkan:
+
+- Pembayaran klaim, seperti yang dijelaskan sebelumnya.
+- Jumlah klaim yang terjadi pada tahun tertentu dan dilaporkan dengan keterlambatan tertentu, ketika tujuannya adalah untuk mengestimasi jumlah klaim IBNR.
+- Perubahan jumlah yang terjadi, di mana jumlah klaim yang terjadi adalah jumlah dari klaim yang dibayarkan secara akumulatif dan estimasi kasus. Estimasi kasus adalah perkiraan ahli penangan klaim mengenai jumlah yang belum diselesaikan dalam suatu klaim.
+
+Dalam format akumulatif, sebuah sel dapat menampilkan:
+
+- Jumlah pembayaran akumulatif, seperti yang dijelaskan sebelumnya.
+- Total jumlah klaim dari tahun kejadian, dilaporkan hingga keterlambatan tertentu.
+- Jumlah klaim yang terjadi.
+
+Sumber informasi lainnya juga mungkin tersedia, misalnya kovariat (seperti jenis klaim), informasi eksternal (seperti inflasi, perubahan dalam regulasi). Sebagian besar metode pereservasi klaim yang dirancang untuk segitiga run-off didasarkan pada satu sumber informasi, meskipun kontribusi terbaru fokus pada penggunaan data yang lebih terperinci untuk pereservasi kerugian.
+
+### Loss Reserve Notation
+
+*Run-off Triangles*
+
+Untuk memformalkan tampilan yang ditunjukkan dalam Gambar 11.6 dan 11.7, kita akan menggunakan notasi sebagai berikut.
+
+Kita mengasosiasikan i dengan tahun kejadian atau tahun kecelakaan, yaitu tahun di mana kejadian yang diasuransikan terjadi. Dalam notasi kita, tahun kecelakaan pertama yang dipertimbangkan dalam portofolio ditandai dengan 1, dan tahun kecelakaan terakhir yang paling baru ditandai dengan I .
+
+Selanjutnya, j merujuk pada keterlambatan pembayaran atau tahun perkembangan, di mana keterlambatan yang sama dengan 0 sesuai dengan tahun kecelakaan itu sendiri. Gambar 11.8 menunjukkan sebuah segitiga di mana jumlah tahun yang sama dipertimbangkan baik pada sumbu vertikal maupun sumbu horizontal, oleh karena itu j berjalan dari 0 hingga $J=I−1$ .
+
+Variabel acak $X_{ij}$ menunjukkan klaim bertambah yang dibayarkan dalam periode perkembangan $j$ untuk klaim dari tahun kecelakaan $i$ . Dengan demikian, $X_{ij}$ adalah total jumlah yang dibayarkan pada tahun perkembangan $j$ untuk semua klaim yang terjadi pada tahun kejadian $i$ . Pembayaran ini sebenarnya dilakukan dalam tahun akuntansi atau tahun kalender $i+j$ . Dalam perspektif akumulatif, $C_{ij}$ adalah jumlah kumulatif yang dibayarkan hingga (dan termasuk) tahun perkembangan $j$ untuk kecelakaan yang terjadi pada tahun $i$ . Pada akhirnya, jumlah total  $C_{ij}$ dibayarkan pada tahun perkembangan akhir $J$ untuk klaim yang terjadi pada tahun kecelakaan $i$ . Dalam bab ini, waktu diungkapkan dalam tahun, meskipun unit waktu lainnya juga dapat digunakan, misalnya periode enam bulan atau kuartal.
+
+*The Loss Reserve*
+
+Pada saat evaluasi $\tau$ , data pada segitiga atas telah diamati, sedangkan segitiga bawah harus diprediksi. Di sini, saat evaluasi adalah akhir tahun kecelakaan $I$ , yang berarti bahwa sel $(i,j)$ dengan $i+j \leq I$ diamati, dan sel $(i,j)$ dengan $i+j > I$ termasuk masa depan dan harus diprediksi. Oleh karena itu, untuk segitiga run-off kumulatif, tujuan metode pereservasi kerugian adalah memprediksi $C_i,I−1$ , jumlah klaim akhir untuk tahun kejadian $i$ , yang sesuai dengan periode perkembangan akhir $I−1$ dalam Gambar 11.7. Kami mengasumsikan bahwa - setelah periode ini tidak akan ada pembayaran lebih lanjut, meskipun asumsi ini bisa dikendurkan.
+
+Karena $C_{i,I-1}$ bersifat kumulatif, itu mencakup bagian yang diamati serta bagian yang harus diprediksi. Oleh karena itu, kewajiban yang belum diselesaikan atau cadangan kerugian untuk tahun kecelakaan $i$ adalah
+
+$$\begin{eqnarray*}
+\mathcal{R}^{(0)}_{i} = \sum_{\ell=I-i+1}^{I-1} X_{i\ell} = C_{i,I}-C_{i,I-i}.
+\end{eqnarray*}$$
+
+Kami menyatakan cadangan baik sebagai jumlah data bertambah, $X_{i\ell}$ , maupun sebagai selisih antara angka kumulatif. Dalam kasus terakhir, jumlah yang belum diselesaikan adalah jumlah kumulatif akhir $C_{i,I}$ dikurangi dengan jumlah kumulatif yang diamati paling baru $C_{i,I-i}$ .
+
+Mengikuti Wüthrich dan Merz (2015), notasi $\mathcal{R}^{(0)}_{i}$ mengacu pada cadangan untuk tahun kejadian $i$ di mana $i=1,\ldots,I$ . Superskrip (0) mengacu pada evaluasi cadangan pada saat ini, katakanlah $\tau = 0$ . Kami memahami $\tau = 0$  pada akhir tahun kejadian $I$ , tahun kalender paling baru di mana data diamati dan terdaftar.
+
+### R Code to Summarize Loss Reserve Data
+
+Kami menggunakan paket `ChainLadder` (Gesmann et al. 2019) untuk mengimpor segitiga run-off di R dan untuk menjelajahi tren yang ada dalam segitiga tersebut. Vignette paket ini dengan baik mendokumentasikan fungsi-fungsi untuk bekerja dengan data segitiga. Pertama, kami menjelajahi dua cara untuk mengimpor sebuah segitiga.
+
+*Long Format Data*
+
+Dataset `triangle_W_M_long.txt` menyimpan segitiga run-off kumulatif dari Wüthrich dan Merz (2008) (Tabel 2.2) dalam format panjang. Artinya: setiap sel dalam segitiga merupakan satu baris dalam dataset ini, dan tiga fitur disimpan: ukuran pembayaran (kumulatif, dalam contoh ini), tahun kejadian ( $i$ ) dan penundaan pembayaran ( $j$ ). Kami mengimpor file .txt tersebut dan menyimpan data frame hasilnya sebagai `my_triangle_long`:
+
+```{r eval=FALSE}
+my_triangle_long <- read.table("Data/triangle_W_M_long.txt", header = TRUE)
+head(my_triangle_long)
+```
+
+Kami menggunakan fungsi as.triangle dari paket ChainLadder untuk mengubah data frame menjadi tampilan segitiga. Objek hasilnya, `my_triangle`,` sekarang merupakan tipe segitiga.
+
+```{r eval=FALSE}
+my_triangle <- as.triangle(my_triangle_long, origin = "origin", dev = "dev", value = "payment")
+str(my_triangle)
+```
+
+Kami menampilkan segitiga dan mengenali angka-angka (dalam ribuan) dari Gambar 11.7. Sel-sel di segitiga bagian bawah ditandai sebagai tidak tersedia, NA.
+
+```{r eval=FALSE}
+round(my_triangle/1000, digits = 0)
+```
+
+*Triangular Format Data*
+
+Sebagai alternatif, segitiga dapat disimpan dalam file .csv dengan tahun kejadian di baris dan tahun perkembangan di sel-sel kolom. Kami mengimpor file .csv ini dan mengubah `my_triangle_csv` hasilnya menjadi matriks.
+
+```{r eval=FALSE}
+my_triangle_csv <- read.csv2("Data/triangle_W_M.csv", header = FALSE)
+my_triangle_matrix <- as.matrix(my_triangle_csv)
+dimnames(my_triangle_matrix) <- list(origin = 2004 : 2013, dev = 0:(ncol(my_triangle_matrix)-1))
+```
+
+```{r eval=FALSE}
+my_triangle <- as.triangle(my_triangle_matrix) 
+round(my_triangle/1000, digits = 0)
+```
+
+*From Cumulative to Incremental, and vice versa*
+
+Fungsi R `cum2incr()` dan `incr2cum()` memungkinkan kita untuk beralih dengan mudah antara tampilan kumulatif dan tampilan incremental, serta sebaliknya.
+
+```{r eval=FALSE}
+plot(my_triangle)
+```
+
+Sebagai alternatif, argumen `lattice` menciptakan satu plot per tahun kejadian.
+
+```{r eval=FALSE}
+plot(my_triangle, lattice = TRUE)
+```
+
+Daripada memplot segitiga kumulatif yang disimpan dalam `my_triangle`, kita dapat memplot segitiga run-off incremental.
+
+```{r eval=FALSE}
+plot(my_triangle_incr)
+```
+
+```{r eval=FALSE}
+plot(my_triangle_incr, lattice = TRUE)
+```
+
+## The Chain-Ladder Method
+
+Metode yang paling banyak digunakan untuk memperkirakan cadangan kerugian yang belum diselesaikan adalah metode chain-ladder. Asal-usul metode ini tidak jelas tetapi telah terbukti efektif dalam aplikasi praktis pada awal tahun 1970-an, Taylor (1986). Seperti yang akan kita lihat, nama ini merujuk pada penggabungan serangkaian faktor perkembangan (dari tahun ke tahun) menjadi tangga faktor; kerugian yang belum matang naik menuju kedewasaan ketika dikalikan dengan rangkaian rasio ini, maka muncullah deskriptor yang sesuai, yaitu metode chain-ladder. Kita akan memulai dengan menjelajahi metode chain-ladder dalam versi deterministik atau algoritma, tanpa membuat asumsi stokastik apa pun. Kemudian kita akan menggambarkan model chain-ladder distribusi bebas risiko dari Mack.
+
+### The Deterministic Chain-Ladder
+
+Metode chain-ladder deterministik berfokus pada run-off triangle dalam bentuk kumulatif. Ingatlah bahwa sel $(i,j)$ dalam segitiga ini menampilkan jumlah kumulatif yang dibayarkan hingga periode pengembangan $j$ untuk klaim yang terjadi pada tahun $i$. Metode chain-ladder mengasumsikan bahwa faktor pengembangan $f_j$ (juga disebut faktor usia-ke-usia, rasio tautan, atau faktor chain-ladder) ada sehingga:
+
+$$C_{i,j+1} = f_j \times C_{i,j}.$$
+
+Maka, faktor pengembangan memberitahu Anda bagaimana jumlah kumulatif dalam tahun pengembangan $j$ tumbuh menjadi jumlah kumulatif dalam tahun $j+1$. Kami menyoroti jumlah kumulatif dalam periode 0 dengan warna biru dan jumlah kumulatif dalam periode 1 dengan warna merah pada Gambar 11.10 yang diambil dari Wüthrich dan Merz (2008) (Tabel 2.2, juga digunakan dalam Wüthrich dan Merz (2015), Tabel 1.4).
+
+Metode chain-ladder kemudian menyajikan resep yang intuitif untuk memperkirakan atau menghitung faktor pengembangan ini. Karena faktor pengembangan pertama $f_0$ menggambarkan perkembangan jumlah klaim kumulatif dari periode pengembangan 0 hingga periode pengembangan 1, faktor ini dapat diestimasi sebagai rasio dari jumlah kumulatif yang ditandai dengan warna merah dan jumlah kumulatif yang ditandai dengan warna biru, seperti yang terlihat pada Gambar 11.10. Dengan demikian, kita memperoleh perkiraan berikut untuk faktor pengembangan pertama $\hat{f}_0^{CL}$, dengan observasi $\mathcal{D}_I$.
+
+$$\hat{f}^{CL}_{\color{magenta}{0}} = \frac{\sum_{i=1}^{10-\color{magenta}{0}-1} \color{red}{C_{i,\color{magenta}{0}+1}}}{\sum_{i=1}^{10-\color{magenta}{0}-1} \color{blue}{C_{i\color{magenta}{0}}}}= 1.4925.$$
+
+Perhatikan bahwa indeks i yang digunakan dalam penjumlahan pada pembilang dan penyebut berjalan dari periode kejadian pertama (1) hingga periode kejadian terakhir (9) di mana kedua periode pengembangan 0 dan 1 diamati. Sebagai hasilnya, faktor pengembangan ini mengukur bagaimana data yang ditandai dengan warna biru berkembang menjadi data yang ditandai dengan warna merah, dengan rata-rata di seluruh periode kejadian di mana kedua periode diamati. Metode chain-ladder kemudian menggunakan estimasi faktor pengembangan ini untuk memprediksi jumlah kumulatif $C_{10,1}$ (yaitu jumlah kumulatif yang dibayarkan hingga dan termasuk tahun pengembangan 1 untuk kecelakaan yang terjadi pada tahun ke-10). Prediksi ini diperoleh dengan mengalikan jumlah klaim kumulatif terakhir yang diamati untuk periode kejadian 10 (yaitu $C_{10,0}$ dengan periode pengembangan 0) dengan estimasi faktor pengembangan $\hat{f}^{CL}_0$.
+
+$$\hat{C}_{10, 1} = C_{10,0} \cdot \hat{f}^{CL}_0 = 5,676\cdot 1.4925=8,471.$$
+
+Melanjutkan pemikiran ini, faktor pengembangan berikutnya, $f_1$, dapat diestimasi. Karena $f_1$ mencerminkan perkembangan dari periode 1 ke periode 2, dapat diestimasi sebagai rasio angka-angka yang ditandai dengan warna merah dan biru seperti yang ditunjukkan dalam Gambar 11.11.
+
+Notasi matematis untuk perkiraan $\hat{f}_1^{CL}$ dari faktor pengembangan berikutnya $f_1$, dengan mengingat observasi DI, adalah sebagai berikut:
+
+$$\hat{f}^{CL}_{\color{magenta}{1}} = \frac{\sum_{i=1}^{10-\color{magenta}{1}-1} \color{red}{C_{i,\color{magenta}{1}+1}}}{\sum_{i=1}^{10-\color{magenta}{1}-1} \color{blue}{C_{i\color{magenta}{1}}}}=1.0778.$$
+
+Dengan demikian, faktor ini mengukur pertumbuhan jumlah yang dibayarkan secara kumulatif pada periode pengembangan 1 menjadi periode 2, dihitung rata-rata untuk semua periode kejadian di mana kedua periode tersebut diamati. Indeks i sekarang berjalan dari periode 1 hingga 8, karena ini adalah periode kejadian di mana kedua periode pengembangan 1 dan 2 diamati. Perkiraan untuk faktor pengembangan kedua ini kemudian digunakan untuk memprediksi sel-sel yang hilang dan tidak teramati pada periode pengembangan 2:
+
+$$\begin{array}{rl}
+\hat{C}_{10,2} &= C_{10,0} \cdot \hat{f}^{CL}_0 \cdot \hat{f}_1^{CL} = \hat{C}_{10,1} \cdot \hat{f}_1^{CL} = 8,471 \cdot 1.0778 = 9,130 \\
+\hat{C}_{9,2}  &= C_{9,1} \cdot \hat{f}^{CL}_1 = 7,649 \cdot 1.0778 = 8,244.
+\end{array}$$
+
+Perlu diperhatikan bahwa untuk  $\hat{C}_{10,2}$, Anda sebenarnya menggunakan perkiraan  $\hat{C}_{10,1}$ dan mengalikannya dengan perkiraan faktor pengembangan  $\hat{f}_1^{CL}$.
+
+Kita melanjutkannya secara analog dan mendapatkan prediksi berikut, dicetak miring pada Gambar 11.12:
+
+Pada akhirnya, kita perlu memperkirakan nilai-nilai pada kolom terakhir. Faktor perkembangan terakhir,  f8 , mengukur pertumbuhan dari periode perkembangan 8 ke periode perkembangan 9 dalam segitiga. Karena hanya baris pertama dalam segitiga yang memiliki kedua sel yang diamati, faktor terakhir ini diperkirakan sebagai rasio antara nilai yang berwarna merah dan nilai yang berwarna biru pada Gambar 11.13.
+
+Diberikan observasi $\mathcal{D}_I$, perkiraan faktor ini $\hat{f}^{CL}_{8}$ adalah sama dengan:
+
+$$\hat{f}^{CL}_{\color{magenta}{8}} = \frac{\sum_{i=1}^{10-\color{magenta}{8}-1} \color{red}{C_{i,\color{magenta}{8}+1}}}{\sum_{i=1}^{10-\color{magenta}{8}-1} \color{blue}{C_{i\color{magenta}{8}}}}=1.001.$$
+
+Biasanya, faktor perkembangan terakhir ini mendekati 1 dan oleh karena itu arus kas yang dibayarkan dalam periode pengembangan terakhir relatif kecil. Dengan menggunakan perkiraan faktor pengembangan ini, kita sekarang dapat memperkirakan jumlah klaim kumulatif yang tersisa dalam kolom dengan mengalikan nilai-nilai untuk tahun pengembangan 8 dengan faktor ini.
+
+Notasi matematika umum untuk prediksi tangga rantai untuk segitiga bawah $( i+j>I )$ adalah sebagai berikut:
+
+$$\begin{array}{rl}
+\hat{C}_{ij}^{CL} &= C_{i,I-i} \cdot \prod_{l=I-i}^{j-1} \hat{f}_l^{CL} \\
+\hat{f}_j^{CL} &= \frac{\sum_{i=1}^{I-j-1} C_{i,j+1}}{\sum_{i=1}^{I-j-1} C_{ij}},
+\end{array}$$
+
+di mana $C_{i,I-i}$ adalah pada diagonal terakhir yang diamati. Jelas bahwa asumsi penting dari metode chain-ladder adalah bahwa perkembangan proporsional klaim dari satu periode pengembangan ke periode berikutnya serupa untuk semua tahun kejadian.
+
+Ini menghasilkan Figure 11.14 berikut:
+
+angka-angka dalam kolom terakhir menunjukkan perkiraan jumlah klaim akhir. Estimasi jumlah klaim yang tertunda  $\hat{\mathcal{R}}_i^{CL}$ untuk periode kejadian tertentu $i=I-J+1,\ldots, I$ kemudian diberikan oleh selisih antara jumlah klaim akhir dan jumlah kumulatif yang diamati pada diagonal terbaru:
+
+$$\hat{\mathcal{R}}_i^{CL} =\hat{C}_{iJ}^{CL}-C_{i,I-i}.$$
+
+Ini adalah estimasi chain-ladder untuk cadangan yang diperlukan untuk memenuhi kewajiban di masa depan terkait klaim yang terjadi dalam periode kejadian ini. Cadangan per periode kejadian dan total yang dijumlahkan dari semua periode kejadian dirangkum dalam Figure 11.15.
+
+### Mack’s Distribution-Free Chain-Ladder Model
+
+Pada tahap ini, metode chain-ladder tradisional memberikan estimasi titik  $\hat{C}^{CL}_{iJ}$ untuk ramalan  $C_{iJ}$ , menggunakan informasi  $\mathcal{D}_I$ . Karena metode chain-ladder adalah algoritma yang sepenuhnya deterministik dan intuitif untuk melengkapi segitiga run-off, kita tidak dapat menentukan seberapa dapat diandalkan estimasi titik tersebut atau memodelkan variasi pembayaran di masa depan. Untuk menjawab pertanyaan-pertanyaan tersebut, diperlukan sebuah model stokastik yang mendasari yang dapat mereproduksi estimasi cadangan chain-ladder.
+
+Dalam bagian ini, kami akan fokus pada model chain-ladder bebas distribusi sebagai model stokastik yang mendasar, diperkenalkan dalam Mack (1993). Metode ini memungkinkan kita untuk mengestimasi kesalahan standar dari prediksi chain-ladder. Pada Bagian berikutnya, yaitu Bagian 11.4, model linear umum digunakan untuk mengembangkan pendekatan yang sepenuhnya stokastik untuk memprediksi cadangan yang belum terbayar.
+
+Dalam pendekatan Mack, berlaku kondisi-kondisi berikut (tanpa mengasumsikan distribusi):
+
+- Klaim Kumulatif  $(C_{ij})_{j=0,\ldots,J}$ adalah independen di antara periode kejadian yang berbeda i .
+
+- Terdapat konstanta tetap  $f_0, \ldots, f_{J-1}$ dan  $\sigma^2_0,\ldots, \sigma^2_{J-1}$  yang memenuhi untuk semua  $i=1,\ldots, I$ dan $j=0,\ldots,J-1$:
+
+$$\begin{array}{rl}
+E[C_{i,j+1}|C_{i0},\ldots,C_{ij}] &= f_j \cdot C_{ij} \\
+\text{Var}(C_{i,j+1}|C_{ij}) &= \sigma^2_j \cdot C_{ij}.
+\end{array}$$
+
+Ini berarti klaim kumulatif  $(C_{ij})_{j=0,\ldots,J}$  adalah proses Markov (di periode pengembangan  j) dan oleh karena itu masa depan hanya bergantung pada masa sekarang.
+
+Dengan asumsi ini, nilai harapan dari jumlah klaim akhir  $C_{i,J}$, dengan data yang tersedia di segitiga atas, adalah jumlah kumulatif pada diagonal terbaru $C_{i, I-1}$ dikali dengan faktor pengembangan yang sesuai  $f_j$ . Dalam notasi matematika, kita mendapatkan dengan faktor pengembangan yang diketahui   $f_j$dan observasi  $\mathcal{D}_I$ :
+ 
+$$E[C_{iJ}|\mathcal{D}_I] = C_{i,I-i} \prod_{j=I-i}^{J-1} f_j$$
+
+Ini persis apa yang dilakukan metode chain-ladder deterministik, seperti yang dijelaskan di Bagian 11.3.1. Dalam praktiknya, faktor pengembangan tidak diketahui dan perlu diestimasi dari data yang tersedia di segitiga atas. Dalam pendekatan Mack, kita mendapatkan persis ekspresi yang sama untuk mengestimasi faktor pengembangan  $f_j$  pada saat  $I$  seperti dalam algoritma chain-ladder deterministik:
+  
+$$\hat{f}_j^{CL} =\frac{\sum_{j=1}^{I-j-1} C_{i,j+1}}{\sum_{i=1}^{I-j-1} C_{ij}}.$$
+
+Prediksi untuk sel-sel dalam segitiga bawah (yaitu sel-sel  $C_{i,j}$ dimana  $i+j>I$) kemudian diperoleh dengan menggantikan faktor-faktor yang tidak diketahui  $f_j$ dengan perkiraan mereka yang sesuai  $\hat{f}_j^{CL}$ :
+ 
+$$\hat{C}^{CL}_{ij} = C_{i,I-i}\prod_{l=I-i}^{j-1} \hat{f}_l^{CL}.$$
+
+Untuk mengkuantifikasi kesalahan prediksi yang muncul dengan prediksi chain-ladder, Mack juga memperkenalkan parameter-varian  $\sigma^2_j$. Untuk mendapatkan wawasan dalam estimasi parameter-varian ini, diperkenalkan faktor-faktor perkembangan individu  $f_{i,j}$ (yang spesifik untuk periode kejadian  i )
+ 
+$$f_{i,j} = \frac{C_{i,j+1}}{C_{ij}}.$$
+
+Faktor-faktor perkembangan individu ini juga menggambarkan bagaimana jumlah akumulasi tumbuh dari periode  $j $ ke periode  $j+1$ , tetapi mereka hanya mempertimbangkan rasio dua sel (daripada mengambil rasio dua jumlah selama semua periode kejadian yang tersedia). Perhatikan bahwa faktor-faktor perkembangan dapat ditulis sebagai rata-rata tertimbang dari faktor-faktor perkembangan individu:
+ 
+$$\hat{f}_j^{CL} = \sum_{i=1}^{I-j-1} \frac{C_{ij}}{\sum_{i=1}^{I-j-1} C_{ij}} f_{i,j},$$
+
+Mari kita sekarang mengestimasi parameter-varian  $\sigma^2$  dengan menulis asumsi varians Mack dalam bentuk yang setara. Pertama, varians dari rasio  $C_{i,j+1}$  dan  $c_{i,j}$  yang bersyarat pada  $C_{i,0},\ldots, C_{i,j}$  berbanding terbalik dengan  $C_{i,j}$:
+ 
+$$\text{Var}[C_{i,j+1}/C_{ij}|C_{i0},\ldots,C_{ij}] ~ \propto ~ \frac{1}{C_{ij}}.$$
+
+Ini mengingatkan kita pada pengaturan kuadrat terkecil berbobot yang khas di mana bobotnya adalah kebalikan dari variabilitas respons. Oleh karena itu, variabel respons yang lebih volatil atau tidak presisi akan diberi bobot lebih rendah.  $C_{i,j}$  berperan sebagai bobotnya. Dengan menggunakan parameter-varian yang tidak diketahui  $\sigma^2_j$ , asumsi varians ini dapat ditulis sebagai:
+ 
+$$\text{Var}[C_{i,j+1}|C_{i0},\ldots,C_{ij}] = \sigma^2_j \cdot C_{ij},$$
+
+Koneksi dengan kuadrat terkecil berbobot kemudian secara langsung menghasilkan estimasi tak bias untuk parameter-varian yang tidak diketahui  $\sigma^2_j$  dalam bentuk jumlah kuadrat residu yang diboboti:
+
+$$\hat{\sigma}^2_j = \frac{1}{I-j-2}\sum_{i=1}^{I-j-1} C_{ij}\left(\frac{C_{i,j+1}}{C_{ij}}-\hat{f}_j^{CL}\right)^2.$$
+
+### R code for Chain-Ladder Predictions
+
+Kami menggunakan objek `my_triangle` dengan tipe triangle yang dibuat pada Bagian 11.2.4. Model chain-ladder bebas distribusi dari Mack (1993) diimplementasikan dalam paket `ChainLadder` (Gesmann et al. 2019) (sebagai bentuk khusus dari kuadrat terkecil berbobot) dan dapat diterapkan pada data `my_triangle` untuk memprediksi jumlah klaim yang belum diselesaikan dan mengestimasi kesalahan standar di sekitar ramalan tersebut.
+
+```{r eval=FALSE}
+CL <- MackChainLadder(my_triangle)
+CL
+```
+
+```{r eval=FALSE}
+round(CL$f,digits = 4)
+```
+
+Kita juga dapat mencetak seluruh run-off triangle (termasuk prediksi).
+
+MSEP (Mean Squared Error of Prediction) untuk total cadangan melintasi semua periode kejadian diberikan oleh:
+
+```{r eval=FALSE}
+CL$Total.Mack.S.E^2
+```
+
+Disarankan untuk memvalidasi asumsi Mack dengan memeriksa bahwa tidak ada tren dalam plot residu. Empat plot terakhir yang kita peroleh dengan perintah berikut menunjukkan masing-masing residu standar terhadap nilai yang cocok, periode asal, periode kalender, dan periode pengembangan.
+
+```{r eval=FALSE}
+plot(CL)
+```
+
+Plot bagian kiri atas adalah grafik batang posisi klaim terbaru ditambah IBNR dan kesalahan standar Mack berdasarkan periode kejadian. Plot bagian kanan atas menunjukkan pola perkembangan yang diprediksi untuk semua periode kejadian (dimulai dari 1 untuk periode kejadian tertua).
+
+Ketika mengatur argumen lattice=TRUE, kita akan mendapatkan plot perkembangan, termasuk prediksi dan perkiraan kesalahan standar berdasarkan periode kejadian.
+
+```{r eval=FALSE}
+plot(CL, lattice=TRUE)
+```
+
+## GLMs and Bootstrap for Loss Reserves
+
+Bagian ini membahas model regresi untuk menganalisis segitiga run-off. Ketika menganalisis data dalam segitiga run-off dengan model regresi, alat standar untuk pembangunan model, estimasi, dan prediksi tersedia. Dengan menggunakan alat-alat ini, kita dapat melampaui estimasi titik dan kesalahan standar seperti yang dijelaskan di Bagian 11.3. Secara khusus, kita membangun model linier generalisasi (GLM) untuk pembayaran inkremental  $X_{ij}$  dalam Gambar 11.6. Sementara metode chain-ladder bekerja dengan data kumulatif, GLM khas mengasumsikan variabel respons menjadi independen dan oleh karena itu bekerja dengan segitiga run-off inkremental.
+
+### Model Specification
+
+Misalkan   $X_{ij}$  menyatakan pembayaran inkremental dalam sel $(i, j)$ dari segitiga run-off. Kami mengasumsikan bahwa   $X_{ij}$ saling independen dengan kepadatan  $f(x_{ij};\theta_{ij},\phi)$ dari keluarga distribusi eksponensial. Kami mengidentifikasi:
+
+- $\mu_{ij}=E[X_{ij}]$ sebagai nilai harapan dari sel  $X_{ij}$,
+
+- $\phi$sebagai parameter dispersi, dan  $\text{Var}[X_{ij}]=\phi \cdot V(\mu_{ij})$ , di mana $V(.)$ adalah fungsi varians
+
+- $\eta_{ij}$ sebagai prediktor linear sehingga $\eta_{ij}=g(\mu_{ij})$ dengan $g$ sebagai fungsi link.
+
+Distribusi dari keluarga eksponensial dan fungsi link default-nya tercantum di http://stat.ethz.ch/R-manual/R-patched/library/stats/html/family.html. Sekarang kami akan membahas tiga GLM khusus yang banyak digunakan untuk penyisihan kerugian.
+
+Pertama, model regresi Poisson diperkenalkan dalam Bagian 8.2. Dalam model ini, kami mengasumsikan bahwa Xij memiliki distribusi Poisson dengan parameter
+
+$$\mu_{ij} = \pi_i \cdot \gamma_j,$$
+
+struktur yang terdiri dari persilangan kelas yang mencakup efek multiplicative dari tahun kejadian $i$ dan periode perkembangan $j$. Struktur model yang diusulkan tidak dapat diidentifikasi tanpa batasan tambahan pada parameter, misalnya $\sum_{j=0}^J \gamma_j=1$. Batasan ini memberikan interpretasi eksplisit terhadap $\pi_i$ (dengan $i=1,\ldots,I$) sebagai ukuran paparan atau volume untuk tahun kejadian $i$ dan $γ_j$ sebagai fraksi dari total volume yang dibayarkan dengan penundaan $j$. Namun, saat melakukan kalibrasi GLM di R, batasan alternatif seperti $\pi_1=1$ atau $\gamma_1=1$, atau reparametrisasi di mana $\mu_{ij} = \exp{(\mu+\alpha_i+\beta_j)}$ lebih mudah diimplementasikan. Kami melanjutkan dengan spesifikasi terakhir tersebut, termasuk $\alpha_1 = \beta_0 = 0$, yang dikenal sebagai batasan sudut. GLM ini memperlakukan tahun kejadian dan penundaan pembayaran sebagai variabel faktor dan cocok dengan parameter per tingkat, disamping intercept $\mu$. Batasan sudut menjadikan efek tingkat pertama variabel faktor sama dengan nol. Asumsi Poisson sangat berguna untuk segitiga run-off dengan jumlah klaim yang dilaporkan, sering digunakan dalam estimasi jumlah klaim IBNR (lihat Bagian 11.2).
+
+Kedua, modifikasi menarik dari model regresi Poisson dasar adalah model regresi Poisson yang terdispersi berlebihan di mana $Z_{ij}$ memiliki distribusi Poisson dengan parameter $\mu_{ij}/\phi$ dan
+
+$$\begin{array}{rl}
+X_{ij} &\sim  \phi \cdot Z_{ij}  \\
+\mu_{ij} &= \exp{(\mu + \alpha_i + \beta_j)}.
+\end{array}$$
+
+sebagai akibatnya, $X_{ij}$ memiliki spesifikasi yang sama untuk rata-ratanya seperti dalam model regresi Poisson dasar, tetapi sekarang
+
+$$\text{Var}[X_{ij}] = \phi^2 \cdot \text{Var}[Z_{ij}] = \phi \cdot \exp{(\mu + \alpha_i + \beta_j)}.$$
+
+konstruksi ini memungkinkan untuk adanya di bawah (ketika $\phi <1$) dan over-dispersion (dengan $\phi >1$). Karena $X_{ij}$ tidak lagi mengikuti distribusi yang terkenal, pendekatan ini disebut quasi-likelihood. Ini sangat berguna untuk memodelkan segitiga run-off dengan pembayaran bertambah, karena biasanya mengungkapkan over-dispersion.
+
+Ketiga, model regresi gamma relevan untuk memodelkan segitiga run-off dengan pembayaran klaim. Ingat dari Bagian 3.2.1 (lihat juga Lampiran Bab 18) bahwa distribusi gamma memiliki parameter bentuk $\alpha$ dan parameter skala $\theta$. Dari ini, kita melakukan reparameterisasi dan mendefinisikan parameter baru $\mu = \alpha \cdot \theta$ sambil tetap mempertahankan parameter skala $\theta$. Selanjutnya, anggap bahwa $X_{ij}$ memiliki distribusi gamma dan memperbolehkan $\phi$ bervariasi berdasarkan $ij$ sehingga
+
+$$\mu_{ij} =  \exp{(\mu + \alpha_i + \beta_j)}.$$
+
+### Model Estimation and Prediction
+
+kami sekarang mengestimasi parameter regresi $\phi$, $\alpha_{i}$, dan $\beta_j$ dalam GLM yang diusulkan. Di `R`, fungsi `glm` tersedia untuk mengestimasi parameter-parameter ini melalui estimasi maximum likelihood (mle) atau estimasi quasi-likelihood (dalam kasus Poisson over-dispersed). Dengan adanya estimasi parameter $\hat{\phi}$, $\hat{\alpha_i}$, dan$\hat{\beta}_j$, kita dapat menghasilkan estimasi titik untuk setiap sel dalam segitiga atas.
+
+$$\hat{X}_{ij} =\hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j\leq I.$$
+
+$$\hat{X}_{ij} = \hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j> I.$$

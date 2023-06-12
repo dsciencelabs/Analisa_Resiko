@@ -157,3 +157,4 @@ limited-expected-values
 functions
 illustrative-graph
 appendix-e-conventions-for-notation
+appendix-c-maximum-likelihood-theory
