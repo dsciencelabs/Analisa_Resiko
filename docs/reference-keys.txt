@@ -240,8 +240,6 @@ hypothesis-testing
 mle-and-model-validation
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
-<<<<<<< HEAD
-actuarial-exam-question-1
 plug-in-principle
 tools-for-model-selection-and-diagnostics
 graphical-comparison-of-distributions
@@ -284,7 +282,6 @@ application
 conjugate-distributions-1
 linear-exponential-family
 conjugate-distributions-2
-=======
 prinsip-prinsip-penetapan-harga
 prinsip-prinsip-premi
 sifat-prinsip-premium
