@@ -337,3 +337,6 @@ appendix-e-conventions-for-notation
 other-frequency-distributions
 actuarial-exam-question-1
 qualitative-variables
+tab:unnamed-chunk-8
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
