@@ -262,7 +262,8 @@ $$
 
 Dalam satu minggu tertentu, jumlah proyek yang mengharuskan Anda bekerja lembur memiliki distribusi geometris dengan $β = 2$ . Untuk setiap proyek, distribusi jumlah jam lembur dalam seminggu, X adalah sebagai berikut
 
-$${\small 
+$$
+{\small 
 \begin{matrix}
 \begin{array}{ccc} \hline
     x &  & f(x)\\ \hline
@@ -273,6 +274,7 @@ $${\small
 \end{matrix}
 }
 $$
+
 Jumlah proyek dan jumlah jam lembur tidak bergantung. Anda akan dibayar untuk jam lembur yang melebihi 15 jam dalam seminggu. Hitunglah jumlah jam lembur yang akan  diterima dalam seminggu.
 
 **JAWABAN**
@@ -539,7 +541,7 @@ Hal ini memungkinkan kita untuk menggunakan distribusi Tweedie dengan model line
 
 =======
 
-## 5.4 Menghitung Distribusi Klaim Agregat
+##Menghitung Distribusi Klaim Agregat
 
 Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
 
