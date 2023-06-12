@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 11 Loss Reserving | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 11 Loss Reserving | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -102,9 +166,66 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#frequency-distributions"><i class="fa fa-check"></i><b>2.1</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian"><i class="fa fa-check"></i><b>2.1.1</b> Bagaimana Frekuensi menambah infromasi pada tingkat keparahan suatu kejadian</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a></li>
+<li class="chapter" data-level="2.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#basic-frequency-distributions"><i class="fa fa-check"></i><b>2.2</b> Basic Frequency Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#the-ab0-class"><i class="fa fa-check"></i><b>2.3</b> The <span class="math inline">\((a,b,0)\)</span> Class</a></li>
+<li class="chapter" data-level="2.4" data-path="frequency-modeling.html"><a href="frequency-modeling.html#mengestimasi-distibusi-frekuensi"><i class="fa fa-check"></i><b>2.4</b> Mengestimasi Distibusi Frekuensi</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
+<li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
@@ -139,21 +260,100 @@
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
 <li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.6</b> metode rekursif</a></li>
 <li class="chapter" data-level="5.2.7" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.7</b> simulasi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="10.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>10.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>10.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="10.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>10.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>10.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>10.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="10.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>10.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="loss-reserving.html"><a href="loss-reserving.html#motivation"><i class="fa fa-check"></i><b>11.1</b> Motivation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="loss-reserving.html"><a href="loss-reserving.html#closed-ibnr-and-rbns-claims"><i class="fa fa-check"></i><b>11.1.1</b> Closed, IBNR, and RBNS Claims</a></li>
+<li class="chapter" data-level="11.1.2" data-path="loss-reserving.html"><a href="loss-reserving.html#why-reserving"><i class="fa fa-check"></i><b>11.1.2</b> Why Reserving?</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-data"><i class="fa fa-check"></i><b>11.2</b> Loss Reserve Data</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="loss-reserving.html"><a href="loss-reserving.html#from-micro-to-macro"><i class="fa fa-check"></i><b>11.2.1</b> From Micro to Macro</a></li>
+<li class="chapter" data-level="11.2.2" data-path="loss-reserving.html"><a href="loss-reserving.html#run-off-triangles"><i class="fa fa-check"></i><b>11.2.2</b> Run-off Triangles</a></li>
+<li class="chapter" data-level="11.2.3" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-notation"><i class="fa fa-check"></i><b>11.2.3</b> Loss Reserve Notation</a></li>
+<li class="chapter" data-level="11.2.4" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data"><i class="fa fa-check"></i><b>11.2.4</b> R Code to Summarize Loss Reserve Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="loss-reserving.html"><a href="loss-reserving.html#the-chain-ladder-method"><i class="fa fa-check"></i><b>11.3</b> The Chain-Ladder Method</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="loss-reserving.html"><a href="loss-reserving.html#the-deterministic-chain-ladder"><i class="fa fa-check"></i><b>11.3.1</b> The Deterministic Chain-Ladder</a></li>
+<li class="chapter" data-level="11.3.2" data-path="loss-reserving.html"><a href="loss-reserving.html#macks-distribution-free-chain-ladder-model"><i class="fa fa-check"></i><b>11.3.2</b> Mack’s Distribution-Free Chain-Ladder Model</a></li>
+<li class="chapter" data-level="11.3.3" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-for-chain-ladder-predictions"><i class="fa fa-check"></i><b>11.3.3</b> R code for Chain-Ladder Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="loss-reserving.html"><a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves"><i class="fa fa-check"></i><b>11.4</b> GLMs and Bootstrap for Loss Reserves</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="loss-reserving.html"><a href="loss-reserving.html#model-specification"><i class="fa fa-check"></i><b>11.4.1</b> Model Specification</a></li>
+<li class="chapter" data-level="11.4.2" data-path="loss-reserving.html"><a href="loss-reserving.html#model-estimation-and-prediction"><i class="fa fa-check"></i><b>11.4.2</b> Model Estimation and Prediction</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
@@ -187,7 +387,33 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution-and-conditional-expectation"><i class="fa fa-check"></i><b>16.1</b> Conditional Distribution and Conditional Expectation</a>
@@ -207,30 +433,30 @@
 <li class="chapter" data-level="16.3.2" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conjugate-distributions-2"><i class="fa fa-check"></i><b>16.3.2</b> Conjugate Distributions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Maximum Likelihood Theory</a>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
+<li class="chapter" data-level="17.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
 <ul>
-<li class="chapter" data-level="17.1.1" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions"><i class="fa fa-check"></i><b>17.1.1</b> Likelihood and Log-likelihood Functions</a></li>
-<li class="chapter" data-level="17.1.2" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#properties-of-likelihood-functions"><i class="fa fa-check"></i><b>17.1.2</b> Properties of Likelihood Functions</a></li>
+<li class="chapter" data-level="17.1.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions"><i class="fa fa-check"></i><b>17.1.1</b> Likelihood and Log-likelihood Functions</a></li>
+<li class="chapter" data-level="17.1.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#properties-of-likelihood-functions"><i class="fa fa-check"></i><b>17.1.2</b> Properties of Likelihood Functions</a></li>
 </ul></li>
-<li class="chapter" data-level="17.2" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>17.2</b> Maximum Likelihood Estimators</a>
+<li class="chapter" data-level="17.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>17.2</b> Maximum Likelihood Estimators</a>
 <ul>
-<li class="chapter" data-level="17.2.1" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#definition-and-derivation-of-mle"><i class="fa fa-check"></i><b>17.2.1</b> Definition and Derivation of MLE</a></li>
-<li class="chapter" data-level="17.2.2" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#asymptotic-properties-of-mle"><i class="fa fa-check"></i><b>17.2.2</b> Asymptotic Properties of MLE</a></li>
-<li class="chapter" data-level="17.2.3" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.2.3</b> Use of Maximum Likelihood Estimation</a></li>
+<li class="chapter" data-level="17.2.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#definition-and-derivation-of-mle"><i class="fa fa-check"></i><b>17.2.1</b> Definition and Derivation of MLE</a></li>
+<li class="chapter" data-level="17.2.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#asymptotic-properties-of-mle"><i class="fa fa-check"></i><b>17.2.2</b> Asymptotic Properties of MLE</a></li>
+<li class="chapter" data-level="17.2.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.2.3</b> Use of Maximum Likelihood Estimation</a></li>
 </ul></li>
-<li class="chapter" data-level="17.3" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.3</b> Statistical Inference Based on Maximum Likelihood Estimation</a>
+<li class="chapter" data-level="17.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.3</b> Statistical Inference Based on Maximum Likelihood Estimation</a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#hypothesis-testing"><i class="fa fa-check"></i><b>17.3.1</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="17.3.2" data-path="maximum-likelihood-theory.html"><a href="maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
+<li class="chapter" data-level="17.3.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#hypothesis-testing"><i class="fa fa-check"></i><b>17.3.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="17.3.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
 <ul>
-<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class-1"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
 <li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
@@ -269,7 +495,215 @@
             <section class="normal" id="section-">
 <div id="loss-reserving" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Bab 11</span> Loss Reserving<a href="loss-reserving.html#loss-reserving" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li>Pratinjau Bab. Bab ini memperkenalkan pereservasi kerugian (juga dikenal sebagai pereservasi klaim) untuk produk asuransi harta benda dan kecelakaan (P&amp;C, atau umum, non-hidup). Secara khusus, bab ini menggambarkan beberapa alat analitik dasar, meskipun penting, untuk menilai cadangan pada portofolio produk asuransi P&amp;C. Pertama, Bagian 11.1 memberikan motivasi tentang perlunya pereservasi kerugian, kemudian Bagian 11.2 mempelajari sumber data yang tersedia dan memperkenalkan beberapa notasi formal untuk menangani pereservasi kerugian sebagai tantangan prediksi. Selanjutnya, Bagian 11.3 membahas metode tangga rantai (chain-ladder method) dan model tangga rantai tanpa distribusi Mack. Bagian 11.4 kemudian mengembangkan pendekatan yang sepenuhnya stokastik untuk menentukan cadangan yang belum diselesaikan dengan menggunakan model linear generalisasi (GLM), termasuk teknik bootstrapping untuk mendapatkan distribusi prediktif cadangan yang belum diselesaikan melalui simulasi.</li>
+</ol>
+<div id="motivation" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Motivation<a href="loss-reserving.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Titik awal adalah masa hidup klaim asuransi P&amp;C. Gambar 11.1 menggambarkan perkembangan klaim tersebut dari waktu ke waktu dan mengidentifikasi peristiwa yang menarik perhatian:</p>
+<p>Kejadian yang diasuransikan atau kecelakaan terjadi pada waktu tocc. Kejadian ini dilaporkan kepada perusahaan asuransi pada waktu trep, setelah beberapa keterlambatan. Jika klaim yang diajukan diterima oleh perusahaan asuransi, pembayaran akan dilakukan untuk mengganti kerugian keuangan pemegang polis. Dalam contoh ini, perusahaan asuransi mengganti kerugian yang terjadi dengan pembayaran kerugian pada waktu t1, t2, dan t3. Pada akhirnya, klaim diselesaikan atau ditutup pada waktu tset.</p>
+<p>Seringkali klaim tidak langsung diselesaikan karena adanya keterlambatan dalam pelaporan klaim, keterlambatan dalam proses penyelesaian, atau keduanya. Keterlambatan pelaporan adalah waktu yang berlalu antara terjadinya kejadian yang diasuransikan dan pelaporan kejadian ini kepada perusahaan asuransi. Waktu antara pelaporan dan penyelesaian klaim dikenal sebagai keterlambatan penyelesaian. Misalnya, secara intuitif dapat dipahami bahwa klaim kerusakan material atau properti diselesaikan lebih cepat daripada klaim cedera tubuh yang melibatkan jenis cedera yang kompleks. Klaim yang ditutup juga dapat dibuka kembali karena perkembangan baru, misalnya cedera yang membutuhkan perawatan tambahan. Secara keseluruhan, perkembangan klaim biasanya membutuhkan waktu. Adanya keterlambatan ini dalam penyelesaian klaim membutuhkan perusahaan asuransi untuk memiliki modal guna menyelesaikan klaim-kilaim ini di masa depan.</p>
+<div id="closed-ibnr-and-rbns-claims" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Closed, IBNR, and RBNS Claims<a href="loss-reserving.html#closed-ibnr-and-rbns-claims" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berdasarkan status run-off klaim, kami membedakan tiga jenis klaim dalam catatan perusahaan asuransi. Jenis pertama adalah klaim yang ditutup. Untuk klaim-klaim ini, perkembangan lengkap telah diamati. Dengan garis merah pada Gambar 11.2 menunjukkan saat ini, semua peristiwa dalam perkembangan klaim terjadi sebelum saat ini. Oleh karena itu, peristiwa-peristiwa ini diamati pada saat ini. Untuk kenyamanan, kami akan mengasumsikan bahwa klaim yang ditutup tidak dapat dibuka kembali.</p>
+<p>Klaim RBNS adalah klaim yang Sudah Dilaporkan, Tetapi Belum sepenuhnya Diselesaikan pada saat ini atau saat evaluasi (tanggal penilaian), yaitu saat di mana cadangan harus dihitung dan dicatat oleh perusahaan asuransi. Kejadian, pelaporan, dan mungkin beberapa pembayaran kerugian terjadi sebelum saat ini, tetapi penyelesaian klaim terjadi di masa depan, setelah saat ini.</p>
+<p>Klaim IBNR adalah klaim yang Telah Terjadi di masa lalu, Tetapi Belum Dilaporkan. Untuk klaim seperti ini, kejadian yang diasuransikan telah terjadi, tetapi perusahaan asuransi belum menyadari adanya klaim terkait. Klaim ini akan dilaporkan di masa depan dan perkembangannya yang lengkap (dari pelaporan hingga penyelesaian) terjadi di masa depan.</p>
+<p>Perusahaan asuransi akan melakukan reservasi modal untuk memenuhi kewajiban masa depan mereka terkait dengan klaim RBNS dan juga klaim IBNR. Perkembangan masa depan dari klaim-klaim tersebut tidak pasti, dan teknik pemodelan prediktif akan digunakan untuk menghitung cadangan yang tepat, berdasarkan data perkembangan historis yang diamati pada klaim-klaim serupa.</p>
+</div>
+<div id="why-reserving" class="section level3 hasAnchor" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> Why Reserving?<a href="loss-reserving.html#why-reserving" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Siklus produksi terbalik dalam pasar asuransi dan dinamika klaim yang digambarkan dalam Bagian 11.1.1 menjadi motivasi untuk perlunya pereservasi dan perancangan alat pemodelan prediktif untuk mengestimasi cadangan. Dalam asuransi, pendapatan premi mendahului biaya. Seorang perusahaan asuransi akan mengenakan premi kepada klien sebelum sebenarnya mengetahui seberapa mahal kebijakan atau kontrak asuransi tersebut akan menjadi. Hal ini berbeda dengan industri manufaktur yang biasanya seorang produsen mengetahui - sebelum menjual produk - berapa biaya produksi produk tersebut. Pada saat evaluasi yang ditentukan τ, perusahaan asuransi akan memprediksi kewajiban yang belum diselesaikan terkait dengan kontrak yang terjual di masa lalu. Ini adalah cadangan klaim atau cadangan kerugian; ini adalah modal yang diperlukan untuk menyelesaikan klaim terbuka dari paparan masa lalu. Ini adalah elemen yang sangat penting dalam neraca perusahaan asuransi, lebih khususnya pada sisi kewajiban neraca perusahaan.</p>
+</div>
+</div>
+<div id="loss-reserve-data" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Loss Reserve Data<a href="loss-reserving.html#loss-reserve-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="from-micro-to-macro" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> From Micro to Macro<a href="loss-reserving.html#from-micro-to-macro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sekarang kami akan menjelaskan data yang tersedia untuk mengestimasi cadangan yang belum diselesaikan untuk portofolio kontrak asuransi P&amp;C. Perusahaan asuransi biasanya mencatat data mengenai perkembangan klaim individual seperti yang digambarkan dalam garis waktu di sebelah kiri Gambar 11.5. Kami menyebut data yang tercatat pada tingkat ini sebagai data granular atau mikro-level. Biasanya, seorang aktuaris menggabungkan informasi yang tercatat mengenai perkembangan klaim individual dari seluruh klaim dalam sebuah portofolio. Penggabungan ini menghasilkan data yang terstruktur dalam format segitiga seperti yang ditunjukkan di sebelah kanan Gambar 11.5. Data seperti ini disebut data agregat atau makro-level karena setiap sel di segitiga menampilkan informasi yang diperoleh dengan menggabungkan perkembangan dari beberapa klaim.</p>
+<p>Tampilan segitiga yang digunakan dalam pereservasi kerugian disebut segitiga run-off atau segitiga perkembangan. Pada sumbu vertikal, segitiga tersebut mencantumkan tahun kejadian atau kecelakaan yang diikuti oleh sebuah portofolio. Pembayaran kerugian yang tercatat untuk klaim tertentu terhubung dengan tahun dimana kejadian yang diasuransikan terjadi. Sumbu horizontal mengindikasikan keterlambatan pembayaran sejak terjadinya kejadian yang diasuransikan.</p>
+</div>
+<div id="run-off-triangles" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Run-off Triangles<a href="loss-reserving.html#run-off-triangles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Contoh pertama dari segitiga run-off dengan pembayaran bertambah ditampilkan dalam Gambar 11.6 (diambil dari Wüthrich dan Merz (2008), Tabel 2.2, juga digunakan dalam Wüthrich dan Merz (2015), Tabel 1.4). Tahun kecelakaan (atau tahun kejadian) ditampilkan pada sumbu vertikal dan mulai dari tahun 2004 hingga 2013. Ini merujuk pada tahun dimana kejadian yang diasuransikan terjadi. Sumbu horizontal mengindikasikan keterlambatan pembayaran dalam tahun sejak terjadinya kejadian yang diasuransikan. Keterlambatan 0 digunakan untuk pembayaran yang dilakukan pada tahun terjadinya kecelakaan atau kejadian yang diasuransikan. Keterlambatan satu tahun digunakan untuk pembayaran yang dilakukan pada tahun setelah terjadinya kecelakaan.</p>
+<p>Sementara segitiga pada Gambar 11.6 menampilkan data pembayaran bertambah, Gambar 11.7 menunjukkan informasi yang sama dalam format akumulatif. Sekarang, sel (2004,1) menampilkan total jumlah klaim yang dibayarkan hingga keterlambatan pembayaran 1 untuk semua klaim yang terjadi pada tahun 2004. Oleh karena itu, itu merupakan jumlah dari jumlah yang dibayarkan pada tahun 2004 dan jumlah yang dibayarkan pada tahun 2005 atas kecelakaan yang terjadi pada tahun 2004.</p>
+<p>Berbagai informasi dapat disimpan dalam segitiga run-off seperti yang ditunjukkan dalam Gambar 11.6 dan Gambar 11.7. Tergantung pada jenis data yang disimpan, segitiga akan digunakan untuk mengestimasi jumlah yang berbeda.</p>
+<p>Sebagai contoh, dalam format bertambah, sebuah sel dapat menampilkan:</p>
+<ul>
+<li>Pembayaran klaim, seperti yang dijelaskan sebelumnya.</li>
+<li>Jumlah klaim yang terjadi pada tahun tertentu dan dilaporkan dengan keterlambatan tertentu, ketika tujuannya adalah untuk mengestimasi jumlah klaim IBNR.</li>
+<li>Perubahan jumlah yang terjadi, di mana jumlah klaim yang terjadi adalah jumlah dari klaim yang dibayarkan secara akumulatif dan estimasi kasus. Estimasi kasus adalah perkiraan ahli penangan klaim mengenai jumlah yang belum diselesaikan dalam suatu klaim.</li>
+</ul>
+<p>Dalam format akumulatif, sebuah sel dapat menampilkan:</p>
+<ul>
+<li>Jumlah pembayaran akumulatif, seperti yang dijelaskan sebelumnya.</li>
+<li>Total jumlah klaim dari tahun kejadian, dilaporkan hingga keterlambatan tertentu.</li>
+<li>Jumlah klaim yang terjadi.</li>
+</ul>
+<p>Sumber informasi lainnya juga mungkin tersedia, misalnya kovariat (seperti jenis klaim), informasi eksternal (seperti inflasi, perubahan dalam regulasi). Sebagian besar metode pereservasi klaim yang dirancang untuk segitiga run-off didasarkan pada satu sumber informasi, meskipun kontribusi terbaru fokus pada penggunaan data yang lebih terperinci untuk pereservasi kerugian.</p>
+</div>
+<div id="loss-reserve-notation" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> Loss Reserve Notation<a href="loss-reserving.html#loss-reserve-notation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Run-off Triangles</em></p>
+<p>Untuk memformalkan tampilan yang ditunjukkan dalam Gambar 11.6 dan 11.7, kita akan menggunakan notasi sebagai berikut.</p>
+<p>Kita mengasosiasikan i dengan tahun kejadian atau tahun kecelakaan, yaitu tahun di mana kejadian yang diasuransikan terjadi. Dalam notasi kita, tahun kecelakaan pertama yang dipertimbangkan dalam portofolio ditandai dengan 1, dan tahun kecelakaan terakhir yang paling baru ditandai dengan I .</p>
+<p>Selanjutnya, j merujuk pada keterlambatan pembayaran atau tahun perkembangan, di mana keterlambatan yang sama dengan 0 sesuai dengan tahun kecelakaan itu sendiri. Gambar 11.8 menunjukkan sebuah segitiga di mana jumlah tahun yang sama dipertimbangkan baik pada sumbu vertikal maupun sumbu horizontal, oleh karena itu j berjalan dari 0 hingga <span class="math inline">\(J=I−1\)</span> .</p>
+<p>Variabel acak <span class="math inline">\(X_{ij}\)</span> menunjukkan klaim bertambah yang dibayarkan dalam periode perkembangan <span class="math inline">\(j\)</span> untuk klaim dari tahun kecelakaan <span class="math inline">\(i\)</span> . Dengan demikian, <span class="math inline">\(X_{ij}\)</span> adalah total jumlah yang dibayarkan pada tahun perkembangan <span class="math inline">\(j\)</span> untuk semua klaim yang terjadi pada tahun kejadian <span class="math inline">\(i\)</span> . Pembayaran ini sebenarnya dilakukan dalam tahun akuntansi atau tahun kalender <span class="math inline">\(i+j\)</span> . Dalam perspektif akumulatif, <span class="math inline">\(C_{ij}\)</span> adalah jumlah kumulatif yang dibayarkan hingga (dan termasuk) tahun perkembangan <span class="math inline">\(j\)</span> untuk kecelakaan yang terjadi pada tahun <span class="math inline">\(i\)</span> . Pada akhirnya, jumlah total <span class="math inline">\(C_{ij}\)</span> dibayarkan pada tahun perkembangan akhir <span class="math inline">\(J\)</span> untuk klaim yang terjadi pada tahun kecelakaan <span class="math inline">\(i\)</span> . Dalam bab ini, waktu diungkapkan dalam tahun, meskipun unit waktu lainnya juga dapat digunakan, misalnya periode enam bulan atau kuartal.</p>
+<p><em>The Loss Reserve</em></p>
+<p>Pada saat evaluasi <span class="math inline">\(\tau\)</span> , data pada segitiga atas telah diamati, sedangkan segitiga bawah harus diprediksi. Di sini, saat evaluasi adalah akhir tahun kecelakaan <span class="math inline">\(I\)</span> , yang berarti bahwa sel <span class="math inline">\((i,j)\)</span> dengan <span class="math inline">\(i+j \leq I\)</span> diamati, dan sel <span class="math inline">\((i,j)\)</span> dengan <span class="math inline">\(i+j &gt; I\)</span> termasuk masa depan dan harus diprediksi. Oleh karena itu, untuk segitiga run-off kumulatif, tujuan metode pereservasi kerugian adalah memprediksi <span class="math inline">\(C_i,I−1\)</span> , jumlah klaim akhir untuk tahun kejadian <span class="math inline">\(i\)</span> , yang sesuai dengan periode perkembangan akhir <span class="math inline">\(I−1\)</span> dalam Gambar 11.7. Kami mengasumsikan bahwa - setelah periode ini tidak akan ada pembayaran lebih lanjut, meskipun asumsi ini bisa dikendurkan.</p>
+<p>Karena <span class="math inline">\(C_{i,I-1}\)</span> bersifat kumulatif, itu mencakup bagian yang diamati serta bagian yang harus diprediksi. Oleh karena itu, kewajiban yang belum diselesaikan atau cadangan kerugian untuk tahun kecelakaan <span class="math inline">\(i\)</span> adalah</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mathcal{R}^{(0)}_{i} = \sum_{\ell=I-i+1}^{I-1} X_{i\ell} = C_{i,I}-C_{i,I-i}.
+\end{eqnarray*}\]</span></p>
+<p>Kami menyatakan cadangan baik sebagai jumlah data bertambah, <span class="math inline">\(X_{i\ell}\)</span> , maupun sebagai selisih antara angka kumulatif. Dalam kasus terakhir, jumlah yang belum diselesaikan adalah jumlah kumulatif akhir <span class="math inline">\(C_{i,I}\)</span> dikurangi dengan jumlah kumulatif yang diamati paling baru <span class="math inline">\(C_{i,I-i}\)</span> .</p>
+<p>Mengikuti Wüthrich dan Merz (2015), notasi <span class="math inline">\(\mathcal{R}^{(0)}_{i}\)</span> mengacu pada cadangan untuk tahun kejadian <span class="math inline">\(i\)</span> di mana <span class="math inline">\(i=1,\ldots,I\)</span> . Superskrip (0) mengacu pada evaluasi cadangan pada saat ini, katakanlah <span class="math inline">\(\tau = 0\)</span> . Kami memahami <span class="math inline">\(\tau = 0\)</span> pada akhir tahun kejadian <span class="math inline">\(I\)</span> , tahun kalender paling baru di mana data diamati dan terdaftar.</p>
+</div>
+<div id="r-code-to-summarize-loss-reserve-data" class="section level3 hasAnchor" number="11.2.4">
+<h3><span class="header-section-number">11.2.4</span> R Code to Summarize Loss Reserve Data<a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kami menggunakan paket <code>ChainLadder</code> (Gesmann et al. 2019) untuk mengimpor segitiga run-off di R dan untuk menjelajahi tren yang ada dalam segitiga tersebut. Vignette paket ini dengan baik mendokumentasikan fungsi-fungsi untuk bekerja dengan data segitiga. Pertama, kami menjelajahi dua cara untuk mengimpor sebuah segitiga.</p>
+<p><em>Long Format Data</em></p>
+<p>Dataset <code>triangle_W_M_long.txt</code> menyimpan segitiga run-off kumulatif dari Wüthrich dan Merz (2008) (Tabel 2.2) dalam format panjang. Artinya: setiap sel dalam segitiga merupakan satu baris dalam dataset ini, dan tiga fitur disimpan: ukuran pembayaran (kumulatif, dalam contoh ini), tahun kejadian ( <span class="math inline">\(i\)</span> ) dan penundaan pembayaran ( <span class="math inline">\(j\)</span> ). Kami mengimpor file .txt tersebut dan menyimpan data frame hasilnya sebagai <code>my_triangle_long</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="loss-reserving.html#cb1-1" aria-hidden="true" tabindex="-1"></a>my_triangle_long <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;Data/triangle_W_M_long.txt&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="loss-reserving.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(my_triangle_long)</span></code></pre></div>
+<p>Kami menggunakan fungsi as.triangle dari paket ChainLadder untuk mengubah data frame menjadi tampilan segitiga. Objek hasilnya, <code>my_triangle</code>,` sekarang merupakan tipe segitiga.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="loss-reserving.html#cb2-1" aria-hidden="true" tabindex="-1"></a>my_triangle <span class="ot">&lt;-</span> <span class="fu">as.triangle</span>(my_triangle_long, <span class="at">origin =</span> <span class="st">&quot;origin&quot;</span>, <span class="at">dev =</span> <span class="st">&quot;dev&quot;</span>, <span class="at">value =</span> <span class="st">&quot;payment&quot;</span>)</span>
+<span id="cb2-2"><a href="loss-reserving.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(my_triangle)</span></code></pre></div>
+<p>Kami menampilkan segitiga dan mengenali angka-angka (dalam ribuan) dari Gambar 11.7. Sel-sel di segitiga bagian bawah ditandai sebagai tidak tersedia, NA.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="loss-reserving.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(my_triangle<span class="sc">/</span><span class="dv">1000</span>, <span class="at">digits =</span> <span class="dv">0</span>)</span></code></pre></div>
+<p><em>Triangular Format Data</em></p>
+<p>Sebagai alternatif, segitiga dapat disimpan dalam file .csv dengan tahun kejadian di baris dan tahun perkembangan di sel-sel kolom. Kami mengimpor file .csv ini dan mengubah <code>my_triangle_csv</code> hasilnya menjadi matriks.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="loss-reserving.html#cb4-1" aria-hidden="true" tabindex="-1"></a>my_triangle_csv <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">&quot;Data/triangle_W_M.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-2"><a href="loss-reserving.html#cb4-2" aria-hidden="true" tabindex="-1"></a>my_triangle_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(my_triangle_csv)</span>
+<span id="cb4-3"><a href="loss-reserving.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(my_triangle_matrix) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">origin =</span> <span class="dv">2004</span> <span class="sc">:</span> <span class="dv">2013</span>, <span class="at">dev =</span> <span class="dv">0</span><span class="sc">:</span>(<span class="fu">ncol</span>(my_triangle_matrix)<span class="sc">-</span><span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="loss-reserving.html#cb5-1" aria-hidden="true" tabindex="-1"></a>my_triangle <span class="ot">&lt;-</span> <span class="fu">as.triangle</span>(my_triangle_matrix) </span>
+<span id="cb5-2"><a href="loss-reserving.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(my_triangle<span class="sc">/</span><span class="dv">1000</span>, <span class="at">digits =</span> <span class="dv">0</span>)</span></code></pre></div>
+<p><em>From Cumulative to Incremental, and vice versa</em></p>
+<p>Fungsi R <code>cum2incr()</code> dan <code>incr2cum()</code> memungkinkan kita untuk beralih dengan mudah antara tampilan kumulatif dan tampilan incremental, serta sebaliknya.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="loss-reserving.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(my_triangle)</span></code></pre></div>
+<p>Sebagai alternatif, argumen <code>lattice</code> menciptakan satu plot per tahun kejadian.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="loss-reserving.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(my_triangle, <span class="at">lattice =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Daripada memplot segitiga kumulatif yang disimpan dalam <code>my_triangle</code>, kita dapat memplot segitiga run-off incremental.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="loss-reserving.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(my_triangle_incr)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="loss-reserving.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(my_triangle_incr, <span class="at">lattice =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="the-chain-ladder-method" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> The Chain-Ladder Method<a href="loss-reserving.html#the-chain-ladder-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metode yang paling banyak digunakan untuk memperkirakan cadangan kerugian yang belum diselesaikan adalah metode chain-ladder. Asal-usul metode ini tidak jelas tetapi telah terbukti efektif dalam aplikasi praktis pada awal tahun 1970-an, Taylor (1986). Seperti yang akan kita lihat, nama ini merujuk pada penggabungan serangkaian faktor perkembangan (dari tahun ke tahun) menjadi tangga faktor; kerugian yang belum matang naik menuju kedewasaan ketika dikalikan dengan rangkaian rasio ini, maka muncullah deskriptor yang sesuai, yaitu metode chain-ladder. Kita akan memulai dengan menjelajahi metode chain-ladder dalam versi deterministik atau algoritma, tanpa membuat asumsi stokastik apa pun. Kemudian kita akan menggambarkan model chain-ladder distribusi bebas risiko dari Mack.</p>
+<div id="the-deterministic-chain-ladder" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> The Deterministic Chain-Ladder<a href="loss-reserving.html#the-deterministic-chain-ladder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Metode chain-ladder deterministik berfokus pada run-off triangle dalam bentuk kumulatif. Ingatlah bahwa sel <span class="math inline">\((i,j)\)</span> dalam segitiga ini menampilkan jumlah kumulatif yang dibayarkan hingga periode pengembangan <span class="math inline">\(j\)</span> untuk klaim yang terjadi pada tahun <span class="math inline">\(i\)</span>. Metode chain-ladder mengasumsikan bahwa faktor pengembangan <span class="math inline">\(f_j\)</span> (juga disebut faktor usia-ke-usia, rasio tautan, atau faktor chain-ladder) ada sehingga:</p>
+<p><span class="math display">\[C_{i,j+1} = f_j \times C_{i,j}.\]</span></p>
+<p>Maka, faktor pengembangan memberitahu Anda bagaimana jumlah kumulatif dalam tahun pengembangan <span class="math inline">\(j\)</span> tumbuh menjadi jumlah kumulatif dalam tahun <span class="math inline">\(j+1\)</span>. Kami menyoroti jumlah kumulatif dalam periode 0 dengan warna biru dan jumlah kumulatif dalam periode 1 dengan warna merah pada Gambar 11.10 yang diambil dari Wüthrich dan Merz (2008) (Tabel 2.2, juga digunakan dalam Wüthrich dan Merz (2015), Tabel 1.4).</p>
+<p>Metode chain-ladder kemudian menyajikan resep yang intuitif untuk memperkirakan atau menghitung faktor pengembangan ini. Karena faktor pengembangan pertama <span class="math inline">\(f_0\)</span> menggambarkan perkembangan jumlah klaim kumulatif dari periode pengembangan 0 hingga periode pengembangan 1, faktor ini dapat diestimasi sebagai rasio dari jumlah kumulatif yang ditandai dengan warna merah dan jumlah kumulatif yang ditandai dengan warna biru, seperti yang terlihat pada Gambar 11.10. Dengan demikian, kita memperoleh perkiraan berikut untuk faktor pengembangan pertama <span class="math inline">\(\hat{f}_0^{CL}\)</span>, dengan observasi <span class="math inline">\(\mathcal{D}_I\)</span>.</p>
+<p><span class="math display">\[\hat{f}^{CL}_{\color{magenta}{0}} = \frac{\sum_{i=1}^{10-\color{magenta}{0}-1} \color{red}{C_{i,\color{magenta}{0}+1}}}{\sum_{i=1}^{10-\color{magenta}{0}-1} \color{blue}{C_{i\color{magenta}{0}}}}= 1.4925.\]</span></p>
+<p>Perhatikan bahwa indeks i yang digunakan dalam penjumlahan pada pembilang dan penyebut berjalan dari periode kejadian pertama (1) hingga periode kejadian terakhir (9) di mana kedua periode pengembangan 0 dan 1 diamati. Sebagai hasilnya, faktor pengembangan ini mengukur bagaimana data yang ditandai dengan warna biru berkembang menjadi data yang ditandai dengan warna merah, dengan rata-rata di seluruh periode kejadian di mana kedua periode diamati. Metode chain-ladder kemudian menggunakan estimasi faktor pengembangan ini untuk memprediksi jumlah kumulatif <span class="math inline">\(C_{10,1}\)</span> (yaitu jumlah kumulatif yang dibayarkan hingga dan termasuk tahun pengembangan 1 untuk kecelakaan yang terjadi pada tahun ke-10). Prediksi ini diperoleh dengan mengalikan jumlah klaim kumulatif terakhir yang diamati untuk periode kejadian 10 (yaitu <span class="math inline">\(C_{10,0}\)</span> dengan periode pengembangan 0) dengan estimasi faktor pengembangan <span class="math inline">\(\hat{f}^{CL}_0\)</span>.</p>
+<p><span class="math display">\[\hat{C}_{10, 1} = C_{10,0} \cdot \hat{f}^{CL}_0 = 5,676\cdot 1.4925=8,471.\]</span></p>
+<p>Melanjutkan pemikiran ini, faktor pengembangan berikutnya, <span class="math inline">\(f_1\)</span>, dapat diestimasi. Karena <span class="math inline">\(f_1\)</span> mencerminkan perkembangan dari periode 1 ke periode 2, dapat diestimasi sebagai rasio angka-angka yang ditandai dengan warna merah dan biru seperti yang ditunjukkan dalam Gambar 11.11.</p>
+<p>Notasi matematis untuk perkiraan <span class="math inline">\(\hat{f}_1^{CL}\)</span> dari faktor pengembangan berikutnya <span class="math inline">\(f_1\)</span>, dengan mengingat observasi DI, adalah sebagai berikut:</p>
+<p><span class="math display">\[\hat{f}^{CL}_{\color{magenta}{1}} = \frac{\sum_{i=1}^{10-\color{magenta}{1}-1} \color{red}{C_{i,\color{magenta}{1}+1}}}{\sum_{i=1}^{10-\color{magenta}{1}-1} \color{blue}{C_{i\color{magenta}{1}}}}=1.0778.\]</span></p>
+<p>Dengan demikian, faktor ini mengukur pertumbuhan jumlah yang dibayarkan secara kumulatif pada periode pengembangan 1 menjadi periode 2, dihitung rata-rata untuk semua periode kejadian di mana kedua periode tersebut diamati. Indeks i sekarang berjalan dari periode 1 hingga 8, karena ini adalah periode kejadian di mana kedua periode pengembangan 1 dan 2 diamati. Perkiraan untuk faktor pengembangan kedua ini kemudian digunakan untuk memprediksi sel-sel yang hilang dan tidak teramati pada periode pengembangan 2:</p>
+<p><span class="math display">\[\begin{array}{rl}
+\hat{C}_{10,2} &amp;= C_{10,0} \cdot \hat{f}^{CL}_0 \cdot \hat{f}_1^{CL} = \hat{C}_{10,1} \cdot \hat{f}_1^{CL} = 8,471 \cdot 1.0778 = 9,130 \\
+\hat{C}_{9,2}  &amp;= C_{9,1} \cdot \hat{f}^{CL}_1 = 7,649 \cdot 1.0778 = 8,244.
+\end{array}\]</span></p>
+<p>Perlu diperhatikan bahwa untuk <span class="math inline">\(\hat{C}_{10,2}\)</span>, Anda sebenarnya menggunakan perkiraan <span class="math inline">\(\hat{C}_{10,1}\)</span> dan mengalikannya dengan perkiraan faktor pengembangan <span class="math inline">\(\hat{f}_1^{CL}\)</span>.</p>
+<p>Kita melanjutkannya secara analog dan mendapatkan prediksi berikut, dicetak miring pada Gambar 11.12:</p>
+<p>Pada akhirnya, kita perlu memperkirakan nilai-nilai pada kolom terakhir. Faktor perkembangan terakhir, f8 , mengukur pertumbuhan dari periode perkembangan 8 ke periode perkembangan 9 dalam segitiga. Karena hanya baris pertama dalam segitiga yang memiliki kedua sel yang diamati, faktor terakhir ini diperkirakan sebagai rasio antara nilai yang berwarna merah dan nilai yang berwarna biru pada Gambar 11.13.</p>
+<p>Diberikan observasi <span class="math inline">\(\mathcal{D}_I\)</span>, perkiraan faktor ini <span class="math inline">\(\hat{f}^{CL}_{8}\)</span> adalah sama dengan:</p>
+<p><span class="math display">\[\hat{f}^{CL}_{\color{magenta}{8}} = \frac{\sum_{i=1}^{10-\color{magenta}{8}-1} \color{red}{C_{i,\color{magenta}{8}+1}}}{\sum_{i=1}^{10-\color{magenta}{8}-1} \color{blue}{C_{i\color{magenta}{8}}}}=1.001.\]</span></p>
+<p>Biasanya, faktor perkembangan terakhir ini mendekati 1 dan oleh karena itu arus kas yang dibayarkan dalam periode pengembangan terakhir relatif kecil. Dengan menggunakan perkiraan faktor pengembangan ini, kita sekarang dapat memperkirakan jumlah klaim kumulatif yang tersisa dalam kolom dengan mengalikan nilai-nilai untuk tahun pengembangan 8 dengan faktor ini.</p>
+<p>Notasi matematika umum untuk prediksi tangga rantai untuk segitiga bawah <span class="math inline">\(( i+j&gt;I )\)</span> adalah sebagai berikut:</p>
+<p><span class="math display">\[\begin{array}{rl}
+\hat{C}_{ij}^{CL} &amp;= C_{i,I-i} \cdot \prod_{l=I-i}^{j-1} \hat{f}_l^{CL} \\
+\hat{f}_j^{CL} &amp;= \frac{\sum_{i=1}^{I-j-1} C_{i,j+1}}{\sum_{i=1}^{I-j-1} C_{ij}},
+\end{array}\]</span></p>
+<p>di mana <span class="math inline">\(C_{i,I-i}\)</span> adalah pada diagonal terakhir yang diamati. Jelas bahwa asumsi penting dari metode chain-ladder adalah bahwa perkembangan proporsional klaim dari satu periode pengembangan ke periode berikutnya serupa untuk semua tahun kejadian.</p>
+<p>Ini menghasilkan Figure 11.14 berikut:</p>
+<p>angka-angka dalam kolom terakhir menunjukkan perkiraan jumlah klaim akhir. Estimasi jumlah klaim yang tertunda <span class="math inline">\(\hat{\mathcal{R}}_i^{CL}\)</span> untuk periode kejadian tertentu <span class="math inline">\(i=I-J+1,\ldots, I\)</span> kemudian diberikan oleh selisih antara jumlah klaim akhir dan jumlah kumulatif yang diamati pada diagonal terbaru:</p>
+<p><span class="math display">\[\hat{\mathcal{R}}_i^{CL} =\hat{C}_{iJ}^{CL}-C_{i,I-i}.\]</span></p>
+<p>Ini adalah estimasi chain-ladder untuk cadangan yang diperlukan untuk memenuhi kewajiban di masa depan terkait klaim yang terjadi dalam periode kejadian ini. Cadangan per periode kejadian dan total yang dijumlahkan dari semua periode kejadian dirangkum dalam Figure 11.15.</p>
+</div>
+<div id="macks-distribution-free-chain-ladder-model" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> Mack’s Distribution-Free Chain-Ladder Model<a href="loss-reserving.html#macks-distribution-free-chain-ladder-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada tahap ini, metode chain-ladder tradisional memberikan estimasi titik <span class="math inline">\(\hat{C}^{CL}_{iJ}\)</span> untuk ramalan <span class="math inline">\(C_{iJ}\)</span> , menggunakan informasi <span class="math inline">\(\mathcal{D}_I\)</span> . Karena metode chain-ladder adalah algoritma yang sepenuhnya deterministik dan intuitif untuk melengkapi segitiga run-off, kita tidak dapat menentukan seberapa dapat diandalkan estimasi titik tersebut atau memodelkan variasi pembayaran di masa depan. Untuk menjawab pertanyaan-pertanyaan tersebut, diperlukan sebuah model stokastik yang mendasari yang dapat mereproduksi estimasi cadangan chain-ladder.</p>
+<p>Dalam bagian ini, kami akan fokus pada model chain-ladder bebas distribusi sebagai model stokastik yang mendasar, diperkenalkan dalam Mack (1993). Metode ini memungkinkan kita untuk mengestimasi kesalahan standar dari prediksi chain-ladder. Pada Bagian berikutnya, yaitu Bagian 11.4, model linear umum digunakan untuk mengembangkan pendekatan yang sepenuhnya stokastik untuk memprediksi cadangan yang belum terbayar.</p>
+<p>Dalam pendekatan Mack, berlaku kondisi-kondisi berikut (tanpa mengasumsikan distribusi):</p>
+<ul>
+<li><p>Klaim Kumulatif <span class="math inline">\((C_{ij})_{j=0,\ldots,J}\)</span> adalah independen di antara periode kejadian yang berbeda i .</p></li>
+<li><p>Terdapat konstanta tetap <span class="math inline">\(f_0, \ldots, f_{J-1}\)</span> dan <span class="math inline">\(\sigma^2_0,\ldots, \sigma^2_{J-1}\)</span> yang memenuhi untuk semua <span class="math inline">\(i=1,\ldots, I\)</span> dan <span class="math inline">\(j=0,\ldots,J-1\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[\begin{array}{rl}
+E[C_{i,j+1}|C_{i0},\ldots,C_{ij}] &amp;= f_j \cdot C_{ij} \\
+\text{Var}(C_{i,j+1}|C_{ij}) &amp;= \sigma^2_j \cdot C_{ij}.
+\end{array}\]</span></p>
+<p>Ini berarti klaim kumulatif <span class="math inline">\((C_{ij})_{j=0,\ldots,J}\)</span> adalah proses Markov (di periode pengembangan j) dan oleh karena itu masa depan hanya bergantung pada masa sekarang.</p>
+<p>Dengan asumsi ini, nilai harapan dari jumlah klaim akhir <span class="math inline">\(C_{i,J}\)</span>, dengan data yang tersedia di segitiga atas, adalah jumlah kumulatif pada diagonal terbaru <span class="math inline">\(C_{i, I-1}\)</span> dikali dengan faktor pengembangan yang sesuai <span class="math inline">\(f_j\)</span> . Dalam notasi matematika, kita mendapatkan dengan faktor pengembangan yang diketahui <span class="math inline">\(f_j\)</span>dan observasi <span class="math inline">\(\mathcal{D}_I\)</span> :</p>
+<p><span class="math display">\[E[C_{iJ}|\mathcal{D}_I] = C_{i,I-i} \prod_{j=I-i}^{J-1} f_j\]</span></p>
+<p>Ini persis apa yang dilakukan metode chain-ladder deterministik, seperti yang dijelaskan di Bagian 11.3.1. Dalam praktiknya, faktor pengembangan tidak diketahui dan perlu diestimasi dari data yang tersedia di segitiga atas. Dalam pendekatan Mack, kita mendapatkan persis ekspresi yang sama untuk mengestimasi faktor pengembangan <span class="math inline">\(f_j\)</span> pada saat <span class="math inline">\(I\)</span> seperti dalam algoritma chain-ladder deterministik:</p>
+<p><span class="math display">\[\hat{f}_j^{CL} =\frac{\sum_{j=1}^{I-j-1} C_{i,j+1}}{\sum_{i=1}^{I-j-1} C_{ij}}.\]</span></p>
+<p>Prediksi untuk sel-sel dalam segitiga bawah (yaitu sel-sel <span class="math inline">\(C_{i,j}\)</span> dimana <span class="math inline">\(i+j&gt;I\)</span>) kemudian diperoleh dengan menggantikan faktor-faktor yang tidak diketahui <span class="math inline">\(f_j\)</span> dengan perkiraan mereka yang sesuai <span class="math inline">\(\hat{f}_j^{CL}\)</span> :</p>
+<p><span class="math display">\[\hat{C}^{CL}_{ij} = C_{i,I-i}\prod_{l=I-i}^{j-1} \hat{f}_l^{CL}.\]</span></p>
+<p>Untuk mengkuantifikasi kesalahan prediksi yang muncul dengan prediksi chain-ladder, Mack juga memperkenalkan parameter-varian <span class="math inline">\(\sigma^2_j\)</span>. Untuk mendapatkan wawasan dalam estimasi parameter-varian ini, diperkenalkan faktor-faktor perkembangan individu <span class="math inline">\(f_{i,j}\)</span> (yang spesifik untuk periode kejadian i )</p>
+<p><span class="math display">\[f_{i,j} = \frac{C_{i,j+1}}{C_{ij}}.\]</span></p>
+<p>Faktor-faktor perkembangan individu ini juga menggambarkan bagaimana jumlah akumulasi tumbuh dari periode $j $ ke periode <span class="math inline">\(j+1\)</span> , tetapi mereka hanya mempertimbangkan rasio dua sel (daripada mengambil rasio dua jumlah selama semua periode kejadian yang tersedia). Perhatikan bahwa faktor-faktor perkembangan dapat ditulis sebagai rata-rata tertimbang dari faktor-faktor perkembangan individu:</p>
+<p><span class="math display">\[\hat{f}_j^{CL} = \sum_{i=1}^{I-j-1} \frac{C_{ij}}{\sum_{i=1}^{I-j-1} C_{ij}} f_{i,j},\]</span></p>
+<p>Mari kita sekarang mengestimasi parameter-varian <span class="math inline">\(\sigma^2\)</span> dengan menulis asumsi varians Mack dalam bentuk yang setara. Pertama, varians dari rasio <span class="math inline">\(C_{i,j+1}\)</span> dan <span class="math inline">\(c_{i,j}\)</span> yang bersyarat pada <span class="math inline">\(C_{i,0},\ldots, C_{i,j}\)</span> berbanding terbalik dengan <span class="math inline">\(C_{i,j}\)</span>:</p>
+<p><span class="math display">\[\text{Var}[C_{i,j+1}/C_{ij}|C_{i0},\ldots,C_{ij}] ~ \propto ~ \frac{1}{C_{ij}}.\]</span></p>
+<p>Ini mengingatkan kita pada pengaturan kuadrat terkecil berbobot yang khas di mana bobotnya adalah kebalikan dari variabilitas respons. Oleh karena itu, variabel respons yang lebih volatil atau tidak presisi akan diberi bobot lebih rendah. <span class="math inline">\(C_{i,j}\)</span> berperan sebagai bobotnya. Dengan menggunakan parameter-varian yang tidak diketahui <span class="math inline">\(\sigma^2_j\)</span> , asumsi varians ini dapat ditulis sebagai:</p>
+<p><span class="math display">\[\text{Var}[C_{i,j+1}|C_{i0},\ldots,C_{ij}] = \sigma^2_j \cdot C_{ij},\]</span></p>
+<p>Koneksi dengan kuadrat terkecil berbobot kemudian secara langsung menghasilkan estimasi tak bias untuk parameter-varian yang tidak diketahui <span class="math inline">\(\sigma^2_j\)</span> dalam bentuk jumlah kuadrat residu yang diboboti:</p>
+<p><span class="math display">\[\hat{\sigma}^2_j = \frac{1}{I-j-2}\sum_{i=1}^{I-j-1} C_{ij}\left(\frac{C_{i,j+1}}{C_{ij}}-\hat{f}_j^{CL}\right)^2.\]</span></p>
+</div>
+<div id="r-code-for-chain-ladder-predictions" class="section level3 hasAnchor" number="11.3.3">
+<h3><span class="header-section-number">11.3.3</span> R code for Chain-Ladder Predictions<a href="loss-reserving.html#r-code-for-chain-ladder-predictions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kami menggunakan objek <code>my_triangle</code> dengan tipe triangle yang dibuat pada Bagian 11.2.4. Model chain-ladder bebas distribusi dari Mack (1993) diimplementasikan dalam paket <code>ChainLadder</code> (Gesmann et al. 2019) (sebagai bentuk khusus dari kuadrat terkecil berbobot) dan dapat diterapkan pada data <code>my_triangle</code> untuk memprediksi jumlah klaim yang belum diselesaikan dan mengestimasi kesalahan standar di sekitar ramalan tersebut.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="loss-reserving.html#cb10-1" aria-hidden="true" tabindex="-1"></a>CL <span class="ot">&lt;-</span> <span class="fu">MackChainLadder</span>(my_triangle)</span>
+<span id="cb10-2"><a href="loss-reserving.html#cb10-2" aria-hidden="true" tabindex="-1"></a>CL</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="loss-reserving.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(CL<span class="sc">$</span>f,<span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div>
+<p>Kita juga dapat mencetak seluruh run-off triangle (termasuk prediksi).</p>
+<p>MSEP (Mean Squared Error of Prediction) untuk total cadangan melintasi semua periode kejadian diberikan oleh:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="loss-reserving.html#cb12-1" aria-hidden="true" tabindex="-1"></a>CL<span class="sc">$</span>Total.Mack.S.E<span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<p>Disarankan untuk memvalidasi asumsi Mack dengan memeriksa bahwa tidak ada tren dalam plot residu. Empat plot terakhir yang kita peroleh dengan perintah berikut menunjukkan masing-masing residu standar terhadap nilai yang cocok, periode asal, periode kalender, dan periode pengembangan.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="loss-reserving.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(CL)</span></code></pre></div>
+<p>Plot bagian kiri atas adalah grafik batang posisi klaim terbaru ditambah IBNR dan kesalahan standar Mack berdasarkan periode kejadian. Plot bagian kanan atas menunjukkan pola perkembangan yang diprediksi untuk semua periode kejadian (dimulai dari 1 untuk periode kejadian tertua).</p>
+<p>Ketika mengatur argumen lattice=TRUE, kita akan mendapatkan plot perkembangan, termasuk prediksi dan perkiraan kesalahan standar berdasarkan periode kejadian.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="loss-reserving.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(CL, <span class="at">lattice=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="glms-and-bootstrap-for-loss-reserves" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> GLMs and Bootstrap for Loss Reserves<a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bagian ini membahas model regresi untuk menganalisis segitiga run-off. Ketika menganalisis data dalam segitiga run-off dengan model regresi, alat standar untuk pembangunan model, estimasi, dan prediksi tersedia. Dengan menggunakan alat-alat ini, kita dapat melampaui estimasi titik dan kesalahan standar seperti yang dijelaskan di Bagian 11.3. Secara khusus, kita membangun model linier generalisasi (GLM) untuk pembayaran inkremental <span class="math inline">\(X_{ij}\)</span> dalam Gambar 11.6. Sementara metode chain-ladder bekerja dengan data kumulatif, GLM khas mengasumsikan variabel respons menjadi independen dan oleh karena itu bekerja dengan segitiga run-off inkremental.</p>
+<div id="model-specification" class="section level3 hasAnchor" number="11.4.1">
+<h3><span class="header-section-number">11.4.1</span> Model Specification<a href="loss-reserving.html#model-specification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Misalkan <span class="math inline">\(X_{ij}\)</span> menyatakan pembayaran inkremental dalam sel <span class="math inline">\((i, j)\)</span> dari segitiga run-off. Kami mengasumsikan bahwa <span class="math inline">\(X_{ij}\)</span> saling independen dengan kepadatan <span class="math inline">\(f(x_{ij};\theta_{ij},\phi)\)</span> dari keluarga distribusi eksponensial. Kami mengidentifikasi:</p>
+<ul>
+<li><p><span class="math inline">\(\mu_{ij}=E[X_{ij}]\)</span> sebagai nilai harapan dari sel <span class="math inline">\(X_{ij}\)</span>,</p></li>
+<li><p><span class="math inline">\(\phi\)</span>sebagai parameter dispersi, dan <span class="math inline">\(\text{Var}[X_{ij}]=\phi \cdot V(\mu_{ij})\)</span> , di mana <span class="math inline">\(V(.)\)</span> adalah fungsi varians</p></li>
+<li><p><span class="math inline">\(\eta_{ij}\)</span> sebagai prediktor linear sehingga <span class="math inline">\(\eta_{ij}=g(\mu_{ij})\)</span> dengan <span class="math inline">\(g\)</span> sebagai fungsi link.</p></li>
+</ul>
+<p>Distribusi dari keluarga eksponensial dan fungsi link default-nya tercantum di <a href="http://stat.ethz.ch/R-manual/R-patched/library/stats/html/family.html" class="uri">http://stat.ethz.ch/R-manual/R-patched/library/stats/html/family.html</a>. Sekarang kami akan membahas tiga GLM khusus yang banyak digunakan untuk penyisihan kerugian.</p>
+<p>Pertama, model regresi Poisson diperkenalkan dalam Bagian 8.2. Dalam model ini, kami mengasumsikan bahwa Xij memiliki distribusi Poisson dengan parameter</p>
+<p><span class="math display">\[\mu_{ij} = \pi_i \cdot \gamma_j,\]</span></p>
+<p>struktur yang terdiri dari persilangan kelas yang mencakup efek multiplicative dari tahun kejadian <span class="math inline">\(i\)</span> dan periode perkembangan <span class="math inline">\(j\)</span>. Struktur model yang diusulkan tidak dapat diidentifikasi tanpa batasan tambahan pada parameter, misalnya <span class="math inline">\(\sum_{j=0}^J \gamma_j=1\)</span>. Batasan ini memberikan interpretasi eksplisit terhadap <span class="math inline">\(\pi_i\)</span> (dengan <span class="math inline">\(i=1,\ldots,I\)</span>) sebagai ukuran paparan atau volume untuk tahun kejadian <span class="math inline">\(i\)</span> dan <span class="math inline">\(γ_j\)</span> sebagai fraksi dari total volume yang dibayarkan dengan penundaan <span class="math inline">\(j\)</span>. Namun, saat melakukan kalibrasi GLM di R, batasan alternatif seperti <span class="math inline">\(\pi_1=1\)</span> atau <span class="math inline">\(\gamma_1=1\)</span>, atau reparametrisasi di mana <span class="math inline">\(\mu_{ij} = \exp{(\mu+\alpha_i+\beta_j)}\)</span> lebih mudah diimplementasikan. Kami melanjutkan dengan spesifikasi terakhir tersebut, termasuk <span class="math inline">\(\alpha_1 = \beta_0 = 0\)</span>, yang dikenal sebagai batasan sudut. GLM ini memperlakukan tahun kejadian dan penundaan pembayaran sebagai variabel faktor dan cocok dengan parameter per tingkat, disamping intercept <span class="math inline">\(\mu\)</span>. Batasan sudut menjadikan efek tingkat pertama variabel faktor sama dengan nol. Asumsi Poisson sangat berguna untuk segitiga run-off dengan jumlah klaim yang dilaporkan, sering digunakan dalam estimasi jumlah klaim IBNR (lihat Bagian 11.2).</p>
+<p>Kedua, modifikasi menarik dari model regresi Poisson dasar adalah model regresi Poisson yang terdispersi berlebihan di mana <span class="math inline">\(Z_{ij}\)</span> memiliki distribusi Poisson dengan parameter <span class="math inline">\(\mu_{ij}/\phi\)</span> dan</p>
+<p><span class="math display">\[\begin{array}{rl}
+X_{ij} &amp;\sim  \phi \cdot Z_{ij}  \\
+\mu_{ij} &amp;= \exp{(\mu + \alpha_i + \beta_j)}.
+\end{array}\]</span></p>
+<p>sebagai akibatnya, <span class="math inline">\(X_{ij}\)</span> memiliki spesifikasi yang sama untuk rata-ratanya seperti dalam model regresi Poisson dasar, tetapi sekarang</p>
+<p><span class="math display">\[\text{Var}[X_{ij}] = \phi^2 \cdot \text{Var}[Z_{ij}] = \phi \cdot \exp{(\mu + \alpha_i + \beta_j)}.\]</span></p>
+<p>konstruksi ini memungkinkan untuk adanya di bawah (ketika <span class="math inline">\(\phi &lt;1\)</span>) dan over-dispersion (dengan <span class="math inline">\(\phi &gt;1\)</span>). Karena <span class="math inline">\(X_{ij}\)</span> tidak lagi mengikuti distribusi yang terkenal, pendekatan ini disebut quasi-likelihood. Ini sangat berguna untuk memodelkan segitiga run-off dengan pembayaran bertambah, karena biasanya mengungkapkan over-dispersion.</p>
+<p>Ketiga, model regresi gamma relevan untuk memodelkan segitiga run-off dengan pembayaran klaim. Ingat dari Bagian 3.2.1 (lihat juga Lampiran Bab 18) bahwa distribusi gamma memiliki parameter bentuk <span class="math inline">\(\alpha\)</span> dan parameter skala <span class="math inline">\(\theta\)</span>. Dari ini, kita melakukan reparameterisasi dan mendefinisikan parameter baru <span class="math inline">\(\mu = \alpha \cdot \theta\)</span> sambil tetap mempertahankan parameter skala <span class="math inline">\(\theta\)</span>. Selanjutnya, anggap bahwa <span class="math inline">\(X_{ij}\)</span> memiliki distribusi gamma dan memperbolehkan <span class="math inline">\(\phi\)</span> bervariasi berdasarkan <span class="math inline">\(ij\)</span> sehingga</p>
+<p><span class="math display">\[\mu_{ij} =  \exp{(\mu + \alpha_i + \beta_j)}.\]</span></p>
+</div>
+<div id="model-estimation-and-prediction" class="section level3 hasAnchor" number="11.4.2">
+<h3><span class="header-section-number">11.4.2</span> Model Estimation and Prediction<a href="loss-reserving.html#model-estimation-and-prediction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>kami sekarang mengestimasi parameter regresi <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\alpha_{i}\)</span>, dan <span class="math inline">\(\beta_j\)</span> dalam GLM yang diusulkan. Di <code>R</code>, fungsi <code>glm</code> tersedia untuk mengestimasi parameter-parameter ini melalui estimasi maximum likelihood (mle) atau estimasi quasi-likelihood (dalam kasus Poisson over-dispersed). Dengan adanya estimasi parameter <span class="math inline">\(\hat{\phi}\)</span>, <span class="math inline">\(\hat{\alpha_i}\)</span>, dan<span class="math inline">\(\hat{\beta}_j\)</span>, kita dapat menghasilkan estimasi titik untuk setiap sel dalam segitiga atas.</p>
+<p><span class="math display">\[\hat{X}_{ij} =\hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j\leq I.\]</span></p>
+<p><span class="math display">\[\hat{X}_{ij} = \hat{E[X_{ij}]} = \exp{(\hat{\mu}+\hat{\alpha}_i+\hat{\beta}_j)},\ \text{with}\ i+j&gt; I.\]</span></p>
 
+</div>
+</div>
 </div>
             </section>
 
@@ -331,6 +765,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
