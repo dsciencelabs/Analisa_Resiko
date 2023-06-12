@@ -954,4 +954,4 @@ $$\begin{equation}
 L(\theta) = \prod_{i=1}^k \frac{f_X(x_i)}{S_X(d)} ,
 \end{equation}$$
 
-Dimana $k$ adalah jumlah loss yang lebih besar dari yang dapat dikurangkan D
+Dimana $k$ adalah jumlah loss yang lebih besar dari yang dapat dikurangkan $D$
