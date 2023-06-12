@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 5 Aggregate Loss Models | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 5 Aggregate Loss Models | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -55,10 +55,6 @@
 
 
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -106,7 +102,26 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#frequency-distributions"><i class="fa fa-check"></i><b>2.1</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian"><i class="fa fa-check"></i><b>2.1.1</b> Bagaimana Frekuensi menambah infromasi pada tingkat keparahan suatu kejadian</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#basic-frequency-distributions"><i class="fa fa-check"></i><b>2.2</b> Basic Frequency Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#the-ab0-class"><i class="fa fa-check"></i><b>2.3</b> The <span class="math inline">\((a,b,0)\)</span> Class</a></li>
+<li class="chapter" data-level="2.4" data-path="frequency-modeling.html"><a href="frequency-modeling.html#mengestimasi-distibusi-frekuensi"><i class="fa fa-check"></i><b>2.4</b> Mengestimasi Distibusi Frekuensi</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
+<li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -376,7 +391,7 @@
 <ul>
 <li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
 <ul>
-<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class-1"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
 <li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
@@ -391,7 +406,7 @@
 <li class="chapter" data-level="18.3" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#limited-expected-values"><i class="fa fa-check"></i><b>18.3</b> Limited Expected Values</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
-<li><a href="section.html#section"></a></li>
+<li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/dsciencelabs/Analisa_Resiko" target="blank">Published with Bookdown</a></li>
@@ -460,7 +475,7 @@ Misalkan <span class="math inline">\(μ = E(X_i)\)</span> dan <span class="math 
 <p>Jumlah kecelakaan mengikuti distribusi Poisson dengan rata-rata 12. Setiap kecelakaan menghasilkan 1, 2, atau 3 penuntut dengan probabilitas masing-masing 1/2, 1/3, dan 1/6. Hitunglah varians dalam jumlah total penuntut.</p>
 <p><em>JAWABAN</em></p>
 <p><span class="math display">\[
-\begin{aligned} 
+\begin{aligned}
 &amp; \mathrm{E}(X^2) = 1^2 \left( \frac{1}{2}\right) + 2^2\left(\frac{1}{3} \right) + 3^2\left(\frac{1}{6}\right)
 = \frac{10}{3} \\
 \Rightarrow &amp;\mathrm{Var}(S_N) = \lambda \ \mathrm{E}(X^2) = 12\left(\frac{10}{3}\right) = 40 .
@@ -482,7 +497,7 @@ Misalkan <span class="math inline">\(μ = E(X_i)\)</span> dan <span class="math 
 <p><span class="math display">\[
 \begin{aligned}
 M_{S_N}(t) &amp;= \mathrm{E}(e^{t S_N})=\mathrm{E}_N[\mathrm{E}(e^{tS_N}|N)]\\
-&amp;= \mathrm{E}_N \left[ ~\mathrm{E}\left( e^{t(X_1+\cdots+X_N)}\right) ~\right] = 
+&amp;= \mathrm{E}_N \left[ ~\mathrm{E}\left( e^{t(X_1+\cdots+X_N)}\right) ~\right] =
 \mathrm{E}_N \left[ \mathrm{E}(e^{tX_1})\cdots\mathrm{E}(e^{tX_N}) \right] ~~ \text{since } X_i \text{&#39;s are independent} \\
 &amp;= \mathrm{E}N[~(M{X}(t))^N~] .
 \end{aligned}
@@ -518,7 +533,7 @@ M_{S_N}(t) &amp;= P_N[M_X(t)] = e^{\lambda(M_{X}(t) - 1)}.
 <p><span class="math display">\[
 \begin{aligned}
 M_{S_N}&#39;(t) &amp;= e^{\lambda(M_{X}(t) - 1)}~ \lambda~ M_{X}&#39;(t) = M_{S_N}(t) ~\lambda ~M_{X}&#39;(t)\\
-M_{S_N}&#39;&#39;(t) &amp;= M_{S_N}(t) ~\lambda~ M_{X}&#39;&#39;(t) + [~M_{S_N}(t)~\lambda~ M_{X}&#39;(t)~] ~\lambda~ M_{X}&#39;(t) . 
+M_{S_N}&#39;&#39;(t) &amp;= M_{S_N}(t) ~\lambda~ M_{X}&#39;&#39;(t) + [~M_{S_N}(t)~\lambda~ M_{X}&#39;(t)~] ~\lambda~ M_{X}&#39;(t) .
 \end{aligned}
 \]</span>
 Mengevaluasi hal ini pada t = 0 menghasilkan</p>
@@ -537,7 +552,7 @@ Mengevaluasi hal ini pada t = 0 menghasilkan</p>
 <div id="example-5.3.2.-actuarial-exam-question" class="section level4 hasAnchor" number="5.2.0.2">
 <h4><span class="header-section-number">5.2.0.2</span> Example 5.3.2. Actuarial Exam Question<a href="aggregate-loss-models.html#example-5.3.2.-actuarial-exam-question" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Dimisalkan produser acara kuis televisi yang memberikan hadiah uang tunai. Jumlah hadiah(N) dan jumlah hadiah(X) memiliki distribusi sebagai berikut:</p>
-<p><span class="math display">\[{\small 
+<p><span class="math display">\[{\small
 \begin{matrix}
 \begin{array}{ccccc}\hline
     n &amp; \Pr(N=n) &amp; &amp; x &amp; \Pr(X=x)\\ \hline
@@ -602,19 +617,19 @@ F_{S_N}(s) &amp;= \Pr \left(X_1 + \cdots + X_N \le s \right) \\
 <p>dikenal sebagai premi stop-loss bersih. Untuk menghitung premi stop-loss neto, kita memiliki</p>
 <p><span class="math display">\[
 \begin{eqnarray*}
-\mathrm{E}(S_N-d)_+ 
+\mathrm{E}(S_N-d)_+
 &amp;=&amp;
 \left\{\begin{array}{ll}
 \int_{d}^{\infty}(s-d) f_{S_N}(s) ds&amp; \text{for continuous } S_N\\
- \sum_{s&gt;d}(s-d) f_{S_N}(s) &amp; \text{for discrete } S_N\\
- \end{array}\right.\\
+\sum_{s&gt;d}(s-d) f_{S_N}(s) &amp; \text{for discrete } S_N\\
+\end{array}\right.\\
 &amp;=&amp; \mathrm{E}(S_N) - \mathrm{E}(S_N\wedge d)\\
 \end{eqnarray*}
 \]</span>
 ### Actuarial Exam Question</p>
 <p>Dalam satu minggu tertentu, jumlah proyek yang mengharuskan Anda bekerja lembur memiliki distribusi geometris dengan <span class="math inline">\(β = 2\)</span> . Untuk setiap proyek, distribusi jumlah jam lembur dalam seminggu, X adalah sebagai berikut</p>
 <p><span class="math display">\[
-{\small 
+{\small
 \begin{matrix}
 \begin{array}{ccc} \hline
     x &amp;  &amp; f(x)\\ \hline
@@ -676,7 +691,7 @@ F_{S_N}(s) &amp;= \Pr \left(X_1 + \cdots + X_N \le s \right) \\
 <p>Jadi,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mathrm{E}\left[ \left(S_N-(j+1) \right) _{+}\right] - \mathrm{E}\left[ ( S_N-j )_{+} \right] 
+\mathrm{E}\left[ \left(S_N-(j+1) \right) _{+}\right] - \mathrm{E}\left[ ( S_N-j )_{+} \right]
 &amp;= \left\{\mathrm{E}(S_N) - \mathrm{E}(S_N\wedge (j+1)) \right\}   -  \left\{\mathrm{E}(S_N) - \mathrm{E}(S_N\wedge j) \right\} \\
 &amp;= \mathrm{E}\left(S_N \wedge j \right) - \mathrm{E}\left[ S \wedge (j+1) \right]
 \end{aligned}
@@ -715,7 +730,11 @@ sesuai kebutuhan.</p>
 <li>Step 1:</li>
 </ul>
 <p><span class="math display">\[\begin{aligned}
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+\mathrm{E~}(S_N-5)_+ &amp;= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 0) \right] \
+=======
 \mathrm{E~}(S_N-5)_+ &amp;= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 5) \right] \
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 16a5dfb74365b3fdb59c15e620c650d54720c38c
 &amp;= 28 - 5 \left(1 - \frac{1}{3}\right) \
 &amp;= 28 - 5 \left(\frac{2}{3}\right) \
 &amp;= 28 - \frac{10}{3} \
