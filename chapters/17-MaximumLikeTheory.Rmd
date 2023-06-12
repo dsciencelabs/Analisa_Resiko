@@ -1,4 +1,4 @@
-# Appendix C: Maximum Likelihood Theory
+# Maximum Likelihood Theory
 
 Pratinjau Bab. Lampiran Bab 15 memperkenalkan teori kemungkinan maksimum terkait estimasi parameter dari keluarga parametrik. Lampiran ini memberikan contoh yang lebih spesifik dan mengembangkan beberapa konsep. Bagian 17.1 mengulas definisi fungsi kemungkinan dan memperkenalkan propertinya. Bagian 17.2 mengulas estimasi kemungkinan maksimum, dan memperluas properti sampel besar mereka untuk kasus di mana terdapat beberapa parameter dalam model. Bagian 17.3 mengulas inferensi statistik berdasarkan estimasi kemungkinan maksimum, dengan contoh-contoh khusus pada kasus dengan beberapa parameter.
 
