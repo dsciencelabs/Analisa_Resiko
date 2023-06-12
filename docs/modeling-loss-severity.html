@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -119,6 +123,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -176,16 +202,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
 <li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -261,12 +284,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
-<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.6</b> metode rekursif</a></li>
-<li class="chapter" data-level="5.2.7" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.7</b> simulasi</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.5</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.6</b> simulasi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
@@ -1091,80 +1113,80 @@ l(\boldsymbol \theta) = \log L(\boldsymbol \theta) = \sum_{i=1}^n \log f(x_i) .
 \hat{\alpha}_{MLE} &amp;= \frac{5}{\sum_{i=1}^5 \log x_i - 5  \log 500 } = 2.453 .
 \end{array}\]</span></p>
 <p>Secara alami, ada banyak masalah di mana tidak praktis menggunakan perhitungan tangan untuk optimasi. Untungnya ada banyak rutinitas statistik yang tersedia seperti fungsi .<code>R optim</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modeling-loss-severity.html#cb1-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="dv">521</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">658</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">702</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">819</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">1217</span>)</span>
-<span id="cb1-2"><a href="modeling-loss-severity.html#cb1-2" aria-hidden="true" tabindex="-1"></a>nloglike <span class="ot">&lt;-</span> <span class="cf">function</span>(alpha){<span class="sc">-</span>(<span class="dv">5</span><span class="sc">*</span>alpha<span class="sc">*</span><span class="fu">log</span>(<span class="dv">500</span>)<span class="sc">+</span><span class="dv">5</span><span class="sc">*</span><span class="fu">log</span>(alpha)<span class="sc">-</span>(alpha<span class="sc">+</span><span class="dv">1</span>)<span class="sc">*</span>c1)}</span>
-<span id="cb1-3"><a href="modeling-loss-severity.html#cb1-3" aria-hidden="true" tabindex="-1"></a>MLE <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par=</span><span class="dv">1</span>, <span class="at">fn=</span>nloglike)<span class="sc">$</span>par</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="modeling-loss-severity.html#cb4-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="dv">521</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">658</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">702</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">819</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">1217</span>)</span>
+<span id="cb4-2"><a href="modeling-loss-severity.html#cb4-2" aria-hidden="true" tabindex="-1"></a>nloglike <span class="ot">&lt;-</span> <span class="cf">function</span>(alpha){<span class="sc">-</span>(<span class="dv">5</span><span class="sc">*</span>alpha<span class="sc">*</span><span class="fu">log</span>(<span class="dv">500</span>)<span class="sc">+</span><span class="dv">5</span><span class="sc">*</span><span class="fu">log</span>(alpha)<span class="sc">-</span>(alpha<span class="sc">+</span><span class="dv">1</span>)<span class="sc">*</span>c1)}</span>
+<span id="cb4-3"><a href="modeling-loss-severity.html#cb4-3" aria-hidden="true" tabindex="-1"></a>MLE <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par=</span><span class="dv">1</span>, <span class="at">fn=</span>nloglike)<span class="sc">$</span>par</span></code></pre></div>
 <pre><code>## Warning in optim(par = 1, fn = nloglike): one-dimensional optimization by Nelder-Mead is unreliable:
 ## use &quot;Brent&quot; or optimize() directly</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="modeling-loss-severity.html#cb3-1" aria-hidden="true" tabindex="-1"></a>MLE</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="modeling-loss-severity.html#cb6-1" aria-hidden="true" tabindex="-1"></a>MLE</span></code></pre></div>
 <pre><code>## [1] 2.453125</code></pre>
 <p><span class="math inline">\(2.453125\)</span> mengkonfirmasi hasil perhitungan tangan kita di mana penaksir kemungkinan maksimum</p>
 <p><strong>Contoh 3.5.4. Dana Properti Wisconsin</strong>. Untuk melihat bagaimana penaksir kemungkinan maksimum bekerja dengan data nyata, kami kembali ke data klaim 2010</p>
 <p>Cuplikan kode berikut menunjukkan cara menyesuaikan eksponensial, gamma, Pareto, lognormal, dan <span class="math inline">\(GB2\)</span> Model. Untuk konsistensi, kode menggunakan package <code>R</code> dan <code>VGAM</code>. Akronim adalah singkatan dari Vector Generalized Linear and Additive Models; Seperti yang disarankan oleh namanya, paket ini dapat melakukan jauh lebih dari sesuai dengan model-model ini meskipun cukup untuk tujuan kita. Satu-satunya pengecualian adalah GB2 kepadatan yang tidak banyak digunakan di luar aplikasi asuransi; Namun, kita dapat mengkodekan kepadatan ini dan menghitung penaksir kemungkinan maksimum menggunakan <code>optim</code> General Purpose Optimizer.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="modeling-loss-severity.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(VGAM)</span></span>
-<span id="cb5-2"><a href="modeling-loss-severity.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_lev &lt;- read.csv(&quot;CLAIMLEVEL.csv&quot;, header = TRUE) </span></span>
-<span id="cb5-3"><a href="modeling-loss-severity.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_data &lt;- subset(claim_lev, Year == 2010); </span></span>
-<span id="cb5-4"><a href="modeling-loss-severity.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="modeling-loss-severity.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a GB2 Distribution - this is more complicated</span></span>
-<span id="cb5-6"><a href="modeling-loss-severity.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #The likelihood function of GB2 distribution (negative for optimization)</span></span>
-<span id="cb5-7"><a href="modeling-loss-severity.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#lik_gb2 &lt;- function (param) {</span></span>
-<span id="cb5-8"><a href="modeling-loss-severity.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- param[1]</span></span>
-<span id="cb5-9"><a href="modeling-loss-severity.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- param[2]</span></span>
-<span id="cb5-10"><a href="modeling-loss-severity.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- param[3]</span></span>
-<span id="cb5-11"><a href="modeling-loss-severity.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- param[4]</span></span>
-<span id="cb5-12"><a href="modeling-loss-severity.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  yt &lt;- (log(claim_data$Claim) - mu) / sigma</span></span>
-<span id="cb5-13"><a href="modeling-loss-severity.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpyt &lt;- ifelse(yt &gt; 23, yt, log(1 + exp(yt)))</span></span>
-<span id="cb5-14"><a href="modeling-loss-severity.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * yt - log(sigma) - log(beta(a_1,a_2)) - </span></span>
-<span id="cb5-15"><a href="modeling-loss-severity.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpyt - log(claim_data$Claim) </span></span>
-<span id="cb5-16"><a href="modeling-loss-severity.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  return(-sum(logdens))</span></span>
-<span id="cb5-17"><a href="modeling-loss-severity.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#}</span></span>
-<span id="cb5-18"><a href="modeling-loss-severity.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;optim&quot; is a general purpose minimization function</span></span>
-<span id="cb5-19"><a href="modeling-loss-severity.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_bop &lt;- optim(c(1, 1, 0, 1), lik_gb2, method = c(&quot;L-BFGS-B&quot;), </span></span>
-<span id="cb5-20"><a href="modeling-loss-severity.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co">#                 lower = c(0.01, 0.01, -500, 0.01), </span></span>
-<span id="cb5-21"><a href="modeling-loss-severity.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#                 upper = c(500, 500, 500, 500), hessian = TRUE)</span></span>
-<span id="cb5-22"><a href="modeling-loss-severity.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># #Nonparametric Plot</span></span>
-<span id="cb5-23"><a href="modeling-loss-severity.html#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(density(log(claim_data$Claim)), main = &quot;&quot;, xlab = &quot;Log Expenditures&quot;,</span></span>
-<span id="cb5-24"><a href="modeling-loss-severity.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     ylim = c(0 ,0.37))</span></span>
-<span id="cb5-25"><a href="modeling-loss-severity.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co">#x &lt;- seq(0, 15, by = 0.01)</span></span>
-<span id="cb5-26"><a href="modeling-loss-severity.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># #Exponential</span></span>
-<span id="cb5-27"><a href="modeling-loss-severity.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.exp &lt;- vglm(Claim ~ 1, exponential, data = claim_data)</span></span>
-<span id="cb5-28"><a href="modeling-loss-severity.html#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co">#theta = 1 / exp(coef(fit.exp))</span></span>
-<span id="cb5-29"><a href="modeling-loss-severity.html#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#fexp_ex &lt;- dgamma(exp(x), scale = exp(-coef(fit.exp)), shape = 1) * exp(x)</span></span>
-<span id="cb5-30"><a href="modeling-loss-severity.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fexp_ex, col = &quot;red&quot;, lty =2)</span></span>
-<span id="cb5-31"><a href="modeling-loss-severity.html#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a gamma distribution</span></span>
-<span id="cb5-32"><a href="modeling-loss-severity.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.gamma &lt;- vglm(Claim ~ 1, family = gamma2, data = claim_data)</span></span>
-<span id="cb5-33"><a href="modeling-loss-severity.html#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co">#theta &lt;- exp(coef(fit.gamma)[1]) / exp(coef(fit.gamma)[2])  # theta = mu / alpha</span></span>
-<span id="cb5-34"><a href="modeling-loss-severity.html#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co">#alpha &lt;- exp(coef(fit.gamma)[2]) </span></span>
-<span id="cb5-35"><a href="modeling-loss-severity.html#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co">#fgamma_ex &lt;- dgamma(exp(x), shape = alpha, scale = theta) * exp(x)</span></span>
-<span id="cb5-36"><a href="modeling-loss-severity.html#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fgamma_ex, col = &quot;blue&quot;, lty =3)</span></span>
-<span id="cb5-37"><a href="modeling-loss-severity.html#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co"># #Pareto</span></span>
-<span id="cb5-38"><a href="modeling-loss-severity.html#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.pareto &lt;- vglm(Claim ~ 1, paretoII, loc = 0, data = claim_data)</span></span>
-<span id="cb5-39"><a href="modeling-loss-severity.html#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="co">#fpareto_ex &lt;- dparetoII(exp(x), loc = 0, shape = exp(coef(fit.pareto)[2]), </span></span>
-<span id="cb5-40"><a href="modeling-loss-severity.html#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                        scale = exp(coef(fit.pareto)[1])) * exp(x)</span></span>
-<span id="cb5-41"><a href="modeling-loss-severity.html#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fpareto_ex, col = &quot;purple&quot;)</span></span>
-<span id="cb5-42"><a href="modeling-loss-severity.html#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># #Lognormal</span></span>
-<span id="cb5-43"><a href="modeling-loss-severity.html#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.LN &lt;- vglm(Claim ~ 1, family = lognormal, data = claim_data)</span></span>
-<span id="cb5-44"><a href="modeling-loss-severity.html#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="co">#flnorm_ex &lt;- dlnorm(exp(x), mean = coef(fit.LN)[1],</span></span>
-<span id="cb5-45"><a href="modeling-loss-severity.html#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="co">#                    sd = exp(coef(fit.LN)[2])) * exp(x)</span></span>
-<span id="cb5-46"><a href="modeling-loss-severity.html#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, flnorm_ex, col = &quot;lightblue&quot;)</span></span>
-<span id="cb5-47"><a href="modeling-loss-severity.html#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="co"># #Density for GB II</span></span>
-<span id="cb5-48"><a href="modeling-loss-severity.html#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_density &lt;- function (x) {</span></span>
-<span id="cb5-49"><a href="modeling-loss-severity.html#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- gb2_bop$par[1]</span></span>
-<span id="cb5-50"><a href="modeling-loss-severity.html#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- gb2_bop$par[2]</span></span>
-<span id="cb5-51"><a href="modeling-loss-severity.html#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- gb2_bop$par[3]</span></span>
-<span id="cb5-52"><a href="modeling-loss-severity.html#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- gb2_bop$par[4]</span></span>
-<span id="cb5-53"><a href="modeling-loss-severity.html#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="co">#  xt &lt;- (log(x) - mu) / sigma</span></span>
-<span id="cb5-54"><a href="modeling-loss-severity.html#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpxt &lt;- ifelse (xt &gt; 23, yt, log(1 + exp(xt)))</span></span>
-<span id="cb5-55"><a href="modeling-loss-severity.html#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * xt - log(sigma) - log(beta(a_1, a_2)) - </span></span>
-<span id="cb5-56"><a href="modeling-loss-severity.html#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpxt -log(x) </span></span>
-<span id="cb5-57"><a href="modeling-loss-severity.html#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="co">#  exp(logdens)</span></span>
-<span id="cb5-58"><a href="modeling-loss-severity.html#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="co">#  }</span></span>
-<span id="cb5-59"><a href="modeling-loss-severity.html#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="co">#fGB2_ex = gb2_density(exp(x)) * exp(x)</span></span>
-<span id="cb5-60"><a href="modeling-loss-severity.html#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fGB2_ex, col=&quot;green&quot;)</span></span>
-<span id="cb5-61"><a href="modeling-loss-severity.html#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="co">#legend(&quot;topleft&quot;, c(&quot;log(Expend)&quot;, &quot;Exponential&quot;, &quot;Gamma&quot;, &quot;Pareto&quot;, </span></span>
-<span id="cb5-62"><a href="modeling-loss-severity.html#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="co">#                    &quot;Lognormal&quot;, &quot;GB2&quot;), cex=0.8,</span></span>
-<span id="cb5-63"><a href="modeling-loss-severity.html#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="co">#       lty = c(4,2,3,1,1,1), #4 is &quot;longdash&quot;</span></span>
-<span id="cb5-64"><a href="modeling-loss-severity.html#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="co">#       col = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;purple&quot;,&quot;lightblue&quot;,&quot;green&quot;))</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="modeling-loss-severity.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(VGAM)</span></span>
+<span id="cb8-2"><a href="modeling-loss-severity.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_lev &lt;- read.csv(&quot;CLAIMLEVEL.csv&quot;, header = TRUE) </span></span>
+<span id="cb8-3"><a href="modeling-loss-severity.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_data &lt;- subset(claim_lev, Year == 2010); </span></span>
+<span id="cb8-4"><a href="modeling-loss-severity.html#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="modeling-loss-severity.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a GB2 Distribution - this is more complicated</span></span>
+<span id="cb8-6"><a href="modeling-loss-severity.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #The likelihood function of GB2 distribution (negative for optimization)</span></span>
+<span id="cb8-7"><a href="modeling-loss-severity.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#lik_gb2 &lt;- function (param) {</span></span>
+<span id="cb8-8"><a href="modeling-loss-severity.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- param[1]</span></span>
+<span id="cb8-9"><a href="modeling-loss-severity.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- param[2]</span></span>
+<span id="cb8-10"><a href="modeling-loss-severity.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- param[3]</span></span>
+<span id="cb8-11"><a href="modeling-loss-severity.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- param[4]</span></span>
+<span id="cb8-12"><a href="modeling-loss-severity.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  yt &lt;- (log(claim_data$Claim) - mu) / sigma</span></span>
+<span id="cb8-13"><a href="modeling-loss-severity.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpyt &lt;- ifelse(yt &gt; 23, yt, log(1 + exp(yt)))</span></span>
+<span id="cb8-14"><a href="modeling-loss-severity.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * yt - log(sigma) - log(beta(a_1,a_2)) - </span></span>
+<span id="cb8-15"><a href="modeling-loss-severity.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpyt - log(claim_data$Claim) </span></span>
+<span id="cb8-16"><a href="modeling-loss-severity.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  return(-sum(logdens))</span></span>
+<span id="cb8-17"><a href="modeling-loss-severity.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#}</span></span>
+<span id="cb8-18"><a href="modeling-loss-severity.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;optim&quot; is a general purpose minimization function</span></span>
+<span id="cb8-19"><a href="modeling-loss-severity.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_bop &lt;- optim(c(1, 1, 0, 1), lik_gb2, method = c(&quot;L-BFGS-B&quot;), </span></span>
+<span id="cb8-20"><a href="modeling-loss-severity.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#                 lower = c(0.01, 0.01, -500, 0.01), </span></span>
+<span id="cb8-21"><a href="modeling-loss-severity.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#                 upper = c(500, 500, 500, 500), hessian = TRUE)</span></span>
+<span id="cb8-22"><a href="modeling-loss-severity.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># #Nonparametric Plot</span></span>
+<span id="cb8-23"><a href="modeling-loss-severity.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(density(log(claim_data$Claim)), main = &quot;&quot;, xlab = &quot;Log Expenditures&quot;,</span></span>
+<span id="cb8-24"><a href="modeling-loss-severity.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     ylim = c(0 ,0.37))</span></span>
+<span id="cb8-25"><a href="modeling-loss-severity.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">#x &lt;- seq(0, 15, by = 0.01)</span></span>
+<span id="cb8-26"><a href="modeling-loss-severity.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># #Exponential</span></span>
+<span id="cb8-27"><a href="modeling-loss-severity.html#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.exp &lt;- vglm(Claim ~ 1, exponential, data = claim_data)</span></span>
+<span id="cb8-28"><a href="modeling-loss-severity.html#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">#theta = 1 / exp(coef(fit.exp))</span></span>
+<span id="cb8-29"><a href="modeling-loss-severity.html#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">#fexp_ex &lt;- dgamma(exp(x), scale = exp(-coef(fit.exp)), shape = 1) * exp(x)</span></span>
+<span id="cb8-30"><a href="modeling-loss-severity.html#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fexp_ex, col = &quot;red&quot;, lty =2)</span></span>
+<span id="cb8-31"><a href="modeling-loss-severity.html#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a gamma distribution</span></span>
+<span id="cb8-32"><a href="modeling-loss-severity.html#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.gamma &lt;- vglm(Claim ~ 1, family = gamma2, data = claim_data)</span></span>
+<span id="cb8-33"><a href="modeling-loss-severity.html#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="co">#theta &lt;- exp(coef(fit.gamma)[1]) / exp(coef(fit.gamma)[2])  # theta = mu / alpha</span></span>
+<span id="cb8-34"><a href="modeling-loss-severity.html#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co">#alpha &lt;- exp(coef(fit.gamma)[2]) </span></span>
+<span id="cb8-35"><a href="modeling-loss-severity.html#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co">#fgamma_ex &lt;- dgamma(exp(x), shape = alpha, scale = theta) * exp(x)</span></span>
+<span id="cb8-36"><a href="modeling-loss-severity.html#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fgamma_ex, col = &quot;blue&quot;, lty =3)</span></span>
+<span id="cb8-37"><a href="modeling-loss-severity.html#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="co"># #Pareto</span></span>
+<span id="cb8-38"><a href="modeling-loss-severity.html#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.pareto &lt;- vglm(Claim ~ 1, paretoII, loc = 0, data = claim_data)</span></span>
+<span id="cb8-39"><a href="modeling-loss-severity.html#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="co">#fpareto_ex &lt;- dparetoII(exp(x), loc = 0, shape = exp(coef(fit.pareto)[2]), </span></span>
+<span id="cb8-40"><a href="modeling-loss-severity.html#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                        scale = exp(coef(fit.pareto)[1])) * exp(x)</span></span>
+<span id="cb8-41"><a href="modeling-loss-severity.html#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fpareto_ex, col = &quot;purple&quot;)</span></span>
+<span id="cb8-42"><a href="modeling-loss-severity.html#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co"># #Lognormal</span></span>
+<span id="cb8-43"><a href="modeling-loss-severity.html#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.LN &lt;- vglm(Claim ~ 1, family = lognormal, data = claim_data)</span></span>
+<span id="cb8-44"><a href="modeling-loss-severity.html#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="co">#flnorm_ex &lt;- dlnorm(exp(x), mean = coef(fit.LN)[1],</span></span>
+<span id="cb8-45"><a href="modeling-loss-severity.html#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="co">#                    sd = exp(coef(fit.LN)[2])) * exp(x)</span></span>
+<span id="cb8-46"><a href="modeling-loss-severity.html#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, flnorm_ex, col = &quot;lightblue&quot;)</span></span>
+<span id="cb8-47"><a href="modeling-loss-severity.html#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="co"># #Density for GB II</span></span>
+<span id="cb8-48"><a href="modeling-loss-severity.html#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_density &lt;- function (x) {</span></span>
+<span id="cb8-49"><a href="modeling-loss-severity.html#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- gb2_bop$par[1]</span></span>
+<span id="cb8-50"><a href="modeling-loss-severity.html#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- gb2_bop$par[2]</span></span>
+<span id="cb8-51"><a href="modeling-loss-severity.html#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- gb2_bop$par[3]</span></span>
+<span id="cb8-52"><a href="modeling-loss-severity.html#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- gb2_bop$par[4]</span></span>
+<span id="cb8-53"><a href="modeling-loss-severity.html#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="co">#  xt &lt;- (log(x) - mu) / sigma</span></span>
+<span id="cb8-54"><a href="modeling-loss-severity.html#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpxt &lt;- ifelse (xt &gt; 23, yt, log(1 + exp(xt)))</span></span>
+<span id="cb8-55"><a href="modeling-loss-severity.html#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * xt - log(sigma) - log(beta(a_1, a_2)) - </span></span>
+<span id="cb8-56"><a href="modeling-loss-severity.html#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpxt -log(x) </span></span>
+<span id="cb8-57"><a href="modeling-loss-severity.html#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="co">#  exp(logdens)</span></span>
+<span id="cb8-58"><a href="modeling-loss-severity.html#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="co">#  }</span></span>
+<span id="cb8-59"><a href="modeling-loss-severity.html#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co">#fGB2_ex = gb2_density(exp(x)) * exp(x)</span></span>
+<span id="cb8-60"><a href="modeling-loss-severity.html#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fGB2_ex, col=&quot;green&quot;)</span></span>
+<span id="cb8-61"><a href="modeling-loss-severity.html#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co">#legend(&quot;topleft&quot;, c(&quot;log(Expend)&quot;, &quot;Exponential&quot;, &quot;Gamma&quot;, &quot;Pareto&quot;, </span></span>
+<span id="cb8-62"><a href="modeling-loss-severity.html#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="co">#                    &quot;Lognormal&quot;, &quot;GB2&quot;), cex=0.8,</span></span>
+<span id="cb8-63"><a href="modeling-loss-severity.html#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="co">#       lty = c(4,2,3,1,1,1), #4 is &quot;longdash&quot;</span></span>
+<span id="cb8-64"><a href="modeling-loss-severity.html#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co">#       col = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;purple&quot;,&quot;lightblue&quot;,&quot;green&quot;))</span></span></code></pre></div>
 <p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap35.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 </div>
 <div id="maximum-likehood-estimators-using-modified-data" class="section level3 hasAnchor" number="3.5.2">

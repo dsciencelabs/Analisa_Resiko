@@ -1,3 +1,8 @@
+tab:unnamed-chunk-16
+fig:unnamed-chunk-36
+fig:unnamed-chunk-37
+fig:TransitionSwitz
+fig:PremEvolution
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -24,7 +29,10 @@ the-ab0-class
 mengestimasi-distibusi-frekuensi
 estimasi-parameter
 distribusi-frekuensi-mle
+<<<<<<< HEAD
 other-frequency-distributions
+=======
+>>>>>>> a496b0ed46e567c4351ac5b8875c191b08514548
 zero-truncation-or-modification
 distribusi-campuran
 contoh-soal-ujian-aktuaria
@@ -276,3 +284,8 @@ limited-expected-values
 functions
 illustrative-graph
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
+=======
+other-frequency-distributions
+actuarial-exam-question-1
+>>>>>>> a496b0ed46e567c4351ac5b8875c191b08514548
