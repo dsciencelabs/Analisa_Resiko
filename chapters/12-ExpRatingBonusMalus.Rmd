@@ -812,3 +812,4 @@ $$
 
 Kami merujuk pembaca yang tertarik ke @Tan16 untuk berdiskusi tentang bagaimana memasukkan batasan komersial lebih lanjut dan juga solusi untuk masalah optimasi yang melibatkan kondisi Kuhn-Tucker. 
 
+
