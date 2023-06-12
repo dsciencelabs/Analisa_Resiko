@@ -268,3 +268,5 @@ limited-expected-values
 functions
 illustrative-graph
 appendix-e-conventions-for-notation
+other-frequency-distributions
+actuarial-exam-question-1
