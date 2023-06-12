@@ -1,8 +1,11 @@
 # Premium Foundations
 
 ## Pengenalan Ratemaking
+<<<<<<< HEAD
 
 ***
+=======
+>>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 
 Pada bagian ini, Anda akan belajar cara:
 
@@ -29,9 +32,12 @@ Istilah kerugian dalam persamaan tersebut didasarkan pada biaya yang diharapkan,
 Terakhir, bab ini memperkenalkan metode untuk memilih premi dengan membandingkan metode pemeringkatan premi dengan kerugian dari portofolio yang ditahan dan memilih metode yang menghasilkan kecocokan terbaik dengan data yang ditahan. Bab ini juga mencakup suplemen teknis mengenai peraturan pemerintah tentang tarif asuransi.
 
 ## Metode Penentuan Tarif Gabungan
+<<<<<<< HEAD
 
 ***
 
+=======
+>>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 Pada bagian ini, Anda akan belajar tentang:
 
 - Definisi pure premium sebagai biaya kerugian serta dalam hal frekuensi dan keparahan.
@@ -42,8 +48,11 @@ Pada bagian ini, Anda akan belajar tentang:
 
 Dalam kasus ini, diasumsikan terdapat $n$ kontrak asuransi dengan kerugian (losses) $X1,...,Xn$. Kontrak-kontrak tersebut memiliki distribusi kerugian yang sama dan dianggap sebagai portofolio homogen yang terdiri dari kontrak-kontrak yang sama. Hal ini dapat diterapkan pada asuransi pribadi seperti asuransi mobil atau asuransi rumah di mana perusahaan asuransi menulis banyak kontrak pada risiko yang sangat mirip. Selain itu, asumsi tentang distribusi yang identik tidak terlalu membatasi karena dalam bagian selanjutnya akan diperkenalkan variabel paparan yang memungkinkan pengalaman dapat diskalakan agar dapat dibandingkan. Dalam kasus ini, diasumsikan bahwa $X1,...,Xn$ adalah iid (independen dan identik terdistribusi).
 
+<<<<<<< HEAD
 ***
 
+=======
+>>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 ### Metode Penghitungan Premi Murni
 
 Dalam metode ini, diperoleh estimasi kerugian yang diharapkan dengan menghitung rata-rata dari kerugian yang terjadi pada seluruh polis dalam suatu kumpulan (n polis).

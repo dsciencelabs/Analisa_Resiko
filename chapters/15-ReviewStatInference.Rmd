@@ -1,1 +1,293 @@
 # Appendix A: Review of Statistical Inference
+
+## konsep dasar
+
+Inferensi statistik adalah proses membuat kesimpulan tentang karakteristik dari sekumpulan besar item/individu (yaitu, populasi), menggunakan set data yang mewakili (misalnya, sampel acak) dari daftar item atau individu dari populasi yang dapat diambil sampel. Meskipun proses ini memiliki berbagai aplikasi di berbagai bidang termasuk ilmu pengetahuan, rekayasa, kesehatan, sosial, dan ekonomi, inferensi statistik penting bagi perusahaan asuransi yang menggunakan data dari pemegang polis mereka yang ada untuk membuat inferensi tentang karakteristik (misalnya, profil risiko) dari segmen target pelanggan tertentu (yaitu, populasi) yang tidak langsung diamati oleh perusahaan asuransi tersebut.
+
+### Sampel Acak
+
+Dalam statistika, *kesalahan* sampling terjadi ketika *kerangka sampling*, yaitu daftar dari mana sampel diambil, tidak cukup mewakili populasi yang menjadi tujuan. Sampel harus merupakan subset yang representatif dari populasi atau universum yang menjadi tujuan. Jika sampel tidak representatif, mengambil sampel yang lebih besar tidak akan menghilangkan bias, karena kesalahan yang sama terulang berulang kali. Oleh karena itu, kita memperkenalkan konsep sampling acak yang menghasilkan *sampel acak* sederhana yang mewakili populasi.
+
+Kita mengasumsikan bahwa variabel acak $X$ mewakili pengambilan dari populasi dengan fungsi distribusi $F(\cdot)$ dengan rata-rata $\mathrm{E}[X]=\mu$ dan varians $\mathrm{Var}[X]=\mathrm{E}[(X-\mu)^2]$, di mana $E(\cdot)$ menunjukkan ekspektasi dari variabel acak. Dalam *sampling acak*, kita melakukan total $n$ pengambilan seperti yang direpresentasikan oleh $X_1,...,X_n$, yang masing-masing tidak saling berhubungan (yaitu, statistik independen). Kita mengacu pada $X_1,...,X_n$ sebagai sampel acak (dengan penggantian) dari $F(\cdot)$, baik dalam bentuk parametrik maupun nonparametrik. Alternatifnya, kita dapat mengatakan bahwa $X_1,...,X_n$ secara identik dan independen didistribusikan (iid) dengan fungsi distribusi $F(\cdot)$.
+
+### Distribusi Sampel
+
+Dengan menggunakan sampel acak $X_1,...,X_n$, kita tertarik untuk membuat kesimpulan tentang atribut tertentu dari distribusi populasi $F(\cdot)$. Misalnya, kita mungkin tertarik untuk membuat inferensi tentang rata-rata populasi yang ditandai dengan $\mu$. Alami untuk mempertimbangkan *rata-rata sampel*, $\bar{X}=\sum_{i=1}^nX_i$, sebagai estimasi dari rata-rata populasi $\mu$. Kita menyebut rata-rata sampel sebagai *statistik* yang dihitung dari sampel acak $X_1,...,X_n$. Statistik ringkasan lain yang umum digunakan termasuk simpangan baku sampel dan kuantil sampel.
+
+Ketika menggunakan statistik (misalnya, rata-rata sampel $\bar{X}$) untuk membuat inferensi statistik tentang atribut populasi (misalnya, rata-rata populasi $\mu$), kualitas inferensi ditentukan oleh bias dan ketidakpastian dalam estimasi, karena menggunakan sampel sebagai pengganti populasi. Oleh karena itu, penting untuk mempelajari *distribusi statistik* yang mengukur bias dan variabilitas statistik tersebut. Secara khusus, distribusi rata-rata sampel, $\bar{X}$ (atau statistik lainnya), disebut sebagai distribusi sampling. Distribusi sampling bergantung pada proses sampling, statistik, ukuran sampel $n$, dan distribusi populasi $F(\cdot)$. Teorema limit sentral memberikan distribusi sampel (sampling) dari rata-rata sampel dalam sampel besar di bawah kondisi tertentu.
+
+### Teorema Limit Sentral
+
+Dalam statistika, terdapat variasi dari teorema limit sentral (Central Limit Theorem, CLT) yang menjamin bahwa, dalam kondisi tertentu, rata-rata sampel akan mendekati rata-rata populasi dengan distribusi samplingnya mendekati distribusi normal saat ukuran sampel mendekati tak hingga. Kami menyebutkan teorema limit sentral Lindeberg-Levy yang menetapkan distribusi sampling asimtotik dari rata-rata sampel $\bar{X}$ yang dihitung menggunakan sampel acak dari populasi universe dengan distribusi $F(\cdot)$.
+
+*Teorema limit sentral Lindeberg-Levy*. Misalkan $X_1,...,X_n$ adalah sampel acak dari distribusi populasi $F(\cdot)$ dengan rata-rata $\mu$ dan varians $\sigma^2<\infty$. Selisih antara rata-rata sampel $\bar{X}$ dan $\mu$, ketika dikalikan dengan akar kuadrat $n$, konvergen dalam distribusi menjadi distribusi normal saat ukuran sampel mendekati tak hingga. Artinya,
+
+$$\begin{equation}
+\sqrt{n}(\bar{X}-\mu)\xrightarrow[]{d}N(0,\sigma).
+\end{equation}$$
+
+Perlu dicatat bahwa teorema limit sentral tidak memerlukan bentuk parametrik untuk $F(\cdot)$. Berdasarkan teorema limit sentral, kita dapat melakukan inferensi statistik pada rata-rata populasi (kita menyimpulkan, bukan menyimpulkan secara deduktif). Jenis inferensi yang dapat kita lakukan meliputi *estimasi* populasi, *pengujian hipotesis* tentang kebenaran suatu pernyataan nol, dan *prediksi* sampel masa depan dari populasi.
+
+## Estimasi Titik dan Properti
+Fungsi distribusi populasi $F(\cdot)$ biasanya dapat dikarakterisasi oleh sejumlah terbatas (terbatas) parameter yang disebut *parameter*, dalam hal ini kita mengacu pada distribusi sebagai *distribusi parametrik*. Sebaliknya, dalam analisis *nonparametrik* , atribut-atribut distribusi sampling tidak terbatas pada sejumlah kecil parameter.
+
+Untuk memperoleh karakteristik populasi, terdapat berbagai atribut yang terkait dengan distribusi populasi $F(\cdot)$. Ukuran-ukuran tersebut meliputi rata-rata, median, persentil (misalnya persentil ke-95), dan simpangan baku. Karena ukuran-ukuran ringkasan ini tidak bergantung pada referensi parametrik tertentu, mereka adalah ukuran ringkasan *nonparametrik*.
+
+Di sisi lain, dalam analisis *parametrik*, kita dapat mengasumsikan keluarga distribusi tertentu dengan parameter-parameter tertentu. Misalnya, orang biasanya menganggap bahwa logaritma jumlah klaim memiliki distribusi normal dengan rata-rata $\mu$ dan simpangan baku $\sigma$. Dengan kata lain, kita mengasumsikan bahwa klaim memiliki distribusi lognormal dengan parameter-parameter $\mu$ dan $\sigma$. Sebagai alternatif, perusahaan asuransi umumnya mengasumsikan bahwa tingkat keparahan klaim mengikuti distribusi gamma dengan parameter bentuk $\alpha$ dan parameter skala $\boldsymbol{\theta}$. Di sini, distribusi normal, lognormal, dan gamma adalah contoh dari distribusi parametrik. Dalam contoh di atas, besaran $\mu$, $sigma$, $alpha$, dan $\boldsymbol{\theta}$ dikenal sebagai parameter. Untuk keluarga distribusi parametrik yang diberikan, distribusi secara unik ditentukan oleh nilai-nilai parameter tersebut.
+
+Seringkali, kita menggunakan $\boldsymbol{\theta}$ untuk menyatakan atribut ringkasan dari populasi. Dalam model-parametrik, $\boldsymbol{\theta}$ dapat berupa parameter atau fungsi parameter dari suatu distribusi, seperti parameter rata-rata dan varians normal. Dalam analisis nonparametrik, $\theta$ dapat berbentuk ukuran ringkasan nonparametrik seperti rata-rata atau simpangan baku populasi. Misalkan $\hat{\theta} =\hat{\theta}(X_1, \ldots, X_n)$ adalah fungsi dari sampel yang memberikan representasi atau *estimasi* dari $\theta$. Ini disebut sebagai *statistik*, yaitu fungsi dari sampel $X_1,…,X_n$.
+
+### Estimasi Metode Momen
+
+Sebelum mendefinisikan estimasi metode momen, kita akan mendefinisikan konsep momen terlebih dahulu. Momen adalah atribut populasi yang menggambarkan fungsi distribusi $F(\cdot)$. Diberikan pengambilan acak $X$ dari $F(\cdot)$, ekspektasi $\mu_k=\mathrm{E}[X^k]$ disebut sebagai *momen ke-*$k$ dari $X$, dengan $k=1,2,3,…$ Sebagai contoh, rata-rata populasi $\mu$ adalah momen pertama. Selain itu, ekspektasi $\mathrm{E}[(X-\mu)^k]$ disebut *momen sentral ke-*$k$. Oleh karena itu, varians adalah momen sentral kedua.
+
+Dengan menggunakan sampel acak $X_1,…,X_n$, kita dapat membuat momen sampel yang sesuai, $\hat{\mu}_k=(1/n)\sum_{i=1}^n X_i^k$, untuk mengestimasi atribut populasi $\mu_k$. Sebagai contoh, kita telah menggunakan rata-rata sampel $\bar{X}$ sebagai estimator untuk rata-rata populasi $\mu$. Demikian pula, momen sentral kedua dapat diestimasi sebagai $(1/n)\sum_{i=1}^n(X_i-\bar{X})^2$. Tanpa mengasumsikan bentuk parametrik untuk $F(\cdot)$, momen sampel merupakan estimasi nonparametrik dari atribut populasi yang sesuai. Estimator seperti itu yang didasarkan pada pencocokan momen sampel dan momen populasi yang sesuai disebut sebagai *estimator metode momen* (mme).
+
+Meskipun mme secara alami digunakan dalam model nonparametrik, itu juga dapat digunakan untuk mengestimasi parameter ketika diasumsikan sebuah keluarga distribusi parametrik tertentu untuk $F(\cdot)$. Misalkan $\boldsymbol{\theta}=(\theta_1,\cdots,\theta_m)$ merupakan vektor parameter yang sesuai dengan distribusi parametrik $F(\cdot)$. Dalam keluarga distribusi tersebut, biasanya kita mengetahui hubungan antara parameter dan momen. Khususnya, kita mengetahui bentuk spesifik dari fungsi-fungsi $h_1(\cdot),h_2(\cdot),\cdots,h_m(\cdot)$ sehingga $\mu_1=h_1(\boldsymbol{\theta}),\,\mu_2=h_2(\boldsymbol{\theta}),\,\cdots,\,\mu_m=h_m(\boldsymbol{\theta})$. Diberikan mme $\hat{\mu}_1, \ldots, \hat{\mu}_m$ dari sampel acak, mme parameter $\hat{\theta}_1,\cdots,\hat{\theta}_m$ dapat diperoleh dengan memecahkan persamaan-persamaan dari
+
+$$\begin{equation}
+\hat{\mu}_1=h_1(\hat{\theta}_1,\cdots,\hat{\theta}_m);
+\end{equation}$$
+
+$$\begin{equation}
+\hat{\mu}_2=h_2(\hat{\theta}_1,\cdots,\hat{\theta}_m);
+\end{equation}$$
+
+$$\begin{equation}
+\cdots
+\end{equation}$$
+
+$$\begin{equation}
+\hat{\mu}_m=h_m(\hat{\theta}_1,\cdots,\hat{\theta}_m).
+\end{equation}$$
+
+### Estimasi Maksimum Likelihood
+
+Ketika $F(\cdot)$ mengambil bentuk parametrik, metode estimasi likelihood maksimum (maximum likelihood estimation) banyak digunakan untuk mengestimasi parameter populasi $\boldsymbol{\theta}$. Estimasi likelihood maksimum didasarkan pada fungsi likelihood, yang merupakan fungsi dari parameter-parameter yang diberikan sampel yang diamati. Misalkan $f(x_i|\boldsymbol{\theta})$ adalah fungsi probabilitas dari $X_i$ yang dievaluasi pada $X_i=x_i$ $(i=1,2,\cdots,n)$; ini adalah fungsi massa probabilitas dalam kasus $X$ yang diskrit dan fungsi densitas probabilitas dalam kasus $X$ yang kontinu. Dengan asumsi independensi, *fungsi likelihood* dari $\boldsymbol{\theta}$ yang terkait dengan pengamatan $(X_1,X_2,\cdots,X_n)=(x_1,x_2,\cdots,x_n)=\mathbf{x}$ dapat ditulis sebagai
+
+$$\begin{equation}
+L(\boldsymbol{\theta}|\mathbf{x})=\prod_{i=1}^nf(x_i|\boldsymbol{\theta}),
+\end{equation}$$
+
+dengan fungsi log-likelihood yang sesuai diberikan oleh
+
+$$\begin{equation}
+l(\boldsymbol{\theta}|\mathbf{x})=\log(L(\boldsymbol{\theta}|\mathbf{x}))=\sum_{i=1}^n\log f(x_i|\boldsymbol{\theta}).
+\end{equation}$$
+
+Estimator maximum likelihood (MLE) dari $\boldsymbol{\theta}$ adalah himpunan nilai $\boldsymbol{\theta}$ yang memaksimalkan fungsi likelihood *(fungsi log-likelihood)*, dengan mempertimbangkan sampel yang diamati. Dengan demikian, MLE $\hat{\boldsymbol{\theta}}$ dapat ditulis sebagai
+
+$$\begin{equation}
+\hat{\boldsymbol{\theta}}={\mbox{argmax}}_{\boldsymbol{\theta}\in\Theta}l(\boldsymbol{\theta}|\mathbf{x}),
+\end{equation}$$
+
+di mana $\theta$ adalah ruang parameter dari $\boldsymbol{\theta}$, dan ${\mbox{argmax}}_{\boldsymbol{\theta}\in\Theta}l(\boldsymbol{\theta}|\mathbf{x})$ didefinisikan sebagai nilai $\boldsymbol{\theta}$ di mana fungsi $l(\boldsymbol{\theta}|\mathbf{x})$ mencapai nilai maksimumnya.
+
+Diberikan bentuk analitis dari fungsi likelihood, mle dapat diperoleh dengan mengambil turunan pertama dari fungsi log-likelihood terhadap $\boldsymbol{\theta}$, dan menetapkan nilai-nilai turunan parsial menjadi nol. Dengan kata lain, mle adalah solusi dari persamaan-persamaan:
+
+$$\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_1}=0;
+\end{equation}$$
+
+$$\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_2}=0;
+\end{equation}$$
+
+$$\begin{equation}
+\cdots
+\end{equation}$$
+
+$$\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_m}=0,
+\end{equation}$$
+
+
+asalkan turunan parsial kedua negatif.
+
+Untuk model parametrik, mle dari parameter-parameter dapat diperoleh secara analitis (misalnya, dalam kasus distribusi normal dan estimasi linear), atau secara numerik melalui algoritma iteratif seperti metode Newton-Raphson dan versi adaptifnya (misalnya, dalam kasus model linier umum dengan variabel respons non-normal).
+
+*Distribusi normal*. Anggaplah $(X_1,X_2,⋯,X_n)$ sebagai sampel acak dari distribusi normal $N(\mu, \sigma^2)$. Dengan sampel yang diamati $(X_1,X_2,\cdots,X_n)=(x_1,x_2,\cdots,x_n)$ kita dapat menulis fungsi likelihood dari $\mu,\sigma^2$ sebagai
+
+$$\begin{equation}
+L(\mu,\sigma^2)=\prod_{i=1}^n\left[\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{\left(x_i-\mu\right)^2}{2\sigma^2}}\right],
+\end{equation}$$
+
+dengan fungsi log-likelihood yang sesuai diberikan oleh
+
+$$\begin{equation}
+l(\mu,\sigma^2)=-\frac{n}{2}[\log(2\pi)+\log(\sigma^2)]-\frac{1}{2\sigma^2}\sum_{i=1}^n\left(x_i-\mu\right)^2.
+\end{equation}$$
+
+Dengan memecahkan
+
+$$\begin{equation}
+\frac{\partial l(\hat{\mu},\sigma^2)}{\partial \hat{\mu}}=0,
+\end{equation}$$
+
+kita mendapatkan $\hat{\mu}=\bar{x}=(1/n)\sum_{i=1}^nx_i$. Mudah untuk diverifikasi bahwa $\frac{\partial l^2(\hat{\mu},\sigma^2)}{\partial \hat{\mu}^2}\left|_{\hat{\mu}=\bar{x}}\right.<0$. Karena ini berlaku untuk $x$ yang sembarang,  $\hat{\mu}=\bar{X}$ adalah mle dari $\mu$. Demikian pula, dengan memecahkan
+
+$$\begin{equation}
+\frac{\partial l(\mu,\hat{\sigma}^2)}{\partial \hat{\sigma}^2}=0,
+\end{equation}$$
+
+kita mendapatkan $\hat{\sigma}^2=(1/n)\sum_{i=1}^n(x_i-\mu)^2$. Dengan menggantikan $\mu$ oleh $\hat{\mu}$, kita mendapatkan mle dari $\sigma^2$ sebagai $\hat{\sigma}^2=(1/n)\sum_{i=1}^n(X_i-\bar{X})^2$.
+
+Dengan demikian, rata-rata sampel $\bar{X}$ dan $\sigma^2$ keduanya adalah mme dan MLE untuk rata-rata $\mu$ dan varian $\sigma^2$, dalam distribusi populasi normal $F(\cdot)$. Lebih banyak detail mengenai sifat-sifat fungsi likelihood diberikan dalam Lampiran Bagian 17.1.
+
+## Estimasi Interval
+  
+Setelah kita memperkenalkan mme dan mle, kita dapat melakukan jenis pertama dari inferensi statistik, yaitu *estimasi interval* yang mengukur ketidakpastian akibat penggunaan sampel yang terbatas. Dengan mendapatkan distribusi sampling dari mle, kita dapat mengestimasi interval (interval kepercayaan) untuk parameter tersebut. Dalam pendekatan frequentist (misalnya, yang didasarkan pada estimasi maksimum likelihood), interval kepercayaan yang dihasilkan dari kerangka sampling yang sama akan mencakup nilai sebenarnya sebagian besar waktu (misalnya, 95% dari waktu), jika kita mengulangi proses sampling dan menghitung ulang interval berulang kali. Proses tersebut membutuhkan derivasi distribusi sampling untuk mle.
+
+### Distribusi Tepat untuk Rata-rata Sampel Normal
+
+Karena sifat *aditivitas* dari distribusi normal (yaitu, jumlah dari variabel acak normal yang mengikuti distribusi normal multivariat tetap mengikuti distribusi normal) dan distribusi normal termasuk dalam *keluarga lokasi–skala* (yaitu, transformasi lokasi dan/atau skala dari variabel acak normal menghasilkan distribusi normal), maka rata-rata sampel  $\bar{X}$ dari sampel acak dari distribusi normal $F(\cdot)$ memiliki distribusi sampling normal untuk setiap  $n$ yang terbatas. Diberikan  $X_i\sim^{iid} N(\mu,\sigma^2)$, mle dari  $\mu$ memiliki distribusi yang tepat
+
+$$\begin{equation}
+\bar{X}\sim N\left(\mu,\frac{\sigma^2}{n}\right).
+\end{equation}$$
+ 
+Oleh karena itu, rata-rata sampel adalah estimator tidak bias dari $\mu$. Selain itu, ketidakpastian dalam estimasi dapat diukur dengan varian  $\sigma^2/n$, yang akan berkurang seiring dengan pertambahan ukuran sampel $n$. Ketika ukuran sampel mendekati tak terhingga, rata-rata sampel akan mendekati titik tunggal pada nilai sebenarnya.
+
+### Properti Sampel Besar dari Estimasi Maksimum Likelihood
+
+Untuk mle dari parameter mean dan parameter-parameter lain dari keluarga distribusi parametrik lainnya, kita biasanya tidak dapat mendapatkan distribusi sampling yang tepat untuk sampel yang terbatas. Untungnya, ketika ukuran sampel cukup besar, mle dapat diaproksimasi dengan distribusi normal. Berkat teori maximum likelihood secara umum, mle memiliki beberapa sifat yang baik dalam sampel yang cukup besar.
+
+- MLE (Maximum Likelihood Estimator) $\hat{\theta}$ dari parameter $\theta$ merupakan estimator yang *konsisten*. Artinya, $\hat{\theta}$ konvergen dalam probabilitas ke nilai sebenarnya $\theta$, ketika ukuran sampel $n$ mendekati tak hingga.
+- MLE memiliki sifat *asimptotik normalitas*, yang berarti bahwa estimator akan konvergen dalam distribusi menjadi distribusi normal yang berpusat di sekitar nilai sebenarnya, ketika ukuran sampel mendekati tak hingga. Secara khusus,
+
+$$\begin{equation}
+\sqrt{n}(\hat{\theta}-\theta)\rightarrow_d N\left(0,\,V\right),\quad \mbox{as}\quad n\rightarrow \infty,
+\end{equation}$$
+
+di mana $V$ adalah invers dari Informasi Fisher. Dengan demikian, mle $\hat{\theta}$ mengikuti secara aproksimatif distribusi normal dengan mean $\theta$ dan varian $V/n$, ketika ukuran sampel besar.
+- MLE adalah *efisien*, yang berarti bahwa ia memiliki varian asimptotik terkecil $V$, umumnya disebut sebagai *batas bawah Cramer-Rao*. Secara khusus, batas bawah Cramer-Rao adalah invers dari informasi Fisher yang didefinisikan sebagai $\mathcal{I}(\theta)=-\mathrm{E}(\partial^2\log f(X;\theta)/\partial \theta^2)$. Oleh karena itu, $\mathrm{Var}(\hat{\theta})$ dapat diestimasi berdasarkan informasi Fisher yang diamati yang dapat ditulis sebagai $-\sum_{i=1}^n \partial^2\log f(X_i;\theta)/\partial \theta^2$.
+
+Untuk banyak distribusi parametrik, informasi Fisher dapat dihitung secara analitik untuk mle dari parameter-parameter tersebut. Untuk model parametrik yang lebih kompleks, informasi Fisher dapat dievaluasi secara numerik menggunakan integrasi numerik untuk distribusi kontinu, atau penjumlahan numerik untuk distribusi diskrit. Informasi lebih lanjut tentang estimasi maximum likelihood dapat ditemukan di Bagian Lampiran 17.2.
+
+### Interval Kepercayaan
+
+Diberikan bahwa mle $\hat{\theta}$ memiliki distribusi normal yang tepat atau mendekati dengan mean $\theta$ dan varian $\mathrm{Var}(\hat{\theta})$, kita dapat mengambil akar kuadrat dari varian dan memasukkan estimasi untuk mendefinisikan  $se(\hat{\theta}) = \sqrt{\mathrm{Var}(\hat{\theta})}$. *Standar error* adalah simpangan baku yang diestimasi yang mengukur ketidakpastian dalam estimasi yang dihasilkan dari penggunaan sampel terbatas. Dalam beberapa kondisi keberaturan yang mengatur distribusi populasi, kita dapat menunjukkan bahwa statistik
+
+$$\begin{equation}
+\frac{\hat{\theta}-\theta}{se(\hat{\theta})}
+\end{equation}$$
+
+konvergen dalam distribusi ke distribusi Student-$t$ dengan derajat kebebasan (sebuah parameter dari distribusi) $n−p$, di mana $p$ adalah jumlah parameter dalam model selain varians. Sebagai contoh, untuk kasus distribusi normal, kita memiliki $p=1$ untuk parameter $\mu$; untuk model regresi linear dengan satu variabel independen, kita memiliki $p=2$ untuk parameter intercept dan variabel independen. Misalkan $t_{n-p}(1-\alpha/2)$ adalah persentil ke-$100\times(1-\alpha/2)$ dari distribusi Student-$t$ yang memenuhi $\Pr\left[t< t_{n-p}\left(1-{\alpha}/{2}\right) \right]= 1-{\alpha}/{2}$. Maka, kita memiliki,
+
+$$\begin{equation}
+\Pr\left[-t_{n-p}\left(1-\frac{\alpha}{2}\right)<\frac{\hat{\theta}-\theta}{se(\hat{\theta})}< t_{n-p}\left(1-\frac{\alpha}{2}\right) \right]= 1-{\alpha},
+\end{equation}$$
+
+dari mana kita dapat menentukan *interval kepercayaan* untuk $\theta$. Dari persamaan di atas, kita dapat mendapatkan sepasang statistik, $\hat{\theta}_1$ dan $\hat{\theta}_2$, yang memberikan interval dalam bentuk $[\hat{\theta}_1, \hat{\theta}_2]$. Interval ini adalah interval kepercayaan $1-\alpha$ untuk $\theta$, sehingga $\Pr\left(\hat{\theta}_1 \le \theta \le \hat{\theta}_2\right) = 1-\alpha,$, di mana probabilitas 1−α disebut tingkat kepercayaan. Perlu diperhatikan bahwa *interval kepercayaan* di atas tidak valid untuk sampel kecil, kecuali untuk kasus rata-rata normal.
+
+Dalam *distribusi normal*. Untuk rata-rata populasi normal $\mu$, mle memiliki distribusi sampling yang tepat $\bar{X}\sim N(\mu,\sigma/\sqrt{n})$, di mana kita dapat mengestimasi $se(\hat{\theta})$ dengan $\hat{\sigma}/\sqrt{n}$. Berdasarkan *Teorema Cochran*, statistik yang dihasilkan memiliki distribusi Student-*t* yang tepat dengan derajat kebebasan $n−1$. Oleh karena itu, kita dapat menentukan batas bawah dan batas atas dari interval kepercayaan sebagai
+
+$$\begin{equation}
+\hat{\mu}_1 = \hat{\mu} - t_{n-1}\left(1-\frac{\alpha}{2}\right)\frac{ \hat{\sigma}}{\sqrt{n}}
+\end{equation}$$
+
+dan
+
+$$\begin{equation}
+\hat{\mu}_2 = \hat{\mu} + t_{n-1}\left(1-\frac{\alpha}{2}\right)\frac{ \hat{\sigma}}{\sqrt{n}}.
+\end{equation}$$
+
+Ketika $\alpha = 0.05$, $t_{n-1}(1-\alpha/2) \approx 1.96$ untuk nilai n yang besar. Berdasarkan Teorema Cochran, interval kepercayaan tetap valid tidak peduli dengan ukuran sampel.
+
+## Pengujian Hipotesis
+
+Untuk parameter $\boldsymbol{\theta}$ dari distribusi parametrik, jenis lain dari inferensi statistik adalah *pengujian hipotesis* yang memverifikasi apakah hipotesis mengenai parameter tersebut benar, dengan menggunakan tingkat signifikansi tertentu yang disebut *level of significance* $\alpha$ (misalnya, 5%). Dalam pengujian hipotesis, kita menolak hipotesis nol, yaitu pernyataan yang membatasi mengenai parameter, jika probabilitas mengamati sampel acak seekstrem sampai dengan yang diamati lebih kecil daripada $\alpha$, jika hipotesis nol benar.
+
+### Konsep Dasar
+
+Pada pengujian statistik, biasanya kita tertarik untuk menguji apakah pernyataan mengenai beberapa parameter, *hipotesis nol* (dinyatakan sebagai $H_0$), benar berdasarkan data yang diamati. Hipotesis nol dapat memiliki bentuk umum $H_0:\theta\in\Theta_0$, di mana $\Theta_0$ adalah subset dari ruang parameter $Θ$ dari $θ$ yang mungkin berisi beberapa parameter. Untuk kasus dengan satu parameter $θ$, hipotesis nol biasanya memiliki bentuk $H_0:\theta=\theta_0$ atau $H_0:\theta\leq\theta_0$. Kebalikan dari hipotesis nol disebut *hipotesis alternatif* yang dapat dituliskan sebagai $H_a:\theta\neq\theta_0$ atau $H_a:\theta>\theta_0$. Uji statistik pada $H_0:\theta=\theta_0$ disebut uji *dua sisi* karena hipotesis alternatif berisi dua ketidaksamaan, sedangkan uji dengan $H_0:\theta\leq\theta_0$ atau $H_0:\theta\geq\theta_0$ disebut uji *satu sisi*.
+
+Uji statistik biasanya dibangun berdasarkan statistik $T$ dan distribusinya yang eksak atau berdasarkan sampel besar. Uji tersebut umumnya menolak uji dua sisi ketika $T>c_1$ atau $T<c_2$, di mana dua konstanta $c_1$ dan $c_2$ diperoleh berdasarkan distribusi sampel dari $T$ pada tingkat probabilitas $\alpha$ yang disebut *tingkat signifikansi*. Secara khusus, tingkat signifikansi $\alpha$ memenuhi
+
+$$\begin{equation}
+\alpha=\Pr(\mbox{reject }H_0|H_0\mbox{ is true}),
+\end{equation}$$
+
+Artinya, jika hipotesis nol benar, kita hanya akan menolak hipotesis nol sebanyak 5% dari jumlah pengujian yang dilakukan, jika kita mengulangi proses sampling dan pengujian berulang kali.
+
+Oleh karena itu, tingkat signifikansi adalah probabilitas terjadinya *kesalahan tipe I* (kesalahan jenis pertama), yaitu kesalahan menolak hipotesis nol yang sebenarnya benar. Untuk alasan ini, tingkat signifikansi $\alpha$ juga disebut sebagai tingkat kesalahan tipe I. Jenis kesalahan lain yang dapat kita buat dalam pengujian hipotesis adalah *kesalahan tipe II* (kesalahan jenis kedua), yaitu kesalahan menerima hipotesis nol yang sebenarnya salah. Demikian pula, kita dapat mendefinisikan *tingkat kesalahan tipe II* sebagai probabilitas tidak menolak (menerima) hipotesis nol yang sebenarnya salah. Dengan kata lain, tingkat kesalahan tipe II diberikan oleh
+
+$$\begin{equation}
+\Pr(\mbox{accept }H_0|H_0\mbox{ is false}).
+\end{equation}$$
+
+Jumlah lain yang penting mengenai kualitas uji statistik disebut daya uji (power of the test) $\beta$, yang didefinisikan sebagai probabilitas menolak hipotesis nol yang salah. Definisi matematis dari daya uji adalah sebagai berikut:
+
+$$\begin{equation}
+\beta=\Pr(\mbox{reject }H_0|H_0\mbox{ is false}).
+\end{equation}$$    
+
+Perlu diperhatikan bahwa daya uji biasanya dihitung berdasarkan nilai alternatif tertentu $\theta=\theta_a$, dengan distribusi sampling yang spesifik dan ukuran sampel yang spesifik pula. Dalam penelitian eksperimen sebenarnya, orang biasanya menghitung ukuran sampel yang diperlukan untuk memilih ukuran sampel yang akan memastikan peluang besar mendapatkan uji statistik yang signifikan secara statistik (misalnya, dengan daya uji yang telah ditentukan sebelumnya seperti 85%).
+
+### Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)
+
+Berdasarkan hasil dari Bagian 15.3.1, kita dapat mendefinisikan uji Student-$t$ untuk menguji $H_0:\theta=\theta_0$. Secara khusus, kita mendefinisikan statistik uji sebagai
+
+$$\begin{equation}
+t\text{-stat}=\frac{\hat{\theta}-\theta_0}{se(\hat{\theta})},
+\end{equation}$$
+
+distribusi besar-sampel dari distribusi student-$t$ dengan derajat kebebasan  $n−p$, ketika hipotesis nol benar (yaitu, ketika $\theta=\theta_0$.
+
+Dengan *tingkat signifikansi* tertentu  $α$, misalnya 5%, kita menolak hipotesis nol jika kejadian  $t\text{-stat}<-t_{n-p}\left(1-{\alpha}/{2}\right)$ atau  $t\text{-stat}> t_{n-p}\left(1-{\alpha}/{2}\right)$ terjadi (*daerah penolakan*). Dalam hipotesis nol $H_0$, kita memiliki
+
+$$\begin{equation}
+\Pr\left[t\text{-stat}<-t_{n-p}\left(1-\frac{\alpha}{2}\right)\right]=\Pr\left[t\text{-stat}> t_{n-p}\left(1-\frac{\alpha}{2}\right) \right]= \frac{\alpha}{2}.
+\end{equation}$$
+
+Selain konsep daerah penolakan, kita dapat menolak uji berdasarkan nilai $p$*-value* yang didefinisikan sebagai $2\Pr(T>|t\text{-stat}|)$ untuk uji dua sisi yang disebutkan sebelumnya, di mana variabel acak $T\sim T_{n-p}$. Kita menolak hipotesis nol jika nilai $p$-*value* lebih kecil dari atau sama dengan $α$. Untuk sampel yang diberikan, nilai $p$-*value* didefinisikan sebagai tingkat signifikansi terkecil di mana hipotesis nol akan ditolak.
+
+Demikian pula, kita dapat membuat uji satu sisi untuk hipotesis nol $H_0:\theta\leq\theta_0$ (atau $H_0:\theta\geq\theta_0$). Dengan menggunakan statistik uji yang sama, kita menolak hipotesis nol ketika $t\text{-stat}> t_{n-p}\left(1-{\alpha}\right)$ (atau $t\text{-stat}<- t_{n-p}\left(1-{\alpha}\right)$ untuk uji pada $H_0:\theta\geq\theta_0$). Nilai $p$-*value* yang sesuai didefinisikan sebagai $\Pr(T>|t\text{-stat}|)$ (atau $\Pr(T<|t\text{-stat}|)$) untuk uji pada $H_0:\theta\geq\theta_0$). Perlu diperhatikan bahwa uji ini tidak valid untuk sampel kecil, kecuali untuk kasus uji pada rata-rata normal.
+
+*Uji $t$ Satu-Sampel untuk Rata-Rata Normal*. Untuk uji pada rata-rata normal dengan bentuk $H_0:\mu=\mu_0$, $H_0:\mu\leq\mu_0$, atau $H_0:\mu\geq\mu_0$, kita dapat mendefinisikan statistik uji sebagai
+
+$$\begin{equation}
+t\text{-stat}=\frac{\bar{X}-\mu_0}{{\hat{\sigma}}/{\sqrt{n}}},
+\end{equation}$$
+
+untuk mana kita memiliki distribusi sampling yang tepat $t\text{-stat}\sim T_{n-1}$ berdasarkan teorema Cochran, dengan $T_{n-1}$ mengindikasikan distribusi Student-$t$ dengan derajat kebebasan $n−1$. Menurut teorema Cochran, uji ini valid baik untuk sampel kecil maupun besar.
+
+### Uji Rasio Kemungkinan (Likelihood Ratio Test)
+
+Pada subbagian sebelumnya, kami telah memperkenalkan uji Student-$t$ pada satu parameter, berdasarkan sifat-sifat mle. Dalam bagian ini, kami mendefinisikan uji alternatif yang disebut *uji rasio kemungkinan* (likelihood ratio test, LRT). LRT dapat digunakan untuk menguji beberapa parameter dari model statistik yang sama.
+
+Diberikan fungsi kemungkinan $L(\theta|\mathbf{x})$ dan $\Theta_0 \subset \Theta$, statistik uji rasio kemungkinan untuk menguji $H_0:\theta\in\Theta_0$ terhadap $H_a:\theta\notin\Theta_0$ diberikan oleh
+
+$$\begin{equation}
+L=\frac{\sup_{\theta\in\Theta_0}L(\theta|\mathbf{x})}{\sup_{\theta\in\Theta}L(\theta|\mathbf{x})},
+\end{equation}$$
+
+dan untuk menguji $H_0:\theta=\theta_0$ versus $H_a:\theta\neq\theta_0$ adalah
+
+$$\begin{equation}
+L=\frac{L(\theta_0|\mathbf{x})}{\sup_{\theta\in\Theta}L(\theta|\mathbf{x})}.
+\end{equation}$$
+
+LRT menolak hipotesis nol ketika $L < c$, dengan ambang batas tergantung pada tingkat signifikansi $α$, ukuran sampel $n$, dan jumlah parameter dalam $θ$. Berdasarkan *Lembaran Neyman-Pearson*, LRT adalah uji *paling kuat secara seragam* untuk menguji $H_0:\theta=\theta_0$ dengan $H_a:\theta=\theta_a$. Artinya, LRT memberikan daya paling besar $β$ untuk $α$ dan nilai alternatif $\theta_a$ yang diberikan.
+
+Berdasarkan *Teorema Wilks*, statistik uji rasio kemungkinan $-2\log(L)$ konvergen dalam distribusi ke distribusi Chi-square dengan derajat kebebasan adalah selisih antara dimensionalitas ruang parameter $Θ$ dan $\Theta_0$, ketika ukuran sampel mendekati tak terhingga dan ketika model nol tertanam dalam model alternatif. Dengan kata lain, ketika model nol adalah kasus khusus dari model alternatif yang berisi ruang sampel yang terbatas, kita dapat memperkirakan $c$ dengan $\chi^2_{p_1 - p_2}(1-\alpha)$, persentil ke-$100\times(1-\alpha)$ dari distribusi Chi-square, dengan $p1−p2$ sebagai derajat kebebasan, dan $p1$ dan $p2$ adalah jumlah parameter dalam model alternatif dan nol, masing-masing. Perlu diperhatikan bahwa LRT juga adalah uji berukuran besar yang tidak akan valid untuk sampel kecil.
+
+### Kriteria Informasi
+
+Dalam aplikasi kehidupan nyata, LRT (Likelihood Ratio Test) umumnya digunakan untuk membandingkan dua model yang saling bersarang. Namun, pendekatan LRT sebagai alat seleksi model memiliki dua kelemahan utama: 1) Biasanya membutuhkan model nol yang bersarang di dalam model alternatif; 2) Model yang dipilih dari LRT cenderung menghasilkan overfitting dalam sampel, sehingga mengakibatkan prediksi di luar sampel yang buruk. Untuk mengatasi masalah ini, pemilihan model berdasarkan kriteria informasi, yang berlaku untuk model non-bersarang sambil mempertimbangkan kompleksitas model, lebih banyak digunakan untuk pemilihan model. Di sini, kami memperkenalkan dua kriteria yang paling umum digunakan, yaitu kriteria informasi Akaike dan kriteria informasi Bayes.
+
+Secara khusus, *kriteria informasi Akaike* ($AIC$) didefinisikan sebagai
+
+$$\begin{equation}
+AIC = -2\log L(\hat{\boldsymbol \theta}) + 2p,
+\end{equation}$$
+
+dimana $\hat{\boldsymbol \theta}$ merupakan MLE dari ${\boldsymbol \theta}$, dan $p$ adalah jumlah parameter dalam model. Istilah tambahan $2p$ mewakili penalti untuk kompleksitas model. Dengan kata lain, dengan fungsi likelihood yang maksimum yang sama, $AIC$ memilih model dengan jumlah parameter yang lebih sedikit. Perlu diperhatikan bahwa $AIC$ tidak mempertimbangkan pengaruh dari ukuran sampel $n$.
+
+Secara alternatif, orang menggunakan *kriteria informasi Bayesian* ($BIC$) yang mempertimbangkan ukuran sampel. $BIC$ didefinisikan sebagai
+
+$$\begin{equation}
+BIC = -2\log L(\hat{\boldsymbol \theta}) + p\,\log(n).
+\end{equation}$$
+
+Kita dapat mengamati bahwa $BIC$ cenderung memberikan bobot yang lebih tinggi pada jumlah parameter. Dengan fungsi likelihood yang dimaksimumkan yang sama, $BIC$ akan menyarankan model yang lebih parsimonius dibandingkan dengan $AIC$.

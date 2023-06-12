@@ -1,1 +1,1033 @@
 # Insurance Portfolio Management including Reinsurance
+
+Portofolio asuransi adalah kumpulan kontrak asuransi. Untuk membantu mengelola ketidakpastian portofolio, bab ini akan membahas mengenai:
+
+1. Menghitung kewajiban yang luar biasa besar dengan memeriksa bagian ekor dari distribusi,
+ 
+2. Menghitung risiko secara keseluruhan dengan memperkenalkan ringkasan yang dikenal sebagai ukuran risiko, dan
+
+3. Membahas opsi-opsi penyebaran risiko portofolio melalui reasuransi, yaitu pembelian proteksi asuransi oleh perusahaan asuransi.
+
+## Introduction to Insurance Portfolios
+
+Kontrak merupakan perjanjian antara pemegang polis dan perusahaan asuransi. Penanggung, dan mengelola, portofolio yang merupakan kumpulan kontrak. Seperti di bidang keuangan lainnya, ada pilihan pengambilan keputusan manajemen yang hanya terjadi di tingkat portofolio. Misalnya, pengambilan keputusan strategis tidak terjadi di tingkat kontrak. Itu terjadi di ruang konferensi, di mana manajemen meninjau data yang tersedia dan mungkin mengarahkan arah baru. Dari perspektif portofolio, perusahaan asuransi ingin melakukan perencanaan kapasitas, menetapkan kebijakan manajemen, dan menyeimbangkan bauran produk yang dipesan untuk meningkatkan pendapatan sambil mengendalikan volatilitas.
+
+Secara konseptual bahwa perusahaan asuransi tidak lebih dari sebuah kumpulan atau portofolio, kontrak asuransi. Pada Bab 5 telah mempelajari tentang pemodelan portofolio asuransi sebagai jumlah kontrak individu berdasarkan asumsi independensi antar kontrak. Karena pentingnya hal tersebut, bab ini berfokus langsung pada distribusi portofolio.
+
+1. Portofolio asuransi (Kumpulan, atau agregasi, kontrak asuransi) mewakili kewajiban perusahaan asuransi dengan membahas probabilitas hasil yang besar dengan menggunakan gagasan distribusi heavy-tail
+
+2. Portofolio asuransi mewakili kewajiban perusahaan sehingga perusahaan asuransi menyimpan aset dalam jumlah yang setara untuk memenuhi kewajiban tersebut.
+
+
+## Tails of Distributions
+
+Pada subab ini akan membahas mengenai:
+
+1. Menggambarkan distribusi ekor berat secara intuitif.
+
+2. Mengklasifikasikan berat ekor distribusi berdasarkan momen.
+
+3. Membandingkan ekor dari dua distribusi.
+
+Dalam statistik, distribusi tails adalah distribusi yang memiliki "ekor" panjang yang perlahan mengecil menuju akhir distribusi.
+
+Distribusi tails sangat penting untuk dipahami dalam bisnis karena mereka menghadirkan peluang untuk model bisnis yang berputar di sekitar menghasilkan sedikit penjualan untuk banyak produk.
+
+"Ekor panjang" dari distribusi adalah istilah yang menunjukkan seberapa cepat ekstrem ini mendekati nol.
+
+Untuk distribusi berekor pendek, ekor mendekati nol dengan sangat cepat. Distribusi seperti itu biasanya memiliki tampilan terpotong ("digergaji"). Distribusi berekor pendek klasik adalah distribusi seragam (persegi panjang) di mana probabilitasnya konstan pada rentang tertentu dan kemudian turun menjadi nol di mana pun - kita akan membicarakannya sebagai tidak memiliki ekor, atau ekor yang sangat pendek.
+
+Untuk distribusi berekor sedang, ekor menurun ke nol secara moderat. Distribusi berekor sedang klasik adalah distribusi normal (Gaussian).
+
+Untuk distribusi berekor panjang, ekor menurun ke nol dengan sangat lambat—dan karenanya orang cenderung melihat probabilitas jauh dari badan distribusi. Distribusi ekor panjang klasik adalah distribusi Cauchy.
+
+Dalam hal panjang ekor, histogram yang ditunjukkan di atas akan menjadi karakteristik distribusi "berekor pendek".
+
+Estimator optimal (tidak bias dan paling tepat) untuk lokasi pusat distribusi sangat bergantung pada panjang ekor distribusi. 
+
+Dalam konteks asuransi, beberapa kerugian besar yang menimpa portofolio dan kemudian dikonversi menjadi klaim biasanya mewakili bagian terbesar dari ganti rugi yang dibayarkan oleh perusahaan asuransi. Kerugian juga disebut 'ekstrem', dimodelkan secara kuantitatif oleh ekor dari distribusi probabilitas terkait. Misalnya, periode tekanan pada keuangan dapat muncul dengan frekuensi yang lebih tinggi dari yang diharapkan, dan kerugian asuransi dapat terjadi dengan tingkat keparahan yang lebih buruk. Oleh karena itu, studi tentang perilaku probabilistik pada bagian ekor model aktuaria sangat penting dalam kerangka kerja modern manajemen risiko kuantitatif. Untuk alasan ini, bagian ini dikhususkan untuk pengenalan beberapa gagasan matematika yang mencirikan bobot ekor variabel acak. 
+
+Secara formal, definisikan X sebagai kewajiban (acak) yang muncul dari kumpulan (portofolio) kontrak asuransi. (Pada bab-bab sebelumnya telah menggunakan S untuk kerugian agregat). Pada bagian ini mempelajari ekor kanan dari distribusi X yang merepresentasikan terjadinya kerugian besar. Secara informal, sebuah variabel acak dikatakan berekor berat jika probabilitas tinggi diberikan pada nilai yang besar. Perhatikan bahwa ini tidak berarti bahwa densitas probabilitas/fungsi massa meningkat ketika nilai X menuju tak terhingga. Memang untuk variabel acak bernilai riil, pdf/pmf harus berkurang hingga tak terhingga untuk menjamin probabilitas total sama dengan satu. Namun, yang menjadi perhatian adalah laju peluruhan pdf/pmf. Hasil yang tidak diinginkan lebih mungkin terjadi pada portofolio asuransi yang digambarkan oleh variabel acak kerugian yang memiliki ekor yang lebih berat (kanan). Bobot ekor dapat berupa konsep absolut atau relatif. Khususnya, untuk yang pertamadapat menganggap variabel acak memiliki ekor yang berat jika sifat matematis tertentu dari distribusi probabilitas terpenuhi. Maka dapat dikatakan ekor dari satu distribusi lebih berat/ringan dari yang lain jika beberapa ukuran ekor lebih besar/kecil.
+
+Beberapa pendekatan kuantitatif telah diusulkan untuk mengklasifikasikan dan membandingkan bobot ekor. Di antara sebagian besar pendekatan ini, fungsi kelangsungan hidup berfungsi sebagai blok bangunan. Berikut ini merupakan memperkenalkan dua metode klasifikasi ekor yang sederhana namun berguna, yang keduanya didasarkan pada perilaku fungsi kelangsungan hidup X.
+
+### Classification Based on Moments
+
+Salah satu cara untuk mengklasifikasikan bobot ekor dari suatu distribusi adalah dengan menilai keberadaan momen-momen sesaae. Karena tujuan utama terletak pada ekor kanan distribusi, maka mengasumsikan variabel acak kewajiban atau kerugian $X$ bernilai positif. Pada awalnya, momen sesaat ke-k dari peubah acak kontinu $X$ yang diperkenalkan pada Bagian 3.1, dapat dihitung sebagai berikut.
+
+$$\mu_k' =  \int_0^{\infty} x^k f(x) ~dx = k \int_0^{\infty} x^{k-1} S(x) ~dx, \\$$
+
+di mana $S(\cdot)$ menyatakan fungsi survival dari $X$ . Ungkapan ini menekankan bahwa keberadaan momen mentah bergantung pada perilaku asimtotik dari fungsi survival di tak terhingga. Yakni, semakin cepat fungsi survival meluruh ke nol, semakin tinggi orde momen berhingga $(k)$ yang dimiliki oleh variabel acak terkait. Anda dapat menafsirkan $k^{\ast}$ sebagai nilai terbesar dari $k$ sehingga momennya terbatas. Secara formal, definisikan $k^{\ast}=\sup\{k > 0:\mu_k'<\infty \}$ , dimana sup mewakili supremum.
+
+`Definisi 10.1.` Pertimbangkan variabel acak kerugian non-negatif $X$ . 
+
+1. Jika semua momen baku positif ada, yaitu orde maksimal dari momen berhingga $k^{\ast}=\infty$ , maka $X$ dikatakan berekor ringan berdasarkan metode momen.
+
+2. Jika $k^{\ast} < \infty$, maka $X$ dikatakan berekor berat (dikatakan berekor berat jika probabilitas tinggi diberikan pada nilai yang besar) berdasarkan metode momen. 
+
+3. Selain itu, untuk dua variabel acak rugi positif $X_1$ dan $X_2$ dengan orde maksimal momen masing-masing $k^{\ast}_1$ dan $k^{\ast}_1$, dengan mengatakan $X_1$ memiliki ekor (kanan) yang lebih berat daripada $X_2$ jika $k^{\ast}_1\leq k^{\ast}_2$.
+
+bagian pertama dari Definisi 10.1 adalah konsep absolut dari bobot ekor, sedangkan bagian kedua adalah konsep relatif dari bobot ekor yang membandingkan ekor (kanan) di antara dua distribusi. Selanjutnya, kami menyajikan beberapa contoh yang mengilustrasikan aplikasi metode berbasis momen untuk membandingkan bobot ekor.
+
+`contoh 10.2.1.` Sifat ekor ringan dari distribusi gamma. 
+
+Misalkan $X\sim gamma(\alpha,\theta)$, dengan $\alpha>0$ dan $\theta>0$ , maka untuk semua $k>0$ , tunjukkan bahwa $\mu_k' < \infty$.
+
+$$\begin{eqnarray*}
+    \mu_k' &=& \int_0^{\infty} x^k \frac{x^{\alpha-1} e^{-x/\theta}}{\Gamma(\alpha) \theta^{\alpha}} dx \\
+    &=& \int_0^{\infty} (y\theta)^k  \frac{(y\theta)^{\alpha-1} e^{-y}}{\Gamma(\alpha) \theta^{\alpha}} \theta dy \\
+    &=& \frac{\theta^k}{\Gamma(\alpha)} \Gamma(\alpha+k) < \infty.
+\end{eqnarray*}$$
+
+karena semua momen positif ada, yaitu $k^{\ast}=\infty$, sesuai dengan metode klasifikasi berbasis momen pada Definisi 10.1, maka distribusi gamma berekor ringan
+
+`Contoh 10.2.2.` Sifat ekor ringan dari distribusi Weibull. 
+
+Misalkan $X\sim Weibull(\theta,\tau)$, dengan $\theta>0$ dan $\tau>0$ , maka untuk semua $k>0$ , tunjukkan bahwa $\mu_k' < \infty$.
+
+$$\begin{eqnarray*}
+    \mu_k' &=& \int_0^{\infty} x^k \frac{\tau x^{\tau-1} }{\theta^{\tau}} e^{-(x/\theta)^{\tau}}dx \\
+    &=& \int_0^{\infty}  \frac{ y^{k/\tau} }{\theta^{\tau}} e^{-y/\theta^{\tau}}dy \\
+    &=& \theta^{k} \Gamma(1+k/\tau) < \infty.
+\end{eqnarray*}$$
+
+Sekali lagi, karena adanya semua momen positif, distribusi Weibull berekor ringan.
+
+distribusi gamma dan Weibull digunakan secara luas dalam praktik aktuaria. Aplikasi dari kedua distribusi ini sangat luas, termasuk, namun tidak terbatas pada, pemodelan tingkat keparahan klaim asuransi, penilaian solvabilitas, pencadangan kerugian, perkiraan risiko agregat, rekayasa keandalan, dan analisis kegagalan. Sejauh ini kami telah melihat dua contoh penggunaan metode berbasis momen untuk menganalisis distribusi ekor ringan. Kami mendokumentasikan contoh distribusi ekor berat sebagai berikut.
+
+`Contoh 10.2.3.` Sifat ekor yang berat dari distribusi Pareto. 
+
+Misalkan $X\sim Pareto(\alpha,\theta)$ , dengan $\alpha>0$ dan $\theta>0$  , maka untuk $k>0$
+
+$$\begin{eqnarray*}
+    \mu_k^{'} &=& \int_0^{\infty} x^k \frac{\alpha \theta^{\alpha}}{(x+\theta)^{\alpha+1}} dx \\
+    &=& \alpha \theta^{\alpha} \int_{\theta}^{\infty} (y-\theta)^k {y^{-(\alpha+1)}} dy.
+\end{eqnarray*}$$
+
+mempertimbangkan integrasi serupa:
+
+$$\begin{eqnarray*}
+  g_k=\int_{\theta}^{\infty} {y^{k-\alpha-1}} dy=\left\{
+  \begin{array}{ll}
+    <\infty, & \hbox{for } k<\alpha;\\
+    =\infty, & \hbox{for } k\geq \alpha.
+  \end{array}
+\right.
+\end{eqnarray*}$$
+
+$$\lim_{y\rightarrow \infty} \frac{(y-\theta)^k {y^{-(\alpha+1)}}}{y^{k-\alpha-1}}=\lim_{y\rightarrow \infty}
+(1-\theta/y)^{k}=1.$$
+
+Penerapan teorema perbandingan limit untuk integral tak tentu menghasilkan μ′k terbatas jika dan hanya jika gk terbatas. Oleh karena itu, kita dapat menyimpulkan bahwa momen mentah dari variabel acak Pareto hanya ada sampai k < α , yaitu, k∗ = α , dan dengan demikian distribusinya berekor berat. Terlebih lagi, orde maksimal dari momen berhingga hanya bergantung pada parameter bentuk α dan merupakan fungsi yang meningkat dari α . Dengan kata lain, berdasarkan metode momen, bobot ekor dari variabel acak Pareto hanya dimanipulasi oleh α - semakin kecil nilai α , semakin berat bobot ekornya. Karena k∗<∞ , ekor dari distribusi Pareto lebih berat dibandingkan dengan distribusi gamma dan Weibull.
+
+
+### Comparison Based on Limiting Tail Behavior
+
+Untuk mengatasi masalah-masalah yang disebutkan di atas pada metode klasifikasi berbasis momen, sebuah pendekatan alternatif untuk membandingkan bobot ekor adalah dengan secara langsung mempelajari perilaku pembatas dari fungsi-fungsi survival.
+
+Definisi 10.2. Untuk dua variabel acak $X$ dan $Y$ , misalkan
+
+$$\gamma=\lim_{t\rightarrow \infty}\frac{S_X(t)}{S_Y(t)}.$$
+
+Dengan :
+
+1. $X$ memiliki ekor kanan yang lebih berat daripada $Y$ jika $\gamma=\infty$; 
+
+2. $X$ dan $Y$ secara proporsional ekuivalen pada ekor kanan jika $\gamma =c \in (0, \infty)$; 
+
+3. $X$ memiliki ekor kanan yang lebih ringan daripada $Y$ jika $\gamma=0$.
+
+`Contoh 10.2.4.` Perbandingan distribusi Pareto dan distribusi Weibull. 
+
+Misalkan $X\sim Pareto(\alpha, \theta)$ dan $Y\sim Weibull(\tau, \theta)$, untuk $\alpha>0$, $\tau>0$, dan $\theta>0$. Tunjukkan bahwa Pareto memiliki ekor kanan yang lebih berat daripada Weibull.
+
+$$\begin{eqnarray*}
+    \lim_{t\rightarrow \infty}\frac{S_X(t)}{S_Y(t)} &=& \lim_{t\rightarrow \infty}\frac{(1+t/\theta)^{-\alpha}}{\exp\{-(t/\theta)^{\tau}\}} \\
+    &=& \lim_{t\rightarrow \infty}\frac{\exp\{t/\theta^{\tau} \}}{(1+t^{1/\tau}/\theta)^{\alpha}} \\
+    &=& \lim_{t\rightarrow \infty}\frac{\sum_{i=0}^{\infty}\left(\frac{t}{\theta^{\tau}}\right)^{i}/i!}{(1+t^{1/\tau}/\theta)^{\alpha}}\\
+    &=& \lim_{t\rightarrow \infty} \sum_{i=0}^{\infty} \left(t^{-i/\alpha}+\frac{t^{(1/\tau-i/\alpha)}}{\theta} \right)^{-\alpha}/\theta^{\tau i}i!\\
+    &=& \infty.
+\end{eqnarray*}$$
+
+Oleh karena itu, distribusi Pareto memiliki ekor yang lebih berat daripada distribusi Weibull. Kita juga dapat menyadari bahwa eksponensial mencapai tak terhingga lebih cepat daripada polinomial, oleh karena itu, batas yang disebutkan di atas haruslah tak terhingga.
+
+untuk beberapa distribusi yang fungsi-fungsi kelangsungan hidupnya tidak dapat diekspresikan secara eksplisit, kita dapat menggunakan rumus alternatif berikut ini:
+
+$$\begin{eqnarray*}
+    \lim_{t\to \infty} \frac{S_X(t)}{S_Y(t)} &=& \lim_{t \to \infty} \frac{S_X^{'}(t)}{S_Y^{'}(t)} \\
+    &=& \lim_{t \to \infty} \frac{-f_X(t)}{-f_Y(t)}\\
+ &=& \lim_{t\to \infty} \frac{f_X(t)}{f_Y(t)}.
+\end{eqnarray*}$$
+
+mengingat bahwa fungsi kepadatannya ada. Ini adalah aplikasi dari Aturan L'Hôpital dari kalkulus
+
+`Contoh 10.2.5.` Perbandingan distribusi Pareto dengan distribusi gamma. 
+
+Misalkan $X\sim Pareto(\alpha, \theta)$ dan $Y\sim gamma(\alpha, \theta)$, untuk $\alpha>0$ dan $\theta>0$ . Tunjukkan bahwa Pareto memiliki ekor kanan yang lebih berat daripada gamma.
+
+$$\begin{eqnarray*}
+    \lim_{t\to \infty} \frac{f_{X}(t)}{f_{Y}(t)} &=& \lim_{t \to \infty} \frac{\alpha \theta^{\alpha} (t+ \theta)^{-\alpha-1}}{t^{\tau-1} e^{-t/\lambda} \lambda^{-\tau} \Gamma(\tau)^{-1}} \\
+ &\propto&  \lim_{t\to \infty} \frac{e^{t/\lambda}}{(t+\theta)^{\alpha+1} t^{\tau-1}} \\
+    &=& \infty,
+\end{eqnarray*}$$
+
+karena eksponensial menuju tak terhingga lebih cepat daripada polinomial.
+
+## Risk Measures
+
+Materi ini akan mempelajari :
+
+- Mendefinisikan ide koherensi dan menentukan apakah suatu ukuran risiko koheren atau tidak.
+
+- Mendefinisikan nilai-at-risiko dan menghitung kuantitas ini untuk distribusi tertentu.
+
+- Mendefinisikan nilai-at-risiko ekor dan menghitung besaran ini untuk distribusi tertentu.
+
+
+Dapat menyatakan bahwa risiko yang terkait dengan satu distribusi lebih berbahaya (secara asimtotik) dibandingkan distribusi lainnya jika ekornya lebih berat. Namun, mengetahui bahwa satu risiko lebih berbahaya (secara asimtotik) daripada risiko lainnya mungkin tidak memberikan informasi yang cukup untuk tujuan manajemen risiko yang canggih, dan sebagai tambahan, kita juga tertarik untuk mengukur seberapa besar risiko tersebut. Faktanya, besarnya risiko yang terkait dengan distribusi kerugian yang diberikan merupakan input penting untuk banyak aplikasi asuransi, seperti penentuan harga aktuaria, pemesanan, lindung nilai, pengawasan peraturan asuransi, dan sebagainya.
+
+Menurut pemahaman saya berdasarkan apa yang saya baca dalam beberapa laman mengenai ukuran resiko, Ukuran risiko adalah ukuran statistik yang merupakan prediktor historis risiko dan volatilitas investasi , dan juga merupakan komponen utama dalam teori portofolio modern (MPT). MPT adalah metodologi keuangan dan akademik standar untuk menilai kinerja saham atau dana saham dibandingkan dengan indeks tolok ukurnya .
+
+### Coherent Risk Measures
+
+Untuk membandingkan besarnya risiko dengan cara yang praktis, kami mencari fungsi yang memetakan variabel acak kerugian yang diminati ke nilai numerik yang menunjukkan tingkat risiko, yang disebut ukuran risiko. Secara matematis, ukuran risiko secara sederhana meringkas fungsi distribusi variabel acak sebagai satu angka. Dua ukuran risiko sederhana adalah rata-rata $\mathrm{E}[X]$ dan deviasi standar $\mathrm{SD}(X)=\sqrt{\mathrm{Var}(X)}$. Contoh klasik lain dari ukuran risiko termasuk prinsip deviasi standar
+
+$$
+\begin{equation}
+H_{\mathrm{SD}}(X)=\mathrm{E}[X]+\alpha \mathrm{SD}(X),\text{ for } \alpha\geq 0,
+\tag{10.1} 
+\end{equation}
+$$
+
+dan prinsip varians 
+
+$$H_{\mathrm{Var}}(X)=\mathrm{E}[X]+\alpha \mathrm{Var}(X),\text{ for } \alpha\geq 0.$$
+
+Untuk memeriksa bahwa semua fungsi yang disebutkan di atas dapat menggunakan ukuran risiko di mana dengan memasukkan variabel acak kerugian dan fungsi-fungsi tersebut menghasilkan nilai numerik. Dengan catatan yang berbeda, fungsi $H^{\ast}(X)=\alpha X^{\beta}$ untuk setiap $\alpha,\beta\neq 0$ yang bernilai riil, β≠0 bukan merupakan ukuran risiko karena $H^{\ast}$ menghasilkan variabel acak lain dan bukan nilai numerik tunggal.
+
+Karena ukuran risiko adalah ukuran skalar yang bertujuan untuk menggunakan nilai numerik tunggal untuk menggambarkan sifat stokastik dari variabel acak kerugian, maka tidak mengherankan jika tidak ada ukuran risiko yang dapat menangkap semua informasi risiko dari variabel acak yang terkait. Oleh karena itu, ketika mencari ukuran risiko yang berguna, dalam mengingat bahwa ukuran tersebut setidaknya 
+
+- harus dapat ditafsirkan secara praktis;
+- dapat dihitung dengan mudah; dan
+- mampu merefleksikan informasi risiko yang paling penting yang mendasari distribusi kerugian.
+
+
+Beberapa ukuran risiko telah dikembangkan dalam literatur. Namun, tidak ada ukuran risiko terbaik yang dapat mengungguli yang lain, dan pemilihan ukuran risiko yang tepat sangat bergantung pada pertanyaan aplikasi yang dihadapi. Dalam hal ini, sangat penting untuk menekankan bahwa risiko adalah konsep yang subyektif, dan dengan demikian, bahkan dengan masalah yang sama, ada berbagai pendekatan untuk menilai risiko. Namun, untuk banyak aplikasi manajemen risiko, ada kesepakatan luas bahwa ukuran risiko yang masuk akal secara ekonomi harus memenuhi empat aksioma utama yang akan kami jelaskan secara rinci selanjutnya. Ukuran risiko yang memenuhi aksioma-aksioma ini disebut sebagai ukuran risiko yang koheren.
+
+Pertimbangkan sebuah ukuran risiko $H(\cdot)$. Ukuran ini dikatakan sebagai ukuran risiko yang koheren untuk dua variabel acak $X$ dan $Y$ jika aksioma-aksioma berikut ini terpenuhi.
+
+- *Aksioma 1. Subaditifitas*:  
+
+$H(X+Y)\leq H(X)+H(Y)$
+Implikasi ekonomi dari aksioma ini adalah bahwa manfaat diversifikasi ada jika risiko-risiko yang berbeda digabungkan.
+
+
+- *Aksioma 2. Monotonisitas*: 
+ jika $Pr[X≤Y]=1$. maka H(X)≤H(Y). Ingat bahwa X dan Y adalah variabel acak yang mewakili kerugian, implikasi ekonomi yang mendasarinya adalah bahwa kerugian yang lebih tinggi pada dasarnya mengarah ke tingkat risiko yang lebih tinggi.
+ 
+ 
+- *Aksioma 3. Homogenitas positif*: 
+$H(cX) = cH(X)$ untuk setiap konstanta positif c. Implikasi ekonomi yang potensial dari aksioma ini adalah bahwa ukuran risiko harus independen dari unit moneter yang digunakan untuk mengukur risiko. Sebagai contoh, misalkan c adalah nilai tukar mata uang antara dolar AS dan dolar Kanada, maka risiko kerugian acak yang diukur dalam satuan dolar AS (yaitu, X) dan dolar Kanada (yaitu, $cX$) seharusnya hanya berbeda sampai dengan nilai tukar c (yaitu, $cH(x)=H(cX)$).
+
+- *Aksioma 4. Ketidakvariasian terjemahan*:  
+$H(X + c) = H(X) + c$ untuk setiap konstanta positif c. Jika konstanta c diinterpretasikan sebagai uang tunai bebas risiko dan X adalah portofolio asuransi, maka penambahan uang tunai ke dalam portofolio hanya meningkatkan risiko portofolio sebesar jumlah uang tunai.
+
+Memverifikasi sifat koheren untuk beberapa ukuran risiko bisa sangat mudah, tetapi terkadang sangat menantang. Sebagai contoh, adalah hal yang mudah untuk memeriksa apakah rata-rata adalah ukuran risiko yang koheren.
+
+*SPECIAL CASE* 
+Rata-rata adalah ukuran risiko yang koheren.
+
+Untuk setiap pasangan variabel acak X dan Y yang memiliki mean berhingga dan konstanta $c>0$
+
+- validasi subaditifitas:  $E[X+Y]=E[X]+E[Y]$
+
+- validasi monotonitas: jika $Pr[X≤Y]=1$ maka $E[X]≤E[Y]$
+
+- validasi homogenitas positif: $E[cX]=cE[X]$
+
+- validasi invariansi penerjemahan:  $E[X+c]=E[X]+c$
+
+Untuk melihat bahwa deviasi standar bukanlah ukuran risiko yang koheren, mulailah dengan memeriksa apakah deviasi standar memenuhi
+
+*Verification of the Special Case*
+
+Untuk melihat bahwa deviasi standar bukanlah ukuran risiko yang koheren, mulailah dengan memeriksa apakah deviasi standar memenuhi
+
+- validasi subaditifitas:
+
+$$
+\begin{eqnarray*} 
+\mathrm{SD}[X+Y]&=&\sqrt{\mathrm{Var}(X)+\mathrm{Var}(Y)+2\mathrm{Cov}(X,Y)}\\
+      &\leq& \sqrt{\mathrm{SD}(X)^2+\mathrm{SD}(Y)^2+2\mathrm{SD}(X)\mathrm{SD}(Y)}\\
+      &=& \mathrm{SD}(X)+\mathrm{SD}(Y);
+\end{eqnarray*}
+$$
+
+- validasi homogenitas positif:
+
+$\mathrm{SD}[cX]=c~\mathrm{SD}[X]$
+
+Namun, deviasi standar tidak memenuhi sifat invariansi terjemahan karena untuk setiap konstanta positif c
+
+$\mathrm{SD}(X+c)=\mathrm{SD}(X)<\mathrm{SD}(X)+c.$
+
+Selain itu, deviasi standar juga tidak memenuhi sifat monotonitas. Untuk melihat hal ini, pertimbangkan dua variabel acak berikut:
+
+$$
+\begin{eqnarray}
+X=\left\{
+    \begin{array}{ll}
+      0, & \hbox{with probability $0.25$;} \\
+      4, & \hbox{with probability $0.75$,}
+    \end{array}
+  \right.
+\tag{10.2}
+\end{eqnarray}
+$$
+
+dan Y adalah variabel acak yang merosot sedemikian sehingga
+
+$$
+\begin{eqnarray}
+\Pr[Y = 4] = 1.
+\tag{10.3}
+\end{eqnarray}
+$$
+
+
+Dapat Memeriksa $\Pr[X\leq Y]=1$, tapi
+
+$$
+\mathrm{SD}(X)=\sqrt{4^2\cdot 0.25\cdot 0.75}=\sqrt{3}>\mathrm{SD}(Y)=0
+$$
+
+*Special Case. The Standard Deviation Principle (10.1) is a Coherent Risk Measure.*
+
+Untuk tujuan ini, untuk sebuah $α>0$ dapat meriksa empat aksioma untuk $H_{SD}(X+Y)$ satu per satu:
+
+- validasi subaditifitas :
+
+$$
+\begin{eqnarray*}
+  H_{\mathrm{SD}}(X+Y) &=& \mathrm{E}[X+Y]+\alpha \mathrm{SD}(X+Y) \\
+  &\leq& \mathrm{E}[X]+\mathrm{E}[Y]+\alpha [\mathrm{SD}(X) +\mathrm{SD}(Y)]\\
+  &=& H_{\mathrm{SD}}(X)+ H_{\mathrm{SD}}(Y);
+\end{eqnarray*}
+$$
+- validasi homogenitas positif:
+
+$H_{\mathrm{SD}}(cX)=c\mathrm{E}[X]+c\alpha\mathrm{SD}(X)=cH_{\mathrm{SD}}(X);$
+
+- validasi invariansi terjemahan:
+
+$H_{\mathrm{SD}}(X+c)=\mathrm{E}[X]+c+\alpha\mathrm{SD}(X)=H_{\mathrm{SD}}(X)+c.$
+
+
+Hanya untuk memverifikasi properti monotonitas, yang mungkin terpenuhi atau tidak, tergantung pada nilai α. Untuk melihat hal ini, mempertimbangkan rumus diatas di mana $Pr[X≤Y]=1$. Dengan memisalkan $\alpha=0.1\cdot \sqrt{3}$ maka $H_{\mathrm{SD}}(X)=3+0.3=3.3< H_{\mathrm{SD}}(Y)=4$ dan kondisi monotonitas terpenuhi. Di sisi lain, misalkan $\alpha=\sqrt{3}$. maka $H_{\mathrm{SD}}(X)=3+3=6> H_{\mathrm{SD}}(Y)=4$ dan kondisi monotonitas tidak terpenuhi. Lebih tepatnya, dengan menetapkan
+
+$$
+H_{\mathrm{SD}}(X) = 3+\alpha\sqrt{3} \leq4= H_{\mathrm{SD}}(Y)
+$$
+ 
+
+Dapt menemukan bahwa kondisi monotonitas hanya terpenuhi untuk $0\leq\alpha\leq 1/\sqrt{3}$ dan dengan demikian prinsip deviasi standar $H_{SD}$ adalah koheren. Hasil ini tampak sangat intuitif bagi kami karena prinsip deviasi standar $H_{SD}$ adalah kombinasi linier dari dua ukuran risiko yang satu koheren dan yang lainnya tidak koheren. Jika $\alpha\leq 1/\sqrt{3}$ maka ukuran yang koheren mendominasi ukuran yang tidak koheren, sehingga ukuran yang dihasilkan $H_{SD}$ yang dihasilkan adalah koheren dan sebaliknya. Perlu dicatat bahwa kesimpulan di atas tidak dapat digeneralisasi untuk setiap pasangan variabel acak X dan Y.
+
+Literatur mengenai ukuran risiko telah berkembang pesat dalam hal popularitas dan kepentingannya. Dalam dua subbab berikutnya, kami memperkenalkan dua indeks yang baru-baru ini mendapatkan perhatian yang belum pernah terjadi sebelumnya di antara para ahli teori, praktisi, dan regulator. Kedua indeks tersebut adalah Value-at-Risk ($VaR$) dan Tail Value-at-Risk ($TVaR$). Alasan ekonomi di balik dua ukuran risiko populer ini mirip dengan metode klasifikasi ekor yang diperkenalkan pada bagian sebelumnya, yang dengannya kami berharap dapat menangkap risiko kerugian ekstrem yang diwakili oleh ekor distribusi.
+
+### Value-at-Risk
+
+Dengan mempertimbangkan variabel acak kerugian asuransi $X$ . Ukuran nilai-at-risiko dari $X$ dengan tingkat kepercayaan $q∈(0,1)$ dirumuskan sebagai 
+
+$$
+\begin{eqnarray}
+VaR_q[X]=\inf\{x:F_X(x)\geq q\}.
+\tag{10.4}
+\end{eqnarray}
+$$
+
+Di sini, $inf$ adalah operator infimum sehingga ukuran $VaR$ menghasilkan nilai terkecil dari $X$ sedemikian rupa sehingga cdf yang terkait pertama kali melebihi atau sama dengan q .
+
+Selanjutnya dapat menginterpretasikan VaR dalam konteks aplikasi aktuarial. VaR adalah ukuran dari 'kerugian maksimal' yang mungkin terjadi pada produk asuransi/portfolio atau investasi berisiko, terjadi sebesar q × 100% waktu, selama periode waktu tertentu (biasanya satu tahun). Misalnya, jika X adalah variabel acak kerugian tahunan dari produk asuransi, VaR0.95 [X] = 100 juta berarti tidak lebih dari 5% peluang bahwa kerugian akan melebihi 100 juta selama satu tahun tertentu. Karena interpretasi yang bermakna ini, VaR telah menjadi standar industri untuk mengukur risiko keuangan dan asuransi sejak tahun 1990-an. Konglomerasi keuangan, regulator, dan akademisi sering menggunakan VaR untuk mengukur modal risiko, memastikan kepatuhan dengan aturan regulasi, dan mengungkapkan posisi keuangan. 
+
+#### Example 10.3.1.  VaR for the exponential distribution
+
+Dengan mempertimbangkan variabel acak kerugian asuransi X dengan distribusi eksponensial yang memiliki parameter $θ$ untuk $θ>0$, maka cdf dari $X$ diberikan oleh
+
+$$
+F_X(x)=1-e^{-x/\theta}, \text{ for } x>0.
+$$
+
+Mencari ekspresi bentuk tertutup untuk VaR
+
+*JAWAB*
+
+Karena distribusi eksponensial adalah distribusi kontinu, nilai terkecil di mana cdf pertama kali melebihi atau sama dengan $q ∈ (0,1)$ harus berada pada titik xq yang memenuhi.
+
+$q=F_X(x_q)=1-\exp\{-x_q/\theta \}.$
+
+Maka 
+
+$VaR_q[X]=F_X^{-1}(q)=-\theta[\log(1-q)].$
+
+Hasil yang didapat pada rumus diatas dapat digeneralisasikan untuk variabel acak kontinu apa pun yang memiliki cdf yang ketat meningkat. Secara khusus, $VaR$ dari variabel acak kontinu mana pun adalah kebalikan dari cdf yang sesuai. Mari kita pertimbangkan contoh lain dari variabel acak kontinu yang memiliki dukungan dari negatif tak terhingga hingga positif tak terhingga.
+
+### Example 10.3.2.  VaR for the normal distribution. 
+Dengan mempertimbangkan variabel acak kerugian asuransi $X\sim Normal(\mu,\sigma^2)$ dengan $σ>0$. Dalam kasus ini, seseorang dapat menginterpretasikan nilai negatif dari X sebagai keuntungan atau pendapatan. Berikan ekspresi bentuk tertutup untuk VaR.
+
+Karena distribusi normal adalah distribusi kontinu, maka VaR dari X harus memenuhi
+
+$$
+\begin{eqnarray*}
+ q &=& F_X(VaR_q[X])\\
+&=&\Pr\left[(X-\mu)/\sigma\leq (VaR_q[X]-\mu)/\sigma\right]\\
+&=&\Phi((VaR_q[X]-\mu)/\sigma).
+\end{eqnarray*}
+$$
+Maka didapat 
+
+$$
+VaR_q[X]=\Phi^{-1}(q)\ \sigma+\mu.
+$$
+
+Dalam banyak aplikasi asuransi, kita harus menangani transformasi dari variabel acak. Misalnya, pada Contoh 10.3.2, variabel acak kerugian $X\sim Normal(\mu, \sigma^2)$ dapat dilihat sebagai transformasi linier dari variabel acak normal standar $Z\sim Normal(0,1)$, yaitu $X=Z\sigma+\mu$. Dengan mengatur $μ = 0$ dan $σ = 1$, Dapar mempermudah untuk memeriksa $VaR_q[Z]=\Phi^{-1}(q).$. Transformasi linier dari variabel acak normal setara dengan transformasi linier dari VaR dari variabel acak asli. Temuan ini dapat digeneralisasikan lebih lanjut ke variabel acak mana pun selama transformasinya ketat meningkat.
+
+#### Example 10.3.3.  VaR for transformed variables.
+
+Pertimbangkan variabel acak kerugian asuransi Y dengan distribusi lognormal dengan parameter $μ∈R$ dan $σ^2>0$ Mencari ekspresi $VaR$ dari Y dalam hal invers cdf normal standar.
+
+Dengan memperhatikan bahwa $\log Y\sim Normal(\mu,\sigma^2)$, atau setara dengan membiarkan $X\sim Normal(\mu,\sigma^2)$, maka $Y\overset{d}{=}e^{X}$ yang merupakan transformasi ketat meningkat. Di sini, notasi $\overset{d}{=}$ berarti kesamaan dalam distribusi. $VaR$ dari$Y$ diberikan oleh transformasi eksponensial dari VaR dari X. Secara tepat, untuk $q∈(0,1)$,
+
+$VaR_{q}[Y]= e^{VaR_q[X]}=\exp\{\Phi^{-1}(q)\ \sigma+\mu\}.$
+
+Sejauh ini telah melihat beberapa contoh tentang VaR untuk variabel acak kontinu, selanjutnya dengan mempertimbangkan contoh mengenai VaR untuk variabel acak diskrit.
+
+#### Example 10.3.4.  VaR for a discrete random variable
+
+Dengan mempertimbangkan variabel acak kerugian asuransi dengan distribusi probabilitas sebagai berikut:
+
+$$
+{\small
+\Pr[X=x] = \left\{
+                  \begin{array}{ll}
+                    0.75, & \text{for }x=1 \\
+                    0.20, & \text{for }x=3 \\
+                    0.05, & \text{for }x=4.
+                  \end{array}
+                \right.
+}
+$$
+
+Menemukan $VaR$ pada $q = 0.6, 0.9, 0.95, 0.95001$
+
+*JAWAB*
+
+Nilai cdf yang sesuai dari X adalah
+
+$$
+F_X(x)=\left\{
+         \begin{array}{ll}
+           0, & \hbox{ $x<1$;} \\
+           0.75, & \hbox{ $1\leq x<3$;} \\
+           0.95, & \hbox{ $3\leq x<4$;} \\
+           1, & \hbox{ $4\leq x$.}
+         \end{array}
+       \right.
+$$
+Berdasarkan definisi VaR dengan demikian, maka memiliki
+
+- $VaR_{0.6}[X]=1$
+
+- $VaR_{0.9}[X]=3$
+
+- $VaR_{0.95}[X]=3$
+
+- $VaR_{0.950001}[X]=4$
+
+
+Selanjutnya adalah ringkasan dari bagian  tentang ukuran VaR. Beberapa keuntungan dalam menggunakan VaR antara lain:
+
+- memiliki interpretasi yang bermakna secara praktis;
+
+- relatif mudah untuk dihitung untuk banyak distribusi dengan fungsi distribusi tertutup;
+
+- tidak ada asumsi tambahan yang diperlukan untuk penghitungan VaR.
+
+Namun, ada beberapa keterbatasan dalam penggunaan VaR dalam praktik manajemen risiko, di antaranya adalah:
+
+- pemilihan tingkat kepercayaan $q∈(0,1)$ sangat subjektif, sementara $VaR$ dapat sangat sensitif terhadap pilihan q 
+
+- skenario/informasi kerugian yang berada di atas $(1-q)\times 100\%$ peristiwa terburuk, sepenuhnya diabaikan;
+
+- VaR bukanlah ukuran risiko yang koheren (terutama, ukuran VaR tidak memenuhi aksioma subadditivitas, artinya manfaat diversifikasi mungkin tidak sepenuhnya tercermin).
+
+### Tail Value-at-Risk
+
+Dengan mengingat bahwa VaR mewakili kerugian maksimal dengan peluang $(1-q)\times 100\%$. Seperti yang disebutkan pada bagian sebelumnya, satu kelemahan utama dari pengukuran VaR adalah tidak mencerminkan kerugian ekstrem yang terjadi di luar skenario terburuk dengan peluang $(1-q)\times 100\%$. Untuk tujuan ilustrasi, mari kita pertimbangkan contoh yang sedikit tidak realistis namun inspiratif berikut.
+
+#### Example 10.3.5
+Dengan mempertimbangkan dua variabel kerugian, $X\sim Uniform [0,100]$, dan $Y$ dengan distribusi eksponensial yang memiliki parameter $θ = 31,71$. Kami menggunakan $VaR$ pada tingkat kepercayaan $95%$ untuk mengukur tingkat risiko dari $X$ dan $Y$. Perhitungan sederhana memberikan 
+
+
+$$
+VaR_{0.95}[X]=VaR_{0.95}[Y]=95,
+$$
+
+dan dengan demikian kedua distribusi kerugian ini memiliki tingkat risiko yang sama menurut $VaR_{0.95}$. Namun, Y lebih berisiko daripada X jika kerugian ekstrem menjadi masalah utama karena X dibatasi di atas sedangkan Y tidak dibatasi. Hanya memperkirakan risiko dengan menggunakan VaR pada tingkat kepercayaan tertentu bisa menyesatkan dan mungkin tidak mencerminkan sifat sebenarnya dari risiko.
+
+Sebagai solusinya, Tail Value-at-Risk ($TVaR$) diusulkan untuk mengukur kerugian ekstrem yang berada di atas suatu tingkat $VaR$ tertentu sebagai rata-rata. Kami mendokumentasikan definisi TVaR dalam apa yang mengikuti. Untuk kesederhanaan, kami akan membatasi diri pada variabel acak positif kontinu saja, yang lebih sering digunakan dalam konteks manajemen risiko asuransi. Kami merujuk pembaca yang tertarik ke Hardy (2006) untuk diskusi yang lebih komprehensif tentang TVaR untuk variabel acak diskrit dan kontinu.
+
+Menetapkan $q ∈ (0,1)$, nilai Tail Value-at-Risk dari variabel acak (kontinu) X dirumuskan sebagai
+
+$$
+\begin{eqnarray*}
+  TVaR_q[X] &=& \mathrm{E}[X|X>VaR_q[X]],
+\end{eqnarray*}
+$$
+
+yang diasumsikan harapan eksistensi.
+
+Perhitungan $TVaR$ biasanya terdiri dari dua komponen utama - $VaR$ dan rata-rata kerugian yang berada di atas $VaR$. $TVaR$ dapat dihitung melalui sejumlah formula. Pertimbangkan variabel acak positif kontinu X, untuk kenyamanan notional, mari kita tulis $\pi_q=VaR_q[X]$. Sesuai definisi, $TVaR$ dapat dihitung melalui
+
+$$
+\begin{eqnarray}
+TVaR_{q}[X]=\frac{1}{(1-q)}\int_{\pi_q}^{\infty}xf_X(x)dx.
+\tag{10.5}
+\end{eqnarray}
+$$
+
+
+#### Example 10.3.6.  TVaR for a normal distribution
+
+Dengan mempertimbangkan variabel acak kerugian asuransi $X\sim Normal (\mu,\sigma^2)$ dengan μ ∈ R dan $σ > 0$. Mencari ekspresi $TVaR$
+
+Biarkan Z adalah variabel acak normal standar. Untuk $q∈(0,1)$ , maka $TVaR$ dari $X$ dapat dihitung melalui
+
+$$
+\begin{eqnarray*}
+  TVaR_q[X] &=& \mathrm{E}[X|X>VaR_q[X]]\\
+&=&\mathrm{E}[\sigma Z+\mu|\sigma Z+\mu>VaR_q[X]]\\
+&=& \sigma\mathrm{E}[Z|Z>(VaR_q[X]-\mu)/\sigma]+\mu\\
+&\overset{(1)}{=}& \sigma\mathrm{E}[Z|Z>VaR_q[Z]]+\mu,
+\end{eqnarray*}
+$$
+
+dimana $\overset{(1)}{=}$ berlaku karena hasil yang dilaporkan pada contoh diatas. Selanjutnya, kita beralih untuk mempelajari $TVaR_q[Z]=\mathrm{E}[Z|Z>VaR_q[Z]]$ dengan $\omega(q)=(\Phi^{-1}(q))^2/2$, maka kami dapat 
+
+$$
+\begin{eqnarray*}
+  (1-q)\ TVaR_q[Z] &=& \int_{\Phi^{-1}(q)}^{\infty} z \frac{1}{\sqrt{2\pi}} e^{-z^2/2}dz\\
+&=& \int_{\omega(q)}^{\infty}  \frac{1}{\sqrt{2\pi}} e^{-x}dx\\
+&=& \frac{1}{\sqrt{2\pi}} e^{-\omega(q)}\\
+&=& \phi(\Phi^{-1}(q)).
+\end{eqnarray*}
+$$
+Maka 
+
+$TVaR_q[X]=\sigma\frac{\phi(\Phi^{-1}(q))}{1-q}+\mu.$
+
+Sebelumya telah diseebutkan pada subseksi sebelumnya bahwa VaR dari fungsi acak yang ketat meningkat sama dengan fungsi VaR dari variabel acak asli.Seseorang dapat menunjukkan bahwa TVaR dari transformasi linier variabel acak yang ketat meningkat sama dengan fungsi VaR dari variabel acak asli. Hal ini disebabkan oleh sifat linearitas dari harapan. Namun, temuan tersebut tidak dapat diperluas ke fungsi non-linear. Contoh variabel acak lognormal berikut menjadi contoh yang berlawanan.
+
+#### Example 10.3.7.  TVaR of a lognormal distribution
+
+Dengan memertimbangkan sebuah variabel acak kerugian asuransi $X$ dengan distribusi lognormal dengan parameter $μ∈R$ dan $σ>0$. dapat menunjukkan
+
+$TVaR_q[X] = \frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\Phi^{-1}(q)-\sigma).$
+
+*JAWAB*
+
+Dengan mengingat bahwa pdf dari distribusi lognormal dirumuskan sebagai
+
+$$
+f_X(x)=\frac{1}{\sigma\sqrt{2\pi} x}\exp\{-(\log x-\mu )^2/2\sigma^2 \}, \text{ for } x>0.
+$$
+
+
+Menetapkan $q∈(0,1)$, maka $TVaR$ dari $X$ dapat dihitung melalui
+
+$$
+\begin{eqnarray}
+  TVaR_q[X] &=& \frac{1}{(1-q)} \int_{\pi_q}^{\infty} x f_X(x)dx \nonumber\\
+&=&\frac{1}{(1-q)} \int_{\pi_q}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{(\log x-\mu)^2}{2\sigma^2}
+\right\}dx\nonumber\\
+&\overset{(1)}{=}&\frac{1}{(1-q)} \int_{\omega(q)}^{\infty} \frac{1}{\sqrt{2\pi}} e^{ -\frac{1}{2}w^2+\sigma w+\mu}dw\nonumber\\
+&=&\frac{e^{\mu+\sigma^2/2}}{(1-q)} \int_{\omega(q)}^{\infty} \frac{1}{\sqrt{2\pi}} e^{ -\frac{1}{2}(w-\sigma)^2}dw\nonumber\\
+&=&\frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\omega(q)-\sigma),
+\tag{10.6}
+\end{eqnarray}
+$$
+
+Di sini, $\overset{(1)}{=}$ terpenuhi dengan menerapkan perubahan variabel $w=(logx−μ)/σ$, dan $ω(q)=(logπq−μ)/σ$. Dengan memanggil rumus $VaR$ untuk variabel acak lognormal dapat menyederhanakan menjadi 
+
+$$
+\begin{eqnarray*}
+  TVaR_q[X] &=& \frac{e^{\mu+\sigma^2/2}}{(1-q)} \Phi(\Phi^{-1}(q)-\sigma).
+\end{eqnarray*}
+$$
+$TVaR$ dari variabel acak lognormal bukanlah eksponensial dari $TVaR$ dari variabel acak normal.
+
+Untuk distribusi di mana fungsi distribusi kelangsungan hidupnya lebih mudah untuk dikerjakan, dapat menerapkan teknik integrasi dengan bagian (asumsikan rata-ratanya terbatas) untuk menulis ulang persamaan (10.5) sebagai
+
+$$
+\begin{eqnarray*}
+TVaR_{q}[X]&=&\left[-x S_X(x)\big |_{\pi_q}^{\infty}+\int_{\pi_q}^{\infty}S_X(x)dx\right]\frac{1}{(1-q)}\\
+&=& \pi_q +\frac{1}{(1-q)}\int_{\pi_q}^{\infty}S_X(x)dx.
+\end{eqnarray*}
+$$
+
+#### Example 10.3.8.  TVaR of an exponential distribution
+Pertimbangkan sebuah variabel acak kerugian asuransi X dengan distribusi eksponensial yang memiliki parameter θ untuk $θ>0$. Mencari suatu ekspresi untuk TVaR.
+
+**JAWAB**
+
+Dari subseksi sebelumnya, telah melihat bahwa
+
+$\pi_q=-\theta[\log(1-q)].$
+
+Dengan mempertimbangkan $TVaR$:
+
+$$
+\begin{eqnarray*}
+  TVaR_q[X] &=& \pi_q+\int_{\pi_q}^{\infty} e^{-x/\theta}dx/(1-q)\\
+&=& \pi_q+\theta e^{-\pi_q/\theta}/(1-q)\\
+&=& \pi_q+\theta.
+\end{eqnarray*}
+$$
+
+Pengukuran berikut erat kaitannya dengan TVaR
+Juga dapat membantu untuk menyatakan $TVaR$ dalam bentuk nilai harapan terbatas. Secara khusus, kita memiliki
+
+$$
+\begin{eqnarray}
+  TVaR_q[X] &=& \int_{\pi_q}^{\infty} (x-\pi_q+\pi_q)f_X(x)dx/(1-q) \nonumber\\
+&=& \pi_q+\frac{1}{(1-q)}\int_{\pi_q}^{\infty} (x-\pi_q)f_X(x)dx\nonumber\\
+&=& \pi_q+e_X(\pi_q)\nonumber\\
+&=& \pi_q +\frac{\left({\mathrm{E}[X]-\mathrm{E}[X\wedge\pi_q]}\right)}{(1-q)},
+\tag{10.7}
+\end{eqnarray}
+$$
+
+
+Dimana $e_X(d)=\mathrm{E}[X-d|X>d]$ untuk $d>0$ menyatakan fungsi kerugian berlebih rata-rata. Untuk banyak distribusi parametrik yang umum digunakan, rumus-rumus untuk menghitung $E[X$] dan $E[X∧π_q]$
+dapat ditemukan dalam tabel distribusi.
+
+#### Example 10.3.9.  TVaR of a Pareto distribution 
+
+Pertimbangkan sebuah variabel acak kerugian $X\sim Pareto(\theta,\alpha)$ dengan $θ>0$ dan $α>0$. Fungsi distribusi kumulatif (cdf) dari X diberikan oleh
+
+$F_X(x)=1-\left(\frac{\theta}{\theta+x} \right)^{\alpha}, \text{ for } x>0 .$
+
+menetapkan $q∈(0,1)$ dan atur $F_X(π_q)=q$
+, maka kita dapat dengan mudah memperoleh
+
+$$
+\begin{eqnarray}
+\pi_q=\theta\left[(1-q)^{-1/\alpha}-1 \right].
+\tag{10.8}
+\end{eqnarray}
+$$
+
+Sebelumnya diketahui bahwa
+
+$$
+\mathrm{E}[X]=\frac{\theta}{\alpha-1},
+$$
+
+dan
+
+$$
+\mathrm{E}[X\wedge \pi_q]=\frac{\theta}{\alpha-1}\left[
+1-\left(\frac{\theta}{\theta+\pi_q}\right)^{\alpha-1}
+\right].
+$$
+
+Dengan memanfaatkan persamaan sebelumnya menghasilkan
+
+$$
+\begin{eqnarray*}
+  TVaR_q[X] &=& \pi_q+\frac{\theta}{\alpha-1} \frac{(\theta/(\theta+\pi_q))^{\alpha-1}}
+{(\theta/(\theta+\pi_q))^{\alpha}}\\
+&=&\pi_q +\frac{\theta}{\alpha-1}\left( \frac{\pi_q+\theta}{\theta} \right)\\
+&=& \pi_q+\frac{\pi_q+\theta}{\alpha-1},
+\end{eqnarray*}
+$$
+
+Menyesuaikan $q∈(0,1)$, nilai risiko bersyarat untuk sebuah variabel acak X diformulasikan sebagai
+
+$$CVaR_q[X] = \frac{1}{1-q}\int_{q}^{1} VaR_{\alpha}[X]\ d\alpha .$$
+
+Nilai risiko bersyarat juga dikenal sebagai rata-rata nilai risiko ($AVaR$) dan kegagalan yang diharapkan ($ES$). Dapat ditunjukkan bahwa $CVaR_q[X] = TVaR_q[X]$ ketika $\Pr(X=VaR_q[X])=0$, yang berlaku untuk variabel acak kontinu. Artinya, jika X kontinu, maka melalui perubahan variabel, kita dapat menulis ulang persamaan sebagai
+
+$$
+\begin{eqnarray}
+  TVaR_{q}[X] &=& \frac{1}{1-q}\int_{q}^{1} VaR_{\alpha}[X]\ d\alpha.
+  \tag{10.9}
+\end{eqnarray}
+$$
+
+Formula alternatif (10.9) ini memberitahu bahwa $TVaR$ adalah rata-rata dari $VaR_α[X]$ dengan tingkat kepercayaan yang bervariasi di atas $α∈[q,1]$. Oleh karena itu, $TVaR$ secara efektif menyelesaikan sebagian besar keterbatasan dari VaR yang diuraikan pada subbab sebelumnya. Pertama, karena efek rata-rata, TVaR mungkin kurang sensitif terhadap perubahan tingkat kepercayaan dibandingkan dengan VaR. Kedua, semua kerugian ekstrem yang berada di atas peristiwa terburuk $(1-q)\times 100\%$ yang paling mungkin dihitung.
+
+Dalam hal ini, seseorang dapat melihat bahwa untuk setiap $q∈(0,1)$
+
+$TVaR_q[X]\geq VaR_q[X].$
+
+Ketiga dan mungkin yang paling penting, TVaR adalah ukuran risiko koheren dan dengan demikian mampu menangkap efek diversifikasi dari portofolio asuransi dengan lebih akurat. 
+
+
+## Reinsurance
+
+reasuransi adalah asuransi yang dibeli oleh perusahaan asuransi. Berbeda dengan asuransi yang dibeli oleh individu, reasuransi biasanya dirancang khusus untuk pembeli dan memiliki fleksibilitas kontrak yang lebih besar. Ada dua jenis reasuransi, yaitu reasuransi proporsional dan non-proporsional. Reasuransi proporsional melibatkan persentase tertentu dari kerugian dan premi yang diambil oleh perusahaan reasuransi. Sedangkan reasuransi non-proporsional mencakup kontrak stop-loss dan excess of loss.
+
+semua jenis kontrak reasuransi membagi risiko total menjadi dua bagian, yaitu risiko yang ditanggung oleh perusahaan reasuransi dan risiko yang ditahan oleh perusahaan asuransi. Dalam hal ini, $X$ adalah risiko total, $Y_{reinsurer}$ adalah risiko yang ditanggung oleh perusahaan reasuransi, dan $Y_{insurer}$ adalah risiko yang ditahan oleh perusahaan asuransi. Dinyatakan dalam $X = Y_{insurer}+Y_{reinsurer}$
+
+struktur matematika dasar dari sebuah perjanjian reasuransi sama dengan modifikasi cakupan dalam asuransi personal yang diperkenalkan dalam Bab 3. Dalam reasuransi proporsional, transformasi $Y_{insurer} = cX$ identik dengan penyesuaian co-insurance dalam asuransi personal. Dalam reasuransi stop-loss, transformasi $Y_{reinsurer} = max(0, X-M)$ sama dengan pembayaran asuransi dengan nilai retensi (deductible) $M$, sedangkan $Y_{insurer} = min(X, M)$ setara dengan apa yang dibayarkan oleh pemegang polis dengan nilai retensi $M$.
+
+Namun, dalam aplikasi praktis matematika, fokus dalam asuransi personal umumnya pada harapan sebagai bahan utama yang digunakan dalam penetapan harga. Sedangkan dalam reasuransi, fokusnya adalah pada seluruh distribusi risiko, karena peristiwa ekstrim menjadi perhatian utama untuk stabilitas keuangan perusahaan asuransi dan reasuransi.
+
+### Proportional Reinsurance
+
+Jumlah yang dibayarkan oleh perusahaan asuransi utama dan perusahaan reasuransi dituliskan sebagai
+
+\begin{equation}
+Y_{insurer} = c X \ \ \text{and} \ \ \ Y_{reinsurer} = (1-c) X,
+\end{equation}
+ 
+dimana $c\in (0,1)$ menunjukkan proporsi yang disimpan oleh perusahaan asuransi. Perhatikan bahwa $Y_{insurer}+Y_{reinsurer}=X$
+
+contoh 10.4.1 akan menunjukkan bagaimana perjanjian quota-share mempengaruhi distribusi kerugian melalui demonstrasi $r$ singkat menggunakan simulasi. Gambar yang disertakan memberikan bentuk relatif dari distribusi kerugian total, bagian yang ditahan oleh perusahaan asuransi, dan bagian yang ditanggung oleh perusahaan reasuransi.
+
+```{r}
+set.seed(2018)
+theta = 1000
+alpha = 3
+nSim = 10000
+library(actuar)
+X <-  rpareto(nSim, shape = alpha, scale = theta)
+
+par(mfrow=c(1,3))
+plot(density(X), xlim=c(0,3*theta), ylim=c(0,0.008), main="Total Loss", xlab="Losses")
+plot(density(0.75*X), xlim=c(0,3*theta), ylim=c(0,0.008), main="Insurer (75%)", xlab="Losses")
+plot(density(0.25*X), xlim=c(0,3*theta), ylim=c(0,0.008), main="Reinsurer (25%)", xlab="Losses")
+```
+
+#### Quota Share is Desirable for Reinsurers
+
+Kontrak bagian kuota (quota share) sangat diinginkan bagi reinsurer. Untuk melihat ini, asumsikan bahwa perusahaan asuransi dan reinsurer ingin memasuki kontrak untuk berbagi total kerugian $X$ 
+
+\begin{equation}
+Y_{insurer}=g(X) \ \ \ \text{and} \ \ \ \ Y_{reinsurer}=X-g(X),
+\end{equation}
+ 
+Dalam kontrak quota share, diasumsikan ada sebuah fungsi generik $g(\cdot)$ (dikenal sebagai fungsi retensi) yang digunakan untuk membagi kerugian antara perusahaan asuransi dan reinsurer. Fungsi retensi tersebut harus memastikan bahwa perusahaan asuransi tidak mempertahankan lebih banyak kerugian daripada yang sebenarnya terjadi, sehingga hanya fungsi yang memenuhi $g(x) ≤ x$ yang dianggap. Selanjutnya, diasumsikan bahwa perusahaan asuransi hanya peduli dengan variabilitas klaim yang dipertahankan dan tidak memperdulikan pilihan fungsi $g$ selama $variansi (Y_{insurer})$ tetap sama dan sama dengan $Q$, sebagai contoh. Kemudian, hasil berikut menunjukkan bahwa kontrak reasuransi quota share meminimalkan ketidakpastian reinsurer sebagaimana diukur dengan $Var(Y_{reinsurer})$.
+
+Proposisi. Misalkan $Var(Y_{insurer}) =Q$ maka $Var((1-c)X) \le Var (g(X))$ untuk semua $g(\cdot)$ sehingga $E[g(X)]=K$ dimana $c=Q/Var(X)$
+
+Proposisi ini memiliki daya tarik secara intuitif - dengan asuransi quota share, reinsurer membagi tanggung jawab untuk klaim yang sangat besar pada ekor distribusi. Ini berbeda dengan perjanjian non-proportional di mana reinsurer bertanggung jawab atas klaim yang sangat besar.
+
+#### Optimizing Quota Share Agreements for Insurers
+
+Dalam kasus di mana ada $n$ risiko dalam suatu portofolio, di mana setiap risiko dinyatakan oleh $X_i$, kita dapat mempertimbangkan variasi dari kesepakatan kuota bersama di mana jumlah yang ditahan oleh perusahaan asuransi dapat bervariasi dengan setiap risiko, disebut ci. Dalam hal ini, bagian perusahaan asuransi dari risiko portofolio adalah $Y_{insurer} = \sum_{i=1}^n c_i X_i$. Kami mencari nilai-nilai $c_i$ yang meminimalkan $Var(Y_{insurer})$ dengan batasan bahwa $E(Y_{insurer}) = K$. Ini berarti bahwa perusahaan asuransi ingin mempertahankan pendapatan setidaknya sebesar konstanta $K$ dan sejalan dengan batasan ini, ingin meminimalkan ketidakpastian risiko yang ditahan dalam hal varians.
+
+Kasus ini dapat diterapkan pada berbagai aplikasi di mana risiko individu dapat didefinisikan sebagai risiko kebijakan atau klaim individu atau subportofolio, tergantung pada aplikasi spesifik. Sebagai contoh, perusahaan asuransi dapat membagi portofolionya menjadi subportofolio yang terdiri dari beberapa jenis bisnis, seperti (1) mobil pribadi, (2) mobil komersial, (3) pemilik rumah, (4) kompensasi pekerja, dan lain-lain.
+
+Dari hasil perhitungan matematika, diketahui bahwa konstanta untuk risiko ke-$i$, $c_i$, berkorelasi dengan rasio $\frac{E(X_i)}{Var(X_i)}$. Secara intuitif, jika $E(X_i)$ lebih besar, maka nilai $c_i$ akan semakin besar pula, dan sebaliknya, jika $Var(X_i)$ semakin besar, maka nilai $c_i$ akan semakin kecil. Faktor pengali proporsional ditentukan oleh persyaratan pendapatan $E(Y_{insurer})=K$. Contoh yang diberikan membantu memahami hubungan ini.
+
+Contohnya, terdapat tiga risiko yang masing-masing memiliki distribusi Pareto dengan parameter yang berbeda.
+
+- $\alpha_1 =3$, \theta_1=1000 untuk resiko pertama $X_1$,
+- $\alpha_2 =3$, \theta_2=2000 untuk resiko kedua $X_2$, dan
+- $\alpha_3 =4$, \theta_3=3000 untuk resiko ketiga $X_3$.
+
+Grafik disediakan untuk menunjukkan nilai $c_1$, $c_2$, dan $c_3$ untuk pendapatan yang dibutuhkan sebesar $K$. Perlu diperhatikan bahwa nilai-nilai ini meningkat secara linear dengan $K$.
+
+solusi:
+```{r}
+theta1 = 1000; theta2 = 2000; theta3 = 3000;
+alpha1 = 3; alpha2 = 3; alpha3 = 4;
+library(actuar)
+propnfct <- function(alpha,theta){
+  mu    <- mpareto(shape=alpha, scale=theta, order=1)
+  var   <- mpareto(shape=alpha, scale=theta, order=2) - mu^2
+  mu/var
+}
+temp <- propnfct(alpha1, theta1)*mpareto(shape=alpha1, scale=theta1, order=1)+
+        propnfct(alpha2, theta2)*mpareto(shape=alpha2, scale=theta2, order=1)+
+        propnfct(alpha3, theta3)*mpareto(shape=alpha3, scale=theta3, order=1)  
+KVec <- seq(100, 2500, length.out=20)
+Lambdavec <- 2*KVec/temp
+c1 <- propnfct(alpha1, theta1)
+c2 <- propnfct(alpha2, theta2)
+c3 <- propnfct(alpha3, theta3)
+c1Vec <- c2Vec <- c3Vec <- 0*KVec 
+for (j in 1:20) {
+  c1Vec[j] <- (Lambdavec[j]/2) * propnfct(alpha1, theta1)
+  c2Vec[j] <- (Lambdavec[j]/2) * propnfct(alpha2, theta2)
+  c3Vec[j] <- (Lambdavec[j]/2) * propnfct(alpha3, theta3)
+  }
+plot(KVec, c1Vec, type="l", ylab="proportion", xlab="required revenue (K)", ylim=c(0,1))
+lines(KVec, c2Vec)
+lines(KVec, c3Vec)
+text(1200,0.80, expression(c[1]))
+text(2000,0.75, expression(c[2]))
+text(1500,0.30, expression(c[3]))
+```
+
+
+### Non-Proportional Reinsurance
+
+#### The Optimality of Stop-Loss Insurance
+
+Dalam sebuah perjanjian stop-loss, asuransi menetapkan level retensi $M (> 0)$ dan membayar seluruh klaim untuk nilai $X ≤ M$. Selanjutnya, untuk klaim dengan nilai $X > M$, asuransi primer membayar $M$ dan reasuransi membayar sisanya, yaitu $X - M$. Oleh karena itu, asuransi menanggung risiko sebesar $M$. Singkatnya, jumlah yang dibayar oleh asuransi primer dan reasuransi adalah sebagai berikut:
+
+\begin{equation}
+Y_{insurer} =
+\begin{cases}
+X & \text{for } X \le M\\
+M & \text{for } X >M \\
+\end{cases} \ \ \ \ = \min(X,M) = X \wedge M
+\end{equation}
+
+dan
+
+\begin{equation}
+Y_{reinsurer} =
+\begin{cases}
+0 & \text{for } X \le M\\
+X- M &  \text{for } X >M \\
+\end{cases} \ \ \ \  = \max(0,X-M) 
+\end{equation}
+
+sama seperti sebelumnya $Y_{insurer}+Y_{reinsurer}=X$
+
+Kontrak tipe stop-loss sangat diinginkan oleh perusahaan asuransi. Dalam hal ini, perusahaan asuransi dan reasuransi ingin memasuki kontrak sehingga $Y_{insurer} = g(X)$ dan $Y_{reinsurer} = X - g(X)$ untuk beberapa fungsi retensi generik $g(\cdot)$. Dengan asumsi bahwa perusahaan asuransi hanya peduli tentang variabilitas klaim yang disimpan dan tidak peduli dengan pilihan $g$ selama $Var(Y_{insurer})$ dapat diminimalkan. Kembali, kita mengenakan batasan bahwa $E(Y_{insurer}) = K$ ; perusahaan asuransi perlu mempertahankan pendapatan $K$. Dalam rangka untuk memenuhi batasan ini, perusahaan asuransi ingin meminimalkan ketidakpastian risiko yang disimpan (sebagaimana diukur oleh varians). Kemudian, hasil berikut menunjukkan bahwa perjanjian reasuransi stop-loss meminimalkan ketidakpastian reinsurer sebagaimana diukur oleh $Var(Y_{reinsurer})$.
+
+Proposisi. Anggaplah $E(Y_{insurer})=K$. Maka, $Var(X\wedge M)\le Var(g(X))$ untuk semua $g(\cdot)$, di mana $M$ adalah nilai sedemikian rupa sehingga $E(X\wedge M)=K$.
+
+#### Excess of Loss
+
+Dalam reasuransi non-proporsional, terdapat jenis polis excess of loss. Dalam polis ini, risiko total $X$ diasumsikan terdiri dari $n$ risiko terpisah $X_1,...,X_n$, dimana masing-masing risiko tersebut memiliki batas atas, misalnya $M_i$. Pada polis ini, perusahaan asuransi menahan risiko
+
+\begin{equation}
+Y_{insurer} = \sum_{i=1}^n Y_{i,insurer}, \ \ \ \ \text{dengan} \ \ \ \ \ Y_{i,insurer} = X_i \wedge M_i.
+\end{equation}
+
+Sedangkan, untuk bagian risiko yang melebihi batas tersebut, reinsurer bertanggung jawab menanggungnya, yaitu $Y_{reinsurer}=X−Y_{insurer}$. Batas retensi dapat bervariasi untuk setiap risiko atau dapat sama untuk semua risiko, yaitu $M_i=M$ untuk semua $i$.
+
+#### Optimal Choice for Excess of Loss Retention Limits
+
+apa pilihan terbaik dari batas retensi excess of loss $M_i$? Untuk menjawab pertanyaan ini, kita perlu mencari nilai-nilai $M_i$ yang meminimalkan $Var(Y_{insurer})$ dengan mempertahankan konstrain bahwa $E(Y_{insurer})=K$. Dalam rangka mempertahankan konstrain pendapatan ini, perusahaan asuransi ingin meminimalkan ketidakpastian risiko yang dipertahankan (yang diukur dengan variansinya).
+
+Dari perhitungan matematika, terungkap bahwa selisih antara batas retensi dan klaim rata-rata yang diharapkan oleh insurer, $M_i−E(X_i\wedge M_i)$, adalah sama untuk semua risiko. Hal ini secara intuitif menarik.
+
+Contoh 10.4.3. Excess of loss untuk tiga risiko Pareto. Pertimbangkan tiga risiko yang memiliki distribusi Pareto, masing-masing memiliki set parameter yang berbeda (sehingga mereka independen tetapi tidak identik). Gunakan set parameter yang sama seperti pada Contoh 10.4.2. Untuk contoh ini:
+
+A. Tunjukkan secara numerik bahwa batas retensi optimal $M_1$, $M_2$, dan $M_3$ (dikurangi klaim rata-rata yang diharapkan oleh insurer, $M_i−E(X_i\wedge M_i))$ adalah sama untuk semua risiko, seperti yang kita turunkan secara teoritis.
+
+B. Selanjutnya, bandingkan secara grafis distribusi total risiko dengan risiko yang disimpan oleh insurer dan oleh reinsurer.
+
+solusi:
+
+A. mengoptimasi Lagrangian menggunakan paket R alabama untuk Algoritma Minimasi Barrier Adaptif Lagrangian.
+
+```{r}
+theta1 = 1000;theta2 = 2000;theta3 = 3000;
+alpha1 = 3;   alpha2 = 3;   alpha3 = 4;
+Pmin <- 2000
+library(actuar)
+VarFct <- function(M){
+  M1=M[1];M2=M[2];M3=M[3]
+  mu1    <- levpareto(limit=M1,shape=alpha1, scale=theta1, order=1)
+  var1   <- levpareto(limit=M1,shape=alpha1, scale=theta1, order=2)-mu1^2
+  mu2    <- levpareto(limit=M2,shape=alpha2, scale=theta2, order=1)
+  var2   <- levpareto(limit=M2,shape=alpha2, scale=theta2, order=2)-mu2^2
+  mu3    <- levpareto(limit=M3,shape=alpha3, scale=theta3, order=1)
+  var3   <- levpareto(limit=M3,shape=alpha3, scale=theta3, order=2)-mu3^2
+  varFct <- var1 +var2+var3
+  meanFct <- mu1+mu2+mu3
+  c(meanFct,varFct)
+  }
+f <- function(M){VarFct(M)[2]}
+h <- function(M){VarFct(M)[1] - Pmin}
+library(alabama)
+par0=rep(1000,3)
+op <- auglag(par=par0,fn=f,hin=h,control.outer=list(trace=FALSE))
+```
+
+Batas retensi optimal $M_1$, $M_2$, dan $M_3$ yang menghasilkan batas retensi dikurangi klaim yang diharapkan dari perusahaan asuransi, $M_i-E(X_i\wedge M_i)$, sama untuk semua risiko, seperti yang kita dapatkan secara teoritis.
+
+```{r}
+M1star = op$par[1];M2star = op$par[2];M3star = op$par[3]
+M1star -levpareto(M1star,shape=alpha1, scale=theta1,order=1)
+```
+```{r}
+M2star -levpareto(M2star,shape=alpha2, scale=theta2,order=1)
+```
+```{r}
+M3star -levpareto(M3star,shape=alpha3, scale=theta3,order=1)
+```
+
+B. membandingkan secara grafis distribusi risiko total dengan yang dipertahankan oleh perusahaan asuransi dan perusahaan reasuransi.
+
+```{r}
+set.seed(2018)
+nSim = 10000
+library(actuar)
+Y1 <- rpareto(nSim, shape = alpha1, scale = theta1)
+Y2 <- rpareto(nSim, shape = alpha2, scale = theta2)
+Y3 <- rpareto(nSim, shape = alpha3, scale = theta3)
+YTotal <- Y1 + Y2 + Y3
+Yinsur <-  pmin(Y1,M1star)+pmin(Y2,M2star)+pmin(Y3,M3star)
+Yreinsur <- YTotal - Yinsur
+
+par(mfrow=c(1,3))
+plot(density(YTotal),   xlim=c(0,10000), main="Total Loss", xlab="Losses")
+plot(density(Yinsur),   xlim=c(0,10000), main="Insurer",    xlab="Losses")
+plot(density(Yreinsur), xlim=c(0,10000), main="Reinsurer",  xlab="Losses")
+```
+
+### Additional Reinsurance Treaties
+
+#### Surplus Share Proportional Treaty
+
+Jenis perjanjian reasuransi proposional lainnya adalah surplus share, yang umum digunakan dalam asuransi properti komersial. 
+
+- Perjanjian surplus share memungkinkan reinsured untuk membatasi eksposurnya pada risiko dengan jumlah tertentu (retained line). 
+- Reinsurer mengambil bagian dari risiko secara proporsional terhadap jumlah nilai yang diasuransikan melebihi retained line, hingga batas tertentu (dinyatakan sebagai kelipatan dari retained line, atau jumlah line).
+
+Sebagai contoh, jika retained line adalah 100.000 dan batas yang diberikan adalah 4 line (400.000), maka jika $X$ adalah kerugian, bagian dari reinsurer adalah $min(400000,(X−100000)_+)$.
+
+#### Layers of Coverage
+
+Dalam reasuransi non-proporsional stop-loss, kita dapat memperluas kontrak dengan menambahkan pihak lain ke dalam kontrak. Sebagai contoh, selain hanya ada perusahaan asuransi dan reasuransi atau perusahaan asuransi dan pemegang polis, kita bisa mempertimbangkan situasi di mana ada tiga pihak, yaitu pemegang polis, perusahaan asuransi, dan reasuransi, yang sepakat untuk berbagi risiko. Secara umum, kita dapat mempertimbangkan keberadaan $k$ pihak. Jika $k = 3$, maka bisa jadi perusahaan asuransi dan dua reasuransi yang berbeda.
+
+Contoh 10.4.4. Lapisan perlindungan untuk tiga pihak.
+
+Misalkan ada $k = 3$ pihak. Pihak pertama bertanggung jawab atas klaim pertama senilai 100, pihak kedua bertanggung jawab atas klaim dari 100 hingga 3000, dan pihak ketiga bertanggung jawab atas klaim di atas 3000. Jika ada empat klaim masing-masing senilai 50, 600, 1800, dan 4000, maka klaim tersebut akan dialokasikan ke pihak-pihak sebagai berikut:
+
+```{r}
+library(kableExtra)
+
+tabel <- data.frame(
+  Buyer = c("0-100", "100-3000", "3000-∞", "total"),
+  claim_1 = c(50, 0, 0, 50),
+  claim_2 = c(100, 500, 0, 600),
+  claim_3 = c(100, 1700, 0, 1800),
+  claim_4 = c(100, 2900, 1000,4000),
+  total = c(350, 5100, 1000, 6450)
+)
+
+kable(tabel, align = "c", caption = "Tabel Klaim") %>%
+  kable_styling(bootstrap_options = "striped")
+```
+
+Untuk menangani situasi umum dengan $k$ kelompok, partisi garis bilangan real positif menjadi $k$ interval menggunakan titik potong
+
+\begin{equation}
+0 = M_0 < M_1 < \cdots < M_{k-1} < M_k = \infty.
+\end{equation}
+
+Perhatikan bahwa interval ke-$j$ adalah $(M_{j−1},M_j]$. Sekarang biarkan $Y_j$ menjadi jumlah risiko yang dibagi oleh pihak ke-$j$. Untuk mengilustrasikan, jika kerugian $x$ adalah sehingga $M_{j−1}<x≤M_j$, maka
+
+\begin{equation}
+\left(\begin{array}{c}
+    Y_1\\ Y_2 \\ \vdots \\ Y_j \\Y_{j+1} \\ \vdots \\Y_k
+    \end{array}\right)
+    =\left(\begin{array}{c}
+    M_1-M_0 \\ M_2-M_1  \\ \vdots \\ x-M_{j-1}  \\ 0 \\ \vdots \\0
+    \end{array}\right)
+\end{equation}
+
+kita dapat menuliskannya sebagai
+
+\begin{equation}
+Y_j = \min(X,M_j) - \min(X,M_{j-1}) .
+\end{equation}
+
+Dengan ungkapan $Y_j=min(X,M_j)−min(X,M_{j−1})$, kita dapat melihat bahwa pihak ke-$j$ bertanggung jawab atas klaim dalam interval $(M_{j−1},M_j]$. Dengan ini, Anda dapat memeriksa bahwa $X=Y_1+Y_2+⋯+Y_k$. Seperti yang ditekankan dalam contoh berikut, kami juga mencatat bahwa pihak-pihak yang terlibat tidak harus berbeda.
+
+#### Portfolio Management Example
+
+Banyak variasi kontrak yang mendasar mungkin terjadi. Untuk satu ilustrasi lagi, pertimbangkan yang berikut ini.
+
+Contoh 10.4.6. Manajemen Portofolio. Anda adalah Kepala Petugas Risiko dari sebuah perusahaan telekomunikasi. Perusahaan Anda memiliki beberapa risiko properti dan tanggung jawab. Kami akan mempertimbangkan:
+
+$X_1$ - gedung, dimodelkan menggunakan distribusi gamma dengan rata-rata 200 dan parameter skala 100.
+$X_2$ - kendaraan bermotor, dimodelkan menggunakan distribusi gamma dengan rata-rata 400 dan parameter skala 200.
+$X_3$ - risiko direktur dan pejabat eksekutif, dimodelkan menggunakan distribusi Pareto dengan rata-rata 1000 dan parameter skala 1000.
+$X_4$ - risiko siber, dimodelkan menggunakan distribusi Pareto dengan rata-rata 1000 dan parameter skala 2000.
+
+Sebutkan total risiko sebagai $X = X_1 + X_2 + X_3 + X_4$. Untuk kesederhanaan, Anda mengasumsikan bahwa risiko ini independen. (Nanti, di Bagian 14.6, kami akan mempertimbangkan kasus yang lebih kompleks dari ketergantungan.)
+
+Untuk mengelola risiko, Anda mencari perlindungan asuransi. Anda ingin mengelola jumlah bangunan dan kendaraan bermotor yang kecil secara internal, hingga M1 dan M2, masing-masing. Anda mencari asuransi untuk menutupi semua risiko lain. Secara khusus, bagian dari perusahaan asuransi adalah
+
+\begin{equation}
+Y_{insurer} = (X_1 - M_1)_+ + (X_2 - M_2)_+ + X_3 + X_4 ,
+\end{equation}
+
+sehingga risiko yang Anda tanggung adalah $Y_{retained} = X-Y_{insurer} = min(X_1,M_1)+min(X_2,M_2)$. Menggunakan deductible $M_1=100$ dan $M_2=200$:
+
+A. Tentukan jumlah klaim yang diharapkan dari (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.
+B. Tentukan persentil ke-80, ke-90, ke-95, dan ke-99 untuk (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.
+C. Bandingkan distribusi dengan memplotting densitas untuk (i) yang ditanggung, (ii) yang diterima oleh asuransi, dan (iii) jumlah keseluruhan.
+ 
+Solusi
+
+menyiapkan parameter
+```{r}
+# For the gamma distributions, use
+alpha1 <- 2;      theta1 <- 100
+alpha2 <- 2;      theta2 <- 200
+# For the Pareto distributions, use
+alpha3 <- 2;      theta3 <- 1000
+alpha4 <- 3;      theta4 <- 2000
+# Limits
+M1     <- 100
+M2     <- 200
+```
+
+dengan parameter ini, selanjutnya mensimulasikan realisasi dari risiko-risiko dalam portofolio
+
+```{r}
+# Simulate the risks
+nSim <- 10000  #number of simulations
+set.seed(2017) #set seed to reproduce work 
+X1 <- rgamma(nSim,alpha1,scale = theta1)  
+X2 <- rgamma(nSim,alpha2,scale = theta2)  
+# For the Pareto Distribution, use
+library(actuar)
+X3 <- rpareto(nSim,scale=theta3,shape=alpha3)
+X4 <- rpareto(nSim,scale=theta4,shape=alpha4)
+# Portfolio Risks
+X         <- X1 + X2 + X3 + X4
+Yretained <- pmin(X1,M1) + pmin(X2,M2)
+Yinsurer  <- X - Yretained
+```
+
+A. hasil dari jumlah ekspektasi klaim
+
+```{r}
+# Expected Claim Amounts
+ExpVec <- t(as.matrix(c(mean(Yretained),mean(Yinsurer),mean(X))))
+colnames(ExpVec) <- c("Retained", "Insurer","Total")
+round(ExpVec,digits=2)
+```
+
+B. hasil untuk kuantilnya
+
+```{r}
+# Quantiles
+quantMat <- rbind(
+  quantile(Yretained, probs=c(0.80, 0.90, 0.95, 0.99)),
+  quantile(Yinsurer,  probs=c(0.80, 0.90, 0.95, 0.99)),
+  quantile(X       ,  probs=c(0.80, 0.90, 0.95, 0.99)))
+rownames(quantMat) <- c("Retained", "Insurer","Total")
+round(quantMat,digits=2)
+```
+
+C. Berikut adalah hasil plot densitas risiko yang dipertahankan, diasuransikan, dan total portofolio.
+
+```{r}
+par(mfrow=c(1,3))
+plot(density(Yretained), xlim=c(0,500), main="Retained Portfolio Risk", xlab="Loss (Note the different horizontal scale)", ylab = "Density (Note different vertical scale)")
+plot(density(Yinsurer), xlim=c(0,15000), main="Insurer Portfolio Risk", xlab="Loss")
+plot(density(X), xlim=c(0,15000), main="Total Portfolio Risk", xlab="Loss")
+```

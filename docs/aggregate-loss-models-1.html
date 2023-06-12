@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 16 Aggregate Loss Models | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 16 Aggregate Loss Models | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -23,14 +23,14 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-05-22" />
+<meta name="date" content="2023-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="experience-rating-using-bonus-malus.html"/>
+<link rel="prev" href="ChapBonusMalus.html"/>
 <link rel="next" href="dependence-modeling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,12 +52,101 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="toc.css" type="text/css" />
 </head>
 
 <body>
@@ -107,16 +196,104 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.1</b> modifikasi pertanggungan</a>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.1.1</b> policy deductibles</a></li>
-<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.1.2</b> 2. Policy Limit</a></li>
-<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.1.3</b> policy deductible and policy limit</a></li>
-<li class="chapter" data-level="3.1.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.1.4</b> Coinsurance and inflation</a></li>
-<li class="chapter" data-level="3.1.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.1.5</b> Reinsurance</a></li>
-<li class="chapter" data-level="3.1.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.1.6</b> Coinsurance and Reinsurance</a></li>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-nonparametrik"><i class="fa fa-check"></i><b>4.1.1</b> Estimasi Nonparametrik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#alat-untuk-pemilihan-model-dan-diagnostik"><i class="fa fa-check"></i><b>4.1.2</b> Alat untuk Pemilihan Model dan Diagnostik</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nilai-awal"><i class="fa fa-check"></i><b>4.1.3</b> Nilai Awal</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>6.1</b> Dasar-Dasar Simulasi</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>6.1.1</b> Menghasilkan Pengamatan Seragam Independen</a></li>
+<li class="chapter" data-level="6.1.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>6.1.2</b> Metode Transformasi Invers</a></li>
+<li class="chapter" data-level="6.1.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-simulasi"><i class="fa fa-check"></i><b>6.1.3</b> (6.1.3) Presisi Simulasi</a></li>
+<li class="chapter" data-level="6.1.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#simulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>6.1.4</b> Simulasi dan Inferensi Statistik</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>6.2</b> Bootstrap dan Resampling</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>6.2.1</b> Dasar-dasar Bootstrap</a></li>
+<li class="chapter" data-level="6.2.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>6.2.2</b> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
+<li class="chapter" data-level="6.2.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
+<li class="chapter" data-level="6.2.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation"><i class="fa fa-check"></i><b>6.3</b> Cross Validation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#k-fold-cross-validation"><i class="fa fa-check"></i><b>6.3.1</b> k-Fold Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#leave-one-out-cross-validation"><i class="fa fa-check"></i><b>6.3.2</b> 6.3.2 Leave-One-Out Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation-and-bootstrap"><i class="fa fa-check"></i><b>6.3.3</b> Cross-Validation and Bootstrap</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#importance-sampling"><i class="fa fa-check"></i><b>6.4</b> Importance Sampling</a></li>
+<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> 6.5.1 Metropolis Hastings</a></li>
+<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> 6.5.2 Gibbs Sampler</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+</ul></li>
+<<<<<<< HEAD
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="6" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html"><i class="fa fa-check"></i><b>6</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
@@ -147,6 +324,142 @@
 <li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
 <li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
 <li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+=======
+<li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="10.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>10.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>10.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="10.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>10.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>10.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>10.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="10.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>10.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="loss-reserving.html"><a href="loss-reserving.html#motivation"><i class="fa fa-check"></i><b>11.1</b> Motivation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="loss-reserving.html"><a href="loss-reserving.html#closed-ibnr-and-rbns-claims"><i class="fa fa-check"></i><b>11.1.1</b> Closed, IBNR, and RBNS Claims</a></li>
+<li class="chapter" data-level="11.1.2" data-path="loss-reserving.html"><a href="loss-reserving.html#why-reserving"><i class="fa fa-check"></i><b>11.1.2</b> Why Reserving?</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-data"><i class="fa fa-check"></i><b>11.2</b> Loss Reserve Data</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="loss-reserving.html"><a href="loss-reserving.html#from-micro-to-macro"><i class="fa fa-check"></i><b>11.2.1</b> From Micro to Macro</a></li>
+<li class="chapter" data-level="11.2.2" data-path="loss-reserving.html"><a href="loss-reserving.html#run-off-triangles"><i class="fa fa-check"></i><b>11.2.2</b> Run-off Triangles</a></li>
+<li class="chapter" data-level="11.2.3" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-notation"><i class="fa fa-check"></i><b>11.2.3</b> Loss Reserve Notation</a></li>
+<li class="chapter" data-level="11.2.4" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data"><i class="fa fa-check"></i><b>11.2.4</b> R Code to Summarize Loss Reserve Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="loss-reserving.html"><a href="loss-reserving.html#the-chain-ladder-method"><i class="fa fa-check"></i><b>11.3</b> The Chain-Ladder Method</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="loss-reserving.html"><a href="loss-reserving.html#the-deterministic-chain-ladder"><i class="fa fa-check"></i><b>11.3.1</b> The Deterministic Chain-Ladder</a></li>
+<li class="chapter" data-level="11.3.2" data-path="loss-reserving.html"><a href="loss-reserving.html#macks-distribution-free-chain-ladder-model"><i class="fa fa-check"></i><b>11.3.2</b> Mack’s Distribution-Free Chain-Ladder Model</a></li>
+<li class="chapter" data-level="11.3.3" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-for-chain-ladder-predictions"><i class="fa fa-check"></i><b>11.3.3</b> R code for Chain-Ladder Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="loss-reserving.html"><a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves"><i class="fa fa-check"></i><b>11.4</b> GLMs and Bootstrap for Loss Reserves</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="loss-reserving.html"><a href="loss-reserving.html#model-specification"><i class="fa fa-check"></i><b>11.4.1</b> Model Specification</a></li>
+<li class="chapter" data-level="11.4.2" data-path="loss-reserving.html"><a href="loss-reserving.html#model-estimation-and-prediction"><i class="fa fa-check"></i><b>11.4.2</b> Model Estimation and Prediction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:Intro"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:NCD"><i class="fa fa-check"></i><b>12.2</b> <em>NCD</em> System in Several Countries</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#ncd-system-in-malaysia"><i class="fa fa-check"></i><b>12.2.1</b> <em>NCD</em> System in Malaysia</a></li>
+<li class="chapter" data-level="12.2.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#ncd-systems-in-other-countries"><i class="fa fa-check"></i><b>12.2.2</b> NCD Systems in Other Countries</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:BMS"><i class="fa fa-check"></i><b>12.3</b> <em>BMS</em> and Markov Chain Model</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#transition-probability"><i class="fa fa-check"></i><b>12.3.1</b> Transition Probability</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:StatDist"><i class="fa fa-check"></i><b>12.4</b> <em>BMS</em> and Stationary Distribution</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#stationary-distribution"><i class="fa fa-check"></i><b>12.4.1</b> Stationary Distribution</a></li>
+<li class="chapter" data-level="12.4.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#r-code-for-a-stationary-distribution"><i class="fa fa-check"></i><b>12.4.2</b> <code>R</code> Code for a Stationary Distribution</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions"><i class="fa fa-check"></i><b>17.1.1</b> Likelihood and Log-likelihood Functions</a></li>
+<li class="chapter" data-level="17.1.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#properties-of-likelihood-functions"><i class="fa fa-check"></i><b>17.1.2</b> Properties of Likelihood Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>17.2</b> Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#definition-and-derivation-of-mle"><i class="fa fa-check"></i><b>17.2.1</b> Definition and Derivation of MLE</a></li>
+<li class="chapter" data-level="17.2.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#asymptotic-properties-of-mle"><i class="fa fa-check"></i><b>17.2.2</b> Asymptotic Properties of MLE</a></li>
+<li class="chapter" data-level="17.2.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.2.3</b> Use of Maximum Likelihood Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.3</b> Statistical Inference Based on Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#hypothesis-testing"><i class="fa fa-check"></i><b>17.3.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="17.3.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
+>>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
@@ -178,7 +491,7 @@
           </div>
         </div>
       </div>
-<a href="experience-rating-using-bonus-malus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ChapBonusMalus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="dependence-modeling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

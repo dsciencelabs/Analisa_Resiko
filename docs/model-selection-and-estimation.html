@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 4 Model Selection and Estimation | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 4 Model Selection and Estimation | Analisis Resiko" />
   <meta property="og:type" content="book" />
+  
   
   <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
   <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
@@ -23,7 +24,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-05-22" />
+<meta name="date" content="2023-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,6 +33,7 @@
   
 <link rel="prev" href="modeling-loss-severity.html"/>
 <link rel="next" href="aggregate-loss-models.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,15 +51,77 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="toc.css" type="text/css" />
 </head>
 
 <body>
@@ -73,50 +137,78 @@
 <li><center><img src="images/Logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html"><i class="fa fa-check"></i>Kata Pengantar</a>
+<li><a href="kata-pengantar.html#kata-pengantar" id="toc-kata-pengantar">Kata Pengantar</a>
 <ul>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#deskripsi-buku"><i class="fa fa-check"></i>Deskripsi Buku</a>
+<li><a href="kata-pengantar.html#deskripsi-buku" id="toc-deskripsi-buku">Deskripsi Buku</a>
 <ul>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#petunjuk-penggunaan"><i class="fa fa-check"></i>Petunjuk Penggunaan</a></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#manfaat"><i class="fa fa-check"></i>Manfaat</a></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#mengapa-analisa-resiko"><i class="fa fa-check"></i>Mengapa Analisa Resiko?</a></li>
+<li><a href="kata-pengantar.html#petunjuk-penggunaan" id="toc-petunjuk-penggunaan">Petunjuk Penggunaan</a></li>
+<li><a href="kata-pengantar.html#manfaat" id="toc-manfaat">Manfaat</a></li>
+<li><a href="kata-pengantar.html#mengapa-analisa-resiko" id="toc-mengapa-analisa-resiko">Mengapa Analisa Resiko?</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#ucapan-terima-kasih"><i class="fa fa-check"></i>Ucapan Terima Kasih</a></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kontributor"><i class="fa fa-check"></i>Kontributor</a></li>
-<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kritik-saran"><i class="fa fa-check"></i>Kritik &amp; Saran</a></li>
+<li><a href="kata-pengantar.html#ucapan-terima-kasih" id="toc-ucapan-terima-kasih">Ucapan Terima Kasih</a></li>
+<li><a href="kata-pengantar.html#kontributor" id="toc-kontributor">Kontributor</a></li>
+<li><a href="kata-pengantar.html#kritik-saran" id="toc-kritik-saran">Kritik &amp; Saran</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html"><i class="fa fa-check"></i><b>1</b> Pengantar Analitika Data Kerugian</a>
+<li><a href="pengantar-analitika-data-kerugian.html#pengantar-analitika-data-kerugian" id="toc-pengantar-analitika-data-kerugian"><span class="toc-section-number">1</span> Pengantar Analitika Data Kerugian</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#relevansi-analitika-dalam-aktivitas-asuransi"><i class="fa fa-check"></i><b>1.1</b> Relevansi Analitika dalam Aktivitas Asuransi</a>
+<li><a href="pengantar-analitika-data-kerugian.html#relevansi-analitika-dalam-aktivitas-asuransi" id="toc-relevansi-analitika-dalam-aktivitas-asuransi"><span class="toc-section-number">1.1</span> Relevansi Analitika dalam Aktivitas Asuransi</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#sifat-dan-relevansi-asuransi"><i class="fa fa-check"></i><b>1.1.1</b> Sifat dan Relevansi Asuransi</a></li>
-<li class="chapter" data-level="1.1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#apa-itu-analitika"><i class="fa fa-check"></i><b>1.1.2</b> Apa itu Analitika?</a></li>
-<li class="chapter" data-level="1.1.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#proses-asuransi"><i class="fa fa-check"></i><b>1.1.3</b> Proses Asuransi</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#sifat-dan-relevansi-asuransi" id="toc-sifat-dan-relevansi-asuransi"><span class="toc-section-number">1.1.1</span> Sifat dan Relevansi Asuransi</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#apa-itu-analitika" id="toc-apa-itu-analitika"><span class="toc-section-number">1.1.2</span> Apa itu Analitika?</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#proses-asuransi" id="toc-proses-asuransi"><span class="toc-section-number">1.1.3</span> Proses Asuransi</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#operasi-perusahaan-asuransi"><i class="fa fa-check"></i><b>1.2</b> Operasi Perusahaan Asuransi</a>
+<li><a href="pengantar-analitika-data-kerugian.html#operasi-perusahaan-asuransi" id="toc-operasi-perusahaan-asuransi"><span class="toc-section-number">1.2</span> Operasi Perusahaan Asuransi</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memulai-asuransi"><i class="fa fa-check"></i><b>1.2.1</b> Memulai Asuransi</a></li>
-<li class="chapter" data-level="1.2.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memperbarui-asuransi"><i class="fa fa-check"></i><b>1.2.2</b> Memperbarui Asuransi</a></li>
-<li class="chapter" data-level="1.2.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#pengelolaan-klaim-dan-produk"><i class="fa fa-check"></i><b>1.2.3</b> Pengelolaan Klaim dan Produk</a></li>
-<li class="chapter" data-level="1.2.4" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#penyisihan-klaim"><i class="fa fa-check"></i><b>1.2.4</b> Penyisihan Klaim</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.1</b> modifikasi pertanggungan</a>
-<ul>
-<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.1.1</b> policy deductibles</a></li>
-<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.1.2</b> 2. Policy Limit</a></li>
-<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.1.3</b> policy deductible and policy limit</a></li>
-<li class="chapter" data-level="3.1.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.1.4</b> Coinsurance and inflation</a></li>
-<li class="chapter" data-level="3.1.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.1.5</b> Reinsurance</a></li>
-<li class="chapter" data-level="3.1.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.1.6</b> Coinsurance and Reinsurance</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#memulai-asuransi" id="toc-memulai-asuransi"><span class="toc-section-number">1.2.1</span> Memulai Asuransi</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#memperbarui-asuransi" id="toc-memperbarui-asuransi"><span class="toc-section-number">1.2.2</span> Memperbarui Asuransi</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#pengelolaan-klaim-dan-produk" id="toc-pengelolaan-klaim-dan-produk"><span class="toc-section-number">1.2.3</span> Pengelolaan Klaim dan Produk</a></li>
+<li><a href="pengantar-analitika-data-kerugian.html#penyisihan-klaim" id="toc-penyisihan-klaim"><span class="toc-section-number">1.2.4</span> Penyisihan Klaim</a></li>
 </ul></li>
 </ul></li>
+<li><a href="frequency-modeling.html#frequency-modeling" id="toc-frequency-modeling"><span class="toc-section-number">2</span> Frequency Modeling</a>
+<ul>
+<li><a href="frequency-modeling.html#goodness-of-fit" id="toc-goodness-of-fit"><span class="toc-section-number">2.1</span> Goodness of Fit</a></li>
+</ul></li>
+<li><a href="modeling-loss-severity.html#modeling-loss-severity" id="toc-modeling-loss-severity"><span class="toc-section-number">3</span> Modeling Loss Severity</a>
+<ul>
+<li><a href="modeling-loss-severity.html#basic-distributional-quantities" id="toc-basic-distributional-quantities"><span class="toc-section-number">3.1</span> Basic Distributional Quantities</a>
+<ul>
+<li><a href="modeling-loss-severity.html#moments" id="toc-moments"><span class="toc-section-number">3.1.1</span> Moments</a></li>
+<li><a href="modeling-loss-severity.html#quantiles" id="toc-quantiles"><span class="toc-section-number">3.1.2</span> Quantiles</a></li>
+<li><a href="modeling-loss-severity.html#moment-generating-function" id="toc-moment-generating-function"><span class="toc-section-number">3.1.3</span> Moment Generating Function</a></li>
+</ul></li>
+<li><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian" id="toc-distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><span class="toc-section-number">3.2</span> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li><a href="modeling-loss-severity.html#gamma-distribution" id="toc-gamma-distribution"><span class="toc-section-number">3.2.1</span> Gamma Distribution</a></li>
+<li><a href="modeling-loss-severity.html#distribusi-pareto" id="toc-distribusi-pareto"><span class="toc-section-number">3.2.2</span> Distribusi Pareto</a></li>
+<li><a href="modeling-loss-severity.html#distribusi-weibull" id="toc-distribusi-weibull"><span class="toc-section-number">3.2.3</span> Distribusi Weibull</a></li>
+<li><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua" id="toc-distribusi-beta-umum-jenis-kedua"><span class="toc-section-number">3.2.4</span> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li><a href="modeling-loss-severity.html#methods-of-creating-new-distributions" id="toc-methods-of-creating-new-distributions"><span class="toc-section-number">3.3</span> Methods of Creating New Distributions</a>
+<ul>
+<li><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions" id="toc-functions-of-random-variables-and-their-distributions"><span class="toc-section-number">3.3.1</span> Functions of Random Variables and their Distributions</a></li>
+<li><a href="modeling-loss-severity.html#multiplication-by-a-constant" id="toc-multiplication-by-a-constant"><span class="toc-section-number">3.3.2</span> Multiplication by a Constant</a></li>
+<li><a href="modeling-loss-severity.html#raising-to-a-power" id="toc-raising-to-a-power"><span class="toc-section-number">3.3.3</span> Raising to a Power</a></li>
+<li><a href="modeling-loss-severity.html#exponentiation" id="toc-exponentiation"><span class="toc-section-number">3.3.4</span> Exponentiation</a></li>
+<li><a href="modeling-loss-severity.html#finite-mixtures" id="toc-finite-mixtures"><span class="toc-section-number">3.3.5</span> Finite Mixtures</a></li>
+<li><a href="modeling-loss-severity.html#continuous-mixtures" id="toc-continuous-mixtures"><span class="toc-section-number">3.3.6</span> Continuous Mixtures</a></li>
+</ul></li>
+<li><a href="modeling-loss-severity.html#modifikasi-pertanggungan" id="toc-modifikasi-pertanggungan"><span class="toc-section-number">3.4</span> modifikasi pertanggungan</a>
+<ul>
+<li><a href="modeling-loss-severity.html#policy-deductibles" id="toc-policy-deductibles"><span class="toc-section-number">3.4.1</span> policy deductibles</a></li>
+<li><a href="modeling-loss-severity.html#policy-limit" id="toc-policy-limit"><span class="toc-section-number">3.4.2</span> Policy Limit</a></li>
+<li><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit" id="toc-policy-deductible-and-policy-limit"><span class="toc-section-number">3.4.3</span> policy deductible and policy limit</a></li>
+<li><a href="modeling-loss-severity.html#coinsurance-and-inflation" id="toc-coinsurance-and-inflation"><span class="toc-section-number">3.4.4</span> Coinsurance and inflation</a></li>
+<li><a href="modeling-loss-severity.html#reinsurance" id="toc-reinsurance"><span class="toc-section-number">3.4.5</span> Reinsurance</a></li>
+<li><a href="modeling-loss-severity.html#coinsurance-and-reinsurance" id="toc-coinsurance-and-reinsurance"><span class="toc-section-number">3.4.6</span> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li><a href="modeling-loss-severity.html#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation"><span class="toc-section-number">3.5</span> Maximum Likelihood Estimation</a>
+<ul>
+<li><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data" id="toc-maximum-likelihood-estimators-for-complete-data"><span class="toc-section-number">3.5.1</span> Maximum Likelihood Estimators for Complete Data</a></li>
+<li><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data" id="toc-maximum-likehood-estimators-using-modified-data"><span class="toc-section-number">3.5.2</span> Maximum Likehood Estimators using Modified Data</a></li>
+</ul></li>
+</ul></li>
+<<<<<<< HEAD
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="6" data-path="menghitung-distribusi-klaim-agregat.html"><a href="menghitung-distribusi-klaim-agregat.html"><i class="fa fa-check"></i><b>6</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
@@ -147,8 +239,205 @@
 <li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
 <li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
 <li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+=======
+<li><a href="model-selection-and-estimation.html#model-selection-and-estimation" id="toc-model-selection-and-estimation"><span class="toc-section-number">4</span> Model Selection and Estimation</a>
+<ul>
+<li><a href="model-selection-and-estimation.html#nonparametric-inference" id="toc-nonparametric-inference"><span class="toc-section-number">4.1</span> Nonparametric Inference</a>
+<ul>
+<li><a href="model-selection-and-estimation.html#estimasi-nonparametrik" id="toc-estimasi-nonparametrik"><span class="toc-section-number">4.1.1</span> Estimasi Nonparametrik</a></li>
+<li><a href="model-selection-and-estimation.html#alat-untuk-pemilihan-model-dan-diagnostik" id="toc-alat-untuk-pemilihan-model-dan-diagnostik"><span class="toc-section-number">4.1.2</span> Alat untuk Pemilihan Model dan Diagnostik</a></li>
+<li><a href="model-selection-and-estimation.html#nilai-awal" id="toc-nilai-awal"><span class="toc-section-number">4.1.3</span> Nilai Awal</a></li>
+</ul></li>
+</ul></li>
+<li><a href="aggregate-loss-models.html#aggregate-loss-models" id="toc-aggregate-loss-models"><span class="toc-section-number">5</span> Aggregate Loss Models</a>
+<ul>
+<li><a href="aggregate-loss-models.html#introduction" id="toc-introduction"><span class="toc-section-number">5.1</span> Introduction</a></li>
+<li><a href="aggregate-loss-models.html#moments-and-distribution" id="toc-moments-and-distribution"><span class="toc-section-number">5.2</span> Moments and Distribution</a>
+<ul>
+<li><a href="aggregate-loss-models.html#stop-loss-insurance" id="toc-stop-loss-insurance"><span class="toc-section-number">5.2.1</span> 5.3.2 Stop-loss Insurance</a></li>
+<li><a href="aggregate-loss-models.html#actuarial-exam-question-1" id="toc-actuarial-exam-question-1"><span class="toc-section-number">5.2.2</span> * 5.3.6. Actuarial Exam Question*</a></li>
+<li><a href="aggregate-loss-models.html#actuarial-exam-question---continued" id="toc-actuarial-exam-question---continued"><span class="toc-section-number">5.2.3</span> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li><a href="aggregate-loss-models.html#analytic-results" id="toc-analytic-results"><span class="toc-section-number">5.2.4</span> 5.3.4 Analytic Results</a></li>
+<li><a href="aggregate-loss-models.html#tweedie-distribution" id="toc-tweedie-distribution"><span class="toc-section-number">5.2.5</span> 5.3.4 Tweedie Distribution</a></li>
+</ul></li>
+<li><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat" id="toc-menghitung-distribusi-klaim-agregat"><span class="toc-section-number">5.3</span> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<ul>
+<li><a href="aggregate-loss-models.html#metode-rekursif" id="toc-metode-rekursif"><span class="toc-section-number">5.3.1</span> metode rekursif</a></li>
+<li><a href="aggregate-loss-models.html#simulasi" id="toc-simulasi"><span class="toc-section-number">5.3.2</span> simulasi</a></li>
+</ul></li>
+</ul></li>
+<li><a href="simulation-and-resampling.html#simulation-and-resampling" id="toc-simulation-and-resampling"><span class="toc-section-number">6</span> Simulation and Resampling</a>
+<ul>
+<li><a href="simulation-and-resampling.html#dasar-dasar-simulasi" id="toc-dasar-dasar-simulasi"><span class="toc-section-number">6.1</span> Dasar-Dasar Simulasi</a>
+<ul>
+<li><a href="simulation-and-resampling.html#menghasilkan-pengamatan-seragam-independen" id="toc-menghasilkan-pengamatan-seragam-independen"><span class="toc-section-number">6.1.1</span> Menghasilkan Pengamatan Seragam Independen</a></li>
+<li><a href="simulation-and-resampling.html#metode-transformasi-invers" id="toc-metode-transformasi-invers"><span class="toc-section-number">6.1.2</span> Metode Transformasi Invers</a></li>
+<li><a href="simulation-and-resampling.html#presisi-simulasi" id="toc-presisi-simulasi"><span class="toc-section-number">6.1.3</span> (6.1.3) Presisi Simulasi</a></li>
+<li><a href="simulation-and-resampling.html#simulasi-dan-inferensi-statistik" id="toc-simulasi-dan-inferensi-statistik"><span class="toc-section-number">6.1.4</span> Simulasi dan Inferensi Statistik</a></li>
+</ul></li>
+<li><a href="simulation-and-resampling.html#bootstrap-dan-resampling" id="toc-bootstrap-dan-resampling"><span class="toc-section-number">6.2</span> Bootstrap dan Resampling</a>
+<ul>
+<li><a href="simulation-and-resampling.html#dasar-dasar-bootstrap" id="toc-dasar-dasar-bootstrap"><span class="toc-section-number">6.2.1</span> Dasar-dasar Bootstrap</a></li>
+<li><a href="simulation-and-resampling.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error" id="toc-presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><span class="toc-section-number">6.2.2</span> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
+<li><a href="simulation-and-resampling.html#interval-keyakinan" id="toc-interval-keyakinan"><span class="toc-section-number">6.2.3</span> Interval Keyakinan</a></li>
+<li><a href="simulation-and-resampling.html#bootstrap-parametrik" id="toc-bootstrap-parametrik"><span class="toc-section-number">6.2.4</span> Bootstrap Parametrik</a></li>
+</ul></li>
+<li><a href="simulation-and-resampling.html#cross-validation" id="toc-cross-validation"><span class="toc-section-number">6.3</span> Cross Validation</a>
+<ul>
+<li><a href="simulation-and-resampling.html#k-fold-cross-validation" id="toc-k-fold-cross-validation"><span class="toc-section-number">6.3.1</span> k-Fold Cross-Validation</a></li>
+<li><a href="simulation-and-resampling.html#leave-one-out-cross-validation" id="toc-leave-one-out-cross-validation"><span class="toc-section-number">6.3.2</span> 6.3.2 Leave-One-Out Cross-Validation</a></li>
+<li><a href="simulation-and-resampling.html#cross-validation-and-bootstrap" id="toc-cross-validation-and-bootstrap"><span class="toc-section-number">6.3.3</span> Cross-Validation and Bootstrap</a></li>
+</ul></li>
+<li><a href="simulation-and-resampling.html#importance-sampling" id="toc-importance-sampling"><span class="toc-section-number">6.4</span> Importance Sampling</a></li>
+<li><a href="simulation-and-resampling.html#metropolis-hastings" id="toc-metropolis-hastings"><span class="toc-section-number">6.5</span> 6.5.1 Metropolis Hastings</a></li>
+<li><a href="simulation-and-resampling.html#gibbs-sampler" id="toc-gibbs-sampler"><span class="toc-section-number">6.6</span> 6.5.2 Gibbs Sampler</a></li>
+</ul></li>
+<li><a href="premium-foundations.html#premium-foundations" id="toc-premium-foundations"><span class="toc-section-number">7</span> Premium Foundations</a>
+<ul>
+<li><a href="premium-foundations.html#pengenalan-ratemaking" id="toc-pengenalan-ratemaking"><span class="toc-section-number">7.1</span> Pengenalan Ratemaking</a></li>
+<li><a href="premium-foundations.html#metode-penentuan-tarif-gabungan" id="toc-metode-penentuan-tarif-gabungan"><span class="toc-section-number">7.2</span> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li><a href="premium-foundations.html#metode-penghitungan-premi-murni" id="toc-metode-penghitungan-premi-murni"><span class="toc-section-number">7.2.1</span> Metode Penghitungan Premi Murni</a></li>
+<li><a href="premium-foundations.html#metode-rasio-kerugian" id="toc-metode-rasio-kerugian"><span class="toc-section-number">7.2.2</span> Metode Rasio Kerugian</a></li>
+</ul></li>
+</ul></li>
+<li><a href="risk-classification.html#risk-classification" id="toc-risk-classification"><span class="toc-section-number">8</span> Risk Classification</a></li>
+<li><a href="experience-rating-using-credibility-theory.html#experience-rating-using-credibility-theory" id="toc-experience-rating-using-credibility-theory"><span class="toc-section-number">9</span> Experience Rating Using Credibility Theory</a>
+<ul>
+<li><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas" id="toc-pengantar-aplikasi-teori-kredibilitas"><span class="toc-section-number">9.1</span> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility" id="toc-limited-fluctuation-credibility"><span class="toc-section-number">9.2</span> Limited Fluctuation Credibility</a>
+<ul>
+<li><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim" id="toc-kredibilitas-penuh-untuk-frekuensi-klaim"><span class="toc-section-number">9.2.1</span> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni" id="toc-kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><span class="toc-section-number">9.2.2</span> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan" id="toc-kredibilitas-penuh-untuk-tingkat-keparahan"><span class="toc-section-number">9.2.3</span> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial" id="toc-kredibilitas-parsial"><span class="toc-section-number">9.2.4</span> Kredibilitas parsial</a></li>
+</ul></li>
+<li><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility" id="toc-bühlmann-credibility"><span class="toc-section-number">9.3</span> Bühlmann Credibility</a>
+<ul>
+<li><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm" id="toc-credibility-z-epv-and-vhm"><span class="toc-section-number">9.3.1</span> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility" id="toc-bühlmann-straub-credibility"><span class="toc-section-number">9.4</span> Bühlmann-Straub Credibility</a></li>
+</ul></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#insurance-portfolio-management-including-reinsurance" id="toc-insurance-portfolio-management-including-reinsurance"><span class="toc-section-number">10</span> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios" id="toc-introduction-to-insurance-portfolios"><span class="toc-section-number">10.1</span> Introduction to Insurance Portfolios</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions" id="toc-tails-of-distributions"><span class="toc-section-number">10.2</span> Tails of Distributions</a>
+<ul>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments" id="toc-classification-based-on-moments"><span class="toc-section-number">10.2.1</span> Classification Based on Moments</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior" id="toc-comparison-based-on-limiting-tail-behavior"><span class="toc-section-number">10.2.2</span> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures" id="toc-risk-measures"><span class="toc-section-number">10.3</span> Risk Measures</a>
+<ul>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures" id="toc-coherent-risk-measures"><span class="toc-section-number">10.3.1</span> Coherent Risk Measures</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk" id="toc-value-at-risk"><span class="toc-section-number">10.3.2</span> Value-at-Risk</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution." id="toc-example-10.3.2.-var-for-the-normal-distribution."><span class="toc-section-number">10.3.3</span> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk" id="toc-tail-value-at-risk"><span class="toc-section-number">10.3.4</span> Tail Value-at-Risk</a></li>
+</ul></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1" id="toc-reinsurance-1"><span class="toc-section-number">10.4</span> Reinsurance</a>
+<ul>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance" id="toc-proportional-reinsurance"><span class="toc-section-number">10.4.1</span> Proportional Reinsurance</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance" id="toc-non-proportional-reinsurance"><span class="toc-section-number">10.4.2</span> Non-Proportional Reinsurance</a></li>
+<li><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties" id="toc-additional-reinsurance-treaties"><span class="toc-section-number">10.4.3</span> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li><a href="loss-reserving.html#loss-reserving" id="toc-loss-reserving"><span class="toc-section-number">11</span> Loss Reserving</a>
+<ul>
+<li><a href="loss-reserving.html#motivation" id="toc-motivation"><span class="toc-section-number">11.1</span> Motivation</a>
+<ul>
+<li><a href="loss-reserving.html#closed-ibnr-and-rbns-claims" id="toc-closed-ibnr-and-rbns-claims"><span class="toc-section-number">11.1.1</span> Closed, IBNR, and RBNS Claims</a></li>
+<li><a href="loss-reserving.html#why-reserving" id="toc-why-reserving"><span class="toc-section-number">11.1.2</span> Why Reserving?</a></li>
+</ul></li>
+<li><a href="loss-reserving.html#loss-reserve-data" id="toc-loss-reserve-data"><span class="toc-section-number">11.2</span> Loss Reserve Data</a>
+<ul>
+<li><a href="loss-reserving.html#from-micro-to-macro" id="toc-from-micro-to-macro"><span class="toc-section-number">11.2.1</span> From Micro to Macro</a></li>
+<li><a href="loss-reserving.html#run-off-triangles" id="toc-run-off-triangles"><span class="toc-section-number">11.2.2</span> Run-off Triangles</a></li>
+<li><a href="loss-reserving.html#loss-reserve-notation" id="toc-loss-reserve-notation"><span class="toc-section-number">11.2.3</span> Loss Reserve Notation</a></li>
+<li><a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data" id="toc-r-code-to-summarize-loss-reserve-data"><span class="toc-section-number">11.2.4</span> R Code to Summarize Loss Reserve Data</a></li>
+</ul></li>
+<li><a href="loss-reserving.html#the-chain-ladder-method" id="toc-the-chain-ladder-method"><span class="toc-section-number">11.3</span> The Chain-Ladder Method</a>
+<ul>
+<li><a href="loss-reserving.html#the-deterministic-chain-ladder" id="toc-the-deterministic-chain-ladder"><span class="toc-section-number">11.3.1</span> The Deterministic Chain-Ladder</a></li>
+<li><a href="loss-reserving.html#macks-distribution-free-chain-ladder-model" id="toc-macks-distribution-free-chain-ladder-model"><span class="toc-section-number">11.3.2</span> Mack’s Distribution-Free Chain-Ladder Model</a></li>
+<li><a href="loss-reserving.html#r-code-for-chain-ladder-predictions" id="toc-r-code-for-chain-ladder-predictions"><span class="toc-section-number">11.3.3</span> R code for Chain-Ladder Predictions</a></li>
+</ul></li>
+<li><a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves" id="toc-glms-and-bootstrap-for-loss-reserves"><span class="toc-section-number">11.4</span> GLMs and Bootstrap for Loss Reserves</a>
+<ul>
+<li><a href="loss-reserving.html#model-specification" id="toc-model-specification"><span class="toc-section-number">11.4.1</span> Model Specification</a></li>
+<li><a href="loss-reserving.html#model-estimation-and-prediction" id="toc-model-estimation-and-prediction"><span class="toc-section-number">11.4.2</span> Model Estimation and Prediction</a></li>
+</ul></li>
+</ul></li>
+<li><a href="ChapBonusMalus.html#ChapBonusMalus" id="toc-ChapBonusMalus"><span class="toc-section-number">12</span> Experience Rating using Bonus-Malus</a>
+<ul>
+<li><a href="ChapBonusMalus.html#S:ERBM:Intro" id="toc-S:ERBM:Intro"><span class="toc-section-number">12.1</span> Introduction</a></li>
+<li><a href="ChapBonusMalus.html#S:ERBM:NCD" id="toc-S:ERBM:NCD"><span class="toc-section-number">12.2</span> <em>NCD</em> System in Several Countries</a>
+<ul>
+<li><a href="ChapBonusMalus.html#ncd-system-in-malaysia" id="toc-ncd-system-in-malaysia"><span class="toc-section-number">12.2.1</span> <em>NCD</em> System in Malaysia</a></li>
+<li><a href="ChapBonusMalus.html#ncd-systems-in-other-countries" id="toc-ncd-systems-in-other-countries"><span class="toc-section-number">12.2.2</span> NCD Systems in Other Countries</a></li>
+</ul></li>
+<li><a href="ChapBonusMalus.html#S:ERBM:BMS" id="toc-S:ERBM:BMS"><span class="toc-section-number">12.3</span> <em>BMS</em> and Markov Chain Model</a>
+<ul>
+<li><a href="ChapBonusMalus.html#transition-probability" id="toc-transition-probability"><span class="toc-section-number">12.3.1</span> Transition Probability</a></li>
+</ul></li>
+<li><a href="ChapBonusMalus.html#S:ERBM:StatDist" id="toc-S:ERBM:StatDist"><span class="toc-section-number">12.4</span> <em>BMS</em> and Stationary Distribution</a>
+<ul>
+<li><a href="ChapBonusMalus.html#stationary-distribution" id="toc-stationary-distribution"><span class="toc-section-number">12.4.1</span> Stationary Distribution</a></li>
+<li><a href="ChapBonusMalus.html#r-code-for-a-stationary-distribution" id="toc-r-code-for-a-stationary-distribution"><span class="toc-section-number">12.4.2</span> <code>R</code> Code for a Stationary Distribution</a></li>
+</ul></li>
+</ul></li>
+<li><a href="aggregate-loss-models-1.html#aggregate-loss-models-1" id="toc-aggregate-loss-models-1"><span class="toc-section-number">13</span> Aggregate Loss Models</a></li>
+<li><a href="dependence-modeling.html#dependence-modeling" id="toc-dependence-modeling"><span class="toc-section-number">14</span> Dependence Modeling</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#appendix-a-review-of-statistical-inference" id="toc-appendix-a-review-of-statistical-inference"><span class="toc-section-number">15</span> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar" id="toc-konsep-dasar"><span class="toc-section-number">15.1</span> konsep dasar</a>
+<ul>
+<li><a href="appendix-a-review-of-statistical-inference.html#sampel-acak" id="toc-sampel-acak"><span class="toc-section-number">15.1.1</span> Sampel Acak</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel" id="toc-distribusi-sampel"><span class="toc-section-number">15.1.2</span> Distribusi Sampel</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral" id="toc-teorema-limit-sentral"><span class="toc-section-number">15.1.3</span> Teorema Limit Sentral</a></li>
+</ul></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti" id="toc-estimasi-titik-dan-properti"><span class="toc-section-number">15.2</span> Estimasi Titik dan Properti</a>
+<ul>
+<li><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen" id="toc-estimasi-metode-momen"><span class="toc-section-number">15.2.1</span> Estimasi Metode Momen</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood" id="toc-estimasi-maksimum-likelihood"><span class="toc-section-number">15.2.2</span> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval" id="toc-estimasi-interval"><span class="toc-section-number">15.3</span> Estimasi Interval</a>
+<ul>
+<li><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal" id="toc-distribusi-tepat-untuk-rata-rata-sampel-normal"><span class="toc-section-number">15.3.1</span> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood" id="toc-properti-sampel-besar-dari-estimasi-maksimum-likelihood"><span class="toc-section-number">15.3.2</span> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan" id="toc-interval-kepercayaan"><span class="toc-section-number">15.3.3</span> Interval Kepercayaan</a></li>
+</ul></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis" id="toc-pengujian-hipotesis"><span class="toc-section-number">15.4</span> Pengujian Hipotesis</a>
+<ul>
+<li><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1" id="toc-konsep-dasar-1"><span class="toc-section-number">15.4.1</span> Konsep Dasar</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle" id="toc-uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><span class="toc-section-number">15.4.2</span> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test" id="toc-uji-rasio-kemungkinan-likelihood-ratio-test"><span class="toc-section-number">15.4.3</span> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi" id="toc-kriteria-informasi"><span class="toc-section-number">15.4.4</span> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendix-b-iterated-expectations.html#appendix-b-iterated-expectations" id="toc-appendix-b-iterated-expectations"><span class="toc-section-number">16</span> Appendix B: Iterated Expectations</a></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#appendix-c-maximum-likelihood-theory" id="toc-appendix-c-maximum-likelihood-theory"><span class="toc-section-number">17</span> Appendix C: Maximum Likelihood Theory</a>
+<ul>
+<li><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function" id="toc-likelihood-function"><span class="toc-section-number">17.1</span> Likelihood Function</a>
+<ul>
+<li><a href="appendix-c-maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions" id="toc-likelihood-and-log-likelihood-functions"><span class="toc-section-number">17.1.1</span> Likelihood and Log-likelihood Functions</a></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#properties-of-likelihood-functions" id="toc-properties-of-likelihood-functions"><span class="toc-section-number">17.1.2</span> Properties of Likelihood Functions</a></li>
+</ul></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#maximum-likelihood-estimators" id="toc-maximum-likelihood-estimators"><span class="toc-section-number">17.2</span> Maximum Likelihood Estimators</a>
+<ul>
+<li><a href="appendix-c-maximum-likelihood-theory.html#definition-and-derivation-of-mle" id="toc-definition-and-derivation-of-mle"><span class="toc-section-number">17.2.1</span> Definition and Derivation of MLE</a></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#asymptotic-properties-of-mle" id="toc-asymptotic-properties-of-mle"><span class="toc-section-number">17.2.2</span> Asymptotic Properties of MLE</a></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation" id="toc-use-of-maximum-likelihood-estimation"><span class="toc-section-number">17.2.3</span> Use of Maximum Likelihood Estimation</a></li>
+</ul></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation" id="toc-statistical-inference-based-on-maximum-likelihood-estimation"><span class="toc-section-number">17.3</span> Statistical Inference Based on Maximum Likelihood Estimation</a>
+<ul>
+<li><a href="appendix-c-maximum-likelihood-theory.html#hypothesis-testing" id="toc-hypothesis-testing"><span class="toc-section-number">17.3.1</span> Hypothesis Testing</a></li>
+<li><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation" id="toc-mle-and-model-validation"><span class="toc-section-number">17.3.2</span> MLE and Model Validation</a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendix-d-summary-of-distributions.html#appendix-d-summary-of-distributions" id="toc-appendix-d-summary-of-distributions"><span class="toc-section-number">18</span> Appendix D: Summary of Distributions</a></li>
+<li><a href="appendix-e-conventions-for-notation.html#appendix-e-conventions-for-notation" id="toc-appendix-e-conventions-for-notation"><span class="toc-section-number">19</span> Appendix E: Conventions for Notation</a></li>
+>>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 <li><a href="section.html#section" id="toc-section"></a></li>
-<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li><a href="bibliography.html#bibliography" id="toc-bibliography">Bibliography</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/dsciencelabs/Analisa_Resiko" target="blank">Published with Bookdown</a></li>
 
@@ -169,10 +458,315 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="model-selection-and-estimation" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Bab 4</span> Model Selection and Estimation<a href="model-selection-and-estimation.html#model-selection-and-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>test</p>
+<div id="model-selection-and-estimation" class="section level1" number="4">
+<h1><span class="header-section-number">Bab 4</span> Model Selection and Estimation</h1>
+<div id="nonparametric-inference" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Nonparametric Inference</h2>
+<p>Di bagian ini, Anda mempelajari cara:</p>
+<ol style="list-style-type: decimal">
+<li><p>Perkirakan momen, kuantil, dan distribusi tanpa mengacu pada distribusi parametrik</p></li>
+<li><p>Ringkas data secara grafis tanpa mengacu pada distribusi parametrik</p></li>
+<li><p>Tentukan ukuran yang meringkas penyimpangan parametrik dari kecocokan nonparametrik</p></li>
+<li><p>Gunakan estimator nonparametrik untuk memperkirakan parameter yang dapat digunakan untuk memulai prosedur estimasi parametrik</p></li>
+</ol>
+<div id="estimasi-nonparametrik" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Estimasi Nonparametrik</h3>
+<p>Pada bagian pembahasan sebelumnya telah mempelajari cara meringkas distribusi dengan cara menghitung, varians, kuantil/persentil, dan sebagainya. Untuk memperkirakan langkah-langkah ringkasan menggunakan kumpulan data, salah satu strateginya adalah:</p>
+<ol style="list-style-type: decimal">
+<li><p>menganggap bentuk parametrik untuk distribusi, seperti binomial negatif untuk frekuensi atau distribusi gamma untuk tingkat keparahan,</p></li>
+<li><p>memperkirakan parameter distribusi itu,</p></li>
+<li><p>gunakan distribusi dengan estimasi parameter untuk menghitung ukuran ringkasan yang diinginkan.</p></li>
+</ol>
+<p>Ini adalah <em>pendekatan parametrik</em> . Strategi lain adalah memperkirakan ukuran ringkasan yang diinginkan langsung dari pengamatan tanpa mengacu pada model parametrik. Tidak mengherankan, ini dikenal sebagai pendekatan nonparametrik</p>
+<p>mempertimbangkan jenis skema pengambilan sampel yang paling dasar dan mengasumsikan bahwa observasi adalah realisasi dari serangkaian variabel acak <span class="math inline">\(X_1, \ldots, X_n\)</span> yang iid menarik dari distribusi populasi yang tidak diketahui <span class="math inline">\(F( ⋅ )\)</span>. Cara yang setara untuk mengatakan ini adalah itu <span class="math inline">\(X_1, \ldots, X_n\)</span>, adalah sampel acak (dengan penggantian) dari F( ⋅) .Kemudian menjelaskan estimator nonparametrik dari banyak ukuran penting yang meringkas sebuah distribusi.</p>
+<div id="estimator-momen" class="section level4" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> Estimator Momen</h4>
+<p>Pada bagian 2.2.2. telah mendefinisikan momen untuk frekuensi dan pada bagian 3.1.1 untuk keparahan. Secara khusus, k -momen ke-, <span class="math inline">\(\mathrm{E~}[X^k] = \mu^{\prime}_k\)</span> , merangkum banyak aspek distribusi untuk berbagai pilihan k . Di Sini, μ′k kadang-kadang disebut k th momen populasi untuk membedakannya dari k momen sampel,</p>
+<p><span class="math display">\[\frac{1}{n} \sum_{i=1}^n X_i^k ,\]</span></p>
+<p>yang merupakan estimator nonparametrik yang sesuai. Dalam aplikasi tipikal, k adalah bilangan bulat positif, meskipun tidak perlu dalam teori.</p>
+<p>Kasus khusus yang penting adalah momen pertama di mana <span class="math inline">\(k = 1\)</span> . Dalam hal ini, simbol prima ( <span class="math inline">\(\prime\)</span> ) dan 1 subskrip biasanya dijatuhkan dan satu digunakan <span class="math inline">\(\mu=\mu^{\prime}_1\)</span> untuk menunjukkan mean populasi, atau hanya mean . Estimator sampel yang sesuai untuk <span class="math inline">\(μ\)</span> disebut rata-rata sampel , dilambangkan dengan bilah di atas variabel acak:</p>
+<p><span class="math display">\[\overline{X} =\frac{1}{n} \sum_{i=1}^n X_i .\]</span></p>
+<p>Jenis ringkasan ukuran minat lainnya adalah k -momen pusat ke- , <span class="math inline">\(\mathrm{E~} [(X-\mu)^k] = \mu_k\)</span> . (Kadang-kadang, <span class="math inline">\(\mu^{\prime}_k\)</span> disebut k -th momen mentah untuk membedakannya dari momen sentral μk .). Estimator nonparametrik, atau sampel, dari <span class="math inline">\(\mu_k\)</span> adalah</p>
+<p><span class="math display">\[\frac{1}{n} \sum_{i=1}^n \left(X_i - \overline{X}\right)^k .\]</span></p>
+<p>Momen pusat kedua ( <span class="math inline">\(k = 2\)</span> ) adalah kasus penting yang biasanya akan diberikan simbol baru, <span class="math inline">\(\sigma^2 = \mathrm{E~} [(X-\mu)^2]\)</span> , dikenal sebagai varians . Sifat penduga momen sampel dari varians seperti <span class="math inline">\(n^{-1}\sum_{i=1}^n \left(X_i - \overline{X}\right)^2\)</span> telah dipelajari secara ekstensif tetapi bukan satu-satunya estimator yang mungkin. Versi yang paling banyak digunakan adalah versi di mana ukuran sampel efektif dikurangi satu, jadi kami mendefinisikannya</p>
+<p><span class="math display">\[s^2 = \frac{1}{n-1} \sum_{i=1}^n \left(X_i - \overline{X}\right)^2.\]</span></p>
+<p>Membagi dengan <span class="math inline">\(n − 1\)</span> alih-alih N masalah kecil ketika Anda memiliki ukuran sampel yang besar <span class="math inline">\(N\)</span> seperti yang umum dalam aplikasi asuransi. Estimator varians sampel <span class="math inline">\(s^2\)</span> tidak memihak dalam arti bahwa <span class="math inline">\(\mathrm{E~} [s^2] = \sigma^2\)</span> , properti yang diinginkan terutama saat menginterpretasikan hasil analisis.</p>
+</div>
+<div id="fungsi-distribusi-empiris" class="section level4" number="4.1.1.2">
+<h4><span class="header-section-number">4.1.1.2</span> Fungsi Distribusi Empiris</h4>
+<p>Kita telah melihat bagaimana menghitung estimator nonparametrik dari k saat ini <span class="math inline">\(\mathrm{E~} [X^k]\)</span> . Dengan cara yang sama, untuk fungsi apa pun yang diketahui g (⋅) , kita dapat memperkirakan <span class="math inline">\(\mathrm{E~} [\mathrm{g}(X)]\)</span> menggunakan<span class="math inline">\(n^{-1}\sum_{i=1}^n \mathrm{g}(X_i)\)</span></p>
+<p>Sekarang perhatikan fungsinya <span class="math inline">\(\mathrm{g}(X) = I(X \le x)\)</span> untuk tetap <span class="math inline">\(X\)</span> . Di sini, notasi $I( ⋅ <span class="math inline">\() adalah fungsi indikator ; itu mengembalikan 1 jika acara ( ⋅ ) benar dan 0 sebaliknya. Perhatikan bahwa sekarang variabel acak\)</span> g (X$) memiliki distribusi Bernoulli (distribusi binomial dengan <span class="math inline">\(n = 1\)</span> ). Kita dapat menggunakan distribusi ini untuk dengan mudah menghitung jumlah seperti rata-rata dan varians. Misalnya, untuk pilihan ini <span class="math inline">\(g (⋅)\)</span> , nilai harapannya adalah <span class="math inline">\(\mathrm{E~} [I(X \le x)] = \Pr(X \le x) = F(x)\)</span> , fungsi distribusi dievaluasi pada <span class="math inline">\(X\)</span> . Menggunakan prinsip analog , kami mendefinisikan estimator nonparametrik dari fungsi distribusi</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_n(x)
+&amp;=  \frac{1}{n} \sum_{i=1}^n I\left(X_i \le x\right) \\
+&amp;=  \frac{\text{number of observations less than or equal to }x}{n} .
+\end{aligned}
+\]</span></p>
+<p>Sebagai $F_N( ⋅ $) didasarkan hanya pada pengamatan dan tidak mengasumsikan keluarga parametrik untuk distribusi, itu nonparametrik dan juga dikenal sebagai fungsi distribusi empiris . Ia juga dikenal sebagai fungsi distribusi kumulatif empiris dan, dalam <em>R</em>, seseorang dapat menggunakan <em>ecdf(.)</em> fungsi tersebut untuk menghitungnya.</p>
+<p><em>Contoh 4.1.1.</em> Kumpulan Data Mainan . Sebagai ilustrasi, pertimbangkan kumpulan data fiktif, atau “mainan”. <span class="math inline">\(n = 10\)</span>
+observasi. Tentukan fungsi distribusi empiris.</p>
+<p><span class="math display">\[
+{\small
+\begin{array}{c|cccccccccc}
+\hline
+i &amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10 \\
+X_i&amp; 10 &amp;15 &amp;15 &amp;15 &amp;20 &amp;23 &amp;23 &amp;23 &amp;23 &amp;30\\
+\hline
+\end{array}
+}\]</span></p>
+<p>Kemudian memeriksa bahwa rata-rata sampel adalah <span class="math inline">\(\overline{X} = 19.7\)</span> dan bahwa varians sampel adalah <span class="math inline">\(S^2= 34,45556\)</span> . Fungsi distribusi empiris yang sesuai adalah</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_n(x) &amp;=
+\left\{
+\begin{array}{ll}
+0 &amp; \text{ for }\ x&lt;10 \\
+0.1 &amp; \text{ for }\ 10 \leq x&lt;15 \\
+0.4 &amp; \text{ for }\ 15 \leq x&lt;20 \\
+0.5 &amp; \text{ for }\ 20 \leq x&lt;23 \\
+0.9 &amp; \text{ for }\ 23 \leq x&lt;30 \\
+1 &amp; \text{ for }\ x \geq 30,
+\end{array}
+\right.\end{aligned}\]</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="model-selection-and-estimation.html#cb1-1" aria-hidden="true" tabindex="-1"></a>(xExample <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="fu">rep</span>(<span class="dv">15</span>,<span class="dv">3</span>),<span class="dv">20</span>,<span class="fu">rep</span>(<span class="dv">23</span>,<span class="dv">4</span>),<span class="dv">30</span>))</span>
+<span id="cb1-2"><a href="model-selection-and-estimation.html#cb1-2" aria-hidden="true" tabindex="-1"></a>PercentilesxExample <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(xExample)</span>
+<span id="cb1-3"><a href="model-selection-and-estimation.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(PercentilesxExample, <span class="at">main=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;x&quot;</span>)</span></code></pre></div>
+</div>
+<div id="quartiles-percentiles-and-quantiles" class="section level4" number="4.1.1.3">
+<h4><span class="header-section-number">4.1.1.3</span> Quartiles, Percentiles and Quantiles</h4>
+<p>Pada bagian 3.1.1 median , yaitu angka yang kira-kira setengah dari kumpulan data berada di bawah (atau di atasnya) . Kuartil pertama adalah angka yang kira-kira 25% datanya berada di bawahnya dan kuartil ketiga adalah angka yang kira-kira 75% datanya berada di bawahnya. 100 hal persentil adalah angka sehingga <span class="math inline">\(100×p\)</span> persen dari data di bawahnya.</p>
+<p>Untuk menggeneralisasi konsep ini, pertimbangkan fungsi distribusi <span class="math inline">\(F(⋅\)</span>) , yang mungkin kontinu atau tidak, dan biarkan Q menjadi pecahan sehingga <span class="math inline">\(0 &lt; q&lt; 1\)</span> . Kami ingin mendefinisikan quantile , katakanlah <span class="math inline">\(q_F\)</span> , menjadi bilangan sedemikian sehingga <span class="math inline">\(F(q_F) \approx q\)</span> . Perhatikan bahwa ketika <span class="math inline">\(q=0.5\)</span> , <span class="math inline">\(q_F\)</span> adalah median; Kapan <span class="math inline">\(q=0.25\)</span> , <span class="math inline">\(q_F\)</span> adalah kuartil pertama, dan seterusnya. Dengan cara yang sama, ketika <span class="math inline">\(q = 0, 0.01, 0.02, \ldots, 0.99, 1.00\)</span> , yang dihasilkan QF adalah persentil. Jadi, kuantil menggeneralisasikan konsep median, kuartil, dan persentil.</p>
+<p>Lebih tepatnya, untuk diberikan <span class="math inline">\(0 &lt; q&lt; 1\)</span> , tentukan q kuantil <span class="math inline">\(q_F\)</span> untuk menjadi nomor yang memenuhi:</p>
+<p><span class="math display">\[
+\begin{equation}
+F(q_F-) \le q \le F(q_F)
+\tag{4.1}
+\end{equation}\]</span></p>
+<p>Untuk mendapatkan pemahaman yang lebih baik tentang definisi ini, mari kita lihat beberapa kasus khusus. Pertama, pertimbangkan kasus di mana X adalah variabel acak kontinu sehingga fungsi distribusi <span class="math inline">\(F(⋅)\)</span> tidak memiliki titik lompatan, seperti yang diilustrasikan pada Gambar 4.2 . Pada gambar ini, beberapa pecahan, Q1 , Q2 , Dan Q3 ditunjukkan dengan kuantil yang sesuai <span class="math inline">\(q_{F,1} , q_{F,2} , dan q_{F,3}\)</span> . Dalam setiap kasus, dapat dilihat bahwa <span class="math inline">\(F(q_F-)= F(q_F)\)</span> sehingga ada kuantil unik. Karena kita dapat menemukan invers unik dari fungsi distribusi di mana saja <span class="math inline">\(0 &lt; q&lt; 1\)</span> , kita bisa menulis <span class="math inline">\(q_F= F^{-1}(q)\)</span></p>
+<p>Gambar 4.3 menunjukkan tiga kasus untuk fungsi distribusi. Panel kiri sesuai dengan kasus kontinu yang baru saja dibahas. Panel tengah menampilkan titik lompatan yang serupa dengan yang telah kita lihat dalam fungsi distribusi empiris Gambar 4.1 . Untuk nilai <span class="math inline">\(q\)</span> ditampilkan di panel ini, kami masih memiliki nilai kuantil yang unik <span class="math inline">\(q_F\)</span> . Meskipun ada banyak nilai Q seperti yang <span class="math inline">\(F(q_F-) \le q \le F(q_F)\)</span> , untuk nilai tertentu dari <span class="math inline">\(q\)</span> , hanya ada satu solusi untuk persamaan (4.1) . Panel kanan menggambarkan situasi di mana kuantil tidak dapat ditentukan secara unik untuk <span class="math inline">\(q\)</span> ditampilkan karena ada berbagai <span class="math inline">\(q_F\)</span> persamaan yang memuaskan (4.1) .</p>
+<p><em>Contoh 4.1.2. Kumpulan Data Mainan: Lanjutan.</em> Tentukan kuantil yang sesuai dengan persentil ke-20, ke-50, dan ke-95.</p>
+<p>Solusi . Perhatikan Gambar 4.1 . Kasus <span class="math inline">\(q=0.20\)</span> sesuai dengan panel tengah Gambar Gambar 4.3 , jadi persentil ke-20 adalah 15. Kasus <span class="math inline">\(q=0.50\)</span> sesuai dengan panel kanan, jadi mediannya adalah angka antara 20 dan 23 inklusif. Banyak paket perangkat lunak menggunakan rata-rata 21,5 (misalnya R, seperti yang terlihat di bawah). Untuk persentil ke-95, solusinya adalah 30. Kita dapat melihat dari Gambar 4.1 bahwa 30 juga sesuai dengan persentil ke-99 dan ke-99,99.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="model-selection-and-estimation.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(xExample, <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>), <span class="at">type=</span><span class="dv">6</span>)</span></code></pre></div>
+<p>Dengan mengambil rata-rata tertimbang antara pengamatan data, kuantil empiris yang dihaluskan dapat menangani kasus seperti panel kanan pada Gambar 4.3 . Itu Q kuantil empiris yang dihaluskan didefinisikan sebagai</p>
+<p><span class="math display">\[\hat{\pi}_q = (1-h) X_{(j)} + h X_{(j+1)}\]</span></p>
+<p>Di mana <span class="math inline">\(j=\lfloor(n+1)q\rfloor\)</span> , Dan<span class="math inline">\(X_{(1)}, \ldots, X_{(n)}\)</span> adalah nilai yang diurutkan (dikenal sebagai statistik urutan ) yang sesuai dengan <span class="math inline">\(X_1, \ldots, X_n\)</span>. (Ingat bahwa tanda kurung ⌊ ⋅ ⌋ adalah fungsi lantai yang menunjukkan nilai bilangan bulat terbesar.) Perhatikan bah wa <span class="math inline">\(\hat{\pi}_q\)</span>$ hanyalah sebuah interpolasi linear antara <span class="math inline">\(X_{( j )}\)</span> dan <span class="math inline">\(X_{(j+1)}\)</span>.</p>
+<p><em>Contoh 4.1.3. Kumpulan Data Mainan: Lanjutan.</em> Tentukan persentil yang dihaluskan ke-50 dan ke-20.</p>
+<p>Solusi Ambil <span class="math inline">\(n = 10\)</span> Dan <span class="math inline">\(q= 0,5\)</span>. Kemudian, <span class="math inline">\(j=\lfloor(11)(0.5) \rfloor= \lfloor 5.5 \rfloor=5\)</span>, . Maka kuantil empiris yang dihaluskan ke-0,5 adalah</p>
+<p><span class="math display">\[\hat{\pi}_{0.5} = (1-0.5) X_{(5)} + (0.5) X_{(6)} = 0.5 (20) + (0.5)(23) = 21.5.\]</span></p>
+<p>Sekarang ambil <span class="math inline">\(n = 10\)</span> Dan <span class="math inline">\(q= 0,2\)</span> . Pada kasus ini, <span class="math inline">\(j=\lfloor(11)(0.2)\rfloor=\lfloor 2.2 \rfloor=2\)</span> . Maka kuantil empiris yang dihaluskan ke-0,2 adalah</p>
+<p><span class="math display">\[\hat{\pi}_{0.2} = (1-0.2) X_{(2)} + (0.2) X_{(3)} = 0.8 (15) + (0.2)(15) = 15.\]</span></p>
+</div>
+<div id="penduga-kepadatan" class="section level4" number="4.1.1.4">
+<h4><span class="header-section-number">4.1.1.4</span> Penduga Kepadatan</h4>
+<p><em>Variabel Diskrit</em>. Ketika variabel acak adalah diskrit, memperkirakan fungsi massa probabilitas <span class="math inline">\(f(x) = \Pr(X=x)\)</span> mudah. Kami hanya menggunakan rata-rata sampel, yang didefinisikan sebagai</p>
+<p><span class="math display">\[f_n(x) = \frac{1}{n} \sum_{i=1}^n I(X_i = x),\]</span></p>
+<p>yang merupakan proporsi sampel sama dengan X</p>
+<p><em>Variabel Berkelanjutan dalam Grup.</em> Untuk variabel acak kontinu, pertimbangkan formulasi diskrit di mana domain dari F( ⋅ ) dipartisi oleh konstanta <span class="math inline">\(\{c_0 &lt; c_1 &lt; \cdots &lt; c_k\}\)</span> ke dalam interval bentuk <span class="math inline">\([c_{j-1}, c_j)\)</span> , untuk <span class="math inline">\(j=1, \ldots, k\)</span> . Pengamatan data dengan demikian “dikelompokkan” berdasarkan interval di mana mereka jatuh. Kemudian, kita dapat menggunakan definisi dasar dari fungsi massa empiris, atau variasi seperti</p>
+<p><span class="math display">\[f_n(x) = \frac{n_j}{n \times (c_j - c_{j-1})}  \ \ \ \ \ \ c_{j-1} \le x &lt; c_j,\]</span></p>
+<p>Di mana <span class="math inline">\(N_J\)</span> adalah jumlah pengamatan ( <span class="math inline">\(X_i\)</span> ) yang termasuk dalam interval <span class="math inline">\([c_{j-1}, c_j)\)</span>.</p>
+<p>Variabel Berkelanjutan (tidak dikelompokkan). Memperluas gagasan ini ke contoh di mana kami mengamati data individual, perhatikan bahwa kami selalu dapat membuat pengelompokan arbitrer dan menggunakan rumus ini. Lebih formal, biarkan <span class="math inline">\(b &gt; 0\)</span> menjadi konstanta positif kecil, yang dikenal sebagai bandwidth , dan menentukan penaksir kepadatan menjadi</p>
+<p><span class="math display">\[\begin{equation}
+f_n(x) = \frac{1}{2nb} \sum_{i=1}^n I(x-b &lt; X_i \le x + b)
+\tag{4.2}
+\end{equation}\]</span></p>
+<p>Secara lebih umum, tentukan penaksir kerapatan kernel dari pdf di X sebagai</p>
+<p><span class="math display">\[\begin{equation}
+f_n(x) = \frac{1}{nb} \sum_{i=1}^n w\left(\frac{x-X_i}{b}\right) ,
+\tag{4.3}
+\end{equation}\]</span></p>
+<p>Di mana w adalah fungsi kerapatan probabilitas yang berpusat di sekitar 0. Perhatikan bahwa persamaan (4.2) adalah kasus khusus penduga kerapatan kernel di mana <span class="math inline">\(w(x) = \frac{1}{2}I(-1 &lt; x \le 1)\)</span> , juga dikenal sebagai kernel seragam . Pilihan populer lainnya ditunjukkan pada Tabel 4.1 .</p>
+<p><span class="math display">\[{\small
+\begin{matrix}
+\begin{array}{l|cc}
+\hline
+\text{Kernel} &amp;  w(x) \\
+\hline
+\text{Uniform } &amp;  \frac{1}{2}I(-1 &lt; x \le 1) \\
+\text{Triangle} &amp;  (1-|x|)\times I(|x| \le 1) \\
+\text{Epanechnikov} &amp; \frac{3}{4}(1-x^2) \times I(|x| \le 1) \\
+\text{Gaussian} &amp; \phi(x) \\
+\hline
+\end{array}\end{matrix}
+}\]</span></p>
+<p>Di Sini, <span class="math inline">\(\phi(\cdot)\)</span> adalah fungsi kepadatan normal standar. Seperti yang akan kita lihat pada contoh berikut, pilihan bandwidth <span class="math inline">\(B\)</span> hadir dengan tradeoff bias-varians antara mencocokkan fitur distribusi lokal dan mengurangi volatilitas.</p>
+<p><em>Contoh 4.1.4. Dana Properti.</em> Gambar 4.4 menunjukkan histogram (dengan persegi panjang abu-abu yang diarsir) dari klaim properti logaritmik dari tahun 2010. Kurva tebal (biru) mewakili kerapatan kernel Gaussian di mana bandwidth dipilih secara otomatis menggunakan aturan ad hoc berdasarkan ukuran sampel dan volatilitas data ini . Untuk dataset ini, bandwidth ternyata b = 0,3255 . Sebagai perbandingan, kurva putus-putus (merah) menunjukkan penaksir densitas dengan lebar pita sama dengan 0,1 dan kurva halus berwarna hijau menggunakan lebar pita 1. Sebagaimana diantisipasi, lebar pita yang lebih kecil (0,1) menunjukkan mengambil rata-rata lokal dengan data yang lebih sedikit sehingga kita mendapatkan ide yang lebih baik dari rata-rata lokal, tetapi dengan harga volatilitas yang lebih tinggi. Sebaliknya, bandwidth yang lebih besar (1) memperhalus fluktuasi lokal, menghasilkan kurva yang lebih halus yang mungkin melewatkan gangguan pada rata-rata lokal. Untuk aplikasi aktuaria, kami terutama menggunakan estimator densitas kernel untuk mendapatkan kesan visual cepat dari data. Dari perspektif ini, Anda cukup menggunakan aturan ad hoc default untuk pemilihan bandwidth, mengetahui bahwa Anda memiliki kemampuan untuk mengubahnya tergantung pada situasi yang dihadapi.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="model-selection-and-estimation.html#cb3-1" aria-hidden="true" tabindex="-1"></a>ClaimLev <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Data/CLAIMLEVEL.csv&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>); <span class="co">#nrow(ClaimLev); # 6258</span></span>
+<span id="cb3-2"><a href="model-selection-and-estimation.html#cb3-2" aria-hidden="true" tabindex="-1"></a>ClaimData<span class="ot">&lt;-</span><span class="fu">subset</span>(ClaimLev,Year<span class="sc">==</span><span class="dv">2010</span>);     <span class="co">#2010 subset</span></span>
+<span id="cb3-3"><a href="model-selection-and-estimation.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Density Comparison</span></span>
+<span id="cb3-4"><a href="model-selection-and-estimation.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">main=</span><span class="st">&quot;&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">35</span>),<span class="at">xlab=</span><span class="st">&quot;Log Expenditures&quot;</span>, <span class="at">freq=</span><span class="cn">FALSE</span>, <span class="at">col=</span><span class="st">&quot;lightgray&quot;</span>)</span>
+<span id="cb3-5"><a href="model-selection-and-estimation.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim)), <span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-6"><a href="model-selection-and-estimation.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span><span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb3-7"><a href="model-selection-and-estimation.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span>.<span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lty=</span><span class="dv">3</span>)</span>
+<span id="cb3-8"><a href="model-selection-and-estimation.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;b=0.3255 (default)&quot;</span>, <span class="st">&quot;b=0.1&quot;</span>, <span class="st">&quot;b=1.0&quot;</span>), <span class="at">lty=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>), <span class="at">lwd=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="dv">1</span>,<span class="dv">1</span>),</span>
+<span id="cb3-9"><a href="model-selection-and-estimation.html#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>), <span class="at">cex=</span><span class="dv">1</span>)</span>
+<span id="cb3-10"><a href="model-selection-and-estimation.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#density(log(ClaimData$Claim))$bw   ##default bandwidth</span></span></code></pre></div>
+<p>Estimator densitas nonparametrik, seperti estimator kernel, sering digunakan dalam praktik. Konsep ini juga dapat diperluas untuk memberikan versi halus dari fungsi distribusi empiris. Mengingat definisi penaksir densitas kernel, penaksir kernel dari fungsi distribusi dapat ditemukan sebagai</p>
+<p><span class="math display">\[\begin{aligned}
+\tilde{F}_n(x) = \frac{1}{n} \sum_{i=1}^n W\left(\frac{x-X_i}{b}\right).\end{aligned}\]</span></p>
+<p>Di mana <span class="math inline">\(W\)</span> adalah fungsi distribusi yang terkait dengan densitas kernel <span class="math inline">\(w\)</span> . Sebagai ilustrasi, untuk kernel yang seragam, kita punya <span class="math inline">\(w(y) = \frac{1}{2}I(-1 &lt; y \le 1)\)</span> , Jadi</p>
+<p><span class="math display">\[\begin{aligned}
+W(y) =
+\begin{cases}
+0 &amp;            y&lt;-1\\
+\frac{y+1}{2}&amp; -1 \le y &lt; 1 \\
+1 &amp; y \ge 1 \\
+\end{cases}\end{aligned} .\]</span></p>
+<p><em>Contoh 4.1.5. Soal Ujian Aktuaria.</em> Anda mempelajari lima nyawa untuk memperkirakan waktu dari timbulnya penyakit hingga kematian. Waktu kematian adalah:</p>
+<p><span class="math display">\[\begin{array}{ccccc}
+2 &amp; 3 &amp; 3 &amp; 3 &amp; 7  \\
+\end{array}\]</span></p>
+<p>Menggunakan kernel segitiga dengan bandwidth 2 , hitung taksiran fungsi densitas pada 2,5. Solusi. Untuk perkiraan kepadatan kernel, kami punya</p>
+<p><span class="math display">\[f_n(x) = \frac{1}{nb} \sum_{i=1}^n w\left(\frac{x-X_i}{b}\right),\]</span></p>
+<p>Di mana <span class="math inline">\(n = 5\)</span> , <span class="math inline">\(b = 2\)</span> , Dan <span class="math inline">\(x = 2,5\)</span> . Untuk inti segitiga, <span class="math inline">\(w(x) = (1-|x|)\times I(|x| \le 1)\)</span> . Dengan demikian,</p>
+<p><span class="math display">\[\begin{array}{c|c|c}
+\hline
+X_i &amp; \frac{x-X_i}{b} &amp; w\left(\frac{x-X_i}{b} \right) \\
+\hline
+2 &amp; \frac{2.5-2}{2}=\frac{1}{4} &amp;  (1-\frac{1}{4})(1) = \frac{3}{4} \\
+\hline
+3 &amp; &amp; \\
+3 &amp; \frac{2.5-3}{2}=\frac{-1}{4} &amp; \left(1-\left| \frac{-1}{4} \right| \right)(1) = \frac{3}{4} \\
+3 &amp; &amp; \\
+\hline
+7 &amp; \frac{2.5-7}{2}=-2.25 &amp; (1-|-2.25|)(0) = 0\\
+\hline
+\end{array}\]</span></p>
+<p>Kemudian perkiraan densitas kernel di <span class="math inline">\(x = 2,5\)</span> adalah</p>
+<p><span class="math display">\[f_n(2.5) = \frac{1}{5(2)}\left( \frac{3}{4} + (3) \frac{3}{4} + 0 \right) = \frac{3}{10}\]</span></p>
+</div>
+<div id="prinsip-pengaya" class="section level4" number="4.1.1.5">
+<h4><span class="header-section-number">4.1.1.5</span> Prinsip Pengaya</h4>
+<p>Salah satu cara untuk membuat penaksir nonparametrik dari beberapa kuantitas adalah dengan menggunakan prinsip analog atau plug-in di mana seseorang menggantikan cdf yang tidak diketahui <span class="math inline">\(F\)</span> dengan estimasi yang diketahui seperti cdf empiris <span class="math inline">\(F_N\)</span> . Jadi, jika kita mencoba memperkirakan <span class="math inline">\(\mathrm{E}~[\mathrm{g}(X)]=\mathrm{E}_F~[\mathrm{g}(X)]\)</span> untuk fungsi generik g , maka kami mendefinisikan estimator nonparametrik menjadi <span class="math inline">\(\mathrm{E}_{F_n}~[\mathrm{g}(X)]=n^{-1}\sum_{i=1}^n \mathrm{g}(X_i)\)</span>.</p>
+<p>Untuk melihat cara kerjanya, sebagai kasus khusus dari g , kami menganggap kerugian per variabel acak pembayaran <span class="math inline">\(Y = (X-d)_+\)</span> dan rasio eliminasi kerugian yang diperkenalkan di Bagian 3.4.1. Kita dapat mengungkapkan ini sebagai</p>
+<p><span class="math display">\[LER(d) = \frac{\mathrm{E~}[X - (X-d)_+]}{\mathrm{E~}[X]} =\frac{\mathrm{E~}[\min(X,d)]}{\mathrm{E~}[X]} ,\]</span></p>
+<p><em>Contoh. 4.1.6. Klaim Cidera Tubuh dan Rasio Penghapusan Kerugian</em> Kami menggunakan sampel 432 klaim mobil tertutup dari Boston dari Derrig, Ostaszewski, dan Rempala ( 2001 ) . Kerugian dicatat untuk pembayaran karena cedera tubuh dalam kecelakaan mobil. Kerugian tidak dapat dikurangkan tetapi dibatasi oleh berbagai jumlah pertanggungan maksimum yang juga tersedia dalam data. Ternyata hanya 17 dari 432 ( ≈ 4%) tunduk pada batasan kebijakan ini sehingga kami mengabaikan data ini untuk ilustrasi ini.</p>
+<p>Kerugian rata-rata yang dibayarkan adalah 6906 dalam dolar AS. Gambar 4.5 menunjukkan aspek lain dari distribusi. Secara khusus, panel sebelah kiri menunjukkan fungsi distribusi empiris, panel sebelah kanan memberikan plot kepadatan nonparametrik.</p>
+<p>Dampak kerugian cedera tubuh dapat dikurangi dengan pengenaan limit atau pembelian polis reasuransi (lihat Bagian 10.3). Untuk mengukur dampak dari alat mitigasi risiko ini, biasanya menghitung rasio eliminasi kerugian (LER) seperti yang diperkenalkan di Bagian 3.4.1. Fungsi distribusi tidak tersedia sehingga harus diestimasi dengan cara tertentu. Menggunakan prinsip plug-in, estimator nonparametrik dapat didefinisikan sebagai</p>
+<p><span class="math display">\[LER_n(d) = \frac{n^{-1} \sum_{i=1}^n \min(X_i,d)}{n^{-1} \sum_{i=1}^n X_i} = \frac{\sum_{i=1}^n \min(X_i,d)}{\sum_{i=1}^n X_i} .\]</span></p>
+<p>Gambar 4.6 menunjukkan estimator <span class="math inline">\(LER_n(d)\)</span> untuk berbagai pilihan <span class="math inline">\(d\)</span> . Misalnya, di <span class="math inline">\(d= 1.000\)</span> dan punya <span class="math inline">\(LER_n( 1000 ) ≈ 0,1442\)</span>. Dengan demikian, memberlakukan batas 1.000 berarti ekspektasi klaim yang ditahan 14,42 persen lebih rendah bila dibandingkan dengan ekspektasi klaim dengan deductible nol.</p>
+</div>
+</div>
+<div id="alat-untuk-pemilihan-model-dan-diagnostik" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Alat untuk Pemilihan Model dan Diagnostik</h3>
+<p>Bagian sebelumnya memperkenalkan estimator nonparametrik di mana tidak ada bentuk parametrik yang diasumsikan tentang distribusi yang mendasarinya. Namun, dalam banyak aplikasi aktuaria, analis berusaha menggunakan kecocokan parametrik dari distribusi untuk kemudahan penjelasan dan kemampuan untuk memperluasnya ke situasi yang lebih kompleks seperti memasukkan variabel penjelas dalam pengaturan regresi. Saat memasang distribusi parametrik, seorang analis mungkin mencoba menggunakan distribusi gamma untuk mewakili sekumpulan data kerugian. Namun, analis lain mungkin lebih suka menggunakan distribusi Pareto. Bagaimana cara menentukan model mana yang akan dipilih?</p>
+<p>Alat nonparametrik dapat digunakan untuk menguatkan pemilihan model parametrik. Pada dasarnya, pendekatannya adalah untuk menghitung langkah-langkah ringkasan yang dipilih di bawah model parametrik yang dipasang dan membandingkannya dengan kuantitas yang sesuai di bawah model nonparametrik. Karena model nonparametrik tidak mengasumsikan distribusi tertentu dan hanya merupakan fungsi dari data, model ini digunakan sebagai tolok ukur untuk menilai seberapa baik distribusi/model parametrik mewakili data. Juga, ketika ukuran sampel meningkat, distribusi empiris hampir pasti menyatu dengan distribusi populasi yang mendasarinya (berdasarkan hukum jumlah besar yang kuat). Dengan demikian distribusi empiris adalah proksi yang baik untuk populasi. Perbandingan estimator parametrik dengan nonparametrik dapat mengingatkan analis akan kekurangan dalam model parametrik dan terkadang menunjukkan cara untuk meningkatkan spesifikasi parametrik. Prosedur diarahkan menilai validitas model yang dikenal sebagaidiagnostik model .</p>
+<div id="perbandingan-grafik-distribusi" class="section level4" number="4.1.2.1">
+<h4><span class="header-section-number">4.1.2.1</span> Perbandingan Grafik Distribusi</h4>
+<p>Kita telah melihat teknik overlay grafik untuk tujuan perbandingan. Untuk memperkuat penerapan teknik ini, Gambar 4.7membandingkan distribusi empiris dengan dua distribusi pas parametrik. Panel kiri menunjukkan fungsi distribusi distribusi klaim. Titik-titik yang membentuk kurva “berbentuk S” mewakili fungsi distribusi empiris pada setiap pengamatan. Kurva biru tebal memberikan nilai yang sesuai untuk distribusi gamma yang pas dan ungu muda untuk distribusi Pareto yang pas. Karena Pareto lebih dekat dengan fungsi distribusi empiris daripada gamma, ini memberikan bukti bahwa Pareto adalah model yang lebih baik untuk kumpulan data ini. Panel kanan memberikan informasi serupa untuk fungsi kerapatan dan memberikan pesan yang konsisten. Berdasarkan (hanya) angka-angka ini, distribusi Pareto adalah pilihan yang jelas bagi analis.</p>
+<p>Untuk cara lain untuk membandingkan kesesuaian dua model yang cocok, pertimbangkan plot probabilitas-probabilitas (<span class="math inline">\(pp\)</span>) . A <span class="math display">\[pp\]</span> plot membandingkan probabilitas kumulatif di bawah dua model. Untuk tujuan kami, kedua model ini adalah fungsi distribusi empiris nonparametrik dan model pas parametrik. Gambar 4.8 menunjukkan <span class="math inline">\(pp\)</span> plot untuk data Dana Properti yang diperkenalkan di Bagian 1.3 . Gamma yang dipasang di sebelah kiri dan Pareto yang dipasang di sebelah kanan, dibandingkan dengan fungsi distribusi data empiris yang sama. Garis lurus mewakili kesetaraan antara dua distribusi yang dibandingkan, sehingga titik yang dekat dengan garis diinginkan. Seperti yang terlihat pada demonstrasi sebelumnya, Pareto jauh lebih dekat dengan distribusi empiris daripada gamma, memberikan bukti tambahan bahwa Pareto adalah model yang lebih baik.</p>
+<p>Itu QQ plot membandingkan dua model yang dipasang melalui kuantilnya. Seperti hal hal plot, kami membandingkan nonparametrik dengan model pas parametrik. Kuantil dapat dievaluasi pada setiap titik kumpulan data, atau pada kisi (misalnya, di 0 , 0,001 , 0,002 , … , 0,999 , 1,000 ), tergantung aplikasinya. Pada Gambar 4.9 , untuk setiap titik pada kisi tersebut, sumbu horizontal menampilkan kuantil empiris dan sumbu vertikal menampilkan kuantil parametrik yang sesuai (gamma untuk dua panel atas, Pareto untuk dua panel bawah). Kuantil diplot pada skala asli di panel kiri dan pada skala log di panel kanan untuk memungkinkan kita melihat di mana kekurangan distribusi yang pas. Garis lurus mewakili kesetaraan antara distribusi empiris dan distribusi pas. Dari plot ini, kita sekali lagi melihat bahwa Pareto secara keseluruhan lebih cocok daripada gamma. Selain itu, panel kanan bawah menunjukkan bahwa distribusi Pareto bekerja dengan baik dengan klaim besar, tetapi memberikan kecocokan yang lebih buruk untuk klaim kecil.</p>
+<p><em>Contoh 4.1.7. Soal Ujian Aktuaria.</em> Grafik di bawah ini menunjukkan <span class="math inline">\(pp\)</span> plot distribusi pas dibandingkan dengan sampel.</p>
+<p>Solusi. Ekor dari distribusi yang pas terlalu tebal di sebelah kiri, terlalu tipis di sebelah kanan, dan distribusi yang pas memiliki probabilitas yang lebih kecil di sekitar median daripada sampel. Untuk melihat ini, ingat bahwa hal hal plot grafik distribusi kumulatif dari dua distribusi pada sumbunya (empiris pada sumbu x dan dipasang pada sumbu y dalam kasus ini). Untuk nilai kecil dari X , model yang dipasang memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu daripada yang terjadi dalam sampel (mis F( x ) &gt;FN( x ) ). Ini menunjukkan bahwa model memiliki ekor kiri yang lebih berat daripada datanya. Untuk nilai besar dari X , model kembali memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu dan dengan demikian lebih kecil kemungkinannya untuk berada di atas nilai itu (mis S( x ) &lt;SN( x ) ). Hal ini menunjukkan bahwa model memiliki ekor kanan yang lebih ringan dari pada data. Selain itu, saat kita mulai dari 0,4 hingga 0,6 pada sumbu horizontal (dengan demikian melihat 20% tengah data), hal hal plot meningkat dari sekitar 0,3 menjadi 0,4. Ini menunjukkan bahwa model hanya menempatkan sekitar 10% dari probabilitas dalam kisaran ini.</p>
+</div>
+<div id="perbandingan-statistik-distribusi" class="section level4" number="4.1.2.2">
+<h4><span class="header-section-number">4.1.2.2</span> Perbandingan Statistik Distribusi</h4>
+<p>Saat memilih model, akan sangat membantu untuk menampilkan tampilan grafis. Namun, untuk melaporkan hasil, melengkapi tampilan grafis dengan statistik terpilih yang meringkas kebaikan kesesuaian model dapat efektif. Tabel 4.2 menyediakan tiga statistik kebaikan yang umum digunakan . Dalam tabel ini, <span class="math inline">\(F_N\)</span> adalah distribusi empiris, <span class="math inline">\(F\)</span> adalah distribusi pas atau hipotesis, dan <span class="math inline">\(F_i^* = F(x_i)\)</span> .</p>
+<p><span class="math display">\[{\small
+\begin{matrix}
+\begin{array}{l|cc}
+\hline
+\text{Statistic} &amp; \text{Definition} &amp; \text{Computational Expression} \\
+\hline
+\text{Kolmogorov-} &amp; \max_x |F_n(x) - F(x)| &amp; \max(D^+, D^-) \text{ where } \\
+~~~\text{Smirnov} &amp;&amp; D^+ = \max_{i=1, \ldots, n} \left|\frac{i}{n} - F_i^*\right| \\
+&amp;&amp; D^- = \max_{i=1, \ldots, n} \left| F_i^* - \frac{i-1}{n} \right| \\
+\text{Cramer-von Mises} &amp; n \int (F_n(x) - F(x))^2 f(x) dx &amp; \frac{1}{12n} + \sum_{i=1}^n \left(F_i^* - (2i-1)/n\right)^2 \\
+\text{Anderson-Darling} &amp; n \int \frac{(F_n(x) - F(x))^2}{F(x)(1-F(x))} f(x) dx &amp; -n-\frac{1}{n} \sum_{i=1}^n (2i-1) \log\left(F_i^*(1-F_{n+1-i})\right)^2 \\
+\hline
+\end{array} \\
+\end{matrix}
+}\]</span></p>
+<p>Statistik Kolmogorov-Smirnov adalah perbedaan absolut maksimum antara fungsi distribusi yang dipasang dan fungsi distribusi empiris. Alih-alih membandingkan perbedaan antara titik tunggal, statistik Cramer-von Mises mengintegrasikan perbedaan antara fungsi distribusi empiris dan pas pada seluruh rentang nilai. Statistik Anderson-Darling juga mengintegrasikan perbedaan ini pada rentang nilai, meskipun diboboti oleh kebalikan dari varian. Oleh karena itu lebih menekankan pada ekor distribusi (yaitu kapan <span class="math inline">\(F( x )\)</span> atau <span class="math inline">\(1-F(x)=S(x)\)</span> kecil).</p>
+<p><em>Contoh 4.1.8. Soal Ujian Aktuaria (dimodifikasi)</em>. Contoh pembayaran klaim adalah:</p>
+<p><span class="math display">\[\begin{array}{ccccc}
+29 &amp; 64 &amp; 90 &amp; 135 &amp; 182  \\
+\end{array}\]</span></p>
+<p>Bandingkan distribusi klaim empiris dengan distribusi eksponensial dengan rata-rata 100 dengan menghitung nilai statistik uji Kolmogorov-Smirnov.</p>
+<p>Solusi. Untuk distribusi eksponensial dengan rata-rata 100 , fungsi distribusi kumulatif adalah <span class="math inline">\(F(x)=1-e^{-x/100}\)</span> . Dengan demikian,</p>
+<p><span class="math display">\[\begin{array}{ccccc}
+\hline
+x &amp; F(x) &amp; F_n(x) &amp; F_n(x-) &amp; \max(|F(x)-F_n(x)|,|F(x)-F_n(x-)|) \\
+\hline
+29  &amp; 0.2517 &amp; 0.2 &amp; 0   &amp; \max(0.0517, 0.2517) = 0.2517 \\
+64  &amp; 0.4727 &amp; 0.4 &amp; 0.2 &amp; \max(0.0727, 0.2727) = 0.2727 \\
+90  &amp; 0.5934 &amp; 0.6 &amp; 0.4 &amp; \max(0.0066, 0.1934) = 0.1934 \\
+135 &amp; 0.7408 &amp; 0.8 &amp; 0.6 &amp; \max(0.0592, 0.1408) = 0.1408 \\
+182 &amp; 0.8380 &amp; 1   &amp; 0.8 &amp; \max(0.1620, 0.0380) = 0.1620 \\
+\hline
+\end{array}\]</span></p>
+<p>Oleh karena itu, statistik uji Kolmogorov-Smirnov adalah</p>
+<p><span class="math display">\[KS = \max(0.2517, 0.2727, 0.1934, 0.1408, 0.1620) = 0.2727 .\]</span></p>
+</div>
+</div>
+<div id="nilai-awal" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Nilai Awal</h3>
+<p>Metode pencocokan momen dan persentil merupakan metode estimasi nonparametrik yang memberikan alternatif kemungkinan maksimum. Umumnya, kemungkinan maksimum adalah teknik yang lebih disukai karena menggunakan data secara lebih efisien. (Lihat Lampiran Bab 17 untuk definisi efisiensi yang tepat.) Namun, metode pencocokan momen dan persentil berguna karena lebih mudah diinterpretasikan dan karena itu memungkinkan aktuaris atau analis untuk menjelaskan prosedur kepada orang lain. Selain itu, prosedur estimasi numerik (misalnya jika dilakukan di <em>R</em>) untuk kemungkinan maksimum adalah iteratif dan membutuhkan nilai awal untuk memulai proses rekursif. Meskipun banyak masalah yang kuat untuk pemilihan nilai awal, untuk beberapa situasi kompleks, penting untuk memiliki nilai awal yang mendekati nilai optimal (tidak diketahui). Metode momen dan pencocokan persentil adalah teknik yang dapat menghasilkan perkiraan yang diinginkan tanpa investasi komputasi yang serius dan dengan demikian dapat digunakan sebagai nilai awal untuk menghitung kemungkinan maksimum.</p>
+<div id="metode-momen" class="section level4" number="4.1.3.1">
+<h4><span class="header-section-number">4.1.3.1</span> Metode Momen</h4>
+<p>Metode ini merupakan estimasi parameter populasi dengan pendekatan momen parametrik menggunakan momen sampel empiris. pada momen ini, momen distribusi parametrik menggunakan momen empiris atau nonparametrik kemudian dapat dipecahkan secara aljabar untuk estimasi parameter.</p>
+<p><em>Contoh 4.1.9. Dana Properti.</em> Untuk dana properti 2010, ada <span class="math inline">\(n = 1 , 377\)</span> klaim individu (dalam ribuan dolar) dengan</p>
+<p><span class="math display">\[m_1 = \frac{1}{n} \sum_{i=1}^n X_i = 26.62259 \ \ \ \
+\text{and} \ \ \ \
+m_2 = \frac{1}{n} \sum_{i=1}^n X_i^2 = 136154.6 .\]</span></p>
+<p>Sesuaikan parameter distribusi gamma dan Pareto menggunakan metode momen.</p>
+<p>Solusi. Agar sesuai dengan distribusi gamma, kami memiliki <span class="math inline">\(\mu_1 = \alpha \theta\)</span> Dan <span class="math inline">\(\mu_2^{\prime} = \alpha(\alpha+1) \theta^2\)</span> . Menyamakan keduanya menghasilkan metode penaksir momen, aljabar mudah menunjukkannya</p>
+<p><span class="math display">\[\alpha = \frac{\mu_1^2}{\mu_2^{\prime}-\mu_1^2}  \ \ \ \text{and} \ \ \  \theta = \frac{\mu_2^{\prime}-\mu_1^2}{\mu_1}.\]</span></p>
+<p>Jadi, metode penduga momen adalah</p>
+<p><span class="math display">\[\begin{aligned}
+\hat{\alpha} &amp;=  \frac{26.62259^2}{136154.6-26.62259^2} = 0.005232809 \\
+\hat{\theta} &amp;=  \frac{136154.6-26.62259^2}{26.62259} = 5,087.629.
+\end{aligned}\]</span></p>
+<p>Sebagai perbandingan, nilai kemungkinan maksimum berubah menjadi <span class="math inline">\(\hat{\alpha}_{MLE} = 0.2905959\)</span> Dan <span class="math inline">\(\hat{\theta}_{MLE} = 91.61378\)</span> , jadi ada perbedaan besar antara dua prosedur estimasi. Ini adalah salah satu indikasi, seperti yang telah kita lihat sebelumnya, bahwa model gamma kurang cocok.</p>
+<p>Sebaliknya, sekarang asumsikan distribusi Pareto sehingga <span class="math inline">\(\mu_1 = \theta/(\alpha -1)\)</span> Dan <span class="math inline">\(\mu_2^{\prime} = 2\theta^2/((\alpha-1)(\alpha-2) )\)</span> . Perhatikan bahwa ungkapan ini untuk μ′2 hanya berlaku untuk α &gt; 2 . Pertunjukan aljabar yang mudah</p>
+<p><span class="math display">\[\alpha = 1+ \frac{\mu_2^{\prime}}{\mu_2^{\prime}-\mu_1^2} \ \ \ \
+\text{and} \ \ \ \ \
+\theta = (\alpha-1)\mu_1.\]</span></p>
+<p>Jadi, metode penduga momen adalah</p>
+<p><span class="math display">\[ \begin{aligned}
+\hat{\alpha} &amp;=  1+ \frac{136154.6}{136154.6-26,62259^2} = 2.005233 \\
+\hat{\theta} &amp;=  (2.005233-1) \cdot 26.62259 = 26.7619
+\end{aligned}\]</span></p>
+<p>Nilai kemungkinan maksimum berubah menjadi <span class="math inline">\(\hat{\alpha}_{MLE} = 0.9990936\)</span> Dan <span class="math inline">\(\hat{\theta}_{MLE} = 2.2821147\)</span> . Sangat menarik bahwa <span class="math inline">\(\hat{\alpha}_{MLE}&lt;1\)</span> ; untuk distribusi Pareto, ingat itu <span class="math inline">\(α &lt; 1\)</span> berarti rata-ratanya tak terhingga. Ini adalah indikasi lain bahwa kumpulan data klaim properti adalah distribusi ekor panjang.</p>
+<p>Seperti contoh di atas, ada fleksibilitas dengan metode momen. Misalnya, kita dapat mencocokkan momen kedua dan ketiga alih-alih yang pertama dan kedua, menghasilkan estimator yang berbeda. Selain itu, tidak ada jaminan bahwa solusi akan ada untuk setiap masalah. Untuk data yang disensor atau terpotong, momen pencocokan dimungkinkan untuk beberapa masalah, tetapi secara umum, ini adalah skenario yang lebih sulit. Terakhir, untuk distribusi di mana momen tidak ada atau tidak terbatas, metode momen tidak tersedia. Sebagai alternatif, seseorang dapat menggunakan teknik pencocokan persentil.</p>
+</div>
+<div id="pencocokan-persentil" class="section level4" number="4.1.3.2">
+<h4><span class="header-section-number">4.1.3.2</span> Pencocokan Persentil</h4>
+<p>Di bawah pencocokan persentil , kami memperkirakan kuantil atau persentil dari distribusi parametrik menggunakan kuantil atau persentil empiris (nonparametrik) yang dijelaskan di Bagian 4.1.1.3 .</p>
+<p><em>Contoh 4.1.10. Dana Properti.</em> Untuk dana properti 2010, kami mengilustrasikan pencocokan pada kuantil. Secara khusus, distribusi Pareto secara intuitif menyenangkan karena solusi bentuk tertutup untuk kuantil. Ingatlah bahwa fungsi distribusi untuk distribusi Pareto adalah</p>
+<p><span class="math display">\[F(x) = 1 - \left(\frac{\theta}{x+\theta}\right)^{\alpha}.\]</span></p>
+<p>Aljabar mudah menunjukkan bahwa kita dapat menyatakan kuantil sebagai</p>
+<p><span class="math display">\[F^{-1}(q) = \theta \left( (1-q)^{-1/\alpha} -1 \right).\]</span></p>
+<p>untuk sebagian kecil q , <span class="math inline">\(0 &lt; q&lt; 1\)</span>.</p>
+<p>Tentukan estimasi parameter distribusi Pareto menggunakan kuantil empiris ke-25 dan ke-95.</p>
+<p>Solusi. Persentil ke-25 (kuartil pertama) ternyata adalah 0,78853 dan persentil ke-95 adalah 50.98293 (keduanya dalam ribuan dolar). Dengan dua persamaan</p>
+<p><span class="math display">\[0.78853 = \theta \left( 1- (1-.25)^{-1/\alpha} \right) \ \ \ \ \text{and} \ \ \ \ 50.98293 = \theta \left( 1- (1-.75)^{-1/\alpha} \right)\]</span></p>
+<p>dan dua yang tidak diketahui, solusinya adalah</p>
+<p><span class="math display">\[\hat{\alpha} = 0.9412076 \ \ \ \ \ \text{and} \ \ \ \
+\hat{\theta} = 2.205617 .\]</span></p>
+<p>Sehingga kesimpulannya adalah rutin numerik diperlukan untuk solusi ini karena tidak ada solusi analitik yang tersedia. Selanjutnya, ingatlah perkiraan kemungkinan maksimumadalah α^ML E= 0,9990936 Dan θ^ML E= 2,2821147 , sehingga pencocokan persentil memberikan perkiraan yang lebih baik untuk distribusi Pareto daripada metode momen.</p>
+<p><em>Contoh 4.1.11. Soal Ujian Aktuaria. Anda diberikan:</em></p>
+<ol style="list-style-type: lower-roman">
+<li>Kerugian mengikuti distribusi loglogistik dengan fungsi distribusi kumulatif:</li>
+</ol>
+<p><span class="math display">\[F(x) = \frac{\left(x/\theta\right)^{\gamma}}{1+\left(x/\theta\right)^{\gamma}}\]</span></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Contoh kerugiannya adalah:</li>
+</ol>
+<p><span class="math display">\[\begin{array}{ccccccccccc}
+10 &amp;35 &amp;80 &amp;86 &amp;90 &amp;120 &amp;158 &amp;180 &amp;200 &amp;210 &amp;1500 \\
+\end{array}\]</span></p>
+<p>Hitung estimasi dari <span class="math inline">\(θ\)</span> dengan pencocokan persentil, menggunakan perkiraan persentil ke-40 dan ke-80 yang dihaluskan secara empiris.</p>
+<p>Solusi. Dengan 11 pengamatan, kami memiliki <span class="math inline">\(j=\lfloor(n+1)q\rfloor = \lfloor 12(0.4) \rfloor = \lfloor 4.8\rfloor=4\)</span>. Dengan interpolasi, perkiraan persentil ke-40 yang dihaluskan secara empiris adalah <span class="math inline">\(\hat{\pi}_{0.4} = (1-h) X_{(j)} + h X_{(j+1)} = 0.2(86)+0.8(90)=89.2\)</span>.</p>
+<p>Demikian pula, untuk perkiraan persentil yang dihaluskan secara empiris ke-80, kami memiliki <span class="math inline">\(12 ( 0,8 ) = 9,6\)</span> jadi perkiraannya <span class="math inline">\(\hat{\pi}_{0.8} = 0.4(200)+0.6(210)=206\)</span>.</p>
+<p>Dengan menggunakan distribusi kumulatif loglogistik, kita perlu menyelesaikan dua persamaan berikut untuk parameter <span class="math inline">\({\hat{\theta}}\)</span> Dan <span class="math inline">\({\hat{\gamma}}\)</span> :</p>
+<p><span class="math display">\[0.4=\frac{(89.2/{\hat{\theta}})^{\hat{\gamma}}}{1+(89.2/{\hat{\theta}})^{\hat{\gamma}}} \ \ \ \text{and} \ \ \ \   0.8=\frac{(206/{\hat{\theta}})^{\hat{\gamma}}}{1+(206/{\hat{\theta}})^{\hat{\gamma}}} .\]</span></p>
+<p>Pemecahan untuk setiap ekspresi kurung memberi <span class="math inline">\(\frac{2}{3}=(89.2/\theta)^{\hat{\gamma}}\)</span> Dan <span class="math inline">\(4=(206/{\hat{\theta}})^{\hat{\gamma}}\)</span> . Mengambil rasio persamaan kedua dengan yang pertama memberi <span class="math inline">\(6=(206/89.2)^{\hat{\gamma}}\Rightarrow {\hat{\gamma}}=\frac{\log(6)}{\log(206/89.2)} = 2.1407\)</span>. Kemudian <span class="math inline">\(4^{1/2.1407}=206/{\hat{\theta}} \Rightarrow {\hat{\theta}}=107.8\)</span>.</p>
+<p>Seperti metode momen, pencocokan persentil hampir terlalu fleksibel dalam arti bahwa estimator dapat bervariasi tergantung pada persentil berbeda yang dipilih. Misalnya, seorang aktuaris dapat menggunakan estimasi pada persentil ke-25 dan ke-95 sedangkan yang lain menggunakan persentil ke-20 dan ke-80. Secara umum estimasi parameter akan berbeda dan tidak ada alasan kuat untuk memilih salah satu dari yang lain. Seperti halnya metode momen, pencocokan persentil menarik karena memberikan teknik yang dapat diterapkan dengan mudah dalam situasi tertentu dan memiliki dasar intuitif. Meskipun sebagian besar aplikasi aktuaria menggunakan estimator kemungkinan maksimum, akan lebih mudah untuk memiliki pendekatan alternatif seperti metode momen dan pencocokan persentil yang tersedia.</p>
 
+</div>
+</div>
+</div>
 </div>
             </section>
 
@@ -240,7 +834,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

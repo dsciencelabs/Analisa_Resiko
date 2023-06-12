@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bab 11 Bühlmann Credibility | Analisis Resiko</title>
+  <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bab 11 Bühlmann Credibility | Analisis Resiko" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bab 11 Bühlmann Credibility | Analisis Resiko" />
+  
+  <meta name="twitter:description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
+  
+
+<meta name="author" content="Bakti Siregar, M.Sc" />
+
+
+<meta name="date" content="2023-06-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="limited-fluctuation-credibility.html"/>
+<link rel="next" href="bühlmann-straub-credibility.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/Logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html"><i class="fa fa-check"></i>Kata Pengantar</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#deskripsi-buku"><i class="fa fa-check"></i>Deskripsi Buku</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#petunjuk-penggunaan"><i class="fa fa-check"></i>Petunjuk Penggunaan</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#manfaat"><i class="fa fa-check"></i>Manfaat</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#mengapa-analisa-resiko"><i class="fa fa-check"></i>Mengapa Analisa Resiko?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#ucapan-terima-kasih"><i class="fa fa-check"></i>Ucapan Terima Kasih</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kontributor"><i class="fa fa-check"></i>Kontributor</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#kritik-saran"><i class="fa fa-check"></i>Kritik &amp; Saran</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html"><i class="fa fa-check"></i><b>1</b> Pengantar Analitika Data Kerugian</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#relevansi-analitika-dalam-aktivitas-asuransi"><i class="fa fa-check"></i><b>1.1</b> Relevansi Analitika dalam Aktivitas Asuransi</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#sifat-dan-relevansi-asuransi"><i class="fa fa-check"></i><b>1.1.1</b> Sifat dan Relevansi Asuransi</a></li>
+<li class="chapter" data-level="1.1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#apa-itu-analitika"><i class="fa fa-check"></i><b>1.1.2</b> Apa itu Analitika?</a></li>
+<li class="chapter" data-level="1.1.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#proses-asuransi"><i class="fa fa-check"></i><b>1.1.3</b> Proses Asuransi</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#operasi-perusahaan-asuransi"><i class="fa fa-check"></i><b>1.2</b> Operasi Perusahaan Asuransi</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memulai-asuransi"><i class="fa fa-check"></i><b>1.2.1</b> Memulai Asuransi</a></li>
+<li class="chapter" data-level="1.2.2" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#memperbarui-asuransi"><i class="fa fa-check"></i><b>1.2.2</b> Memperbarui Asuransi</a></li>
+<li class="chapter" data-level="1.2.3" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#pengelolaan-klaim-dan-produk"><i class="fa fa-check"></i><b>1.2.3</b> Pengelolaan Klaim dan Produk</a></li>
+<li class="chapter" data-level="1.2.4" data-path="pengantar-analitika-data-kerugian.html"><a href="pengantar-analitika-data-kerugian.html#penyisihan-klaim"><i class="fa fa-check"></i><b>1.2.4</b> Penyisihan Klaim</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.2</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.2.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.2.2</b> 2. Policy Limit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.2.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.2.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.2.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.2.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.2.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.2.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
+<li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-simulasi"><i class="fa fa-check"></i><b>6.1</b> Dasar-Dasar Simulasi</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#menghasilkan-pengamatan-seragam-independen"><i class="fa fa-check"></i><b>6.1.1</b> Menghasilkan Pengamatan Seragam Independen</a></li>
+<li class="chapter" data-level="6.1.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metode-transformasi-invers"><i class="fa fa-check"></i><b>6.1.2</b> Metode Transformasi Invers</a></li>
+<li class="chapter" data-level="6.1.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-simulasi"><i class="fa fa-check"></i><b>6.1.3</b> (6.1.3) Presisi Simulasi</a></li>
+<li class="chapter" data-level="6.1.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#simulasi-dan-inferensi-statistik"><i class="fa fa-check"></i><b>6.1.4</b> Simulasi dan Inferensi Statistik</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-dan-resampling"><i class="fa fa-check"></i><b>6.2</b> Bootstrap dan Resampling</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#dasar-dasar-bootstrap"><i class="fa fa-check"></i><b>6.2.1</b> Dasar-dasar Bootstrap</a></li>
+<li class="chapter" data-level="6.2.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error"><i class="fa fa-check"></i><b>6.2.2</b> Presisi Bootstrap: Bias, Standar Deviasi, dan Mean Square Error</a></li>
+<li class="chapter" data-level="6.2.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
+<li class="chapter" data-level="6.2.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
+<li class="chapter" data-level="9" data-path="pengantar-aplikasi-teori-kredibilitas.html"><a href="pengantar-aplikasi-teori-kredibilitas.html"><i class="fa fa-check"></i><b>9</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="10" data-path="limited-fluctuation-credibility.html"><a href="limited-fluctuation-credibility.html"><i class="fa fa-check"></i><b>10</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="limited-fluctuation-credibility.html"><a href="limited-fluctuation-credibility.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>10.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="10.2" data-path="limited-fluctuation-credibility.html"><a href="limited-fluctuation-credibility.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>10.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="10.3" data-path="limited-fluctuation-credibility.html"><a href="limited-fluctuation-credibility.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>10.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="10.4" data-path="limited-fluctuation-credibility.html"><a href="limited-fluctuation-credibility.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>10.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="bühlmann-credibility.html"><a href="bühlmann-credibility.html"><i class="fa fa-check"></i><b>11</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="bühlmann-credibility.html"><a href="bühlmann-credibility.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>11.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="bühlmann-straub-credibility.html"><a href="bühlmann-straub-credibility.html"><i class="fa fa-check"></i><b>12</b> Bühlmann-Straub Credibility</a></li>
+<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>13.1</b> Introduction to Insurance Portfolios</a></li>
+<li class="chapter" data-level="13.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tails-of-distributions"><i class="fa fa-check"></i><b>13.2</b> Tails of Distributions</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#classification-based-on-moments"><i class="fa fa-check"></i><b>13.2.1</b> Classification Based on Moments</a></li>
+<li class="chapter" data-level="13.2.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#comparison-based-on-limiting-tail-behavior"><i class="fa fa-check"></i><b>13.2.2</b> Comparison Based on Limiting Tail Behavior</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#risk-measures"><i class="fa fa-check"></i><b>13.3</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#coherent-risk-measures"><i class="fa fa-check"></i><b>13.3.1</b> Coherent Risk Measures</a></li>
+<li class="chapter" data-level="13.3.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#value-at-risk"><i class="fa fa-check"></i><b>13.3.2</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="13.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>13.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
+<li class="chapter" data-level="13.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>13.3.4</b> Tail Value-at-Risk</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>13.4</b> Reinsurance</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>13.4.1</b> Proportional Reinsurance</a></li>
+<li class="chapter" data-level="13.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>13.4.2</b> Non-Proportional Reinsurance</a></li>
+<li class="chapter" data-level="13.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>13.4.3</b> Additional Reinsurance Treaties</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
+<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
+<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
+<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
+<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
+<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
+<li><a href="section.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dsciencelabs/Analisa_Resiko" target="blank">Published with Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analisis Resiko</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bühlmann-credibility" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Bab 11</span> Bühlmann Credibility<a href="bühlmann-credibility.html#bühlmann-credibility" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<p>Dalam bagian ini, kita akan mempelajari:</p>
+<ul>
+<li>Menghitung perkiraan yang ditimbang kredibilitas untuk kerugian yang diharapkan untuk suatu risiko atau kelompok risiko.</li>
+<li>Menentukan kredibilitas <span class="math inline">\(Z\)</span> yang diberikan kepada pengamatan.</li>
+<li>Menghitung nilai yang diperlukan dalam kredibilitas Bühlmann, termasuk Nilai Harapan Variansi Proses <span class="math inline">\(( EPV )\)</span>, Variansi Rata-rata Hipotetis <span class="math inline">\(( VHM )\)</span> dan rata-rata kolektif <span class="math inline">\(μ\)</span> .</li>
+<li>Mengenali situasi di mana model Bühlmann sesuai.</li>
+</ul>
+<hr />
+<p>Rencana peringkat klasifikasi mengelompokkan pemegang polis ke dalam kelas berdasarkan karakteristik risiko. Meskipun pemegang polis dalam satu kelas memiliki kesamaan, mereka tidak identik dan kerugian yang diharapkan tidak akan sama persis. Rencana peringkat pengalaman dapat melengkapi rencana peringkat kelas dengan menimbang kredibilitas pengalaman kerugian individu pemegang polis dengan tarif kelas untuk menghasilkan tarif yang lebih akurat bagi pemegang polis.</p>
+<p>Dalam penyajian kredibilitas Bühlmann, disarankan untuk menetapkan parameter risiko <span class="math inline">\(θ\)</span> untuk setiap pemegang polis. Kerugian <span class="math inline">\(X\)</span> untuk pemegang polis akan memiliki fungsi distribusi yang umum <span class="math inline">\(Fθ(x)\)</span> dengan rata-rata <span class="math inline">\(μ(θ)=E(X|θ)\)</span> dan varians <span class="math inline">\(σ2(θ)=Var(X|θ)\)</span>. Kerugian <span class="math inline">\(X\)</span> dapat mewakili premi murni, kerugian agregat, jumlah klaim, keparahan klaim, atau ukuran kerugian lainnya untuk periode waktu, seringkali selama satu tahun. Parameter risiko <span class="math inline">\(θ\)</span> dapat bersifat kontinu atau diskrit dan dapat multivariat tergantung pada model yang digunakan.</p>
+<p>Jika seorang pemegang polis dengan parameter risiko <span class="math inline">\(θ\)</span> mengalami kerugian <span class="math inline">\(X1,...,Xn\)</span> selama <span class="math inline">\(n\)</span> periode waktu, maka tujuannya adalah untuk menemukan <span class="math inline">\(E(μ(θ)|X1,...,Xn)\)</span>, yaitu ekspektasi bersyarat dari <span class="math inline">\(μ(θ)\)</span> yang diberikan <span class="math inline">\(X1,...,Xn\)</span>. Perkiraan yang ditimbang kredibilitas Bühlmann untuk <span class="math inline">\(E(μ(θ)|X1,...,Xn)\)</span> untuk pemegang polis adalah sebagai berikut:</p>
+<p><span class="math display">\[\begin{equation}\hat{\mu}(\theta)=Z\bar{X}+(1-Z)\mu \tag{9.7}\end{equation}\]</span></p>
+<p>Dengan :</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\theta&amp;=&amp;\textrm{a risk parameter that identifies a policyholder&#39;s risk level}\\
+\hat{\mu}(\theta)&amp;=&amp;\textrm{estimated expected loss for a policyholder with parameter }\theta\\
+&amp; &amp; \textrm{and loss experience } \bar{X}\\
+\bar{X}&amp;=&amp;(X_1+\cdots+X_n)/n \textrm{ is the average of $n$ observations of the policyholder } \\
+Z&amp;=&amp;\textrm{credibility assigned to $n$ observations } \\
+\mu&amp;=&amp;\textrm{the expected loss for a randomly chosen policyholder in the class.}\\
+\end{eqnarray*}\]</span></p>
+<p>Untuk pemegang polis yang dipilih, asumsi variabel acak <span class="math inline">\(Xj\)</span> dianggap iid untuk <span class="math inline">\(j=1,...,n\)</span> karena diasumsi8kan bahwa paparan pemegang polis terhadap kerugian tidak berubah dari waktu ke waktu. Kuantitas <span class="math inline">\(\bar{X}\)</span> adalah rata-rata dari <span class="math inline">\(n\)</span> pengamatan dan <span class="math inline">\(E(\bar{X}|θ)=E(Xj|θ)=μ(θ)\)</span>.</p>
+<p>Jika seorang pemegang polis dipilih secara acak dari kelas dan tidak ada informasi kerugian tentang risiko, maka kerugian yang diharapkan adalah <span class="math inline">\(μ=E(μ(θ))\)</span> di mana harapan diambil dari semua <span class="math inline">\(θ\)</span> dalam kelas. Dalam situasi ini, <span class="math inline">\(Z=0\)</span> dan kerugian yang diharapkan adalah <span class="math inline">\(μ^(θ)=μ\)</span> untuk risiko tersebut. Kuantitas <span class="math inline">\(μ\)</span> juga dapat ditulis sebagai <span class="math inline">\(μ=E(Xj)\)</span> atau <span class="math inline">\(μ=E(\bar{X})\)</span> dan sering disebut sebagai mean keseluruhan atau collective mean. Perhatikan bahwa <span class="math inline">\(E(Xj)\)</span> dievaluasi dengan hukum total ekspektasi: <span class="math inline">\(E(Xj)=E(E[Xj|θ])\)</span>.</p>
+<p><strong>Example 9.3.1</strong> Jumlah klaim <span class="math inline">\(X\)</span> untuk seorang tertanggung dalam suatu kelas memiliki distribusi Poisson dengan mean <span class="math inline">\(θ&gt;0\)</span>. Parameter risiko <span class="math inline">\(θ\)</span> didistribusikan secara eksponensial di dalam kelas dengan pdf <span class="math inline">\(f(θ)=e−θ\)</span>. Berapakah jumlah klaim yang diharapkan untuk seorang tertanggung yang dipilih secara acak dari kelas tersebut?</p>
+<p><strong>Solusi</strong>
+Variabel acak <span class="math inline">\(X\)</span> memiliki distribusi Poisson dengan parameter <span class="math inline">\(θ\)</span> dan <span class="math inline">\(E(X|θ)=θ\)</span>. Jumlah klaim yang diharapkan untuk seorang tertanggung yang dipilih secara acak adalah <span class="math inline">\(μ=E(μ(θ))=E(E(X|θ))=E(θ)=∫∞0θe−θdθ=1\)</span>.</p>
+<p>Pada contoh di atas, parameter risiko <span class="math inline">\(θ\)</span> adalah variabel acak dengan distribusi eksponensial. Pada contoh berikutnya, terdapat tiga jenis risiko dan parameter risiko memiliki distribusi diskrit.</p>
+<p><strong>Example 9.3.2</strong> Untuk setiap risiko (pemegang polis) dalam populasi, jumlah kerugian <span class="math inline">\(N\)</span> dalam setahun memiliki distribusi Poisson dengan parameter <span class="math inline">\(λ\)</span>. Jumlah kerugian individu <span class="math inline">\(Xi\)</span> untuk sebuah risiko independen dari <span class="math inline">\(N\)</span> dan identik dan memiliki distribusi Pareto Tipe II dengan <span class="math inline">\(F(x) = 1 - [θ / (x + θ)]α\)</span>. Ada tiga jenis risiko dalam populasi sebagai berikut:</p>
+<p><span class="math display">\[\small{
+\begin{array}{|c|c|c|c|}
+\hline
+\text{Risk } &amp; \text{Percentage} &amp; \text{Poisson} &amp; \text{Pareto} \\
+\text{Type} &amp; \text{of Population} &amp; \text{Parameter} &amp; \text{Parameters} \\
+\hline
+A &amp; 50\% &amp; \lambda=0.5 &amp; \theta=1000, \alpha=2.0 \\
+B &amp; 30\% &amp; \lambda=1.0 &amp; \theta=1500, \alpha=2.0 \\  
+C &amp; 20\% &amp; \lambda=2.0 &amp; \theta=2000, \alpha=2.0 \\              
+\hline
+\end{array}
+}\]</span></p>
+<p>Jika sebuah risiko dipilih secara acak dari populasi tersebut, berapa kerugian total yang diharapkan dalam setahun?</p>
+<p><strong>Solusi</strong>
+Untuk suatu risiko, jumlah klaim yang diharapkan adalah <span class="math inline">\(E(N|λ) = λ\)</span>. Nilai harapan dari suatu variabel acak yang didistribusikan Pareto adalah <span class="math inline">\(E(X|θ,α) = θ/(α-1)\)</span>. Nilai harapan dari variabel acak kehilangan agregat <span class="math inline">\(S = X1 +⋯+XN\)</span> untuk risiko dengan parameter <span class="math inline">\(λ\)</span>, <span class="math inline">\(α\)</span>, dan <span class="math inline">\(θ\)</span> adalah <span class="math inline">\(E(S) = E(N)E(X) = λθ/(α-1)\)</span>. Kerugian agregat yang diharapkan untuk suatu risiko jenis A adalah <span class="math inline">\(E(SA) = (0,5)(1000)/(2-1) = 500\)</span>. Kerugian agregat yang diharapkan untuk suatu risiko yang dipilih secara acak dari populasi adalah <span class="math inline">\(E(S) = 0,5[(0,5)(1000)]+0,3[(1,0)(1500)]+0,2[(2,0)(2000)] = 1500\)</span>.</p>
+<hr />
+<p>Berapa parameter risiko untuk suatu risiko (pemegang polis) pada contoh sebelumnya? Dapat dikatakan bahwa parameter risiko memiliki tiga komponen <span class="math inline">\((λ, θ, α)\)</span> dengan nilai mungkin (0,5, 1000, 2,0), (1,0, 1500, 2,0), dan (2,0, 2000, 2,0) tergantung pada jenis risiko.</p>
+<p>Perlu diperhatikan bahwa pada kedua contoh tersebut, parameter risiko adalah kuantitas acak dengan distribusi probabilitasnya sendiri. Kita tidak tahu nilai parameter risiko untuk risiko yang dipilih secara acak.</p>
+<p>Meskipun formula (9.7) diperkenalkan dengan menggunakan rating pengalaman sebagai contoh, model kredibilitas Bühlmann memiliki aplikasi yang lebih luas. Misalkan ada rencana rating dengan beberapa kelas. Formula kredibilitas (9.7) dapat digunakan untuk menentukan tarif kelas individu. Rata-rata keseluruhan <span class="math inline">\(μ\)</span> akan menjadi rata-rata kerugian untuk semua kelas yang digabungkan, <span class="math inline">\(\bar{X}\)</span> akan menjadi pengalaman untuk kelas individu, dan <span class="math inline">\(μ^(θ)\)</span> akan menjadi perkiraan kerugian untuk kelas tersebut.</p>
+<div id="credibility-z-epv-and-vhm" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Credibility Z, EPV, and VHM<a href="bühlmann-credibility.html#credibility-z-epv-and-vhm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ketika menghitung estimasi kredibilitas <span class="math inline">\(μ^(θ)=Z\bar{X}+(1−Z)μ\)</span>, berapa bobot <span class="math inline">\(Z\)</span> yang harus diberikan pada pengalaman <span class="math inline">\(\bar{X}\)</span> dan berapa bobot <span class="math inline">\((1−Z)\)</span> pada rata-rata keseluruhan <span class="math inline">\(μ\)</span>? Dalam kredibilitas Bühlmann, terdapat tiga faktor yang perlu dipertimbangkan:</p>
+<ol style="list-style-type: decimal">
+<li>Berapa variasi dalam satu pengamatan <span class="math inline">\(Xj\)</span> untuk risiko yang dipilih? Dengan <span class="math inline">\(\bar{X} = (X1 + ⋯ + Xn) / n\)</span> dan dengan asumsi bahwa pengamatan adalah iid kondisional pada <span class="math inline">\(θ\)</span>, maka mengikuti bahwa <span class="math inline">\(Var(\bar{X}|θ) = Var(Xj|θ) / n\)</span>. Untuk <span class="math inline">\(Var(\bar{X}|θ)\)</span> yang lebih besar, bobot kredibilitas <span class="math inline">\(Z\)</span> yang lebih kecil harus diberikan pada pengalaman <span class="math inline">\(\bar{X}\)</span>. Nilai Harapan dari Varians Proses, disingkat <span class="math inline">\(EPV\)</span>, adalah nilai harapan dari <span class="math inline">\(Var(Xj|θ)\)</span> di seluruh risiko:</li>
+</ol>
+<p><span class="math inline">\(EPV = \mathrm{E}(\mathrm{Var}(X_j|\theta)).\)</span></p>
+<p>karena <span class="math inline">\(Var(\bar{X}|θ) = Var(Xj|θ)/n)\)</span> maka berlaku bahwa <span class="math inline">\(E(Var(\bar{X}|θ))=EPV/n\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Seberapa homogen populasi risiko yang pengalaman kerugiannya digabungkan untuk menghitung rata-rata keseluruhan <span class="math inline">\(μ\)</span>? Jika semua risiko memiliki potensi kerugian yang serupa, maka bobot yang lebih besar <span class="math inline">\((1-Z)\)</span> diberikan pada rata-rata keseluruhan <span class="math inline">\(μ\)</span> karena <span class="math inline">\(μ\)</span> adalah rata-rata untuk sekelompok risiko yang serupa dan rata-rata <span class="math inline">\(μ(θ)\)</span> tidak terlalu jauh. Homogenitas atau heterogenitas populasi diukur dengan Variance of the Hypothetical Means dengan singkatan <span class="math inline">\(VHM\)</span>:</li>
+</ol>
+<p><span class="math display">\[VHM=\mathrm{Var}(\mathrm{E}(X_j|\theta))=\mathrm{Var}(\mathrm{E}(\bar{X}|\theta)).\]</span></p>
+<p>Perhatikan bahwa kita menggunakan <span class="math inline">\(E(\bar{X}|θ)=E(Xj|θ)\)</span> untuk kesamaan kedua.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Berapa banyak pengamatan n yang digunakan untuk menghitung <span class="math inline">\(\bar{X}\)</span>? Sampel yang lebih besar akan menghasilkan <span class="math inline">\(Z\)</span> yang lebih besar.</li>
+</ol>
+<p><strong>Example 9.3.3</strong> Jumlah klaim <span class="math inline">\(N\)</span> dalam setahun untuk suatu risiko dalam populasi memiliki distribusi Poisson dengan mean <span class="math inline">\(λ&gt;0\)</span>. Parameter risiko <span class="math inline">\(λ\)</span> didistribusikan secara seragam di selang (0,2). Hitung <span class="math inline">\(EPV\)</span> dan <span class="math inline">\(VHM\)</span> untuk populasi.</p>
+<p><strong>Solusi</strong></p>
+<p>Variabel acak N berdistribusi Poisson dengan parameter λ sehingga Var(N|λ)=λ . Nilai harapan dari varian proses adalah EPV=E(Var(N|λ)) = E(λ)=∫20λ12dλ=1 . Varians dari rata-rata hipotetis adalah <span class="math inline">\(VHM=Var(E(N|λ)) = Var(λ)=E(λ^2)−(E(λ))^2 = \int_{0}^{2}\lambda^2 \frac{1}{2} d\lambda-(1)^2=\frac{1}{3}\)</span></p>
+<p>Formula kepercayaan Bühlmann meliputi nilai untuk <span class="math inline">\(n\)</span>, <span class="math inline">\(EPV\)</span>, dan <span class="math inline">\(VHM\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+Z=\frac{n}{n+K} \quad , \quad K =\frac{EPV}{VHM}.
+\tag{9.8}
+\end{equation}\]</span></p>
+<p>Jika <span class="math inline">\(VHM\)</span> meningkat maka <span class="math inline">\(Z\)</span> juga meningkat. Jika <span class="math inline">\(EPV\)</span> meningkat maka <span class="math inline">\(Z\)</span> menjadi lebih kecil. Berbeda dengan kredibilitas fluktuasi terbatas di mana <span class="math inline">\(Z=1\)</span> ketika jumlah klaim yang diharapkan lebih besar dari standar kredibilitas penuh, <span class="math inline">\(Z\)</span> dapat mendekati tetapi tidak sama dengan 1 ketika jumlah pengamatan n mendekati tak hingga.</p>
+<p>Jika Anda mengalikan pembilang dan penyebut rumus <span class="math inline">\(Z\)</span> dengan <span class="math inline">\(( VHM/n )\)</span>, maka <span class="math inline">\(Z\)</span> dapat ditulis kembali sebagai:</p>
+<p><span class="math display">\[Z=\frac{VHM}{VHM+(EPV/n)} .\]</span></p>
+<p>Jumlah pengamatan <span class="math inline">\(n\)</span> tertangkap dalam istilah <span class="math inline">\((EPV/n)\)</span>. Seperti yang ditunjukkan di bullet (1) di awal bagian, <span class="math inline">\(E(Var(\bar{X}|θ)) = EPV/n\)</span>. Seiring dengan bertambahnya jumlah pengamatan, varians yang diharapkan dari <span class="math inline">\(\bar{X}\)</span> menjadi lebih kecil dan kredibilitas <span class="math inline">\(Z\)</span> meningkat sehingga lebih banyak bobot diberikan pada <span class="math inline">\(\bar{X}\)</span> dalam perkiraan yang dibobotkan kredibilitas <span class="math inline">\(μ^(θ)\)</span>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="limited-fluctuation-credibility.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bühlmann-straub-credibility.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dsciencelabs/Analisa_Resiko/edit/master/chapters/09-Credibility.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Analisa_Resiko.pdf", "Analisa_Resiko.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
