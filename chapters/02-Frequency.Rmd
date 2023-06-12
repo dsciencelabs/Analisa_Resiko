@@ -33,7 +33,7 @@ regulator secara rutin mewajibkan pelaporan nomor dan jumlah klaim. Pemantauan s
 
 Variabel acak jumlah klaim dilambangkan dengan $N$, digunakan untuk mengasumsikan nilai bilangan bulat non-negatif ${0,1,...}$
 
-#### Formula
+### Formula
 
 $N$ adalah variabel acak diskrit yang memiliki nilai {0,1,...}. Deskripsi yang paling dasar dari distribusinya adalah spesifikasi probabilitas yang diasumsikan dengan masing-masing nilai bilangan bulat non-negatif, ini adalah konsep probability mass function (pmf) yaitu fungsi yang memberikan probabilitas bahwa variabel acak diskrit sama persis dengan suatu nilai yang dialmbangkan sebagai $P_N(.)$
 $$

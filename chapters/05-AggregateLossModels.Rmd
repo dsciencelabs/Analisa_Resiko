@@ -273,7 +273,7 @@ $$
   \end{array}
 \end{matrix}
 }
-$$
+$$  
 
 Jumlah proyek dan jumlah jam lembur tidak bergantung. Anda akan dibayar untuk jam lembur yang melebihi 15 jam dalam seminggu. Hitunglah jumlah jam lembur yang akan  diterima dalam seminggu.
 
@@ -529,6 +529,7 @@ f_{S_N}(s)&=\sum_{n=1}^{\infty} p_n f_{S_n}(s)\\
 \end{aligned}
 $$
 
+
 Dengan demikian, distribusi Tweedie dapat dianggap sebagai campuran antara distribusi nol dan distribusi bernilai positif, yang membuatnya menjadi alat yang mudah digunakan untuk memodelkan klaim asuransi dan untuk menghitung premi murni. Rata-rata dan varians dari model Poisson gabungan Tweedie adalah:
 
 ${\rm E} (S_N)=\lambda\frac{\alpha}{\gamma}~~~~{\rm and}~~~~{\rm Var} (S_N)=\lambda\frac{\alpha(1+\alpha)}{\gamma^2}.$
@@ -562,7 +563,7 @@ Hal ini memungkinkan kita untuk menggunakan distribusi Tweedie dengan model line
 
 =======
 
-##Menghitung Distribusi Klaim Agregat
+## 5.4 Menghitung Distribusi Klaim Agregat
 
 Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
 

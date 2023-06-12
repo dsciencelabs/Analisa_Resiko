@@ -1,1 +1,631 @@
 # Risk Classification
+
+## Introduction
+
+Dalam materi ini akan mempelajari beberapa materi seperti :
+- Alasan premi harus bervariasi di antara pemegang polis dengan karakteristik risiko yang berbeda.
+- Arti dari spiral seleksi yang merugikan.
+- Pentingnya klasifikasi risiko.
+
+Melalui kontrak asuransi, pemegang polis secara efektif mengalihkan risiko mereka kepada perusahaan asuransi dengan imbalan premi. Agar perusahaan asuransi dapat bertahan dalam bisnisnya, pendapatan premi yang dikumpulkan dari kumpulan pemegang polis setidaknya harus sama dengan pengeluaran manfaat. Pada produk asuransi umum di mana premi dibebankan untuk satu periode, katakanlah setiap tahun, premi asuransi bruto berdasarkan prinsip ekuivalensi dinyatakan sebagai
+
+$$
+\begin{eqnarray*}
+\textrm{Premi Bruto = Kerugian yang Diharapkan + Biaya yang Diharapkan + Keuntungan}\\
+\end{eqnarray*}
+$$
+ 
+
+Dengan mengabaikan biaya gesekan yang terkait dengan biaya administrasi dan keuntungan, premi bersih atau murni yang dibebankan oleh perusahaan asuransi harus sama dengan kerugian yang diharapkan terjadi dari risiko yang dialihkan dari pemegang polis.
+
+Jika semua pemegang polis dalam kumpulan asuransi memiliki profil risiko yang sama, maka penanggung cukup membebankan premi yang sama untuk semua pemegang polis karena mereka memiliki ekspektasi kerugian yang sama. Namun pada kenyataannya, pemegang polis hampir tidak homogen. Sebagai contoh, risiko kematian dalam asuransi jiwa tergantung pada karakteristik pemegang polis, seperti usia, jenis kelamin, dan gaya hidup. Dalam asuransi mobil, karakteristik tersebut dapat mencakup usia, pekerjaan, jenis atau penggunaan mobil, dan daerah tempat tinggal pengemudi. Pengetahuan tentang karakteristik atau variabel ini dapat meningkatkan kemampuan menghitung premi yang adil untuk pemegang polis individu, karena dapat digunakan untuk memperkirakan atau memprediksi kerugian yang diharapkan dengan lebih akurat.
+
+Seleksi yang Tidak Menguntungkan (Adverse Selection). Memang, jika perusahaan asuransi tidak membedakan karakteristik risiko pemegang polis individu dan hanya membebankan premi yang sama kepada semua tertanggung berdasarkan kerugian rata-rata dalam portofolio, perusahaan asuransi akan menghadapi seleksi yang merugikan, situasi di mana individu dengan peluang kerugian yang lebih tinggi akan tertarik masuk ke dalam portofolio dan individu yang berisiko rendah akan ditolak.
+
+Sebagai contoh, pertimbangkan industri asuransi kesehatan di mana status merokok merupakan faktor risiko yang penting untuk mortalitas dan morbiditas. Sebagian besar perusahaan asuransi kesehatan di pasar membutuhkan premi yang berbeda tergantung pada status merokok, sehingga perokok membayar premi yang lebih tinggi daripada yang bukan perokok, dengan karakteristik lain yang identik. 
+
+
+Sekarang anggaplah ada sebuah perusahaan asuransi, kita sebut saja EquitabAll, yang menawarkan premi yang sama untuk semua tertanggung tanpa memandang status merokok, tidak seperti kompetitor lainnya. Premi bersih EquitabAll secara alami merupakan perhitungan kerugian mortalitas rata-rata untuk perokok dan bukan perokok. Artinya, premi bersih adalah rata-rata tertimbang dari kerugian dengan bobot masing-masing proporsi perokok dan bukan perokok. 
+
+Dengan demikian, mudah untuk melihat bahwa seorang perokok akan memiliki insentif yang baik untuk membeli asuransi dari EquitabAll daripada dari perusahaan asuransi lain karena premi yang ditawarkan oleh EquitabAll relatif lebih rendah. Pada saat yang sama, orang yang bukan perokok akan lebih memilih untuk membeli asuransi dari tempat lain yang menawarkan premi yang lebih rendah, yang dihitung hanya dari kelompok bukan perokok. Akibatnya, akan ada lebih banyak perokok dan lebih sedikit non-perokok dalam portofolio EquitabAll, yang menyebabkan kerugian yang lebih besar dari yang diperkirakan dan karenanya premi yang lebih tinggi untuk tertanggung di periode berikutnya untuk menutupi biaya yang lebih tinggi. Dengan meningkatnya premi baru di periode berikutnya, para non-perokok di EquitabAll akan memiliki insentif yang lebih besar untuk berpindah asuransi. Ketika siklus ini terus berlanjut dari waktu ke waktu, EquitabAll secara bertahap akan mempertahankan lebih banyak perokok dan lebih sedikit non-perokok dalam portofolionya dengan premi yang terus dinaikkan, yang pada akhirnya menyebabkan runtuhnya bisnis.
+
+Dalam literatur, fenomena ini dikenal sebagai adverse selection spiral atau spiral kematian. Oleh karena itu, memasukkan dan membedakan karakteristik risiko individu yang penting dalam proses penetapan harga asuransi adalah komponen yang relevan untuk penentuan premi yang adil bagi pemegang polis individu dan keberlanjutan jangka panjang perusahaan asuransi.
+
+Faktor Pemeringkatan. Untuk memasukkan karakteristik risiko yang relevan dari pemegang polis dalam proses penentuan harga, perusahaan asuransi mempertahankan beberapa sistem klasifikasi yang menempatkan setiap pemegang polis pada salah satu kelas risiko berdasarkan sejumlah kecil karakteristik risiko yang dianggap paling relevan. Karakteristik yang digunakan dalam sistem klasifikasi ini disebut faktor peringkat, yang merupakan variabel apriori dalam arti diketahui sebelum kontrak dimulai (misalnya, jenis kelamin, status kesehatan, jenis kendaraan, dan lain-lain, yang diketahui selama underwriting). Semua pemegang polis yang memiliki faktor risiko yang sama akan dimasukkan ke dalam kelas risiko yang sama, dan dianggap homogen dari sudut pandang penetapan harga; akibatnya, perusahaan asuransi membebankan premi atau tarif yang sama kepada mereka.
+
+Mengenai faktor risiko dan premi, Standar Praktik Aktuaria (ASOP) No. 12 dari Dewan Standar Aktuaria (2018) menyatakan bahwa aktuaris harus memilih karakteristik risiko yang terkait dengan hasil yang diharapkan, dan bahwa tarif dalam sistem klasifikasi risiko akan dianggap adil jika perbedaan tarif mencerminkan perbedaan material dalam biaya yang diharapkan untuk karakteristik risiko. Dalam proses pemilihan faktor risiko, ASOP juga mensyaratkan aktuaris untuk mempertimbangkan hal-hal berikut: hubungan karakteristik risiko dan hasil yang diharapkan, kausalitas, objektivitas, kepraktisan, hukum yang berlaku, praktik industri, dan praktik bisnis. Suplemen Teknis TS 8.B memberikan diskusi tambahan mengenai pemilihan faktor penilaian.
+
+Di sisi kuantitatif, tugas penting bagi aktuaris dalam membangun kerangka kerja klasifikasi risiko adalah membangun model statistik yang dapat menentukan kerugian yang diharapkan dengan berbagai faktor peringkat pemegang polis. Pendekatan standarnya adalah dengan mengadopsi model regresi yang menghasilkan kerugian yang diharapkan sebagai output ketika faktor-faktor risiko yang relevan diberikan sebagai input. Pada bab ini kita akan mempelajari tentang regresi Poisson, yang dapat digunakan ketika kerugian merupakan variabel count, sebagai contoh utama dari alat penetapan harga asuransi.
+
+## Poisson Regression Model
+
+Model regresi Poisson telah berhasil digunakan dalam berbagai aplikasi dan memiliki keunggulan dalam memungkinkan ekspresi bentuk tertutup untuk kuantitas yang penting. Pada bagian ini kami memperkenalkan regresi Poisson sebagai perluasan alami dari distribusi Poisson.
+
+Pada Materi ini akan mempelajari :
+
+- Memahami regresi Poisson sebagai alat yang nyaman untuk menggabungkan distribusi Poisson individu.
+- Memperdalam pemahaman tentang konsep paparan dan pentingnya.
+- Secara formal mempelajari cara merumuskan model regresi Poisson menggunakan variabel indikator ketika variabel penjelasnya bersifat kategorikal.
+
+
+### Need for Poisson Regression
+
+Untuk memperkenalkan regresi Poisson, Dapat Mempertimbangkan portofolio asuransi kesehatan hipotetis di mana semua pemegang polis memiliki usia yang sama dan hanya satu faktor risiko, status merokok, yang relevan. Status merokok dengan demikian merupakan variabel kategorikal dengan dua tingkatan : perokok dan bukan perokok. Karena ada dua level untuk status merokok, kita dapat menunjukkan perokok dan bukan perokok dengan masing-masing level 1 dan 2. Di sini penomorannya sewenang-wenang; status merokok adalah variabel kategori nominal. Misalkan sekarang kita tertarik untuk menetapkan harga asuransi kesehatan di mana premi untuk setiap pemegang polis ditentukan oleh jumlah kunjungan pasien rawat jalan ke kantor dokter selama setahun. Biaya medis untuk setiap kunjungan diasumsikan sama terlepas dari status merokok untuk kesederhanaan. Oleh karena itu, jika kami percaya bahwa status merokok merupakan faktor risiko yang valid dalam asuransi kesehatan ini, wajar untuk mempertimbangkan pengamatan dari perokok secara terpisah dari non-perokok. Pada Tabel 8.1 disajikan data untuk portofolio ini.
+
+$${\small
+\begin{matrix}
+\begin{array}{cc|cc|cc}
+\hline
+\text{Smoker} & \text{(level 1)}  & \text{Non-smoker}&\text{(level 2)}  & & \text{Both}\\
+  \text{Count} & \text{Observed} &  \text{Count} & \text{Observed}  &   \text{Count} & \text{Observed} \\ \hline
+0 & 2213 &   0 & 6671 &  0 & 8884 \\
+1 & 178  &   1 & 430  &  1 & 608 \\
+2 & 11   &   2 & 25   &  2 & 36 \\
+3 & 6    &   3 & 9    &  3 & 15 \\
+4 & 0    &   4 & 4    &  4 & 4 \\
+5 & 1    &   5 & 2    &  5 & 3 \\ \hline
+\text{Total} & 2409  &   \text{Total} & 7141 & \text{Total} & 9550 \\
+\text{Mean} & 0.0926 &   \text{Mean} & 0.0746 & \text{Mean} & 0.0792 \\
+\hline
+    \end{array}
+\end{matrix}
+}$$
+
+Karena dataset ini berisi hitungan acak, kami mencoba untuk menyesuaikan distribusi Poisson untuk setiap tingkat.
+
+Fungsi massa peluang dari distribusi Poisson dengan rata-rata $μ$ diberikan oleh:
+
+$$
+\begin{equation}
+\Pr(Y=y)=\frac{\mu^y e^{-\mu}}{y!},\qquad y=0,1,2, \ldots
+\tag{8.1}
+\end{equation}
+$$
+
+dan
+
+$$E (Y) = Var (Y) = μ$$
+
+Dalam konteks regresi, umumnya menggunakan $μ$ untuk parameter rata-rata daripada parameter Poisson $λ$, meskipun keduanya sesuai. `mle` (estimator maksimum likelihood) dari distribusi Poisson diberikan oleh rata-rata sampel. Jadi jika kita menyebut parameter rata-rata Poisson untuk setiap tingkat sebagai $μ_{(1)}$ (perokok) dan $μ_{(2)}$ (bukan perokok), kita dapat melihat dari Tabel 8.1 bahwa $\hat{\mu}_{(1)}=0.0926$  dan $\hat{\mu}_{(2)}=0.0746$. Contoh sederhana ini menunjukkan gagasan dasar klasifikasi risiko. Tergantung pada status merokok, pemegang polis akan memiliki karakteristik risiko yang berbeda yang dapat dimasukkan melalui variasi parameter rata-rata Poisson untuk menghitung premi yang adil. Dalam contoh ini, rasio frekuensi kerugian yang diharapkan adalah $\hat{\mu}_{(1)}/\hat{\mu}_{(2)}=1.2402$, yang berarti bahwa perokok cenderung mengunjungi kantor dokter 24.02% lebih sering dibandingkan dengan bukan perokok.
+
+Juga penting untuk dicatat bahwa jika penanggung menetapkan premi yang sama untuk semua pemegang polis tanpa memperhatikan status merokok, berdasarkan karakteristik rata-rata dari portofolio, seperti yang terjadi pada EquitabAll yang dijelaskan dalam Pengantar, frekuensi yang diharapkan (atau premi) $\hat{\mu}$ adalah 0.0792, diperoleh dari kolom terakhir Tabel 8.1. Dapat diverifikasi bahwa
+
+$$
+\begin{equation}
+\hat{\mu} = \left(\frac{n_1}{n_1+n_2}\right)\hat{\mu}_{(1)}+\left(\frac{n_2}{n_1+n_2}\right)\hat{\mu}_{(2)}=0.0792,
+\tag{8.2}
+\end{equation}
+$$
+
+
+di mana $n_i$ adalah jumlah pengamatan dalam setiap tingkat. Jelas, premi ini adalah rata-rata tertimbang dari premi untuk setiap tingkat dengan bobot yang sama dengan proporsi tertanggung di tingkat tersebut.
+
+Regresi Poisson sederhana
+Dalam contoh di atas, kita telah menyesuaikan distribusi Poisson untuk setiap tingkat secara terpisah, tetapi sebenarnya kita dapat menggabungkannya secara bersama-sama dalam satu model Poisson yang mencakup status merokok dan bukan merokok. Hal ini dapat dilakukan dengan menghubungkan parameter rata-rata Poisson dengan faktor risiko. Dengan kata lain, kita membuat rata-rata Poisson, yang merupakan frekuensi kerugian yang diharapkan, merespons perubahan dalam status merokok. Pendekatan konvensional untuk menangani variabel kategorikal adalah dengan mengadopsi variabel indikator atau dummy yang mengambil nilai 1 atau 0, sehingga kita mengaktifkan satu tingkat dan mematikan yang lainnya. Oleh karena itu, kita dapat mengusulkan penggunaan
+
+$$
+\begin{equation}
+\mu=\beta_0+\beta_1 x_1
+\tag{8.3}
+\end{equation}
+$$
+
+atau, lebih umum, dalam bentuk log linear
+
+$$
+\begin{equation}
+\log \mu=\beta_0+\beta_1 x_1,
+\tag{8.4}
+\end{equation}
+$$
+
+di mana $x_1$ adalah variabel indikator dengan
+
+$$
+\begin{equation}
+x_1=
+\begin{cases}
+     1 & \text{if smoker}, \\
+     0 & \text{otherwise}.
+\end{cases}
+\tag{8.5}
+\end{equation}
+$$
+
+Umumnya beberapa orang lebih suka hubungan log linear daripada yang linear untuk mencegah menghasilkan nilai $μ$ yang negatif, yang dapat terjadi ketika terdapat banyak faktor risiko dan tingkatan yang berbeda. Penyusunan dalam (8.4) dan (8.5) menghasilkan parameter frekuensi Poisson yang berbeda tergantung pada tingkat dalam faktor risiko:
+
+$$
+\begin{equation}
+\log \mu=
+\begin{cases}
+     \beta_0+\beta_1 \\
+     \beta_0 
+\end{cases}
+\quad \text{or equivalently,}\qquad \mu= \begin{cases}
+     e^{\beta_0+\beta_1} & \text{if smoker (level 1)}, \\
+     e^{\beta_0} & \text{if non-smoker (level 2)} .
+\end{cases} 
+\tag{8.6}
+\end{equation}
+$$
+
+Ini adalah bentuk paling sederhana dari regresi Poisson. Perlu dicatat bahwa kita membutuhkan satu variabel indikator tunggal untuk memodelkan dua tingkat dalam kasus ini. Sebagai alternatif, juga mungkin menggunakan dua variabel indikator melalui skema pengkodean yang berbeda. Skema ini melibatkan penghilangan istilah intersepsi sehingga (8.4) dimodifikasi menjadi
+
+$$
+\begin{equation}
+\log \mu=\beta_1 x_1+\beta_2 x_2,
+\tag{8.7}
+\end{equation}
+$$
+
+di mana $x_2$ adalah variabel indikator kedua dengan
+
+$$
+x_2=
+\begin{cases}
+     1 & \text{if non-smoker}, \\
+     0 & \text{otherwise}.
+\end{cases}
+$$
+
+Lalu akan didapat 
+
+$$
+\begin{equation}
+\log \mu=
+\begin{cases}
+     \beta_1 \\
+     \beta_2 
+\end{cases}
+\quad \text{or}\qquad \mu= \begin{cases}
+     e^{\beta_1} & \text{if smoker (level 1)}, \\
+     e^{\beta_2} & \text{if non-smoker (level 2)}.
+\end{cases}
+\tag{8.8}
+\end{equation}
+$$
+
+Hasil numerik dari (8.6) sama dengan (8.8) karena semua koefisien diberikan sebagai angka dalam estimasi aktual, dengan pengaturan yang pertama lebih umum dalam sebagian besar teks; kita juga menggunakan pengaturan yang pertama.
+
+Dengan model regresi Poisson ini, kita dapat dengan mudah memahami bagaimana koefisien β0 dan β1 terkait dengan frekuensi kerugian yang diharapkan pada setiap tingkat. Menurut (8.6), rata-rata Poisson untuk perokok, μ(1), diberikan oleh
+
+$$
+\mu_{(1)}=e^{\beta_0+\beta_1}=\mu_{(2)} \,e^{\beta_1} \quad \text{or}\quad  \mu_{(1)}/\mu_{(2)} =e^{\beta_1}
+$$
+
+di mana $μ_{(2)}$ adalah rata-rata Poisson untuk bukan perokok. Hubungan ini antara perokok dan bukan perokok menunjukkan cara yang berguna untuk membandingkan risiko yang terkait dengan tingkatan yang berbeda dari faktor risiko tertentu. Artinya, peningkatan proporsional dalam frekuensi kerugian yang diharapkan para perokok dibandingkan dengan bukan perokok diberikan oleh faktor perkalian $e^{β_1}$. Dengan kata lain, jika kita mengatur frekuensi kerugian yang diharapkan para bukan perokok sebagai nilai dasar, frekuensi kerugian yang diharapkan para perokok diperoleh dengan mengalikan nilai dasar dengan $e^{β_1}$.
+
+**Menangani kasus dengan banyak tingkatan**
+
+Kita dapat dengan mudah memperluas kasus dengan dua tingkatan menjadi kasus dengan banyak tingkatan di mana l tingkatan berbeda terlibat untuk satu faktor rating tunggal. Untuk ini, umumnya kita membutuhkan l-1 variabel indikator untuk merumuskan
+
+$$
+\begin{equation}
+\log \mu=\beta_0+\beta_1 x_1+\cdots+\beta_{l-1} x_{l-1},
+\tag{8.9}
+\end{equation}
+$$
+
+di mana $xk_$ adalah variabel indikator yang bernilai 1 jika kebijakan berada pada level k dan 0 jika tidak, untuk $k=1,2,…,l−1$. Dengan menghilangkan variabel indikator yang terkait dengan level terakhir dalam (8.9), kita secara efektif memilih level l sebagai kasus dasar atau level referensi, tetapi pilihan ini bersifat arbitrari dan tidak berpengaruh secara numerik. Parameter Poisson yang dihasilkan untuk kebijakan pada level k kemudian menjadi, dari (8.9),
+
+$$
+\mu= 
+\begin{cases}
+     e^{\beta_0+\beta_k} & \text{if the policy belongs to level } k, (k=1,2, ..., l-1), \\
+     e^{\beta_0} & \text{if the policy belongs to level } l.
+\end{cases}
+$$
+
+Oleh karena itu, jika kita menunjukkan parameter Poisson untuk kebijakan pada level $k$ sebagai $μ_{(k)}$ , kita dapat menghubungkan parameter Poisson untuk level-level yang berbeda melalui $\mu_{(k)}=\mu_{(l)}\, e^{\beta_k}$ , $k=1,2,…,l−1$. Hal ini menunjukkan bahwa, seperti pada kasus dua level, frekuensi kerugian yang diharapkan pada level k diperoleh dari nilai dasar dikalikan dengan faktor relatif $e^{\beta_k}$. Interpretasi relatif ini menjadi lebih kuat ketika terdapat banyak faktor risiko dengan multi-level, dan mengarah pada pemahaman yang lebih baik tentang risiko yang mendasari dan prediksi kerugian masa depan yang lebih akurat. Akhirnya, perlu dicatat bahwa nilai rata-rata Poisson yang bervariasi sepenuhnya ditentukan oleh parameter koefisien $β_k$, yang akan diestimasi dari dataset; prosedur estimasi parameter akan dibahas lebih lanjut dalam bab ini.
+
+### Poisson Regression
+
+Sekarang kita akan menjelaskan regresi Poisson dalam pengaturan formal dan lebih umum. Mari kita anggap ada n pemegang polis independen dengan satu set faktor penilaian yang ditandai oleh vektor k-variabel $\mathbf{ x}_i=(1, x_{i1}, \ldots, x_{ik})^{\prime}$′ untuk pemegang polis ke-i, dan pemegang polis tersebut mencatat jumlah kerugian $y_i \in \{0,1,2, \ldots \}$ dari periode pengamatan kerugian terakhir, untuk i=1,…,n. Dalam literatur regresi, nilai-nilai $x_{i1}, \ldots, x_{ik}$ umumnya dikenal sebagai variabel penjelas, karena ini adalah pengukuran yang memberikan informasi tentang variabel yang diminati $y_i$. Pada dasarnya, analisis regresi adalah metode untuk mengkuantifikasi hubungan antara variabel yang diminati dan variabel penjelas.
+
+Kita juga berasumsi, untuk saat ini, bahwa semua pemegang polis memiliki periode pengamatan kerugian yang sama selama satu unit, atau paparan yang sama sebesar 1, untuk menjaga kesederhanaan; kita akan membahas lebih banyak detail mengenai paparan dalam subbagian berikutnya.
+
+Kami menjelaskan regresi Poisson melalui fungsi rata-ratanya. Untuk ini, kami pertama-tama menunjukkan $μ_i$ sebagai jumlah kerugian yang diharapkan dari pemegang polis ke-i dalam spesifikasi Poisson (8.1):
+
+$$
+\begin{equation}
+\mu_i=\mathrm{E~}{(y_i|\mathbf{ x}_i)}, \qquad y_i \sim Pois(\mu_i), \, i=1, \ldots, n.
+\tag{8.10}
+\end{equation}
+$$
+
+Kondisi di dalam harapan pada persamaan (8.10) menunjukkan bahwa frekuensi kerugian μi adalah respons yang diharapkan oleh model terhadap himpunan faktor risiko atau variabel penjelas yang diberikan. Pada dasarnya, rata-rata bersyarat $\mathrm{E~}{(y_i|\mathbf{ x}_i)}$ pada (8.10) dapat memiliki bentuk yang berbeda tergantung pada bagaimana kita menentukan hubungan antara x dan y. Pilihan standar untuk regresi Poisson adalah mengadopsi fungsi eksponensial, seperti yang telah kami sebutkan sebelumnya, sehingga
+
+$$
+\begin{equation}
+\mu_i=\mathrm{E~}{(y_i|\mathbf{ x}_i)}=e^{\mathbf{ x}^{\prime}_i\beta}, \qquad y_i \sim Pois(\mu_i), \, i=1, \ldots, n.
+\tag{8.11}
+\end{equation}
+$$
+
+Di sini, $\beta=(\beta_0, \ldots, \beta_k)^{\prime}$′ adalah vektor koefisien sehingga $\mathbf{ x}^{\prime}_i \boldsymbol \beta=\beta_0+\beta_1x_{i1} +\ldots+\beta_k x_{ik}$. Fungsi eksponensial pada (8.11) memastikan bahwa μi>0 untuk setiap himpunan faktor penilaian $x_i$. Seringkali (8.11) ditulis ulang dalam bentuk log-linear
+
+$$
+\begin{equation}
+\log \mu_i=\log \mathrm{E~}{(y_i|\mathbf{ x}_i)}=\mathbf{ x}^{\prime}_i \boldsymbol \beta, \qquad y_i \sim Pois(\mu_i), \, i=1, \ldots, n
+\tag{8.12}
+\end{equation}
+$$
+
+untuk mengungkapkan hubungan ketika sisi kanan ditetapkan sebagai bentuk linear, $\mathbf{ x}^{\prime}_i\beta$. Sekali lagi, kita melihat bahwa pemetaan ini berfungsi dengan baik karena kedua sisi (8.12), logμi dan $\mathbf{ x}_i\beta$, sekarang dapat mencakup semua nilai real. Ini adalah rumusan dari regresi Poisson, dengan asumsi bahwa semua pemegang polis memiliki periode paparan yang sama. Namun, ketika paparan berbeda di antara pemegang polis, seperti yang sering terjadi dalam kebanyakan kasus praktis, kita perlu merevisi rumusan ini dengan menambahkan komponen paparan sebagai istilah tambahan dalam (8.12).
+
+### Incorporating Exposure
+
+**Konsep Paparan**
+
+Kami pertama kali melihat konsep paparan dalam Bagian 7.4. Untuk menentukan ukuran kerugian potensial dalam jenis asuransi apa pun, kita selalu harus mengetahui paparannya yang sesuai. Konsep paparan merupakan komponen yang sangat penting dalam penetapan harga asuransi, meskipun kita biasanya menganggapnya sebagai hal yang biasa. Misalnya, ketika kita mengatakan frekuensi klaim yang diharapkan dari kebijakan asuransi kesehatan adalah 0,2, itu tidak berarti banyak tanpa spesifikasi paparan seperti, dalam kasus ini, per bulan atau per tahun. Faktanya, semua premi dan kerugian perlu memiliki paparan yang ditentukan dengan tepat dan harus dikutip sesuai; jika tidak, semua analisis statistik dan prediksi selanjutnya akan terdistorsi.
+
+Dalam bagian sebelumnya, kita mengasumsikan satuan paparan yang sama untuk semua pemegang polis, tetapi ini jarang terjadi dalam praktik. Dalam asuransi kesehatan, misalnya, dua pemegang polis yang berbeda dengan jangka waktu perlindungan asuransi yang berbeda (misalnya, 3 bulan dan 12 bulan) dapat mencatat jumlah klaim yang sama. Karena jumlah klaim yang diharapkan akan berbanding lurus dengan lamanya perlindungan, kita tidak boleh memperlakukan pengalaman kerugian kedua pemegang polis ini secara identik dalam proses pemodelan. Hal ini mendorong kebutuhan konsep paparan dalam regresi Poisson.
+
+Distribusi Poisson dalam (8.1) diparameterisasi melalui rata-ratanya. Untuk memahami paparan, kita secara alternatif memarameterisasi pmf Poisson dalam hal parameter laju λ, berdasarkan definisi proses Poisson:
+
+$$
+\begin{equation}
+\Pr(Y=y)=\frac{(\lambda t)^y e^{-\lambda t}}{y!},\qquad y=0,1,2, \ldots
+\tag{8.13}
+\end{equation}
+$$
+
+Dengan
+
+$$\mathrm{E~}{(Y)}=\mathrm{Var~}{(Y)}=\lambda t$$
+
+Di sini, λ dikenal sebagai laju atau intensitas per periode satuan dari proses Poisson dan t mewakili lamanya waktu atau paparan, sebuah nilai konstan yang diketahui. Untuk λ yang diberikan, distribusi Poisson (8.13) menghasilkan jumlah kerugian yang diharapkan yang lebih besar ketika paparan t semakin besar. Jelas, (8.13) berkurang menjadi (8.1) ketika t=1, yang berarti bahwa rata-rata dan laju menjadi sama untuk paparan 1, kasus yang kita pertimbangkan dalam subbagian sebelumnya.
+
+Pada dasarnya, paparan tidak perlu diukur dalam satuan waktu dan dapat mewakili hal-hal yang berbeda tergantung pada masalah yang ada. Misalnya:
+
+- Dalam asuransi kesehatan, laju dapat menjadi kejadian penyakit tertentu per 1.000 orang dan paparan adalah jumlah orang yang dipertimbangkan dalam satuan 1.000.
+- Dalam asuransi otomotif, laju dapat menjadi jumlah kecelakaan per tahun pengemudi dan paparan adalah lamanya periode pengamatan untuk pengemudi dalam satuan tahun.
+- Untuk kompensasi pekerja yang mencakup gaji yang hilang akibat cedera atau penyakit yang terkait dengan pekerjaan, laju dapat menjadi probabilitas cedera selama bekerja per dolar dan paparan adalah jumlah gaji dalam dolar.
+- Dalam pemasaran, laju dapat menjadi jumlah pelanggan yang masuk ke toko per jam dan paparan adalah jumlah jam yang diamati.
+- Dalam rekayasa sipil, laju dapat menjadi jumlah retakan besar pada jalan raya setiap 10 km dan paparan adalah panjang jalan yang dipertimbangkan dalam satuan 10 km.
+- Dalam pemodelan risiko kredit, laju dapat menjadi jumlah kejadian gagal bayar per 1000 perusahaan dan paparan adalah jumlah perusahaan yang dipertimbangkan dalam satuan 1.000.
+
+Aktuaris mungkin dapat menggunakan basis paparan yang berbeda untuk kerugian yang dapat diasuransikan. Misalnya, dalam asuransi otomotif, baik jumlah kilometer yang ditempuh maupun jumlah bulan yang ditanggung oleh asuransi dapat digunakan sebagai basis paparan. Yang pertama lebih akurat dan berguna dalam pemodelan kerugian akibat kecelakaan mobil, tetapi lebih sulit untuk diukur dan dikelola oleh perusahaan asuransi. Oleh karena itu, basis paparan yang baik mungkin bukan yang terbaik secara teoritis karena berbagai kendala praktis. Sebagai aturan, basis paparan harus mudah ditentukan, dapat diukur dengan akurat, diterima secara hukum dan sosial, dan bebas dari manipulasi potensial oleh pemegang polis.
+
+**Menggabungkan paparan dalam regresi Poisson**
+
+Karena paparan mempengaruhi rata-rata Poisson, konstruksi regresi Poisson membutuhkan pemisahan yang hati-hati antara laju dan paparan dalam proses pemodelan. Dalam konteks asuransi, mari kita sebutkan laju kejadian kerugian dari pemegang polis ke-i sebagai  $λ_i$
+ , paparan yang diketahui (panjang perlindungan) sebagai  mi
+ , dan perkiraan jumlah kerugian di bawah paparan yang diberikan sebagai  $μ_i$
+ . Maka rumusan regresi Poisson dalam (8.11) dan (8.12) harus direvisi dengan mempertimbangkan (8.13) sebagai berikut:
+
+$$
+\begin{equation}
+\mu_i=\mathrm{E~}{(y_i|\mathbf{ x}_i)}=m_i \,\lambda_i=m_i \, e^{\mathbf{ x}^{\prime}_i \boldsymbol \beta}, \qquad y_i \sim Pois(\mu_i), \, i=1, \ldots, n,
+\tag{8.14}
+\end{equation}
+$$
+
+yang menghasilkan
+
+$$
+\begin{equation}
+\log \mu_i=\log m_i+\mathbf{ x}^{\prime}_i \boldsymbol \beta, \qquad y_i \sim Pois(\mu_i), \, i=1, \ldots,
+\tag{8.15}
+\end{equation}
+$$
+
+Menambahkan  $log\space m_i$ dalam (8.15) tidak menyebabkan masalah dalam fitting karena kita selalu dapat menentukan ini sebagai variabel penjelas tambahan, karena merupakan konstanta yang diketahui, dan mengatur koefisien menjadi 1. Dalam literatur, log paparan,  $log\space m_i$, biasanya disebut sebagai offset.
+
+## Categorical Variables and Multiplicative Tariff
+
+Dalam bagian ini, \ akan mempelajari:
+
+- Model tarif multiplikatif ketika faktor penilaian bersifat kategorikal.
+- Bagaimana membangun model regresi Poisson berdasarkan struktur tarif multiplikatif.
+
+### Rating Factors and Tariff
+
+Dalam praktiknya, sebagian besar faktor penilaian dalam asuransi adalah variabel kategorikal, yang berarti mereka mengambil salah satu dari sejumlah nilai yang telah ditentukan sebelumnya. Contoh variabel kategorikal meliputi jenis kelamin, jenis kendaraan, wilayah tempat tinggal pengemudi, dan pekerjaan. Variabel kontinu, seperti usia atau jarak tempuh mobil, juga dapat dikelompokkan berdasarkan rentang dan diperlakukan sebagai variabel kategorikal. Oleh karena itu, kita dapat membayangkan bahwa dengan sedikit faktor penilaian, akan ada banyak pemegang polis yang masuk ke dalam kelas risiko yang sama, dikenai premi yang sama. Untuk sisa bab ini, kita berasumsi bahwa semua faktor penilaian adalah variabel kategorikal.
+
+Untuk mengilustrasikan bagaimana variabel kategorikal digunakan dalam proses penetapan harga, kita akan mempertimbangkan sebuah asuransi mobil hipotetis dengan hanya dua faktor penilaian:
+
+Jenis kendaraan: Jenis A (milik pribadi) dan B (dimiliki oleh perusahaan). Kita menggunakan indeks j=1 dan 2 untuk masing-masing level faktor penilaian ini.
+Rentang usia pengemudi: Muda (usia < 25), menengah (25 ≤ usia < 60), dan usia tua (usia ≥ 60). Kita menggunakan indeks k=1, 2, dan 3 untuk masing-masing faktor penilaian ini.
+Dari aturan klasifikasi ini, kita dapat membuat tabel atau daftar terorganisir, seperti yang ditunjukkan dalam Tabel 8.2, yang dikumpulkan dari semua pemegang polis. Jelas terdapat 2×3=6 kelas risiko yang berbeda secara total. Setiap baris tabel menunjukkan kombinasi karakteristik risiko yang berbeda dari masing-masing pemegang polis. Tujuan kita adalah untuk menghitung enam premi yang berbeda untuk masing-masing kombinasi ini. Setelah premi untuk setiap baris ditentukan menggunakan paparan dan jumlah klaim yang diberikan, perusahaan asuransi dapat menggantikan dua kolom terakhir dalam Tabel 8.2 dengan satu kolom yang berisi premi yang dihitung. Tabel baru ini kemudian dapat digunakan sebagai panduan untuk menentukan premi bagi pemegang polis baru dengan faktor penilaian selama proses penjaminan. Dalam asuransi non-hayat, tabel (atau set tabel) atau daftar yang berisi setiap set faktor penilaian dan premi yang terkait disebut sebagai tarif. Setiap kombinasi unik dari faktor penilaian dalam sebuah tarif disebut sebagai sel tarif; dengan demikian, dalam Tabel 8.2 jumlah sel tarif adalah enam, sama dengan jumlah kelas risiko.
+
+**Table 8.2. Loss Record of the Illustrative Auto Insurer**
+
+$$
+{\small
+\begin{matrix}
+\begin{array}{ccrrc}
+ \hline
+\text{Rating} &\text{factors}  &   \text{Exposure} & \text{Claim count} \\
+\text{Type }(j) & \text{Age }(k) &  \text{in year} & \text{observed}\\
+\hline \hline
+1 & 1 &  89.1 & 9\\
+1 & 2   & 208.5& 8\\
+1 & 3  & 155.2 & 6  \\
+2  & 1  & 19.3 & 1 \\
+2  & 2  & 360.4 & 13 \\
+2   & 3  & 276.7 & 6 \\ \hline
+\end{array}
+\end{matrix}
+}
+$$
+
+Mari kita perhatikan informasi kerugian di Tabel 8.2 dengan lebih cermat. Paparan dalam setiap baris mewakili jumlah dari panjang jangka waktu perlindungan asuransi, atau waktu berlaku, dalam tahun, dari semua pemegang polis dalam sel tarif tersebut. Demikian pula jumlah klaim dalam setiap baris adalah jumlah klaim dalam setiap sel. Secara alami, paparan dan jumlah klaim bervariasi karena adanya jumlah pengemudi yang berbeda di antara sel-sel tersebut, serta periode waktu berlaku yang berbeda di antara pengemudi dalam setiap sel.
+
+Dalam kerangka regresi Poisson, kita menyebut paparan dan jumlah klaim sel $(j,k)$ sebagai $m_{jk}$ dan $y_{jk}$, secara berurutan, dan mendefinisikan jumlah klaim per satuan paparan sebagai
+
+$z_{jk}= \frac{y_{jk}}{ m_{jk}}, \qquad j=1,2;\, k=1, 2,3.$
+
+Sebagai contoh, $z_{12}=8/208.5=0.03837$, yang berarti bahwa seorang pemegang polis dalam sel tarif (1,2) akan mengalami 0.03837 kecelakaan jika diasuransikan selama satu tahun secara rata-rata. Kumpulan nilai zij kemudian sesuai dengan parameter tingkat dalam distribusi Poisson (8.13) karena mereka adalah tingkat kejadian per satuan paparan. Dengan kata lain, kita memiliki $z_{jk}=\hat{\lambda}_{jk}$ di mana ${\lambda}_{jk}$ adalah parameter tingkat Poisson. Namun, menghasilkan nilai $z_{ij}$ tidak banyak memberikan informasi selain membandingkan frekuensi kerugian rata-rata antar kelas risiko. Untuk sepenuhnya memanfaatkan dataset ini, kita akan membangun model penetapan harga dari Tabel 8.2 menggunakan regresi Poisson, untuk bagian tersisa dari bab ini.
+
+Kami mencatat bahwa catatan kerugian yang sebenarnya yang digunakan oleh perusahaan asuransi biasanya mencakup banyak faktor risiko lainnya, dalam hal ini jumlah sel akan tumbuh secara eksponensial. Tarif tersebut kemudian akan terdiri dari satu set tabel, bukan satu tabel, yang dipisahkan oleh beberapa faktor penilaian dasar, seperti jenis kelamin atau wilayah.
+
+### Multiplicative Tariff Model
+
+Dalam subbagian ini, kami memperkenalkan model tarif multiplicative, struktur penetapan harga yang populer yang dapat digunakan secara alami dalam kerangka regresi Poisson. Pengembangan di sini didasarkan pada Tabel 8.2. Ingatlah bahwa jumlah kerugian dari seorang pemegang polis dijelaskan oleh model regresi Poisson dengan tingkat $λ$ dan paparan $m$, sehingga jumlah kerugian yang diharapkan menjadi $mλ$. Karena m adalah konstanta yang diketahui, kami pada dasarnya tertarik pada pemodelan $λ$, sehingga merespons perubahan faktor penilaian. Di antara bentuk fungsional lain yang mungkin, kami umumnya memilih relasi multiplicative untuk memodelkan tingkat Poisson $\lambda_{jk}$ untuk sel (j,k):
+
+$$
+\begin{equation}
+\lambda_{jk}= f_0 \times f_{1j} \times f_{2k}, \qquad j=1,2;\, k=1, 2,3.
+\tag{8.16}
+\end{equation}
+$$
+
+Di sini $\{ f_{1j}, j=1,2\}$ adalah parameter yang terkait dengan dua level dalam faktor penilaian pertama, jenis mobil, dan $\{ f_{2k}, k=1,2,3\}$ terkait dengan tiga level dalam kelompok usia, faktor penilaian kedua. Sebagai contoh, tingkat Poisson untuk seorang pemegang polis berusia menengah dengan kendaraan Tipe B diberikan oleh $\lambda_{22}=f_0 \times f_{12} \times f_{22}$. Istilah pertama f0 adalah nilai dasar yang akan dibahas segera. Oleh karena itu, enam parameter ini dipahami sebagai representasi numerik dari level dalam setiap faktor penilaian, dan harus diestimasi dari dataset.
+
+Bentuk multiplicative (8.16) mudah dipahami dan digunakan, karena dengan jelas menunjukkan bagaimana jumlah kerugian yang diharapkan (per satuan paparan) berubah saat setiap faktor penilaian bervariasi. Misalnya, jika f11=1 dan f12=1,2, maka jumlah kerugian yang diharapkan dari seorang pemegang polis dengan kendaraan tipe B akan 20% lebih besar daripada tipe A, ketika faktor lainnya sama. Dalam asuransi non-hidup, parameter f1j dan f2k dikenal sebagai relativitas karena mereka menentukan seberapa banyak jumlah kerugian yang diharapkan harus berubah relatif terhadap nilai dasar f0. Ide relativitas ini sangat nyaman dalam praktik, karena kita dapat menentukan premi untuk seorang pemegang polis dengan hanya mengalikan serangkaian relativitas yang sesuai dengan nilai dasar.
+
+Menghilangkan faktor penilaian yang ada atau menambahkan yang baru juga transparan dengan struktur multiplicative ini. Selain itu, perusahaan asuransi dapat menyesuaikan premi keseluruhan untuk semua pemegang polis dengan mengontrol nilai dasar f0 tanpa mengubah relativitas individu. Namun, dengan mengadopsi bentuk multiplicative, kita secara implisit mengasumsikan bahwa tidak ada interaksi serius di antara faktor risiko.
+
+Ketika menggunakan bentuk multiplicative, kita perlu mengatasi masalah identifikasi. Artinya, untuk setiap c>0, kita dapat menulis
+
+$$
+\lambda_{jk}= f_0 \times \frac{f_{1j}}{c} \times c\,f_{2k}.
+$$
+
+Dengan membandingkan dengan (8.16), kita melihat bahwa parameter tingkat yang identik λjk dapat diperoleh untuk relativitas individu yang sangat berbeda. Over-parametrization ini, yang berarti banyak set parameter yang berbeda menghasilkan model yang identik, jelas membutuhkan beberapa pembatasan pada f1j dan f2k. Praktik standar adalah membuat satu relativitas dalam setiap faktor penilaian sama dengan satu. Ini dapat dilakukan secara sembarang dalam teori, tetapi praktik standar adalah membuat relativitas dari kelas yang paling umum (kelas dasar) sama dengan satu. Kami akan mengasumsikan bahwa kendaraan Tipe A dan pengemudi muda adalah kelas yang paling umum, yaitu f11=1 dan f21=1. Dengan cara ini, semua relativitas lainnya ditentukan dengan unik. Sel tariff (j,k)=(1,1) kemudian disebut sel tarif dasar, di mana tingkatnya sederhana menjadi λ11=f0, sesuai dengan nilai dasar sesuai (8.16). Dengan demikian, nilai dasar f0 umumnya diinterpretasikan sebagai tingkat Poisson dari sel tarif dasar.
+
+Sekali lagi, (8.16) diubah logaritmik dan ditulis ulang sebagai
+
+$$
+\begin{equation}
+\log \lambda_{jk}= \log f_0 + \log f_{1j} + \log f_{2k},
+\tag{8.17}
+\end{equation}
+$$
+
+karena lebih mudah dalam proses estimasi, mirip dengan (8.12). Bentuk log linier ini membuat log relativitas level dasar dalam setiap faktor penilaian menjadi nol, yaitu $\log f_{11}=\log f_{21}=0$, dan mengarah pada ekspresi alternatif berikut yang lebih eksplisit untuk (8.17):
+
+
+$$
+\begin{equation}
+\small{
+\log \lambda_{jk}=\begin{cases}
+\log f_0 + \quad 0 \quad \,\,+ \quad 0 \quad \,\,& \text{for a policy in cell }(1,1), \\
+\log f_0+ \quad 0 \quad \,\,+\log f_{22}& \text{for a policy in cell }(1,2), \\
+\log f_0+ \quad 0 \quad \,\,+\log f_{23}& \text{for a policy in cell }(1,3), \\
+\log f_0+\log f_{12}+ \quad 0 \quad \,\,& \text{for a policy in cell }(2,1), \\
+\log f_0+\log f_{12}+\log f_{22}& \text{for a policy in cell }(2,2), \\
+\log f_0+\log f_{12}+\log f_{23}& \text{for a policy in cell }(2,3). \\
+\end{cases}
+}
+\tag{8.18}
+\end{equation}
+$$
+
+Ini dengan jelas menunjukkan bahwa parameter tingkat Poisson λ bervariasi di antara sel tariff yang berbeda, dengan bentuk log linier yang sama digunakan dalam kerangka regresi Poisson. Bahkan pembaca dapat melihat bahwa (8.18) adalah versi yang diperluas dari ekspresi sebelumnya (8.6) dengan beberapa faktor risiko dan bahwa log relativitas sekarang berperan sebagai parameter βi. Oleh karena itu, semua relativitas dapat dengan mudah diestimasi melalui penyesuaian regresi Poisson dengan set variabel indikator yang dipilih dengan tepat.
+
+### Poisson Regression for Multiplicative Tariff
+
+**Variabel Indikator untuk Sel Tarif**
+
+Kami sekarang menjelaskan bagaimana relativitas dapat dimasukkan ke dalam regresi Poisson. Seperti yang telah terlihat sebelumnya dalam bab ini, kami menggunakan variabel indikator untuk mengatasi variabel kategori. Untuk perusahaan asuransi mobil contoh kami, oleh karena itu, kami mendefinisikan variabel indikator untuk faktor risiko pertama sebagai
+
+$$
+x_1=
+\begin{cases}
+      1 & \text{ for vehicle type B}, \\
+      0 & \text{ otherwise}.
+\end{cases}
+$$
+
+Untuk faktor risiko kedua, kami menggunakan dua variabel indikator untuk rentang usia, yaitu,
+
+$$
+x_2=
+\begin{cases}
+     1 & \text{for age band 2}, \\
+     0 & \text{otherwise}.
+\end{cases}
+$$
+
+dan
+
+$$
+x_3=
+\begin{cases}
+     1 & \text{for age band 3}, \\
+     0 & \text{otherwise}.
+\end{cases}
+$$
+
+Kombinasi (x1,x2,x3) kemudian secara efektif dan secara unik dapat menentukan setiap kelas risiko. Dengan melihat bahwa variabel indikator yang terkait dengan Tipe A dan Rentang Usia 1 diabaikan, kami melihat bahwa sel tarif (j,k) = (1,1) memainkan peran sebagai sel dasar. Kami menekankan bahwa pemilihan tiga variabel indikator di atas telah dilakukan dengan hati-hati sehingga konsisten dengan pemilihan tingkat dasar dalam model tarif multiplicative pada subbab sebelumnya (yaitu, f11 = 1 dan f21 = 1).
+
+Dengan variabel indikator yang diusulkan, kita dapat menulis ulang logaritma tingkat (8.17) sebagai
+
+$$
+\begin{equation}
+\log \lambda_{}= \log f_0+ \log f_{12}  \times x_1 + \log f_{22} \times x_2 +\log f_{23} \times x_3,
+\tag{8.19}
+\end{equation}
+$$
+
+yang identik dengan (8.18) ketika setiap nilai triple diterapkan. Sebagai contoh, kita dapat memverifikasi bahwa sel tarif dasar (j,k) = (1,1) sesuai dengan $(x_1, x_2,x_3)=(0, 0, 0)$, dan pada gilirannya menghasilkan $\log \lambda=\log f_0$ atau $λ = f_0$ dalam (8.19) seperti yang diinginkan.
+
+**Regresi Poisson untuk model tarif**
+
+Dalam spesifikasi ini, mari kita anggap ada n pemegang polis dalam portofolio dengan karakteristik risiko pemegang polis ke-i diberikan oleh vektor variabel penjelas $\mathbf{ x}_i=(1, x_{i1}, x_{i2},x_{i3})^{\prime}$′, untuk i=1,...,n. Kemudian, kita dapat menganggap (8.19) sebagai
+
+$\log \lambda_{i}= \beta_0+ \beta_1 \, x_{i1} + \beta_{2} \, x_{i2} +\beta_3  \, x_{i3}=\mathbf{ x}^{\prime}_i \boldsymbol \beta, \qquad i=1, \ldots, n,$
+
+
+di mana $β_0,...,β_3$ dapat dipetakan ke relativitas log yang sesuai dalam (8.19). Ini sama persis dengan pengaturan yang sama dengan (8.15) kecuali untuk komponen exposure. Oleh karena itu, dengan menggabungkan eksposure dalam setiap kelas risiko, model regresi Poisson untuk model tarif multiplicative ini akhirnya menjadi
+
+$$
+\begin{array}{ll}
+\log \mu_i &=\log \lambda_{i}+\log m_i= \log m_i+ \beta_0+ \beta_1 \, x_{i1} + \beta_{2} \, x_{i2} +\beta_3  \, x_{i3}\\
+&=\log m_i+\mathbf{ x}^{\prime}_i \boldsymbol \beta, 
+\end{array}
+$$
+
+untuk i=1,...,n. Sebagai hasilnya, relativitas diberikan :
+
+$$
+\begin{equation}
+{f}_0=e^{\beta_0}, \quad {f}_{12}=e^{\beta_1}, \quad {f}_{22}=e^{\beta_2}, \quad \text{and}\quad {f}_{23}=e^{\beta_3},
+\tag{8.20}
+\end{equation}
+$$
+
+
+dengan $f_{11}=1$
+dan $f_{21}=1$
+dari konstruksi asli. Untuk dataset sebenarnya, $β_i$
+, i=0,1,2,3, digantikan dengan mle bi menggunakan metode dalam tambahan teknis di akhir bab ini (Bagian 8.A).
+
+### Numerical Examples
+
+Kami menyajikan dua contoh numerik dari regresi Poisson. Pada contoh pertama, kami membuat model regresi Poisson dari Tabel 8.2, yang merupakan dataset dari perusahaan asuransi mobil hipotetis. Contoh kedua menggunakan dataset industri yang sebenarnya dengan lebih banyak faktor risiko. Tujuan kami adalah menunjukkan bagaimana model regresi Poisson dapat digunakan berdasarkan aturan klasifikasi yang diberikan, sehingga kami tidak memperhatikan kualitas kesesuaian model Poisson dalam bab ini.
+
+**Example 8.1: Poisson regression for the illustrative auto insurer**
+
+
+Pada beberapa subbab terakhir, kami mempertimbangkan dataset dari perusahaan asuransi mobil hipotetis dengan dua faktor risiko, seperti yang tercantum dalam Tabel 8.2. Sekarang kami menerapkan model regresi Poisson pada dataset ini. Seperti yang dilakukan sebelumnya, kami menetapkan  (j,k)=(1,1) sebagai sel tarif dasar, sehingga  $f_{11}=f_{21}=1$. Hasil dari regresi memberikan perkiraan koefisien  $(b_0, b_1,b_2,b_3)=(-2.3359, -0.3004, -0.7837, -1.0655)$, yang pada gilirannya menghasilkan perkiraan relativitas yang sesuai
+
+${f}_0=0.0967, \quad {f}_{12}=  0.7405, \quad {f}_{22}=0.4567 \quad \text{and}\quad {f}_{23}=0.3445,$
+
+
+dari hubungan yang diberikan dalam (8.20). Skrip R dan outputnya adalah sebagai berikut.
+
+```{r eval=FALSE}
+mydat1<- read.csv("eg1_v1a.csv")
+mydat1
+VtypeF <- relevel(factor(Vtype), ref="1") # treat Vtype as factors with 1 as base.
+AgebndF <- relevel(factor(Agebnd), ref="1") # treat Age band as factors.
+Pois_reg1 = glm(Claims ~ VtypeF + AgebndF,
+                    data = mydat1, family = poisson(link = log), offset = log(Expsr) )
+Pois_reg1
+```
+
+**Example 8.2. Poisson regression for Singapore insurance claims data**
+
+Contoh 8.2. Regresi Poisson untuk data klaim asuransi Singapura
+
+Dataset sebenarnya ini merupakan subset dari data yang digunakan oleh Frees dan Valdez (2008). Data ini berasal dari General Insurance Association of Singapore, sebuah organisasi yang terdiri dari perusahaan asuransi non-jiwa di Singapura. Data ini berisi jumlah kecelakaan mobil untuk  n=7.483
+  kebijakan asuransi mobil dengan beberapa variabel penjelas kategorikal dan paparan untuk setiap kebijakan. Variabel penjelas meliputi empat faktor risiko: jenis kendaraan yang diasuransikan (mobil (A) atau lainnya (O), ditandai sebagai Vtype), usia kendaraan dalam tahun (Vage), jenis kelamin pemegang kebijakan (Sex), dan usia pemegang kebijakan (dalam tahun, dikelompokkan menjadi tujuh kategori, ditandai sebagai Age).
+
+Berdasarkan deskripsi data, ada beberapa hal yang perlu dipertimbangkan sebelum membuat model. Pertama, terdapat 3.842 kebijakan dengan jenis kendaraan A (mobil) dan 3.641 kebijakan dengan jenis kendaraan lainnya. Namun, informasi usia dan jenis kelamin hanya tersedia untuk kebijakan kendaraan tipe A saja; pengemudi dari semua jenis kendaraan lainnya tercatat berusia 21 tahun atau kurang dengan jenis kelamin tidak spesifik, kecuali satu kebijakan, yang menunjukkan bahwa tidak ada informasi pengemudi yang dikumpulkan untuk kendaraan non-mobil. Kedua, kendaraan tipe A semuanya diklasifikasikan sebagai kendaraan pribadi dan semua jenis lainnya tidak.
+
+Ketika kita memasukkan faktor risiko ini, kita berasumsi semua jenis kelamin yang tidak ditentukan menjadi laki-laki. Karena informasi usia hanya berlaku untuk kendaraan tipe A, kita mengatur model sesuai dengan itu. Artinya, kita hanya menerapkan variabel usia pada kendaraan tipe A. Kami juga menggunakan lima kelompok usia kendaraan, menyederhanakan tujuh kelompok usia asli, dengan menggabungkan usia kendaraan 0, 1, dan 2; kelompok yang digabungkan ditandai sebagai level 211 dalam file data. Dengan demikian, model Poisson kami memiliki bentuk eksplisit berikut
+
+$$
+\begin{align*}
+\log \mu_i= \mathbf{ x}^{\prime}_i\beta+&\log m_i=\beta_0+\beta_1 I(Sex_i=M)+ \sum_{t=2}^6 \beta_t\, I(Vage_i=t) \\
+&+  \sum_{t=7}^{13} \beta_t \,I(Vtype_i=A)\times I(Age_i=t-7)+\log m_i.
+\end{align*}
+$$
+
+Hasil pemodelan ditampilkan dalam Tabel 8.3, yang memiliki beberapa komentar.
+
+- Frekuensi klaim lebih tinggi untuk pria sebesar 17,3%, ketika faktor-faktor penilaian lainnya tetap. Namun, hal ini mungkin dipengaruhi oleh fakta bahwa semua jenis kelamin yang tidak ditentukan telah dianggap sebagai laki-laki.
+- Mengenai usia kendaraan, frekuensi klaim secara bertahap menurun seiring bertambahnya usia kendaraan, ketika faktor-faktor penilaian lainnya tetap. Level dimulai dari 2 untuk variabel ini, tetapi sekali lagi, penomoran tersebut bersifat nominal dan tidak mempengaruhi hasil numerik.
+- Variabel usia pemegang kebijakan hanya berlaku untuk kendaraan tipe A (mobil), dan tidak ada kebijakan di kelompok usia pertama. Kita dapat berspekulasi bahwa pengemudi yang lebih muda berusia kurang dari 21 tahun mengemudikan mobil orang tua mereka daripada memiliki mobil sendiri karena premi asuransi yang tinggi atau peraturan terkait. Relativitas yang hilang dapat diestimasi melalui interpolasi atau penilaian profesional dari aktuaris. Frekuensi klaim paling rendah untuk kelompok usia 3 dan 4, tetapi meningkat secara signifikan untuk kelompok usia yang lebih tua, pola yang wajar terlihat dalam banyak dataset kerugian asuransi mobil.
+
+
+Kami juga mencatat bahwa tidak ada tingkat dasar dalam variabel usia pemegang kebijakan, dalam arti bahwa tidak ada relativitas yang sama dengan 1. Hal ini karena variabel tersebut hanya berlaku untuk kendaraan tipe A. Ini tidak menyebabkan masalah secara numerik, tetapi jika diperlukan untuk tujuan lain, kita dapat menetapkan relativitas dasar sebagai berikut. Karena tidak ada kebijakan di kelompok usia 0, kita anggap kelompok usia 1 sebagai kasus dasar. Secara khusus, kita memperlakukan relativitasnya sebagai hasil perkalian antara 0,918 dan 1, di mana yang pertama adalah relativitas umum (yaitu, pengurangan premi umum) yang diterapkan pada semua kebijakan dengan kendaraan tipe A dan yang terakhir adalah nilai dasar untuk kelompok usia 1. Kemudian relativitas untuk kelompok usia 2 dapat dianggap sebagai 0,917 = 0,918 × 0,999, di mana 0,999 dipahami sebagai relativitas untuk kelompok usia 2. Kelompok usia lainnya dapat diperlakukan dengan cara yang serupa.
+
+**Table 8.3. Singapore Insurance Claims Data**
+
+$$
+{\small 
+\begin{matrix}
+\begin{array}{clcc}
+\hline
+\text{Rating factor} & \text{Level} & \text{Relativity in the tariff} & \text{Note}\\ \hline\hline
+\text{Base value}  &  & 0.167 & f_0\\ \hline
+\text{Sex} & 1 (F) & 1.000 & \text{Base level}\\
+ & 2 (M) & 1.173 &\\\hline
+ \text{Vehicle age} & 2 (0-2\text{ yrs}) & 1.000 & \text{Base level}\\
+  & 3 (3-5\text{ yrs}) & 0.843 \\
+  & 4 (6-10\text{ yrs}) & 0.553 \\
+  & 5 (11-15\text{ yrs}) & 0.269 \\
+  & 6 (16+\text{ yrs}) & 0.189 &\\\hline
+  \text{Policyholder age} & 0 (0-21) & \text{N/A} & \text{No policy} \\
+  \text{(Only applicable to} & 1 (22-25) & 0.918 \\
+ \text{vehicle type A)}  & 2 (26-35) & 0.917 \\
+  & 3 (36-45) & 0.758 \\
+  & 4 (46-55) & 0.632 \\
+  & 5 (56-65) &  1.102\\
+  & 6 (65+) & 1.179\\ \hline \hline
+\end{array}
+\end{matrix}
+}
+$$
+
+Mari kita mencoba beberapa contoh berdasarkan Tabel 8.3. Misalkan seorang pemegang kebijakan pria berusia 40 tahun yang memiliki kendaraan tipe A berusia 7 tahun. Frekuensi klaim yang diharapkan untuk pemegang kebijakan ini kemudian diberikan oleh
+
+$λ = 0,167 × 1,173 × 0,553 × 0,758 = 0,082$
+
+Sebagai contoh lain, pertimbangkan seorang pemegang kebijakan wanita berusia 60 tahun yang memiliki kendaraan tipe O berusia 3 tahun. Frekuensi klaim yang diharapkan untuk pemegang kebijakan ini adalah
+
+$λ = 0,167 × 1 × 0,843 = 0,141$
+
+Perhatikan bahwa untuk kebijakan ini, variabel kelompok usia tidak digunakan karena jenis kendaraannya bukan A. Skrip R diberikan sebagai berikut.
+
+```{r eval=FALSE}
+mydat <- read.csv("SingaporeAuto.csv",  quote = "", header = TRUE)
+attach(mydat)
+
+# create vehicle type as factor
+TypeA = 1 * (VehicleType == "A")
+table(VehicleType)
+VtypeF <- as.character(VehicleType)
+VtypeF[VtypeF != "A"] <- "O"
+VtypeF = relevel(factor(VtypeF), ref="A")
+
+# create gender as factor
+Female = 1 * (SexInsured == "F" )
+Sex = as.character(SexInsured)
+Sex[Sex != "F"] <- "M"
+SexF = relevel(factor(Sex), ref = "F")
+
+# create driver age as factor
+AgeCat = pmax(AgeCat - 1, 0)
+AgeCatF = relevel(factor(AgeCat), ref = "0")
+table(AgeCatF) # No policy in the first age band
+
+# create vehicle age as factor
+VAgeCatF = relevel( factor(VAgeCat), ref = "0" )
+VAgecat1 = factor(VAgecat1, labels = 
+                    c("Vage0-2", "Vage3-5", "Vage6-10", "Vage11-15", "Vage15+") )
+VAgecat1F = relevel( factor(VAgecat1), ref = "Vage0-2" )
+
+# Poisson reg model
+Pois_reg2 = glm(Clm_Count ~ SexF + TypeA:AgeCatF + VAgecat1F, 
+                   offset = LNWEIGHT, poisson(link = log) )
+summary(Pois_reg2) 
+
+# compute relativities
+exp(Pois_reg2$coefficients)
+
+detach(mydat)
+```
+
+
+Sebagai catatan penutup, kami ingin menyebutkan bahwa regresi Poisson bukan satu-satunya model regresi hitung yang mungkin. Sebenarnya, distribusi Poisson dapat menjadi pembatasan karena memiliki satu parameter saja, serta rata-ratanya dan variansinya selalu sama. Ada model regresi hitung lain yang memungkinkan struktur distribusi yang lebih fleksibel, seperti regresi binomial negatif dan regresi zero-inflated (ZI); rincian mengenai regresi alternatif ini dapat ditemukan dalam teks lain yang tercantum dalam bagian berikutnya.
+
+## Further Resources and Contributors
+
+**Bacaan dan Referensi Lanjutan**
+
+Regresi Poisson merupakan anggota khusus dari kelas model regresi yang lebih umum dikenal sebagai generalized linear model (GLM). GLM mengembangkan kerangka regresi yang bersatu untuk dataset ketika variabel responsnya bersifat kontinu, biner, atau diskrit. Model regresi linear klasik dengan kesalahan yang terdistribusi secara normal juga merupakan anggota dari GLM. Terdapat banyak teks statistik standar yang membahas GLM, termasuk McCullagh dan Nelder (1989). Teks yang lebih mudah dipahami adalah Dobson dan Barnett (2008), Agresti (1996), dan Faraway (2016). Untuk aplikasi GLM dalam bidang aktuaria dan asuransi, lihat Frees (2009), De Jong dan Heller (2008). Selain itu, Ohlsson dan Johansson (2010) membahas GLM dalam konteks penetapan harga asuransi non-hidup dengan analisis tarif.
