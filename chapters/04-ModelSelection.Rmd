@@ -880,22 +880,86 @@ Di mana,
 
 ### Bayesian Model
 
+Distribusi Sebelumnya. Secara khusus, pikirkan tentang parameter θ sebagai vektor acak dan biarkan π( θ ) menunjukkan fungsi massa atau kepadatan yang sesuai. Ini adalah pengetahuan yang kita miliki sebelum hasil diamati dan disebut distribusi sebelumnya . Biasanya, distribusi sebelumnya adalah distribusi reguler dan terintegrasi atau dijumlahkan menjadi satu, tergantung pada apakah θ
+ kontinu atau diskrit. Namun, kami mungkin sangat tidak yakin (atau tidak tahu) tentang distribusinya θ ; mesin Bayesian memungkinkan situasi berikut
 
+$$
+\int \pi(\theta) ~d\theta = \infty,
+$$
+dalam hal ini, $\pi(\cdot)$ disebut priot yang tidak tepat
+
+Distribusi Bersama. Distribusi hasil dan parameter model adalah distribusi gabungan dari dua besaran acak. Fungsi kerapatan persendiannya dilambangkan sebagai
+
+$$
+f(x , \boldsymbol \theta) = f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)
+$$
+Distribusi Hasil Marginal. Distribusi hasil dapat dinyatakan sebagai
+
+$$
+f(x) = \int f(x | \boldsymbol \theta)\pi(\boldsymbol \theta) ~d \boldsymbol \theta.
+$$
+
+Ini analog dengan distribusi campuran frequentist. Dalam distribusi campuran, kami menggabungkan (atau "mencampur") subpopulasi yang berbeda. Dalam konteks Bayesian, distribusi marjinal adalah kombinasi dari realisasi parameter yang berbeda (dalam beberapa literatur, Anda dapat menganggap ini sebagai kombinasi "keadaan alam" yang berbeda).
+
+Distribusi Parameter Posterior. Setelah hasil diamati (karenanya terminologi "posterior"), seseorang dapat menggunakan teorema Bayes untuk menulis fungsi kerapatan sebagai
+
+$$
+\pi(\boldsymbol \theta | x) =\frac{f(x , \boldsymbol \theta)}{f(x)} =\frac{f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)}{f(x)} .
+$$
 
 ### Bayesian Inference
 
 
 #### Summarizing the Posterior Distributiob of Paremeters
 
+Salah satu cara untuk meringkas distribusi adalah dengan menggunakan pernyataan tipe interval kepercayaan . Untuk meringkas distribusi parameter posterior , interval $[a,b]$ dikatakan sebagai $100(1-\alpha)\%$ interval kredibilitas untuk $\theta$ jika 
+
+$$
+\Pr (a \le \theta \le b | \mathbf{x}) \ge 1- \alpha.
+$$
+
+Estimasi Bayes adalah nilai yang meminimalkan kerugian yang diharapkan
+
+$$
+\mathrm{E~}[ l(\hat{\theta}, \theta)]
+$$
+
 
 #### Bayesian Predictive Distribution
+
+Untuk jenis inferensi statistik lainnya, seringkali menarik untuk "memprediksi" nilai hasil acak yang belum diamati. Khususnya untuk data baru y, distribusi prediktifnya adalah
+
+$$
+f(y|x) = \int f(y|\theta) \pi(\theta|x) d\theta .
+$$
+
+Ini juga kadang-kadang disebut distribusi "prediktif posterior" karena distribusi data baru tergantung pada kumpulan data dasar.
+
+Menggunakan kerugian kesalahan kuadrat untuk fungsi kerugian, prediksi Bayesian dari Y adalah
+
+$$
+\begin{aligned}
+\mathrm{E}(Y|X) &=  \int ~y f(y|X) dy = \int y \left(\int f(y|\theta) \pi(\theta|X) d\theta \right) dy \\
+&= \int \left(\int y f(y|\theta)  ~dy \right) \pi(\theta|X) ~d\theta \\
+&=  \int  \mathrm{E}(Y|\theta) \pi(\theta|X) ~d\theta .
+\end{aligned}
+$$
+
+Seperti disebutkan sebelumnya, untuk beberapa situasi distribusi parameter adalah diskrit, tidak kontinu. Memiliki serangkaian kemungkinan parameter yang terpisah memungkinkan kita untuk menganggapnya sebagai "keadaan alam" alternatif, sebuah interpretasi yang membantu.
 
 
 ### Conjugate Distributions
 
+Untuk menghubungkan distribusi parameter sebelum dan sesudah, kami memiliki hubungan
 
+$$
+\begin{array}{ccc}
+\pi(\boldsymbol \theta | x) & = & \frac{f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)}{f(x)}  \\
+ & \propto  & f(x|\boldsymbol \theta ) \pi(\boldsymbol \theta) \\
+\text{Posterior} & \text{is proportional to} & \text{likelihood} \times \text{prior} .
+\end{array}
+$$
 
-
-
+Untuk distribusi konjugasi, posterior dan sebelumnya milik keluarga distribusi yang sama. Ilustrasi berikut melihat kasus khusus gamma-Poisson, yang paling terkenal dalam aplikasi aktuaria.
 
 >>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
