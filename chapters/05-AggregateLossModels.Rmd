@@ -57,7 +57,7 @@ $$
 \end{aligned}
 $$
 
-####  5.3.1 Actuarial Exam Question
+####  Actuarial Exam Question
 
 Jumlah kecelakaan mengikuti distribusi Poisson dengan rata-rata 12. Setiap kecelakaan menghasilkan 1, 2, atau 3 penuntut dengan probabilitas masing-masing 1/2, 1/3, dan 1/6. Hitunglah varians dalam jumlah total penuntut.
 
@@ -162,7 +162,7 @@ $$
 \end{aligned}
 $$
 
-#### **Example 5.3.2. Actuarial Exam Question**
+#### Example 5.3.2. Actuarial Exam Question
 
 Dimisalkan produser acara kuis televisi yang memberikan hadiah uang tunai. Jumlah hadiah(N) dan jumlah hadiah(X) memiliki distribusi sebagai berikut:
 
@@ -235,7 +235,7 @@ $$
 
 Ketika $E(N)$ dan $Var(N)$ diketahui, kita juga dapat menggunakan suatu jenis teorema limit pusat untuk mengestimasi distribusi $S_N$ seperti pada model risiko individu. Yaitu, $\frac{S_N - \mathrm{E}(S_N)}{\sqrt{\mathrm{Var}(S_N)}}$ kira-kira mengikuti distribusi normal standar $N(0,1)$ . Dari jenis teorema limit pusat ini, aproksimasi bekerja dengan baik jika $E[N]$ cukup besar.
 
-### 5.3.2 Stop-loss Insurance
+### Stop-loss Insurance
 
 Modifikasi pertanggungan pada tingkat polis perorangan Pertanggungan atas kerugian agregat $S_N$ , yang dikenakan sebuah deductible $d$ disebut dengan . Nilai yang diharapkan dari jumlah kerugian agregat yang melebihi deductible,
 
@@ -258,7 +258,7 @@ $$
 &=& \mathrm{E}(S_N) - \mathrm{E}(S_N\wedge d)\\
 \end{eqnarray*}
 $$
-### * 5.3.6. Actuarial Exam Question*
+### Actuarial Exam Question
 
 Dalam satu minggu tertentu, jumlah proyek yang mengharuskan Anda bekerja lembur memiliki distribusi geometris dengan $β = 2$ . Untuk setiap proyek, distribusi jumlah jam lembur dalam seminggu, X adalah sebagai berikut
 
@@ -381,43 +381,64 @@ $$
 $$
 sesuai kebutuhan.
 
-###  5.3.7. Actuarial Exam Question - Continued
+### Actuarial Exam Question - Continued
 
 Ingatlah bahwa tujuan dari pertanyaan ini adalah untuk menghitung $E(S_N-15)_+$ . Perhatikan bahwa dukungan dari $S_N$ berjarak sama dengan satuan 5, sehingga pertanyaan ini juga dapat dikerjakan secara rekursif, menggunakan ekspresi di atas dengan langkah-langkah $h=5$ :
 
 - Step 1:
 
-$$
-\begin{aligned}
-  \mathrm{E~}(S_N-5)_+ &= \mathrm{E}(S_N) - 5 [1-\Pr(S_N \leq 0) ]\\ %\Pr (S_N\geq 5) \\
-  &= 28 - 5 \left(1 - \frac{1}{3}\right) = \frac{74}{3}=24.6667 .
-  \end{aligned}
-$$
+$$\begin{aligned}
+<<<<<<< HEAD
+\mathrm{E~}(S_N-5)_+ &= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 0) \right] \
+=======
+\mathrm{E~}(S_N-5)_+ &= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 5) \right] \
+>>>>>>> 16a5dfb74365b3fdb59c15e620c650d54720c38c
+&= 28 - 5 \left(1 - \frac{1}{3}\right) \
+&= 28 - 5 \left(\frac{2}{3}\right) \
+&= 28 - \frac{10}{3} \
+&= \frac{74}{3} \approx 24.6667.
+\end{aligned}$$
 
 - Step 2:
 
+
 $$
 \begin{aligned}
-  \mathrm{E~}(S_N-10)_+ &= \mathrm{E~}(S_N-5)_+ - 5 [1-\Pr(S_N \leq 5)]\\ %\Pr (S_N\ge 10) \\
-  &= \frac{74}{3} - 5\left( 1 - \frac{1}{3} - \frac{0.4}{9}\right) = 21.555 .
-  \end{aligned}
+\mathrm{E~}(S_N-10)+ &= \mathrm{E~}(S_N-5)+ - 5 \left[1-\Pr(S_N \leq 10) \right] \
+&= \frac{74}{3} - 5\left( 1 - \Pr(S_N > 10) \right) \
+&= \frac{74}{3} - 5\left( 1 - \Pr(S_N \geq 11) \right) \
+&= \frac{74}{3} - 5\left( 1 - \left(1 - \Pr(S_N \leq 10)\right) \right) \
+&= \frac{74}{3} - 5\left( 1 - \left(1 - \left(1 - \Pr(S_N > 10)\right)\right) \right) \
+&= \frac{74}{3} - 5\left( 1 - \left(1 - \left(1 - \frac{1}{3}\right)\right) \right) \
+&= \frac{74}{3} - 5\left( 1 - \left(1 - \frac{1}{3}\right) \right) \
+&= \frac{74}{3} - 5\left( \frac{2}{3} \right) \
+&= \frac{74}{3} - \frac{10}{3} \
+&= \frac{64}{3} \approx 21.3333.
+\end{aligned}
 $$
 
 - Step 3:
 
 $$
 \begin{aligned}
-  \mathrm{E~}(S_N-15)_+ &= \mathrm{E~}(S_N-10)_+ - 5 [1-\Pr(S_N \leq 10)] \\ %\Pr (S_N\ge 15)  \\
-  &= \mathrm{E~}(S_N-10)_+ - 5\Pr (S_N\ge 15) \\
-  &= 21.555 - 5 (0.5496) = 18.807 .
-  \end{aligned}
+\mathrm{E~}(S_N-15)+ &= \mathrm{E~}(S_N-10)+ - 5 [1-\Pr(S_N \leq 15)] \
+&= \mathrm{E~}(S_N-10)_+ - 5\Pr (S_N\ge 15) \
+&= \frac{49}{3} - 5 (1 - \Pr(S_N \leq 15)) \
+&= \frac{49}{3} - 5 (1 - 0.5596) \
+&= \frac{49}{3} - 5 (0.4404) \
+&= \frac{49}{3} - 2.202 \
+&= \frac{49}{3} - \frac{22.02}{10} \
+&= \frac{490 - 220.2}{30} \
+&= \frac{269.8}{30} \
+&\approx 8.9933.
+\end{aligned}
 $$
 
-### 5.3.4 Analytic Results
+###  Analytic Results
 
 Terdapat beberapa kombinasi distribusi frekuensi klaim dan tingkat keparahan yang menghasilkan distribusi yang mudah dihitung untuk kerugian agregat. Bagian ini memberikan beberapa contoh sederhana. Meskipun contoh-contoh ini mudah dihitung, namun pada umumnya terlalu sederhana untuk digunakan dalam praktik.
 
-####  5.3.8 Example
+####  Example
 Salah satunya adalah ekspresi bentuk tertutup untuk distribusi kerugian agregat dengan mengasumsikan distribusi frekuensi geometris dan distribusi tingkat keparahan eksponensial.
 
 
@@ -491,7 +512,7 @@ f_{S_N}(s) = \frac{\beta}{\theta (1+\beta)^2}\exp\left( -\frac{s}{
 \end{eqnarray*}
 $$
 
-### 5.3.4 Tweedie Distribution
+###  Tweedie Distribution
 Pada bagian ini, kita akan membahas distribusi gabungan tertentu di mana jumlah klaim memiliki distribusi Poisson dan jumlah klaim memiliki distribusi gamma. Spesifikasi ini menghasilkan apa yang dikenal sebagai distribusi Tweedie. Distribusi Tweedie memiliki probabilitas massa pada nol dan komponen kontinu untuk nilai positif. Karena fitur ini, distribusi ini banyak digunakan dalam pemodelan klaim asuransi, di mana massa nol ditafsirkan sebagai tidak ada klaim dan komponen positif sebagai jumlah klaim. 
 
 
@@ -643,3 +664,4 @@ Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas 
 
 Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim $N$ dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim $X$ dari data jumlah klaim.
 
+>>>>>>> 7d0083df27af6377d7734b7792bd8003c3fff1a3

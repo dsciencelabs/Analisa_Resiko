@@ -1,1 +1,353 @@
 # Appendix B: Iterated Expectations
+<<<<<<< HEAD
+=======
+
+Apendiks ini memperkenalkan undang-undang yang terkait dengan harapan berulang.Dalam beberapa situasi, kami hanya mengamati satu hasil tetapi dapat membuat konsep hasil sebagai hasil dari proses dua (atau lebih) tahap. Jenis model statistik semacam itu disebut model dua tahap , atau hierarkis . Beberapa kasus khusus model hirarkis meliputi:
+
+* model yang parameter distribusinya adalah variabel acak;
+* distribusi campuran, di mana Tahap 1 mewakili undian sub-populasi dan Tahap 2 mewakili variabel acak dari distribusi yang ditentukan oleh sub-populasi yang ditarik pada Tahap 1;
+* distribusi agregat, di mana Tahap 1 mewakili pengundian jumlah peristiwa dan Tahap dua mewakili jumlah kerugian yang terjadi per peristiwa.
+
+## Conditional Distribution and Conditional Expectation
+
+Ekspektasi iterasi adalah hukum mengenai perhitungan ekspektasi dan varian dari variabel acak menggunakan distribusi bersyarat dari variabel yang diberikan variabel lain. Oleh karena itu, pertama-tama kami memperkenalkan konsep yang terkait dengan distribusi bersyarat, dan perhitungan ekspektasi bersyarat dan variabel berdasarkan distribusi bersyarat yang diberikan.
+
+### Conditional Distribution
+
+memperkenalkan konsep distribusi bersyarat masing-masing untuk variabel acak diskrit dan kontinu.
+
+#### Discrete Case
+
+Seandainya X Dan Y keduanya adalah variabel acak diskrit, yang berarti bahwa mereka dapat mengambil jumlah nilai yang mungkin terbatas atau dapat dihitung dengan probabilitas positif. Fungsi probabilitas gabungan (massa) dari ( X, Y) didefinisikan sebagai
+
+$$
+p(x,y) = \Pr[X=x, Y=y] .
+
+$$
+dimana X Dan Y independen (nilai dari X tidak tergantung pada itu Y), kita punya
+
+$$
+p(x,y)=p(x)p(y),
+
+$$
+dengan p ( x ) = Pr [ X= x ] Dan hal ( y) = Pr [ Y= y] menjadi fungsi probabilitas marjinal dari X Dan Y, masing-masing.
+
+Mengingat fungsi probabilitas bersama, kita dapat memperoleh fungsi probabilitas marjinal dari Y sebagai
+
+$$
+p(y)=\sum_x p(x,y),
+
+$$
+di mana penjumlahannya melebihi semua nilai yang mungkin dari X, dan fungsi probabilitas marjinal dari X dapat diperoleh dengan cara yang serupa.
+
+Fungsi probabilitas bersyarat (massa) dari ( Y| X) didefinisikan sebagai
+
+$$
+p(y|x) =\Pr[Y=y|X=x]= \frac{p(x,y)}{\Pr[X=x]},
+$$
+
+di mana kita dapat memperoleh fungsi probabilitas bersyarat dari ( X| Y) dengan cara yang serupa. Secara khusus, probabilitas bersyarat di atas mewakili probabilitas kejadian tersebut Y= y diberikan acara tersebut X= x. Oleh karena itu, bahkan dalam kasus di mana Pr [ X= x ] = 0, fungsi dapat diberikan sebagai bentuk tertentu, dalam aplikasi nyata.
+
+
+#### Continuous Case
+
+Untuk variabel acak kontinu X Dan Y, kita dapat mendefinisikan fungsi probabilitas (kepadatan) gabungannya berdasarkan fungsi distribusi kumulatif bersama. Fungsi distribusi kumulatif gabungan dari ( X, Y) didefinisikan sebagai
+
+$$
+F(x,y) = \Pr[X\leq x, Y\leq y].
+$$
+
+Dimana X dan Y independen, maka
+
+$$
+F(x,y)=F(x)F(y),
+$$
+
+dengan F( x ) = Pr [ X≤ x ] Dan F( y) = Pr [ Y≤ y] menjadi fungsi distribusi kumulatif (cdf) dari X Dan Y, masing-masing. Variabel acak X disebut sebagai variabel acak kontinu jika cdfnya kontinu X.
+
+Ketika cdf F( x ) terus menerus X, lalu kita definisikan F( x ) = ∂F( x ) / ∂X sebagai fungsi kerapatan probabilitas (marginal) (pdf). X. Begitu pula jika bersama cdf F( x , y) kontinu pada keduanya X Dan y , kami mendefinisikan
+
+$$
+f(x,y)=\frac{\partial^2 F(x,y)}{\partial x\partial y}
+$$
+
+sebagai fungsi kepadatan probabilitas gabungan dari (X,Y) dalam hal ini kita mengacu pada variabel acak sebagai kontinu bersama .
+DImana X dan Y independen, maka
+
+$$
+f(x,y)=f(x)f(y).
+$$
+
+Mengingat fungsi kerapatan sendi, kita dapat memperoleh fungsi kerapatan marjinal dari Y sebagai
+
+$$
+f(y)=\int_x f(x,y)\,dx,
+$$
+
+di mana integralnya melebihi semua nilai yang mungkin dari X, dan fungsi probabilitas marjinal dari X dapat diperoleh dengan cara yang serupa.
+
+Berdasarkan pdf gabungan dan pdf marginal, kami mendefinisikan fungsi kerapatan probabilitas bersyarat dari ( Y| X) sebagai
+
+$$
+f(y|x) = \frac{f(x,y)}{f(x)},
+$$
+
+di mana kita dapat memperoleh fungsi probabilitas bersyarat dari ( X| Y) dengan cara yang serupa. Di sini, fungsi kerapatan bersyarat adalah fungsi kerapatan dari y
+diberikan X= x. Oleh karena itu, bahkan dalam kasus di mana Pr [ X= x ] = 0 atau kapan F( x ) tidak didefinisikan, fungsi dapat diberikan dalam bentuk tertentu dalam aplikasi nyata.
+
+
+### Conditional Expectation and Conditional Variance
+
+Sekarang kita mendefinisikan ekspektasi bersyarat dan varians berdasarkan distribusi bersyarat yang didefinisikan pada sub-bagian sebelumnya.
+
+#### Discrete Case
+
+Untuk variabel acak diskrit Y, harapannya didefinisikan sebagai $\mathrm{E}[Y]=\sum_y y\,p(y)$ jika nilainya terbatas, dan variansnya didefinisikan sebagai
+
+$$
+\mathrm{Var}[Y]=\mathrm{E}\{(Y-\mathrm{E}[Y])^2\}=\sum_y y^2\,p(y)-\{\mathrm{E}[Y]\}^2
+$$
+
+Untuk variabel acak diskrit Y harapan bersyarat dari variabel acak Y diberikan acara tersebut X= x didefinisikan sebagai
+
+$$
+\mathrm{E}[Y|X=x]=\sum_y y\,p(y|x),
+$$
+
+Di mana X tidak harus menjadi variabel diskrit, sejauh fungsi probabilitas bersyarat hal ( y| x) diberikan.
+
+Perhatikan bahwa harapan bersyarat E [Y| X= x ] adalah angka tetap. Ketika kita mengganti X dengan X di sisi kanan persamaan di atas, kita dapat menentukan ekspektasi Y diberikan variabel acak X sebagai
+
+$$
+\mathrm{E}[Y|X]=\sum_y y\,p(y|X),
+$$
+yang masih merupakan variabel acak , dan keacakan itu berasal X.
+
+Dengan cara yang sama, kita dapat menentukan varian bersyarat dari variabel acak Y diberikan acara tersebut X= x sebagai
+
+$$
+\mathrm{Var}[Y|X=x]=\mathrm{E}[Y^2|X=x]-\{\mathrm{E}[Y|X=x]\}^2=\sum_y y^2\,p(y|x)-\{\mathrm{E}[Y|X=x]\}^2.
+
+$$
+Varian dari Y diberikan X , V a r [Y| X] dapat ditentukan dengan mengganti X oleh X dalam persamaan di atas, dan V a r [Y| X] masih merupakan variabel acak dan keacakan berasal dari X.
+ 
+#### Continuous Case
+
+Untuk variabel acak kontinu Y, harapannya didefinisikan sebagai $\mathrm{E}[Y]=\int_y y\,f(y)dy$ jika integralnya ada, dan variansnya didefinisikan sebagai
+
+$$
+\mathrm{Var}[Y]=\mathrm{E}\{(X-\mathrm{E}[Y])^2\}=\int_y y^2\,f(y)dy-\{\mathrm{E}[Y]\}^2
+$$
+
+jika nilainya terbatas.
+
+Untuk variabel acak kontinu bersama X Dan Y, harapan bersyarat dari variabel acak Y diberikan X= x didefinisikan sebagai
+
+$$
+\mathrm{E}[Y|X=x]=\int_y y\,f(y|x)dy.
+$$
+
+Di mana X tidak harus menjadi variabel kontinu, sejauh fungsi probabilitas bersyarat F( y| x) diberikan.
+
+Demikian pula, harapan bersyarat $\mathrm{E}[Y|X=x]$adalah angka tetap. Ketika kita mengganti X dengan X di ruas kanan persamaan di atas, kita dapat menentukan ekspektasi dari Y diberikan variabel acak X sebagai 
+
+$$
+\mathrm{E}[Y|X]=\int_y y\,p(y|X)\,dy,
+$$
+
+yang masih merupakan variabel acak , dan keacakan itu berasal X.
+
+
+## Iterated Expectations and Total Varians
+
+Penjelasan pada subbab ini adalah:
+* Hukum Ekspektasi Iterasi untuk menghitung ekspektasi variabel acak berdasarkan distribusi kondisionalnya yang diberikan variabel acak lainnya
+* Law of Total Variance untuk menghitung varians suatu variabel acak berdasarkan distribusi kondisionalnya yang diberikan variabel acak lainnya
+* bagaimana menghitung ekspektasi dan varians berdasarkan contoh model dua tahap
+
+###  Law of Iterated Expectations
+
+Pertimbangkan dua variabel acak X Dan Y, Dan h ( X, Y), variabel acak tergantung pada fungsinya H, X, dan Y.
+
+Dengan asumsi semua harapan ada dan terbatas, Hukum Harapan Iterasi menyatakan bahwa
+
+$$
+\begin{equation}
+\mathrm{E}[h(X,Y)]= \mathrm{E} \left\{ \mathrm{E} \left[ h(X,Y) | X \right] \right \},
+\end{equation}
+$$
+di mana harapan (dalam) pertama diambil sehubungan dengan variabel acak Y dan ekspektasi kedua (di luar) diambil sehubungan dengan X.
+ 
+Untuk Hukum Ekspektasi Berulang, variabel acak mungkin diskrit, kontinu, atau kombinasi hibrid dari keduanya. Kami menggunakan contoh variabel diskrit dari X dan Y untuk mengilustrasikan perhitungan ekspektasi tak bersyarat menggunakan Hukum Harapan Iterasi. Untuk variabel acak kontinu, kita hanya perlu mengganti penjumlahan dengan integral, seperti yang diilustrasikan sebelumnya di lampiran.
+
+diberikan $p(y|x)$ bersama dari X dan Y, harapan bersyarat dari $h(X,Y)$ diberikan $X=x$ didefinisikan sebagai,
+
+$$
+\mathrm{E} \left[ h(X,Y) | X=x \right] = \sum_y h(x,y) p(y|x),
+$$
+
+dan harapan bersyarat dari h ( X, Y) diberikan X menjadi variabel acak dapat ditulis sebagai
+
+$$
+\mathrm{E} \left[ h(X,Y) | X \right] = \sum_y h(X,y) p(y|X).
+$$
+Harapan tanpa syarat dari $h(X,Y)$ ) kemudian dapat diperoleh dengan mengambil harapan $\mathrm{E} \left[ h(X,Y) | X \right]$ sehubungan dengan variabel acak X. Artinya, kita bisa mendapatkan $\mathrm{E}[ h(X,Y)]$ sebagai
+
+$$
+\begin{aligned}
+     \mathrm{E} \left\{ \mathrm{E} \left[ h(X,Y) | X \right] \right \}
+    &= \sum_x  \left\{\sum_y h(x,y) p(y|x) \right \} p(x) \\
+    &= \sum_x  \sum_y h(x,y) p(y|x)p(x) \\
+    &=  \sum_x  \sum_y h(x,y) p(x,y)
+    =  \mathrm{E}[h(X,Y)] \end{aligned}.
+$$
+Hukum Ekspektasi Iterasi untuk kasus kontinyu dan hibrid dapat dibuktikan dengan cara yang sama, dengan mengganti penjumlahan yang sesuai dengan integral.
+
+
+### Law of Total Variance
+
+Dengan asumsi bahwa semua varians ada dan terbatas, Hukum Varians Total menyatakan bahwa
+
+$$
+\begin{equation}
+\mathrm{Var}[h(X,Y)]= \mathrm{E} \left\{ \mathrm{Var} \left[h(X,Y) | X \right] \right \}
+    +\mathrm{Var} \left\{ \mathrm{E} \left[ h(X,Y) | X \right] \right \},
+\tag{16.2}
+\end{equation}
+$$
+di mana ekspektasi/varians (dalam) pertama diambil sehubungan dengan variabel acak Y dan ekspektasi/varians kedua (di luar) diambil sehubungan dengan X. Dengan demikian, varians tak bersyarat sama dengan ekspektasi varians bersyarat ditambah varians ekspektasi bersyarat.
+
+### Application
+
+Untuk menerapkan Hukum Ekspektasi Iterasi dan Hukum Varians Total, kami umumnya mengadopsi prosedur berikut.
+
+* Identifikasi variabel acak yang dikondisikan, biasanya hasil tahap 1 (yang tidak diamati).
+* Bersyarat pada hasil tahap 1, hitung ukuran ringkasan seperti rata-rata, varians, dan sejenisnya.
+* Ada beberapa hasil dari langkah 2, satu untuk setiap hasil tahap 1. Kemudian, gabungkan hasil ini menggunakan ekspektasi iterasi atau aturan varian total.
+
+Campuran Populasi Hingga. Misalkan variabel acak $N_1$ merupakan realisasi jumlah klaim dalam satu tahun polis dari populasi pengemudi yang baik dan $N_2$ mewakili bahwa dari populasi pengemudi yang buruk. Untuk pengemudi tertentu, ada kemungkinan α bahwa (s) dia adalah pengemudi yang baik. Untuk pengundian tertentu N, kita punya
+
+$$
+N =
+    \begin{cases}
+    N_1,  &  \text{jika (s)dia adakah pengemudi yang baik;}\\
+    N_2,  &   \text{otherwise}.\\
+    \end{cases}
+$$
+Membiarkan T menjadi indikator apakah dia pengemudi yang baik, dengan T= 1 yang menyatakan bahwa pengemudi adalah pengemudi yang baik $\Pr[T=1]=\alpha$ dan $T=2$ menyatakan bahwa pengemudi adalah pengemudi yang buruk $\Pr[T=2]=1-\alpha$ 
+
+kita dapat memperoleh jumlah klaim yang diharapkan sebagai
+
+$$
+\mathrm{E}[N]= \mathrm{E} \left\{ \mathrm{E} \left[ N | T \right] \right \}= \mathrm{E}[N_1] \times \alpha +  \mathrm{E}[N_2] \times (1-\alpha).
+$$
+Untuk lebih konkret, misalkan itu $N_j$ mengikuti distribusi Poisson dengan rata-rata $\lambda_j$, $j=1,2$ maka
+
+$$
+\mathrm{Var}[N|T=j]= \mathrm{E}[N|T=j] = \lambda_j, \quad j = 1,2.
+$$
+
+Dengan demikian, kita dapat memperoleh ekspektasi varian bersyarat sebagai
+
+$$
+\mathrm{E} \left\{ \mathrm{Var} \left[ N | T \right] \right \} = \alpha \lambda_1+ (1-\alpha) \lambda_2
+$$
+
+dan varian dari ekspektasi bersyarat sebagai
+
+$$
+\mathrm{Var} \left\{ \mathrm{E} \left[ N | T \right] \right \} = (\lambda_1-\lambda_2)^2 \alpha (1-\alpha).
+$$
+
+Berdasarkan Hukum Varians Total, varians tak bersyarat dari N diberikan oleh
+
+$$
+\mathrm{Var}[N]= \alpha \lambda_1+ (1-\alpha) \lambda_2 + (\lambda_1-\lambda_2)^2 \alpha (1-\alpha).
+$$
+
+
+## Conjugate Distributions
+
+###  Linear Exponential Family
+
+Distribusi keluarga eksponensial linier adalah
+
+$$
+f( x; \gamma ,\theta ) =
+\exp \left( \frac{x\gamma -b(\gamma )}{\theta} +S\left( x,\theta \right) \right).
+$$
+
+Di Sini, X adalah variabel dependen dan γ adalah parameter minat. Kuantitas θ adalah parameter skala. Syarat b ( γ) hanya bergantung pada parameter γ, bukan variabel terikat. Statistik S( x , θ ) adalah fungsi dari variabel dependen dan parameter skala, bukan parameternya γ.
+
+Variabel dependen X dapat berupa diskrit, kontinyu atau kombinasi hybrid dari keduanya. Dengan demikian, F( ⋅ ) dapat ditafsirkan sebagai fungsi kerapatan atau massa, tergantung pada aplikasinya.
+
+Dibawah ini merupakan distribusi terpilih dari linear exponential family
+
+$$
+{\small
+\begin{matrix}
+\begin{array}{l|ccccc}
+\hline
+             &             & \text{Density or} & & & \\
+\text{Distribution} & \text{Parameters} & \text{Mass Function} & \text{Components} \\
+\hline \text{General} & \gamma,~ \theta & 
+\exp \left( \frac{x\gamma -b(\gamma )}{\theta} +S\left( x,\theta \right) \right) & 
+\gamma,~ \theta, b(\gamma), S(x, \theta)\\
+ \text{Normal} & \mu, \sigma^2  &
+\frac{1}{\sigma \sqrt{2\pi }}\exp \left(-\frac{(x-\mu )^{2}}{2\sigma ^{2}}\right) & 
+\mu, \sigma^2, \frac{\gamma^2}{2}, - \left(\frac{x^2}{2\theta} + \frac{\log(2 \pi
+\theta)}{2} \right) \\
+\text{Binomal} & \pi & 
+{n \choose x} \pi ^x (1-\pi)^{n-x} & 
+\log
+\left(\frac{\pi}{1-\pi} \right), 1, n \log(1+e^{\gamma} ),  \\
+&  &  &  \log {n \choose x} \\
+\text{Poisson} & \lambda & 
+\frac{\lambda^x}{x!} \exp(-\lambda)  & 
+\log \lambda, 1, e^{\gamma}, - \log (x!)  \\
+\text{Negative } & 
+r,p &  \frac{\Gamma(x+r)}{x!\Gamma(r)} p^r ( 1-p)^x & 
+\log(1-p), 1, -r \log(1-e^{\gamma}), \\
+~~~\text{Binomial}^{\ast} & & & ~~~\log \left[ \frac{\Gamma(x+r)}{x!
+\Gamma(r)} \right] \\
+\text{Gamma} & \alpha, \theta  & \frac{1}{\Gamma (\alpha)\theta ^ \alpha}
+x^{\alpha -1 }\exp(-x/ \theta)  & - \frac{1}{\alpha \gamma},
+\frac{1}{\alpha}, - \log ( - \gamma), -\theta^{-1} \log \theta \\
+& & &  - \log \left( \Gamma(\theta ^{-1}) \right) +
+(\theta^{-1} - 1) \log x & & \\ \hline
+\end{array}\\
+^{\ast} \text{This assumes that the parameter r is fixed but need not be an integer.}\\ 
+\end{matrix}
+}
+$$
+
+
+###  Conjugate Distributions
+
+Sekarang asumsikan bahwa parameternya $\gamma$ acak dengan distribusi $\pi(\gamma, \tau)$, dimana $\tau$ adalah vektor parameter yang menggambarkan distribusi $\gamma$. Dalam model bayesian, distribusi $\gamma$ dikenal sebagai yang sebelumnya dan mencerminkan keyakinan atau informasi kami tentang $\gamma$. Kemungkinan $f(x|\gamma)$ adalah probabilitas bersyarat $\gamma$. distribusi dari $\gamma$ dengan pengetahuan tentang variabel acak $\pi(\gamma,\tau| x)$ disebut distribusi posterior. Untuk distribusi kemungkinan tertentu, prior dan posterior yang berasal dari keluarga parametrik yang sama dikenal sebagai keluarga distribusi konjugat.
+
+Untuk kemungkinan eksponensial linier, terdapat keluarga konjugasi alami. Secara khusus, pertimbangkan kemungkinan formulir $f(x|\gamma) = \exp \left\{(x\gamma -b(\gamma))/\theta\right\} \exp \left\{S\left( x,\theta \right) \right\}$ 
+untuk kemungkinan ini, tentukan distribusi sebelumnya
+
+$$
+\pi(\gamma,\tau) = C \exp\left\{
+\gamma a_1(\tau) - b(\gamma)a_2(\tau))\right\},
+$$
+
+dimana $C$ adalah konstanta. Disini $a_1(\tau)=a_1$ dan $a_2(\tau)=a_2$ adalah fungsi dari parameter $\gamma$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641

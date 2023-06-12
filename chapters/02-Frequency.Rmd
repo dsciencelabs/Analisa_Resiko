@@ -1,8 +1,792 @@
 # Frequency Modeling
 
-## Goodness of Fit
+## Frequency Distributions
+
+Pada Dasarnya frekuensi distribusi yang kita ketahui adalah menjelaskan tentang jumlah pengamatan untuk setiap nilai dari sebuah variabel yang digambarkan menggunakan grafik dan tabel frekuensi atau dengan kata lain, tampilan visual yang menyajikan jumlah frekuensi di setiap rentang atau persentase penhgamatan sehingga informasi dapat diartikan lebih mudah. 
+
+### Bagaimana Frekuensi menambah infromasi pada tingkat keparahan suatu kejadian
+
+#### Basic Terminology
+
+Loss menunjukkan jumlah kerugian finansial yang diderita oleh tertanggung dimana klaim digunakan untik menunjukkan ganti rugi atas terjadinya peristiwwa yang diasuransikan sehingga jumlah yahg dibayarkan oleh perusahaan asuransi. Frekuensi mewakili seberapa sering peristiwa yang diasuransikan terjadi, biasanya dalam kontrak polis(menghitung variabel acak yang mewakili jumlah klaim, yaitu seberapa sering suatu peristiwa terjadi). Serevity menunjukkan jumlah, atau ukuran, dari setiap pembayaran untuk kejadian yang diasuransikan.
+
+#### Pentingnya Frekuensi
+
+Frekuensi disini dijelaskan bahwa setiap biaya yang diharapkan untuk asuransi dapat ditentukan sebagai jumlah klaim yuang diharapkan dikalikan jumlah per klaim, artinya adalah frekuensi x tingkat keparahan. dalam asuransi, penetapan harga dimulai dengan biaya yang diharapkan kemudian memperhitungkan keberesikoan produk, biaya yang dikeluarkan untuk melayani produk dan tunjangan surplus untuk perusahaan asuransi. Jadi frekuensi difokuskan pada perhitungan klaim yang memungkinkan penanggung untuk mempertimbangkan faktor-faktor yang secara langsung mempengaruhi terjadinya kerugian, sehingga berpotensi menimbulkan klaim.
+
+#### Mengapa perlu memeriksa informasi frekuensi?
+
+* Kontraktual <br>
+Dalam kontrak asuransi, deductible tertentu dan batasan polis biasanya dicantumkan dan digunakan untuk setiap kejadian yang diasuransikan.Data jumlah klaim yang dihasilkan akan menunjukkan jumlah klaim yang memenuhi kriteria tersebut, menunjukkan ukuran frekuensi klaim. Jadi model total kerugian yang diasuransikan perlu memperhitungkan deductible dan batasan polis untuk setiap kejadian yang diasuransikan.
+<br>
+* Perilaku <br>
+Dalam mempertimbangkan faktor-faktor yang memengaruhi frekuensi kerugian, perilaku pengambilan risiko dan pengurangan risiko individu dan perusahaan harus dipertimbangkan.<br> 
+Misalnya dalam perawatan kesehatan, keputusan untuk menggunakan perawatan kesehatan oleh individu, dan meminimalkan penggunaan perawatan kesehatan tersebut melalui perawatan preventif dan tindakan kesehatan, terutama terkait dengan karakteristik pribadinya. Jadi perhatian dapat difokuskan dari frekuensi kunjungan perawatan kesehatan dan keparahan biaya perawatan kesehatan. 
+<br>
+* Database <br>
+ Penanggung dapat menyimpan file data terpisah yang menyarankan pengembangan model frekuensi dan keparahan terpisah. Misalnya, file pemegang polis dibuat saat kebijakan ditulis (berisi informasi penjamin tentang tertanggung). Proses pencatatan ini kemudian dapat diperluas ke perusahaan asuransi yang memodelkan frekuensi dan keparahan sebagai proses terpisah.
+<br>
+* Regulasi dan Administratif <br>
+regulator secara rutin mewajibkan pelaporan nomor dan jumlah klaim. Pemantauan seperti melihat potensi kesalahan saat melaporkan nomor klaim berkurang membantu memastikan stabilitas keuangan perusahaan asuransi ini.
+
+##  Basic Frequency Distributions
+
+Variabel acak jumlah klaim dilambangkan dengan $N$, digunakan untuk mengasumsikan nilai bilangan bulat non-negatif ${0,1,...}$
+
+### Formula
+
+$N$ adalah variabel acak diskrit yang memiliki nilai {0,1,...}. Deskripsi yang paling dasar dari distribusinya adalah spesifikasi probabilitas yang diasumsikan dengan masing-masing nilai bilangan bulat non-negatif, ini adalah konsep probability mass function (pmf) yaitu fungsi yang memberikan probabilitas bahwa variabel acak diskrit sama persis dengan suatu nilai yang dialmbangkan sebagai $P_N(.)$
+$$
+P_N(k)=Pr(N=k), k=0,1,...
+$$
+
+Dari formula diatas adalah deskripsi lengkap alternatif dari distribusi $N$, misal fungsi distribusi (peluang bahwa variabel acak kurang dari atau sama dengan x) dari $N$ didefinisikan oleh $F_N(x) = \Pr(N \le x)$ yang dideterminasikan sebagai:
+
+$$F_N(x)=\begin{cases}
+\sum\limits_{k=0}^{\lfloor x \rfloor } \Pr(N=k), &x\geq 0;\\
+0, & \hbox{otherwise}.
+\end{cases}$$
+
+[.] menunjukkan fungsi dasar, [x] menunjukkan bilangan bulat terbesar kurang dari satu sama dengan $X$. ini menunjkkan fungsi distribusi kumulatif deskriptor yaitu alternatif yang digunakan untuk menyatakann fungsi distribusi. Survival function dari $N$ dilambangkan sebagai $S_N(.)$ yaitu pelengkap satuan dari $F_N(.)$ yaitu $S_N(\cdot)=1-F_N(\cdot)$.
 
 
-Coverage modifications atau modifikasi pertanggungan adalah perubahan yang dibuat pada syarat dan ketentuan polis asuransi. Perubahan ini dapat diprakarsai oleh pemegang polis atau perusahaan asuransi, dan dirancang untuk mengubah pertanggungan yang diberikan oleh polis.
+ada banyak ukuran yang berbeda yang biasanya digunakan untuk mengukurnya, dari jumlah tersebut average maksud dari $N$ dilambangkan dengan $\mu_N$ didefinisikan:
 
-Modifikasi pertanggungan dapat dilakukan karena berbagai alasan. Sebagai contoh, pemegang polis mungkin ingin meningkatkan batas pertanggungan pada polis mereka untuk melindungi diri mereka sendiri dari potensi kerugian. Atau, mereka mungkin ingin menambah atau menghapus jenis pertanggungan tertentu, seperti menambahkan asuransi banjir pada polis pemilik rumah atau menghapus pertanggungan tabrakan dari polis mobil.
+$$\mu_N=\sum_{k=0}^\infty k~p_N(k).$$
+
+
+$\mu_N$ adalah nilai yang diharapkan dari variabel acak $N$ yaitu $\mu N=E[N]$ yang mengarah pada momen distribusi (nilai rata-rata dari variabel acak yang dipangkatkan ke-r). $r$-th adalah $N$ dimana $r>0$ didefinisikan sebagai $E[N^r]$ dan dilambangkan dengan $\mu'_N(r)$. " ' " tidak menunjukkan diferensiasi.
+
+#### Fungsi Pembangkit Momen dan Probabilitas
+
+* Teorema 1 
+$N$ menjadi alat hitung variabel acak sehingga $E[e^{t^*N}]$ terbatas untuk beberapa $t^*>0$:
+
+a. semua momen $N$ terbatas:
+$$
+\mathrm{E}{[N^r]}<\infty, \quad r > 0.
+$$
+
+b. mgf dapat digunakan untuk:
+
+$$
+\left.\frac{{\rm d}^m}{{\rm d}t^m} M_N(t)\right\vert_{t=0}=\mathrm{E}[N^m], \quad m\geq 1.
+$$
+c. mgf $M_N(.)$ mencirikan distribusi
+mgf sangat berguna untuk dua variabel acak independen x dan y karena keduanya ada disekitar 0.
+
+* Teorema 2 
+$N$ adalah alat hitung variabel acak sehingga $E(s*)^N$ sehingga $s*>1$ memiliki:
+
+a. semua momen $N$, yaitu:
+$$
+\mathrm{E}~{N^r}<\infty, \quad r\geq 0.
+$$
+b. $pmf$ dari $N$ bisa diturunkan dari $pgf$ sebagai betikut:
+$$
+p_N(m)=\begin{cases} 
+P_N(0), &m=0;\cr
+&\cr
+\left(\frac{1}{m!}\right) \left.\frac{{\rm d}^m}{{\rm d}s^m} P_N(s)\right\vert_{s=0}\;, &m\geq 1.\cr
+\end{cases}
+$$
+c. momen faktorial dari $N$ dapat diturunkan sebagai berikut:
+
+$$
+\left.\frac{{\rm d}^m}{{\rm d}s^m} P_N(s)\right\vert_{s=1}=\mathrm{E}~{\prod\limits_{i=0}^{m-1} (N-i)}, \quad m\geq 1.
+$$
+d. $pgf P_N(.)$ mencirikan distribusi.
+
+#### Binomial Distribusi
+
+Misal, eksperimen pelemparan koin (bias atau tidak bias) dengan hasil berupa kepala atau ekor. Jadi jika $N$ menunjukkan jumlah kepala dalam urutan $M$ eksperimen pelemparan koin independen dengan koin identik yang menghasilkan probabilitas $Q$ maka distribusi dari $N$ disebut distribusi binomial dengan parameter $(m,q)$ dengan $M$ bilangan bulat positif dan $Q\in [0,1]$. ketika $Q=0$ maka distribusinya merosot dengan $N=0$ dengan probabilitas = 1. dengan pmf diberikan:
+
+$$
+p_k= {m \choose k} q^k (1-q)^{m-k}, \quad k=0,\ldots,m.
+$$
+
+dimana
+
+$$
+{m \choose k} = \frac{m!}{k!(m-k)!}
+$$
+
+Alasan pmf adalah karena mengambil nilai di antara istilah -istilah yang muncul dari perluasan binomial $(q+(1-q))^m$. Realisasi ini kemudian mengarah pada ekspresi berikut untuk PGF dari distribusi binomial:
+
+$$
+\begin{array}{ll}
+P_N(z) &= \sum_{k=0}^m z^k {m \choose k} q^k (1-q)^{m-k} \\
+&= \sum_{k=0}^m  {m \choose k} (zq)^k (1-q)^{m-k} \\
+&= (qz+(1-q))^m = (1+q(z-1))^m.
+\end{array}
+$$
+Perhatikan bahwa ekspresi di atas untuk PGF mengkonfirmasi fakta bahwa distribusi binomial adalah konvolusi M dari distribusi Bernoulli, yang merupakan distribusi binomial dengan $m=1$ dan pgf $(1+q(z-1))$
+
+ekspetasi dari binomial distribusi:
+$$
+\mathrm{E}[{N}]=\mathrm{E}\left[{\sum_{i=1}^m N_i}\right] = \sum_{i=1}^m ~\mathrm{E}[N_i] = mq.
+$$
+Varians dari jumlah variabel acak independen adalah jumlah variannya:
+
+$$
+\mathrm{Var}[{N}]=\mathrm{Var}~\left[{\sum_{i=1}^m N_i}\right]=\sum_{i=1}^m \mathrm{Var}[{N_i}] = mq(1-q).
+$$
+
+#### Poisson Distribution
+
+Distribusi Poisson diparametrikan dengan parameter tunggal yang biasanya dilamnbangkan dengan $\lambda$ yang memasukkan nilai $(0, \infty)$ dimana pmf:
+
+$$
+p_k = \frac{e^{-\lambda}\lambda^k}{k!}, k=0,1,\ldots
+$$
+
+formula diatas untuk setiap sukunya jelas tidak negatif dan jumlahnya menjadi satu emngikuti perluasan deret taylor tak terbatas dari $e^\lambda$. pgf dapat diturunkan dengan $P_N(.)$ sebagai berikut:
+
+$$
+P_N(z)= \sum_{k=0}^\infty p_k z^k = \sum_{k=0}^\infty  \frac{e^{-\lambda}\lambda^kz^k}{k!} = e^{-\lambda} e^{\lambda z}
+= e^{\lambda(z-1)}, \forall z\in\mathbb{R}.
+$$
+
+dari formula diatas didapatkan mgf nya:
+$M_N(t)=P_N(e^t)=e^{\lambda(e^t-1)}, t\in \mathbb{R}$
+
+
+jadi penurunan rata-rata untuk distribusi poisson nya adalah:
+$$
+kp_k=\begin{cases}
+0,  &k=0 \cr
+\lambda~p_{k-1}, &k\geq1 .
+\end{cases}
+$$
+
+bentuk ekspetasi dari poisson:
+$$
+\mathrm{E}[{N}]=\sum_{k\geq 0} k~p_k =\lambda\sum_{k\geq 1} p_{k-1} = \lambda\sum_{j\geq 0} p_{j} =\lambda.
+$$
+dengan menggunakan teorema 1 kita dapat melihat bahwa:
+$$
+\mathrm{E}{\prod\limits_{i=0}^{m-1} (N-i)}=\left.\frac{{\rm d}^m}{{\rm d}s^m} P_N(s)\right\vert_{s=1}=\lambda^m, \quad m\geq 1.
+$$
+jadi, varians nya sebagai berikut:
+$$
+\mathrm{Var}[{N}]=\mathrm{E}[{N^2}]-[\mathrm{E}({N})]^2 = \mathrm{E}~[N(N-1)]+\mathrm{E}[N]-(\mathrm{E}[{N]})^2=\lambda^2+\lambda-\lambda^2=\lambda.
+$$
+
+#### distribusi binomial negatif
+
+distribusi binomial muncul sebagai jumlah keberhasilan dalam $M$ pengulangan independen dari percobaan dengan hasil biner, Jika ingin mempertimbangkan jumlah keberhasilan sampai kita mengamati $R$ adalah kegagalan dalam pengulangan independen dari percobaan dengan hasil biner, maka distribusinya adalah distribusi binomial negatif. Bentuk binomial adalah,
+bentuk koefisien binomial umum yaitu:
+$$
+(1+x)^s= 1 + s x + \frac{s(s-1)}{2!}x^2 + \ldots..., \quad s\in\mathbb{R}; \vert x \vert<1.
+$$
+jadi,
+$$
+(1+x)^s= \sum_{k=0}^{\infty} {s \choose k} x^k, \quad s\in\mathbb{R}; \vert x \vert<1.
+$$
+
+jika $s=-r$ maka:
+
+$$
+(1-x)^{-r}= 1 + r x + \frac{(r+1)r}{2!}x^2 + \ldots...= \sum_{k=0}^\infty {r+k-1 \choose k} x^k, \quad r\in\mathbb{R}; \vert x \vert<1.
+$$
+jika kita ingin mendefinisikan $P_k$ sebagai
+$$
+p_k = {r+k-1 \choose k} \left(\frac{1}{1+\beta}\right)^r \left(\frac{\beta}{1+\beta}\right)^k, \quad k=0,1,\ldots
+$$
+
+untuk $r>0$ dan $\beta >-0$ lalu mendefinisikan pmf yang valid. distribusi yang ditentukan seperti diatas disebut distribusi binomial negatif dengan parameter $(r,\beta)$ dengan $r>0$ dan $\beta >-0$
+
+## The $(a,b,0)$ Class
+
+Bagian ini, kita akan belajar bagaimana;
+
+* Menetukan $(a,b,0)$ tingkat distribusi frequency.
+
+* Diskusi pentingnya yaitu hubungan rekursif yang mendasari tingkat distribusi ini.
+
+* Mengidentifikasi kondisi umum tingkat distribusi ini direduksi menjadi masing-masing distribusi binomial, Poisson, dan binomial negatif.
+
+Pada bagian sebelumnya kita mempelajari tiga distribusi, yaitu distribusi binomial, Poisson, dan binomial negatif. Dalam kasus Poisson, untuk mendapatkan rata-ratanya, kami menggunakan fakta bahwa
+
+$$kp_k = \lambda p_{k-1},k\geq 1,$$
+
+yang dapat dinyatakan setara sebagai
+
+$$\frac{p_k} {p_{k-1}} = \frac{\lambda} {k}, k \geq 1 ,$$
+
+Menariknya, kita juga dapat menunjukkan bahwa untuk distribusi binomial
+
+$$\frac{p_k} {p_{k-1}} = \frac{-q}{1-q} + (\frac {(m+1)q}{1-q}) \frac{1}{k},k=1,..,m,$$
+
+
+dan itu untuk distribusi binomial negatif
+
+$$\frac{p_k} {p_{k-1}} = \frac{\beta}{1+\beta} + (\frac {(r+1)\beta}{1+\beta}) \frac{1}{k}, k\geq 1.$$
+
+Hubungan di atas semuanya berbentuk
+
+$$\frac{p_k} {p_{k-1}} = a + \frac{b}{k}, k\geq1;$$
+
+Ini menimbulkan pertanyaan apakah ada distribusi lain yang memenuhi hubungan pengulangan yang tampaknya umum ini. Perhatikan bahwa rasio di sebelah kiri, rasio dua probabilitas, adalah non-negatif.
+
+ketiga distribusi ini secara kolektif disebut dalam literatur aktuaria sebagai $(a,b,0)$ kelas distribusi, dengan  $0$ mengacu pada titik awal pengulangan. Perhatikan bahwa nilai $p_0$ tersirat oleh $(a,b)$ karena probabilitas harus dijumlahkan menjadi satu. 
+
+ kita akan melihat bahwa ia melakukannya bahkan dalam kasus distribusi majemuk dengan distribusi frekuensi milik $(a,b,0)$ kelas - fakta ini adalah alasan motivasi yang lebih penting untuk mempelajari ketiga distribusi ini dari sudut pandang ini.
+ 
+**Contoh**  Distribusi probabilitas diskrit memiliki properti berikut
+
+$$p_k=c(1+\frac {2}{k})p_{k-1} \space k=1,2,3...$$
+$$p_1= \frac {9}{256}$$
+Tentukan nilai yang diharapkan dari variabel acak diskrit ini.
+
+**Solution** Karena pmf memenuhi $(a,b,0)$ hubungan pengulangan kita tahu bahwa distribusi yang mendasarinya adalah satu di antara distribusi binomial, Poisson, dan binomial negatif. Karena rasio parameter $(mis. \space b/a)$ sama dengan $2$, kita tahu bahwa itu adalah binomial negatif dan $r=3$. Selain itu, karena untuk binomial negatif $p_1 =r(1+\beta)^{-(r+1)}\beta$, maka
+
+\begin{align*}
+\frac {9}{256}  & = 3 \frac{\beta}{(1+\beta)^4}\\
+\frac {3}{(1+3)^4}& = \frac{\beta}{(1+\beta)^4}\\
+\beta&=3.
+\end{align*}
+
+Akhirnya, karena rata-rata binomial negatif adalah $rβ$ kita memiliki rata-rata distribusi yang diberikan sama dengan  9.
+
+## Mengestimasi Distibusi Frekuensi
+
+Pada bagian ini, Anda akan mempelajari bagaimana caranya:
+
+- Menentukan kemungkinan atau probability suatu sampel pengamatan dari distribusi diskrit
+
+- Menentukan penaksir kemungkinan maksimum untuk sampel acak pengamatan dari distribusi diskrit
+
+- Menghitung penaksir kemungkinan maksimum untuk distribusi binomial, distribusi Poisson, dan distribusi binomial negative
+
+### Estimasi Parameter
+
+Pada Bagian 2.2 kita telah mempelajari tiga distribusi yang penting dalam memodelkan berbagai jenis data perhitungan yang timbul dari asuransi. Sekarang mari kita anggap bahwa kita memiliki sekumpulan data perhitungan yang ingin kita sesuaikan dengan sebuah distribusi, dan kita telah menentukan bahwa salah satu dari distribusi ini $(a,b,0)$
+  
+distribusi ini lebih tepat daripada yang lain. Karena masing-masing membentuk kelas distribusi jika kita mengizinkan parameter atau nilainya untuk mengambil nilai apa pun yang diizinkan, masih ada tugas untuk menentukan nilai terbaik dari parameter untuk data yang ada. Ini adalah masalah estimasi titik statistik, dan dalam masalah inferensi parametrik, paradigma inferensi statistik kemungkinan maksimum biasanya menghasilkan perkiraan yang efisien. Pada bagian ini kita akan menjelaskan paradigma ini dan menurunkan perkiraan kemungkinan maksimum.
+
+Misalkan kita mengamati bahwa kita mengamati independen dan terdistribusi secara identik, iid, variabel acak  $X_1,X_2,…,X_n$ dari distribusi dengan Prabability Mass Function/*pmf* $pθ$, dimana $θ$ adalah vektor parameter dan nilai yang tidak diketahui dalam ruang parameter $Θ⊆\mathbb{R}^d$. Sebagai contoh, dalam kasus distribusi Poisson, ada satu parameter sehingga $d=1$ dan
+
+\begin{align*}
+p_\theta(x)=e^{-\theta}\frac{\theta^x}{x!}, \quad x=0,1,\ldots,
+\end{align*}
+
+dengan $θ>0$. Dalam kasus distribusi binomial, kita memiliki
+
+\begin{align*}
+p_\theta(x)= {m \choose x} q^x(1-q)^{m-x}, \quad x=0,1,\ldots,m.
+\end{align*}
+
+Untuk beberapa aplikasi, kita dapat melihat m sebagai sebuah parameter dan dengan demikian ambil $d = 2$ sehingga $θ = (m,q) ∈{0,1,2,...}× [0,1]$.
+
+Misalkan pengamatannya adalah $x_1,...,x_n$ nilai pengamatan dari sampel acak $X_1,X_2,...,X_n$ yang disajikan sebelumnya. Dalam kasus ini, probabilitas pengamatan sampel ini dari $pθ$ sama dengan
+
+\begin{align*}
+\prod_{i=1}^n p_\theta(x_i).
+\end{align*}
+
+Hal di atas, dilambangkan dengan $L(θ)$ yang dipandang sebagai fungsi dari $θ$ disebut dengan kemungkinan. Perhatikan bahwa kita telah menekan ketergantungannya pada data, untuk menekankan bahwa kita melihatnya sebagai fungsi dari vektor parameter. Sebagai contoh, dalam kasus distribusi Poisson, kita memiliki
+
+\begin{align*}
+L(\lambda)=e^{-n\lambda} \lambda^{\sum_{i=1}^n x_i} \left(\prod_{i=1}^n x_i!\right)^{-1}.
+\end{align*}
+
+Dalam kasus distribusi binomial, kita memiliki
+
+\begin{align*}
+L(m,q)=\left(\prod_{i=1}^n {m \choose x_i}\right) q^{\sum_{i=1}^n x_i} (1-q)^{nm-\sum_{i=1}^n x_i} .
+\end{align*}
+
+Penaksir kemungkinan maksimum (*mle*) untuk $θ$ adalah pemaksimum dari kemungkinan; dalam artian, *mle* memilih himpunan nilai parameter yang paling baik menjelaskan pengamatan yang diamati.
+
+**Kasus Khusus: Tiga Hasil Bernoulli**. Sebagai ilustrasi, pertimbangkan sebuah sampel dengan ukuran $n=3$ dari distribusi Bernoulli (binomial dengan $m = 1$) dengan nilai $0,1,0$. Peluang dalam kasus ini dengan mudah diperiksa sama dengan
+
+\begin{align*}
+L(q)=q(1-q)^2,
+\end{align*}
+
+dan plot kemungkinan diberikan pada Gambar 2.1. Seperti yang ditunjukkan pada plot, nilai maksimum kemungkinan sama dengan $4/27$ dan dicapai pada $q = 1/3$, dan karenanya estimasi kemungkinan maksimum untuk $q$ adalah $1/3$ untuk sampel yang diberikan. Dalam hal ini, kita dapat menggunakan aljabar untuk menunjukkan bahwa
+
+\begin{align*}
+q(1-q)^2=\left(q-\frac{1}{3}\right)^2\left(q-\frac{4}{3}\right)+\frac{4}{27},
+\end{align*}
+
+dan menyimpulkan bahwa nilai maksimumnya sama dengan $4/27$, dan dicapai pada $q = 1/3$ (menggunakan fakta bahwa suku pertama tidak positif dalam interval $[0,1]$).
+
+Tetapi seperti yang terlihat, cara menurunkan *mle* menggunakan aljabar ini tidak berlaku umum. Secara umum, seseorang menggunakan kalkulus untuk menurunkan *mle* - perhatikan bahwa untuk beberapa kemungkinan, seseorang mungkin harus menggunakan metode optimasi lainnya, terutama ketika kemungkinan tersebut memiliki banyak ekstrema lokal. Sudah menjadi kebiasaan untuk memaksimalkan secara ekuivalen logaritma dari kemungkinan $L(⋅)$, dilambangkan dengan $l(⋅$), dan melihat himpunan nol dari turunan pertamanya$ l′(⋅)$. Dalam kasus kemungkinan di atas, $l(q) = log(q) + 2log(1-q)$, dan
+
+\begin{align*}
+l'(q)=\frac{\rm d}{{\rm d}q}l(q)=\frac{1}{q}-\frac{2}{1-q}.
+\end{align*}
+
+Angka nol unik dari $l′(⋅)$ sama dengan $1/3$ , dan karena $l′′(⋅)$ adalah negatif, kita memiliki $1/3$ adalah pemaksimum unik dari kemungkinan dan karenanya merupakan estimasi kemungkinan maksimum.
+
+
+### Distribusi Frekuensi MLE
+
+Berikut ini, kami menurunkan penaksir kemungkinan maksimum, *mle*(Maximum likelihood estimator), untuk tiga anggota kelas $(a,b,0)$. Kita mulai dengan meringkas pembahasan di atas. Dalam situasi mengamati *iid*, independen dan berdistribusi identik, variabel acak $X_1, X_2,...,X_n$  dari sebuah distribusi dengan *pmf* $p_θ$, di mana $θ$ memiliki nilai yang tidak diketahui dalam $Θ⊆R^d$ , kemungkinan $L(⋅)$, sebuah fungsi pada $Θ$ didefinisikan sebagai
+
+\begin{align*}
+L(\theta)=\prod_{i=1}^n p_\theta(x_i),
+\end{align*}
+
+di mana $x_1,...,x_n$ adalah nilai yang diamati. *MLE* dari $θ$, dinotasikan sebagai $\hat{θ}_{MLE}$, adalah sebuah fungsi yang memetakan observasi ke sebuah elemen dari himpunan pemaksimum $L(⋅)$, yaitu
+
+\begin{align*}
+\{\theta \vert L(\theta)=\max_{\eta\in\Theta}L(\eta)\}.
+\end{align*}
+
+Perhatikan bahwa himpunan di atas merupakan fungsi dari pengamatan, meskipun ketergantungan ini tidak dibuat secara eksplisit. Dalam kasus tiga distribusi yang kita pelajari, dan secara umum, himpunan di atas adalah himpunan tunggal dengan probabilitas yang cenderung mendekati satu (dengan meningkatnya ukuran sampel). Dengan kata lain, untuk banyak distribusi yang umum digunakan dan ketika ukuran sampel besar, estimasi kemungkinan didefinisikan secara unik dengan probabilitas yang tinggi.
+
+Berikut ini, kita asumsikan bahwa kita telah mengamati n variabel acak ke-i $X_1,X_2,...,X_n$ dari distribusi yang dipertimbangkan, meskipun nilai parametriknya tidak diketahui. Selain itu, $x_1,x_2,...,x_n$ akan menunjukkan nilai yang diamati. Kami mencatat bahwa dalam kasus data cacahan, dan data dari distribusi diskrit secara umum, kemungkinannya dapat direpresentasikan sebagai
+
+\begin{align*}
+L(\theta)=\prod_{k\geq 0} \left(p_\theta(k)\right)^{m_k},
+\end{align*}
+
+dimana $m_k$ adalah jumlah observasi yang sama dengan $k$ . Secara matematis, kita memiliki
+
+\begin{align*}
+m_k= \left\vert \{i\vert x_i=k, 1\leq i \leq n\} \right\vert=\sum_{i= 1}^n I(x_i=k), \quad k\geq 0.
+\end{align*}
+
+Perhatikan bahwa transformasi ini mempertahankan semua data, menyusunnya dengan cara yang efisien. Untuk $n$ yang besar  hal ini menyebabkan kompresi data dalam arti kecukupan. Di bawah ini, kami menyajikan ekspresi untuk *mle* dalam hal $(m_k)_{k≥1}$ juga.
+
+**Kasus Khusus: Distribusi Poisson**. Dalam kasus ini, seperti yang disebutkan di atas, kemungkinan diberikan oleh
+
+\begin{align*}
+L(\lambda)=\left(\prod_{i=1}^n x_i!\right)^{-1}e^{-n\lambda}\lambda^{\sum_{i=1}^n x_i} .
+\end{align*}
+
+Dengan menggunakan logaritma, log-kemungkinan adalah
+
+\begin{align*}
+l(\lambda)= -\sum_{i=1}^n \log(x_i!) -n\lambda +\log(\lambda) \cdot \sum_{i=1}^n x_i .
+\end{align*}
+
+Mengambil turunannya, kami memiliki
+
+\begin{align*}
+l'(\lambda)= -n +\frac{1}{\lambda}\sum_{i=1}^n x_i.
+\end{align*}
+
+Dalam mengevaluasi $l′′(λ)$, ketika $∑^n_{i=1}xi>0$, $l′′<0$. Akibatnya, maksimum dicapai pada rata-rata sampel, $\bar{x}$ yang disajikan di bawah ini. Ketika $∑^n_{i=1}xi=0$ maka kemungkinan adalah fungsi menurun dan karenanya maksimum dicapai pada nilai parameter yang paling kecil; hal ini mengakibatkan estimasi kemungkinan maksimum menjadi nol. Oleh karena itu, kita memiliki
+
+\begin{align*}
+\overline{x} = \hat{\lambda}_{\rm MLE} = \frac{1}{n}\sum_{i=1}^n x_i.
+\end{align*}
+
+Perhatikan bahwa rata-rata sampel juga dapat dihitung sebagai
+
+\begin{align*}
+\overline{x} = \frac{1}{n} \sum_{k\geq 1} k \cdot m_k ~.
+\end{align*}
+
+Patut dicatat bahwa dalam kasus Poisson, distribusi yang tepat dari $λ_{MLE}$ tersedia dalam bentuk tertutup - ini adalah Poisson berskala - ketika distribusi yang mendasarinya adalah Poisson. Hal ini dikarenakan jumlah variabel acak Poisson independen adalah Poisson juga. Tentu saja, untuk ukuran sampel yang besar, seseorang dapat menggunakan Teorema Batas Tengah/Central Limit Theorem (CLT) biasa untuk mendapatkan perkiraan normal. Perhatikan bahwa perkiraan yang terakhir berlaku bahkan jika distribusi yang mendasari adalah distribusi apa pun dengan momen kedua yang terbatas.
+
+**Kasus Khusus: Distribusi Binomial**. Tidak seperti kasus distribusi Poisson, ruang parameter dalam kasus binomial adalah $2$ dimensi. Oleh karena itu, masalah optimasi sedikit lebih menantang. Kita mulai dengan mengamati bahwa kemungkinan diberikan oleh
+
+\begin{align*}
+L(m,q)= \left(\prod_{i=1}^n {m \choose x_i}\right) q^{\sum_{i=1}^n x_i} (1-q)^{nm-\sum_{i=1}^n x_i} .
+\end{align*}
+
+Dengan menggunakan logaritma, log-kemungkinan adalah
+
+\begin{align*}
+\begin{array}{ll}
+l(m,q) &= \sum_{i=1}^n \log\left({m \choose x_i}\right) + \left({\sum_{i=1}^n x_i}\right)\log(q) \\
+& \ \ \ + \left({nm-\sum_{i=1}^n x_i}\right)\log(1-q) \\
+&= \sum_{i=1}^n \log\left({m \choose x_i}\right) + n \overline{x}\log(q) + n\left({m- \overline{x}}\right)\log(1-q) ,
+\end{array}
+\end{align*}
+
+di mana $\bar{x} = n^{-1}∑^n_{i=1}xi$. Perhatikan bahwa karena m hanya mengambil nilai bilangan bulat non-negatif, kita tidak dapat menggunakan kalkulus multivariat untuk menemukan nilai optimal. Namun demikian, kita dapat menggunakan kalkulus variabel tunggal untuk menunjukkan bahwa
+
+\begin{equation}
+\hat{q}_{MLE}\times \hat{m}_{MLE} = \overline{x}.  
+\tag{2.2}
+\end{equation}
+
+***verifikasi persamaan 2.2***
+
+Terhadap hal ini, kami mencatat bahwa untuk nilai $m$ yang tetap
+
+\begin{align*}
+\frac{\delta}{\delta q} l(m,q) = \frac{n \overline{x}}{q}- \frac{n\left({m- \overline{x}}\right)}{1-q},
+\end{align*}
+
+dan itu
+
+\begin{align*}
+\frac{\delta^2}{\delta q^2} l(m,q)= -\frac{n \overline{x}}{q^2}+ \frac{n\left({m- \overline{x}}\right)}{(1-q)^2} \le 0.
+\end{align*}
+
+Hal di atas mengimplikasikan bahwa untuk setiap nilai $m$ yang tetap yang tetap, nilai maksimum dari $q$ memenuhi
+
+\begin{align*}
+mq=\overline{x},
+\end{align*}
+
+dan karenanya kita membuat persamaan (2.2)
+
+Dengan persamaan (2.2), hal di atas mereduksi tugas menjadi pencarian $\hat{m}_{MLE}$ yang merupakan pemaksimum dari
+
+\begin{equation}
+L\left(m,\frac{\overline{x}}{m} \right).
+\tag{2.3}
+\end{equation}
+
+Perhatikan bahwa kemungkinan akan menjadi nol untuk nilai $m$ yang lebih kecil dari $max_{1≤i≤n}xi$, dan karenanya $\hat{m}_{MLE}≥max_{1≤i≤n}xi$.
+
+***Catatan Teknis tentang Perkiraan Poisson untuk Binomial***
+
+Dalam menentukan algoritma untuk menghitung $\hat{m}_{MLE}$, pertama-tama kami tunjukkan bahwa untuk beberapa set data, $\hat{m}_{MLE}$ dapat sama dengan $∞$, yang mengindikasikan bahwa distribusi Poisson akan memberikan kecocokan yang lebih baik dibandingkan distribusi binomial mana pun. Hal ini terjadi karena distribusi binomial dengan parameter $(m, \bar{x}/m)$ mendekati distribusi Poisson dengan parameter $\bar{x}$ dengan $m$ mendekati tak terhingga. Fakta bahwa beberapa set data **lebih memilih** distribusi Poisson seharusnya tidak mengherankan karena dalam pengertian di atas, himpunan distribusi Poisson berada pada batas himpunan distribusi binomial. Menariknya, dalam Olkin, Petkau, dan Zidek (1981) mereka menunjukkan bahwa jika rata-rata sampel kurang dari atau sama dengan varians sampel maka $\hat{m}_{MLE} = ∞$ jika tidak, maka terdapat sebuah $m$ berhingga yang memaksimumkan persamaan (2.3).
+
+Pada Gambar 2.2 di bawah ini, kami menampilkan plot $L(m, \bar{x}/m)$ untuk tiga sampel yang berbeda dengan ukuran $5$; mereka hanya berbeda dalam nilai maksimum sampel. Sampel pertama dari $(2,2,2,4,5)$ memiliki rasio rata-rata sampel terhadap varians sampel yang lebih besar dari $1$ $(1.875)$, sampel kedua dari $(2,2,2,4,6)$ memiliki rasio sebesar $1.25$ yang lebih mendekati $1$, dan sampel ketiga dari $(2,2,2,4,6)$ memiliki rasio sebesar $1.25$ yang lebih mendekati $1$, dan sampel keempat dari $(2,2,2,4,6)$ memiliki rasio sebesar $1.25$ yang lebih mendekati $1$. dan sampel ketiga $(2,2,2,4,7)$ memiliki rasio lebih kecil dari $1$ $(0.885)$. Untuk ketiga sampel ini, seperti yang ditunjukkan pada Gambar 2.2, $\bar{m}_{MLE}$ sama dengan $7$, $18$ dan $∞$ masing-masing. Perhatikan bahwa nilai pembatas dari $L(m, \bar{x}/m)$ sebagai $m$ mendekati tak terhingga sama dengan
+
+\begin{equation}
+\left(\prod_{i=1}^n x_i! \right)^{-1} \exp\left(-n \overline{x}~\right) \left(~\overline{x}~\right)^{n\overline{x}}. 
+\tag{2.4}
+\end{equation}
+
+Juga, perhatikan bahwa Gambar 2.2 menunjukkan bahwa *mle* dari $m$ tidak kuat, yaitu perubahan pada sebagian kecil set data dapat menyebabkan perubahan besar pada penaksir.
+
+Diskusi di atas menyarankan algoritma sederhana berikut ini:
+
+- Langkah 1. Jika rata-rata sampel kurang dari atau sama dengan varians sampel, maka tetapkan $\hat{m}_{MLE}=∞$. Distribusi yang disarankan oleh *MLE* adalah distribusi Poisson dengan $\hat{λ}=\bar{x}$.
+- Langkah 2. Jika rata-rata sampel lebih besar dari varians sampel, maka hitunglah $L(m,\bar{x}/m)$ untuk $m$ yang lebih besar atau sama dengan maksimum sampel sampai $L(m,\bar{x}/m)$ mendekati nilai kemungkinan Poisson yang diberikan dalam (2.4). Nilai $m$ yang sesuai dengan nilai maksimum $L(m,\bar{x}/m)$ di antara yang dihitung sama dengan $\hat{m}_{MLE}$.
+
+Kami mencatat bahwa jika distribusi yang mendasari adalah distribusi binomial dengan parameter $(m,q)$ (dengan $q>0$) maka $\hat{m}_{MLE}$ sama dengan $m$ untuk ukuran sampel yang besar. Juga, $\hat{q}_{MLE}$ akan memiliki distribusi normal asimtotik dan konvergen dengan probabilitas satu untuk $q$
+ .
+
+**Kasus Khusus: Distribusi Binomial Negatif**. Kasus distribusi binomial negatif mirip dengan distribusi binomial dalam arti kita memiliki dua parameter dan mles tidak tersedia dalam bentuk tertutup. Perbedaan di antara keduanya adalah bahwa tidak seperti parameter binomial $m$ yang mengambil nilai bilangan bulat positif, parameter $r$ dari binomial negatif dapat mengambil nilai real positif. Hal ini membuat masalah optimasi menjadi sedikit lebih kompleks. Kita mulai dengan mengamati bahwa kemungkinan dapat dinyatakan dalam bentuk berikut:
+
+\begin{align*}
+L(r,\beta)=\left(\prod_{i=1}^n {r+x_i-1 \choose x_i}{r+x_i-1 \choose x_i}\right) (1+\beta)^{-n(r+\overline{x})} \beta^{n\overline{x}}.
+\end{align*}
+
+Hal di atas menyiratkan bahwa log-kemungkinan diberikan oleh
+
+\begin{align*}
+l(r,\beta)=\sum_{i=1}^n \log{r+x_i-1 \choose x_i} -n(r+\overline{x}) \log(1+\beta) +n\overline{x}\log\beta,
+\end{align*}
+
+dan karenanya
+
+\begin{align*}
+\frac{\delta}{\delta\beta} l(r,\beta) = -\frac{n(r+\overline{x})}{1+\beta} + \frac{n\overline{x}}{\beta}.
+\end{align*}
+
+Dengan menyamakan nilai di atas dengan nol, kita mendapatkan
+
+\begin{align*}
+\frac{\delta}{\delta\beta} l(r,\beta) = -\frac{n(r+\overline{x})}{1+\beta} + \frac{n\overline{x}}{\beta}.
+\end{align*}
+
+Hal di atas mereduksi masalah optimasi dua dimensi menjadi masalah satu dimensi - kita perlu memaksimalkan
+
+\begin{align*}
+\hat{r}_{MLE}\times \hat{\beta}_{MLE} = \overline{x}.
+\end{align*}
+
+terhadap $r$, dengan $r$ yang memaksimumkan adalah *mle* dan $\hat{β}_{MLE}=\bar{x}/\hat{r}_{MLE}$. Dalam Levin, Reeds, dan kawan-kawan (1977) ditunjukkan bahwa jika varians sampel lebih besar daripada rata-rata sampel maka terdapat unik $r >0$ yang memaksimalkan $l(r, \bar{x}/r)$ dan karenanya merupakan *mle* yang unik untuk $r$ dan $β$. Selain itu, mereka juga menunjukkan bahwa jika $\hat{σ}^2≤\bar{x}$ , maka kemungkinan binomial negatif akan didominasi oleh kemungkinan Poisson dengan $\hat{λ} = \bar{x}$ . Dengan kata lain, distribusi Poisson memberikan kecocokan yang lebih baik terhadap data. Jaminan dalam kasus $\hat{σ}^2>\hat{μ}$ memungkinkan kita untuk menggunakan beberapa algoritma untuk memaksimalkan $l(r,\bar{x}/r)$ . Untuk metode alternatif dalam menghitung kemungkinan, kita perhatikan bahwa
+
+\begin{array}{ll}
+l(r,\overline{x}/r)&=\sum_{i=1}^n \sum_{j=1}^{x_i}\log(r-1+j) - \sum_{i=1}^n\log(x_i!) \\
+& \ \ \ - n(r+\overline{x}) \log(r+\overline{x}) + nr\log(r) + n\overline{x}\log(\overline{x}),
+\end{array}
+
+yang menghasilkan
+
+\begin{align*}
+\left(\frac{1}{n}\right)\frac{\delta}{\delta r}l(r,\overline{x}/r)=\frac{1}{n}\sum_{i=1}^n \sum_{j=1}^{x_i}\frac{1}{r-1+j} - \log(r+\overline{x}) + \log(r).
+\end{align*}
+
+Kita perhatikan bahwa, pada ekspresi di atas untuk suku-suku yang melibatkan penjumlahan ganda, jumlah bagian dalam sama dengan nol jika $x_i = 0$. Estimasi kemungkinan maksimum untuk $r$ adalah akar dari ekspresi terakhir dan kita dapat menggunakan algoritma pencarian akar untuk menghitungnya. Selain itu, kita juga memiliki
+
+\begin{align*}
+\left(\frac{1}{n}\right)\frac{\delta^2}{\delta r^2}l(r,\overline{x}/r)=\frac{\overline{x}}{r(r+\overline{x})}-\frac{1}{n}\sum_{i=1}^n \sum_{j=1}^{x_i}\frac{1}{(r-1+j)^2}.
+\end{align*}
+
+Algoritma pencarian akar berulang yang sederhana namun cepat konvergen adalah metode Newton, yang secara kebetulan diyakini telah digunakan oleh orang Babilonia untuk menghitung akar kuadrat. Dalam metode ini, sebuah perkiraan awal dipilih untuk akar dan perkiraan baru untuk akar tersebut dihasilkan secara berurutan sampai konvergen. Menerapkan metode Newton pada masalah kita akan menghasilkan algoritma berikut:
+Langkah i. Pilih sebuah solusi hampiran, katakanlah $r_0$ . Tetapkan $k$ ke $0$.
+Langkah ii. Tetapkan $r_{k+1}$ sebagai
+
+\begin{align*}
+r_{k+1}= r_k - \frac{\frac{1}{n}\sum_{i=1}^n \sum_{j=1}^{x_i}\frac{1}{r_k-1+j} - \log(r_k+\overline{x})+\log(r_k)}{\frac{\overline{x}}{r_k(r_k+\overline{x})}-\frac{1}{n}\sum_{i=1}^n\sum_{j=1}^{x_i}\frac{1}{(r_k-1+j)^2}}
+\end{align*}
+
+Langkah iii. Jika $r_{k+1} ∼ r_k$ maka laporkan $r_{k+1}$ sebagai estimasi maksimum kemungkinan; jika tidak, naikkan $k$ sebesar $1$ dan ulangi Langkah ii.
+
+Sebagai contoh, kami mensimulasikan $5$ sampel pengamatan $41,49,40,27,23$ dari binomial negatif dengan parameter $r = 10$ dan $β = 5$. Memilih nilai awal dari $r$ sedemikian sehingga
+
+\begin{align*}
+r\beta=\hat{\mu} \quad \hbox{and} \quad r\beta(1+\beta)=\hat{\sigma}^2
+\end{align*}
+
+di mana $\hat{μ}$ merupakan estimasi rata-rata dan $\hat{σ}^{2}$ adalah estimasi varians. Hal ini menghasilkan nilai awal untuk $r$ sebesar $23,14286$. Iterasi dari $r$ dari metode Newton adalah
+
+\begin{align*}
+21.39627, 21.60287, 21.60647, 21.60647;
+\end{align*}
+
+konvergensi cepat yang terlihat di atas adalah tipikal dari metode Newton. Oleh karena itu, dalam contoh ini, $\hat{r}_{MLE}∼21.60647$ dan $\hat{β}_{MLE} = 1.66616$.
+
+```{r}
+Newton<-function(x,abserr){
+mu<-mean(x);
+sigma2<-mean(x^2)-mu^2;
+r<-mu^2/(sigma2-mu);
+b<-TRUE;
+iter<-0;
+while (b) {
+tr<-r;
+m1<-mean(c(x[x==0],sapply(x[x>0],function(z){sum(1/(tr:(tr-1+z)))})));
+m2<-mean(c(x[x==0],sapply(x[x>0],function(z){sum(1/(tr:(tr-1+z))^2)})));
+r<-tr-(m1-log(1+mu/tr))/(mu/(tr*(tr+mu))-m2);
+b<-!(abs(tr-r)<abserr);
+iter<-iter+1;
+}
+c(r,iter)
+}
+```
+
+Untuk meringkas pembahasan kita tentang MLE untuk kelas distribusi $(a,b,0)$, pada Gambar 2.3 di bawah ini kita memplot nilai maksimum dari peluang Poisson , $L(m,\bar{x}/m)$ untuk binomial, dan $L(r,\bar{x}/r)$ untuk binomial negatif, untuk tiga sampel berukuran 5 yang diberikan pada Tabel 2.1. Data tersebut dibuat untuk mencakup tiga urutan dari rata-rata dan varians sampel. Seperti yang ditunjukkan pada Gambar 2.3, dan didukung oleh teori, jika ($\hat{μ}$≤$\hat{σ}^2$ ) maka binomial negatif menghasilkan nilai kemungkinan maksimum yang lebih tinggi; jika $\hat{μ}$=$\hat{σ}^2$ maka Poisson memiliki nilai kemungkinan tertinggi; dan terakhir dalam kasus $\hat{μ}$>$\hat{σ}^2$ binomial memberikan kecocokan yang lebih baik daripada yang lain. Jadi sebelum mencocokkan data frekuensi dengan distribusi $(a,b,0)$ $(a,b,0)$, yang terbaik adalah memulai dengan memeriksa urutan $\hat{μ}$ dan $\hat{σ}^2$ . Sekali lagi kami tekankan bahwa Poisson berada pada batas distribusi binomial negatif dan binomial. Jadi, dalam kasus $\hat{μ}$≥$\hat{σ}^2$ ($\hat{μ}$≤$\hat{σ}^2$), Poisson menghasilkan kecocokan yang lebih baik daripada binomial negatif (binomial, resp.), yang ditunjukkan oleh $\hat{r}$ = ∞ ($\hat{m}$=∞ masing-masing).
+
+
+
+$$
+\small{
+\begin{array}{c|c|c}
+\hline
+\text{Data} & \text{Mean }(\hat{\mu}) & \text{Variance }(\hat{\sigma}^2) \\
+\hline
+(2,3,6,8,9) & 5.60 & 7.44 \\ 
+(2,5,6,8,9) & 6 & 6\\
+(4,7,8,10,11) & 8 & 6\\\hline
+\end{array}
+}
+$$
+## Other Frequency Distributions
+
+Sub topik:
+
+1. Mendefinisikan kelas distribusi frekuensi (a,b,1) dan mendiskusikan pentingnya hubungan rekursif yang mendasari kelas distribusi ini
+
+2. Menginterpretasikan versi terpotong nol dan versi modifikasi dari distribusi binomial, Poisson, dan binomial negatif
+
+3. Menghitung probabilitas menggunakan hubungan rekursif
+
+### Zero Truncation or Modification
+
+Contoh:
+
+Polis asuransi mobil yang muncul dalam database klaim mobil yang dibuat dalam periode tertentu. Jika ingin mempelajari jumlah klaim yang telah dibuat oleh polis-polis tersebut selama periode ini, maka jelas distribusi harus menetapkan probabilitas nol pada variabel hitungan dengan mengasumsikan nilainya nol. Dengan kata lain, membatasi perhatian pada data hitungan dari polis dalam database klaim, yang telah memotong nol data hitungan semua polis. Pada lini personal (seperti mobil), pemegang polis mungkin tidak ingin melaporkan klaim pertama karena khawatir hal itu akan meningkatkan tarif asuransi di masa depan - perilaku ini meningkatkan proporsi jumlah nol. Contoh seperti yang terakhir memodifikasi proporsi jumlah nol.
+
+Berikut merupakan bentuk modifikasi probabilitas yang diberikan pada jumlah nol dengan kelas (a,b,0) dengan tetap mempertahankan probabilitas relatif yang diberikan pada jumlah yang tidak nol - modifikasi nol. Perhatikan bahwa karena (a,b,0) memenuhi, mempertahankan probabilitas relatif dari jumlah yang tidak nol mengimplikasikan bahwa terpenuhi untuk $k≥2$. Hal ini mengarah pada definisi dari kelas distribusi berikut ini.
+
+Definisi: 
+
+Sebuah distribusi hitungan adalah anggota dari kelas (a,b,1) jika untuk beberapa konstanta a dan b probabilitas $p_k$ memenuhi
+
+$$
+\begin{equation}
+\frac{p_k}{p_{k-1}}=a+\frac{b}{k},\quad k\geq 2.
+\tag{2.5}
+\end{equation}
+$$
+
+Nilai k diatas berawal pada $p_1$ dan bukan $p_0$ dengan distribusi-distribusi ini dengan (a,b,1).Setiap pasangan nilai yang valid untuk a dan b dari kelas (a,b,0) berhubungan dengan sebuah vektor unik dari probabilitas ${p_k}_{(k≥0)}$. Jika vektor probabilitas $(\bar{p}_k)_{k≥0}$ yang diberikan oleh
+
+$$
+\tilde{p}_k= \frac{1-\tilde{p}_0}{1-p_0}\cdot p_k, \quad k\geq 1,
+$$
+
+dimana $(\bar{p}_0)∈(0,1)$ dipilih secara sembarang, maka karena probabilitas relatif untuk nilai positif menurut ${p_k}_{k≥0}$ dan $(\bar{p}_k)_{k≥0}$ adalah sama, sehingga memiliki $(\bar{p}_k)_{k≥0}$ memenuhi. Hal ini, secara khusus, menunjukkan bahwa kelas (a,b,1) sangat lebih luas daripada kelas (a,b,0).
+
+Dengan mulai pada sepasang nilai untuk a dan b yang menghasilkan distribusi (a,b,0) yang valid, dan kemudian melihat distribusi (a,b,1) yang sesuai dengan distribusi (a,b,0) ini. Sekarang berargumen bahwa kelas (a,b,1) memungkinkan untuk sebuah himpunan yang lebih besar dari distribusi-distribusi yang diizinkan untuk a dan b daripada kelas (a,b,0).
+
+Kesimpulan yang sama dapat dengan mudah ditarik untuk pasangan-pasangan dengan $a=0$. Dalam kasus dimana $a>0$, alih-alih batasan $a+b>0$ untuk kelas (a,b,0) sehingga memiliki batasan yang lebih lemah dari $a+b/2>0$ untuk kelas (a,b,1) . Dengan parameterisasi $b = (r-1)a$ seperti yang digunakan pada Bagian 2.3, sebagai ganti dari $r>0$ sehingga  memiliki batasan yang lebih lemah dari $r>-1$. Secara khusus,   melihat bahwa ketika nol memodifikasi distribusi (a,b,0) menghasilkan distribusi dalam kelas (a,b,1) kesimpulannya tidak berlaku untuk arah yang lain.
+
+Modifikasi nol dari distribusi hitungan $F$ sedemikian sehingga memberikan probabilitas nol pada hitungan nol disebut pemotongan nol dari $F$ . Oleh karena itu, versi terpotong nol dari probabilitas ${pk}_{k≥0}$ diberikan oleh
+
+$$
+\tilde{p}_k= \frac{1-\tilde{p}_0}{1-p_0}\cdot p_k, \quad k\geq 1,
+$$
+
+Secara khusus, sehingga memiliki modifikasi nol dari distribusi count $({p^T_k})_{k≥0}$ , dinotasikan dengan $({p^M_k})_{k≥0}$ dapat dituliskan sebagai kombinasi cembung dari distribusi yang merosot di 0 dan pemotongan nol dari $({p_k})_{k≥0}$ yang dinotasikan dengan $({p^T_k})_{k≥0}$ sehingga memiliki
+
+$$
+p^M_k= p^M_0 \cdot \delta_{0}(k) + (1-p^M_0) \cdot p^T_k, \quad k\geq 0.
+$$
+
+## Distribusi Campuran
+
+Pada bagian ini, akan mempelajari cara : 
+
+- Menentukan distribusi campuran ketika komponen pencampuran didasarkan pada jumlah sub-grup yang terbatas.
+- Menghitung probabilitas distribusi campuran dari proporsi pencampuran dan pengetahuan tentang distribusi masing-masing sub-grup.
+- Menentukan distribusi campuran ketika komponen pencampuran kontinu.
+
+---
+
+Dalam banyak aplikasi, populasi dasar terdiri dari sub-grup yang ditentukan secara alami dengan beberapa homogenitas dalam setiap sub-grup. Dalam kasus seperti itu, lebih mudah untuk memodelkan masing-masing sub-grup, dan dengan cara dasar memodelkan seluruh populasi. Seperti yang akan dijelaskan di bawah, di luar daya tarik estetika dari pendekatan,ini juga memperluas jangkauan aplikasi yang dapat dipenuhi oleh distribusi parametrik standar.
+
+Apabila $k$ menunjukkan jumlah sub-grup yang ditentukan dalam suatu populasi, dan $F_i$ menunjukkan distribusi pengamatan yang diambil dari sub-grup  $i$. Jika kita biarkan $α_i$  menunjukkan proporsi populasi di subgrup $i$, dengan $\sum_{i=1}^{k} α_i = 1$, maka distribusi pengamata yang dipilih secara acak dari populasi dilambangkan dengan $F$. Maka didapatkan
+
+$F(x) = \sum_{i=1}^{k} α_i . F_i(x)$
+
+Pada rumus di atas dapat dilihat sebagai penerapan langsung dari Hukum Probabilitas Total. Sebagai contoh, terdapat populasi pengemudi yang terbagi menjadi dua sub-grup. Mereka dibedakan dengan pengalaman mengemudi paling lama lima tahun dan yang memiliki pengalaman lebih dari lima tahun. Apabila $a$ menunjukkan proporsipengemudi dengan pengalaman kurang dari 5 tahun, dan $F≤5$ dan $F>5$ menunjukkan distribusi jumlah klaim dalam satu tahun untuk pengemudi dimasing-masing kelompok. Kemudian distribusi jumlah klaim pengemudi yang dipilih secara acak sehingga didapatkan
+
+$α⋅F_{≤5}(x)+(1−α)_{F>5}(x)$.
+
+Definisi alternatif dari distribusi campuran adalah sebagai berikut. Biarkan $N_i$ menjadi variabel acak dengan distribusi distribusi $F_i , i=1,…,k$ . Biarkan $I$ menjadi variabel acak mengambil nilai $1,2,…,k$ dengan probabilitas $α_1,…,α_k$ , masing-masing. Kemudian variabel acak $N_I$ memiliki distribusi yang diberikan oleh persamaan (2.6). 
+
+Pada (2.6) kita melihat bahwa fungsi distribusi merupakan kombinasi konveks dari fungsi distribusi komponen. Hasil ini dengan mudah meluas ke fungsi massa probabilitas, fungsi survival, the raw moments, dan ekspektasi karena ini semua adalah pemetaan linier dari fungsi distribusi. Hal ini mencatat bahwa ini tidak berlaku untuk momen sentral seperti varians, dan tindakan bersyarat seperti fungsi hazard rate. Dalam kasus varians, dapat dilihat sebagai
+
+$Var[N_I]=E[Var[N_I|I]]+Var[E[N_I|I]]=\sum_{i=1}^{k}α_iVar[N_i]+Var[E[N_I|I]].$
+
+### Contoh Soal Ujian Aktuaria
+
+Di kota tertentu jumlah flu biasa yang akan diderita seseorang dalam setahun mengikuti distribusi Poisson yang bergantung pada usia dan status merokok individu tersebut. Distribusi penduduk dan jumlah rata-rata pilek adalah sebagai berikut:
+
+$$
+\small{
+\begin{array}{l|c|c}
+\hline
+ & \text{Proportion of population} &
+\text{Mean number of colds}\\\hline
+\text{Children} & 0.3 & 3\\
+\text{Adult Non-Smokers} & 0.6 & 1\\
+\text{Adult Smokers} & 0.1 & 4\\\hline
+\end{array}
+}
+$$
+
+#### Jawaban 1
+
+Dengan menggunakan Law of Total Probability, kita dapat menuliskan probabilitas yang diperlukan sebagai $Pr(N_I=3)$ , dengan $I$ menunjukkan kelompok individu yang dipilih secara acak dengan 1,2 dan 3 menandakan kelompok Anak-anak, Dewasa Bukan Perokok, dan Perokok Dewasa, masing-masing. Sekarang dengan pengkondisian kita dapatkan
+
+$Pr(N_I=3)=0.3⋅Pr(N_1=3)+0.6⋅Pr(_N2=3)+0.1⋅Pr(N_3=3)$
+
+dengan $N_1$,$N_2$ dan $N_3$ mengikuti distribusi Poisson dengan rata-rata 3,1 , dan 4 . Menggunakan di atas, kita mendapatkan $Pr(N_I=3)∼0.1235$.
+
+#### Jawaban 2
+
+Probabilitas bersyarat dari peristiwa A diberikan peristiwa B, $Pr(A|B) = \frac{(Pr⁡(A,B))}{(Pr⁡(B)})$. Probabilitas bersyarat yang diperlukan dalam soal ini kemudian dapat ditulis sebagai $Pr(I=3|N_I=3)$ , yang sama dengan
+
+$Pr(I=3|N_I=3)= \frac{Pr(I=3,N_3=3)}{Pr(N_I=3)}∼\frac{0.1×0.1954}{0.1235}∼0.1581$
+
+---
+ 
+Dalam contoh di atas, jumlah sub-grup $k$ sama dengan tiga. Secara umum, $k$ dapat berupa bilangan asli apa pun, tetapi ketika $k$ besar, ini adalah sedikit dari sudut pandang pemodelan untuk mengambil pendekatan subgrup tak terhingga. Untuk memotivasi pendekatan ini, misalkan subgrup $i$ sedemikian rupa sehingga distribusi komponennya $F_i$ diberikan oleh $G_\bar{θ_{{i}}}$ , di mana G adalah bagian dari distribusi parametrik dengan ruang parameter $Θ⊆R^d$ . Dengan asumsi ini, fungsi distribusi $F$ dari pengamatan yang diambil secara acak dari populasi maka didaptkan 
+
+$F(x)=\sum_{i=1}^k = α_iG_\bar{θ_{{i}}}(x),∀x∈R$
+
+mirip dengan persamaan (2.6). Bergantian, dapat ditulis sebagai
+
+$F(x)=E[G_\bar{θ_{{i}}}(x)],∀x∈R$
+
+di mana $\barϑ$ mengambil nilai $\barθ_i$ dengan probabilitas $α_i$ , untuk $i=1,…,k$ . Hal di atas memperjelas bahwa ketika $k$ besar, seseorang dapat memodelkan di atas dengan memperlakukan $\barϑ$ sebagai variabel acak kontinu. 
+
+Untuk mengilustrasikan pendekatan ini, misalkan kita memiliki populasi pengemudi dengan distribusi klaim untuk pengemudi individu yang didistribusikan sebagai Poisson. Setiap orang memiliki jumlah klaim yang diharapkan (pribadi) mereka sendiri $λ$ - nilai yang lebih kecil untuk pengemudi yang baik, dan nilai yang lebih besar untuk orang lain. Ada distribusi $λ$ dalam populasi; pilihan populer dan nyaman untuk memodelkan distribusi ini adalah distribusi gamma dengan parameter $(α,θ)$. Dengan spesifikasi tersebut ternyata distribusi yang dihasilkan $N$ , klaim driver yang dipilih secara acak, adalah binomial negatif dengan parameter $(r=α,β=θ)$ . Ini dapat ditunjukkan dalam banyak cara, tetapi argumen langsungnya adalah sebagai berikut:
+
+$$
+\begin{array}{ll}
+\Pr(N=k)&= \int_0^\infty \frac{e^{-\lambda}\lambda^k}{k!} \frac{\lambda^{\alpha-1}e^{-\lambda/\theta}}{\Gamma{(\alpha)}\theta^{\alpha}} d\lambda = 
+\frac{1}{k!\Gamma(\alpha)\theta^\alpha}\int_0^\infty \lambda^{\alpha+k-1}e^{-\lambda(1+1/\theta)}~d\lambda \\
+&=\frac{\Gamma{(\alpha+k)}}{k!\Gamma(\alpha)\theta^\alpha(1+1/\theta)^{\alpha+k}} \\
+&={\alpha+k-1 \choose k}\left(\frac{1}{1+\theta}\right)^\alpha\left(\frac{\theta}{1+\theta}\right)^k, \quad k=0,1,\ldots
+\end{array}
+$$
+
+Perhatikan bahwa derivasi di atas secara implisit menggunakan yang berikut ini:
+
+$f_{N|Λ=λ}(N=k)=\frac{e^{−λ}λ^k}{k!},k≥0;andfΛ(λ)=\frac{λ^{α−1}e^{−λ/θ}}{Γ(α)θ^α},λ>0$
+
+Dengan mempertimbangkan campuran dari kelas distribusi parametrik, kita meningkatkan kekayaan kelas tersebut. Perluasan distribusi ini menghasilkan kelas campuran yang mampu melayani lebih banyak aplikasi daripada kelas parametrik yang kita gunakan sebelumnya. Pemodelan campuran adalah teknik pemodelan yang penting dalam aplikasi asuransi dan bab-bab berikutnya akan membahas lebih banyak aspek dari teknik pemodelan ini.
+
+
+## Goodnes of Fit
+
+Dalam Materi ini akan mempelajari:
+- Perhitungan Statisik dengan menggunakan Goodness of fit dalam membandingkan distribusi distrik yang dihipotesiskan dengan sample pengamatan diskrit
+- Perbandingan Statistik dengan Distribusi referensi dalam menilai kecukupan atau keseluruhan dari fit tersebut. 
+
+
+Sebelumnya kita telah membahas 3 Distribusi Frekuensi Dasar dengan beserta perluasan melalui Pemotongan dan modifikasi nol. Tetapi, pada kelas tersebut masih tetap parametrik dan karenanya pada dasarnya merupakan bagian kecil dari kelas dari semua distribusi frekuensi yang mungkin (himpunan distribusi pada bilangan bulat non-negatif). Maka dari itu meskipun metode untuk mengestimasi parameter yang tidak diketahui, distribusi yang cocok tidak menjadi representasi yang baik dari distribusi yang mendasari jika yang terakhir jauh dari kelas distribusi yang digunakan untuk pemodelan. Karena dapat dibuktikan dan ditunjukkan bahwa penaksir kemungkinan maksimum konvergen ke suatu nilai sehingga distribusi yang sesuai adalah proyeksi **Kullback-Leibler** dari distribusi yang mendasari pada kelas distribusi yang digunakan untuk pemodelan.Dalam metode pengujian statistik yang digunakan adalha chi-kuadrat Pearson dalam untuk memeriksa kecocokan dari distribusi yang cocok. 
+
+
+- Pada tahun 1993 sebuah portofolio yang terdiri dari n = 7.483 polis asuransi mobil dari sebuah perusahaan asuransi besar di Singapura memiliki distribusi kecelakaan mobil per pemegang polis seperti yang diberikan pada Tabel 2.4.
+
+$$
+\small{
+\begin{array}{l|c|c|c|c|c|c}
+\hline
+\text{Count }(k) & 0 & 1 & 2 & 3 & 4 & \text{Total}\\
+\hline
+\text{No. of Policies with }k\text{ accidents }(m_k) & 6,996 & 455 & 28 & 4 & 0 & 7,483\\
+\hline
+\end{array}
+}
+$$
+
+Dengan menggunakan Distribusi Poisson maka  maximum likelihood estimator (mle) for λ dengan rata rata Poisson merupakan rata rata sampel yang diberikan :
+
+$$
+\begin{align}
+\bar{N}=\frac{0 ⋅ 6996 +1 ⋅  455 + 2⋅28+3⋅4+4⋅0}{7483}=0.06989
+\end{align}
+$$
+
+Jika menggunakan Poisson ($\hat{λ}MLE$) sebagai distribusi yang cocok, maka perbandingan tabel dari jumlah yang cocok dan jumlah yang diamati diberikan oleh Tabel 2.5 dengan $\hat{p}_k$ mewakili estimasi probabilitas di bawah distribusi Poisson yang sesuai.
+
+$$
+\small{
+\begin{array}{c|r|r}
+\hline
+\text{Count}  & \text{Observed}  & \text{Fitted Counts}\\
+(k) & (m_k) & \text{Using Poisson }(n\hat{p}_k)\\
+\hline
+0 & 6,996 & 6,977.86 \\
+1 & 455 & 487.70 \\
+2 & 28 & 17.04 \\
+3 & 4 & 0.40 \\
+\geq 4 & 0 & 0.01\\
+\hline
+\text{Total} & 7,483 & 7,483.00\\
+\hline
+\end{array}
+}
+$$
+
+perbandingan tabel tidak cukup untuk menguji hipotesis secara statistik bahwa distribusi yang mendasarinya memang Poisson. Statistik chi-kuadrat Pearson adalah ukuran statistik kecocokan yang dapat digunakan. Untuk menjelaskan statistik ini,dapat dimisalkan sebuah set data berukuran $n$ yang dikelompokkan menjadi $k$  dengan $m_k/n$ dan $\hat{p}_k$ untuk $k = 1...,K$ masing-masing merupakan probabilitas observasi dan estimasi dari sebuah observasi yang termasuk dalam sel ke-k masing-masing. Statistik uji chi-square Pearson kemudian diberikan oleh
+
+$$
+\begin{align}
+\sum_{k=1}^{K} = \frac{(m_k−n\hat{p}_k)^2}{n\hat{p}_k}
+\end{align}
+$$
+Motivasi untuk statistik di atas berasal dari fakta bahwa
+
+$$
+\begin{align}
+\sum_{k=1}^{K} = \frac{(m_k−np_k)^2}{np_k}
+\end{align}
+$$
+ 
+Dimana memiliki distribusi chi-kuadrat pembatas dengan $K-1$  derajat kebebasan jika $p_k$ dengan $k = 1,...,K$ yang merupakan probabilitas sel yang sebenarnya. Selanjutnya menganggap bahwa hanya data yang dirangkum yang diwakili oleh $m_k$ dengan $k = 1,...,K$ yang tersedia. Selanjutnya, jika $(p_k)'s$ merupakan fungsi dari s parameter-parameter, maka dapat mengganti $(p_k)'s$ dengan probabilitas yang diestimasi secara efisien $(\hat{p}_k)'s$ yang akan menghasilkan statistik yang tetap memiliki distribusi chi-square yang membatasi tetapi dengan derajat kebebasan yang diberikan oleh $K-1-s$ Estimasi yang efisien tersebut dapat diturunkan misalnya dengan menggunakan metode mle (dengan multinomial likelihood) atau dengan menaksir parameter $s$ yang meminimumkan statistik chi-square Pearson di atas. Sebagai contoh, kode R di bawah ini menghitung estimasi untuk $λ$ dengan cara yang terakhir dan menghasilkan estimasi 0.06623153.
+
+
+```{r}
+m = c(6996,455,28,4,0)
+op =  m/sum(m)
+g<-function(lam){sum((op-c(dpois(0:3,lam),1-ppois(3,lam)))^2)};
+optim(sum(op*(0:4)),g,method="Brent",lower=0,upper=10)$par
+```
+
+Ketika seseorang menggunakan data lengkap untuk mengestimasi probabilitas, distribusi asimtotik berada di antara distribusi chi-kuadrat dengan parameter $K-1$ dan $K-1-s$. Dalam praktiknya,  hal yang umum untuk mengabaikan kehalusan ini dan mengasumsikan chi-kuadrat pembatas memiliki $K-1-s$ derajat kebebasan. Menariknya, jalan pintas praktis ini bekerja dengan cukup baik dalam kasus distribusi Poisson.
+
+Untuk data otomotif Singapura, statistik chi-kuadrat Pearson sama dengan 41,98 dengan menggunakan $mle$ data lengkap untuk $λ$.Dengan menggunakan distribusi pembatas chi-kuadrat dengan $5-1-1=3$ derajat kebebasan, kita melihat bahwa nilai 41,98 berada jauh di bagian ekor (persentil ke-99 persentil ke-99 berada di bawah 12). Oleh karena itu, kita dapat menyimpulkan bahwa distribusi Poisson memberikan kecocokan yang tidak memadai untuk data tersebut.
+
+Di atas, kita mulai dengan sel seperti yang diberikan dalam ringkasan tabel di atas. Dalam praktiknya, pertanyaan yang relevan adalah bagaimana mendefinisikan sel sehingga distribusi chi-kuadrat merupakan perkiraan yang baik untuk distribusi sampel terbatas dari statistik. Aturan praktisnya adalah mendefinisikan sel sedemikian rupa sehingga memiliki setidaknya 80%, jika tidak semua sel, jika tidak semua, sel memiliki jumlah yang diharapkan lebih besar dari 5. Selain itu, jelas bahwa jumlah sel yang lebih besar menghasilkan kekuatan yang lebih tinggi dari pengujian, dan karenanya aturan praktis yang sederhana adalah memaksimalkan jumlah sel sedemikian rupa sehingga setiap sel memiliki setidaknya 5 pengamatan.

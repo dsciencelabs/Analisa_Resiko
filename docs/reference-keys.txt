@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+tab:unnamed-chunk-16
+fig:unnamed-chunk-36
+fig:unnamed-chunk-37
+fig:TransitionSwitz
+fig:PremEvolution
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -9,7 +17,31 @@ memperbarui-asuransi
 pengelolaan-klaim-dan-produk
 penyisihan-klaim
 frequency-modeling
-goodness-of-fit
+frequency-distributions
+bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian
+basic-terminology
+pentingnya-frekuensi
+mengapa-perlu-memeriksa-informasi-frekuensi
+basic-frequency-distributions
+formula
+fungsi-pembangkit-momen-dan-probabilitas
+binomial-distribusi
+poisson-distribution
+distribusi-binomial-negatif
+the-ab0-class
+mengestimasi-distibusi-frekuensi
+estimasi-parameter
+distribusi-frekuensi-mle
+<<<<<<< HEAD
+other-frequency-distributions
+=======
+>>>>>>> a496b0ed46e567c4351ac5b8875c191b08514548
+zero-truncation-or-modification
+distribusi-campuran
+contoh-soal-ujian-aktuaria
+jawaban-1
+jawaban-2
+goodnes-of-fit
 modeling-loss-severity
 basic-distributional-quantities
 moments
@@ -57,10 +89,36 @@ penduga-kepadatan
 prinsip-pengaya
 alat-untuk-pemilihan-model-dan-diagnostik
 perbandingan-grafik-distribusi
+<<<<<<< HEAD
 perbandingan-statistik-distribusi
 nilai-awal
 metode-momen
 pencocokan-persentil
+=======
+graphical-comparison-of-distributions
+starting-values
+method-of-moments
+percentile-matching
+model-selection
+pemilihan-model-iteratif
+model-selection-based-on-a-training-dataset
+model-selection-based-on-a-test-dataset
+model-selection-based-on-cross-validation
+estimasi-menggunakan-data-modifikasi
+estimasi-parametrik-menggunakan-data-modifikasi
+estimasi-parametrik-menggunakan-data-yang-dikelompokkan
+nonparametric-estimation-using-modified-data
+grouped-data
+right-censored-empirical-distribution-function
+example-4.3.5.-actuarial-exam-question.
+bayesian-inference
+introduction-to-bayesian-inference
+bayesian-model
+bayesian-inference-1
+summarizing-the-posterior-distributiob-of-paremeters
+bayesian-predictive-distribution
+conjugate-distributions
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 aggregate-loss-models
 introduction
 moments-and-distribution
@@ -72,34 +130,27 @@ actuarial-exam-question---continued
 analytic-results
 example-2
 tweedie-distribution
-menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh-1
 simulasi
 simulation-and-resampling
-dasar-dasar-simulasi
-menghasilkan-pengamatan-seragam-independen
-metode-transformasi-invers
-presisi-simulasi
-simulasi-dan-inferensi-statistik
-bootstrap-dan-resampling
-dasar-dasar-bootstrap
-presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error
-interval-keyakinan
-bootstrap-parametrik
-cross-validation
-k-fold-cross-validation
-leave-one-out-cross-validation
-cross-validation-and-bootstrap
-importance-sampling
-metropolis-hastings
-gibbs-sampler
 premium-foundations
 pengenalan-ratemaking
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
 risk-classification
+introduction-1
+poisson-regression-model
+need-for-poisson-regression
+poisson-regression
+incorporating-exposure
+categorical-variables-and-multiplicative-tariff
+rating-factors-and-tariff
+multiplicative-tariff-model
+poisson-regression-for-multiplicative-tariff
+numerical-examples
+further-resources-and-contributors
 experience-rating-using-credibility-theory
 pengantar-aplikasi-teori-kredibilitas
 limited-fluctuation-credibility
@@ -156,6 +207,7 @@ r-code-for-chain-ladder-predictions
 glms-and-bootstrap-for-loss-reserves
 model-specification
 model-estimation-and-prediction
+<<<<<<< HEAD
 ChapBonusMalus
 S:ERBM:Intro
 S:ERBM:NCD
@@ -166,6 +218,29 @@ transition-probability
 S:ERBM:StatDist
 stationary-distribution
 r-code-for-a-stationary-distribution
+=======
+experience-rating-using-bonus-malus
+introduction-2
+sistem-ncd-di-beberapa-negara
+sistem-ncd-di-malaysia
+sistem-ncd-di-negara-lain
+model-rantai-bms-dan-markov
+probabilitas-transisi
+bms-dan-distribusi-stasioner
+distribusi-stasioner
+kode-untuk-distribusi-stasioner-r
+evolusi-premium
+program-untuk-evolusi-premium-r
+tingkat-konvergensi
+r-program-untuk-tingkat-konvergensi
+bms-dan-peringkat-premium
+peringkat-premium
+klasifikasi-risiko-apriori
+pemodelan-heterogenitas-residual
+distribusi-stasioner-yang-memungkinkan-heterogenitas-residual
+penentuan-relativitas-optimal
+ilustrasi-numerik
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 aggregate-loss-models-1
 dependence-modeling
 appendix-a-review-of-statistical-inference
@@ -185,6 +260,7 @@ konsep-dasar-1
 uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
+<<<<<<< HEAD
 <<<<<<< HEAD
 fig:unnamed-chunk-2
 fig:unnamed-chunk-4
@@ -212,8 +288,37 @@ pemodelan-heterogenitas-residual
 distribusi-stasioner-yang-memungkinkan-heterogenitas-residual
 penentuan-relativitas-optimal
 ilustrasi-numerik
+=======
+appendix-b-iterated-expectations
+conditional-distribution-and-conditional-expectation
+conditional-distribution
+discrete-case
+continuous-case
+conditional-expectation-and-conditional-variance
+discrete-case-1
+continuous-case-1
+iterated-expectations-and-total-varians
+law-of-iterated-expectations
+law-of-total-variance
+application
+conjugate-distributions-1
+linear-exponential-family
+conjugate-distributions-2
+appendix-c-maximum-likelihood-theory
+likelihood-function
+likelihood-and-log-likelihood-functions
+properties-of-likelihood-functions
+maximum-likelihood-estimators
+definition-and-derivation-of-mle
+asymptotic-properties-of-mle
+use-of-maximum-likelihood-estimation
+statistical-inference-based-on-maximum-likelihood-estimation
+hypothesis-testing
+mle-and-model-validation
+appendix-d-summary-of-distributions
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 distribusi-diskrit
-the-ab0-class
+the-ab0-class-1
 the-ab1-class
 continuous-distribution
 one-parameter-distributions
@@ -225,6 +330,7 @@ distributions-with-finite-support
 limited-expected-values
 functions
 illustrative-graph
+<<<<<<< HEAD
 =======
 appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
@@ -248,3 +354,6 @@ paparan-risiko
 faktor-penilaian
 >>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
 experience-rating-using-bonus-malus
+=======
+appendix-e-conventions-for-notation
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
