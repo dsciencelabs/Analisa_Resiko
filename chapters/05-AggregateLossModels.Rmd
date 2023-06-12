@@ -262,7 +262,8 @@ $$
 
 Dalam satu minggu tertentu, jumlah proyek yang mengharuskan Anda bekerja lembur memiliki distribusi geometris dengan $β = 2$ . Untuk setiap proyek, distribusi jumlah jam lembur dalam seminggu, X adalah sebagai berikut
 
-$${\small 
+$$
+{\small 
 \begin{matrix}
 \begin{array}{ccc} \hline
     x &  & f(x)\\ \hline
@@ -272,7 +273,8 @@ $${\small
   \end{array}
 \end{matrix}
 }
-$$
+$$  
+
 Jumlah proyek dan jumlah jam lembur tidak bergantung. Anda akan dibayar untuk jam lembur yang melebihi 15 jam dalam seminggu. Hitunglah jumlah jam lembur yang akan  diterima dalam seminggu.
 
 **JAWABAN**
@@ -505,6 +507,7 @@ f_{S_N}(s)&=\sum_{n=1}^{\infty} p_n f_{S_n}(s)\\
 &=\sum_{n=1}^{\infty}e^{-\lambda}\frac{(\lambda)^n}{n!}\frac{\gamma^{na}}{\Gamma(n\alpha)}s^{n\alpha-1}e^{-s\gamma} .
 \end{aligned}
 $$
+
 
 Dengan demikian, distribusi Tweedie dapat dianggap sebagai campuran antara distribusi nol dan distribusi bernilai positif, yang membuatnya menjadi alat yang mudah digunakan untuk memodelkan klaim asuransi dan untuk menghitung premi murni. Rata-rata dan varians dari model Poisson gabungan Tweedie adalah:
 
