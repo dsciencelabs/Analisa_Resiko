@@ -1,4 +1,6 @@
 # Aggregate Loss Models
+<<<<<<< HEAD
+=======
 
 ## Introduction
 
@@ -642,3 +644,4 @@ Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas 
 
 Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim $N$ dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim $X$ dari data jumlah klaim.
 
+>>>>>>> 7d0083df27af6377d7734b7792bd8003c3fff1a3

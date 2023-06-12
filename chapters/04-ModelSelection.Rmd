@@ -896,9 +896,12 @@ Di mana,
 
 ### Bayesian Inference
 
+
 #### Summarizing the Posterior Distributiob of Paremeters
 
+
 #### Bayesian Predictive Distribution
+
 
 ### Conjugate Distributions
 
