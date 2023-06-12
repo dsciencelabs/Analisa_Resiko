@@ -170,9 +170,7 @@ Dengan nilai $a>0$ dan $θ>0$ juga.
 Variabel kontinu $X$ yang merupakan fungsi adalah variable yang mewakilkan distribusi gamma dengan shape parameter $a$ dan scale parameter $θ$.
 Perubahan dari perubahan scale dan shape parameter untuk gamma density function tertuang dalam grafik:
 
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/r.s.2.png")
-```
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap31.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Apabila $a=1$ gamma akan mereduksi menjadi distribusi eksponensial, apabila $a=\frac{n}2$ dan $θ=2$ maka gamma akan mereduksi menjadi distribusi chi-square dengan nilai n sebagai derajat kebebesan pada distribusi.Fungsi distribusi dari model gamma merupakan bentuk tidak sempurna atau lengkap dari fungsi gamma, dan dianotasikan sebagai $\Gamma\left(\alpha; \frac{x}{\theta} \right)$,, dan bentuk persamaannya adalah:
 
@@ -207,9 +205,7 @@ f_{X}\left( x \right) = \frac{\alpha\theta^{\alpha}}{\left( x + \theta \right)^{
 
 Grafis di bawah menggambarkan efek dari perubahan scale dan shape parameter pada pareto density function. 
 
-```{r image6, echo=FALSE, fig.cap="",fig.align='center', out.width = '30%'}
-knitr::include_graphics("images/r.s.6.png")
-```
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap32.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Fungsi distribusi dari distribusi pareto adalah:
 
@@ -251,9 +247,7 @@ $$\begin{equation}
 
 Pada grafik menunjukkan efek dari scale dan shape parameter pada perubahan weibul density function.
 
-```{r image10, echo=FALSE, fig.cap="",fig.align='center', out.width = '30%'}
-knitr::include_graphics("images/r.s.10.png")
-```
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap33.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Fungsi distribusi dari weibul distribusi diberikan sebagai:
 
@@ -785,9 +779,7 @@ $$l(\alpha) =  \sum_{i=1}^5 \log f(x_i;\alpha ) =  5 \alpha \log 500 + 5 \log \a
 
 Gambar dibawah menunjukkan kemungkinan logaritmik sebagai fungsi parameter $α$
 
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/r.s.14.png")
-```
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap34.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Kita dapat menentukan nilai maksimum kemungkinan logaritmik dengan mengambil turunan dan mengaturnya sama dengan nol. Ini menghasilkan
 
@@ -815,71 +807,73 @@ $2.453125$ mengkonfirmasi hasil perhitungan tangan kita di mana penaksir kemungk
 Cuplikan kode berikut menunjukkan cara menyesuaikan eksponensial, gamma, Pareto, lognormal, dan  $GB2$ Model. Untuk konsistensi, kode menggunakan package `R` dan `VGAM`. Akronim adalah singkatan dari Vector Generalized Linear and Additive Models; Seperti yang disarankan oleh namanya, paket ini dapat melakukan jauh lebih dari sesuai dengan model-model ini meskipun cukup untuk tujuan kita. Satu-satunya pengecualian adalah GB2 kepadatan yang tidak banyak digunakan di luar aplikasi asuransi; Namun, kita dapat mengkodekan kepadatan ini dan menghitung penaksir kemungkinan maksimum menggunakan `optim` General Purpose Optimizer.
 
 ```{r}
-library(VGAM)
-claim_lev <- read.csv("CLAIMLEVEL.csv", header = TRUE) 
-claim_data <- subset(claim_lev, Year == 2010); 
+#library(VGAM)
+#claim_lev <- read.csv("CLAIMLEVEL.csv", header = TRUE) 
+#claim_data <- subset(claim_lev, Year == 2010); 
 
-# Inference assuming a GB2 Distribution - this is more complicated
-# The likelihood function of GB2 distribution (negative for optimization)
-lik_gb2 <- function (param) {
-  a_1 <- param[1]
-  a_2 <- param[2]
-  mu <- param[3]
-  sigma <- param[4]
-  yt <- (log(claim_data$Claim) - mu) / sigma
-  logexpyt <- ifelse(yt > 23, yt, log(1 + exp(yt)))
-  logdens <- a_1 * yt - log(sigma) - log(beta(a_1,a_2)) - 
-    (a_1+a_2) * logexpyt - log(claim_data$Claim) 
-  return(-sum(logdens))
-}
+# #Inference assuming a GB2 Distribution - this is more complicated
+# #The likelihood function of GB2 distribution (negative for optimization)
+#lik_gb2 <- function (param) {
+#  a_1 <- param[1]
+#  a_2 <- param[2]
+#  mu <- param[3]
+#  sigma <- param[4]
+#  yt <- (log(claim_data$Claim) - mu) / sigma
+#  logexpyt <- ifelse(yt > 23, yt, log(1 + exp(yt)))
+#  logdens <- a_1 * yt - log(sigma) - log(beta(a_1,a_2)) - 
+#    (a_1+a_2) * logexpyt - log(claim_data$Claim) 
+#  return(-sum(logdens))
+#}
 # "optim" is a general purpose minimization function
-gb2_bop <- optim(c(1, 1, 0, 1), lik_gb2, method = c("L-BFGS-B"), 
-                 lower = c(0.01, 0.01, -500, 0.01), 
-                 upper = c(500, 500, 500, 500), hessian = TRUE)
-# Nonparametric Plot
-plot(density(log(claim_data$Claim)), main = "", xlab = "Log Expenditures",
-     ylim = c(0 ,0.37))
-x <- seq(0, 15, by = 0.01)
-#Exponential
-fit.exp <- vglm(Claim ~ 1, exponential, data = claim_data)
-theta = 1 / exp(coef(fit.exp))
-fexp_ex <- dgamma(exp(x), scale = exp(-coef(fit.exp)), shape = 1) * exp(x)
-lines(x, fexp_ex, col = "red", lty =2)
-# Inference assuming a gamma distribution
-fit.gamma <- vglm(Claim ~ 1, family = gamma2, data = claim_data)
-theta <- exp(coef(fit.gamma)[1]) / exp(coef(fit.gamma)[2])  # theta = mu / alpha
-alpha <- exp(coef(fit.gamma)[2]) 
-fgamma_ex <- dgamma(exp(x), shape = alpha, scale = theta) * exp(x)
-lines(x, fgamma_ex, col = "blue", lty =3)
-#Pareto
-fit.pareto <- vglm(Claim ~ 1, paretoII, loc = 0, data = claim_data)
-fpareto_ex <- dparetoII(exp(x), loc = 0, shape = exp(coef(fit.pareto)[2]), 
-                        scale = exp(coef(fit.pareto)[1])) * exp(x)
-lines(x, fpareto_ex, col = "purple")
-# Lognormal
-fit.LN <- vglm(Claim ~ 1, family = lognormal, data = claim_data)
-flnorm_ex <- dlnorm(exp(x), mean = coef(fit.LN)[1],
-                    sd = exp(coef(fit.LN)[2])) * exp(x)
-lines(x, flnorm_ex, col = "lightblue")
-# Density for GB II
-gb2_density <- function (x) {
-  a_1 <- gb2_bop$par[1]
-  a_2 <- gb2_bop$par[2]
-  mu <- gb2_bop$par[3]
-  sigma <- gb2_bop$par[4]
-  xt <- (log(x) - mu) / sigma
-  logexpxt <- ifelse (xt > 23, yt, log(1 + exp(xt)))
-  logdens <- a_1 * xt - log(sigma) - log(beta(a_1, a_2)) - 
-    (a_1+a_2) * logexpxt -log(x) 
-  exp(logdens)
-  }
-fGB2_ex = gb2_density(exp(x)) * exp(x)
-lines(x, fGB2_ex, col="green")
-legend("topleft", c("log(Expend)", "Exponential", "Gamma", "Pareto", 
-                    "Lognormal", "GB2"), cex=0.8,
-       lty = c(4,2,3,1,1,1), #4 is "longdash"
-       col = c("black","red","blue","purple","lightblue","green"))
+#gb2_bop <- optim(c(1, 1, 0, 1), lik_gb2, method = c("L-BFGS-B"), 
+#                 lower = c(0.01, 0.01, -500, 0.01), 
+#                 upper = c(500, 500, 500, 500), hessian = TRUE)
+# #Nonparametric Plot
+#plot(density(log(claim_data$Claim)), main = "", xlab = "Log Expenditures",
+#     ylim = c(0 ,0.37))
+#x <- seq(0, 15, by = 0.01)
+# #Exponential
+#fit.exp <- vglm(Claim ~ 1, exponential, data = claim_data)
+#theta = 1 / exp(coef(fit.exp))
+#fexp_ex <- dgamma(exp(x), scale = exp(-coef(fit.exp)), shape = 1) * exp(x)
+#lines(x, fexp_ex, col = "red", lty =2)
+# #Inference assuming a gamma distribution
+#fit.gamma <- vglm(Claim ~ 1, family = gamma2, data = claim_data)
+#theta <- exp(coef(fit.gamma)[1]) / exp(coef(fit.gamma)[2])  # theta = mu / alpha
+#alpha <- exp(coef(fit.gamma)[2]) 
+#fgamma_ex <- dgamma(exp(x), shape = alpha, scale = theta) * exp(x)
+#lines(x, fgamma_ex, col = "blue", lty =3)
+# #Pareto
+#fit.pareto <- vglm(Claim ~ 1, paretoII, loc = 0, data = claim_data)
+#fpareto_ex <- dparetoII(exp(x), loc = 0, shape = exp(coef(fit.pareto)[2]), 
+#                        scale = exp(coef(fit.pareto)[1])) * exp(x)
+#lines(x, fpareto_ex, col = "purple")
+# #Lognormal
+#fit.LN <- vglm(Claim ~ 1, family = lognormal, data = claim_data)
+#flnorm_ex <- dlnorm(exp(x), mean = coef(fit.LN)[1],
+#                    sd = exp(coef(fit.LN)[2])) * exp(x)
+#lines(x, flnorm_ex, col = "lightblue")
+# #Density for GB II
+#gb2_density <- function (x) {
+#  a_1 <- gb2_bop$par[1]
+#  a_2 <- gb2_bop$par[2]
+#  mu <- gb2_bop$par[3]
+#  sigma <- gb2_bop$par[4]
+#  xt <- (log(x) - mu) / sigma
+#  logexpxt <- ifelse (xt > 23, yt, log(1 + exp(xt)))
+#  logdens <- a_1 * xt - log(sigma) - log(beta(a_1, a_2)) - 
+#    (a_1+a_2) * logexpxt -log(x) 
+#  exp(logdens)
+#  }
+#fGB2_ex = gb2_density(exp(x)) * exp(x)
+#lines(x, fGB2_ex, col="green")
+#legend("topleft", c("log(Expend)", "Exponential", "Gamma", "Pareto", 
+#                    "Lognormal", "GB2"), cex=0.8,
+#       lty = c(4,2,3,1,1,1), #4 is "longdash"
+#       col = c("black","red","blue","purple","lightblue","green"))
 ```
+
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap35.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 ### Maximum Likehood Estimators using Modified Data
 
