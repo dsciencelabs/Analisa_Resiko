@@ -274,7 +274,6 @@ measures-of-association
 tail-dependency
 why-is-dependence-modeling-important
 further-resources-and-contributors-1
-referensi
 appendix-a-review-of-statistical-inference
 konsep-dasar
 sampel-acak
@@ -337,3 +336,9 @@ appendix-e-conventions-for-notation
 other-frequency-distributions
 actuarial-exam-question-1
 qualitative-variables
+kerugian-klaim-dan-pembayaran
+membandingkan-metode-premi-murni-dan-rasio-kerugian
+selecting-a-premium
+kurva-lorenz-klasik
+performance-curve-and-a-gini-statistic
+validasi-di-luar-sampel

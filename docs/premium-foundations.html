@@ -258,6 +258,14 @@
 <li class="chapter" data-level="7.5" data-path="premium-foundations.html"><a href="premium-foundations.html#development-and-trending"><i class="fa fa-check"></i><b>7.5</b> Development and Trending</a>
 <ul>
 <li class="chapter" data-level="7.5.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-dan-premi"><i class="fa fa-check"></i><b>7.5.1</b> Paparan dan Premi</a></li>
+<li class="chapter" data-level="7.5.2" data-path="premium-foundations.html"><a href="premium-foundations.html#kerugian-klaim-dan-pembayaran"><i class="fa fa-check"></i><b>7.5.2</b> Kerugian, Klaim, dan Pembayaran</a></li>
+<li class="chapter" data-level="7.5.3" data-path="premium-foundations.html"><a href="premium-foundations.html#membandingkan-metode-premi-murni-dan-rasio-kerugian"><i class="fa fa-check"></i><b>7.5.3</b> Membandingkan Metode Premi Murni dan Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="premium-foundations.html"><a href="premium-foundations.html#selecting-a-premium"><i class="fa fa-check"></i><b>7.6</b> Selecting a Premium</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="premium-foundations.html"><a href="premium-foundations.html#kurva-lorenz-klasik"><i class="fa fa-check"></i><b>7.6.1</b> Kurva Lorenz Klasik</a></li>
+<li class="chapter" data-level="7.6.2" data-path="premium-foundations.html"><a href="premium-foundations.html#performance-curve-and-a-gini-statistic"><i class="fa fa-check"></i><b>7.6.2</b> Performance Curve and a Gini Statistic</a></li>
+<li class="chapter" data-level="7.6.3" data-path="premium-foundations.html"><a href="premium-foundations.html#validasi-di-luar-sampel"><i class="fa fa-check"></i><b>7.6.3</b> Validasi di Luar Sampel</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a>
@@ -779,13 +787,238 @@ Dengan basis data terperinci ini, dalam prinsipnya mudah untuk menjumlahkan deta
 <div id="paparan-dan-premi" class="section level3 hasAnchor" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> Paparan dan Premi<a href="premium-foundations.html#paparan-dan-premi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Periode pelaporan keuangan adalah jangka waktu yang tetap dalam kalender; kami menggunakan 1 Januari hingga 31 Desember untuk contoh dalam buku ini meskipun periode pelaporan lain juga umum. Periode pelaporan adalah tetap tetapi kebijakan dapat dimulai kapan saja selama setahun. Meskipun semua kebijakan memiliki durasi kontrak yang sama selama satu tahun (misalnya), karena waktu mulai yang berbeda, kebijakan dapat berakhir kapan saja selama pelaporan keuangan. Gambar 7.1 menunjukkan empat kebijakan yang menggambarkan. Perlu adanya standar mengenai jenis-jenis ukuran yang paling berguna untuk merangkum pengalaman dalam periode pelaporan tertentu karena perbedaan waktu mulai dan berakhir ini.</p>
-<p>(gambar 7.5-1)</p>
+<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
 <p>Beberapa ukuran paparan yang umum digunakan adalah:
 - Paparan tertulis, jumlah paparan pada kebijakan yang diterbitkan (ditulis) selama periode yang dimaksud,
 - Paparan diperoleh, unit paparan yang benar-benar terpapar risiko selama periode tersebut, yaitu, di mana perlindungan telah diberikan
 - Paparan belum diperoleh, mewakili bagian dari paparan tertulis di mana perlindungan belum diberikan sampai saat itu, dan
 - Paparan dalam kekuatan, unit paparan yang terpapar risiko pada titik waktu tertentu.</p>
 <p>Tabel di bawah memberikan perhitungan terperinci untuk empat kebijakan ilustratif:</p>
+<p><span class="math display">\[\small{
+\begin{matrix}
+\begin{array}{cl|cc|cc|cc|c}
+  \hline
+&amp;  &amp; &amp; &amp; &amp; &amp; &amp;&amp;\text{In-Force} \\
+&amp;\text{Effective} &amp; \text{Written}&amp; \text{Exposure} &amp; \text{Earned} &amp;\text{Exposure}&amp; \text{Unearned} &amp;\text{Exposure}&amp;  \text{Exposure} \\
+{Policy} &amp;\text{Date}         &amp; 1/1/2019 &amp; 1/1/2020 &amp; 1/1/2019 &amp; 1/1/2020 &amp; 1/1/2019 &amp; 1/1/2020 &amp; 1/1/2020 \\   \hline
+\text{A}&amp;\text{1 Jan 2019}   &amp; 1.00 &amp; 0.00 &amp; 1.00 &amp; 0.00&amp; 0.00 &amp; 0.00 &amp; 0.00 \\
+\text{B}&amp;\text{1 April 2019} &amp; 1.00 &amp; 0.00 &amp; 0.75 &amp; 0.25 &amp; 0.25 &amp; 0.00&amp; 1.00 \\
+\text{C}&amp;\text{1 July 2019}  &amp; 1.00 &amp; 0.00 &amp; 0.50 &amp; 0.50 &amp; 0.50 &amp; 0.00&amp; 1.00 \\
+\text{D}&amp;\text{1 Oct 2019}   &amp; 1.00 &amp; 0.00 &amp; 0.25 &amp; 0.75 &amp; 0.75 &amp; 0.00&amp; 1.00 \\ \hline
+&amp;  Total       &amp; 4.00 &amp; 0.00 &amp; 2.50 &amp; 1.50 &amp; 1.50 &amp; 0.00 &amp; 3.00 \\
+  \hline
+  \hline
+\end{array}
+\end{matrix}
+}\]</span></p>
+<p>Penggabungan ini kadang-kadang dikenal sebagai metode penggabungan tahun kalender sebagai perbandingan dengan metode tahun kebijakan. Dalam metode tahun kebijakan, semua premi dan kerugian untuk kebijakan yang ditulis dalam tahun kebijakan digabungkan tanpa memperhatikan kapan diperoleh. Misalnya, untuk keempat kebijakan A, B, C, dan D, mereka memiliki paparan tertulis dan diperoleh sebesar 1,00 untuk tahun kebijakan 2019 (dimulai pada 1/1 atau 1 Januari). Hal ini terjadi meskipun kebijakan tersebut tidak dimulai pada awal tahun. Metode ini berguna untuk metode penentuan tarif berdasarkan kontrak individu dan kami tidak melanjutkannya lebih lanjut di sini.</p>
+<p>Dalam hal yang sama dengan paparan, kita juga dapat merangkum premi. Premi, seperti paparan, dapat berupa tertulis, diperoleh, belum diperoleh, atau dalam kekuatan. Pertimbangkan contoh berikut.</p>
+<p><strong>Contoh 7.5.1.</strong> CAS Ujian 5, 2003, Nomor 10. Sebuah kebijakan selama 12 bulan ditulis pada tanggal 1 Maret 2002 dengan premi sebesar $900. Pada tanggal 31 Desember 2002, yang mana dari berikut ini benar?</p>
+<p><span class="math display">\[\small{
+\begin{matrix}
+\begin{array}{l|ccc}
+  \hline
+&amp; \text{Calendar Year} &amp; \text{Calendar Year} \\
+&amp; \text{2002 Written} &amp; \text{2002 Earned} &amp; \text{Inforce} \\
+&amp; \text{Premium} &amp; \text{Premium}  &amp; \text{Premium}  \\\hline
+A. &amp; 900 &amp; 900 &amp; 900 \\
+B. &amp; 750 &amp; 750 &amp; 900 \\
+C. &amp; 900 &amp; 750 &amp; 750 \\
+D. &amp; 750 &amp; 750 &amp; 750 \\
+E. &amp; 900 &amp; 750 &amp; 900 \\\hline
+\end{array}
+\end{matrix}
+}\]</span></p>
+<p><strong>Solusi.</strong></p>
+<p>Hanya premi yang diperoleh yang berbeda dari premi tertulis dan premi dalam kekuatan, dan oleh karena itu perlu dihitung. Dengan demikian, premi yang diperoleh pada tanggal 31 Desember 2002, adalah $900 × 10/12 = $750. Jawabannya adalah E.</p>
+</div>
+<div id="kerugian-klaim-dan-pembayaran" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Kerugian, Klaim, dan Pembayaran<a href="premium-foundations.html#kerugian-klaim-dan-pembayaran" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Secara umum, istilah kerugian dan klaim merujuk pada jumlah kompensasi yang dibayarkan atau berpotensi dibayarkan kepada pemohon klaim sesuai dengan ketentuan polis asuransi. Definisi dapat bervariasi, kadang-kadang, istilah klaim digunakan secara bergantian dengan istilah kerugian.</p>
+<p>Dalam beberapa sumber asuransi dan aktuaria, istilah kerugian digunakan untuk jumlah kerusakan yang terjadi dalam kejadian yang diasuransikan. Klaim adalah jumlah yang dibayarkan oleh perusahaan asuransi dengan perbedaan yang biasanya disebabkan oleh deduktibel, batas maksimum polis, dan sejenisnya.</p>
+<p>Dalam ekonomi, klaim adalah permintaan pembayaran oleh tertanggung atau pihak ketiga yang terluka sesuai dengan syarat dan ketentuan kontrak asuransi, dan kerugian adalah jumlah yang dibayarkan oleh perusahaan asuransi.</p>
+<p>Teks ini akan mengikuti poin kedua. Namun, ketika membaca sumber lain, Anda perlu berhati-hati dalam memahami definisi untuk istilah kerugian dan klaim.</p>
+<p>Untuk menggambarkan terminologi tambahan, sangat membantu untuk mengikuti kronologi klaim saat berkembang. Pada Gambar 7.2, klaim terjadi pada waktu t1 dan perusahaan asuransi diberitahu pada waktu t3. Ada celah yang panjang antara kejadian dan pemberitahuan sehingga akhir periode pelaporan keuangan perusahaan, yang dikenal sebagai tanggal penilaian, terjadi (t2) sebelum kerugian dilaporkan. Dalam kasus ini, klaim dikatakan terjadi tetapi belum dilaporkan pada tanggal penilaian ini.</p>
+<p>Setelah pemberitahuan klaim, mungkin ada satu atau lebih pembayaran kerugian. Tidak semua pembayaran dapat dilakukan sebelum tanggal penilaian berikutnya (t4). Saat klaim berkembang, akhirnya perusahaan menganggap kewajiban keuangannya terhadap klaim telah selesai dan menyatakan klaim ditutup. Namun, mungkin muncul fakta baru dan klaim harus dibuka kembali, yang menghasilkan pembayaran kerugian tambahan sebelum ditutup kembali.</p>
+<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.5.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<ul>
+<li>Tanggal kecelakaan - tanggal kejadian yang menyebabkan klaim. Ini juga dikenal sebagai tanggal kerugian atau tanggal kejadian.</li>
+<li>Tanggal laporan - tanggal dimana perusahaan asuransi menerima pemberitahuan tentang klaim. Klaim yang saat ini tidak diketahui oleh perusahaan asuransi disebut sebagai klaim yang tidak dilaporkan atau klaim yang terjadi tetapi belum dilaporkan (IBNR).</li>
+</ul>
+<p>Hingga klaim diselesaikan, klaim yang dilaporkan dianggap sebagai klaim yang terbuka. Setelah klaim diselesaikan, klaim dikategorikan sebagai klaim yang ditutup. Dalam beberapa kasus, kegiatan lebih lanjut mungkin terjadi setelah klaim ditutup, dan klaim dapat dibuka kembali.</p>
+<p>Ingatlah bahwa klaim adalah jumlah yang dibayarkan atau harus dibayarkan kepada pemohon klaim sesuai dengan ketentuan polis asuransi. Selain itu, kita memiliki:</p>
+<ul>
+<li>Kerugian yang dibayarkan adalah kerugian dalam suatu periode tertentu yang telah benar-benar dibayarkan kepada pemohon klaim.</li>
+<li>Jika ada harapan pembayaran di masa depan, klaim akan memiliki cadangan kas yang terkait yang mewakili jumlah perkiraan pembayaran tersebut.</li>
+<li>Kerugian yang dilaporkan, juga dikenal sebagai kas yang terjadi, adalah Kerugian yang Dibayarkan + Cadangan Kas.</li>
+<li>Kerugian akhir adalah jumlah uang yang diperlukan untuk menyelesaikan semua klaim untuk kelompok kebijakan yang ditentukan.</li>
+</ul>
+</div>
+<div id="membandingkan-metode-premi-murni-dan-rasio-kerugian" class="section level3 hasAnchor" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Membandingkan Metode Premi Murni dan Rasio Kerugian<a href="premium-foundations.html#membandingkan-metode-premi-murni-dan-rasio-kerugian" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sekarang setelah kita telah mempelajari bagaimana eksposur, premi, dan klaim berkembang seiring waktu, kita dapat mempertimbangkan bagaimana mereka dapat digunakan untuk penetapan tarif. Kita telah melihat bahwa perusahaan asuransi menawarkan banyak jenis polis yang mencakup pemegang polis dan jumlah risiko yang berbeda. Agregasi ini terkadang secara longgar disebut sebagai campuran bisnis. Yang penting, campuran ini berubah seiring waktu dengan masuk dan keluarnya pemegang polis, perubahan jumlah risiko, dan sebagainya. Eksposur, premi, dan jenis risiko dari laporan keuangan sebelumnya mungkin tidak mewakili periode di mana tarif sedang dikembangkan. Proses ekstrapolasi eksposur, premi, dan jenis risiko dikenal sebagai tren. Sebagai contoh, premi terkumpul dengan tingkat yang sama adalah premi terkumpul yang akan dihasilkan untuk periode pengalaman jika tarif saat ini berlaku selama seluruh periode tersebut; ini juga dikenal sebagai premi terkumpul dengan tingkat saat ini. Sebagian besar metode tren yang digunakan dalam praktik matematika cukup sederhana meskipun dapat menjadi rumit dengan kompleksitas kontrak dan administrasi. Kami mengacu pembaca ke referensi standar yang menggambarkan pendekatan secara detail seperti Werner dan Modlin (2016) dan Friedland (2013).</p>
+<p><strong>Metode Rasio Kerugian</strong></p>
+<p>Ekspresi untuk metode rasio kerugian menunjukkan faktor perubahan dalam persamaan (7.3) mengasumsikan sejumlah konsistensi dalam pengalaman portofolio dari waktu ke waktu. Untuk pendekatan lain, kita dapat mendefinisikan rasio kerugian pengalaman sebagai:</p>
+<p><span class="math display">\[\small{
+LR_{experience} = \frac{\text{experience losses}}{\text{experience period earned exposure}\times \text{current rate}}  .
+}\]</span></p>
+<p>Di sini, kita mempertimbangkan eksposur yang diperoleh selama periode pengalaman × tingkat saat ini sebagai premi pengalaman.</p>
+<p>Dengan menggunakan persamaan (7.2), kita dapat menulis rasio kerugian sebagai:</p>
+<p><span class="math display">\[\small{
+LR = \frac{\text{Losses}}{\text{Premium}}=\frac{1-V-Q}{\text{(Losses + Fixed)}/\text{Losses}}=\frac{1-V-Q}{1+G} ~,
+}\]</span></p>
+<p>di mana G = Tetap/Kerugian, rasio biaya tetap terhadap kerugian. Dengan ungkapan ini, kita dapat mendefinisikan rasio kerugian target sebagai:</p>
+<p><span class="math display">\[\small{
+LR_{target} =
+\frac{1-V-Q}{1+G} = \frac{1-\text{premium related expense factor - profit and contingencies factor}}
+{1+\text{ratio of non-premium related expenses to losses}}  .
+}\]</span></p>
+<p><span class="math display">\[
+\begin{equation}
+\small{
+ICF =\frac{LR_{experience}}{LR_{target}}.
+}
+\tag{7.4}
+\end{equation}
+\]</span></p>
+<p>Bandingkan persamaan (7.3) dengan (7.4), kita dapat melihat bahwa yang terakhir menawarkan fleksibilitas lebih untuk secara eksplisit menggabungkan pengalaman yang telah ditren. Karena metode rasio kerugian didasarkan pada perubahan tarif, fleksibilitas ini tentu saja dibenarkan.</p>
+<p><strong>Perbandingan Metode</strong></p>
+<p>Dengan asumsi bahwa exposures, premiums, dan claims telah ditren agar mewakili periode di mana tarif sedang dikembangkan, kita sekarang dapat membandingkan metode pure premium dan loss ratio untuk ratemaking. Kita mulai dengan pengamatan bahwa untuk data input yang sama, kedua pendekatan ini menghasilkan hasil yang sama. Artinya, mereka secara aljabar setara. Namun, mereka mengandalkan input yang berbeda:</p>
+<p><span class="math display">\[\small{
+\begin{array}{l|l}\hline
+\text{Pure Premium Method} &amp; \text{Loss Ratio Method} \\ \hline
+\text{Based on exposures} &amp; \text{Based on premiums} \\
+\text{Does not require existing rates} &amp; \text{Requires existing rates} \\
+\text{Does not use on-level premiums} &amp; \text{Uses on-level premiums} \\
+\text{Produces indicated rates} &amp; \text{Produces indicated rate changes} \\
+  \hline
+\end{array}
+}\]</span></p>
+<p>Dalam membandingkan metode pure premium dan loss ratio, kita perhatikan bahwa:</p>
+<ul>
+<li>Metode pure premium membutuhkan exposures yang terdefinisi dengan baik dan responsif.</li>
+<li>Metode loss ratio tidak dapat digunakan untuk bisnis baru karena menghasilkan perubahan tarif yang diindikasikan.</li>
+<li>Metode pure premium lebih disukai ketika menghitung on-level premium sulit dilakukan. Dalam beberapa kasus, seperti pada lini bisnis komersial di mana penyesuaian penilaian risiko individu dilakukan pada kebijakan individu, sulit untuk menentukan on-level earned premium yang diperlukan untuk metode loss ratio.</li>
+</ul>
+<p>Di banyak negara maju seperti Amerika Serikat di mana lini bisnis telah ada, pendekatan loss ratio lebih populer.</p>
+<p><strong>Contoh 7.5.2. CAS Exam 5</strong>, 2006, Number 36. Anda diberikan informasi berikut:</p>
+<ul>
+<li>On-level earned premium pada periode pengalaman = $500.000</li>
+<li>Losses yang ditren dan dikembangkan pada periode pengalaman = $300.000</li>
+<li>Exposure yang diperoleh pada periode pengalaman = 10.000</li>
+<li>Faktor biaya yang terkait dengan premi = 23%</li>
+<li>Biaya yang tidak terkait dengan premi = $21.000</li>
+<li>Faktor keuntungan dan kontingensi = 5%</li>
+</ul>
+<ol style="list-style-type: lower-alpha">
+<li>Hitung perubahan tingkat tarif yang diindikasikan menggunakan metode loss ratio.</li>
+<li>Hitung perubahan tingkat tarif yang diindikasikan menggunakan metode pure premium.</li>
+<li>Jelaskan satu situasi di mana lebih disukai menggunakan metode loss ratio, dan satu situasi di mana lebih disukai menggunakan metode pure premium.</li>
+</ol>
+<p><strong>Solusi</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Kita akan menghitung rasio loss pengalaman dan rasio loss target, kemudian mengambil rasio tersebut untuk mendapatkan perubahan tingkat tarif yang diindikasikan. Rasio loss pengalaman adalah</li>
+</ol>
+<p><span class="math display">\[\small{
+LR_{experience} =  \frac{\text{experience losses}}{\text{experience period premium}} =\frac{300000}{500000} = 0.60.
+}\]</span></p>
+<p>Rasio loss target adalah:</p>
+<p><span class="math display">\[\small{
+\begin{matrix}
+\begin{array}{ll}
+LR_{target}
+&amp;= \frac{1-V-Q}{1+G} = \frac{1-\text{premium related expense factor - profit and contingencies factor}}
+{1+\text{ratio of non-premium related expenses to losses}}\\
+&amp;= \frac{1-0.23 - 0.05}{1+0.07} = 0.673  .
+\end{array}
+\end{matrix}
+}\]</span></p>
+<p>Di sini, rasio biaya yang tidak terkait dengan premi terhadap losses adalah <span class="math inline">\(G = \frac{21000}{300000} = 0.07\)</span></p>
+<p>Dengan demikian, perubahan tingkat tarif yang diindikasikan (baru) adalah</p>
+<p><span class="math display">\[\small{
+ICF =\frac{LR_{experience}}{LR_{target}} -1  = \frac{0.60}{0.673} -1 = -10.8\%.
+}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Dengan menggunakan metode premi murni dengan persamaan (7.2),</li>
+</ol>
+<p><span class="math display">\[\small{
+\begin{matrix}
+\begin{array}{ll}
+Premium_{experience}
+&amp;= \frac{\text{Losses + Fixed}}{1 - Q - V}\\
+&amp;= \frac{300000+ 21000}{1 - 0.23 - 0.05} = 445833.33 .
+\end{array}
+\end{matrix}
+}\]</span></p>
+<p>Dengan demikian, perubahan tingkat tarif yang diindikasikan adalah <span class="math inline">\(\frac{445833.33}{500000} -1 = -10.8\%\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<ul>
+<li>Metode rasio loss lebih disukai ketika unit paparan tidak tersedia.</li>
+<li>Metode rasio loss lebih disukai ketika unit paparan tidak konsisten secara wajar antara risiko-risiko.</li>
+<li>Metode premi murni lebih disukai untuk produk baru.</li>
+<li>Metode premi murni lebih disukai ketika premi tingkat yang tepat sulit untuk dihitung.</li>
+</ul>
+</div>
+</div>
+<div id="selecting-a-premium" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Selecting a Premium<a href="premium-foundations.html#selecting-a-premium" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bagi sebuah portofolio kontrak asuransi, perusahaan asuransi mengumpulkan premi dan membayar kerugian. Setelah melakukan penyesuaian untuk biaya dan pertimbangan keuntungan, alat untuk membandingkan distribusi premi dan kerugian dapat membantu dalam memilih prinsip perhitungan premi.</p>
+<div id="kurva-lorenz-klasik" class="section level3 hasAnchor" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Kurva Lorenz Klasik<a href="premium-foundations.html#kurva-lorenz-klasik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam ekonomi kesejahteraan, umumnya digunakan untuk membandingkan distribusi melalui kurva Lorenz, yang dikembangkan oleh Max Otto Lorenz (Lorenz 1905). Kurva Lorenz adalah grafik proporsi populasi pada sumbu horizontal dan fungsi distribusi yang diminati pada sumbu vertikal. Biasanya digunakan untuk mewakili distribusi pendapatan. Ketika distribusi pendapatan sepenuhnya sejalan dengan distribusi populasi, kurva Lorenz menghasilkan garis 45 derajat yang dikenal sebagai garis kesetaraan. Karena grafik membandingkan dua fungsi distribusi, kurva Lorenz juga dapat dianggap sebagai jenis plot pp yang diperkenalkan dalam Bagian 4.1.2.1. Luas antara kurva Lorenz dan garis kesetaraan adalah ukuran ketidaksesuaian antara distribusi pendapatan dan distribusi populasi. Dua kali lipat dari luas ini dikenal sebagai indeks Gini, yang diperkenalkan oleh Corrado Gini pada tahun 1912.</p>
+<p>Contoh - Kurva Lorenz Klasik. Untuk contoh asuransi, Gambar 7.3 menunjukkan distribusi kerugian asuransi. Gambar ini didasarkan pada sampel acak 2000 kerugian. Panel sebelah kiri menunjukkan histogram yang condong ke kanan dari kerugian. Panel sebelah kanan menunjukkan kurva Lorenz yang sesuai, yang juga menunjukkan distribusi yang condong. Misalnya, panah menandai titik di mana 60 persen pemegang polis memiliki 30 persen kerugian. Garis 45 derajat adalah garis kesetaraan; jika setiap pemegang polis memiliki kerugian yang sama, maka distribusi kerugian akan berada pada garis ini. Indeks Gini, dua kali lipat dari luas antara kurva Lorenz dan garis 45 derajat, adalah 37,6 persen untuk kumpulan data ini.</p>
+<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.1-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+</div>
+<div id="performance-curve-and-a-gini-statistic" class="section level3 hasAnchor" number="7.6.2">
+<h3><span class="header-section-number">7.6.2</span> Performance Curve and a Gini Statistic<a href="premium-foundations.html#performance-curve-and-a-gini-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kami sekarang memperkenalkan modifikasi dari kurva Lorenz klasik dan statistik Gini yang berguna dalam aplikasi asuransi. Secara khusus, kami memperkenalkan kurva kinerja yang, dalam kasus ini, adalah grafik distribusi kerugian versus premi, di mana baik kerugian maupun premi diurutkan berdasarkan premi. Untuk membuat ide-ide ini lebih konkret, kami memberikan beberapa notasi dan mempertimbangkan kebijakan <span class="math inline">\(i=1,…,n\)</span>.</p>
+<p>Untuk kebijakan ke-i, maka:</p>
+<ul>
+<li><span class="math inline">\(y_i\)</span> menunjukkan kerugian asuransi,</li>
+<li><span class="math inline">\(x_i\)</span> menjadi kumpulan variabel penilaian yang diketahui oleh analis, dan</li>
+<li><span class="math inline">\(P_i=P(x_i)\)</span> menjadi premi terkait yang merupakan fungsi dari <span class="math inline">\(x_i\)</span></li>
+</ul>
+<p>Kumpulan informasi yang digunakan untuk menghitung kurva kinerja untuk kebijakan ke-<span class="math inline">\(i\)</span> adalah <span class="math inline">\((P_i,y_i)\)</span>.</p>
+<p><strong>Kurva Kinerja</strong></p>
+<p>Praktisnya, kita pertama-tama mengurutkan kumpulan kebijakan berdasarkan premi (dari yang terkecil hingga yang terbesar) dan kemudian menghitung distribusi premi dan kerugian. Distribusi premi adalah:</p>
+<p><span class="math display">\[\begin{equation}
+\hat{F}_P(s) =  \frac{ \sum_{i=1}^n P_i ~\mathrm{I}(P_i \leq s) }{\sum_{i=1}^n P_i}   ,
+\tag{7.5}
+\end{equation}\]</span></p>
+<p>dan distribusi kerugian adalah</p>
+<p><span class="math display">\[\begin{equation}
+\hat{F}_{L}(s) =  \frac{ \sum_{i=1}^n y_i ~\mathrm{I}(P_i \leq s) }{\sum_{i=1}^n y_i} ,
+\tag{7.6}
+\end{equation}\]</span></p>
+<p>di mana <span class="math inline">\(I(⋅\)</span>) adalah fungsi indikator, menghasilkan 1 jika peristiwa benar dan nol sebaliknya. Untuk nilai tertentu <span class="math inline">\(s\)</span>, <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi premi kurang dari atau sama dengan <span class="math inline">\(s\)</span>, dan <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi kerugian bagi pemegang kebijakan dengan premi kurang dari atau sama dengan <span class="math inline">\(s\)</span> . Grafik <span class="math inline">\(\left(\hat{F}_P(s),\hat{F}_{L}(s) \right)\)</span> dikenal sebagai kurva kinerja.</p>
+<p><img src = "https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/contributors/7.6.2-1.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" /></p>
+<p>`Gambar di atas membandingkan Kurva Lorenz dengan kurva kinerja. Panel sebelah kiri menunjukkan kurva Lorenz. Sumbu horizontal adalah proporsi kumulatif pemegang kebijakan (0, 0,2, 0,4, 0,6, 0,8, 1,0) dan sumbu vertikal adalah proporsi kumulatif kerugian (0, 2/36, 7/36, 13/36, 19/39, 36/36). Untuk kurva Lorenz, Anda pertama-tama mengurutkan berdasarkan ukuran kerugian (yang ternyata sama urutannya dengan premi untuk dataset sederhana ini). Gambar ini menunjukkan pemisahan besar antara distribusi kerugian dan pemegang kebijakan.</p>
+<pre><code>Panel sebelah kanan menunjukkan kurva kinerja. Karena pengamatan diurutkan berdasarkan premi, titik pertama setelah titik asal (dibaca dari kiri ke kanan) adalah (2/34, 2/36). Titik kedua adalah (6/34, 7/36), dengan pola berlanjut. Dari gambar, kita melihat bahwa ada sedikit pemisahan antara kerugian dan premi.</code></pre>
+<p>Kurva kinerja dapat membantu analis dalam merancang portofolio yang menguntungkan bagi perusahaan asuransi. Sebagai contoh, anggaplah bahwa s dipilih untuk mewakili persentil ke-95 dari distribusi premi. Maka, sumbu horizontal, F^P(s), mewakili fraksi premi untuk portofolio ini dan sumbu vertikal, F^L(s), mewakili fraksi kerugian untuk portofolio ini. Ketika mengembangkan prinsip premi, para analis ingin menghindari situasi yang tidak menguntungkan dan mencapai keuntungan, atau setidaknya impas.</p>
+<pre><code>Denominator dalam persamaan (7.6) adalah $\sum_{i=1}^n \mathrm{E}~ [y_i]=\sum_{i=1}^n \mu_i$</code></pre>
+<p>Dengan demikian, jika prinsip premi dipilih sedemikian rupa sehingga Pi=μi, maka kita dapat mengantisipasi hubungan yang erat antara distribusi premi dan kerugian, menghasilkan garis 45 derajat. Garis 45 derajat menunjukkan kesetaraan antara kerugian dan premi, situasi impas yang menjadi tolak ukur dalam penetapan harga asuransi.</p>
+<p><strong>Gini Statistic</strong></p>
+<p>Kurva Lorenz klasik menunjukkan proporsi pemegang kebijakan pada sumbu horizontal dan fungsi distribusi kerugian pada sumbu vertikal. Kurva kinerja meluaskan kurva Lorenz klasik dalam dua cara, (1) melalui pengurutan risiko dan harga berdasarkan harga dan (2) dengan memperbolehkan variasi harga berdasarkan pengamatan. Kami menyimpulkan kurva kinerja dengan cara yang sama seperti kurva Lorenz klasik menggunakan statistik Gini, yang didefinisikan sebagai dua kali luas antara kurva dan garis 45 derajat. Analis mencari kurva kinerja yang diurutkan yang mendekati melalui garis 45 derajat; ini memiliki pemisahan yang paling sedikit antara distribusi kerugian dan premi dan oleh karena itu memiliki statistik Gini yang kecil.</p>
+<p>Secara khusus, statistik Gini dapat dihitung sebagai berikut. Anggaplah bahwa kurva kinerja empiris diberikan oleh <span class="math inline">\({(a0=0,b0=0),(a1,b1),…, (an=1,bn=1)}\)</span> untuk sampel <span class="math inline">\(n\)</span> pengamatan. Di sini, kita menggunakan <span class="math inline">\(b_j = \hat{F}_{L}(P_j)\)</span>. Maka, statistik Gini empiris adalah:</p>
+<p><span class="math display">\[\begin{eqnarray}
+\widehat{Gini}
+&amp;=&amp;  2\sum_{j=0}^{n-1} (a_{j+1} - a_j) \left \{
+\frac{a_{j+1}+a_j}{2} - \frac{b_{j+1}+b_j}{2} \right\} \nonumber \\
+&amp;=&amp; 1 - \sum_{j=0}^{n-1} (a_{j+1} - a_j) (b_{j+1}+b_j) .
+\tag{7.7}
+\end{eqnarray}\]</span></p>
+</div>
+<div id="validasi-di-luar-sampel" class="section level3 hasAnchor" number="7.6.3">
+<h3><span class="header-section-number">7.6.3</span> Validasi di Luar Sampel<a href="premium-foundations.html#validasi-di-luar-sampel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Manfaat validasi di luar sampel untuk pemilihan model telah diperkenalkan di Bagian 4.2. Sekarang kami akan menunjukkan penggunaan statistik Gini dan kurva kinerja dalam konteks ini. Prosedurnya adalah sebagai berikut:</p>
+<ul>
+<li>Gunakan kumpulan data di dalam sampel untuk memperkirakan beberapa model bersaing, masing-masing menghasilkan fungsi premi.</li>
+<li>Tentukan kumpulan data di luar sampel, atau validasi, dalam bentuk {(xi,yi),i=1,…,n}</li>
+<li>Gunakan variabel penjelas dari sampel validasi untuk membentuk premi dalam bentuk P(xi)</li>
+<li>Hitung statistik Gini untuk setiap model. Pilih model dengan statistik Gini terendah.</li>
+</ul>
 
 </div>
 </div>

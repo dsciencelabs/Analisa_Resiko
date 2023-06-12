@@ -435,8 +435,6 @@ Pemecahan untuk setiap ekspresi kurung memberi $\frac{2}{3}=(89.2/\theta)^{\hat{
 
 Seperti metode momen, pencocokan persentil hampir terlalu fleksibel dalam arti bahwa estimator dapat bervariasi tergantung pada persentil berbeda yang dipilih. Misalnya, seorang aktuaris dapat menggunakan estimasi pada persentil ke-25 dan ke-95 sedangkan yang lain menggunakan persentil ke-20 dan ke-80. Secara umum estimasi parameter akan berbeda dan tidak ada alasan kuat untuk memilih salah satu dari yang lain. Seperti halnya metode momen, pencocokan persentil menarik karena memberikan teknik yang dapat diterapkan dengan mudah dalam situasi tertentu dan memiliki dasar intuitif. Meskipun sebagian besar aplikasi aktuaria menggunakan estimator kemungkinan maksimum, akan lebih mudah untuk memiliki pendekatan alternatif seperti metode momen dan pencocokan persentil yang tersedia.
 
-<<<<<<< HEAD
-=======
 ## Model Selection
 
 Menjelaskan proses pemilihan model berdasarkan:
