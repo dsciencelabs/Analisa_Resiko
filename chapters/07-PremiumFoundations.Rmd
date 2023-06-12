@@ -338,8 +338,3 @@ Pengenalan faktor rating memungkinkan analis untuk membuat sel yang mendefinisik
 Dengan kata lain, perusahaan asuransi diizinkan untuk menetapkan tarif yang berbeda untuk risiko yang berbeda; diskriminasi risiko legal dan dilakukan secara rutin. Namun demikian, dasar diskriminasi, pemilihan faktor risiko, adalah subjek dari debat yang luas. Komunitas aktuaria, manajemen asuransi, regulator, dan advokat konsumen semua merupakan peserta aktif dalam debat ini. Lampiran Teknis TS 7.A menjelaskan masalah ini dari sudut pandang regulasi.
 
 Selain kriteria statistik untuk menilai signifikansi faktor rating, analis harus memperhatikan masalah bisnis perusahaan (misalnya, apakah mahal untuk menerapkan faktor rating?), kriteria sosial (apakah variabel berada di bawah kendali pemegang polis?), kriteria hukum (apakah ada regulasi yang melarang penggunaan faktor rating seperti gender?), dan masalah sosial lainnya. Pertanyaan-pertanyaan ini sebagian besar di luar cakupan teks ini. Namun demikian, karena mereka sangat mendasar untuk penetapan harga asuransi, gambaran singkat diberikan di Bab 8, termasuk Lampiran Teknis TS 8.B.
-
-<<<<<<< HEAD
-=======
-
->>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
