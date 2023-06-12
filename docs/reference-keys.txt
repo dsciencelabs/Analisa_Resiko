@@ -202,3 +202,4 @@ hypothesis-testing
 mle-and-model-validation
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+actuarial-exam-question-1

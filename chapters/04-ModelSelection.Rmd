@@ -342,7 +342,7 @@ Metode pencocokan momen dan persentil merupakan metode estimasi nonparametrik ya
 
 #### Metode Momen
 
-Di bawah metode momen , kami mengaproksimasi momen distribusi parametrik menggunakan momen empiris (nonparametrik) yang dijelaskan di Bagian 4.1.1.1 . Kami kemudian dapat memecahkan secara aljabar untuk estimasi parameter.     
+Metode ini merupakan estimasi parameter populasi dengan pendekatan momen parametrik menggunakan momen sampel empiris. pada momen ini, momen distribusi parametrik menggunakan momen empiris atau nonparametrik kemudian dapat dipecahkan secara aljabar untuk estimasi parameter.     
 
 *Contoh 4.1.9. Dana Properti.* Untuk dana properti 2010, ada $n = 1 , 377$ klaim individu (dalam ribuan dolar) dengan
 
@@ -434,3 +434,4 @@ $$0.4=\frac{(89.2/{\hat{\theta}})^{\hat{\gamma}}}{1+(89.2/{\hat{\theta}})^{\hat{
 Pemecahan untuk setiap ekspresi kurung memberi $\frac{2}{3}=(89.2/\theta)^{\hat{\gamma}}$ Dan $4=(206/{\hat{\theta}})^{\hat{\gamma}}$ . Mengambil rasio persamaan kedua dengan yang pertama memberi $6=(206/89.2)^{\hat{\gamma}}\Rightarrow {\hat{\gamma}}=\frac{\log(6)}{\log(206/89.2)} = 2.1407$. Kemudian $4^{1/2.1407}=206/{\hat{\theta}} \Rightarrow {\hat{\theta}}=107.8$.
 
 Seperti metode momen, pencocokan persentil hampir terlalu fleksibel dalam arti bahwa estimator dapat bervariasi tergantung pada persentil berbeda yang dipilih. Misalnya, seorang aktuaris dapat menggunakan estimasi pada persentil ke-25 dan ke-95 sedangkan yang lain menggunakan persentil ke-20 dan ke-80. Secara umum estimasi parameter akan berbeda dan tidak ada alasan kuat untuk memilih salah satu dari yang lain. Seperti halnya metode momen, pencocokan persentil menarik karena memberikan teknik yang dapat diterapkan dengan mudah dalam situasi tertentu dan memiliki dasar intuitif. Meskipun sebagian besar aplikasi aktuaria menggunakan estimator kemungkinan maksimum, akan lebih mudah untuk memiliki pendekatan alternatif seperti metode momen dan pencocokan persentil yang tersedia.
+
