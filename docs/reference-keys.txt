@@ -229,6 +229,50 @@ uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
 appendix-b-iterated-expectations
+<<<<<<< HEAD
+=======
+appendix-c-maximum-likelihood-theory
+likelihood-function
+likelihood-and-log-likelihood-functions
+properties-of-likelihood-functions
+maximum-likelihood-estimators
+definition-and-derivation-of-mle
+asymptotic-properties-of-mle
+use-of-maximum-likelihood-estimation
+statistical-inference-based-on-maximum-likelihood-estimation
+hypothesis-testing
+mle-and-model-validation
+appendix-d-summary-of-distributions
+appendix-e-conventions-for-notation
+plug-in-principle
+tools-for-model-selection-and-diagnostics
+graphical-comparison-of-distributions
+starting-values
+method-of-moments
+percentile-matching
+model-selection
+pemilihan-model-iteratif
+model-selection-based-on-a-training-dataset
+model-selection-based-on-a-test-dataset
+model-selection-based-on-cross-validation
+estimasi-menggunakan-data-modifikasi
+estimasi-parametrik-menggunakan-data-modifikasi
+estimasi-parametrik-menggunakan-data-yang-dikelompokkan
+cencored-data
+truncated-data
+parametric-estimation-using-cencored-and-truncated-data
+nonparametric-estimation-using-modified-data
+grouped-data
+right-censored-empirical-distribution-function
+example-4.3.5.-actuarial-exam-question.
+bayesian-inference
+introduction-to-bayesian-inference
+bayesian-model
+bayesian-inference-1
+summarizing-the-posterior-distributiob-of-paremeters
+bayesian-predictive-distribution
+conjugate-distributions
+>>>>>>> d02416738c6b51874a89217f815da8e053a677f9
 conditional-distribution-and-conditional-expectation
 conditional-distribution
 discrete-case
@@ -243,6 +287,7 @@ application
 conjugate-distributions-1
 linear-exponential-family
 conjugate-distributions-2
+<<<<<<< HEAD
 appendix-c-maximum-likelihood-theory
 likelihood-function
 likelihood-and-log-likelihood-functions
@@ -269,3 +314,14 @@ limited-expected-values
 functions
 illustrative-graph
 appendix-e-conventions-for-notation
+=======
+prinsip-prinsip-penetapan-harga
+prinsip-prinsip-premi
+sifat-prinsip-premium
+risiko-heterogen
+paparan-risiko
+faktor-penilaian
+>>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
+experience-rating-using-bonus-malus
+>>>>>>> 8b5601b8369ad00ee0b5943c72f16a7f3ce3c667
+>>>>>>> d02416738c6b51874a89217f815da8e053a677f9

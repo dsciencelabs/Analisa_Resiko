@@ -12,21 +12,160 @@ Ekspektasi iterasi adalah hukum mengenai perhitungan ekspektasi dan varian dari 
 
 ### Conditional Distribution
 
-
+memperkenalkan konsep distribusi bersyarat masing-masing untuk variabel acak diskrit dan kontinu.
 
 #### Discrete Case
 
+Seandainya X Dan Y keduanya adalah variabel acak diskrit, yang berarti bahwa mereka dapat mengambil jumlah nilai yang mungkin terbatas atau dapat dihitung dengan probabilitas positif. Fungsi probabilitas gabungan (massa) dari ( X, Y) didefinisikan sebagai
+
+$$
+p(x,y) = \Pr[X=x, Y=y] .
+
+$$
+dimana X Dan Y independen (nilai dari X tidak tergantung pada itu Y), kita punya
+
+$$
+p(x,y)=p(x)p(y),
+
+$$
+dengan p ( x ) = Pr [ X= x ] Dan hal ( y) = Pr [ Y= y] menjadi fungsi probabilitas marjinal dari X Dan Y, masing-masing.
+
+Mengingat fungsi probabilitas bersama, kita dapat memperoleh fungsi probabilitas marjinal dari Y sebagai
+
+$$
+p(y)=\sum_x p(x,y),
+
+$$
+di mana penjumlahannya melebihi semua nilai yang mungkin dari X, dan fungsi probabilitas marjinal dari X dapat diperoleh dengan cara yang serupa.
+
+Fungsi probabilitas bersyarat (massa) dari ( Y| X) didefinisikan sebagai
+
+$$
+p(y|x) =\Pr[Y=y|X=x]= \frac{p(x,y)}{\Pr[X=x]},
+$$
+
+di mana kita dapat memperoleh fungsi probabilitas bersyarat dari ( X| Y) dengan cara yang serupa. Secara khusus, probabilitas bersyarat di atas mewakili probabilitas kejadian tersebut Y= y diberikan acara tersebut X= x. Oleh karena itu, bahkan dalam kasus di mana Pr [ X= x ] = 0, fungsi dapat diberikan sebagai bentuk tertentu, dalam aplikasi nyata.
+
+
 #### Continuous Case
+
+Untuk variabel acak kontinu X Dan Y, kita dapat mendefinisikan fungsi probabilitas (kepadatan) gabungannya berdasarkan fungsi distribusi kumulatif bersama. Fungsi distribusi kumulatif gabungan dari ( X, Y) didefinisikan sebagai
+
+$$
+F(x,y) = \Pr[X\leq x, Y\leq y].
+$$
+
+Dimana X dan Y independen, maka
+
+$$
+F(x,y)=F(x)F(y),
+$$
+
+dengan F( x ) = Pr [ X≤ x ] Dan F( y) = Pr [ Y≤ y] menjadi fungsi distribusi kumulatif (cdf) dari X Dan Y, masing-masing. Variabel acak X disebut sebagai variabel acak kontinu jika cdfnya kontinu X.
+
+Ketika cdf F( x ) terus menerus X, lalu kita definisikan F( x ) = ∂F( x ) / ∂X sebagai fungsi kerapatan probabilitas (marginal) (pdf). X. Begitu pula jika bersama cdf F( x , y) kontinu pada keduanya X Dan y , kami mendefinisikan
+
+$$
+f(x,y)=\frac{\partial^2 F(x,y)}{\partial x\partial y}
+$$
+
+sebagai fungsi kepadatan probabilitas gabungan dari (X,Y) dalam hal ini kita mengacu pada variabel acak sebagai kontinu bersama .
+DImana X dan Y independen, maka
+
+$$
+f(x,y)=f(x)f(y).
+$$
+
+Mengingat fungsi kerapatan sendi, kita dapat memperoleh fungsi kerapatan marjinal dari Y sebagai
+
+$$
+f(y)=\int_x f(x,y)\,dx,
+$$
+
+di mana integralnya melebihi semua nilai yang mungkin dari X, dan fungsi probabilitas marjinal dari X dapat diperoleh dengan cara yang serupa.
+
+Berdasarkan pdf gabungan dan pdf marginal, kami mendefinisikan fungsi kerapatan probabilitas bersyarat dari ( Y| X) sebagai
+
+$$
+f(y|x) = \frac{f(x,y)}{f(x)},
+$$
+
+di mana kita dapat memperoleh fungsi probabilitas bersyarat dari ( X| Y) dengan cara yang serupa. Di sini, fungsi kerapatan bersyarat adalah fungsi kerapatan dari y
+diberikan X= x. Oleh karena itu, bahkan dalam kasus di mana Pr [ X= x ] = 0 atau kapan F( x ) tidak didefinisikan, fungsi dapat diberikan dalam bentuk tertentu dalam aplikasi nyata.
+
 
 ### Conditional Expectation and Conditional Variance
 
+Sekarang kita mendefinisikan ekspektasi bersyarat dan varians berdasarkan distribusi bersyarat yang didefinisikan pada sub-bagian sebelumnya.
+
 #### Discrete Case
 
+Untuk variabel acak diskrit Y, harapannya didefinisikan sebagai $\mathrm{E}[Y]=\sum_y y\,p(y)$ jika nilainya terbatas, dan variansnya didefinisikan sebagai
+
+$$
+\mathrm{Var}[Y]=\mathrm{E}\{(Y-\mathrm{E}[Y])^2\}=\sum_y y^2\,p(y)-\{\mathrm{E}[Y]\}^2
+$$
+
+Untuk variabel acak diskrit Y harapan bersyarat dari variabel acak Y diberikan acara tersebut X= x didefinisikan sebagai
+
+$$
+\mathrm{E}[Y|X=x]=\sum_y y\,p(y|x),
+$$
+
+Di mana X tidak harus menjadi variabel diskrit, sejauh fungsi probabilitas bersyarat hal ( y| x) diberikan.
+
+Perhatikan bahwa harapan bersyarat E [Y| X= x ] adalah angka tetap. Ketika kita mengganti X dengan X di sisi kanan persamaan di atas, kita dapat menentukan ekspektasi Y diberikan variabel acak X sebagai
+
+$$
+\mathrm{E}[Y|X]=\sum_y y\,p(y|X),
+$$
+yang masih merupakan variabel acak , dan keacakan itu berasal X.
+
+Dengan cara yang sama, kita dapat menentukan varian bersyarat dari variabel acak Y diberikan acara tersebut X= x sebagai
+
+$$
+\mathrm{Var}[Y|X=x]=\mathrm{E}[Y^2|X=x]-\{\mathrm{E}[Y|X=x]\}^2=\sum_y y^2\,p(y|x)-\{\mathrm{E}[Y|X=x]\}^2.
+
+$$
+Varian dari Y diberikan X , V a r [Y| X] dapat ditentukan dengan mengganti X oleh X dalam persamaan di atas, dan V a r [Y| X] masih merupakan variabel acak dan keacakan berasal dari X.
+ 
 #### Continuous Case
+
+Untuk variabel acak kontinu Y, harapannya didefinisikan sebagai $\mathrm{E}[Y]=\int_y y\,f(y)dy$ jika integralnya ada, dan variansnya didefinisikan sebagai
+
+$$
+\mathrm{Var}[Y]=\mathrm{E}\{(X-\mathrm{E}[Y])^2\}=\int_y y^2\,f(y)dy-\{\mathrm{E}[Y]\}^2
+$$
+
+jika nilainya terbatas.
+
+Untuk variabel acak kontinu bersama X Dan Y, harapan bersyarat dari variabel acak Y diberikan X= x didefinisikan sebagai
+
+$$
+\mathrm{E}[Y|X=x]=\int_y y\,f(y|x)dy.
+$$
+
+Di mana X tidak harus menjadi variabel kontinu, sejauh fungsi probabilitas bersyarat F( y| x) diberikan.
+
+Demikian pula, harapan bersyarat $\mathrm{E}[Y|X=x]$adalah angka tetap. Ketika kita mengganti X dengan X di ruas kanan persamaan di atas, kita dapat menentukan ekspektasi dari Y diberikan variabel acak X sebagai 
+
+$$
+\mathrm{E}[Y|X]=\int_y y\,p(y|X)\,dy,
+$$
+
+yang masih merupakan variabel acak , dan keacakan itu berasal X.
+
 
 ## Iterated Expectations and Total Varians
 
+Penjelasan pada subbab ini adalah:
+* Hukum Ekspektasi Iterasi untuk menghitung ekspektasi variabel acak berdasarkan distribusi kondisionalnya yang diberikan variabel acak lainnya
+* Law of Total Variance untuk menghitung varians suatu variabel acak berdasarkan distribusi kondisionalnya yang diberikan variabel acak lainnya
+* bagaimana menghitung ekspektasi dan varians berdasarkan contoh model dua tahap
+
 ###  Law of Iterated Expectations
+
+
 
 ### Law of Total Variance
 
