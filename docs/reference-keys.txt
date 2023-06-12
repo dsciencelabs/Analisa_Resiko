@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-tab:unnamed-chunk-64
-fig:unnamed-chunk-85
-fig:unnamed-chunk-87
-fig:TransitionSwitz
->>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -18,8 +11,6 @@ penyisihan-klaim
 frequency-modeling
 goodness-of-fit
 modeling-loss-severity
-<<<<<<< HEAD
-=======
 basic-distributional-quantities
 moments
 example
@@ -42,7 +33,6 @@ finite-mixtures
 two-point-mixture
 k-point-mixture
 continuous-mixtures
->>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 modifikasi-pertanggungan
 policy-deductibles
 policy-limit
@@ -50,31 +40,6 @@ policy-deductible-and-policy-limit
 coinsurance-and-inflation
 reinsurance
 coinsurance-and-reinsurance
-<<<<<<< HEAD
-model-selection-and-estimation
-aggregate-loss-models
-metode-rekursif
-contoh
-simulasi
-simulation-and-resampling
-premium-foundations
-metode-penghitungan-premi-murni
-metode-rasio-kerugian
-risk-classification
-experience-rating-using-credibility-theory
-insurance-portfolio-management-including-reinsurance
-loss-reserving
-experience-rating-using-bonus-malus
-aggregate-loss-models-1
-dependence-modeling
-appendix-a-review-of-statistical-inference
-appendix-b-iterated-expectations
-appendix-c-maximum-likelihood-theory
-appendix-d-summary-of-distributions
-appendix-e-conventions-for-notation
-pengenalan-ratemaking
-metode-penentuan-tarif-gabungan
-=======
 maximum-likelihood-estimation
 maximum-likelihood-estimators-for-complete-data
 maximum-likehood-estimators-using-modified-data
@@ -102,6 +67,7 @@ moments-and-distribution
 actuarial-exam-question
 example-5.3.2.-actuarial-exam-question
 stop-loss-insurance
+actuarial-exam-question-1
 actuarial-exam-question---continued
 analytic-results
 example-2
@@ -233,5 +199,9 @@ hypothesis-testing
 mle-and-model-validation
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
-actuarial-exam-question-1
->>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
+prinsip-prinsip-penetapan-harga
+prinsip-prinsip-premi
+sifat-prinsip-premium
+risiko-heterogen
+paparan-risiko
+faktor-penilaian
