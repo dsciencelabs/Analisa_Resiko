@@ -6,11 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 5 Aggregate Loss Models | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
-=======
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
->>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 
   <meta property="og:title" content="Bab 5 Aggregate Loss Models | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -27,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-11" />
+<meta name="date" content="2023-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,99 +52,9 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -231,28 +137,6 @@ div.csl-indent {
 <li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
 <li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
 </ul></li>
-<<<<<<< HEAD
-<li class="chapter" data-level="7" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>7</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="8" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>8</b> Premium Foundations</a></li>
-<li class="chapter" data-level="9" data-path="pengenalan-ratemaking.html"><a href="pengenalan-ratemaking.html"><i class="fa fa-check"></i><b>9</b> 7.1 Pengenalan Ratemaking</a></li>
-<li class="chapter" data-level="10" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html"><i class="fa fa-check"></i><b>10</b> 7.2 Metode Penentuan Tarif Gabungan</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>10.1</b> 7.2.1 Metode Penghitungan Premi Murni</a></li>
-<li class="chapter" data-level="10.2" data-path="metode-penentuan-tarif-gabungan.html"><a href="metode-penentuan-tarif-gabungan.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>10.2</b> 7.2.2 Metode Rasio Kerugian</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>11</b> Risk Classification</a></li>
-<li class="chapter" data-level="12" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>12</b> Experience Rating Using Credibility Theory</a></li>
-<li class="chapter" data-level="13" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>13</b> Insurance Portfolio Management including Reinsurance</a></li>
-<li class="chapter" data-level="14" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>14</b> Loss Reserving</a></li>
-<li class="chapter" data-level="15" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>15</b> Experience Rating using Bonus-Malus</a></li>
-<li class="chapter" data-level="16" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>16</b> Aggregate Loss Models</a></li>
-<li class="chapter" data-level="17" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>17</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="18" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>18</b> Appendix A: Review of Statistical Inference</a></li>
-<li class="chapter" data-level="19" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>19</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="20" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>20</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="21" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>21</b> Appendix D: Summary of Distributions</a></li>
-<li class="chapter" data-level="22" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>22</b> Appendix E: Conventions for Notation</a></li>
-=======
 <li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
 <ul>
 <li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
@@ -264,8 +148,28 @@ div.csl-indent {
 <li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-nonparametrik"><i class="fa fa-check"></i><b>4.1.1</b> Estimasi Nonparametrik</a></li>
-<li class="chapter" data-level="4.1.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#alat-untuk-pemilihan-model-dan-diagnostik"><i class="fa fa-check"></i><b>4.1.2</b> Alat untuk Pemilihan Model dan Diagnostik</a></li>
-<li class="chapter" data-level="4.1.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nilai-awal"><i class="fa fa-check"></i><b>4.1.3</b> Nilai Awal</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#tools-for-model-selection-and-diagnostics"><i class="fa fa-check"></i><b>4.1.2</b> Tools for Model Selection and Diagnostics</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#starting-values"><i class="fa fa-check"></i><b>4.1.3</b> Starting Values</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#model-selection"><i class="fa fa-check"></i><b>4.2</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#pemilihan-model-iteratif"><i class="fa fa-check"></i><b>4.2.1</b> Pemilihan Model Iteratif</a></li>
+<li class="chapter" data-level="4.2.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#model-selection-based-on-a-training-dataset"><i class="fa fa-check"></i><b>4.2.2</b> Model Selection Based on a Training Dataset</a></li>
+<li class="chapter" data-level="4.2.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#model-selection-based-on-a-test-dataset"><i class="fa fa-check"></i><b>4.2.3</b> Model Selection Based on a Test Dataset</a></li>
+<li class="chapter" data-level="4.2.4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#model-selection-based-on-cross-validation"><i class="fa fa-check"></i><b>4.2.4</b> Model Selection Based on Cross-Validation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-menggunakan-data-modifikasi"><i class="fa fa-check"></i><b>4.3</b> Estimasi Menggunakan Data Modifikasi</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-parametrik-menggunakan-data-modifikasi"><i class="fa fa-check"></i><b>4.3.1</b> Estimasi Parametrik menggunakan Data Modifikasi</a></li>
+<li class="chapter" data-level="4.3.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-estimation-using-modified-data"><i class="fa fa-check"></i><b>4.3.2</b> Nonparametric Estimation using Modified Data</a></li>
+<li class="chapter" data-level="4.3.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#example-4.3.5.-actuarial-exam-question."><i class="fa fa-check"></i><b>4.3.3</b> Example 4.3.5. Actuarial Exam Question.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#bayesian-inference"><i class="fa fa-check"></i><b>4.4</b> Bayesian Inference</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#introduction-to-bayesian-inference"><i class="fa fa-check"></i><b>4.4.1</b> Introduction to Bayesian Inference</a></li>
+<li class="chapter" data-level="4.4.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#bayesian-model"><i class="fa fa-check"></i><b>4.4.2</b> Bayesian Model</a></li>
+<li class="chapter" data-level="4.4.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#bayesian-inference-1"><i class="fa fa-check"></i><b>4.4.3</b> Bayesian Inference</a></li>
+<li class="chapter" data-level="4.4.4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#conjugate-distributions"><i class="fa fa-check"></i><b>4.4.4</b> Conjugate Distributions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
@@ -277,11 +181,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
 <li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.4 Analytic Results</a></li>
 <li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
-<li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.5</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.6</b> simulasi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a>
@@ -317,6 +218,16 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
 <li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
@@ -384,22 +295,35 @@ div.csl-indent {
 <li class="chapter" data-level="11.4.2" data-path="loss-reserving.html"><a href="loss-reserving.html#model-estimation-and-prediction"><i class="fa fa-check"></i><b>11.4.2</b> Model Estimation and Prediction</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
+<li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:Intro"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
-<li class="chapter" data-level="12.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:NCD"><i class="fa fa-check"></i><b>12.2</b> <em>NCD</em> System in Several Countries</a>
+<li class="chapter" data-level="12.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-beberapa-negara"><i class="fa fa-check"></i><b>12.2</b> Sistem NCD di Beberapa Negara</a>
 <ul>
-<li class="chapter" data-level="12.2.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#ncd-system-in-malaysia"><i class="fa fa-check"></i><b>12.2.1</b> <em>NCD</em> System in Malaysia</a></li>
-<li class="chapter" data-level="12.2.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#ncd-systems-in-other-countries"><i class="fa fa-check"></i><b>12.2.2</b> NCD Systems in Other Countries</a></li>
+<li class="chapter" data-level="12.2.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-malaysia"><i class="fa fa-check"></i><b>12.2.1</b> Sistem NCD di Malaysia</a></li>
+<li class="chapter" data-level="12.2.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-negara-lain"><i class="fa fa-check"></i><b>12.2.2</b> Sistem NCD di Negara Lain</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:BMS"><i class="fa fa-check"></i><b>12.3</b> <em>BMS</em> and Markov Chain Model</a>
+<li class="chapter" data-level="12.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#model-rantai-bms-dan-markov"><i class="fa fa-check"></i><b>12.3</b> Model Rantai BMS dan Markov</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#transition-probability"><i class="fa fa-check"></i><b>12.3.1</b> Transition Probability</a></li>
+<li class="chapter" data-level="12.3.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#probabilitas-transisi"><i class="fa fa-check"></i><b>12.3.1</b> Probabilitas Transisi</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#S:ERBM:StatDist"><i class="fa fa-check"></i><b>12.4</b> <em>BMS</em> and Stationary Distribution</a>
+<li class="chapter" data-level="12.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#bms-dan-distribusi-stasioner"><i class="fa fa-check"></i><b>12.4</b> BMS dan Distribusi Stasioner</a>
 <ul>
-<li class="chapter" data-level="12.4.1" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#stationary-distribution"><i class="fa fa-check"></i><b>12.4.1</b> Stationary Distribution</a></li>
-<li class="chapter" data-level="12.4.2" data-path="ChapBonusMalus.html"><a href="ChapBonusMalus.html#r-code-for-a-stationary-distribution"><i class="fa fa-check"></i><b>12.4.2</b> <code>R</code> Code for a Stationary Distribution</a></li>
+<li class="chapter" data-level="12.4.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#distribusi-stasioner"><i class="fa fa-check"></i><b>12.4.1</b> Distribusi Stasioner</a></li>
+<li class="chapter" data-level="12.4.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#kode-untuk-distribusi-stasioner-r"><i class="fa fa-check"></i><b>12.4.2</b> Kode untuk Distribusi Stasioner <code>R</code></a></li>
+<li class="chapter" data-level="12.4.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#evolusi-premium"><i class="fa fa-check"></i><b>12.4.3</b> Evolusi Premium</a></li>
+<li class="chapter" data-level="12.4.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#program-untuk-evolusi-premium-r"><i class="fa fa-check"></i><b>12.4.4</b> Program untuk Evolusi Premium <code>R</code></a></li>
+<li class="chapter" data-level="12.4.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#tingkat-konvergensi"><i class="fa fa-check"></i><b>12.4.5</b> Tingkat Konvergensi</a></li>
+<li class="chapter" data-level="12.4.6" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#r-program-untuk-tingkat-konvergensi"><i class="fa fa-check"></i><b>12.4.6</b> <code>R</code> Program untuk Tingkat Konvergensi</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#bms-dan-peringkat-premium"><i class="fa fa-check"></i><b>12.5</b> BMS dan Peringkat Premium</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#peringkat-premium"><i class="fa fa-check"></i><b>12.5.1</b> Peringkat Premium</a></li>
+<li class="chapter" data-level="12.5.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#klasifikasi-risiko-apriori"><i class="fa fa-check"></i><b>12.5.2</b> Klasifikasi Risiko Apriori</a></li>
+<li class="chapter" data-level="12.5.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#pemodelan-heterogenitas-residual"><i class="fa fa-check"></i><b>12.5.3</b> Pemodelan Heterogenitas Residual</a></li>
+<li class="chapter" data-level="12.5.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#distribusi-stasioner-yang-memungkinkan-heterogenitas-residual"><i class="fa fa-check"></i><b>12.5.4</b> Distribusi Stasioner yang Memungkinkan Heterogenitas Residual</a></li>
+<li class="chapter" data-level="12.5.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#penentuan-relativitas-optimal"><i class="fa fa-check"></i><b>12.5.5</b> Penentuan Relativitas Optimal</a></li>
+<li class="chapter" data-level="12.5.6" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#ilustrasi-numerik"><i class="fa fa-check"></i><b>12.5.6</b> Ilustrasi Numerik</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
@@ -431,7 +355,25 @@ div.csl-indent {
 <li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
+<li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution-and-conditional-expectation"><i class="fa fa-check"></i><b>16.1</b> Conditional Distribution and Conditional Expectation</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution"><i class="fa fa-check"></i><b>16.1.1</b> Conditional Distribution</a></li>
+<li class="chapter" data-level="16.1.2" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-expectation-and-conditional-variance"><i class="fa fa-check"></i><b>16.1.2</b> Conditional Expectation and Conditional Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#iterated-expectations-and-total-varians"><i class="fa fa-check"></i><b>16.2</b> Iterated Expectations and Total Varians</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#law-of-iterated-expectations"><i class="fa fa-check"></i><b>16.2.1</b> Law of Iterated Expectations</a></li>
+<li class="chapter" data-level="16.2.2" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#law-of-total-variance"><i class="fa fa-check"></i><b>16.2.2</b> Law of Total Variance</a></li>
+<li class="chapter" data-level="16.2.3" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#application"><i class="fa fa-check"></i><b>16.2.3</b> Application</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conjugate-distributions-1"><i class="fa fa-check"></i><b>16.3</b> Conjugate Distributions</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#linear-exponential-family"><i class="fa fa-check"></i><b>16.3.1</b> Linear Exponential Family</a></li>
+<li class="chapter" data-level="16.3.2" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conjugate-distributions-2"><i class="fa fa-check"></i><b>16.3.2</b> Conjugate Distributions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a>
 <ul>
 <li class="chapter" data-level="17.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
@@ -451,9 +393,25 @@ div.csl-indent {
 <li class="chapter" data-level="17.3.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#one-parameter-distributions"><i class="fa fa-check"></i><b>18.2.1</b> One Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#two-parameter-distributions"><i class="fa fa-check"></i><b>18.2.2</b> Two Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.3" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#three-parameter-distributions"><i class="fa fa-check"></i><b>18.2.3</b> Three Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.4" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#four-parameter-distribution"><i class="fa fa-check"></i><b>18.2.4</b> Four Parameter Distribution</a></li>
+<li class="chapter" data-level="18.2.5" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#other-distributions"><i class="fa fa-check"></i><b>18.2.5</b> Other Distributions</a></li>
+<li class="chapter" data-level="18.2.6" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distributions-with-finite-support"><i class="fa fa-check"></i><b>18.2.6</b> Distributions with Finite Support</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#limited-expected-values"><i class="fa fa-check"></i><b>18.3</b> Limited Expected Values</a></li>
+</ul></li>
 <li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
->>>>>>> f9a746c5b24126443ff5b71c4335db228507f5bc
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="divider"></li>
@@ -676,7 +634,8 @@ F_{S_N}(s) &amp;= \Pr \left(X_1 + \cdots + X_N \le s \right) \\
 \]</span>
 ### * 5.3.6. Actuarial Exam Question*</p>
 <p>Dalam satu minggu tertentu, jumlah proyek yang mengharuskan Anda bekerja lembur memiliki distribusi geometris dengan <span class="math inline">\(β = 2\)</span> . Untuk setiap proyek, distribusi jumlah jam lembur dalam seminggu, X adalah sebagai berikut</p>
-<p><span class="math display">\[{\small
+<p><span class="math display">\[
+{\small
 \begin{matrix}
 \begin{array}{ccc} \hline
     x &amp;  &amp; f(x)\\ \hline
@@ -686,8 +645,8 @@ F_{S_N}(s) &amp;= \Pr \left(X_1 + \cdots + X_N \le s \right) \\
   \end{array}
 \end{matrix}
 }
-\]</span>
-Jumlah proyek dan jumlah jam lembur tidak bergantung. Anda akan dibayar untuk jam lembur yang melebihi 15 jam dalam seminggu. Hitunglah jumlah jam lembur yang akan diterima dalam seminggu.</p>
+\]</span></p>
+<p>Jumlah proyek dan jumlah jam lembur tidak bergantung. Anda akan dibayar untuk jam lembur yang melebihi 15 jam dalam seminggu. Hitunglah jumlah jam lembur yang akan diterima dalam seminggu.</p>
 <p><strong>JAWABAN</strong></p>
 <p>Jumlah proyek dalam seminggu yang membutuhkan kerja lembur memiliki distribusi <span class="math inline">\(N∼Geo(β=2)\)</span> sedangkan jumlah jam kerja lembur per proyek memiliki distribusi <span class="math inline">\(X\)</span> seperti yang telah dijelaskan di atas. Jumlah keseluruhan jam lembur dalam seminggu adalah SN dan oleh karena itu kita mencari</p>
 <p><span class="math inline">\(\mathrm{E}(S_N-15)_+ = \mathrm{E}(S_N) - \mathrm{E}(S_N \wedge 15).\)</span></p>
@@ -899,13 +858,11 @@ C(s;\phi)=\left\{\begin{array}{ll}
 <p><span class="math inline">\({\rm E} (S_N)=\mu~~~~{\rm and}~~~~{\rm Var} (S_N)=\phi\mu^{p}.\)</span></p>
 <p>Hal ini memungkinkan kita untuk menggunakan distribusi Tweedie dengan model linear umum untuk memodelkan klaim. Perlu juga disebutkan dua kasus pembatas dari model Tweedie: <span class="math inline">\(p→1\)</span> menghasilkan distribusi Poisson dan <span class="math inline">\(p → 2\)</span> menghasilkan distribusi gamma. Dengan demikian, model Tweedie mengakomodasi situasi di antara distribusi gamma dan Poisson, yang secara intuitif masuk akal karena merupakan jumlah Poisson dari variabel acak gamma.</p>
 <p>=======</p>
-</div>
-</div>
-<div id="menghitung-distribusi-klaim-agregat" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> 5.4 Menghitung Distribusi Klaim Agregat<a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>##Menghitung Distribusi Klaim Agregat</p>
 <p>Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.</p>
-<div id="metode-rekursif" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> metode rekursif<a href="aggregate-loss-models.html#metode-rekursif" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="metode-rekursif" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> metode rekursif<a href="aggregate-loss-models.html#metode-rekursif" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>penggunaan metode rekursif untuk membangun model majemuk dengan komponen frekuensi <span class="math inline">\(N\)</span> yang termasuk dalam kelas <span class="math inline">\((a,b,0)\)</span> atau <span class="math inline">\((a,b,1)\)</span>, dan komponen tingkat keparahan <span class="math inline">\(X\)</span> yang memiliki distribusi diskrit.</p>
 <p>Namun, jika distribusi tingkat keparahan <span class="math inline">\(X\)</span> kontinu, praktik yang umum dilakukan adalah mendiskritkan distribusinya terlebih dahulu agar metode rekursif dapat diterapkan.</p>
 <p>Dalam hal ini, diasumsikan bahwa N termasuk dalam kelas <span class="math inline">\((a,b,1)\)</span>, sehingga nilai probabilitas <span class="math inline">\(N\)</span> pada waktu <span class="math inline">\(k\)</span> dinyatakan sebagai <span class="math inline">\(pk = (a + bk) pk-1\)</span>. Selanjutnya, diasumsikan bahwa support (nilai yang mungkin) dari <span class="math inline">\(X\)</span> terbatas pada <span class="math inline">\({0,1,...,m}\)</span>, dan distribusinya diskrit. Oleh karena itu, fungsi probabilitas dari <span class="math inline">\(S_N\)</span> dapat dinyatakan dalam</p>
@@ -920,8 +877,8 @@ f_{S_N}(s)=\frac{1}{1-af_X (0)}\left\{ \sum_{x=1}^{s\wedge m}\left( a+\frac{bx
 }{s}\right) f_X (x)f_{S_N}(s-x)\right\}.
 \end{align*}\]</span></p>
 <p>karena model ARIMA yang digunakan berbeda. Persamaan tersebut hanya memperhitungkan faktor skala <span class="math inline">\(a\)</span> dan <span class="math inline">\(b\)</span> dan mengakumulasi probabilitas dari setiap nilai <span class="math inline">\(x\)</span> dari <span class="math inline">\(X\)</span> hingga mencapai nilai <span class="math inline">\(s\)</span> yang diinginkan</p>
-<div id="contoh-1" class="section level4 hasAnchor" number="5.3.1.1">
-<h4><span class="header-section-number">5.3.1.1</span> contoh<a href="aggregate-loss-models.html#contoh-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="contoh-1" class="section level4 hasAnchor" number="5.2.5.1">
+<h4><span class="header-section-number">5.2.5.1</span> contoh<a href="aggregate-loss-models.html#contoh-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Jumlah klaim dalam suatu periode <span class="math inline">\(N\)</span> memiliki distribusi geometrik dengan mean 4. Besarnya setiap klaim <span class="math inline">\(X\)</span> mengikuti <span class="math inline">\(Pr(X=x)=0.25\)</span>, untuk <span class="math inline">\(x=1,2,3,4\)</span>. Jumlah klaim dan jumlah klaim bersifat independen. <span class="math inline">\(S_N\)</span> adalah jumlah klaim keseluruhan pada periode tersebut.</p>
 <p>Hitunglah <span class="math inline">\(F_{S_N}(3)\)</span>.</p>
 <p>Solusi Distribusi tingkat keparahan <span class="math inline">\(X\)</span> adalah sebagai berikut
@@ -947,8 +904,8 @@ f_{S_N} (3) &amp;= \frac{4}{5} \left[ f_X(1) f_{S_N}(2) + f_X(2)f_{S_N}(1) + f_X
 <p>Setelah menghitung nilai <span class="math inline">\(f_{S_N}(0)\)</span>, <span class="math inline">\(f_{S_N}(1)\)</span>, <span class="math inline">\(f_{S_N}(2)\)</span>, dan <span class="math inline">\(f_{S_N}(3)\)</span>, fungsi distribusi kumulatif <span class="math inline">\(F_{S_N}(3)\)</span> diperoleh dengan menjumlahkan nilai-nilai tersebut. Hasil akhirnya adalah <span class="math inline">\(F_{S_N}(3) = 0.3456\)</span>.</p>
 </div>
 </div>
-<div id="simulasi" class="section level3 hasAnchor" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> simulasi<a href="aggregate-loss-models.html#simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="simulasi" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> simulasi<a href="aggregate-loss-models.html#simulasi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Distribusi kerugian agregat dapat dievaluasi dengan menggunakan simulasi Monte Carlo. Untuk kerugian agregat, Simulasi Monte Carlo digunakan untuk menghasilkan sampel acak dari kerugian keseluruhan berdasarkan distribusi probabilitas yang dianggap sesuai untuk distribusi frekuensi dan tingkat keparahan klaim.</p>
 <p>gunanya adalah seseorang dapat menghitung distribusi empiris dari <span class="math inline">\(S_N\)</span> dengan menggunakan sampel acak. Nilai ekspektasi dan varians dari kerugian agregat juga dapat diperkirakan dengan menggunakan rata-rata sampel dan varians sampel dari nilai simulasi.</p>
 <p>Sekarang kita rangkum prosedur simulasi untuk model kerugian agregat. Misalkan <span class="math inline">\(m\)</span> adalah ukuran sampel acak yang dihasilkan dari kerugian agregat.</p>

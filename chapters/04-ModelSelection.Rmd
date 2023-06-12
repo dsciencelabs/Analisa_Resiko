@@ -447,10 +447,7 @@ Menjelaskan proses pemilihan model berdasarkan:
 
 Dalam memeriksa data secara grafis, membuat hipotesis struktur model, dan membandingkan data dengan model kandidat untuk merumuskan model yang lebih baik. Box ( 1980 ) menggambarkan ini sebagai proses berulang yang ditunjukkan pada Gambar dibawah ini
 
-
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/4.2.1.png")
-```
+<img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.2.1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Proses berulang ini memberikan resep yang berguna untuk menyusun tugas menentukan model untuk mewakili satu set data.
 
