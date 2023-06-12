@@ -510,7 +510,6 @@ Fungsi massa probabilitas yang sesuai untuk pengamatan adalah
 
 
 src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
-```
 
 Sekarang, tentukan $N_J$ menjadi jumlah pengamatan yang termasuk dalam $J$th interval, $(C_{j − 1},C_J]$. Jadi, fungsi kemungkinan (sehubungan dengan parameter) $θ$) adalah
 
@@ -631,7 +630,6 @@ dengan waktu penyensoran potensial ${(C_{U1},...,C_{Un})}$ . Di sini, notasi "$�
 Di sisi lain, data terpotong ditangani dalam inferensi kemungkinan melalui probabilitas bersyarat. Secara khusus, kontribusi likelihood dapat disesuaikan dengan membaginya dengan probabilitas bahwa variabel tersebut diamati. Sebagai rangkuman, kami memiliki kontribusi berikut pada fungsi likelihood untuk enam jenis hasil:
 
 src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
-```
 
 Untuk hasil yang diketahui dan data yang disensor, kemungkinannya adalah
 
@@ -721,7 +719,6 @@ src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.
 
 Dengan menggunakan ogive, hitunglah estimasi probabilitas bahwa klaim yang dipilih secara acak adalah antara 2000 dan 6000.
 
-
 Pada batas-batasnya, fungsi distribusi empiris didefinisikan dengan cara yang biasa, sehingga memiliki
 
 $F_{100}(1000) = 0.16, \ F_{100}(3000)=0.38, \ F_{100}(5000)=0.63, \ F_{100}(10000)=0.81$
@@ -739,8 +736,6 @@ Dengan demikian, probabilitas klaim antara 2000 dan 6000 adalah
 
 $F_{100}(6000) - F_{100}(2000) = 0.666-0.27 = 0.396$
 
-
-
 #### Right-Censored Empirical Distribution Function
 
 Akan sangat berguna untuk mengkalibrasi penaksir parametrik dengan metode nonparametrik yang tidak bergantung pada bentuk parametrik distribusi. Penaksir batas produk menurut (Kaplan dan Meier 1958) merupakan penaksir yang terkenal untuk fungsi distribusi dengan adanya penyensoran. 
@@ -756,8 +751,6 @@ $$
 \hat{S}(x) = S_2(5) \times I(X_2^* > x )
 \end{aligned}
 $$
-
-
 
 *Kaplan-Meier Product Limit Estimator*
 
@@ -959,4 +952,3 @@ $$
 $$
 
 Untuk distribusi konjugasi, posterior dan sebelumnya milik keluarga distribusi yang sama. Ilustrasi berikut melihat kasus khusus gamma-Poisson, yang paling terkenal dalam aplikasi aktuaria.
-

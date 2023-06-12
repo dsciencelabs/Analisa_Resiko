@@ -86,7 +86,6 @@ perbandingan-statistik-distribusi
 nilai-awal
 metode-momen
 pencocokan-persentil
-head
 model-selection
 pemilihan-model-iteratif
 model-selection-based-on-a-training-dataset
@@ -95,6 +94,9 @@ model-selection-based-on-cross-validation
 estimasi-menggunakan-data-modifikasi
 estimasi-parametrik-menggunakan-data-modifikasi
 estimasi-parametrik-menggunakan-data-yang-dikelompokkan
+cencored-data
+truncated-data
+parametric-estimation-using-cencored-and-truncated-data
 nonparametric-estimation-using-modified-data
 grouped-data
 right-censored-empirical-distribution-function
@@ -292,7 +294,6 @@ uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
 appendix-b-iterated-expectations
-head-1
 conditional-distribution-and-conditional-expectation
 conditional-distribution
 discrete-case

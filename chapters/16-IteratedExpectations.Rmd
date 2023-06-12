@@ -1,6 +1,4 @@
 # Appendix B: Iterated Expectations
-<<<<<<< HEAD
-=======
 
 Apendiks ini memperkenalkan undang-undang yang terkait dengan harapan berulang.Dalam beberapa situasi, kami hanya mengamati satu hasil tetapi dapat membuat konsep hasil sebagai hasil dari proses dua (atau lebih) tahap. Jenis model statistik semacam itu disebut model dua tahap , atau hierarkis . Beberapa kasus khusus model hirarkis meliputi:
 
