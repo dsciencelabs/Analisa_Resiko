@@ -1,7 +1,3 @@
-tab:unnamed-chunk-64
-fig:unnamed-chunk-85
-fig:unnamed-chunk-87
-fig:TransitionSwitz
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -71,6 +67,7 @@ moments-and-distribution
 actuarial-exam-question
 example-5.3.2.-actuarial-exam-question
 stop-loss-insurance
+actuarial-exam-question-1
 actuarial-exam-question---continued
 analytic-results
 example-2
@@ -188,6 +185,47 @@ konsep-dasar-1
 uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
+<<<<<<< HEAD
+fig:unnamed-chunk-2
+fig:unnamed-chunk-4
+fig:TransitionSwitz
+introduction-1
+ncd-system-in-several-countries
+fig:unnamed-chunk-1
+sistem-ncd-di-beberapa-negara
+sistem-ncd-di-malaysia
+sistem-ncd-di-negara-lain
+model-rantai-bms-dan-markov
+probabilitas-transisi
+bms-dan-distribusi-stasioner
+distribusi-stasioner
+kode-untuk-distribusi-stasioner-r
+fig:PremEvolution
+evolusi-premium
+program-untuk-evolusi-premium-r
+tingkat-konvergensi
+r-program-untuk-tingkat-konvergensi
+bms-dan-peringkat-premium
+peringkat-premium
+klasifikasi-risiko-apriori
+pemodelan-heterogenitas-residual
+distribusi-stasioner-yang-memungkinkan-heterogenitas-residual
+penentuan-relativitas-optimal
+ilustrasi-numerik
+distribusi-diskrit
+the-ab0-class
+the-ab1-class
+continuous-distribution
+one-parameter-distributions
+two-parameter-distributions
+three-parameter-distributions
+four-parameter-distribution
+other-distributions
+distributions-with-finite-support
+limited-expected-values
+functions
+illustrative-graph
+=======
 appendix-b-iterated-expectations
 appendix-c-maximum-likelihood-theory
 likelihood-function
@@ -202,6 +240,7 @@ hypothesis-testing
 mle-and-model-validation
 appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
 actuarial-exam-question-1
 plug-in-principle
 tools-for-model-selection-and-diagnostics
@@ -245,3 +284,13 @@ application
 conjugate-distributions-1
 linear-exponential-family
 conjugate-distributions-2
+=======
+prinsip-prinsip-penetapan-harga
+prinsip-prinsip-premi
+sifat-prinsip-premium
+risiko-heterogen
+paparan-risiko
+faktor-penilaian
+>>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
+experience-rating-using-bonus-malus
+>>>>>>> 8b5601b8369ad00ee0b5943c72f16a7f3ce3c667

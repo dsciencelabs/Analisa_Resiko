@@ -6,11 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 12 Experience Rating using Bonus-Malus | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
-=======
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
->>>>>>> ba9f0d39632695941ca33dd0e276ee6d6606a0e5
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 12 Experience Rating using Bonus-Malus | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -27,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-02" />
+<meta name="date" content="2023-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +52,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -127,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,27 +192,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a></li>
-<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.2</b> modifikasi pertanggungan</a>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.2.1</b> policy deductibles</a></li>
-<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.2.2</b> 2. Policy Limit</a></li>
-<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.2.3</b> policy deductible and policy limit</a></li>
-<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.2.4</b> Coinsurance and inflation</a></li>
-<li class="chapter" data-level="3.2.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.2.5</b> Reinsurance</a></li>
-<li class="chapter" data-level="3.2.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.2.6</b> Coinsurance and Reinsurance</a></li>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a></li>
+<li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#estimasi-nonparametrik"><i class="fa fa-check"></i><b>4.1.1</b> Estimasi Nonparametrik</a></li>
+<li class="chapter" data-level="4.1.2" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#alat-untuk-pemilihan-model-dan-diagnostik"><i class="fa fa-check"></i><b>4.1.2</b> Alat untuk Pemilihan Model dan Diagnostik</a></li>
+<li class="chapter" data-level="4.1.3" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nilai-awal"><i class="fa fa-check"></i><b>4.1.3</b> Nilai Awal</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html"><i class="fa fa-check"></i><b>5</b> Aggregate Loss Models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
@@ -222,6 +271,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#interval-keyakinan"><i class="fa fa-check"></i><b>6.2.3</b> Interval Keyakinan</a></li>
 <li class="chapter" data-level="6.2.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#bootstrap-parametrik"><i class="fa fa-check"></i><b>6.2.4</b> Bootstrap Parametrik</a></li>
 </ul></li>
+<li class="chapter" data-level="6.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation"><i class="fa fa-check"></i><b>6.3</b> Cross Validation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#k-fold-cross-validation"><i class="fa fa-check"></i><b>6.3.1</b> k-Fold Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#leave-one-out-cross-validation"><i class="fa fa-check"></i><b>6.3.2</b> 6.3.2 Leave-One-Out Cross-Validation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation-and-bootstrap"><i class="fa fa-check"></i><b>6.3.3</b> Cross-Validation and Bootstrap</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#importance-sampling"><i class="fa fa-check"></i><b>6.4</b> Importance Sampling</a></li>
+<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> 6.5.1 Metropolis Hastings</a></li>
+<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> 6.5.2 Gibbs Sampler</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
 <ul>
@@ -231,9 +289,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
 <li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
 </ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
@@ -256,14 +339,130 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.4.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#additional-reinsurance-treaties"><i class="fa fa-check"></i><b>10.4.3</b> Additional Reinsurance Treaties</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a></li>
-<li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a></li>
+<li class="chapter" data-level="11" data-path="loss-reserving.html"><a href="loss-reserving.html"><i class="fa fa-check"></i><b>11</b> Loss Reserving</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="loss-reserving.html"><a href="loss-reserving.html#motivation"><i class="fa fa-check"></i><b>11.1</b> Motivation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="loss-reserving.html"><a href="loss-reserving.html#closed-ibnr-and-rbns-claims"><i class="fa fa-check"></i><b>11.1.1</b> Closed, IBNR, and RBNS Claims</a></li>
+<li class="chapter" data-level="11.1.2" data-path="loss-reserving.html"><a href="loss-reserving.html#why-reserving"><i class="fa fa-check"></i><b>11.1.2</b> Why Reserving?</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-data"><i class="fa fa-check"></i><b>11.2</b> Loss Reserve Data</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="loss-reserving.html"><a href="loss-reserving.html#from-micro-to-macro"><i class="fa fa-check"></i><b>11.2.1</b> From Micro to Macro</a></li>
+<li class="chapter" data-level="11.2.2" data-path="loss-reserving.html"><a href="loss-reserving.html#run-off-triangles"><i class="fa fa-check"></i><b>11.2.2</b> Run-off Triangles</a></li>
+<li class="chapter" data-level="11.2.3" data-path="loss-reserving.html"><a href="loss-reserving.html#loss-reserve-notation"><i class="fa fa-check"></i><b>11.2.3</b> Loss Reserve Notation</a></li>
+<li class="chapter" data-level="11.2.4" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-to-summarize-loss-reserve-data"><i class="fa fa-check"></i><b>11.2.4</b> R Code to Summarize Loss Reserve Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="loss-reserving.html"><a href="loss-reserving.html#the-chain-ladder-method"><i class="fa fa-check"></i><b>11.3</b> The Chain-Ladder Method</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="loss-reserving.html"><a href="loss-reserving.html#the-deterministic-chain-ladder"><i class="fa fa-check"></i><b>11.3.1</b> The Deterministic Chain-Ladder</a></li>
+<li class="chapter" data-level="11.3.2" data-path="loss-reserving.html"><a href="loss-reserving.html#macks-distribution-free-chain-ladder-model"><i class="fa fa-check"></i><b>11.3.2</b> Mack’s Distribution-Free Chain-Ladder Model</a></li>
+<li class="chapter" data-level="11.3.3" data-path="loss-reserving.html"><a href="loss-reserving.html#r-code-for-chain-ladder-predictions"><i class="fa fa-check"></i><b>11.3.3</b> R code for Chain-Ladder Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="loss-reserving.html"><a href="loss-reserving.html#glms-and-bootstrap-for-loss-reserves"><i class="fa fa-check"></i><b>11.4</b> GLMs and Bootstrap for Loss Reserves</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="loss-reserving.html"><a href="loss-reserving.html#model-specification"><i class="fa fa-check"></i><b>11.4.1</b> Model Specification</a></li>
+<li class="chapter" data-level="11.4.2" data-path="loss-reserving.html"><a href="loss-reserving.html#model-estimation-and-prediction"><i class="fa fa-check"></i><b>11.4.2</b> Model Estimation and Prediction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html"><i class="fa fa-check"></i><b>12</b> Experience Rating using Bonus-Malus</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-beberapa-negara"><i class="fa fa-check"></i><b>12.2</b> Sistem NCD di Beberapa Negara</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-malaysia"><i class="fa fa-check"></i><b>12.2.1</b> Sistem NCD di Malaysia</a></li>
+<li class="chapter" data-level="12.2.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-negara-lain"><i class="fa fa-check"></i><b>12.2.2</b> Sistem NCD di Negara Lain</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#model-rantai-bms-dan-markov"><i class="fa fa-check"></i><b>12.3</b> Model Rantai BMS dan Markov</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#probabilitas-transisi"><i class="fa fa-check"></i><b>12.3.1</b> Probabilitas Transisi</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#bms-dan-distribusi-stasioner"><i class="fa fa-check"></i><b>12.4</b> BMS dan Distribusi Stasioner</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#distribusi-stasioner"><i class="fa fa-check"></i><b>12.4.1</b> Distribusi Stasioner</a></li>
+<li class="chapter" data-level="12.4.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#kode-untuk-distribusi-stasioner-r"><i class="fa fa-check"></i><b>12.4.2</b> Kode untuk Distribusi Stasioner <code>R</code></a></li>
+<li class="chapter" data-level="12.4.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#evolusi-premium"><i class="fa fa-check"></i><b>12.4.3</b> Evolusi Premium</a></li>
+<li class="chapter" data-level="12.4.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#program-untuk-evolusi-premium-r"><i class="fa fa-check"></i><b>12.4.4</b> Program untuk Evolusi Premium <code>R</code></a></li>
+<li class="chapter" data-level="12.4.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#tingkat-konvergensi"><i class="fa fa-check"></i><b>12.4.5</b> Tingkat Konvergensi</a></li>
+<li class="chapter" data-level="12.4.6" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#r-program-untuk-tingkat-konvergensi"><i class="fa fa-check"></i><b>12.4.6</b> <code>R</code> Program untuk Tingkat Konvergensi</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#bms-dan-peringkat-premium"><i class="fa fa-check"></i><b>12.5</b> BMS dan Peringkat Premium</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#peringkat-premium"><i class="fa fa-check"></i><b>12.5.1</b> Peringkat Premium</a></li>
+<li class="chapter" data-level="12.5.2" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#klasifikasi-risiko-apriori"><i class="fa fa-check"></i><b>12.5.2</b> Klasifikasi Risiko Apriori</a></li>
+<li class="chapter" data-level="12.5.3" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#pemodelan-heterogenitas-residual"><i class="fa fa-check"></i><b>12.5.3</b> Pemodelan Heterogenitas Residual</a></li>
+<li class="chapter" data-level="12.5.4" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#distribusi-stasioner-yang-memungkinkan-heterogenitas-residual"><i class="fa fa-check"></i><b>12.5.4</b> Distribusi Stasioner yang Memungkinkan Heterogenitas Residual</a></li>
+<li class="chapter" data-level="12.5.5" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#penentuan-relativitas-optimal"><i class="fa fa-check"></i><b>12.5.5</b> Penentuan Relativitas Optimal</a></li>
+<li class="chapter" data-level="12.5.6" data-path="experience-rating-using-bonus-malus.html"><a href="experience-rating-using-bonus-malus.html#ilustrasi-numerik"><i class="fa fa-check"></i><b>12.5.6</b> Ilustrasi Numerik</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a></li>
-<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a></li>
-<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a></li>
+<li class="chapter" data-level="17" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html"><i class="fa fa-check"></i><b>17</b> Appendix C: Maximum Likelihood Theory</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-function"><i class="fa fa-check"></i><b>17.1</b> Likelihood Function</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#likelihood-and-log-likelihood-functions"><i class="fa fa-check"></i><b>17.1.1</b> Likelihood and Log-likelihood Functions</a></li>
+<li class="chapter" data-level="17.1.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#properties-of-likelihood-functions"><i class="fa fa-check"></i><b>17.1.2</b> Properties of Likelihood Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>17.2</b> Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#definition-and-derivation-of-mle"><i class="fa fa-check"></i><b>17.2.1</b> Definition and Derivation of MLE</a></li>
+<li class="chapter" data-level="17.2.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#asymptotic-properties-of-mle"><i class="fa fa-check"></i><b>17.2.2</b> Asymptotic Properties of MLE</a></li>
+<li class="chapter" data-level="17.2.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#use-of-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.2.3</b> Use of Maximum Likelihood Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#statistical-inference-based-on-maximum-likelihood-estimation"><i class="fa fa-check"></i><b>17.3</b> Statistical Inference Based on Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#hypothesis-testing"><i class="fa fa-check"></i><b>17.3.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="17.3.2" data-path="appendix-c-maximum-likelihood-theory.html"><a href="appendix-c-maximum-likelihood-theory.html#mle-and-model-validation"><i class="fa fa-check"></i><b>17.3.2</b> MLE and Model Validation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html"><i class="fa fa-check"></i><b>18</b> Appendix D: Summary of Distributions</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#one-parameter-distributions"><i class="fa fa-check"></i><b>18.2.1</b> One Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#two-parameter-distributions"><i class="fa fa-check"></i><b>18.2.2</b> Two Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.3" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#three-parameter-distributions"><i class="fa fa-check"></i><b>18.2.3</b> Three Parameter Distributions</a></li>
+<li class="chapter" data-level="18.2.4" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#four-parameter-distribution"><i class="fa fa-check"></i><b>18.2.4</b> Four Parameter Distribution</a></li>
+<li class="chapter" data-level="18.2.5" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#other-distributions"><i class="fa fa-check"></i><b>18.2.5</b> Other Distributions</a></li>
+<li class="chapter" data-level="18.2.6" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distributions-with-finite-support"><i class="fa fa-check"></i><b>18.2.6</b> Distributions with Finite Support</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#limited-expected-values"><i class="fa fa-check"></i><b>18.3</b> Limited Expected Values</a></li>
+</ul></li>
 <li class="chapter" data-level="19" data-path="appendix-e-conventions-for-notation.html"><a href="appendix-e-conventions-for-notation.html"><i class="fa fa-check"></i><b>19</b> Appendix E: Conventions for Notation</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
@@ -289,7 +488,753 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="experience-rating-using-bonus-malus" class="section level1 hasAnchor" number="12">
 <h1><span class="header-section-number">Bab 12</span> Experience Rating using Bonus-Malus<a href="experience-rating-using-bonus-malus.html#experience-rating-using-bonus-malus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Introduction<a href="experience-rating-using-bonus-malus.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Bonus-malus system</strong>, yang digunakan secara bergantian sebagai “diskon tanpa kesalahan”, “peringkat prestasi”, “peringkat pengalaman” atau “diskon tanpa klaim” di berbagai negara, didasarkan pada pemberian sanksi kepada tertanggung yang bertanggung jawab atas satu atau beberapa klaim dengan biaya tambahan premi (malus), dan memberi penghargaan kepada tertanggung dengan diskon premi (bonus) jika tidak memiliki klaim. Sistem bonus-malus dapat dianggap sebagai implementasi komersial dari premi kredibilitas yang ideal seperti yang dibahas dalam Bab 9, di mana premi yang harus dibayar oleh tertanggung dihitung secara individual. Perusahaan asuransi menggunakan sistem bonus-malus untuk dua tujuan utama: untuk mendorong pengemudi agar mengemudi lebih hati-hati dalam satu tahun tanpa klaim, dan untuk memastikan tertanggung membayar premi yang sebanding dengan risiko mereka berdasarkan pengalaman klaim mereka melalui mekanisme peringkat pengalaman.</p>
+<p><strong>No Claim Discount (NCD)</strong> (NCD) adalah sistem peringkat pengalaman yang biasa digunakan dalam asuransi kendaraan bermotor. Sistem ini merupakan upaya untuk mengkategorikan tertanggung ke dalam kelompok-kelompok homogen yang membayar premi berdasarkan pengalaman klaim mereka. Tergantung pada aturan dalam skema, pemegang polis baru mungkin diminta untuk membayar premi penuh pada awalnya, dan mendapatkan diskon di tahun-tahun berikutnya sebagai hasil dari tahun-tahun bebas klaim. Sistem NCD memberikan penghargaan kepada pemegang polis yang tidak mengajukan klaim selama satu tahun. Dengan kata lain, sistem ini memberikan bonus kepada pengemudi yang berhati-hati. Prinsip bonus ini dapat mempengaruhi keputusan pemegang polis untuk mengklaim atau tidak mengklaim, terutama jika melibatkan kecelakaan dengan kerusakan kecil, yang dikenal sebagai fenomena ‘lapar akan bonus’. Fenomena ‘lapar akan bonus’ dalam sistem NCD dapat mengurangi biaya klaim perusahaan asuransi, dan mungkin dapat mengimbangi penurunan pendapatan premi yang diharapkan.</p>
+</div>
+<div id="sistem-ncd-di-beberapa-negara" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Sistem NCD di Beberapa Negara<a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-beberapa-negara" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sistem-ncd-di-malaysia" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Sistem NCD di Malaysia<a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-malaysia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sebelum liberalisasi Tarif Motor pada 1 Juli 2017, peringkat asuransi motor di Malaysia diatur oleh Tarif Motor. Di bawah Tarif, tarif yang dikenakan tidak boleh lebih rendah dari tarif yang ditentukan di bawah kelas risiko, untuk memastikan bahwa persaingan harga di antara Penanggung tidak akan pergi di bawah tingkat ekonomi negara. Dasar Faktor peringkat yang dipertimbangkan adalah ruang lingkup asuransi, kapasitas kubik kendaraan dan perkiraan nilai kendaraan (atau uang pertanggungan, mana saja lebih rendah). Di bawah Tarif Motor, premi akhir yang harus dibayar disesuaikan oleh pengalaman klaim pemegang polis, atau setara, hak NCD-nya.</p>
+<p>Efektif 1 Juli 2017, tarif premi asuransi kendaraan bermotor adalah diliberalisasi, atau dikurangi tarifnya. Harga premi sekarang ditentukan oleh perusahaan asuransi perorangan dan Takaful operator, dan konsumen mampu Nikmati pilihan produk asuransi motor yang lebih luas dengan harga bersaing. Karena liberalisasi tarif mendorong inovasi dan persaingan di antara Penanggung dan operator Takaful, premi didasarkan pada risiko yang lebih luas faktor selain dua faktor peringkat yang ditentukan dalam Tarif Motor, yaitu uang pertanggungan dan kapasitas kubik kendaraan. Faktor peringkat lainnya mungkin didefinisikan dalam profil risiko tertanggung, seperti usia kendaraan, usia pengemudi, fitur keselamatan dan keamanan kendaraan, geografis lokasi kendaraan dan pelanggaran lalu lintas pengemudi. Berbeda Penanggung dan operator takaful memiliki cara berbeda untuk mendefinisikan risiko Profil Tertanggung, harga polis mungkin berbeda dari satu penanggung ke yang lain. Namun, struktur NCD dari Tarif Motor tetap ada ‘tidak berubah’ dan terus ada, dan ‘dapat dipindahtangankan’ dari satu Penanggung, atau dari satu operator Takaful, ke operator Takaful lainnya.</p>
+<p>Diskon dalam sistem NCD Malaysia dibagi menjadi enam kelas, Mulai dari kelas awal diskon 0%, diikuti oleh kelas Diskon 25%, 30%, 38.3%, 45% dan 55%. Gambar 12.1 menyediakan kelas-kelas Sistem NCD di Malaysia. Tahun bebas klaim menunjukkan bahwa pemegang polis berhak untuk maju selangkah ke kelas diskon berikutnya, seperti dari diskon 0% hingga diskon 25% di tahun perpanjangan. Jika a Pemegang Polis sudah berada di kelas tertinggi, yaitu sebesar 55% diskon, tahun bebas klaim menunjukkan bahwa pemegang polis tetap di kelas yang sama. Di sisi lain, jika satu atau lebih klaim dibuat dalam tahun ini, NCD akan hangus dan pemegang polis harus mulai dari Diskon 0% di tahun perpanjangan. Seperangkat aturan transisi ini juga bisa diringkas sebagai aturan -1 / Top, yaitu, kelas bonus untuk bebas klaim tahun, dan pindah ke kelas tertinggi setelah memiliki satu atau lebih klaim. Untuk tujuan ilustrasi, Gambar 12.1 menunjukkan kelas dan diagram transisi untuk sistem NCD Malaysia.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/FigureTransitionMsia.png" alt="(ref:TranMalaysia)" width="45%" /><img src="images/gridMalayTable.png" alt="(ref:TranMalaysia)" width="45%" />
+<p class="caption">
+Figure 12.1: (ref:TranMalaysia)
+</p>
+</div>
+</div>
+<div id="sistem-ncd-di-negara-lain" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> Sistem NCD di Negara Lain<a href="experience-rating-using-bonus-malus.html#sistem-ncd-di-negara-lain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sistem NCD di Brasil dibagi menjadi tujuh kelas, dengan mengikuti tingkat premium (Lemaire dan Zi 1994): 100, 90, 85, 80, 75, 70, dan 65. Tingkat premium ini juga setara dengan diskon berikut Kelas: 0%, 10%, 15%, 20%, 25%, 30% dan 45%. Pemegang polis baru harus: Mulai dari diskon 0%, atau pada tingkat premium 100, dan tahun bebas klaim menunjukkan bahwa pemegang polis dapat bergerak maju dengan diskon satu kelas. Jika satu atau Lebih banyak klaim yang terjadi dalam setahun, pemegang polis harus pindah satu kelas mundur untuk setiap klaim. Gambar 12.2 menunjukkan kelas dan diagram transisi untuk sistem NCD di Brasil. Seperangkat aturan transisi ini juga dapat diringkas sebagai aturan dari -1/+1, yaitu, kelas bonus untuk tahun bebas klaim, dan kelas malus untuk setiap klaim yang dilaporkan.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/FigureTransitionBrazil.png" alt="(ref:TransitionBrazil)" width="45%" /><img src="images/gridBrazilTable.png" alt="(ref:TransitionBrazil)" width="45%" />
+<p class="caption">
+Figure 12.2: (ref:TransitionBrazil)
+</p>
+</div>
+<p>Sistem NCD di Swiss dibagi menjadi dua puluh dua kelas, dengan level premium berikut: 270, 250, 230, 215, 200, 185, 170, 155, 140, 130, 120, 110, 100, 90, 80, 75, 70, 65, 60, 55, 50 dan 45 (Lemaire dan Zi 1994). Level-level ini adalah Juga setara dengan pemuatan berikut (malus): 170%, 150%, 130%, 115%, 100%, 85%, 70%, 55%, 40%, 30%, 20%, dan 10%, dan diskon berikut: 0%, 10%, 20%, 25%, 30%, 35%, 40%, 45%, 50% dan 55%. Pemegang polis baru memiliki untuk memulai dengan diskon 0%, atau pada tingkat premium 100, dan tahun bebas klaim menunjukkan bahwa pemegang polis dapat bergerak maju satu kelas. Jika satu atau lebih Klaim yang terjadi dalam tahun ini, pemegang polis harus pindah empat kelas mundur untuk setiap klaim. Tabel 12.1 dan Gambar 12.3 masing-masing menunjukkan kelas dan diagram transisi untuk sistem NCD di Swiss. Seperangkat aturan transisi ini dapat diringkas sebagai aturan -1/+4.</p>
+<p>Table 12.1. <strong>Classes of <em>NCD</em> (Switzerland)</strong></p>
+<p><span class="math display">\[
+\small{
+\begin{array}{*{20}c}
+\hline
+\text{Classes} &amp; \text{Loadings } (\%) &amp; \text{Classes} &amp; \text{Discounts } (\%)\\
+\hline
+{0} &amp; {170} &amp; {12} &amp; {0}\\
+{1} &amp; {150} &amp; {13} &amp; {10}\\
+{2} &amp; {130} &amp; {14} &amp; {20}\\
+{3} &amp; {115} &amp; {15} &amp; {25}\\
+{4} &amp; {100} &amp; {16} &amp; {30}\\
+{5} &amp; {85} &amp; {17} &amp; {35}\\
+{6} &amp; {70} &amp; {18} &amp; {40}\\
+{7} &amp; {55} &amp; {19} &amp; {45}\\
+{8} &amp; {40} &amp; {20} &amp; {50}\\
+{9} &amp; {30} &amp; {21} &amp; {55}\\
+{10} &amp; {20} &amp;&amp; \\
+{11} &amp; {10} &amp;&amp; \\
+\hline
+\end{array}
+}
+\]</span></p>
 
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TransitionSwitz"></span>
+<img src="images/FigureTransitionSwitz.png" alt="Transition Diagram for NCD Classes (Switzerland)" width="60%" />
+<p class="caption">
+Figure 12.3: <strong>Transition Diagram for <em>NCD</em> Classes (Switzerland)</strong>
+</p>
+</div>
+</div>
+</div>
+<div id="model-rantai-bms-dan-markov" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Model Rantai BMS dan Markov<a href="experience-rating-using-bonus-malus.html#model-rantai-bms-dan-markov" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>BMS dapat diwakili oleh waktu diskrit Rantai Markov. Proses stokastik dikatakan memiliki sifat Markov jika evolusi dari proses di masa depan hanya bergantung pada keadaan sekarang tetapi tidak pada masa lalu. Waktu diskrit Markov Chain adalah proses Markov dengan ruang keadaan diskrit.</p>
+<div id="probabilitas-transisi" class="section level3 hasAnchor" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> Probabilitas Transisi<a href="experience-rating-using-bonus-malus.html#probabilitas-transisi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sebuah Rantai Markov ditentukan oleh probabilitas transisinya. Probabilitas transisi dari keadaan <span class="math inline">\(i\)</span> (pada waktu <span class="math inline">\(n\)</span>) ke keadaan <span class="math inline">\(j\)</span> (pada waktu <span class="math inline">\(n+1\)</span>) disebut probabilitas transisi satu langkah, dan dilambangkan dengan <span class="math inline">\(p_{ij}(n,n+1) = Pr (X_{n + 1} = j|X_n = i)\)</span>, <span class="math inline">\(i = 1,2,\ldots,k\)</span>, <span class="math inline">\(j = 1,2,\ldots,k\)</span>. Untuk transisi umum dari waktu <span class="math inline">\(m\)</span> ke waktu <span class="math inline">\(n\)</span>, untuk <span class="math inline">\(m&lt;n\)</span>, dengan mengkondisikan <span class="math inline">\(X_{o}\)</span> untuk <span class="math inline">\(m\le o\le n\)</span>, kita memiliki persamaan Chapman-Kolmogorov dari</p>
+<p><span class="math display">\[\begin{equation}
+p_{ij}(m,n)=\sum_{l\in S} p_{il}(m,o)p_{lj}(o,n).
+\end{equation}\]</span></p>
+<p>Sebuah Rantai Markov yang homogen waktu memenuhi properti <span class="math inline">\(p_{ij}(n,n+t)=p_{ij}^{(t)}\)</span> untuk semua <span class="math inline">\(n\)</span>. Sebagai contoh, kita memiliki <span class="math inline">\(p_{ij}(n,n+1)=p_{ij}^{(1)}\equiv p_{ij}\)</span>. Dalam kasus ini, persamaan Chapman-Kolmogorov dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+p_{ij}(0,m+n)=\sum_{l\in S} p_{il}(0,m)p_{lj}(m,m+n)=\sum_{l\in S}p_{il}^{(m)}p_{lj}^{(n)}.
+\end{equation}\]</span></p>
+<p>Dalam konteks BMS, transisi kelas NCD diatur oleh probabilitas transisi pada tahun tertentu. Transisi kelas NCD juga merupakan Rantai Markov yang homogen waktu karena seperangkat aturan transisi tetap dan tidak bergantung pada waktu. Kita dapat mewakili probabilitas transisi satu langkah dengan a <span class="math inline">\(k \times k\)</span> <em>transition matrix</em> <span class="math inline">\({\bf P}=(p_{ij})\)</span> that corresponds to <em>NCD</em> classes <span class="math inline">\(0,1,2,\ldots,k-1\)</span>.</p>
+<p><span class="math display">\[
+\small{
+{\bf P} =
+\left[ {\begin{array}{*{20}c}
+p_{00} &amp; p_{01} &amp; \ldots &amp; &amp; &amp; p_{0k-1} \\
+p_{10} &amp; p_{11} &amp; \ldots &amp; &amp; &amp; p_{1k-1} \\
+\vdots &amp; \ddots &amp; &amp; &amp; &amp; \vdots \\
+p_{k-10} &amp; p_{k-11} &amp; \cdots &amp; &amp; &amp; p_{k-1k-1}   
+\end{array} } \right]
+}
+\]</span></p>
+<p>Di sini, elemen ke-<span class="math inline">\((i,j)\)</span> adalah probabilitas transisi dari state <span class="math inline">\(i\)</span> ke state <span class="math inline">\(j\)</span>. Dengan kata lain, setiap baris dari mewakili transisi mengalir keluar dari state, sedangkan setiap kolom merepresentasikan transisi mengalir ke state. Penjumlahan dari transisi probabilitas mengalir keluar dari keadaan harus sama dengan 1, atau setiap baris dari matriks harus berjumlah 1, yaitu <span class="math inline">\(\sum_jp_{ij} = 1\)</span>. Semua probabilitas juga harus tidak boleh negatif (karena mereka adalah probabilitas), yaitu $ p_{ij} $.</p>
+<p>Pertimbangkan sistem <em>NCD</em> Malaysia. Misalkan <span class="math inline">\(\{X_{t}:t=0,1,2,\ldots\}\)</span> adalah kelas <em>NCD</em> yang ditempati oleh pemegang polis pada waktu <span class="math inline">\(t\)</span> dengan ruang keadaan <span class="math inline">\(S=\{0,1,2,3,4,5\}\)</span>. Oleh karena itu, probabilitas transisi pada tahun tanpa klaim sama dengan probabilitas transisi dari state <span class="math inline">\(i\)</span> ke state <span class="math inline">\(i+1\)</span>, yaitu <span class="math inline">\(p_{ii+1}\)</span>. Jika seorang tertanggung memiliki satu atau lebih klaim dalam satu tahun, probabilitas transisi kembali ke keadaan 0 diwakili oleh <span class="math inline">\(p_{i0}=1-p_{ii+1}\)</span>. Oleh karena itu, sistem <em>NCD</em> Malaysia dapat diwakili oleh matriks transisi <span class="math inline">\(6\times 6\)</span> berikut ini:</p>
+<p><span class="math display">\[
+\small{
+{\bf P} =
+\left[ {\begin{array}{*{20}c}
+p_{00}&amp;p_{01}&amp;0&amp;0&amp;0&amp;0\\
+p_{10}&amp;0&amp;p_{12}&amp;0&amp;0&amp;0\\
+p_{20}&amp;0&amp;0&amp;p_{23}&amp;0&amp;0\\
+p_{30}&amp;0&amp;0&amp;0&amp;p_{34}&amp;0\\
+p_{40}&amp;0&amp;0&amp;0&amp;0&amp;p_{45}\\
+p_{50}&amp;0&amp;0&amp;0&amp;0&amp;p_{55}
+\end{array} }\right] =
+\left[ {\begin{array}{*{20}c}
+{1 - p_{01}}&amp;p_{01}&amp;0&amp;0&amp;0&amp;0\\
+{1 - p_{12}}&amp;0&amp;p_{12}&amp;0&amp;0&amp;0\\
+{1 - p_{23}}&amp;0&amp;0&amp;p_{23}&amp;0&amp;0\\
+{1 - p_{34}}&amp;0&amp;0&amp;0&amp;p_{34}&amp;0\\
+{1 - p_{45}}&amp;0&amp;0&amp;0&amp;0&amp;p_{45}\\
+{1 - p_{55}}&amp;0&amp;0&amp;0&amp;0&amp;p_{55}
+\end{array} }\right]
+}
+\]</span></p>
+<p><strong>Example 12.3.1.</strong> Provide the transition matrix for the NCD system in Brazil.</p>
+<p>Solusi <strong>Solusi</strong></p>
+<p>Berdasarkan kelas <em>NCD</em> dan diagram transisi yang ditunjukkan pada [Gambar 12.2], probabilitas tahun tanpa klaim sama dengan probabilitas bergerak maju satu kelas, sedangkan probabilitas memiliki satu atau lebih klaim dalam satu tahun sama dengan probabilitas bergerak mundur satu kelas untuk setiap klaim. Oleh karena itu, setiap baris dapat berisi dua atau lebih probabilitas transisi; satu probabilitas untuk maju ke berikutnya, dan satu atau lebih probabilitas untuk mundur satu kelas. Matriks transisi matriks transisi adalah:</p>
+<p><span class="math display">\[
+\small{
+{\bf P} =
+\left[ {\begin{array}{*{20}{c}}
+{1 - p_{01}}&amp;p_{01}&amp;0&amp;0&amp;0&amp;0&amp;0\\
+{1 - p_{12}}&amp;0&amp;p_{12}&amp;0&amp;0&amp;0&amp;0\\
+{1 - \sum_j p_{2j}}&amp;p_{21}&amp;0&amp;p_{23}&amp;0&amp;0&amp;0\\
+{1 - \sum_j p_{3j}}&amp;p_{31}&amp;p_{32}&amp;0&amp;p_{34}&amp;0&amp;0\\\
+{1 - \sum_j p_{4j}}&amp;p_{41}&amp;p_{42}&amp;p_{43}&amp;0&amp;p_{45}&amp;0\\
+{1 - \sum_j p_{5j}}&amp;p_{51}&amp;p_{52}&amp;p_{53}&amp;p_{54}&amp;0&amp;p_{56}\\
+{1 - \sum_j p_{6j}}&amp;p_{61}&amp;p_{62}&amp;p_{63}&amp;p_{64}&amp;p_{65}&amp;p_{66}
+\end{array} } \right]
+}
+\]</span></p>
+</div>
+</div>
+<div id="bms-dan-distribusi-stasioner" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> BMS dan Distribusi Stasioner<a href="experience-rating-using-bonus-malus.html#bms-dan-distribusi-stasioner" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="distribusi-stasioner" class="section level3 hasAnchor" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> Distribusi Stasioner<a href="experience-rating-using-bonus-malus.html#distribusi-stasioner" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Distribusi stasioner dari Rantai Markov adalah distribusi probabilitas yang tetap tidak berubah seiring berjalannya waktu ke masa depan. Ini diwakili oleh vektor baris <span class="math inline">\(\boldsymbol \pi =(\pi_{1},\pi_{2},\ldots,\pi_{k})\)</span> dengan properti berikut:</p>
+<p><span class="math display">\[\begin{align}
+0\le \pi_{j}\le 1,\notag\\
+\sum\limits_{j}\pi_{j}=1,\notag\\
+\pi_{j}=\sum\limits_{i}\pi_{i}p_{ij}.
+\end{align}\]</span></p>
+<p>Persamaan terakhir dapat ditulis sebagai <span class="math inline">\(\boldsymbol\pi \bf P=\boldsymbol\pi\)</span>. Dua kondisi pertama adalah diperlukan untuk distribusi probabilitas sedangkan sifat terakhir menunjukkan bahwa vektor baris <span class="math inline">\(\boldsymbol\pi\)</span> tidak berubah (yaitu tidak berubah) oleh transisi satu langkah matriks. Dengan kata lain, setelah Rantai Markov mencapai kondisi stasioner,
+distribusi probabilitasnya akan tetap stasioner dari waktu ke waktu. Secara matematis,
+vektor stasioner <span class="math inline">\(\boldsymbol\pi\)</span> juga dapat diperoleh dengan mencari vektor eigen kiri
+dari matriks transisi satu langkah.</p>
+<p><strong>Contoh 12.4.1.</strong> Temukan distribusi stasioner untuk sistem NCD di Malaysia dengan asumsi bahwa probabilitas tahun tanpa klaim untuk semua kelas NCD adalah <span class="math inline">\(p_0\)</span>.</p>
+<p><strong>Solusi</strong> Matriks transisi dapat ditulis ulang sebagai:</p>
+<p><span class="math display">\[
+\small{
+{\bf P} =
+\left[ {\begin{array}{*{20}c}
+{1 - p_{0}}&amp;p_{0}&amp;0&amp;0&amp;0&amp;0\\
+{1 - p_{0}}&amp;0&amp;p_{0}&amp;0&amp;0&amp;0\\
+{1 - p_{0}}&amp;0&amp;0&amp;p_{0}&amp;0&amp;0\\
+{1 - p_{0}}&amp;0&amp;0&amp;0&amp;p_{0}&amp;0\\
+{1 - p_{0}}&amp;0&amp;0&amp;0&amp;0&amp;p_{0}\\
+{1 - p_{0}}&amp;0&amp;0&amp;0&amp;0&amp;p_0
+\end{array} }\right]
+}
+\]</span></p>
+<p>Distribusi stasioner dapat dihitung dengan menggunakan <span class="math inline">\(\pi_{j}=\sum\limits{i}\pi_{i}p_{ij}\)</span>. Solusinya adalah:</p>
+<p><span class="math display">\[
+\small{
+\begin{array}{lll}
+{\pi _0} = \sum\limits_i {\pi_i}p_{i0} = (1 - {p_0})\sum\limits_i {{\pi _i}} = 1 - {p_0}\\
+{\pi _1} = \sum\limits_i {\pi _i}p_{i1} = {\pi_0}{p_{01}} = (1 - {p_0}){p_0}\\
+{\pi _2} = \sum\limits_i {\pi _i}p_{i2} = {\pi _1}{p_{12}} = (1 - {p_0}){p_0}^2\\
+{\pi _3} = \sum\limits_i {\pi _i}p_{i3} = {\pi _2}{p_{23}} = (1 - {p_0}){p_0}^3\\
+{\pi _4} = \sum\limits_i {\pi _i}p_{i4} = {\pi _3}{p_{34}} = (1 - {p_0}){p_0}^4\\
+{\pi _5} = \sum\limits_i {\pi _i}p_{i5} = {\pi _4}{p_{45}} + {\pi _5}{p_{55}} = (1 - {p_0}){p_0}^5 + {\pi _5}{p_0}\\
+\therefore {\pi _5} = \frac{(1 - {p_0}){p_0}^5}{{(1 - {p_0})}} = {p_0}^5
+\end{array}
+}
+\]</span></p>
+<p>Distribusi stasioner yang ditunjukkan pada Contoh 12.4.1 mewakili distribusi asimtotik dari sistem PTM, atau distribusi dalam jangka panjang. Sebagai contoh, dengan asumsi bahwa probabilitas tahun tanpa klaim adalah <span class="math inline">\(p_0=0,90,\)</span> Probabilitas stasioner adalah:</p>
+<p><span class="math display">\[
+\small{
+\begin{array}{l}
+{\pi _0} = 1 - {p_0} = 0.1000\\
+{\pi _1} = (1 - {p_0}){p_0} = 0.0900\\
+{\pi _2} = (1 - {p_0}){p_0}^2 = 0.0810\\
+{\pi _3} = (1 - {p_0}){p_0}^3 = 0.0729\\
+{\pi _4} = (1 - {p_0}){p_0}^4 = 0.0656\\
+{\pi _5} = {p_0}^5 = 0.5905
+\end{array}
+}
+\]</span></p>
+<p>Dengan kata lain, <span class="math inline">\({\pi_0} = 0.10\)</span> menunjukkan bahwa 10% tertanggung pada akhirnya akan masuk ke dalam kelas 0, <span class="math inline">\({\pi_1} = 0.09\)</span> menunjukkan bahwa 9% tertanggung pada akhirnya akan masuk ke kelas 1, dan seterusnya, hingga <span class="math inline">\({\pi _5} = 0.59\)</span>, yang menunjukkan bahwa 59% dari tertanggung pada akhirnya akan masuk ke dalam kelas 5.</p>
+</div>
+<div id="kode-untuk-distribusi-stasioner-r" class="section level3 hasAnchor" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> Kode untuk Distribusi Stasioner <code>R</code><a href="experience-rating-using-bonus-malus.html#kode-untuk-distribusi-stasioner-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kita dapat menggunakan vektor eigen kiri dari matriks transisi untuk menghitung distribusi stasioner. Kode berikut dapat digunakan untuk Hitung vektor eigen kiri: <code>R</code></p>
+<p><strong>1. Membuat Matriks Transisi</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="experience-rating-using-bonus-malus.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
+<span id="cb1-2"><a href="experience-rating-using-bonus-malus.html#cb1-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb1-3"><a href="experience-rating-using-bonus-malus.html#cb1-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb1-4"><a href="experience-rating-using-bonus-malus.html#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb1-5"><a href="experience-rating-using-bonus-malus.html#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,<span class="dv">0</span>,</span>
+<span id="cb1-6"><a href="experience-rating-using-bonus-malus.html#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>,</span>
+<span id="cb1-7"><a href="experience-rating-using-bonus-malus.html#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9</span>)</span>
+<span id="cb1-8"><a href="experience-rating-using-bonus-malus.html#cb1-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]  0.1  0.9  0.0  0.0  0.0  0.0
+## [2,]  0.1  0.0  0.9  0.0  0.0  0.0
+## [3,]  0.1  0.0  0.0  0.9  0.0  0.0
+## [4,]  0.1  0.0  0.0  0.0  0.9  0.0
+## [5,]  0.1  0.0  0.0  0.0  0.0  0.9
+## [6,]  0.1  0.0  0.0  0.0  0.0  0.9</code></pre>
+<p><strong>2. Hitung nilai eigen dan vektor eigen menggunakan fungsi <code>eigen</code></strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="experience-rating-using-bonus-malus.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hint -- left eigenvector is the same as right eigenvector of transpose </span></span>
+<span id="cb3-2"><a href="experience-rating-using-bonus-malus.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#of transition matrix</span></span>
+<span id="cb3-3"><a href="experience-rating-using-bonus-malus.html#cb3-3" aria-hidden="true" tabindex="-1"></a>eigenTP <span class="ot">&lt;-</span> <span class="fu">eigen</span>(<span class="fu">t</span>(TP))</span>
+<span id="cb3-4"><a href="experience-rating-using-bonus-malus.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(eigenTP<span class="sc">$</span>values, <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1]  1.00e+00+0.00e+00i -4.88e-04+3.55e-04i -4.88e-04-3.55e-04i
+## [4]  1.87e-04+5.74e-04i  1.87e-04-5.74e-04i  6.03e-04+0.00e+00i</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="experience-rating-using-bonus-malus.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(eigenTP<span class="sc">$</span>vectors, <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##          [,1]                [,2]                [,3]                [,4]
+## [1,] 0.162+0i  1.15e-13+8.40e-14i  1.15e-13-8.40e-14i -4.40e-14+1.36e-13i
+## [2,] 0.145+0i -6.60e-11-2.03e-10i -6.60e-11+2.03e-10i  1.72e-10+1.25e-10i
+## [3,] 0.131+0i -9.80e-08+3.02e-07i -9.80e-08-3.02e-07i  2.57e-07-1.87e-07i
+## [4,] 0.118+0i  3.84e-04-2.79e-04i  3.84e-04+2.79e-04i -1.47e-04-4.51e-04i
+## [5,] 0.106+0i -7.07e-01+0.00e+00i -7.07e-01+0.00e+00i -7.07e-01+0.00e+00i
+## [6,] 0.954+0i  7.07e-01+0.00e+00i  7.07e-01+0.00e+00i  7.07e-01+0.00e+00i
+##                     [,5]         [,6]
+## [1,] -4.40e-14-1.36e-13i  1.43e-13+0i
+## [2,]  1.72e-10-1.25e-10i  2.13e-10+0i
+## [3,]  2.57e-07+1.87e-07i  3.17e-07+0i
+## [4,] -1.47e-04+4.51e-04i  4.74e-04+0i
+## [5,] -7.07e-01+0.00e+00i  7.07e-01+0i
+## [6,]  7.07e-01+0.00e+00i -7.07e-01+0i</code></pre>
+<p><strong>3. Hitung vektor eigen kiri</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="experience-rating-using-bonus-malus.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#divide entry of first column by sum of elements, so that entries sum to 1</span></span>
+<span id="cb7-2"><a href="experience-rating-using-bonus-malus.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#provide answers in 4 decimal places</span></span>
+<span id="cb7-3"><a href="experience-rating-using-bonus-malus.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(<span class="fu">eigen</span>(<span class="fu">t</span>(TP))<span class="sc">$</span>vectors[,<span class="dv">1</span>]<span class="sc">/</span><span class="fu">sum</span>(<span class="fu">eigen</span>(<span class="fu">t</span>(TP))<span class="sc">$</span>vectors[,<span class="dv">1</span>]), <span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 0.10000+0i 0.09000+0i 0.08100+0i 0.07290+0i 0.06561+0i 0.59050+0i</code></pre>
+<p><strong>Solusi.</strong>
+Seperti yang diberikan di Bagian Lampiran <a href="#S:DiscreteDistributions"><strong>??</strong></a>, ketika jumlah klaim terdistribusi Poisson dengan parameter <span class="math inline">\(\lambda=0.10\)</span>, probabilitas klaim <span class="math inline">\(k\)</span> adalah <span class="math inline">\(p_k = \frac{e^{ - 0.1}{(0.1)}^k}{{k!}}, {\rm{ }}k = 0,1,2, \ldots.\)</span></p>
+</div>
+<div id="evolusi-premium" class="section level3 hasAnchor" number="12.4.3">
+<h3><span class="header-section-number">12.4.3</span> Evolusi Premium<a href="experience-rating-using-bonus-malus.html#evolusi-premium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kita mungkin tertarik untuk mengetahui evolusi premi rata-rata setelah <span class="math inline">\(n\)</span> tahun (atau <span class="math inline">\(n\)</span> langkah). Dalam sistem <em>NCD</em>, probabilitas transisi n langkah, <span class="math inline">\(p_{ij}^{(n)}=\Pr(X_{n}=j|X_{0}=i)\)</span>, dapat digunakan untuk menghitung evolusi premi rata-rata. Probabilitas <span class="math inline">\(p_{ij}^{(n)}\)</span> dapat diperoleh sebagai elemen <span class="math inline">\((i,j)\)</span> ke- dari pangkat <span class="math inline">\(n\)</span> ke- dari matriks transisi <span class="math inline">\({\bf P}\)</span>, yaitu, <span class="math inline">\({\bf P}^{n}\)</span></p>
+<p><strong>Contoh 12.4.4</strong>. Amati premi dalam 20 tahun di bawah sistem NCD di Malaysia, dengan asumsi bahwa probabilitas klaim adalah Poisson didistribusikan dengan parameter <span class="math inline">\(λ=0,10\)</span> dan premi sebelum menerapkan <em>PTM</em> adalah <span class="math inline">\(m=100\)</span>.</p>
+<p>**Solusi. Di bawah NCD Malaysia, kami menggunakan probabilitas Poisson <span class="math inline">\(p_k = \frac{e^{ - 0.1}{(0.1)}^k}{k!}\)</span>, hanya untuk <span class="math inline">\(k=0,1\)</span>. Oleh karena itu, matriks transisi pada tahun pertama adalah:</p>
+<p><span class="math display">\[
+\small{
+{\bf{P}^{(1)}} =
+\left[{\begin{array}{*{20}{c}}
+{0.0952}&amp;{0.9048}&amp;0&amp;0&amp;0&amp;0\\
+{0.0952}&amp;0&amp;{0.9048}&amp;0&amp;0&amp;0\\
+{0.0952}&amp;0&amp;0&amp;{0.9048}&amp;0&amp;0\\
+{0.0952}&amp;0&amp;0&amp;0&amp;{0.9048}&amp;0\\
+{0.0952}&amp;0&amp;0&amp;0&amp;0&amp;{0.9048}\\
+{0.0952}&amp;0&amp;0&amp;0&amp;0&amp;{0.9048}
+\end{array}} \right]
+}
+\]</span></p>
+<p>Premi pada tahun pertama, setelah menerapkan <em>PTM</em>, adalah:</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;= \sum\limits_j \text{(premium)} \times
+\text{(average proportion in class } j) \times \text{(1 - *NCD* in class }j) \\
+&amp;= m\left[ \frac{\sum\limits_i {p_{i0}}}{6}{(1)} +
+\frac{\sum\limits_i {p_{i1}}}{6}{(1 - 0.25)} + \ldots +
+\frac{\sum\limits_i {p_{i5}}}{6}{(1 - 0.55)} \right]\\
+&amp;=
+100[0.0952(1) + 0.1508(0.75) + \cdots + 0.3016(0.45)]\\
+&amp;= 62.55.
+\end{aligned}
+\]</span></p>
+<p>Menggunakan langkah-langkah serupa, premi di <span class="math inline">\(n\)</span>-th tahun untuk <span class="math inline">\(n = 2,...,20\)</span> dapat diamati. Dari , premi dalam 20 tahun adalah: <code>R</code></p>
+<p>62.55, 59.87, 58.06, 57.06, 56.58, 56.58, 56.58, 56.58, 56.58, 56.58,</p>
+<p>56.58, 56.58, 56.58, 56.58, 56.58, 56.58, 56.58, 56.58, 56.58, 56.58.</p>
+</div>
+<div id="program-untuk-evolusi-premium-r" class="section level3 hasAnchor" number="12.4.4">
+<h3><span class="header-section-number">12.4.4</span> Program untuk Evolusi Premium <code>R</code><a href="experience-rating-using-bonus-malus.html#program-untuk-evolusi-premium-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kode berikut dapat digunakan untuk menemukan premi dalam tahun ke-n dan premi dalam 20 tahun di bawah sistem NCD di Malaysia (untuk temukan solusinya dalam Contoh 12.4.4).<code>R</code></p>
+<p><strong>1. Create a Transition Matrix</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="experience-rating-using-bonus-malus.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create transition matrix</span></span>
+<span id="cb9-2"><a href="experience-rating-using-bonus-malus.html#cb9-2" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.0952</span>,<span class="fl">0.9048</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb9-3"><a href="experience-rating-using-bonus-malus.html#cb9-3" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.0952</span>,<span class="dv">0</span>,<span class="fl">0.9048</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb9-4"><a href="experience-rating-using-bonus-malus.html#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.0952</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9048</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb9-5"><a href="experience-rating-using-bonus-malus.html#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.0952</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9048</span>,<span class="dv">0</span>,</span>
+<span id="cb9-6"><a href="experience-rating-using-bonus-malus.html#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.0952</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9048</span>,</span>
+<span id="cb9-7"><a href="experience-rating-using-bonus-malus.html#cb9-7" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.0952</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.9048</span>)</span>
+<span id="cb9-8"><a href="experience-rating-using-bonus-malus.html#cb9-8" aria-hidden="true" tabindex="-1"></a>(TP <span class="ot">&lt;-</span> <span class="fu">matrix</span>(entries,<span class="at">nrow=</span><span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) )</span></code></pre></div>
+<pre><code>##        [,1]   [,2]   [,3]   [,4]   [,5]   [,6]
+## [1,] 0.0952 0.9048 0.0000 0.0000 0.0000 0.0000
+## [2,] 0.0952 0.0000 0.9048 0.0000 0.0000 0.0000
+## [3,] 0.0952 0.0000 0.0000 0.9048 0.0000 0.0000
+## [4,] 0.0952 0.0000 0.0000 0.0000 0.9048 0.0000
+## [5,] 0.0952 0.0000 0.0000 0.0000 0.0000 0.9048
+## [6,] 0.0952 0.0000 0.0000 0.0000 0.0000 0.9048</code></pre>
+<p><strong>2. Create a function for the <span class="math inline">\(n\)</span>th power of a square matrix</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="experience-rating-using-bonus-malus.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create function for nth power of square matrix</span></span>
+<span id="cb11-2"><a href="experience-rating-using-bonus-malus.html#cb11-2" aria-hidden="true" tabindex="-1"></a>powA <span class="ot">&lt;-</span> <span class="cf">function</span>(n) { </span>
+<span id="cb11-3"><a href="experience-rating-using-bonus-malus.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n<span class="sc">==</span><span class="dv">1</span>) <span class="fu">return</span> (TP)</span>
+<span id="cb11-4"><a href="experience-rating-using-bonus-malus.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n<span class="sc">==</span><span class="dv">2</span>) <span class="fu">return</span> (TP<span class="sc">%*%</span>TP)</span>
+<span id="cb11-5"><a href="experience-rating-using-bonus-malus.html#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n<span class="sc">&gt;</span><span class="dv">2</span>) <span class="fu">return</span> ( TP<span class="sc">%*%</span><span class="fu">powA</span>(n<span class="dv">-1</span>))}</span>
+<span id="cb11-6"><a href="experience-rating-using-bonus-malus.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#example for n=3</span></span>
+<span id="cb11-7"><a href="experience-rating-using-bonus-malus.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(<span class="fu">powA</span>(<span class="dv">3</span>), <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##        [,1]   [,2]   [,3]  [,4]  [,5]  [,6]
+## [1,] 0.0952 0.0861 0.0779 0.741 0.000 0.000
+## [2,] 0.0952 0.0861 0.0779 0.000 0.741 0.000
+## [3,] 0.0952 0.0861 0.0779 0.000 0.000 0.741
+## [4,] 0.0952 0.0861 0.0779 0.000 0.000 0.741
+## [5,] 0.0952 0.0861 0.0779 0.000 0.000 0.741
+## [6,] 0.0952 0.0861 0.0779 0.000 0.000 0.741</code></pre>
+<p><strong>3. create function for premium in nth year</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="experience-rating-using-bonus-malus.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define NCD percentage</span></span>
+<span id="cb13-2"><a href="experience-rating-using-bonus-malus.html#cb13-2" aria-hidden="true" tabindex="-1"></a>NCD <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,.<span class="dv">75</span>,.<span class="dv">7</span>,.<span class="dv">6167</span>,.<span class="dv">55</span>,.<span class="dv">45</span>)</span>
+<span id="cb13-3"><a href="experience-rating-using-bonus-malus.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="experience-rating-using-bonus-malus.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create function for premium in nth year</span></span>
+<span id="cb13-5"><a href="experience-rating-using-bonus-malus.html#cb13-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fu">numeric</span>(<span class="dv">0</span>)</span>
+<span id="cb13-6"><a href="experience-rating-using-bonus-malus.html#cb13-6" aria-hidden="true" tabindex="-1"></a>prem <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb13-7"><a href="experience-rating-using-bonus-malus.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(NCD))</span>
+<span id="cb13-8"><a href="experience-rating-using-bonus-malus.html#cb13-8" aria-hidden="true" tabindex="-1"></a>         p[j] <span class="ot">=</span> <span class="fu">mean</span>(<span class="fu">powA</span>(n)[,j])</span>
+<span id="cb13-9"><a href="experience-rating-using-bonus-malus.html#cb13-9" aria-hidden="true" tabindex="-1"></a>         <span class="dv">100</span><span class="sc">*</span><span class="fu">sum</span>(p<span class="sc">*</span>NCD)</span>
+<span id="cb13-10"><a href="experience-rating-using-bonus-malus.html#cb13-10" aria-hidden="true" tabindex="-1"></a>         }</span>
+<span id="cb13-11"><a href="experience-rating-using-bonus-malus.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">#example for n=3</span></span>
+<span id="cb13-12"><a href="experience-rating-using-bonus-malus.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(<span class="fu">prem</span>(<span class="dv">3</span>), <span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 58.06</code></pre>
+<p><strong>4. Provide Premiums for 20 years</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="experience-rating-using-bonus-malus.html#cb15-1" aria-hidden="true" tabindex="-1"></a>premium<span class="ot">=</span><span class="fu">numeric</span>(<span class="dv">0</span>)</span>
+<span id="cb15-2"><a href="experience-rating-using-bonus-malus.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (n <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) {premium[n] <span class="ot">=</span> <span class="fu">prem</span>(n) }</span>
+<span id="cb15-3"><a href="experience-rating-using-bonus-malus.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(premium, <span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##  [1] 62.55 59.87 58.06 57.06 56.58 56.58 56.58 56.58 56.58 56.58 56.58 56.58
+## [13] 56.58 56.58 56.58 56.58 56.58 56.58 56.58 56.58</code></pre>
+<p><strong>Contoh 12.4.5.</strong> Amati premi dalam 20 tahun di bawah sistem NCD di Brasil, dengan asumsi bahwa probabilitas <span class="math inline">\(k\)</span> klaim adalah <span class="math inline">\(p_k = \frac{e^{-0.1}{(0.1)}^k}{k!}, \ \ k = 0,1,2,\ldots\)</span>, dan premi sebelum menerapkan <em>PTM</em> adalah <span class="math inline">\(m=100\)</span>.</p>
+<p><strong>Solusi</strong>. Matriks transisi untuk sistem NCD di Brasil adalah:</p>
+<p><span class="math display">\[
+{\bf P} = \left[
+{\begin{array}{*{20}{c}}
+{0.0952}&amp;{0.9048}&amp;0&amp;0&amp;0&amp;0&amp;0\\
+{0.0952}&amp;0&amp;{0.9048}&amp;0&amp;0&amp;0&amp;0\\
+{0.0047}&amp;{0.0905}&amp;0&amp;{0.9048}&amp;0&amp;0&amp;0\\
+{0.0002}&amp;{0.0045}&amp;{0.0905}&amp;0&amp;{0.9048}&amp;0&amp;0\\
+{0.0000}&amp;{0.0002}&amp;{0.0045}&amp;{0.0905}&amp;0&amp;{0.9048}&amp;0\\
+{0.0000}&amp;{0.0000}&amp;{0.0002}&amp;{0.0045}&amp;{0.0905}&amp;0&amp;{0.9048}\\
+{0.0000}&amp;{0.0000}&amp;{0.0000}&amp;{0.0002}&amp;{0.0045}&amp;{0.0905}&amp;{0.9048}
+\end{array}} \right]
+\]</span></p>
+<p>Using <code>R</code>, the premiums in 20 years are:</p>
+<p>76.69, 73.76, 71.31, 69.38, 67.92, 66.93, 66.40, 66.05, 65.88, 65.78,</p>
+<p>65.72, 65.69, 65.67, 65.66, 65.66, 65.66, 65.66, 65.65, 65.65, 65.65.</p>
+<p>Hasil dalam Contoh 12.4-5 memungkinkan kita untuk mengamati evolusi premi untuk sistem NCD di Malaysia dan Brasil dengan asumsi bahwa jumlah klaim didistribusikan dengan parameter <span class="math inline">\(λ=0,10\)</span>, dan premi sebelum menerapkan <em>PTM</em> adalah <span class="math inline">\(m=100\)</span>. Evolusi premi untuk kedua negara disediakan pada Tabel 12.4, dan ditunjukkan secara grafis pada Gambar 12.4.</p>
+<p>Table 12.4. <strong>Evolution of Premium (Malaysia and Brazil)</strong></p>
+<p><span class="math display">\[
+\small{
+\begin{array}{ccc|ccc}
+\hline
+\text{Year} &amp; \text{Premium} &amp; \text{Premium} &amp; \text{Year} &amp; \text{Premium} &amp; \text{Premium} \\
+&amp; \text{Malaysia} &amp; \text{Brazil} &amp; &amp; \text{Malaysia} &amp; \text{Brazil} \\
+\hline
+    0     &amp; 100   &amp; 100   &amp; 11    &amp; 56.58 &amp; 65.72 \\
+    1     &amp; 62.55 &amp; 76.69 &amp; 12    &amp; 56.58 &amp; 65.69 \\
+    2     &amp; 59.87 &amp; 73.76 &amp; 13    &amp; 56.58 &amp; 65.67 \\
+    3     &amp; 58.06 &amp; 71.31 &amp; 14    &amp; 56.58 &amp; 65.66 \\
+    4     &amp; 57.06 &amp; 69.38 &amp; 15    &amp; 56.58 &amp; 65.66 \\
+    5     &amp; 56.58 &amp; 67.92 &amp; 16    &amp; 56.58 &amp; 65.66 \\
+    6     &amp; 56.58 &amp; 66.93 &amp; 17    &amp; 56.58 &amp; 65.66 \\
+    7     &amp; 56.58 &amp; 66.40 &amp; 18    &amp; 56.58 &amp; 65.65 \\
+    8     &amp; 56.58 &amp; 66.05 &amp; 19    &amp; 56.58 &amp; 65.65 \\
+    9     &amp; 56.58 &amp; 65.88 &amp; 20    &amp; 56.58 &amp; 65.65 \\
+\hline
+\end{array}
+}
+\]</span></p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PremEvolution"></span>
+<img src="images/FigureEvolution.PNG" alt="Evolution of Premium (Malaysia and Brazil)" width="60%" />
+<p class="caption">
+Figure 12.4: <strong>Evolution of Premium (Malaysia and Brazil)</strong>
+</p>
+</div>
+</div>
+<div id="tingkat-konvergensi" class="section level3 hasAnchor" number="12.4.5">
+<h3><span class="header-section-number">12.4.5</span> Tingkat Konvergensi<a href="experience-rating-using-bonus-malus.html#tingkat-konvergensi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kami mungkin juga tertarik untuk menentukan variasi antara probabilitas pada tahun ke-<span class="math inline">\(n\)</span> <span class="math inline">\(p_{ij}^{(n)}\)</span> dan probabilitas stasioner, <span class="math inline">\(\pi _j\)</span>. Variasi antara probabilitas dapat diukur menggunakan:</p>
+<p><span class="math display">\[
+\left| {average(p_{ij}^{(n)}) - {\pi _j}} \right|.
+\]</span></p>
+<p>Oleh karena itu, variasi total dapat diukur dengan jumlah variasi Di semua kelas:</p>
+<p><span class="math display">\[\begin{equation}
+\sum\limits_j {\left| {average(p_{ij}^{(n)}) - {\pi _j}} \right|}.
+\end{equation}\]</span></p>
+<p>Variasi total juga disebut Tingkat konvergensi karena mengukur tingkat konvergensi setelah <span class="math inline">\(n\)</span> tahun (atau <span class="math inline">\(n\)</span> transisi). Lebih rendah Variasi total menyiratkan tingkat konvergensi yang lebih baik antara <span class="math inline">\(n\)</span>-langkah probabilitas transisi dan distribusi stasioner.</p>
+<p><strong>Contoh 12.4.6.</strong> Memberikan variasi total (tingkat konvergensi) dalam 20 tahun di bawah sistem NCD di Malaysia, dengan asumsi bahwa probabilitas klaim adalah Poisson didistribusikan dengan parameter <span class="math inline">\(λ=0,10\)</span>.</p>
+<p><strong>Solution.</strong>
+Using <code>R</code>, probabilitas stasioner adalah:</p>
+<p><span class="math display">\[
+\left[ {\begin{array}{*{20}{c}}
+{{\pi _0}}\\{{\pi_1}}\\{{\pi _2}}\\
+{{\pi _3}}\\{{\pi _4}}\\{{\pi_5}}
+\end{array}} \right]
+= \left[ {\begin{array}{*{20}{c}}
+{0.0952}\\{0.0861}\\{0.0779}\\
+{0.0705}\\{0.0638}\\{0.6064}
+\end{array}} \right]
+\]</span></p>
+<p>Matriks transisi pada tahun pertama adalah:</p>
+<p><span class="math display">\[
+{\bf{P}}^{(1)} = \left[
+{\begin{array}{*{20}{c}}
+{0.0952}&amp;{0.9048}&amp;0&amp;0&amp;0&amp;0\\
+{0.0952}&amp;0&amp;{0.9048}&amp;0&amp;0&amp;0\\
+{0.0952}&amp;0&amp;0&amp;{0.9048}&amp;0&amp;0\\
+{0.0952}&amp;0&amp;0&amp;0&amp;{0.9048}&amp;0\\
+{0.0952}&amp;0&amp;0&amp;0&amp;0&amp;{0.9048}\\
+{0.0952}&amp;0&amp;0&amp;0&amp;0&amp;{0.9048}
+\end{array}} \right]
+\]</span></p>
+<p>Variasi dapat dihitung sebagai:
+<span class="math display">\[
+\begin{array}{l}
+\left| {\sum\limits_i {\frac{p_{i0}^{}}{6}} - {\pi _0}} \right| = 0\\
+\left|{\sum\limits_i {\frac{p_{i1}^{}}{6}} - {\pi _1}} \right| =
+0.0647\\
+\vdots \\
+\left| {\sum\limits_i
+\frac{p_{i5}}{6} - {\pi _5}} \right| =
+.3048
+\end{array}
+\]</span></p>
+<p>Oleh karena itu, variasi total pada tahun pertama adalah</p>
+<p><span class="math display">\[
+\sum\limits_j {\left| {\sum\limits_i {\frac{p_{ij}}{6} - {\pi _j}} } \right|} = 0.6096 .
+\]</span></p>
+<p>Using <code>R</code>, variasi total (atau tingkat konvergensi) dalam 20 tahun adalah:</p>
+<p>0.6096, 0.3941, 0.2252, 0.0958, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.</p>
+</div>
+<div id="r-program-untuk-tingkat-konvergensi" class="section level3 hasAnchor" number="12.4.6">
+<h3><span class="header-section-number">12.4.6</span> <code>R</code> Program untuk Tingkat Konvergensi<a href="experience-rating-using-bonus-malus.html#r-program-untuk-tingkat-konvergensi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kode berikut dapat digunakan untuk menghitung variasi total dalam <code>R</code> <span class="math inline">\(n\)</span>-th tahun, dan total variasi (tingkat konvergensi) di 20 tahun di bawah sistem <em>NCD</em> di Malaysia (solusinya dalam Contoh 12.4.6).</p>
+<p><strong>1. Recall the Transition Matrix</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="experience-rating-using-bonus-malus.html#cb17-1" aria-hidden="true" tabindex="-1"></a>TP</span></code></pre></div>
+<pre><code>##        [,1]   [,2]   [,3]   [,4]   [,5]   [,6]
+## [1,] 0.0952 0.9048 0.0000 0.0000 0.0000 0.0000
+## [2,] 0.0952 0.0000 0.9048 0.0000 0.0000 0.0000
+## [3,] 0.0952 0.0000 0.0000 0.9048 0.0000 0.0000
+## [4,] 0.0952 0.0000 0.0000 0.0000 0.9048 0.0000
+## [5,] 0.0952 0.0000 0.0000 0.0000 0.0000 0.9048
+## [6,] 0.0952 0.0000 0.0000 0.0000 0.0000 0.9048</code></pre>
+<p><strong>2. Create stationary probabilities</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="experience-rating-using-bonus-malus.html#cb19-1" aria-hidden="true" tabindex="-1"></a>SP <span class="ot">&lt;-</span> <span class="fu">eigen</span>(<span class="fu">t</span>(TP))<span class="sc">$</span>vectors[,<span class="dv">1</span>]<span class="sc">/</span><span class="fu">sum</span>(<span class="fu">eigen</span>(<span class="fu">t</span>(TP))<span class="sc">$</span>vectors[,<span class="dv">1</span>])</span>
+<span id="cb19-2"><a href="experience-rating-using-bonus-malus.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(SP, <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 0.0952+0i 0.0861+0i 0.0779+0i 0.0705+0i 0.0638+0i 0.6060+0i</code></pre>
+<p><strong>3. Create a function for total variation in <span class="math inline">\(n\)</span>th year</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="experience-rating-using-bonus-malus.html#cb21-1" aria-hidden="true" tabindex="-1"></a>TV<span class="ot">=</span><span class="cf">function</span>(n){</span>
+<span id="cb21-2"><a href="experience-rating-using-bonus-malus.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  dif  <span class="ot">=</span><span class="fu">numeric</span>(<span class="dv">0</span>)</span>
+<span id="cb21-3"><a href="experience-rating-using-bonus-malus.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(SP))</span>
+<span id="cb21-4"><a href="experience-rating-using-bonus-malus.html#cb21-4" aria-hidden="true" tabindex="-1"></a>  dif[j]<span class="ot">=</span><span class="fu">abs</span>(<span class="fu">mean</span>(<span class="fu">powA</span>(n)[,j])<span class="sc">-</span>SP[j])</span>
+<span id="cb21-5"><a href="experience-rating-using-bonus-malus.html#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(dif)</span>
+<span id="cb21-6"><a href="experience-rating-using-bonus-malus.html#cb21-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-7"><a href="experience-rating-using-bonus-malus.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">#example for n=1</span></span>
+<span id="cb21-8"><a href="experience-rating-using-bonus-malus.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(<span class="fu">TV</span>(<span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 0.6096</code></pre>
+<p><strong>4. Provide total variations (convergence rate) in 20 years</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="experience-rating-using-bonus-malus.html#cb23-1" aria-hidden="true" tabindex="-1"></a>tot.var<span class="ot">=</span><span class="fu">numeric</span>(<span class="dv">0</span>)</span>
+<span id="cb23-2"><a href="experience-rating-using-bonus-malus.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (n <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) {tot.var[n] <span class="ot">=</span> <span class="fu">TV</span>(n)}</span>
+<span id="cb23-3"><a href="experience-rating-using-bonus-malus.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">signif</span>(tot.var,<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##  [1] 6.096e-01 3.941e-01 2.252e-01 9.580e-02 1.943e-15 2.068e-15 2.193e-15
+##  [8] 2.304e-15 2.415e-15 2.415e-15 2.415e-15 2.415e-15 2.415e-15 2.415e-15
+## [15] 2.415e-15 2.415e-15 2.415e-15 2.415e-15 2.415e-15 2.415e-15</code></pre>
+<p><strong>Contoh 12.4.7.</strong> Memberikan variasi total (atau tingkat konvergensi) dalam 20 tahun di bawah sistem NCD di Brasil, dengan asumsi bahwa jumlah klaim didistribusikan sebagai Poisson dengan parameter <span class="math inline">\(λ=0,10\)</span>.</p>
+<p><strong>Solution.</strong>
+Using <code>R</code> code, variasi total (atau tingkat konvergensi) dalam 20 tahun untuk sistem <em>NCD</em> di Brasil adalah:</p>
+<p>1.2617, 1.0536, 0.8465, 0.6412, 0.4362, 0.2316, 0.1531, 0.0747, 0.0480, 0.0232,</p>
+<p>0.0145, 0.0071, 0.0043, 0.0021, 0.0013, 0.0006, 0.0004, 0.0002, 0.0001, 0.0001.</p>
+<hr />
+<p>Contoh 12.4.6-7 memberikan tingkat konvergensi untuk dua <em>BMS</em> yang berbeda (dua negara yang berbeda). <em>BMS</em> Malaysia mencapai stasioner penuh hanya setelah lima tahun, sementara <em>BMS</em> di Brasil membutuhkan waktu lebih lama. Seperti disebutkan dalam <span class="citation">Lemaire (<a href="#ref-Lemaire98" role="doc-biblioref">1998</a>)</span>, <em>BMS</em> yang lebih canggih akan bertemu lebih lambat, dan dianggap sebagai kelemahan karena membutuhkan waktu lebih lama untuk stabil. Tujuan utama <em>BMS</em> adalah untuk memisahkan yang baik driver dari driver yang buruk, dan dengan demikian, diinginkan untuk memiliki proses klasifikasi yang dapat diselesaikan (atau distabilkan) segera setelah mungkin.</p>
+</div>
+</div>
+<div id="bms-dan-peringkat-premium" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> BMS dan Peringkat Premium<a href="experience-rating-using-bonus-malus.html#bms-dan-peringkat-premium" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="peringkat-premium" class="section level3 hasAnchor" number="12.5.1">
+<h3><span class="header-section-number">12.5.1</span> Peringkat Premium<a href="experience-rating-using-bonus-malus.html#peringkat-premium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam pembuatan tarif asuransi motor, <em>BMS</em> adalah bentuk mekanisme penilaian posteriori untuk melengkapi penggunaan klasifikasi risiko <em>apriori</em> seperti yang dijelaskan dalam Bab 8. <strong>Segmentasi</strong> risiko a priori yang diperkenalkan dalam Bagian 8.1 membagi portofolio driver menjadi sejumlah kelas risiko homogen berdasarkan faktor peringkat yang dapat diamati (lihat Bagian 7.4.2), sehingga pemegang polis di kelas risiko yang sama membayar premi <em>apriori</em> yang sama. Alasan mendasar untuk menggunakan BMS yang bergantung pada informasi pengalaman klaim adalah untuk menangani heterogenitas residual dalam setiap kelas risiko homogen (misalnya, lihat diskusi sebelum Contoh 2.6.2) karena variabel yang dapat diamati jauh dari sempurna dalam memprediksi risiko perilaku mengemudi.</p>
+<p>Mekanisme a posteriori yang ideal adalah kerangka kerja premi kredibilitas yang dikembangkan dalam Bab 9 dan khususnya Bagian 9.5 (see also <span class="citation">Dionne &amp; Vanasse (<a href="#ref-DionneVanasse89" role="doc-biblioref">1989</a>)</span>), di mana premi diturunkan secara individual untuk setiap pemegang polis dengan memasukkan a <em>priori</em> dan <em>a posteriori informasi</em>. Namun, penentuan premi individu seperti itu terlalu kompleks dari sudut pandang komersial untuk implementasi praktis oleh perusahaan asuransi motor. Untuk alasan ini, <em>BMS</em> adalah solusi yang disukai dan terdiri dari tiga blok bangunan berikut: (a) kelas BMS; (b) aturan transisi; (c) tingkat premi (juga dikenal sebagai relativitas premi atau koefisien penyesuaian premi).</p>
+<p>Dua blok bangunan pertama telah ditentukan sebelumnya dan telah dibahas di bagian sebelumnya, sedangkan penentuan (bukan ditentukan sebelumnya seperti yang dibahas dalam kasus sistem Malaysia, Brasil dan Swiss) dari relativitas premi penting bagi perusahaan asuransi motor justru karena sifatnya yang saling melengkapi dan koreksi untuk memperhitungkan ketidaksempurnaan atau ketidakakuratan dalam a priori klasifikasi risiko. Perhatikan bahwa relativitas premi di bawah BMS berbeda dari ukuran relativitas yang didefinisikan dalam Bagian 7.4.2, yang merupakan rasio antara risiko yang diharapkan dari kelas risiko tertentu ke kelas risiko dasar, yang keduanya dihitung dari faktor peringkat yang dapat diamati. Dalam subbagian berikut, kami secara singkat memperkenalkan pengaturan pemodelan yang diperlukan untuk mempelajari penentuan relativitas optimal. Kami merujuk pembaca yang tertarik ke <span class="citation">Denuit, Maréchal, Pitrebois, &amp; Walhin (<a href="#ref-Denuit07" role="doc-biblioref">2007</a>)</span> untuk diskusi yang lebih lengkap tentang rincian teknis.</p>
+</div>
+<div id="klasifikasi-risiko-apriori" class="section level3 hasAnchor" number="12.5.2">
+<h3><span class="header-section-number">12.5.2</span> Klasifikasi Risiko Apriori<a href="experience-rating-using-bonus-malus.html#klasifikasi-risiko-apriori" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Mari kita pertimbangkan sebuah portofolio dengan <span class="math inline">\(n\)</span> polis, di mana eksposur risiko (lihat Bagian 7.4.1) dari driver <span class="math inline">\(i\)</span> dilambangkan sebagai <span class="math inline">\(m_{i}\)</span>.
+dilambangkan sebagai <span class="math inline">\(m_{i}\)</span> dan jumlah klaim yang dilaporkan diwakili oleh <span class="math inline">\(Y_{i}\)</span>, mengikuti notasi yang digunakan di Bagian 8.2.). Biarkan <span class="math inline">\({\bf x}_{i}^{T}=(x_{i1},x_{i2},\ldots, x_{iq})\)</span> menjadi vektor variabel teramati
+variabel yang dapat diamati untuk <span class="math inline">\(i=1,2,\ldots, n\)</span>. Regresi Poisson seperti yang dikembangkan di Bagian <a href="#S:RC:PoissonRegression"><strong>??</strong></a> biasanya dipilih untuk memodelkan <span class="math inline">\(Y_{i}\)</span> di bawah kerangka kerja generalized linear models (GLM), lihat Bagian 13.3.2.2 dan juga <span class="citation">McCullagh &amp; Nelder (<a href="#ref-McCullaghNelder89" role="doc-biblioref">1989</a>)</span>.</p>
+<p>Kita kemudian dapat menyatakan <em>prediksi frekuensi</em> klaim yang diharapkan untuk pemegang polis <span class="math inline">\(i\)</span> sebagai</p>
+<p>where <span class="math inline">\(\hat{\beta}_{0},\hat{\beta}_{1},\ldots,\hat{\beta}_{q}\)</span> are the estimated regression coefficients. In other words, <span class="math inline">\(\lambda_{i}=\frac{\mu_{i}}{m_{i}}\)</span> adalah frekuensi klaim yang diharapkan per unit eksposur, yang merupakan fokus utama dari klasifikasi risiko <em>apriori.</em></p>
+</div>
+<div id="pemodelan-heterogenitas-residual" class="section level3 hasAnchor" number="12.5.3">
+<h3><span class="header-section-number">12.5.3</span> Pemodelan Heterogenitas Residual<a href="experience-rating-using-bonus-malus.html#pemodelan-heterogenitas-residual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Karena faktor-faktor yang tidak teramati yang dapat mempengaruhi perilaku mengemudi tidak diperhitungkan
+dalam memperkirakan frekuensi klaim yang diharapkan, perusahaan asuransi harus memperhitungkan
+untuk heterogenitas residual dalam setiap kelas risiko <em>a priori</em> dengan memperkenalkan
+komponen efek acak <span class="math inline">\(\Theta_{i}\)</span> ke dalam distribusi bersyarat <span class="math inline">\(Y_{i}\)</span>.
+Dengan <span class="math inline">\(\Theta_{i}=\theta\)</span>, <span class="math inline">\(Y_{i}\)</span> mengikuti distribusi Poisson dengan rata-rata
+<span class="math inline">\(\lambda_{i}\theta\)</span>, yaitu,</p>
+<p><span class="math display">\[\begin{equation}
+\Pr(Y_{i}=k|\Theta_{i}=\theta)=\exp(-\lambda_{i}\theta)\frac{(\lambda_{i}\theta)^{k}}{k!},k=0,1,2,\ldots.
+\end{equation}\]</span></p>
+<p>Mengikuti dari pengaturan model gamma-Poisson di Bagian 9.5.1, kami selanjutnya mengasumsikan bahwa semua <span class="math inline">\(\Theta_{i}\)</span>’s independen dan mengikuti <span class="math inline">\((a,a)\)</span> distribusi dengan fungsi densitas berikut seperti yang diperkenalkan dalam Lampiran 18.2</p>
+<p><span class="math display">\[\begin{equation}
+f(\theta)=\frac{1}{\Gamma(a)}a^{a}\theta^{a-1}\exp(-a\theta), \quad \theta &gt; 0,
+\end{equation}\]</span></p>
+<p>di mana penggunaan campuran gamma-Poisson menghasilkan distribusi binomial negatif untuk <span class="math inline">\(Y_i\)</span> (lihat Bagian 2.6). Dengan spesifikasi tersebut, kami memperoleh <span class="math inline">\(\mathrm{E}(\Theta_{i})=1\)</span> dan karenanya <span class="math inline">\(\mathrm{E}(Y_{i})=\mathrm{E}(\mathrm{E}(Y_{i}|\Theta_{i}))=\mathrm{E}(\lambda_{i}\Theta_{i})=\lambda_{i}\)</span>. menurut hukum harapan yang diulangi dalam Lampiran 16.2.1.<br />
+</p>
+<p>Selanjutnya, dapat ditunjukkan bahwa distribusi posterior <span class="math inline">\(\Theta| y_{1}=k_{1},y_{2}=k_{2},\ldots,y_{n}=k_{n}\)</span> adalah gamma didistribusikan dengan Parameter <span class="math inline">\(a+\sum_{j=1}^{n} k_{j}\)</span> and <span class="math inline">\(a+n\lambda_{i}\)</span> dan karena itu Bayesian Premi diberikan sebagai
+<span class="math display">\[\begin{equation}
+\mathrm{E}(\lambda_{i}\Theta| y_{1}=k_{1},\ldots,y_{n}=k_{n})=\lambda_{i}\times\frac{a+\sum_{j=1}^{n} k_{j}}{a+n\lambda_{i}}.
+\end{equation}\]</span></p>
+<p>Di sisi lain, menerapkan estimasi tertimbang kredibilitas Bühlmann di Bagian 9.3 ke model gamma-Poisson di Bagian 9.5.1, kami memperoleh</p>
+<p><span class="math display">\[\begin{align*}
+EPV&amp;=\mathrm{E}(\mathrm{Var}(Y| \lambda_{i}))=\mathrm{E}(\lambda_{i}\Theta)=\lambda_{i},\\
+VHM&amp;=\mathrm{Var}(\mathrm{E}(Y| \lambda_{i}))=\mathrm{Var}(\lambda_{i}\Theta)=\frac{\lambda_{i}^{2}}{a},\\
+K&amp;=\frac{EPV}{VHM}=\frac{\lambda_{i}}{\frac{\lambda_{i}^{2}}{a}}=\frac{a}{\lambda_{i}},\\
+Z&amp;=\frac{n}{n+K}=\frac{n\lambda_{i}}{n\lambda_{i}+a},\\
+\bar{Y}&amp;=\frac{\sum_{j=1}^{n} y_{j}}{n}=\frac{\sum_{j=1}^{n} k_{j}}{n},\\
+\mu&amp;=\mathrm{E}(\mathrm{E}(Y_{i}| \lambda_{i}))=\mathrm{E}(\lambda_{i}\Theta)=\lambda_{i},
+\end{align*}\]</span>
+dan karenanya perkiraan tertimbang kredibilitas sebagai
+<span class="math display">\[\begin{align}
+\mathrm{E}(\mathrm{E}(Y| \lambda_{i})| y_{1}=k_{1},\ldots,y_{n}=k_{n})&amp;=\mathrm{E}(\lambda_{i}\Theta| y_{1}=k_{1},\ldots,y_{n}=k_{n})\notag\\
+&amp;=Z\times \bar{Y}+ (1-Z)\times \mu\notag\\
+&amp;=\frac{n\lambda_{i}}{n\lambda_{i}+a}\times \frac{\sum_{j=1}^{n} k_{j}}{n}+\frac{a}{n\lambda_{i}+a}\times\lambda_{i}\notag\\
+&amp;=\frac{\lambda_{i}(a+\sum_{j=1}^{n} k_{j})}{a+n\lambda_{i}},
+\end{align}\]</span>
+that is, premi kredibilitas Bühlmann sama persis dengan premi Bayesian.</p>
+<p>Terlepas dari kenyataan bahwa premi kredibilitas yang diperoleh secara individual di atas merupakan premi <em>a posteriori</em> yang ideal, dalam praktiknya perusahaan asuransi menggunakan BMS sebagai pendekatan diskrit untuk premi Bayesian, karena
+struktur BMS yang relatif lebih sederhana dibandingkan dengan perhitungan individual premi kredibilitas.</p>
+</div>
+<div id="distribusi-stasioner-yang-memungkinkan-heterogenitas-residual" class="section level3 hasAnchor" number="12.5.4">
+<h3><span class="header-section-number">12.5.4</span> Distribusi Stasioner yang Memungkinkan Heterogenitas Residual<a href="experience-rating-using-bonus-malus.html#distribusi-stasioner-yang-memungkinkan-heterogenitas-residual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Misalkan seorang pengemudi dipilih secara acak dari portofolio yang telah
+diklasifikasikan ke dalam kelas risiko <span class="math inline">\(h\)</span> melalui penggunaan variabel <em>a priori</em> yang diamati.
+Frekuensi klaim yang diharapkan sebenarnya untuk driver ini diberikan oleh <span class="math inline">\(\Lambda\Theta\)</span>,
+di mana <span class="math inline">\(\Lambda\)</span> adalah frekuensi klaim yang diharapkan yang tidak diketahui <em>a priori</em> dan <span class="math inline">\(\Theta\)</span>
+adalah heterogenitas residual acak. Selanjutnya, mari kita nyatakan <span class="math inline">\(w_{g}\)</span> sebagai proporsi
+dari pengemudi di kelas risiko <span class="math inline">\(g\)</span> ke-, yaitu, <span class="math inline">\(w_{g}=\Pr(\Lambda=\lambda_{g})=\frac{n_{g}}{n}\)</span>
+di mana <span class="math inline">\(n_{g}\)</span> adalah jumlah pengemudi yang diklasifikasikan dalam kelas risiko ke-g. Catatan
+bahwa karena ada dua konsep kelas risiko yang berbeda (dari klasifikasi risiko <em>a priori</em>)
+dan kelas <em>BMS</em> (atau <em>NCD</em>) (untuk mekanisme pemeringkatan <em>a posteriori</em>), untuk selanjutnya
+selanjutnya dalam bab ini kami akan menyebut kelas <em>BMS</em> sebagai tingkat <em>BMS</em> sebagai gantinya
+untuk menghindari kebingungan yang tidak perlu.</p>
+<p>Misalkan <span class="math inline">\(p_{ij}^{\lambda}(\lambda\theta)\)</span> adalah probabilitas transisi dari
+Tingkat <em>BMS</em> <span class="math inline">\(i\)</span> ke tingkat <span class="math inline">\(j\)</span> untuk pengemudi dengan frekuensi klaim yang diharapkan <span class="math inline">\(\lambda\theta\)</span> yang termasuk dalam kelas risiko dengan prediksi frekuensi klaim <span class="math inline">\(\lambda\)</span>. Dengan kata lain,matriks transisi satu langkah dapat dituliskan sebagai <span class="math inline">\({\bf P}(\lambda\theta; \lambda)=\{p_{ij}^{\lambda}(\lambda\theta)\}\)</span>. Vektor baris dari distribusi stasioner distribusi <span class="math inline">\(\boldsymbol \pi=(\pi_{0}^{\lambda}(\lambda\theta),\pi_{1}^{\lambda}(\lambda\theta),\ldots,\pi_{k-1}^{\lambda}(\lambda\theta))\)</span> dapat diperoleh dengan menyelesaikan kondisi berikut:</p>
+<p><span class="math display">\[\begin{align*}
+\boldsymbol\pi(\lambda\theta;\lambda)&amp;=\boldsymbol\pi(\lambda\theta;\lambda){\bf P}(\lambda\theta;\lambda)\\
+\boldsymbol\pi(\lambda\theta;\lambda){\bf 1}&amp;=1,
+\end{align*}\]</span></p>
+<p>di mana <span class="math inline">\(\bf 1\)</span> adalah vektor kolom dari <span class="math inline">\(\bf 1\)</span> dan <span class="math inline">\(\pi_{\ell}^{\lambda}(\lambda\theta)\)</span>
+adalah probabilitas stasioner untuk pengemudi dengan frekuensi klaim yang diharapkan sebenarnya dari
+<span class="math inline">\(\lambda\theta\)</span> untuk berada di level <span class="math inline">\(\ell\)</span> ketika kondisi keseimbangan stabil
+tercapai dalam jangka panjang. Perhatikan bahwa dengan memasukkan efek acak
+parameter <span class="math inline">\(\theta\)</span>, ekspresi (bukan nilai numerik) untuk
+<span class="math inline">\(\pi_{\ell}^{\lambda}(\lambda\theta)\)</span> dapat ditemukan dengan menggunakan MATLAB, tetapi tidak dengan <code>R</code>.</p>
+<p>Dengan pengaturan ini, probabilitas driver untuk tetap berada di level <em>BMS</em> <span class="math inline">\(L=\ell\)</span> untuk
+<span class="math inline">\(\ell=0,1,\ldots,k-1\)</span> dalam konteks seluruh portofolio dapat diperoleh sebagai</p>
+<p><span class="math display">\[\begin{align}
+\Pr(L=\ell)&amp;=\sum\limits_{g=1}^{h}\Pr(L=\ell|\Lambda=\lambda_{g})\Pr(\Lambda=\lambda_{g})\notag\\
+&amp;=\sum\limits_{g=1}^{h}\Pr(\Lambda=\lambda_{g})\int_{0}^{\infty}\Pr(L=\ell|\Lambda=\lambda_{g},\Theta=\theta)f(\theta)d\theta\notag\\
+&amp;=\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta.
+\end{align}\]</span></p>
+</div>
+<div id="penentuan-relativitas-optimal" class="section level3 hasAnchor" number="12.5.5">
+<h3><span class="header-section-number">12.5.5</span> Penentuan Relativitas Optimal<a href="experience-rating-using-bonus-malus.html#penentuan-relativitas-optimal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Relativitas optimal</strong> untuk setiap tingkat BMS pertama kali diturunkan oleh <span class="citation">Norberg (<a href="#ref-Norberg76" role="doc-biblioref">1976</a>)</span> melalui minimalisasi fungsi objektif berikut, yang lebih umum dikenal sebagai kriteria Norberg:</p>
+<p><span class="math display">\[\begin{equation*}
+\min \mathrm{E}\left((\bar{\lambda}\Theta-\bar{\lambda}r_{L})^{2}\right)\equiv\min\mathrm{E}\left((\Theta-r_{L})^{2}\right),
+\end{equation*}\]</span></p>
+<p>di mana <span class="math inline">\(\hat{\lambda}\)</span> adalah frekuensi klaim yang diharapkan secara konstan untuk semua pemegang polis
+tanpa adanya klasifikasi risiko <em>apriori</em> dan <span class="math inline">\(r_{L}\)</span> adalah relativitas premi untuk
+Tingkat BMS <span class="math inline">\(L\)</span>. <span class="citation">Pitrebois, Denuit, &amp; Walhin (<a href="#ref-Pitrebois03" role="doc-biblioref">2003</a>)</span> kemudian memasukkan informasi dari *a priori
+klasifikasi risiko ke dalam optimasi fungsi tujuan yang sama dari</p>
+<p><span class="math display">\[\begin{equation*}
+\min\mathrm{E}\left((\Theta-r_{L})^{2}\right)
+\end{equation*}\]</span></p>
+<p>untuk mendapatkan <span class="math inline">\(r_{L}\)</span> secara analitis. <span class="citation">Tan, Li, Li, &amp; Balasooriya (<a href="#ref-Tan15" role="doc-biblioref">2015</a>)</span> lebih lanjut mengusulkan minimalisasi dari fungsi objektif berikut</p>
+<p><span class="math display">\[\begin{equation}
+\min\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}\right), \text{ subject to } \mathrm{E}(r_{L})=1,
+\end{equation}\]</span></p>
+<p>di bawah kendala keseimbangan keuangan (yaitu, relativitas premi yang diharapkan sama dengan 1) untuk menentukan relativitas optimal dari <em>BMS</em> yang diberikan tingkat <em>BMS</em> yang telah ditentukan sebelumnya dan aturan transisi, di mana</p>
+<p><span class="math display">\[\begin{align*}
+\min\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}\right)&amp;=\sum\limits_{\ell=0}^{k-1}\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}|L=\ell\right)\Pr(L=\ell)\\
+&amp;=\sum\limits_{\ell=0}^{k-1}\mathrm{E}\left(\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}|L=\ell,\Lambda\right)|L=\ell\right)\Pr(L=\ell)\\
+&amp;=\sum\limits_{\ell=0}^{k-1}\sum\limits_{g=1}^{h}\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}|L=\ell,\Lambda=\lambda_{g}\right)\times\Pr\left(\Lambda=\lambda_{g}|L=\ell\right)\Pr(L=\ell)\\
+&amp;=\sum\limits_{\ell=0}^{k-1}\sum\limits_{g=1}^{h}\int_{0}^{\infty}(\lambda_{g}\theta-\lambda_{g}r_{\ell})^{2}\pi_{\ell}(\lambda_{g}\theta)w_{g}f(\theta)d\theta\\
+&amp;=\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\sum\limits_{\ell=0}^{k-1}(\lambda_{g}\theta-\lambda_{g}r_{\ell})^{2}\pi_{\ell}(\lambda_{g}\theta)f(\theta)d\theta.
+\end{align*}\]</span></p>
+<p>Sangatlah penting bahwa relativitas optimal memiliki rata-rata 100%,
+sehingga bonus dan minus saling mengimbangi satu sama lain untuk menghasilkan
+kondisi keseimbangan keuangan. Perhatikan bahwa pendekatan yang dipertimbangkan oleh <span class="citation">Pitrebois et al. (<a href="#ref-Pitrebois03" role="doc-biblioref">2003</a>)</span>
+tidak membutuhkan kendala keseimbangan finansial karena solusi analitis
+untuk fungsi objektifnya diberikan oleh <span class="math inline">\(r_{\ell}=\mathrm{E}(\Theta|L=\ell)\)</span>, jadi
+mengikuti bahwa <span class="math inline">\(\mathrm{E}(r_{L})=\mathrm{E}\left(\mathrm{E}(\Theta|L)\right) =\mathrm{E}(\Theta)=1\)</span>
+dengan pilihan spesifik distribusi gamma <span class="math inline">\((a,a)\)</span> untuk distribusi acak
+komponen efek $$.</p>
+<p>Dalam hal ini, masalah optimasi dapat diselesaikan dengan menentukan Lagrangian
+sebagai</p>
+<p><span class="math display">\[\begin{align}
+\mathcal{L}({\bf r}, \alpha)&amp;=\mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}\right)+\alpha(\mathrm{E}(r_{L})-1)\notag\\
+&amp;=\sum\limits_{\ell=0}^{k-1} \mathrm{E}\left((\Lambda\Theta-\Lambda r_{L})^{2}|L=\ell\right)\Pr(L=\ell)+\alpha\left(\sum\limits_{\ell=0}^{k-1}r_{\ell}\Pr(L=\ell)-1\right),\notag
+\end{align}\]</span>
+where <span class="math inline">\({\bf r}=(r_{0},r_{1},\ldots,r_{k-1})^{T}\)</span>. Kondisi urutan pertama yang diperlukan diberikan sebagai berikut
+<span class="math display">\[\begin{align*}
+\Pr(L=\ell)\times \left(2\mathrm{E}\left(\Lambda^{2}\Theta-\Lambda^{2}r_{L}|L=\ell\right)-\alpha\right)&amp;=0, \qquad \ell=0,1,\ldots, k-1,\\
+\sum\limits_{\ell=0}^{k-1}r_{\ell}\Pr(L=\ell)-1&amp;=0.
+\end{align*}\]</span>
+Finally, solusi yang ditetapkan untuk <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(r_{\ell}, \ell=0,1,\ldots,k-1\)</span> diperoleh sebagai
+<span class="math display">\[\begin{align*}
+\alpha&amp;=\frac{\left(\sum\limits_{\ell=0}^{k-1}\frac{\mathrm{E}(\Lambda^{2}\Theta|L=\ell)\Pr(L=\ell)}{\mathrm{E}(\Lambda^{2}|L=\ell)}\right)-1}{\sum\limits_{\ell=0}^{k-1}\frac{\Pr(L=\ell)}{2\mathrm{E}(\Lambda^{2}|L=\ell)}},\\
+r_{\ell}&amp;=\frac{\mathrm{E}(\Lambda^{2}\Theta|L=\ell)}{\mathrm{E}(\Lambda^{2}|L=\ell)}-\frac{\alpha}{2\mathrm{E}(\Lambda^{2}|L=\ell)},
+\end{align*}\]</span>
+dimana
+<span class="math display">\[\begin{align*}
+\Pr(L=\ell)&amp;=\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta,\\
+\mathrm{E}(\Lambda^{2}\Theta|L=\ell)&amp;=\frac{\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\lambda_{g}^{2}\theta\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta}{\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta},\\
+\mathrm{E}(\Lambda^{2}|L=\ell)&amp;=\frac{\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\lambda_{g}^{2}\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta}{\sum\limits_{g=1}^{h}w_{g}\int_{0}^{\infty}\pi_{\ell}^{\lambda_{g}}(\lambda_{g}\theta)f(\theta)d\theta}.
+\end{align*}\]</span>
+Jika kita melakukan optimasi tanpa kendala keseimbangan keuangan, maka kita memperoleh
+<span class="math display">\[\begin{align*}
+\alpha^{\text{unconstrained}}&amp;=0,\\
+r_{\ell}^{\text{unconstrained}}&amp;=\frac{\mathrm{E}(\Lambda^{2}\Theta|L=\ell)}{\mathrm{E}(\Lambda^{2}|L=\ell)}.
+\end{align*}\]</span></p>
+</div>
+<div id="ilustrasi-numerik" class="section level3 hasAnchor" number="12.5.6">
+<h3><span class="header-section-number">12.5.6</span> Ilustrasi Numerik<a href="experience-rating-using-bonus-malus.html#ilustrasi-numerik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada bagian ini, kami menyajikan dua ilustrasi numerik yang mengintegrasikan informasi <em>a priori</em> ke dalam penentuan relativitas optimal. Kami mempertimbangkan
+mempertimbangkan tingkat <em>BMS</em> dan aturan transisi dari sistem Malaysia dan Brasil, tetapi memilih untuk menghitung himpunan relativitas optimal dan bukan
+tingkat premi tertentu yang diberikan sebelumnya. Dalam ilustrasi kami, kami juga mengasumsikan bahwa 3 nilai <em>a priori</em> frekuensi klaim yang diharapkan berikut ini diberikan</p>
+<p><span class="math inline">\(\lambda_{1}=0.1\)</span>,<span class="math inline">\(\lambda_{2}=0.3\)</span>, and <span class="math inline">\(\lambda_{3}=0.5\)</span> dengan proporsi sebagai berikut</p>
+<p><span class="math display">\[
+\Pr(\Lambda=\lambda_{1})=0.6, \Pr(\Lambda=\lambda_{2})=0.3, \Pr(\Lambda=\lambda_{3})=0.1.
+\]</span></p>
+<p>Kami juga mengasumsikan bahwa parameter gamma ditetapkan pada <span class="math inline">\(a = 1,5\)</span>. Perhatikan bahwa meskipun asumsi-asumsi pemodelan ini sederhana, tujuannya di sini adalah untuk mendemonstrasikan
+penentuan relativitas optimal di bawah pengaturan yang relatif sederhana, dan bahwa prosedur optimasi untuk <em>BMS</em> tetap sama meskipun
+Klasifikasi risiko <em>a priori</em> dilakukan secara ekstensif. Kami merujuk pembaca yang tertarik pada data klaim kendaraan bermotor seperti yang didokumentasikan di <span class="citation">De Jong &amp; Heller (<a href="#ref-Dejong08" role="doc-biblioref">2008</a>)</span>
+untuk melakukan segmentasi risiko <em>a priori</em> sebelum melanjutkan ke penentuan relativitas optimal.</p>
+<p>Lebih lanjut, seperti yang disebutkan sebelumnya, penyertaan parameter efek acak <span class="math inline">\(\theta\)</span> menyiratkan bahwa ekspresi yang diperlukan (bukan nilai numerik) untuk
+probabilitas stasioner <span class="math inline">\(\pi_{\ell}^{\lambda}(\lambda\theta)\)</span> yang akan digunakan
+untuk integral selanjutnya dapat ditemukan dengan menggunakan MATLAB tetapi tidak dengan <code>R</code>. Juga, karena
+bentuk probabilitas stasioner yang diperoleh agak rumit, dalam subbagian ini kita
+kami memilih untuk tidak menyertakan kode <code>R</code> untuk penentuan relativitas optimal.
+Lebih penting lagi, kami berharap bahwa kunci utama dari subbab ini adalah agar pembaca dapat
+mendapatkan pemahaman konseptual yang solid secara keseluruhan tentang bagaimana memperhitungkan semua
+informasi yang relevan dalam desain sistem bonus-malus.</p>
+<p>Untuk <em>BMS</em> Malaysia dengan 6 level dan aturan transisi -1/Top,
+nilai numerik yang diperoleh dari relativitas optimal disajikan dalam [Tabel 12.5].
+bersama dengan probabilitas stasioner. Kami menemukan bahwa sekitar setengah dari pemegang polis
+akan menempati tingkat <em>BMS</em> tertinggi dengan relativitas premi terendah dalam jangka panjang
+jangka panjang ketika kondisi stasioner telah tercapai. Kami juga mengamati bahwa batasan
+relativitas optimal lebih tinggi daripada yang tidak dibatasi karena
+kebutuhan untuk memenuhi kendala keseimbangan keuangan.</p>
+<p><a id=tab:12.5></a></p>
+<p>Table 12.5. <strong>Optimal Relativities with <span class="math inline">\(k=6\)</span> levels and transition rule of -1/Top</strong></p>
+<p><span class="math display">\[
+\small{
+\begin{array}{*{20}c}
+\hline
+\text{Level }\ell &amp; \Pr(L=\ell) &amp; r_{\ell} &amp; r_{\ell}^{\text{unconstrained}}\\
+\hline
+{0} &amp; {16.22\%} &amp; {131.99\%} &amp; {126.33\%}\\
+{1} &amp; {11.29\%} &amp; {127.33\%} &amp; {120.66\%}\\
+{2} &amp; {8.49\%} &amp; {120.64\%} &amp; {113.03\%}\\
+{3} &amp; {6.69\%} &amp; {113.93\%} &amp; {105.44\%}\\
+{4} &amp; {5.44\%} &amp; {107.79\%} &amp; {98.47\%}\\
+{5} &amp; {51.87\%} &amp; {78.06\%} &amp; {63.15\%}\\
+{E(r_{L})} &amp; &amp; {100\%} &amp; {88.87\%} \\
+\hline
+\end{array}
+}
+\]</span></p>
+<p>Selain itu, kami melihat bahwa kecuali untuk level <em>BMS</em> tertinggi (level 5),
+level <em>BMS</em> lainnya akan membebankan biaya tambahan malus kepada pemegang polis yang menempati
+yang menempati level tersebut. Temuan ini tidak mengejutkan karena kerangka teori kami
+kerangka teori kami di sini adalah untuk menentukan relativitas optimal mengingat perhitungan
+premi dasar <em>a priori</em> dengan hanya mengandalkan informasi frekuensi klaim
+tetapi tidak dengan tingkat keparahan klaim. Dalam praktiknya, perusahaan asuransi dapat memperkenalkan
+Tingkat NCD hanya dengan diskon (bonus) tetapi tidak dengan beban (minus) karena
+premi dasar <em>a priori</em> telah dinaikkan dengan mempertimbangkan
+informasi frekuensi klaim dan tingkat keparahan klaim.</p>
+<p>Untuk <em>BMS</em> Brasil dengan 7 tingkat dan aturan transisi -1/+1,
+nilai numerik yang sesuai dari relativitas optimal ditunjukkan pada [Tabel 12.6].
+Kami menemukan bahwa sekitar tiga perempat pemegang polis akan menempati level <em>BMS</em> tertinggi
+dengan relativitas premi terendah pada kondisi stasioner. Temuan ini adalah
+terutama disebabkan oleh penalti yang lebih ringan pada aturan transisi -1/+1
+dibandingkan dengan aturan -1/Top, sehingga lebih banyak pemegang polis yang diharapkan
+menempati tingkat <em>BMS</em> tertinggi. Mirip dengan contoh sebelumnya, kami menemukan bahwa relativitas optimal yang tidak dibatasi
+yang tidak dibatasi lebih rendah dan menghasilkan nilai <span class="math inline">\(\mathrm{E}(r_{L})\)</span> yang lebih rendah.
+<a id=tab:12.6></a></p>
+<p>Table 12.6. <strong>Optimal Relativities with <span class="math inline">\(k=7\)</span> levels and transition rule of -1/+1</strong></p>
+<p><span class="math display">\[
+\small{
+\begin{array}{*{20}c}
+\hline
+\text{Level }\ell &amp; \Pr(L=\ell) &amp; r_{\ell} &amp; r_{\ell}^{\text{unconstrained}}\\
+\hline
+{0} &amp; {3.28\%} &amp; {234.94\%} &amp; {228.65\%}\\
+{1} &amp; {2.21\%} &amp; {196.24\%} &amp; {189.27\%}\\
+{2} &amp; {2.00\%} &amp; {168.36\%} &amp; {160.59\%}\\
+{3} &amp; {2.38\%} &amp; {145.96\%} &amp; {137.03\%}\\
+{4} &amp; {4.02\%} &amp; {125.53\%} &amp; {114.63\%}\\
+{5} &amp; {10.38\%} &amp; {106.25\%} &amp; {91.12\%}\\
+{6} &amp; {75.74\%} &amp; {85.89\%} &amp; {61.74\%}\\
+{E(r_{L})} &amp; &amp; {100\%} &amp; {78.97\%} \\
+\hline
+\end{array}
+}
+\]</span></p>
+<p>Perhatikan bahwa nilai yang diperoleh dari relativitas optimal mungkin tidak diinginkan untuk
+implementasi komersial karena kemungkinan perbedaan yang tidak teratur
+yang tidak beraturan di antara tingkat <em>BMS</em> yang berdekatan. Untuk mengatasi masalah ini, perusahaan asuransi dapat mempertimbangkan
+memberlakukan relativitas optimal linier dalam bentuk <span class="math inline">\(r_{L}^{\text{linear}}=a+bL\)</span>
+dengan menyelesaikan optimasi terkendala berikut ini dengan kendala ketidaksamaan</p>
+<p><span class="math display">\[
+\min\mathrm{E}\left((\Lambda\Theta-\Lambda a-\Lambda bL)^{2}\right) \text{ subject to }
+a+b\mathrm{E}(L)\ge 1.
+\]</span></p>
+<p>Kami merujuk pembaca yang tertarik ke <span class="citation">Tan (<a href="#ref-Tan16" role="doc-biblioref">2016</a>)</span> untuk berdiskusi tentang bagaimana memasukkan batasan komersial lebih lanjut dan juga solusi untuk masalah optimasi yang melibatkan kondisi Kuhn-Tucker.</p>
+
+</div>
+</div>
+</div>
+<h3>Bibliography<a href="bibliography.html#bibliography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Dejong08" class="csl-entry">
+De Jong, P., &amp; Heller, G. Z. (2008). <em>Generalized linear models for insurance data</em>. Cambridge University Press, Cambridge.
+</div>
+<div id="ref-Denuit07" class="csl-entry">
+Denuit, M., Maréchal, X., Pitrebois, S., &amp; Walhin, J.-F. (2007). <em>Actuarial modelling of claim counts: Risk classification, credibility and bonus-malus systems</em>. John Wiley &amp; Sons, Chichester.
+</div>
+<div id="ref-DionneVanasse89" class="csl-entry">
+Dionne, G., &amp; Vanasse, C. (1989). A generalization of automobile insurance rating models: The negative binomial distribution with a regression component. <em>ASTIN Bulletin</em>, <em>19(2)</em>, 199–212.
+</div>
+<div id="ref-Lemaire98" class="csl-entry">
+Lemaire, J. (1998). Bonus-malus systems: The european and asian approach to merit rating. <em>North American Actuarial Journal</em>, <em>2(1)</em>, 26–38.
+</div>
+<div id="ref-McCullaghNelder89" class="csl-entry">
+McCullagh, P., &amp; Nelder, J. A. (1989). <em>Generalized linear models, second edition</em>. Chapman &amp; Hall, London.
+</div>
+<div id="ref-Norberg76" class="csl-entry">
+Norberg, R. (1976). A credibility theory for automobile bonus system. <em>Scandinavian Actuarial Journal</em>, <em>2</em>, 92–107.
+</div>
+<div id="ref-Pitrebois03" class="csl-entry">
+Pitrebois, S., Denuit, M., &amp; Walhin, J.-F. (2003). Setting a bonus-malus scale in the presence of other rating factors: Taylor’s work revisited. <em>ASTIN Bulletin</em>, <em>33(2)</em>, 419–436.
+</div>
+<div id="ref-Tan16" class="csl-entry">
+Tan, C. I. (2016). Optimal design of a bonus-malus system: Linear relativities revisited. <em>Annals of Actuarial Science</em>, <em>10(1)</em>, 52–64.
+</div>
+<div id="ref-Tan15" class="csl-entry">
+Tan, C. I., Li, J., Li, J. S.-H., &amp; Balasooriya, U. (2015). Optimal relativities and transition rules of a bonus-malus system. <em>Insurance: Mathematics and Economics</em>, <em>61</em>, 255–263.
+</div>
 </div>
             </section>
 
