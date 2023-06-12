@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -119,6 +123,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -179,16 +205,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
 <li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -264,10 +287,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
@@ -442,9 +464,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="14.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#variable-types"><i class="fa fa-check"></i><b>14.1</b> Variable Types</a>
 <ul>
-<li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#qualitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Qualitative Variables</a></li>
-<li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.2</b> Quantitative Variables</a></li>
-<li class="chapter" data-level="14.1.3" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.3</b> Multivariate Variables</a></li>
+<li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Quantitative Variables</a></li>
+<li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.2</b> Multivariate Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#classic-measures-of-scalar-associations"><i class="fa fa-check"></i><b>14.2</b> Classic Measures of Scalar Associations</a>
 <ul>
@@ -1136,25 +1157,19 @@ Exponential
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="appendix-d-summary-of-distributions.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(invgamma)</span>
-<span id="cb1-2"><a href="appendix-d-summary-of-distributions.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="appendix-d-summary-of-distributions.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(invgamma)</span></code></pre></div>
 <pre><code>## 
-## Attaching package: &#39;actuar&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:invgamma&#39;:
+## Attaching package: &#39;invgamma&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:actuar&#39;:
 ## 
 ##     dinvexp, dinvgamma, pinvexp, pinvgamma, qinvexp, qinvgamma,
 ##     rinvexp, rinvgamma</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     sd, var</code></pre>
-<pre><code>## The following object is masked from &#39;package:grDevices&#39;:
-## 
-##     cm</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="appendix-d-summary-of-distributions.html#cb6-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb6-2"><a href="appendix-d-summary-of-distributions.html#cb6-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb6-3"><a href="appendix-d-summary-of-distributions.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dexp</span>(X,<span class="at">rate=</span><span class="dv">1</span><span class="sc">/</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb6-4"><a href="appendix-d-summary-of-distributions.html#cb6-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Exponential Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="appendix-d-summary-of-distributions.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(actuar)</span>
+<span id="cb160-2"><a href="appendix-d-summary-of-distributions.html#cb160-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb160-3"><a href="appendix-d-summary-of-distributions.html#cb160-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb160-4"><a href="appendix-d-summary-of-distributions.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dexp</span>(X,<span class="at">rate=</span><span class="dv">1</span><span class="sc">/</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb160-5"><a href="appendix-d-summary-of-distributions.html#cb160-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Exponential Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
 </div>
 <div id="id_1pB" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1203,11 +1218,11 @@ Inverse Exponential
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="appendix-d-summary-of-distributions.html#cb7-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
-<span id="cb7-2"><a href="appendix-d-summary-of-distributions.html#cb7-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb7-3"><a href="appendix-d-summary-of-distributions.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvexp</span>(X, <span class="at">rate =</span>  <span class="dv">1</span><span class="sc">/</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb7-4"><a href="appendix-d-summary-of-distributions.html#cb7-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Exponential Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="appendix-d-summary-of-distributions.html#cb161-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb161-2"><a href="appendix-d-summary-of-distributions.html#cb161-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb161-3"><a href="appendix-d-summary-of-distributions.html#cb161-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvexp</span>(X, <span class="at">rate =</span>  <span class="dv">1</span><span class="sc">/</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb161-4"><a href="appendix-d-summary-of-distributions.html#cb161-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Exponential Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
 </div>
 <div id="odC" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1257,12 +1272,12 @@ Single Parameter Pareto
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="appendix-d-summary-of-distributions.html#cb8-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb8-2"><a href="appendix-d-summary-of-distributions.html#cb8-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb8-3"><a href="appendix-d-summary-of-distributions.html#cb8-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb8-4"><a href="appendix-d-summary-of-distributions.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dpareto1</span>(X,<span class="at">shape=</span>alpha,<span class="at">min=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb8-5"><a href="appendix-d-summary-of-distributions.html#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Single Parameter Pareto Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="appendix-d-summary-of-distributions.html#cb162-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb162-2"><a href="appendix-d-summary-of-distributions.html#cb162-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb162-3"><a href="appendix-d-summary-of-distributions.html#cb162-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb162-4"><a href="appendix-d-summary-of-distributions.html#cb162-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dpareto1</span>(X,<span class="at">shape=</span>alpha,<span class="at">min=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb162-5"><a href="appendix-d-summary-of-distributions.html#cb162-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Single Parameter Pareto Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 </div>
 </div>
 <div id="two-parameter-distributions" class="section level3 hasAnchor" number="18.2.2">
@@ -1332,12 +1347,12 @@ Pareto
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="appendix-d-summary-of-distributions.html#cb9-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb9-2"><a href="appendix-d-summary-of-distributions.html#cb9-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">200</span></span>
-<span id="cb9-3"><a href="appendix-d-summary-of-distributions.html#cb9-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb9-4"><a href="appendix-d-summary-of-distributions.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span>actuar<span class="sc">::</span><span class="fu">dpareto</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb9-5"><a href="appendix-d-summary-of-distributions.html#cb9-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Pareto Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="appendix-d-summary-of-distributions.html#cb163-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb163-2"><a href="appendix-d-summary-of-distributions.html#cb163-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb163-3"><a href="appendix-d-summary-of-distributions.html#cb163-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb163-4"><a href="appendix-d-summary-of-distributions.html#cb163-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span>actuar<span class="sc">::</span><span class="fu">dpareto</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb163-5"><a href="appendix-d-summary-of-distributions.html#cb163-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Pareto Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
 </div>
 <div id="id_2pB" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1387,12 +1402,12 @@ Inverse Pareto
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="appendix-d-summary-of-distributions.html#cb10-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb10-2"><a href="appendix-d-summary-of-distributions.html#cb10-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb10-3"><a href="appendix-d-summary-of-distributions.html#cb10-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">3000</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
-<span id="cb10-4"><a href="appendix-d-summary-of-distributions.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvpareto</span>(X,<span class="at">shape=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb10-5"><a href="appendix-d-summary-of-distributions.html#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Pareto Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="appendix-d-summary-of-distributions.html#cb164-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb164-2"><a href="appendix-d-summary-of-distributions.html#cb164-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb164-3"><a href="appendix-d-summary-of-distributions.html#cb164-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">3000</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
+<span id="cb164-4"><a href="appendix-d-summary-of-distributions.html#cb164-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvpareto</span>(X,<span class="at">shape=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb164-5"><a href="appendix-d-summary-of-distributions.html#cb164-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Pareto Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
 </div>
 <div id="id_2pC" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1424,15 +1439,15 @@ Loglogistic
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="appendix-d-summary-of-distributions.html#cb11-1" aria-hidden="true" tabindex="-1"></a>dloglogistic <span class="ot">&lt;-</span> <span class="cf">function</span>(x, gamma, theta){</span>
-<span id="cb11-2"><a href="appendix-d-summary-of-distributions.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">=</span>gamma<span class="sc">*</span>(x<span class="sc">/</span>theta)<span class="sc">^</span>gamma<span class="sc">/</span>(x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">+</span>(x<span class="sc">/</span>theta)<span class="sc">^</span>gamma)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb11-3"><a href="appendix-d-summary-of-distributions.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(p)</span>
-<span id="cb11-4"><a href="appendix-d-summary-of-distributions.html#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-5"><a href="appendix-d-summary-of-distributions.html#cb11-5" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb11-6"><a href="appendix-d-summary-of-distributions.html#cb11-6" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb11-7"><a href="appendix-d-summary-of-distributions.html#cb11-7" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb11-8"><a href="appendix-d-summary-of-distributions.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dloglogistic</span>(X,<span class="at">gamma=</span>gamma,<span class="at">theta=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="appendix-d-summary-of-distributions.html#cb165-1" aria-hidden="true" tabindex="-1"></a>dloglogistic <span class="ot">&lt;-</span> <span class="cf">function</span>(x, gamma, theta){</span>
+<span id="cb165-2"><a href="appendix-d-summary-of-distributions.html#cb165-2" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">=</span>gamma<span class="sc">*</span>(x<span class="sc">/</span>theta)<span class="sc">^</span>gamma<span class="sc">/</span>(x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">+</span>(x<span class="sc">/</span>theta)<span class="sc">^</span>gamma)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb165-3"><a href="appendix-d-summary-of-distributions.html#cb165-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(p)</span>
+<span id="cb165-4"><a href="appendix-d-summary-of-distributions.html#cb165-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb165-5"><a href="appendix-d-summary-of-distributions.html#cb165-5" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb165-6"><a href="appendix-d-summary-of-distributions.html#cb165-6" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb165-7"><a href="appendix-d-summary-of-distributions.html#cb165-7" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb165-8"><a href="appendix-d-summary-of-distributions.html#cb165-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dloglogistic</span>(X,<span class="at">gamma=</span>gamma,<span class="at">theta=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
 </div>
 <div id="id_2pD" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1482,12 +1497,12 @@ Paralogistic
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="appendix-d-summary-of-distributions.html#cb12-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb12-2"><a href="appendix-d-summary-of-distributions.html#cb12-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb12-3"><a href="appendix-d-summary-of-distributions.html#cb12-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb12-4"><a href="appendix-d-summary-of-distributions.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dparalogis</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb12-5"><a href="appendix-d-summary-of-distributions.html#cb12-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Paralogistic Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="appendix-d-summary-of-distributions.html#cb166-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb166-2"><a href="appendix-d-summary-of-distributions.html#cb166-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb166-3"><a href="appendix-d-summary-of-distributions.html#cb166-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb166-4"><a href="appendix-d-summary-of-distributions.html#cb166-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dparalogis</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb166-5"><a href="appendix-d-summary-of-distributions.html#cb166-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Paralogistic Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 </div>
 <div id="id_2pE" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1535,12 +1550,12 @@ Gamma
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="appendix-d-summary-of-distributions.html#cb13-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb13-2"><a href="appendix-d-summary-of-distributions.html#cb13-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb13-3"><a href="appendix-d-summary-of-distributions.html#cb13-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb13-4"><a href="appendix-d-summary-of-distributions.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgamma</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb13-5"><a href="appendix-d-summary-of-distributions.html#cb13-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Gamma Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="appendix-d-summary-of-distributions.html#cb167-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb167-2"><a href="appendix-d-summary-of-distributions.html#cb167-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb167-3"><a href="appendix-d-summary-of-distributions.html#cb167-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb167-4"><a href="appendix-d-summary-of-distributions.html#cb167-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgamma</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb167-5"><a href="appendix-d-summary-of-distributions.html#cb167-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Gamma Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
 </div>
 <div id="id_2pF" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1588,12 +1603,12 @@ Inverse Gamma
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="appendix-d-summary-of-distributions.html#cb14-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb14-2"><a href="appendix-d-summary-of-distributions.html#cb14-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb14-3"><a href="appendix-d-summary-of-distributions.html#cb14-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">400</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
-<span id="cb14-4"><a href="appendix-d-summary-of-distributions.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvgamma</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb14-5"><a href="appendix-d-summary-of-distributions.html#cb14-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Gamma Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="appendix-d-summary-of-distributions.html#cb168-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb168-2"><a href="appendix-d-summary-of-distributions.html#cb168-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb168-3"><a href="appendix-d-summary-of-distributions.html#cb168-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">400</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
+<span id="cb168-4"><a href="appendix-d-summary-of-distributions.html#cb168-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvgamma</span>(X,<span class="at">shape=</span>alpha,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb168-5"><a href="appendix-d-summary-of-distributions.html#cb168-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Gamma Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 </div>
 <div id="id_2pG" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1643,12 +1658,12 @@ Weibull
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="appendix-d-summary-of-distributions.html#cb15-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb15-2"><a href="appendix-d-summary-of-distributions.html#cb15-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb15-3"><a href="appendix-d-summary-of-distributions.html#cb15-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb15-4"><a href="appendix-d-summary-of-distributions.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dweibull</span>(X,<span class="at">shape=</span>alpha, <span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb15-5"><a href="appendix-d-summary-of-distributions.html#cb15-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Weibull Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="appendix-d-summary-of-distributions.html#cb169-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb169-2"><a href="appendix-d-summary-of-distributions.html#cb169-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb169-3"><a href="appendix-d-summary-of-distributions.html#cb169-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb169-4"><a href="appendix-d-summary-of-distributions.html#cb169-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dweibull</span>(X,<span class="at">shape=</span>alpha, <span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb169-5"><a href="appendix-d-summary-of-distributions.html#cb169-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Weibull Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
 </div>
 <div id="id_2pH" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1698,12 +1713,12 @@ Inverse Weibull
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="appendix-d-summary-of-distributions.html#cb16-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb16-2"><a href="appendix-d-summary-of-distributions.html#cb16-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb16-3"><a href="appendix-d-summary-of-distributions.html#cb16-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb16-4"><a href="appendix-d-summary-of-distributions.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvweibull</span>(X,<span class="at">shape=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb16-5"><a href="appendix-d-summary-of-distributions.html#cb16-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Weibull Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="appendix-d-summary-of-distributions.html#cb170-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb170-2"><a href="appendix-d-summary-of-distributions.html#cb170-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb170-3"><a href="appendix-d-summary-of-distributions.html#cb170-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb170-4"><a href="appendix-d-summary-of-distributions.html#cb170-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvweibull</span>(X,<span class="at">shape=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb170-5"><a href="appendix-d-summary-of-distributions.html#cb170-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Weibull Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
 </div>
 <div id="id_2pI" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1756,12 +1771,12 @@ Uniform
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="appendix-d-summary-of-distributions.html#cb17-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb17-2"><a href="appendix-d-summary-of-distributions.html#cb17-2" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb17-3"><a href="appendix-d-summary-of-distributions.html#cb17-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(alpha,beta,<span class="dv">1</span>)</span>
-<span id="cb17-4"><a href="appendix-d-summary-of-distributions.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dunif</span>(X,alpha,beta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb17-5"><a href="appendix-d-summary-of-distributions.html#cb17-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Continuous Uniform Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="appendix-d-summary-of-distributions.html#cb171-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb171-2"><a href="appendix-d-summary-of-distributions.html#cb171-2" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb171-3"><a href="appendix-d-summary-of-distributions.html#cb171-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(alpha,beta,<span class="dv">1</span>)</span>
+<span id="cb171-4"><a href="appendix-d-summary-of-distributions.html#cb171-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dunif</span>(X,alpha,beta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb171-5"><a href="appendix-d-summary-of-distributions.html#cb171-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Continuous Uniform Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-124-1.png" width="672" /></p>
 </div>
 <div id="id_2pJ" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1814,12 +1829,12 @@ Normal
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="appendix-d-summary-of-distributions.html#cb18-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb18-2"><a href="appendix-d-summary-of-distributions.html#cb18-2" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb18-3"><a href="appendix-d-summary-of-distributions.html#cb18-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">200</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
-<span id="cb18-4"><a href="appendix-d-summary-of-distributions.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dnorm</span>(X,<span class="at">mean=</span>mu,<span class="at">sd=</span>sigma),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb18-5"><a href="appendix-d-summary-of-distributions.html#cb18-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Normal Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="appendix-d-summary-of-distributions.html#cb172-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb172-2"><a href="appendix-d-summary-of-distributions.html#cb172-2" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb172-3"><a href="appendix-d-summary-of-distributions.html#cb172-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">200</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
+<span id="cb172-4"><a href="appendix-d-summary-of-distributions.html#cb172-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dnorm</span>(X,<span class="at">mean=</span>mu,<span class="at">sd=</span>sigma),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb172-5"><a href="appendix-d-summary-of-distributions.html#cb172-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Normal Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-125-1.png" width="672" /></p>
 </div>
 <div id="id_2pK" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1860,12 +1875,12 @@ Cauchy
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="appendix-d-summary-of-distributions.html#cb19-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb19-2"><a href="appendix-d-summary-of-distributions.html#cb19-2" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb19-3"><a href="appendix-d-summary-of-distributions.html#cb19-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb19-4"><a href="appendix-d-summary-of-distributions.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dcauchy</span>(X,<span class="at">location=</span>alpha,<span class="at">scale=</span>beta),</span>
-<span id="cb19-5"><a href="appendix-d-summary-of-distributions.html#cb19-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Cauchy Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="appendix-d-summary-of-distributions.html#cb173-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb173-2"><a href="appendix-d-summary-of-distributions.html#cb173-2" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb173-3"><a href="appendix-d-summary-of-distributions.html#cb173-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb173-4"><a href="appendix-d-summary-of-distributions.html#cb173-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dcauchy</span>(X,<span class="at">location=</span>alpha,<span class="at">scale=</span>beta),</span>
+<span id="cb173-5"><a href="appendix-d-summary-of-distributions.html#cb173-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Cauchy Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
 </div>
 </div>
 <div id="three-parameter-distributions" class="section level3 hasAnchor" number="18.2.3">
@@ -1923,13 +1938,13 @@ Generalized Pareto
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="appendix-d-summary-of-distributions.html#cb20-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb20-2"><a href="appendix-d-summary-of-distributions.html#cb20-2" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb20-3"><a href="appendix-d-summary-of-distributions.html#cb20-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb20-4"><a href="appendix-d-summary-of-distributions.html#cb20-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb20-5"><a href="appendix-d-summary-of-distributions.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgenpareto</span>(X,<span class="at">shape1=</span>alpha,<span class="at">shape2=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb20-6"><a href="appendix-d-summary-of-distributions.html#cb20-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Generalized Pareto Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="appendix-d-summary-of-distributions.html#cb174-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb174-2"><a href="appendix-d-summary-of-distributions.html#cb174-2" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb174-3"><a href="appendix-d-summary-of-distributions.html#cb174-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb174-4"><a href="appendix-d-summary-of-distributions.html#cb174-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb174-5"><a href="appendix-d-summary-of-distributions.html#cb174-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgenpareto</span>(X,<span class="at">shape1=</span>alpha,<span class="at">shape2=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb174-6"><a href="appendix-d-summary-of-distributions.html#cb174-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Generalized Pareto Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-127-1.png" width="672" /></p>
 </div>
 <div id="id_3pB" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -1979,13 +1994,13 @@ Burr
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="appendix-d-summary-of-distributions.html#cb21-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb21-2"><a href="appendix-d-summary-of-distributions.html#cb21-2" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb21-3"><a href="appendix-d-summary-of-distributions.html#cb21-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb21-4"><a href="appendix-d-summary-of-distributions.html#cb21-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb21-5"><a href="appendix-d-summary-of-distributions.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dburr</span>(X,<span class="at">shape1=</span>alpha,<span class="at">shape2=</span>gamma,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb21-6"><a href="appendix-d-summary-of-distributions.html#cb21-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Burr Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="appendix-d-summary-of-distributions.html#cb175-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb175-2"><a href="appendix-d-summary-of-distributions.html#cb175-2" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb175-3"><a href="appendix-d-summary-of-distributions.html#cb175-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb175-4"><a href="appendix-d-summary-of-distributions.html#cb175-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb175-5"><a href="appendix-d-summary-of-distributions.html#cb175-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dburr</span>(X,<span class="at">shape1=</span>alpha,<span class="at">shape2=</span>gamma,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb175-6"><a href="appendix-d-summary-of-distributions.html#cb175-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Burr Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-128-1.png" width="672" /></p>
 </div>
 <div id="id_3pC" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -2035,13 +2050,13 @@ Inverse Burr
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="appendix-d-summary-of-distributions.html#cb22-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb22-2"><a href="appendix-d-summary-of-distributions.html#cb22-2" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb22-3"><a href="appendix-d-summary-of-distributions.html#cb22-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb22-4"><a href="appendix-d-summary-of-distributions.html#cb22-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb22-5"><a href="appendix-d-summary-of-distributions.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvburr</span>(X,<span class="at">shape1=</span>tau,<span class="at">shape2=</span>gamma,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb22-6"><a href="appendix-d-summary-of-distributions.html#cb22-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Burr Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="appendix-d-summary-of-distributions.html#cb176-1" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb176-2"><a href="appendix-d-summary-of-distributions.html#cb176-2" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb176-3"><a href="appendix-d-summary-of-distributions.html#cb176-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb176-4"><a href="appendix-d-summary-of-distributions.html#cb176-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb176-5"><a href="appendix-d-summary-of-distributions.html#cb176-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvburr</span>(X,<span class="at">shape1=</span>tau,<span class="at">shape2=</span>gamma,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb176-6"><a href="appendix-d-summary-of-distributions.html#cb176-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Burr Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
 </div>
 </div>
 <div id="four-parameter-distribution" class="section level3 hasAnchor" number="18.2.4">
@@ -2113,15 +2128,15 @@ Lognormal
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="appendix-d-summary-of-distributions.html#cb23-1" aria-hidden="true" tabindex="-1"></a>dlognorm <span class="ot">&lt;-</span> <span class="cf">function</span>(x,mu,sigma){</span>
-<span id="cb23-2"><a href="appendix-d-summary-of-distributions.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">=</span>(<span class="dv">1</span><span class="sc">/</span>(x<span class="sc">*</span>sigma<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span>pi)))<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>((<span class="fu">log</span>(x)<span class="sc">-</span>mu)<span class="sc">/</span>sigma)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb23-3"><a href="appendix-d-summary-of-distributions.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(p)</span>
-<span id="cb23-4"><a href="appendix-d-summary-of-distributions.html#cb23-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-5"><a href="appendix-d-summary-of-distributions.html#cb23-5" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb23-6"><a href="appendix-d-summary-of-distributions.html#cb23-6" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">12</span></span>
-<span id="cb23-7"><a href="appendix-d-summary-of-distributions.html#cb23-7" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb23-8"><a href="appendix-d-summary-of-distributions.html#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dlognorm</span>(X,<span class="at">mu=</span>mu,<span class="at">sigma=</span>sigma),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="appendix-d-summary-of-distributions.html#cb177-1" aria-hidden="true" tabindex="-1"></a>dlognorm <span class="ot">&lt;-</span> <span class="cf">function</span>(x,mu,sigma){</span>
+<span id="cb177-2"><a href="appendix-d-summary-of-distributions.html#cb177-2" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">=</span>(<span class="dv">1</span><span class="sc">/</span>(x<span class="sc">*</span>sigma<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span>pi)))<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>((<span class="fu">log</span>(x)<span class="sc">-</span>mu)<span class="sc">/</span>sigma)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb177-3"><a href="appendix-d-summary-of-distributions.html#cb177-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(p)</span>
+<span id="cb177-4"><a href="appendix-d-summary-of-distributions.html#cb177-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb177-5"><a href="appendix-d-summary-of-distributions.html#cb177-5" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb177-6"><a href="appendix-d-summary-of-distributions.html#cb177-6" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb177-7"><a href="appendix-d-summary-of-distributions.html#cb177-7" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb177-8"><a href="appendix-d-summary-of-distributions.html#cb177-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dlognorm</span>(X,<span class="at">mu=</span>mu,<span class="at">sigma=</span>sigma),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
 </p>
 </div>
 <div id="odB" class="tabcontent">
@@ -2174,12 +2189,12 @@ Inverse Gaussian
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="appendix-d-summary-of-distributions.html#cb24-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb24-2"><a href="appendix-d-summary-of-distributions.html#cb24-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb24-3"><a href="appendix-d-summary-of-distributions.html#cb24-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">100</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
-<span id="cb24-4"><a href="appendix-d-summary-of-distributions.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvgauss</span>(X,<span class="at">mean=</span>mu,<span class="at">dispersion=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb24-5"><a href="appendix-d-summary-of-distributions.html#cb24-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Gaussian Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="appendix-d-summary-of-distributions.html#cb178-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb178-2"><a href="appendix-d-summary-of-distributions.html#cb178-2" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb178-3"><a href="appendix-d-summary-of-distributions.html#cb178-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">100</span>,<span class="at">by=</span><span class="dv">1</span>)</span>
+<span id="cb178-4"><a href="appendix-d-summary-of-distributions.html#cb178-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dinvgauss</span>(X,<span class="at">mean=</span>mu,<span class="at">dispersion=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb178-5"><a href="appendix-d-summary-of-distributions.html#cb178-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Inverse Gaussian Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
 </div>
 </div>
 <div id="distributions-with-finite-support" class="section level3 hasAnchor" number="18.2.6">
@@ -2237,13 +2252,13 @@ Beta
 \end{array}
 \end{matrix}
 \]</span></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="appendix-d-summary-of-distributions.html#cb25-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb25-2"><a href="appendix-d-summary-of-distributions.html#cb25-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb25-3"><a href="appendix-d-summary-of-distributions.html#cb25-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb25-4"><a href="appendix-d-summary-of-distributions.html#cb25-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">1</span>,<span class="at">by=</span>.<span class="dv">0001</span>)</span>
-<span id="cb25-5"><a href="appendix-d-summary-of-distributions.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dbeta</span>(X,<span class="at">shape1=</span>a,<span class="at">shape2=</span>b,<span class="at">ncp=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb25-6"><a href="appendix-d-summary-of-distributions.html#cb25-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Beta Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="appendix-d-summary-of-distributions.html#cb179-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb179-2"><a href="appendix-d-summary-of-distributions.html#cb179-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb179-3"><a href="appendix-d-summary-of-distributions.html#cb179-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb179-4"><a href="appendix-d-summary-of-distributions.html#cb179-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">1</span>,<span class="at">by=</span>.<span class="dv">0001</span>)</span>
+<span id="cb179-5"><a href="appendix-d-summary-of-distributions.html#cb179-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dbeta</span>(X,<span class="at">shape1=</span>a,<span class="at">shape2=</span>b,<span class="at">ncp=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb179-6"><a href="appendix-d-summary-of-distributions.html#cb179-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Beta Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
 </div>
 <div id="fsB" class="tabcontent">
 <p><span class="topright" onclick="this.parentElement.style.display=&#39;none&#39;"><button>Hide</button></span></p>
@@ -2292,14 +2307,14 @@ Generalized Beta
 \end{matrix}
 \]</span></p>
 <p><strong>Illustrative Graph</strong></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="appendix-d-summary-of-distributions.html#cb26-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb26-2"><a href="appendix-d-summary-of-distributions.html#cb26-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb26-3"><a href="appendix-d-summary-of-distributions.html#cb26-3" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb26-4"><a href="appendix-d-summary-of-distributions.html#cb26-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb26-5"><a href="appendix-d-summary-of-distributions.html#cb26-5" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb26-6"><a href="appendix-d-summary-of-distributions.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgenbeta</span>(X,<span class="at">shape1=</span>a,<span class="at">shape2=</span>b,<span class="at">shape3=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
-<span id="cb26-7"><a href="appendix-d-summary-of-distributions.html#cb26-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Generalized Beta Distribution&quot;</span>)</span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="appendix-d-summary-of-distributions.html#cb180-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb180-2"><a href="appendix-d-summary-of-distributions.html#cb180-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb180-3"><a href="appendix-d-summary-of-distributions.html#cb180-3" aria-hidden="true" tabindex="-1"></a>tau <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb180-4"><a href="appendix-d-summary-of-distributions.html#cb180-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb180-5"><a href="appendix-d-summary-of-distributions.html#cb180-5" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb180-6"><a href="appendix-d-summary-of-distributions.html#cb180-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>X,<span class="at">y=</span><span class="fu">dgenbeta</span>(X,<span class="at">shape1=</span>a,<span class="at">shape2=</span>b,<span class="at">shape3=</span>tau,<span class="at">scale=</span>theta),<span class="at">type=</span><span class="st">&quot;l&quot;</span>,</span>
+<span id="cb180-7"><a href="appendix-d-summary-of-distributions.html#cb180-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Probability density&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>,<span class="at">main=</span><span class="st">&quot;Generalized Beta Distribution&quot;</span>)</span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -2396,7 +2411,7 @@ Illustrative Graph
 \end{array}
 \end{matrix}
 \]</span></p>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
 </div>
 </div>
 

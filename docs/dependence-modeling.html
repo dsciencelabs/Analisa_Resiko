@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -119,6 +123,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -179,16 +205,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
 <li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -264,10 +287,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
 <ul>
@@ -673,19 +695,19 @@ r = \frac{\widehat{Cov}(X,Y)}{\sqrt{\widehat{Cov}(X,X)\widehat{Cov}(Y,Y)}}
 <p>Statistik korelasi r secara luas digunakan untuk menggambarkan hubungan linier antara variabel acak. Ini adalah pengestimasi (nonparametrik) dari parameter korelasi ρ, yang didefinisikan sebagai kovariansi dibagi dengan perkalian simpangan baku.</p>
 <p>Statistik ini memiliki beberapa fitur penting. Tidak seperti pengestimasi regresi, ia simetris antara variabel acak, sehingga korelasi antara X dan Y sama dengan korelasi antara Y dan X. Statistik ini tidak berubah oleh transformasi linear dari variabel acak (hingga perubahan tanda), sehingga kita dapat mengalikan variabel acak atau menambahkan konstanta seperti yang berguna untuk interpretasi. Rentang statistik ini adalah [-1,1] yang tidak bergantung pada distribusi X maupun Y.</p>
 <p>Selain itu, dalam kasus independensi, koefisien korelasi r adalah 0. Namun, diketahui bahwa korelasi nol secara umum tidak menyiratkan independensi, satu pengecualian adalah dalam kasus variabel acak yang terdistribusi secara normal. Statistik korelasi r juga merupakan pengestimasi (likelihood maksimum) dari parameter asosiasi untuk distribusi normal bivariat. Jadi, untuk data yang terdistribusi secara normal, statistik korelasi r dapat digunakan untuk menilai independensi. Untuk interpretasi tambahan dari statistik yang terkenal ini, pembaca dapat merujuk ke Lee Rodgers dan Nicewander (1998).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dependence-modeling.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Pearson correlation between Claim and Coverage</span></span>
-<span id="cb1-2"><a href="dependence-modeling.html#cb1-2" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;pearson&quot;</span>))</span>
-<span id="cb1-3"><a href="dependence-modeling.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(r,<span class="dv">2</span>)</span>
-<span id="cb1-4"><a href="dependence-modeling.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="dependence-modeling.html#cb1-5" aria-hidden="true" tabindex="-1"></a>Output<span class="sc">:</span></span>
-<span id="cb1-6"><a href="dependence-modeling.html#cb1-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.31</span></span>
-<span id="cb1-7"><a href="dependence-modeling.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="dependence-modeling.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">### Pearson correlation between Claim and log(Coverage)</span></span>
-<span id="cb1-9"><a href="dependence-modeling.html#cb1-9" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;pearson&quot;</span>))</span>
-<span id="cb1-10"><a href="dependence-modeling.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(r,<span class="dv">2</span>)</span>
-<span id="cb1-11"><a href="dependence-modeling.html#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="dependence-modeling.html#cb1-12" aria-hidden="true" tabindex="-1"></a>Output<span class="sc">:</span></span>
-<span id="cb1-13"><a href="dependence-modeling.html#cb1-13" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.1</span></span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="dependence-modeling.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Pearson correlation between Claim and Coverage</span></span>
+<span id="cb141-2"><a href="dependence-modeling.html#cb141-2" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;pearson&quot;</span>))</span>
+<span id="cb141-3"><a href="dependence-modeling.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(r,<span class="dv">2</span>)</span>
+<span id="cb141-4"><a href="dependence-modeling.html#cb141-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb141-5"><a href="dependence-modeling.html#cb141-5" aria-hidden="true" tabindex="-1"></a>Output<span class="sc">:</span></span>
+<span id="cb141-6"><a href="dependence-modeling.html#cb141-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.31</span></span>
+<span id="cb141-7"><a href="dependence-modeling.html#cb141-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb141-8"><a href="dependence-modeling.html#cb141-8" aria-hidden="true" tabindex="-1"></a><span class="do">### Pearson correlation between Claim and log(Coverage)</span></span>
+<span id="cb141-9"><a href="dependence-modeling.html#cb141-9" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;pearson&quot;</span>))</span>
+<span id="cb141-10"><a href="dependence-modeling.html#cb141-10" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(r,<span class="dv">2</span>)</span>
+<span id="cb141-11"><a href="dependence-modeling.html#cb141-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb141-12"><a href="dependence-modeling.html#cb141-12" aria-hidden="true" tabindex="-1"></a>Output<span class="sc">:</span></span>
+<span id="cb141-13"><a href="dependence-modeling.html#cb141-13" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.1</span></span></code></pre></div>
 </div>
 </div>
 <div id="rank-based-measures" class="section level3 hasAnchor" number="14.2.2">
@@ -700,13 +722,13 @@ r_S = \frac{\widehat{Cov}(R(X),R(Y))}{\sqrt{\widehat{Cov}(R(X),R(X))\widehat{Cov
 = \frac{\widehat{Cov}(R(X),R(Y))}{(n^2-1)/12} .
 \]</span></p>
 <p>Selanjutnya dapat memperoleh statistik korelasi Spearman rS menggunakan fungsi <code>cor()</code> di R dan memilih metode spearman. Dari hasil di bawah ini, korelasi Spearman antara variabel penilaian Coverage dalam jutaan dolar dan variabel jumlah Claim dalam dolar adalah 0,41.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="dependence-modeling.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Spearman correlation between Claim and Coverage </span><span class="al">###</span></span>
-<span id="cb2-2"><a href="dependence-modeling.html#cb2-2" aria-hidden="true" tabindex="-1"></a>rs<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
-<span id="cb2-3"><a href="dependence-modeling.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs,<span class="dv">2</span>)</span>
-<span id="cb2-4"><a href="dependence-modeling.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="dependence-modeling.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="do">### Spearman correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
-<span id="cb2-6"><a href="dependence-modeling.html#cb2-6" aria-hidden="true" tabindex="-1"></a>rs<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
-<span id="cb2-7"><a href="dependence-modeling.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="dependence-modeling.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Spearman correlation between Claim and Coverage </span><span class="al">###</span></span>
+<span id="cb142-2"><a href="dependence-modeling.html#cb142-2" aria-hidden="true" tabindex="-1"></a>rs<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
+<span id="cb142-3"><a href="dependence-modeling.html#cb142-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs,<span class="dv">2</span>)</span>
+<span id="cb142-4"><a href="dependence-modeling.html#cb142-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb142-5"><a href="dependence-modeling.html#cb142-5" aria-hidden="true" tabindex="-1"></a><span class="do">### Spearman correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
+<span id="cb142-6"><a href="dependence-modeling.html#cb142-6" aria-hidden="true" tabindex="-1"></a>rs<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
+<span id="cb142-7"><a href="dependence-modeling.html#cb142-7" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs,<span class="dv">2</span>)</span></code></pre></div>
 <p>Kita dapat menunjukkan bahwa statistik korelasi Spearman tidak berubah saat dilakukan transformasi yang secara ketat meningkat. Dari Kode R untuk statistik korelasi Spearman di atas, didapatkan rS=0,41 antara variabel penilaian Coverage dalam jutaan dolar dalam skala logaritmik dan variabel jumlah Claim dalam dolar.</p>
 </div>
 <div id="kendalls-tau" class="section level4 hasAnchor" number="14.2.2.2">
@@ -728,14 +750,14 @@ r_S = \frac{\widehat{Cov}(R(X),R(Y))}{\sqrt{\widehat{Cov}(R(X),R(X))\widehat{Cov
 <p>Menariknya, Hougaard (2000), halaman 137, mengatributkan penemuan awal dari statistik ini kepada Fechner (1897), mencatat bahwa penemuan Kendall adalah penemuan independen dan lebih lengkap daripada karya asli.</p>
 <p>Anda dapat memperoleh tau Kendall menggunakan fungsi cor() di R dan memilih metode kendall. Dari di bawah, τ^ = 0,32 antara variabel penilaian Coverage dalam jutaan dolar dan variabel jumlah Claim dalam dolar. Ketika ada seri dalam data, fungsi cor() menghitung tau_b Kendall seperti yang diusulkan oleh Kendall (1945).</p>
 <p>Kode R untuk Tau Kendall</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="dependence-modeling.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Kendall&#39;s tau correlation between Claim and Coverage </span><span class="al">###</span></span>
-<span id="cb3-2"><a href="dependence-modeling.html#cb3-2" aria-hidden="true" tabindex="-1"></a>tau<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;kendall&quot;</span>))</span>
-<span id="cb3-3"><a href="dependence-modeling.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(tau,<span class="dv">2</span>)</span>
-<span id="cb3-4"><a href="dependence-modeling.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="dependence-modeling.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="dependence-modeling.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="do">### Kendall&#39;s tau correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
-<span id="cb3-7"><a href="dependence-modeling.html#cb3-7" aria-hidden="true" tabindex="-1"></a>tau<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;kendall&quot;</span>))</span>
-<span id="cb3-8"><a href="dependence-modeling.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(tau,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="dependence-modeling.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Kendall&#39;s tau correlation between Claim and Coverage </span><span class="al">###</span></span>
+<span id="cb143-2"><a href="dependence-modeling.html#cb143-2" aria-hidden="true" tabindex="-1"></a>tau<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,Coverage, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;kendall&quot;</span>))</span>
+<span id="cb143-3"><a href="dependence-modeling.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(tau,<span class="dv">2</span>)</span>
+<span id="cb143-4"><a href="dependence-modeling.html#cb143-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb143-5"><a href="dependence-modeling.html#cb143-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb143-6"><a href="dependence-modeling.html#cb143-6" aria-hidden="true" tabindex="-1"></a><span class="do">### Kendall&#39;s tau correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
+<span id="cb143-7"><a href="dependence-modeling.html#cb143-7" aria-hidden="true" tabindex="-1"></a>tau<span class="ot">&lt;-</span><span class="fu">cor</span>(Claim,<span class="fu">log</span>(Coverage), <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;kendall&quot;</span>))</span>
+<span id="cb143-8"><a href="dependence-modeling.html#cb143-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(tau,<span class="dv">2</span>)</span></code></pre></div>
 <p>Selain itu, untuk menunjukkan bahwa tau Kendall tidak berubah saat dilakukan transformasi yang meningkat secara ketat, kita melihat bahwa τ^ = 0,32 antara variabel penilaian Coverage dalam jutaan dolar dalam skala logaritmik dan variabel jumlah Claim dalam dolar.</p>
 </div>
 </div>
@@ -805,8 +827,8 @@ OR^{new} = \frac{(a_1 b_1 \pi_{11})( a_0 b_0 \pi_{00})}{(a_0 b_1 \pi_{01})( a_1 
 \end{array}
 \end{matrix}}
 \]</span></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="dependence-modeling.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
-<span id="cb4-2"><a href="dependence-modeling.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(NoClaimCredit, Fire5,<span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;wald&quot;</span>))<span class="sc">$</span>measure</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="dependence-modeling.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb144-2"><a href="dependence-modeling.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(NoClaimCredit, Fire5,<span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;wald&quot;</span>))<span class="sc">$</span>measure</span></code></pre></div>
 </div>
 <div id="categorical-variables" class="section level4 hasAnchor" number="14.2.3.2">
 <h4><span class="header-section-number">14.2.3.2</span> Categorical Variables<a href="dependence-modeling.html#categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -857,14 +879,14 @@ G^2 = 2 \sum_{jk} n_{jk} \log\frac{n_{jk}}{n_{j\cdot}n_{\cdot k}/n} .
 \]</span></p>
 <p>Anda dapat memperoleh statistik chi-square Pearson menggunakan fungsi chisq.test() dari perpustakaan MASS di R. Di sini, kita menguji apakah variabel EntityType independen dari variabel NoClaimCredit menggunakan Tabel 14.3.</p>
 <p>Kode R untuk Statistik Chi-square Pearson</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="dependence-modeling.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb5-2"><a href="dependence-modeling.html#cb5-2" aria-hidden="true" tabindex="-1"></a>table <span class="ot">=</span> <span class="fu">table</span>(EntityType, NoClaimCredit)</span>
-<span id="cb5-3"><a href="dependence-modeling.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(table)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="dependence-modeling.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb145-2"><a href="dependence-modeling.html#cb145-2" aria-hidden="true" tabindex="-1"></a>table <span class="ot">=</span> <span class="fu">table</span>(EntityType, NoClaimCredit)</span>
+<span id="cb145-3"><a href="dependence-modeling.html#cb145-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(table)</span></code></pre></div>
 <p>Karena nilai p kurang dari tingkat signifikansi 0,05, kita menolak hipotesis nol bahwa EntityType independen dari NoClaimCredit.</p>
 <p>Selain itu, Anda dapat memperoleh statistik uji rasio kemungkinan menggunakan fungsi likelihood.test() dari perpustakaan Deducer di R. Dari hasil di bawah, kita menguji apakah EntityType independen dari NoClaimCredit dari data LGPIF. Kesimpulan yang sama ditarik seperti pada uji chi-square Pearson.</p>
 <p>Kode R untuk Statistik Uji Rasio Kemungkinan</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="dependence-modeling.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Deducer)</span>
-<span id="cb6-2"><a href="dependence-modeling.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">likelihood.test</span>(EntityType, NoClaimCredit)</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="dependence-modeling.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Deducer)</span>
+<span id="cb146-2"><a href="dependence-modeling.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="fu">likelihood.test</span>(EntityType, NoClaimCredit)</span></code></pre></div>
 </div>
 </div>
 <div id="ordinal-variables" class="section level3 hasAnchor" number="14.2.4">
@@ -906,14 +928,14 @@ untuk <span class="math inline">\(s=m_1, ..., m_2\)</span> menjadi titik potong 
 \]</span></p>
 <p>Anda dapat memperoleh korelasi polikorik atau tetrakorik menggunakan fungsi polychoric() atau tetrachoric() dari pustaka psych di R. Korelasi polikorik diilustrasikan menggunakan Tabel 14.4. Di sini, ρ^N=−0.14, yang berarti terdapat hubungan negatif antara AlarmCredit dan NoClaimCredit.</p>
 <p>Kode R untuk Korelasi Polikorik</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="dependence-modeling.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
-<span id="cb7-2"><a href="dependence-modeling.html#cb7-2" aria-hidden="true" tabindex="-1"></a>AlarmCredit<span class="ot">&lt;-</span><span class="fu">as.numeric</span>(<span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC00<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;1&quot;</span>,</span>
-<span id="cb7-3"><a href="dependence-modeling.html#cb7-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC05<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;2&quot;</span>,</span>
-<span id="cb7-4"><a href="dependence-modeling.html#cb7-4" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC10<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;3&quot;</span>,</span>
-<span id="cb7-5"><a href="dependence-modeling.html#cb7-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC15<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;4&quot;</span>,<span class="dv">0</span>)))))</span>
-<span id="cb7-6"><a href="dependence-modeling.html#cb7-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">table</span>(AlarmCredit,NoClaimCredit)</span>
-<span id="cb7-7"><a href="dependence-modeling.html#cb7-7" aria-hidden="true" tabindex="-1"></a>rhoN<span class="ot">&lt;-</span><span class="fu">polychoric</span>(x,<span class="at">correct=</span><span class="cn">FALSE</span>)<span class="sc">$</span>rho</span>
-<span id="cb7-8"><a href="dependence-modeling.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rhoN,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="dependence-modeling.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb147-2"><a href="dependence-modeling.html#cb147-2" aria-hidden="true" tabindex="-1"></a>AlarmCredit<span class="ot">&lt;-</span><span class="fu">as.numeric</span>(<span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC00<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;1&quot;</span>,</span>
+<span id="cb147-3"><a href="dependence-modeling.html#cb147-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC05<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;2&quot;</span>,</span>
+<span id="cb147-4"><a href="dependence-modeling.html#cb147-4" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC10<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;3&quot;</span>,</span>
+<span id="cb147-5"><a href="dependence-modeling.html#cb147-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">ifelse</span>(Insample<span class="sc">$</span>AC15<span class="sc">==</span><span class="dv">1</span>,<span class="st">&quot;4&quot;</span>,<span class="dv">0</span>)))))</span>
+<span id="cb147-6"><a href="dependence-modeling.html#cb147-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">table</span>(AlarmCredit,NoClaimCredit)</span>
+<span id="cb147-7"><a href="dependence-modeling.html#cb147-7" aria-hidden="true" tabindex="-1"></a>rhoN<span class="ot">&lt;-</span><span class="fu">polychoric</span>(x,<span class="at">correct=</span><span class="cn">FALSE</span>)<span class="sc">$</span>rho</span>
+<span id="cb147-8"><a href="dependence-modeling.html#cb147-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rhoN,<span class="dv">2</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="interval-variables" class="section level3 hasAnchor" number="14.2.5">
@@ -951,9 +973,9 @@ untuk <span class="math inline">\(s=m_1, ..., m_2\)</span> menjadi titik potong 
 \]</span></p>
 <p>Anda dapat memperoleh korelasi poliseriat atau korelasi biserial menggunakan fungsi polyserial() atau biserial() dari pustaka psych di R. Tabel 14.5 memberikan ringkasan Klaim berdasarkan NoClaimCredit dan korelasi biserial diilustrasikan menggunakan kode R di bawah ini. Nilai ρ^N=−0.04 yang berarti terdapat korelasi negatif antara Klaim dan NoClaimCredit.</p>
 <p>Kode R untuk Korelasi Biserial</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="dependence-modeling.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
-<span id="cb8-2"><a href="dependence-modeling.html#cb8-2" aria-hidden="true" tabindex="-1"></a>rhoN<span class="ot">&lt;-</span><span class="fu">biserial</span>(Claim,NoClaimCredit)</span>
-<span id="cb8-3"><a href="dependence-modeling.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rhoN,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="dependence-modeling.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb148-2"><a href="dependence-modeling.html#cb148-2" aria-hidden="true" tabindex="-1"></a>rhoN<span class="ot">&lt;-</span><span class="fu">biserial</span>(Claim,NoClaimCredit)</span>
+<span id="cb148-3"><a href="dependence-modeling.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rhoN,<span class="dv">2</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="introduction-to-copulas" class="section level2 hasAnchor" number="14.3">
@@ -1008,9 +1030,9 @@ Di sini, γ adalah parameter ketergantungan, yang mengontrol rentang ketergantun
 F(y)=1- \left( 1 + \frac{\theta}{y+ \theta} \right) ^{\alpha}.
 \]</span>
 Di sini, <span class="math inline">\(θ\)</span> adalah parameter yang mengatur skala dan α adalah parameter yang mengatur bentuk distribusi. Distribusi terpisah dari kerugian (LOSS) dan biaya (ALAE) ditentukan menggunakan metode maximum likelihood. Khususnya, kami menggunakan fungsi vglm dari paket R VGAM. Pertama, kami menyesuaikan distribusi terpisah dari ALAE. Parameter-parameter yang digunakan dirangkum dalam Tabel 14.6.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="dependence-modeling.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(VGAM)</span>
-<span id="cb9-2"><a href="dependence-modeling.html#cb9-2" aria-hidden="true" tabindex="-1"></a>fit.ALAE <span class="ot">&lt;-</span> <span class="fu">vglm</span>(ALAE <span class="sc">~</span> <span class="dv">1</span>, <span class="fu">paretoII</span>(<span class="at">location=</span><span class="dv">0</span>, <span class="at">lscale=</span><span class="st">&quot;loge&quot;</span>, <span class="at">lshape=</span><span class="st">&quot;loge&quot;</span>)) <span class="co"># fit the model by vlgm function</span></span>
-<span id="cb9-3"><a href="dependence-modeling.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(fit.ALAE, <span class="at">matrix=</span><span class="cn">TRUE</span>) <span class="co"># extract fitted model coefficients, matrix=TRUE gives logarithm of estimated parameters instead of default normal scale estimates</span></span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="dependence-modeling.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(VGAM)</span>
+<span id="cb149-2"><a href="dependence-modeling.html#cb149-2" aria-hidden="true" tabindex="-1"></a>fit.ALAE <span class="ot">&lt;-</span> <span class="fu">vglm</span>(ALAE <span class="sc">~</span> <span class="dv">1</span>, <span class="fu">paretoII</span>(<span class="at">location=</span><span class="dv">0</span>, <span class="at">lscale=</span><span class="st">&quot;loge&quot;</span>, <span class="at">lshape=</span><span class="st">&quot;loge&quot;</span>)) <span class="co"># fit the model by vlgm function</span></span>
+<span id="cb149-3"><a href="dependence-modeling.html#cb149-3" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(fit.ALAE, <span class="at">matrix=</span><span class="cn">TRUE</span>) <span class="co"># extract fitted model coefficients, matrix=TRUE gives logarithm of estimated parameters instead of default normal scale estimates</span></span></code></pre></div>
 <p>Kami mengulangi langkah ini untuk menyesuaikan distribusi terpisah dari variabel LOSS. Karena variabel kerugian juga terlihat memiliki data yang condong ke kanan dan ekor yang panjang, kami juga menggunakan distribusi Pareto untuk memodelkan distribusi marginalnya (walaupun dengan parameter yang berbeda).</p>
 <p><strong>Table 14.6. Summary of Pareto Maximum Likelihood Fitted Parameters from the LGPIF Data</strong></p>
 <p><span class="math display">\[
@@ -1074,17 +1096,17 @@ dan <span class="math inline">\(u_2=\hat{F}_2(LOSS)\)</span>. Kemudian kita meng
 c_N(u_1,  \ldots, u_p) = \phi_N \left(\Phi^{-1}(u_1), \ldots, \Phi^{-1}(u_p) \right) \prod_{j=1}^p \frac{1}{\phi(\Phi^{-1}(u_j))}.
 \]</span></p>
 <p>Di sini, kami menggunakan <span class="math inline">\(Φ\)</span> dan <span class="math inline">\(ϕ\)</span> untuk menyatakan fungsi distribusi dan densitas normal standar. Berbeda dengan fungsi densitas probabilitas biasa <span class="math inline">\(ϕN\)</span>, fungsi densitas copula memiliki ranahnya pada hiper-kubus [0,1]p.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="dependence-modeling.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb10-2"><a href="dependence-modeling.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  BIVARIATE NORMAL DF WITH RHO = 0.25</span></span>
-<span id="cb10-3"><a href="dependence-modeling.html#cb10-3" aria-hidden="true" tabindex="-1"></a>norm.pdf <span class="ot">&lt;-</span> <span class="fu">mvdc</span>(<span class="fu">normalCopula</span>(<span class="fl">0.25</span>), <span class="fu">c</span>(<span class="st">&quot;norm&quot;</span>, <span class="st">&quot;norm&quot;</span>),</span>
-<span id="cb10-4"><a href="dependence-modeling.html#cb10-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span><span class="dv">1</span>), <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span><span class="dv">1</span>)))</span>
-<span id="cb10-5"><a href="dependence-modeling.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(norm.pdf, dMvdc, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),   </span>
-<span id="cb10-6"><a href="dependence-modeling.html#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">zlab =</span> <span class="fu">expression</span>(<span class="st">&quot;\U03A6&quot;</span>),</span>
-<span id="cb10-7"><a href="dependence-modeling.html#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>, <span class="at">cex.lab=</span><span class="fl">0.8</span>, <span class="at">cex.axis =</span> <span class="fl">0.3</span>)</span>
-<span id="cb10-8"><a href="dependence-modeling.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  BIVARIATE NORMAL COPULA WITH RHO = 0.25</span></span>
-<span id="cb10-9"><a href="dependence-modeling.html#cb10-9" aria-hidden="true" tabindex="-1"></a>norm.cop <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;normal&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>)</span>
-<span id="cb10-10"><a href="dependence-modeling.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(norm.cop, dCopula, <span class="at">theta =</span> <span class="dv">30</span>, <span class="at">zlab=</span><span class="st">&quot;c(u,v)&quot;</span>,</span>
-<span id="cb10-11"><a href="dependence-modeling.html#cb10-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">&quot;u&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;v&quot;</span>, <span class="at">cex.lab=</span><span class="fl">0.8</span>, <span class="at">cex.axis =</span> <span class="fl">0.3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="dependence-modeling.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb150-2"><a href="dependence-modeling.html#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  BIVARIATE NORMAL DF WITH RHO = 0.25</span></span>
+<span id="cb150-3"><a href="dependence-modeling.html#cb150-3" aria-hidden="true" tabindex="-1"></a>norm.pdf <span class="ot">&lt;-</span> <span class="fu">mvdc</span>(<span class="fu">normalCopula</span>(<span class="fl">0.25</span>), <span class="fu">c</span>(<span class="st">&quot;norm&quot;</span>, <span class="st">&quot;norm&quot;</span>),</span>
+<span id="cb150-4"><a href="dependence-modeling.html#cb150-4" aria-hidden="true" tabindex="-1"></a>          <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span><span class="dv">1</span>), <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span><span class="dv">1</span>)))</span>
+<span id="cb150-5"><a href="dependence-modeling.html#cb150-5" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(norm.pdf, dMvdc, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),   </span>
+<span id="cb150-6"><a href="dependence-modeling.html#cb150-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">zlab =</span> <span class="fu">expression</span>(<span class="st">&quot;\U03A6&quot;</span>),</span>
+<span id="cb150-7"><a href="dependence-modeling.html#cb150-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>, <span class="at">cex.lab=</span><span class="fl">0.8</span>, <span class="at">cex.axis =</span> <span class="fl">0.3</span>)</span>
+<span id="cb150-8"><a href="dependence-modeling.html#cb150-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  BIVARIATE NORMAL COPULA WITH RHO = 0.25</span></span>
+<span id="cb150-9"><a href="dependence-modeling.html#cb150-9" aria-hidden="true" tabindex="-1"></a>norm.cop <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;normal&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>)</span>
+<span id="cb150-10"><a href="dependence-modeling.html#cb150-10" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(norm.cop, dCopula, <span class="at">theta =</span> <span class="dv">30</span>, <span class="at">zlab=</span><span class="st">&quot;c(u,v)&quot;</span>,</span>
+<span id="cb150-11"><a href="dependence-modeling.html#cb150-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span><span class="st">&quot;u&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;v&quot;</span>, <span class="at">cex.lab=</span><span class="fl">0.8</span>, <span class="at">cex.axis =</span> <span class="fl">0.3</span>)</span></code></pre></div>
 </div>
 <div id="t--and-elliptical-copulas" class="section level3 hasAnchor" number="14.5.2">
 <h3><span class="header-section-number">14.5.2</span> t- and Elliptical Copulas<a href="dependence-modeling.html#t--and-elliptical-copulas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1210,33 +1232,38 @@ t-  &amp; 0.10   &amp; 0.10    \\
 \end{array}
 \end{matrix}}
 \]</span></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="dependence-modeling.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula)</span>
-<span id="cb11-2"><a href="dependence-modeling.html#cb11-2" aria-hidden="true" tabindex="-1"></a>U1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.5</span>, <span class="at">by=</span><span class="fl">0.002</span>)</span>
-<span id="cb11-3"><a href="dependence-modeling.html#cb11-3" aria-hidden="true" tabindex="-1"></a>U2 <span class="ot">=</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,<span class="dv">1</span>, <span class="at">by=</span><span class="fl">0.002</span>)</span>
-<span id="cb11-4"><a href="dependence-modeling.html#cb11-4" aria-hidden="true" tabindex="-1"></a>U <span class="ot">=</span> <span class="fu">rbind</span>(U1, U2)</span>
-<span id="cb11-5"><a href="dependence-modeling.html#cb11-5" aria-hidden="true" tabindex="-1"></a>TailFunction <span class="ot">&lt;-</span> <span class="cf">function</span>(Tailcop) {</span>
-<span id="cb11-6"><a href="dependence-modeling.html#cb11-6" aria-hidden="true" tabindex="-1"></a>  lowertail <span class="ot">&lt;-</span> <span class="fu">pCopula</span>(<span class="fu">cbind</span>(U1,U1), Tailcop)<span class="sc">/</span>U1</span>
-<span id="cb11-7"><a href="dependence-modeling.html#cb11-7" aria-hidden="true" tabindex="-1"></a>  uppertail <span class="ot">&lt;-</span> (<span class="dv">1-2</span><span class="sc">*</span>U2 <span class="sc">+</span><span class="fu">pCopula</span>(<span class="fu">cbind</span>(U2,U2), Tailcop))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>U2)</span>
-<span id="cb11-8"><a href="dependence-modeling.html#cb11-8" aria-hidden="true" tabindex="-1"></a>  jointtail <span class="ot">&lt;-</span> <span class="fu">rbind</span>(lowertail,uppertail)</span>
-<span id="cb11-9"><a href="dependence-modeling.html#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-10"><a href="dependence-modeling.html#cb11-10" aria-hidden="true" tabindex="-1"></a>Tailcop1 <span class="ot">&lt;-</span> <span class="fu">archmCopula</span>(<span class="at">family =</span> <span class="st">&quot;frank&quot;</span>, <span class="at">param=</span> <span class="fu">c</span>(<span class="fl">0.05</span>), <span class="at">dim =</span> <span class="dv">2</span>)</span>
-<span id="cb11-11"><a href="dependence-modeling.html#cb11-11" aria-hidden="true" tabindex="-1"></a>Tailcop2 <span class="ot">&lt;-</span> <span class="fu">archmCopula</span>(<span class="at">family =</span> <span class="st">&quot;gumbel&quot;</span>,<span class="at">param =</span> <span class="dv">3</span>)</span>
-<span id="cb11-12"><a href="dependence-modeling.html#cb11-12" aria-hidden="true" tabindex="-1"></a>Tailcop3 <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;normal&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>)</span>
-<span id="cb11-13"><a href="dependence-modeling.html#cb11-13" aria-hidden="true" tabindex="-1"></a>Tailcop4 <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;t&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>, <span class="at">df=</span><span class="dv">5</span>)</span>
-<span id="cb11-14"><a href="dependence-modeling.html#cb11-14" aria-hidden="true" tabindex="-1"></a>jointtail1 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop1)</span>
-<span id="cb11-15"><a href="dependence-modeling.html#cb11-15" aria-hidden="true" tabindex="-1"></a>jointtail2 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop2)</span>
-<span id="cb11-16"><a href="dependence-modeling.html#cb11-16" aria-hidden="true" tabindex="-1"></a>jointtail3 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop3)</span>
-<span id="cb11-17"><a href="dependence-modeling.html#cb11-17" aria-hidden="true" tabindex="-1"></a>jointtail4 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop4)</span>
-<span id="cb11-18"><a href="dependence-modeling.html#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(U,jointtail1, <span class="at">cex=</span>.<span class="dv">2</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">ylab=</span><span class="st">&quot;Tail Dependence&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span>
-<span id="cb11-19"><a href="dependence-modeling.html#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail2, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
-<span id="cb11-20"><a href="dependence-modeling.html#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail3, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
-<span id="cb11-21"><a href="dependence-modeling.html#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail4, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
-<span id="cb11-22"><a href="dependence-modeling.html#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.75</span>, <span class="fl">0.1</span>, <span class="st">&quot;Frank&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)        <span class="co">#1</span></span>
-<span id="cb11-23"><a href="dependence-modeling.html#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.1</span>, <span class="fl">0.8</span>, <span class="st">&quot;Gumbel&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)        <span class="co">#2</span></span>
-<span id="cb11-24"><a href="dependence-modeling.html#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.25</span>, <span class="fl">0.1</span>, <span class="st">&quot;normal&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)       <span class="co">#3</span></span>
-<span id="cb11-25"><a href="dependence-modeling.html#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(.<span class="dv">17</span>, <span class="fl">0.1</span>, .<span class="dv">07</span>, <span class="fl">0.12</span>,<span class="at">code=</span><span class="dv">2</span>, <span class="at">angle=</span><span class="dv">20</span>, <span class="at">length=</span><span class="fl">0.1</span>)</span>
-<span id="cb11-26"><a href="dependence-modeling.html#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.9</span>, <span class="fl">0.4</span>, <span class="st">&quot;t with 5 df&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)   <span class="co">#4</span></span></code></pre></div>
-<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="dependence-modeling.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;copula&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:VGAM&#39;:
+## 
+##     log1mexp, log1pexp, rlog</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="dependence-modeling.html#cb154-1" aria-hidden="true" tabindex="-1"></a>U1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.5</span>, <span class="at">by=</span><span class="fl">0.002</span>)</span>
+<span id="cb154-2"><a href="dependence-modeling.html#cb154-2" aria-hidden="true" tabindex="-1"></a>U2 <span class="ot">=</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,<span class="dv">1</span>, <span class="at">by=</span><span class="fl">0.002</span>)</span>
+<span id="cb154-3"><a href="dependence-modeling.html#cb154-3" aria-hidden="true" tabindex="-1"></a>U <span class="ot">=</span> <span class="fu">rbind</span>(U1, U2)</span>
+<span id="cb154-4"><a href="dependence-modeling.html#cb154-4" aria-hidden="true" tabindex="-1"></a>TailFunction <span class="ot">&lt;-</span> <span class="cf">function</span>(Tailcop) {</span>
+<span id="cb154-5"><a href="dependence-modeling.html#cb154-5" aria-hidden="true" tabindex="-1"></a>  lowertail <span class="ot">&lt;-</span> <span class="fu">pCopula</span>(<span class="fu">cbind</span>(U1,U1), Tailcop)<span class="sc">/</span>U1</span>
+<span id="cb154-6"><a href="dependence-modeling.html#cb154-6" aria-hidden="true" tabindex="-1"></a>  uppertail <span class="ot">&lt;-</span> (<span class="dv">1-2</span><span class="sc">*</span>U2 <span class="sc">+</span><span class="fu">pCopula</span>(<span class="fu">cbind</span>(U2,U2), Tailcop))<span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>U2)</span>
+<span id="cb154-7"><a href="dependence-modeling.html#cb154-7" aria-hidden="true" tabindex="-1"></a>  jointtail <span class="ot">&lt;-</span> <span class="fu">rbind</span>(lowertail,uppertail)</span>
+<span id="cb154-8"><a href="dependence-modeling.html#cb154-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb154-9"><a href="dependence-modeling.html#cb154-9" aria-hidden="true" tabindex="-1"></a>Tailcop1 <span class="ot">&lt;-</span> <span class="fu">archmCopula</span>(<span class="at">family =</span> <span class="st">&quot;frank&quot;</span>, <span class="at">param=</span> <span class="fu">c</span>(<span class="fl">0.05</span>), <span class="at">dim =</span> <span class="dv">2</span>)</span>
+<span id="cb154-10"><a href="dependence-modeling.html#cb154-10" aria-hidden="true" tabindex="-1"></a>Tailcop2 <span class="ot">&lt;-</span> <span class="fu">archmCopula</span>(<span class="at">family =</span> <span class="st">&quot;gumbel&quot;</span>,<span class="at">param =</span> <span class="dv">3</span>)</span>
+<span id="cb154-11"><a href="dependence-modeling.html#cb154-11" aria-hidden="true" tabindex="-1"></a>Tailcop3 <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;normal&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>)</span>
+<span id="cb154-12"><a href="dependence-modeling.html#cb154-12" aria-hidden="true" tabindex="-1"></a>Tailcop4 <span class="ot">&lt;-</span> <span class="fu">ellipCopula</span>(<span class="st">&quot;t&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.25</span>),<span class="at">dim =</span> <span class="dv">2</span>, <span class="at">dispstr =</span> <span class="st">&quot;un&quot;</span>, <span class="at">df=</span><span class="dv">5</span>)</span>
+<span id="cb154-13"><a href="dependence-modeling.html#cb154-13" aria-hidden="true" tabindex="-1"></a>jointtail1 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop1)</span>
+<span id="cb154-14"><a href="dependence-modeling.html#cb154-14" aria-hidden="true" tabindex="-1"></a>jointtail2 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop2)</span>
+<span id="cb154-15"><a href="dependence-modeling.html#cb154-15" aria-hidden="true" tabindex="-1"></a>jointtail3 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop3)</span>
+<span id="cb154-16"><a href="dependence-modeling.html#cb154-16" aria-hidden="true" tabindex="-1"></a>jointtail4 <span class="ot">&lt;-</span> <span class="fu">TailFunction</span>(Tailcop4)</span>
+<span id="cb154-17"><a href="dependence-modeling.html#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(U,jointtail1, <span class="at">cex=</span>.<span class="dv">2</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">ylab=</span><span class="st">&quot;Tail Dependence&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span>
+<span id="cb154-18"><a href="dependence-modeling.html#cb154-18" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail2, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
+<span id="cb154-19"><a href="dependence-modeling.html#cb154-19" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail3, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
+<span id="cb154-20"><a href="dependence-modeling.html#cb154-20" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(U,jointtail4, <span class="at">type=</span><span class="st">&quot;p&quot;</span>,<span class="at">lty=</span><span class="dv">1</span>, <span class="at">cex=</span>.<span class="dv">2</span>)</span>
+<span id="cb154-21"><a href="dependence-modeling.html#cb154-21" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.75</span>, <span class="fl">0.1</span>, <span class="st">&quot;Frank&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)        <span class="co">#1</span></span>
+<span id="cb154-22"><a href="dependence-modeling.html#cb154-22" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.1</span>, <span class="fl">0.8</span>, <span class="st">&quot;Gumbel&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)        <span class="co">#2</span></span>
+<span id="cb154-23"><a href="dependence-modeling.html#cb154-23" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.25</span>, <span class="fl">0.1</span>, <span class="st">&quot;normal&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)       <span class="co">#3</span></span>
+<span id="cb154-24"><a href="dependence-modeling.html#cb154-24" aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(.<span class="dv">17</span>, <span class="fl">0.1</span>, .<span class="dv">07</span>, <span class="fl">0.12</span>,<span class="at">code=</span><span class="dv">2</span>, <span class="at">angle=</span><span class="dv">20</span>, <span class="at">length=</span><span class="fl">0.1</span>)</span>
+<span id="cb154-25"><a href="dependence-modeling.html#cb154-25" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.9</span>, <span class="fl">0.4</span>, <span class="st">&quot;t with 5 df&quot;</span>, <span class="at">cex=</span><span class="fl">1.3</span>)   <span class="co">#4</span></span></code></pre></div>
+<p><img src="Analisa_Resiko_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -1285,18 +1312,18 @@ t-  &amp; 0.10   &amp; 0.10    \\
 <p>Lihat, misalnya, Joe (2014), halaman 57 atau Hougaard (2000), halaman 135, untuk lebih banyak detail.</p>
 <p>Karena parameter Blomqvist didasarkan pada pusat distribusi, ini sangat berguna ketika data tercemar; dalam kasus ini, informasi pada bagian ekstrem distribusi tidak selalu dapat diandalkan. Bagaimana ini mempengaruhi pilihan ukuran asosiasi? Pertama, ingat bahwa ukuran asosiasi didasarkan pada fungsi distribusi bivariat. Jadi, jika seseorang memiliki pengetahuan tentang perkiraan yang baik dari fungsi distribusi, maka perhitungan ukuran asosiasi cukup mudah secara prinsip. Kedua, untuk data yang tercemar, ekstensi bivariat dari estimator fungsi distribusi Kaplan-Meier univariat tersedia. Misalnya, versi yang diperkenalkan dalam Dabrowska (1988) menarik. Namun, karena terjadi kasus-kasus ketika sejumlah besar data muncul pada rentang atas data, estimator fungsi distribusi bivariat ini tidak dapat diandalkan. Ini berarti bahwa ukuran ringkasan dari perkiraan fungsi distribusi berdasarkan rho Spearman atau tau Kendall dapat tidak dapat diandalkan. Untuk situasi ini, beta Blomqvist tampaknya menjadi pilihan yang lebih baik karena fokus pada pusat distribusi. Hougaard (2000), Bab 14, memberikan diskusi tambahan.</p>
 <p>Anda dapat mendapatkan beta Blomqvist menggunakan fungsi betan() dari pustaka copula di R. Dari informasi di bawah ini, βB=0.3 antara variabel peringkat Coverage dalam juta dolar dan variabel jumlah Claim dalam dolar.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="dependence-modeling.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Blomqvist&#39;s beta correlation between Claim and Coverage </span><span class="al">###</span></span>
-<span id="cb12-2"><a href="dependence-modeling.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula)</span>
-<span id="cb12-3"><a href="dependence-modeling.html#cb12-3" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(Claim)</span>
-<span id="cb12-4"><a href="dependence-modeling.html#cb12-4" aria-hidden="true" tabindex="-1"></a>U<span class="ot">&lt;-</span><span class="fu">cbind</span>(((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Claim)),((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Coverage)))</span>
-<span id="cb12-5"><a href="dependence-modeling.html#cb12-5" aria-hidden="true" tabindex="-1"></a>beta<span class="ot">&lt;-</span><span class="fu">betan</span>(U, <span class="at">scaling=</span><span class="cn">FALSE</span>)</span>
-<span id="cb12-6"><a href="dependence-modeling.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(beta,<span class="dv">2</span>)</span>
-<span id="cb12-7"><a href="dependence-modeling.html#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="dependence-modeling.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="do">### Blomqvist&#39;s beta correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
-<span id="cb12-9"><a href="dependence-modeling.html#cb12-9" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(Claim)</span>
-<span id="cb12-10"><a href="dependence-modeling.html#cb12-10" aria-hidden="true" tabindex="-1"></a>Fx<span class="ot">&lt;-</span><span class="fu">cbind</span>(((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Claim)),((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(<span class="fu">log</span>(Coverage))))</span>
-<span id="cb12-11"><a href="dependence-modeling.html#cb12-11" aria-hidden="true" tabindex="-1"></a>beta<span class="ot">&lt;-</span><span class="fu">betan</span>(Fx, <span class="at">scaling=</span><span class="cn">FALSE</span>)</span>
-<span id="cb12-12"><a href="dependence-modeling.html#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(beta,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="dependence-modeling.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Blomqvist&#39;s beta correlation between Claim and Coverage </span><span class="al">###</span></span>
+<span id="cb155-2"><a href="dependence-modeling.html#cb155-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula)</span>
+<span id="cb155-3"><a href="dependence-modeling.html#cb155-3" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(Claim)</span>
+<span id="cb155-4"><a href="dependence-modeling.html#cb155-4" aria-hidden="true" tabindex="-1"></a>U<span class="ot">&lt;-</span><span class="fu">cbind</span>(((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Claim)),((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Coverage)))</span>
+<span id="cb155-5"><a href="dependence-modeling.html#cb155-5" aria-hidden="true" tabindex="-1"></a>beta<span class="ot">&lt;-</span><span class="fu">betan</span>(U, <span class="at">scaling=</span><span class="cn">FALSE</span>)</span>
+<span id="cb155-6"><a href="dependence-modeling.html#cb155-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(beta,<span class="dv">2</span>)</span>
+<span id="cb155-7"><a href="dependence-modeling.html#cb155-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb155-8"><a href="dependence-modeling.html#cb155-8" aria-hidden="true" tabindex="-1"></a><span class="do">### Blomqvist&#39;s beta correlation between Claim and log(Coverage) </span><span class="al">###</span></span>
+<span id="cb155-9"><a href="dependence-modeling.html#cb155-9" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(Claim)</span>
+<span id="cb155-10"><a href="dependence-modeling.html#cb155-10" aria-hidden="true" tabindex="-1"></a>Fx<span class="ot">&lt;-</span><span class="fu">cbind</span>(((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(Claim)),((n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span>n<span class="sc">*</span><span class="fu">pobs</span>(<span class="fu">log</span>(Coverage))))</span>
+<span id="cb155-11"><a href="dependence-modeling.html#cb155-11" aria-hidden="true" tabindex="-1"></a>beta<span class="ot">&lt;-</span><span class="fu">betan</span>(Fx, <span class="at">scaling=</span><span class="cn">FALSE</span>)</span>
+<span id="cb155-12"><a href="dependence-modeling.html#cb155-12" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(beta,<span class="dv">2</span>)</span></code></pre></div>
 <p>Selain itu, untuk menunjukkan bahwa beta Blomqvist tetap tidak berubah dalam transformasi yang ketat meningkat, βB=0.3 antara variabel peringkat Coverage dalam jutaan dolar logaritmik dan variabel jumlah Claim dalam dolar.</p>
 <p><strong>TS 14.A.2. Nonparametric Approach Using Spearman Correlation with Tied Ranks</strong></p>
 <p>Untuk variabel pertama, peringkat rata-rata pengamatan dalam baris s adalah</p>
@@ -1319,8 +1346,8 @@ r_{1s} = n_{m_1\cdot}+ \cdots+ n_{s-1,\cdot}+ \frac{1}{2} \left(1+ n_{s\cdot}\ri
 .
 Untuk memperoleh statistik korelasi Spearman yang dikoreksi dengan tie menggunakan fungsi cor() di R dan memilih metode spearman. Dari informasi di bawah ini, ρ^S=−0.09.</p>
 <p>Kode R untuk Korelasi Spearman yang Dikoreksi dengan Tie.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="dependence-modeling.html#cb13-1" aria-hidden="true" tabindex="-1"></a>rs_ties<span class="ot">&lt;-</span><span class="fu">cor</span>(AlarmCredit,NoClaimCredit, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
-<span id="cb13-2"><a href="dependence-modeling.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs_ties,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="dependence-modeling.html#cb156-1" aria-hidden="true" tabindex="-1"></a>rs_ties<span class="ot">&lt;-</span><span class="fu">cor</span>(AlarmCredit,NoClaimCredit, <span class="at">method =</span> <span class="fu">c</span>(<span class="st">&quot;spearman&quot;</span>))</span>
+<span id="cb156-2"><a href="dependence-modeling.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rs_ties,<span class="dv">2</span>)</span></code></pre></div>
 <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 </div>
 <div id="referensi" class="section level2 hasAnchor" number="14.8">
