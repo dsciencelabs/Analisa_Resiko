@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -104,7 +168,45 @@
 <ul>
 <li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
@@ -149,9 +251,42 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
@@ -167,7 +302,7 @@
 <li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
 <li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
 <li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
@@ -233,7 +368,33 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution-and-conditional-expectation"><i class="fa fa-check"></i><b>16.1</b> Conditional Distribution and Conditional Expectation</a>
@@ -315,7 +476,742 @@
             <section class="normal" id="section-">
 <div id="modeling-loss-severity" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Bab 3</span> Modeling Loss Severity<a href="modeling-loss-severity.html#modeling-loss-severity" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="basic-distributional-quantities" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Basic Distributional Quantities<a href="modeling-loss-severity.html#basic-distributional-quantities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="moments" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Moments<a href="modeling-loss-severity.html#moments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dengan memisalkan <code>X</code> merupakan suatu variabel acak kontinu dengan <code>probability density function (pdf)</code> <span class="math inline">\(f_X(x)\)</span> dan fungsi ditribusi <span class="math inline">\(F_X(x)\)</span>.</p>
+<p>Momen baku ke-k dari <code>X</code> yang dinotasikan dengan <span class="math inline">\(μ&#39;_k\)</span> adalah nilai ekspektasi dari pangkat ke-k dari <code>X</code> yang diharapkan, asalkan mempunyai nilai. Momen pertama <span class="math inline">\(μ&#39;_1\)</span> adalah nilai tengah (mean) dari <code>X</code> yang biasanya dilambangkan dengan <code>μ</code> . Rumus untuk <span class="math inline">\(μ&#39;_k\)</span> adalah sebagai berikut :</p>
+<p><span class="math display">\[
+\begin{align}
+μ&#39;_k = E(X^k) = \int_{0}^{∞}x^kf_X(x)dx
+\end{align}
+\]</span></p>
+<p>Untuk mendukung dari variabel acak <code>X</code> dapat diasumsikan sebagai nonnegatif dikarenakan pada kenyataannya jarang sekali bernilai negatif. Salah satu contohnya yang menunjukkan bahwa raw moments untuk variabel nonnegatif dapat dihitung menggunakan rumus :</p>
+<p><span class="math display">\[
+\begin{align}
+μ&#39;_k =  \int_{0}^{∞}kx^{k-1}[1-F_X(x)]dx,
+\end{align}
+\]</span></p>
+<p>yang didasarkan pada fungsi survival <span class="math inline">\(S_X(x)=1−F_X(x)\)</span>. Pada rumus ini berguna disaat k=1.</p>
+<p>Central moment ke -k dari <code>X</code> yang dinotasikan dengan <span class="math inline">\(μ_k\)</span> yang merupakan nilai yang diharapkan dari pangkat ke-k dari deviasi x dan dari mean <code>μ</code>. Maka untuk rumus <span class="math inline">\(μ_k\)</span> adalah</p>
+<p><span class="math display">\[
+\begin{align}
+μ_k = E[(X-μ)^k] = \int_{0}^{∞}(x-μ)^kf_X(x)dx
+\end{align}
+\]</span></p>
+<p>Momen pusat kedua <span class="math inline">\(μ_2\)</span> mendefinisikan varians dari <code>X</code> yang dinotasikan dengan <span class="math inline">\(σ^2\)</span>. Akar kuadrat dari varians adalah simpangan baku <span class="math inline">\(σ\)</span> .</p>
+<p>Rasio momen sentral ketiga terhadap pangkat tiga dari deviasi standar <span class="math inline">\((μ_3/σ^3)\)</span> yang mendefinisikan koefisien kemiringan yang merupakan ukuran simetri. Koefisien kemencengan yang positif menunjukkan bahwa distribusi condong ke kanan (condong ke kanan).</p>
+<p>Rasio momen sentral keempat dengan pangkat empat dari deviasi standar <span class="math inline">\((μ_4/σ^4)\)</span> mendefinisikan koefisien kurtosis. Distribusi normal memiliki koefisien kurtosis 3. Distribusi dengan koefisien kurtosis lebih besar dari 3 memiliki ekor yang lebih berat daripada distribusi normal, sedangkan distribusi dengan koefisien kurtosis kurang dari 3 memiliki ekor yang lebih ringan dan lebih datar.</p>
+<div id="example" class="section level4 hasAnchor" number="3.1.1.1">
+<h4><span class="header-section-number">3.1.1.1</span> Example<a href="modeling-loss-severity.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Mengasumsikan bahwa variabel acak X memiliki distribusi gamma dengan rata-rata 9 dan skewness 1. Maka dicari perhitungan varians dari X.</p>
+<p>pdf dari X adalah :</p>
+<p><span class="math display">\[
+\begin{align}
+f_{X}\left( x \right) = \frac{\left( x / \theta \right)^{\alpha}}{x ~\Gamma\left( \alpha \right)} e^{- x / \theta}
+\end{align}
+\]</span>
+Untuk <span class="math inline">\(x&gt;0\)</span>, dan <span class="math inline">\(α&gt;0\)</span>, maka momen baku ke-k adalah</p>
+<p><span class="math display">\[
+\begin{align}
+\mu_{k}^{\prime} = \mathrm{E}\left( X^{k} \right) = \int_{0}^{\infty}{\frac{1}{\Gamma\left( \alpha \right)\theta^{\alpha}}x^{k + \alpha - 1}e^{- x / \theta} dx} = \frac{\Gamma\left( k + \alpha \right)}{\Gamma\left( \alpha \right)}\theta^{k}
+\end{align}
+\]</span></p>
+<p>Dengan memberikan <span class="math inline">\(\Gamma\left( r + 1 \right) = r\Gamma\left( r \right)\)</span> dan <span class="math inline">\(\Gamma\left( 1 \right) = 1\)</span>. Maka <span class="math inline">\(\mu_{1}^{\prime} = \mathrm{E}\left( X \right) = \alpha\theta\)</span></p>
+$$
+<span class="math display">\[\begin{align}
+\mu_{2}^{\prime} &amp;= \mathrm{E}\left( X^{2} \right) = \left( \alpha + 1 \right)\alpha\theta^{2} =
+\mu_{3}^{\prime} = \mathrm{E}\left( X^{3} \right) = \left( \alpha + 2 \right)\left( \alpha + 1 \right)\alpha\theta^{3}\\
 
+\mathrm{Var}\left( X \right) &amp;= (\alpha + 1)\alpha\theta^2 - (\alpha\theta)^2 = \alpha\theta^{2}\\
+
+\end{align}\]</span>
+<span class="math display">\[
+\]</span>
+<span class="math display">\[\begin{array}{ll}
+\text{Skewness}  &amp;= \frac{\mathrm{E}\left\lbrack {(X - \mu_{1}^{\prime})}^{3} \right\rbrack}{{\left( \mathrm{Var}X \right)}^{3/2}} = \frac{\mu_{3}^{\prime} - 3\mu_{2}^{\prime}\mu_{1}^{\prime} + 2{\mu_{1}^{\prime}}^{3}}{{\left(\mathrm{Var} X \right)}^{3/2}} \\
+&amp;= \frac{\left( \alpha + 2 \right)\left( \alpha + 1 \right)\alpha\theta^{3} - 3\left( \alpha + 1 \right)\alpha^{2}\theta^{3} + 2\alpha^{3}\theta^{3}}{\left( \alpha\theta^{2} \right)^{3/2}} \\
+&amp;= \frac{2}{\alpha^{1/2}} = 1.
+\end{array}\]</span>
+<p>$$</p>
+<p>Maka didapatkan hasil
+<span class="math display">\[
+\begin{align}
+α&amp;=4\\
+E(X)&amp;=αθ=8\\
+θ&amp;=2\\
+Var(X)&amp;=αθ^2=16
+\end{align}
+\]</span></p>
+</div>
+</div>
+<div id="quantiles" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Quantiles<a href="modeling-loss-severity.html#quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kuantil dapat digunakan dalam menggambarkan karakteristik distribusi <code>X</code>. Ketika distribusi <code>X</code> kontinu, untuk suatu pecahan tertentu <code>0≤p≤1</code> kuantil yang sesuai adalah solusi dari persamaan</p>
+<p><span class="math display">\[
+\begin{align}
+F_X(π_p)=p
+\end{align}
+\]</span>
+Sebagai contoh, titik tengah distribusi, <span class="math inline">\(π_{0.5}\)</span> adalah median. Persentil adalah jenis kuantil; persentil <span class="math inline">\(100p\)</span> yang merupakan angka sedemikian rupa sehingga <span class="math inline">\(100×p\)</span> persen dari data berada di bawahnya.</p>
+</div>
+<div id="moment-generating-function" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Moment Generating Function<a href="modeling-loss-severity.html#moment-generating-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Fungsi pembangkit momen (mgf)dilambangkan dengan <code>MX(t)</code> secara unik mencirikan distribusi dari <code>X</code> . Meskipun ada kemungkinan dua distribusi yang berbeda memiliki momen yang sama namun tetap berbeda, tidak demikian halnya dengan fungsi pembangkit momen. Artinya, jika dua variabel acak memiliki fungsi pembangkit momen yang sama, maka keduanya memiliki distribusi yang sama. Fungsi pembangkit momen diberikan oleh untuk semua nilai t yang memiliki nilai ekspektasi.</p>
+<p><span class="math display">\[
+\begin{align}
+M_X(t) = E(e^{tX}) = \int_{0}^{∞}e^{tX}f_X(x)dx
+\end{align}
+\]</span>
+MGF adalah fungsi real yang turunan ke-k pada nol sama dengan momen mentah ke-k dari X . Dalam simbol, ini adalah</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d^k}{dt^k}MX(t)\Bigr|_{t=0} = E(X^{k})
+\end{align}
+\]</span></p>
+<div id="example-1" class="section level4 hasAnchor" number="3.1.3.1">
+<h4><span class="header-section-number">3.1.3.1</span> Example<a href="modeling-loss-severity.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Variabel acak X memiliki distribusi eksponensial dengan mean <span class="math inline">\(1/b\)</span>. Maka dapat menacari b jika <span class="math inline">\(M_{X}\left( - b^{2} \right) = 0.2\)</span>.</p>
+<p><span class="math display">\[
+\begin{align}
+M_{X}(t) = \mathrm{E}\left( e^{tX} \right) = \int_{0}^{\infty}{e^{\text{tx}}be^{- bx} dx} = \int_{0}^{\infty}{be^{- x\left( b - t \right)} dx} = \frac{b}{\left( b - t \right)}.
+\end{align}
+\]</span>
+Maka</p>
+<p><span class="math display">\[
+\begin{align}
+M_{X}\left( - b^{2} \right) = \frac{b}{\left( b + b^{2} \right)} = \frac{1}{\left( 1 + b \right)} = 0.2
+\end{align}
+\]</span></p>
+<p>Maka akan didapatkan</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{1}{\left( 1 + b \right)} &amp;= 0.2\\
+1&amp;=0.2(1+b)\\
+1&amp;=0.2+0.2b\\
+0.8&amp;=0.2b\\
+4&amp;=b\\
+\end{align}
+\]</span>
+Kita juga dapat menggunakan fungsi pembangkit momen untuk menghitung fungsi pembangkit probabilitas dengan</p>
+<p><span class="math display">\[
+\begin{align}
+P_X(z)= E(z^X)=M_X(logz)
+\end{align}
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian<a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metode yang akan dibahas:</p>
+<ul>
+<li>Gamma</li>
+<li>Pareto</li>
+<li>Weibull</li>
+<li>Generalized beta distribution of the second kind</li>
+</ul>
+<div id="gamma-distribution" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Gamma Distribution<a href="modeling-loss-severity.html#gamma-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pendekatan konvensional dalam memodelkan kerugian adalah dengan membuat model terpisah untuk frekuensi dan tingkat keparahan klaim. Ketika frekuensi dan tingkat keparahan dimodelkan secara terpisah, biasanya para aktuaris menggunakan distribusi Poisson untuk jumlah klaim dan distribusi gamma untuk memodelkan tingkat keparahan dari kerugian itu sendiri. Namun, dengan perkembangan, menjadi popule metode dengan membuat model tunggal untuk premi murni (biaya klaim secara rata-rata). Rumus gamma density function:</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = \frac{\left( x/ \theta  \right)^{\alpha}}{x~ \Gamma\left( \alpha \right)}\exp \left( -x/ \theta \right) \ \ \ \text{for } x &gt; 0 .
+\end{equation}\]</span></p>
+<p>Dengan nilai <span class="math inline">\(a&gt;0\)</span> dan <span class="math inline">\(θ&gt;0\)</span> juga.
+Variabel kontinu <span class="math inline">\(X\)</span> yang merupakan fungsi adalah variable yang mewakilkan distribusi gamma dengan shape parameter <span class="math inline">\(a\)</span> dan scale parameter <span class="math inline">\(θ\)</span>.
+Perubahan dari perubahan scale dan shape parameter untuk gamma density function tertuang dalam grafik:</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap31.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+<p>Apabila <span class="math inline">\(a=1\)</span> gamma akan mereduksi menjadi distribusi eksponensial, apabila <span class="math inline">\(a=\frac{n}2\)</span> dan <span class="math inline">\(θ=2\)</span> maka gamma akan mereduksi menjadi distribusi chi-square dengan nilai n sebagai derajat kebebesan pada distribusi.Fungsi distribusi dari model gamma merupakan bentuk tidak sempurna atau lengkap dari fungsi gamma, dan dianotasikan sebagai <span class="math inline">\(\Gamma\left(\alpha; \frac{x}{\theta} \right)\)</span>,, dan bentuk persamaannya adalah:</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = \Gamma\left( \alpha; \frac{x}{\theta} \right) = \frac{1}{\Gamma\left( \alpha \right)}\int_{0}^{x /\theta}t^{\alpha - 1}e^{- t}~dt ,
+\end{equation}\]</span></p>
+<p>dengan <span class="math inline">\(\alpha &gt; 0,\ \theta &gt; 0\)</span> adalah integer untul <span class="math inline">\(\alpha\)</span>, sehingga dapat dituliskan sebagai <span class="math inline">\(\Gamma\left( \alpha; \frac{x}{\theta} \right) = 1 - e^{-x/\theta}\sum_{k = 0}^{\alpha-1}\frac{(x/\theta)^k}{k!}\)</span></p>
+<p>Sedangkan, untuk momen pada suatu <span class="math inline">\(K\)</span> dari variable acak berdistribusi gamma untuk <span class="math inline">\(k\)</span> positif dituliskan dengan persamaan:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = \theta^{k} \frac{\Gamma\left( \alpha + k \right)}{\Gamma\left( \alpha \right)} .
+\end{equation}\]</span></p>
+<p>rata-rata dan variansi yang diberikan oleh <span class="math inline">\(\mathrm{E}\left( X \right) = \alpha\theta\)</span> dan <span class="math inline">\(\mathrm{Var}\left( X \right) = \alpha\theta^{2}\)</span>, secara berturut-turut</p>
+<p>Karena semua momen ada untuk setiap <span class="math inline">\(K\)</span> positif distribusi gamma dianggap sebagai distribusi berekor ringan, yang mungkin tidak cocok untuk memodelkan aset berisiko karena tidak akan memberikan penilaian yang realistis tentang kemungkinan kerugian yang parah.</p>
+</div>
+<div id="distribusi-pareto" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Distribusi Pareto<a href="modeling-loss-severity.html#distribusi-pareto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Distribusi Pareto, yang dinamai menurut nama ekonom Italia Vilfredo Pareto (1843-1923), yang memiliki banyak kontribusi pada aplikasi ekonomi dan keuangan. Distribusi ini memiliki kemiringan positif dan heavy tailed yang membuatnya cocok untuk memodelkan pendapatan, klaim asuransi berisiko tinggi, dan tingkat keparahan kerugian korban yang besar.</p>
+<p>Fungsi survival dari distribusi Pareto yang meluruh perlahan-lahan menuju nol pertama kali digunakan untuk menggambarkan distribusi pendapatan di mana sebagian kecil dari populasi memiliki proporsi yang besar dari total kekayaan. Untuk klaim asuransi yang ekstrim, ekor dari distribusi keparahan (kerugian yang melebihi ambang batas) dapat dimodelkan dengan menggunakan distribusi Pareto yang digeneralisasi.</p>
+<p>Variabel kontinu <span class="math inline">\(X\)</span> dikatakan memiliki dua parameter pada distribusi pareto, dimana ada shape parameter <span class="math inline">\(a\)</span> dan scale parameter <span class="math inline">\(θ\)</span>, yang persamaannya adalah</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = \frac{\alpha\theta^{\alpha}}{\left( x + \theta \right)^{\alpha + 1}} \ \ \  x  &gt;  0, \ \alpha &gt;  0, \ \theta &gt; 0.
+\tag{3.1}
+\end{equation}\]</span></p>
+<p>Grafis di bawah menggambarkan efek dari perubahan scale dan shape parameter pada pareto density function.</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap32.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+<p>Fungsi distribusi dari distribusi pareto adalah:</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = 1 - \left( \frac{\theta}{x + \theta} \right)^{\alpha}  \ \ \ x &gt; 0,\ \alpha &gt; 0,\ \theta &gt; 0.
+\end{equation}\]</span></p>
+<p>Hazard function dari distribusi pareto adalah fungsi penurunan dari fungsi <span class="math inline">\(x\)</span>, indikasi ini menunjukkan bahwa distribusi pareto heavy tailed menggunakan analogi dari pendapatan populasi, apabila hazard function menurun seiring waktu, populasi akan habis pada suatu waktu penurunan yang menghasilkan heavier tail pada distribusi. Hazard function juga memberikan informasi tentang tail distribution yang digunakan untuk distribusi model data pada analisis survival. Hazard function ini juga dapat diartikan sebagai potensi sesaat bahwa suatu event yang menarik dapat terjadi dalam jangka waktu yang sangat sempit.</p>
+<p>Model <span class="math inline">\(K\)</span> pada distribusi parretto dalam suatu keadaan random variable, jika <span class="math inline">\(a\)</span>&gt;<span class="math inline">\(k\)</span>, yang dapat ditulis sebagai:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = \frac{\theta^{k}~ k!}{\left( \alpha - 1 \right)\cdots\left( \alpha - k \right)} \ \ \ \alpha &gt; k.
+\end{equation}\]</span></p>
+<p>rata-rata dan variansi yang diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X \right) = \frac{\theta}{\alpha - 1} \ \ \ \text{for } \alpha &gt; 1
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{Var}\left( X \right) = \frac{\alpha\theta^{2}}{\left( \alpha - 1 \right)^{2}\left( \alpha - 2 \right)} \ \ \ \text{for } \alpha &gt; 2,
+\end{equation}\]</span></p>
+<p>secara berturut-turut</p>
+</div>
+<div id="distribusi-weibull" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Distribusi Weibull<a href="modeling-loss-severity.html#distribusi-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Distribusi ini diambil dari nama pemiliknya yang merupakan fisikawan Swedish Waloddi Weibull (1887 – 1979) yang secara luas digunakan dalam keandalan, analisis data kehidupan, prakiraan cuaca, dan klaim asuransi umum. Data terpotong sering muncul dalam studi asuransi. Distribusi Weibull telah digunakan untuk memodelkan kelebihan perjanjian kerugian atas asuransi mobil serta waktu antar kedatangan gempa bumi.</p>
+<p>Variabel kontinu <span class="math inline">\(X\)</span> dikatakan memiliki distribusi weibul dengan syarat memiliki 2 parameter yang digunakan, yaitu scale parameter <span class="math inline">\(a\)</span> dan shape parameter <span class="math inline">\(θ\)</span>. Yang persamaannay turun dari:</p>
+<p>$$<span class="math display">\[\begin{equation}
+
+\end{equation}\]</span>$$</p>
+<p>Pada grafik menunjukkan efek dari scale dan shape parameter pada perubahan weibul density function.</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap33.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+<p>Fungsi distribusi dari weibul distribusi diberikan sebagai:</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = 1 - \exp\left(- \left( \frac{x}{\theta} \right)^{\alpha}~\right)  \ \ \ x &gt;  0,\ \alpha &gt;  0,\ \theta &gt; 0.
+\end{equation}\]</span></p>
+<p>Dari rumus dapat ditarik kesimpulan bahwa <span class="math inline">\(a\)</span> mendeskripsikan bentuk dari hazard function dari weibul distribution. Dimana hazard function akan menjadi fungsi penurunan apabila <span class="math inline">\(a\)</span>&lt;1 (heavy tailed distribution), akan konstan Ketika <span class="math inline">\(a\)</span>=1 dan akan menjadi fungsi naik Ketika <span class="math inline">\(a\)</span>&gt;1 (light tailed distribution). Sifat dari hazard function ini membuat weibul distribusi cocok untuk digunakan pada model yang variety yang luas, contohnya fenomena alam, forecast cuaca, Teknik industry, model asuransi, dan analisis resiko financial.</p>
+<p>Momen <span class="math inline">\(K\)</span> pada weibul dianotasikan dalam :</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = \theta^{k}~\Gamma\left( 1 + \frac{k}{\alpha} \right) .
+\end{equation}\]</span></p>
+<p>rata-rata dan variansi yang diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X \right) = \theta~\Gamma\left( 1 + \frac{1}{\alpha} \right)
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{Var}(X)= \theta^{2}\left( \Gamma\left( 1 + \frac{2}{\alpha} \right)  - \left\lbrack \Gamma\left( 1 + \frac{1}{\alpha} \right) \right\rbrack  ^{2}\right),
+\end{equation}\]</span></p>
+<p>secara berturut-turut</p>
+<div id="contoh-soal" class="section level4 hasAnchor" number="3.2.3.1">
+<h4><span class="header-section-number">3.2.3.1</span> Contoh Soal<a href="modeling-loss-severity.html#contoh-soal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Misalkan distribusi probabilitas masa hidup penderita AIDS (dalam bulan) dari saat diagnosis digambarkan oleh distribusi Weibull dengan parameter bentuk 1.2 dan parameter skala 33.33.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Temukan probabilitas bahwa orang yang dipilih secara acak dari populasi ini bertahan setidaknya 12 bulan.</li>
+<li>Sebuah sampel acak dari 10 pasien akan dipilih dari populasi ini. Berapa peluang bahwa paling banyak dua orang akan meninggal dalam waktu satu tahun setelah diagnosis.</li>
+<li>Temukan persentil ke-99 dari distribusi masa hidup.</li>
+</ol>
+</div>
+<div id="solusi" class="section level4 hasAnchor" number="3.2.3.2">
+<h4><span class="header-section-number">3.2.3.2</span> Solusi<a href="modeling-loss-severity.html#solusi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li>Biarkan X menjadi seumur hidup pasien AIDS (dalam bulan) memiliki distribusi Weibull dengan parameter <span class="math inline">\((1.2,33.33)\)</span>. Kita punya,</li>
+</ol>
+<p><span class="math inline">\(\Pr \left( X \geq 12 \right) = S_{X} \left( 12 \right) = e^{- \left( \frac{12}{33.33} \right)^{1.2}} = 0.746.\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Biarkan <span class="math inline">\(Y\)</span> adalah jumlah pasien yang meninggal dalam waktu satu tahun diagnosis. Lalu, <span class="math inline">\(Y\)</span>∼ <span class="math inline">\(Bin(10, 0,254)\)</span> dan <span class="math inline">\(Pr(Y≤2)=0,514\)</span>.</p></li>
+<li><p>Misalkan <span class="math inline">\(π0,99\)</span> menunjukkan persentil ke-99 dari distribusi ini. Kemudian,</p></li>
+</ol>
+<p><span class="math inline">\(S_{X}\left( \pi_{0.99} \right) = \exp\left\{- \left( \frac{\pi_{0.99}}{33.33} \right)^{1.2}\right\} = 0.01.\)</span></p>
+<p>Memecahkan untuk <span class="math inline">\(π_{0,99}\)</span> kita mendapatkan <span class="math inline">\(π_{0,99}=118,99\)</span>.</p>
+</div>
+</div>
+<div id="distribusi-beta-umum-jenis-kedua" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Distribusi Beta Umum Jenis Kedua<a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generalized Beta Distribution of the Second Kind (GB2) diperkenalkan oleh Venter (1983) dalam konteks pemodelan kerugian asuransi dan oleh McDonald (1984) sebagai distribusi pendapatan dan kekayaan. Ini adalah distribusi empat parameter, sangat fleksibel, yang dapat memodelkan distribusi miring positif dan negatif.</p>
+<p>Variabel kontinu <span class="math inline">\(X\)</span> dikatakan memiliki distribusi GB2 dengan parameter <span class="math inline">\(σ\)</span>, <span class="math inline">\(θ\)</span>, <span class="math inline">\(a_1\)</span> dan <span class="math inline">\(a_2\)</span> jika pdf-nya diberikan oleh :</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = \frac{(x/\theta)^{\alpha_2/\sigma}}{x \sigma~\mathrm{B}\left( \alpha_1,\alpha_2\right)\left\lbrack 1 + \left( x/\theta \right)^{1/\sigma} \right\rbrack^{\alpha_1 + \alpha_2}} \ \ \ \text{for } x &gt; 0,
+\tag{3.2}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\sigma,\theta,\alpha_1,\alpha_2 &gt; 0\)</span> dan dimana fungsi Beta <span class="math inline">\(\mathrm{B}\left( \alpha_1,\alpha_2 \right)\)</span> didefinisikan sebagai:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{B}\left( \alpha_1,\alpha_2\right) = \int_{0}^{1}{t^{\alpha_1 - 1}\left( 1 - t \right)^{\alpha_2 - 1}}~ dt.
+\end{equation}\]</span></p>
+<p>GB2 menyediakan model untuk data berekor berat dan ringan. Ini termasuk eksponensial, gamma, Weibull, Burr, Lomax, F, chi-square, Rayleigh, lognormal dan log-logistik sebagai kasus khusus atau terbatas. Misalnya dengan mengatur parameter <span class="math inline">\(σ=α_1=α_2=1\)</span>, GB2 direduksi menjadi distribusi logistik log. Ketika <span class="math inline">\(σ=1\)</span> dan <span class="math inline">\(α_2→∞\)</span>, ini direduksi menjadi distribusi gamma, dan ketika <span class="math inline">\(α=1\)</span> dan <span class="math inline">\(α_2→∞\)</span> itu direduksi menjadi distribusi Weibull.</p>
+<p>Variabel acak GB2 dapat dibangun sebagai berikut. Misalkan <span class="math inline">\(G_1\)</span> dan <span class="math inline">\(G_2\)</span> adalah variabel acak independen di mana <span class="math inline">\(G_i\)</span> memiliki distribusi gamma dengan parameter bentuk <span class="math inline">\(α_i\)</span> dan parameter skala 1. Kemudian, dapat ditunjukkan bahwa variabel acak <span class="math inline">\(X=θ(\frac{G_1}{G_2})^σ\)</span> memiliki distribusi GB2. Hasil teoritis ini memiliki beberapa implikasi. Sebagai contoh, ketika momen-momen itu ada, dapat ditunjukkan bahwa <span class="math inline">\(k\)</span> momen mentah ke-th dari variabel acak terdistribusi GB2 diberikan oleh :</p>
+<p><span class="math inline">\(\mathrm{E}\left( X^{k} \right) = \frac{\theta^{k}~\mathrm{B}\left( \alpha_1 +k \sigma,\alpha_2 - k \sigma \right)}{\mathrm{B}\left( \alpha_1,\alpha_2 \right)}, \ \ \ k &gt; 0.\)</span></p>
+<p>Seperti yang sudah dijelaskan, GB2 juga terkait dengan <span class="math inline">\(F\)</span>-distribusi, hasil yang dapat berguna dalam simulasi dan analisis residual. Aplikasi GB2 sebelumnya adalah pada data pendapatan dan baru-baru ini telah digunakan untuk memodelkan data klaim berekor panjang. GB2 telah digunakan untuk memodelkan berbagai jenis klaim asuransi mobil, tingkat kerugian akibat kebakaran, serta data klaim asuransi kesehatan.</p>
+</div>
+</div>
+<div id="methods-of-creating-new-distributions" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Methods of Creating New Distributions<a href="modeling-loss-severity.html#methods-of-creating-new-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="functions-of-random-variables-and-their-distributions" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Functions of Random Variables and their Distributions<a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sub bab ini membahas mengenai cara-cara untuk membuat distribusi probabilitas parametrik baru dari distribusi yang sudah ada. Secara khusus, misalkan X sebuah variabel acak kontinu dengan pdf (probability distribution function) yang diketahui <span class="math inline">\(fX(x)\)</span> dan fungsi distribusi <span class="math inline">\(FX(x)\)</span>. Kemudian distribusi <span class="math inline">\(Y = g(X)\)</span> , di mana <span class="math inline">\(g(X)\)</span> adalah transformasi satu-ke-satu yang mendefinisikan variabel acak baru <span class="math inline">\(Y\)</span> .</p>
+<p>Dengan demikian pada sub bab ini menerapkan teknik-teknik berikut untuk membuat keluarga distribusi baru:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>perkalian dengan sebuah konstanta</p></li>
+<li><p>pemangkatan,</p></li>
+<li><p>eksponensial, dan</p></li>
+<li><p>pencampuran.</p></li>
+</ol>
+</div>
+<div id="multiplication-by-a-constant" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Multiplication by a Constant<a href="modeling-loss-severity.html#multiplication-by-a-constant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jika data klaim menunjukkan perubahan dari waktu ke waktu, maka transformasi tersebut dapat berguna untuk menyesuaikan inflasi. <em>Jika tingkat inflasi positif maka biaya klaim meningkat, dan jika negatif maka biaya menurun</em>. Untuk menyesuaikan dengan inflasi, maka mengalikan biaya X dengan 1+ tingkat inflasi (inflasi negatif adalah deflasi). Untuk memperhitungkan dampak mata uang terhadap biaya klaim, maka menggunakan transformasi untuk menerapkan konversi mata uang dari mata uang dasar ke mata uang lawan.</p>
+<p>Pertimbangkan transformasi <span class="math inline">\(Y = c_X\)</span> , dimana <span class="math inline">\(c&gt;0\)</span> , maka fungsi distribusi dari <span class="math inline">\(Y\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( cX \leq y \right) = \Pr\left( X \leq \frac{y}{c} \right) = F_{X}\left( \frac{y}{c} \right).
+\end{equation}\]</span></p>
+<p>Dengan menggunakan aturan rantai untuk diferensiasi, pdf bunga <span class="math inline">\(f_Y(y)\)</span> dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}\left( y \right) = \frac{1}{c}f_{X}\left( \frac{y}{c} \right).
+\end{equation}\]</span></p>
+<p>Misalkan X termasuk dalam himpunan distribusi parametrik tertentu dan mendefinisikan versi yang diskalakan <span class="math inline">\(Y = c_X , c &gt; 0\)</span> . Jika <span class="math inline">\(Y\)</span> berada dalam himpunan distribusi yang sama maka distribusi tersebut dikatakan sebagai distribusi skala. Ketika sebuah anggota dari distribusi skala dikalikan dengan sebuah konstanta <span class="math inline">\(c\)</span> <span class="math inline">\(( c&gt;0 )\)</span>, parameter skala untuk distribusi skala ini memenuhi dua kondisi:</p>
+<ul>
+<li><p>Parameter diubah dengan mengalikan dengan c</p></li>
+<li><p>Semua parameter lainnya tetap tidak berubah</p></li>
+</ul>
+<p><em>Contoh 3.3.1. Pertanyaan Ujian Aktuaria.</em> Kerugian Asuransi Mobil Eiffel dilambangkan dalam mata uang Euro dan mengikuti distribusi lognormal dengan <span class="math inline">\(μ = 8\)</span> dan <span class="math inline">\(σ = 2\)</span> . Mengingat bahwa <em>1 euro = 1,3 dolar</em>, tentukan himpunan parameter lognormal yang menggambarkan distribusi kerugian Eiffel dalam dolar.</p>
+<p>solusi:
+Misalkan <span class="math inline">\(X\)</span> dan <span class="math inline">\(Y\)</span> menunjukkan total kerugian Eiffel Auto Insurance dalam mata uang euro dan dolar secara berturut-turut. Karena <span class="math inline">\(Y = 1.3X\)</span>, kita memiliki:</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( 1.3X \leq y \right) = \Pr\left( X \leq \frac{y}{1.3} \right) = F_{X}\left( \frac{y}{1.3} \right).
+\end{equation}\]</span></p>
+<p><span class="math inline">\(X\)</span> mengikuti distribusi lognormal dengan parameter <span class="math inline">\(μ=8\)</span> dan <span class="math inline">\(σ=2\)</span>. Fungsi kepadatan probabilitas (<span class="math inline">\(pdf\)</span>) dari <span class="math inline">\(X\)</span> diberikan oleh:</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = \frac{1}{x \sigma \sqrt{2\pi}}\exp \left\{- \frac{1}{2}\left( \frac{\log x - \mu}{\sigma} \right)^{2}\right\} \ \ \ \text{for } x &gt; 0.
+\end{equation}\]</span></p>
+<p>Karena <span class="math inline">\(\left| \frac{dx}{dy} \right| = \frac{1}{1.3}\)</span>, <span class="math inline">\(PDF\)</span> yang diinginkan <span class="math inline">\(f_{Y}(y)\)</span> adalah:</p>
+<p><span class="math display">\[\begin{array}{ll}
+f_{Y}\left( y \right) &amp; = \frac{1}{1.3}f_{X}\left( \frac{y}{1.3} \right) \\
+&amp;= \frac{1}{1.3}\frac{1.3}{y \sigma \sqrt{2\pi}}\exp \left\{- \frac{1}{2}\left( \frac{\log\left( y/1.3 \right) - \mu}{\sigma} \right)^{2}\right\} \\
+&amp;= \frac{1}{y \sigma\sqrt{2\pi}}\exp \left\{- \frac{1}{2}\left( \frac{\log y - \left( \log 1.3 + \mu \right)}{\sigma} \right)^{2}\right\}.
+\end{array}\]</span></p>
+<p>Maka Y mengikuti distribusi lognormal dengan parameter <span class="math inline">\(4log1.3+μ=8.26\)</span> dan <span class="math inline">\(σ = 2.00\)</span>. Jika <span class="math inline">\(μ = log(m)\)</span>, dengan mudah dapat dilihat bahwa <span class="math inline">\(m = e^μ\)</span> adalah parameter skala yang dikalikan dengan 1,3 sedangkan σ adalah parameter bentuk yang tidak berubah.</p>
+</div>
+<div id="raising-to-a-power" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Raising to a Power<a href="modeling-loss-severity.html#raising-to-a-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada Bagian 3.2.3, telah membahas tentang fleksibilitas distribusi Weibull dalam menyesuaikan data keandalan. Distribusi Weibull adalah transformasi pangkat dari distribusi eksponensial. Ini adalah aplikasi dari jenis transformasi lain yang melibatkan peningkatan variabel acak menjadi pangkat.</p>
+<p>Pertimbangkan transformasi <span class="math inline">\(Y = X^τ\)</span> dengan <span class="math inline">\(τ&gt;0\)</span> , maka fungsi distribusi dari <span class="math inline">\(Y\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( X^{\tau} \leq y \right) = \Pr\left( X \leq y^{1/ \tau} \right) = F_{X}\left( y^{1/ \tau} \right).
+\end{equation}\]</span></p>
+<p>Oleh karena itu, <span class="math inline">\(pdf\)</span> dari bunga <span class="math inline">\(f_Y(y)\)</span> dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}(y) = \frac{1}{\tau} y^{(1/ \tau) - 1} f_{X}\left( y^{1/ \tau} \right).
+\end{equation}\]</span></p>
+<p>Di sisi lain, jika <span class="math inline">\(τ &lt; 0\)</span> maka fungsi distribusi dari <span class="math inline">\(Y\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( X^{\tau} \leq y \right) = \Pr\left( X \geq y^{1/ \tau} \right) = 1 - F_{X}\left( y^{1/ \tau} \right),
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}(y) = \left| \frac{1}{\tau} \right|{y^{(1/ \tau) - 1}f}_{X}\left( y^{1/ \tau} \right).
+\end{equation}\]</span></p>
+<p><em>Contoh 3.3.3.</em> Asumsikan bahwa <span class="math inline">\(X\)</span> mengikuti distribusi eksponensial dengan rata-rata <span class="math inline">\(θ\)</span> dan pertimbangkan variabel yang ditransformasi <span class="math inline">\(Y = X^τ\)</span> . Tunjukkan bahwa <span class="math inline">\(Y\)</span> mengikuti distribusi Weibull ketika <span class="math inline">\(τ\)</span> positif dan tentukan parameter-parameter dari distribusi Weibull.</p>
+<p>solusi:
+Karena <span class="math inline">\(X\)</span> mengikuti distribusi eksponensial dengan rata-rata <span class="math inline">\(\theta\)</span>, kita memiliki:</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}(x) = \frac{1}{\theta}e^{- x/ \theta} \ \ \ \, x &gt; 0.
+\end{equation}\]</span></p>
+<p>Dalam menyelesaikan persamaan untuk <span class="math inline">\(x\)</span>, kita dapatkan <span class="math inline">\(x = y^{1/\tau}\)</span>. Mengambil turunan, kita memiliki:</p>
+<p><span class="math display">\[\begin{equation}
+\left| \frac{dx}{dy} \right| = \frac{1}{\tau}{y^{\frac{1}{\tau}-1}}.
+\end{equation}\]</span></p>
+<p>maka</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}\left( y \right) = \frac{1}{\tau}{y^{\frac{1}{\tau} - 1}f}_{X}\left( y^{\frac{1}{\tau}} \right) \\
+= \frac{1}{\tau \theta }y^{\frac{1}{\tau} - 1}e^{- \frac{y^{\frac{1}{\tau}}}{\theta}} = \frac{\alpha}{\beta}\left( \frac{y}{\beta} \right)^{\alpha - 1}e^{- \left( y/ \beta \right)^{\alpha}}.
+\end{equation}\]</span></p>
+<p>di mana <span class="math inline">\(α = 1/τ\)</span> dan <span class="math inline">\(β = θ^τ\)</span>. Kemudian, <span class="math inline">\(Y\)</span> mengikuti distribusi Weibull dengan parameter bentuk <span class="math inline">\(α\)</span> dan parameter skala <span class="math inline">\(β\)</span> .</p>
+</div>
+<div id="exponentiation" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Exponentiation<a href="modeling-loss-severity.html#exponentiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Distribusi normal adalah model yang sangat populer untuk sejumlah besar aplikasi ketika ukuran sampel besar, distribusi ini dapat berfungsi sebagai distribusi perkiraan untuk model lainnya. Jika variabel acak X memiliki distribusi normal dengan rata-rata <span class="math inline">\(μ\)</span> dan varians <span class="math inline">\(σ^2\)</span> maka <span class="math inline">\(Y = e^X\)</span> memiliki distribusi lognormal dengan parameter <span class="math inline">\(μ\)</span> dan <span class="math inline">\(σ^2\)</span> . Variabel acak lognormal memiliki batas bawah nol, condong ke kanan, dan memiliki ekor kanan yang panjang. Distribusi lognormal biasanya digunakan untuk menggambarkan distribusi aset keuangan seperti harga saham. Distribusi ini juga digunakan untuk menyesuaikan jumlah klaim untuk asuransi mobil dan kesehatan. Ini adalah contoh jenis transformasi lain yang melibatkan eksponensial.</p>
+<p>Secara umum, pertimbangkan transformasi <span class="math inline">\(Y = e^X\)</span> . Kemudian, fungsi distribusi dari <span class="math inline">\(Y\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( e^{X} \leq y \right) = \Pr\left( X \leq \log y \right) = F_{X}\left( \log y \right).
+\end{equation}\]</span></p>
+<p>Dengan mengambil turunan bahwa pdf bunga <span class="math inline">\(f_Y(y)\)</span> dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}(y) = \frac{1}{y}f_{X}\left( \log y \right).
+\end{equation}\]</span></p>
+<p>Sebagai kasus khusus yang penting, misalkan <span class="math inline">\(X\)</span> berdistribusi normal dengan rata-rata <span class="math inline">\(μ\)</span> dan varians <span class="math inline">\(σ^2\)</span> . Maka, distribusi dari <span class="math inline">\(Y = e^X\)</span> adalah</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}(y) = \frac{1}{y}f_{X}\left( \log y \right)
+= \frac{1}{y \sigma \sqrt{2 \pi}} \exp \left\{-\frac{1}{2}\left(\frac{ \log y - \mu}{\sigma}\right)^2\right\}.
+\end{equation}\]</span></p>
+<p>Ini dikenal sebagai distribusi lognormal.</p>
+<p><em>Contoh 3.3.4. Pertanyaan Ujian Aktuaria.</em> Asumsikan bahwa <span class="math inline">\(X\)</span> memiliki distribusi seragam pada interval <span class="math inline">\((0, c)\)</span> dan mendefinisikan <span class="math inline">\(Y = e^X\)</span> . Tentukan distribusi dari <span class="math inline">\(Y\)</span>.</p>
+<p>solusi:
+Kita mulai dengan fungsi distribusi kumulatif (<span class="math inline">\(cdf\)</span>) dari <span class="math inline">\(Y\)</span>,</p>
+<p><span class="math display">\[\begin{equation}
+F_{Y}\left( y \right) = \Pr\left( Y \leq y \right) = \Pr\left( e^{X} \leq y \right) = \Pr\left( X \leq \log y \right) = F_{X}\left( \log y \right).
+\end{equation}\]</span></p>
+<p>Mengambil turunan, kita memperoleh:</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y}\left( y \right) = \frac{1}{y}f_{X}\left(\log y \right) = \frac{1}{cy} .
+\end{equation}\]</span></p>
+<p>karena <span class="math inline">\(0 &lt; x &lt; c\)</span>, maka <span class="math inline">\(1 &lt; y &lt; e^{c}\)</span>.</p>
+</div>
+<div id="finite-mixtures" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Finite Mixtures<a href="modeling-loss-severity.html#finite-mixtures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Distribusi campuran merupakan cara yang berguna untuk memodelkan data yang diambil dari populasi yang heterogen. Populasi induk ini dapat dianggap dibagi menjadi beberapa subpopulasi dengan distribusi yang berbeda.</p>
+<div id="two-point-mixture" class="section level4 hasAnchor" number="3.3.5.1">
+<h4><span class="header-section-number">3.3.5.1</span> Two-point Mixture<a href="modeling-loss-severity.html#two-point-mixture" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Jika fenomena yang mendasari beragam dan sebenarnya dapat digambarkan sebagai dua fenomena yang mewakili dua subpopulasi de_ngan modus yang berbeda, dapat membangun variabel acak campuran dua titik <span class="math inline">\(X\)</span> . Diberikan variabel acak <span class="math inline">\(X_1\)</span> dan <span class="math inline">\(X_2\)</span> dengan pdf <span class="math inline">\(fX_1(x)\)</span> dan <span class="math inline">\(fX_2(x)\)</span> masing-masing, pdf dari <span class="math inline">\(X\)</span> adalah rata-rata tertimbang dari komponen pdf <span class="math inline">\(fX_1(x)\)</span> dan <span class="math inline">\(fX_2(x)\)</span>. Pdf dan fungsi distribusi dari <span class="math inline">\(X\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = af_{X_{1}}\left( x \right) + \left( 1 - a \right)f_{X_{2}}\left( x \right),
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = aF_{X_{1}}\left( x \right) + \left( 1 - a \right)F_{X_{2}}\left( x \right),
+\end{equation}\]</span></p>
+<p>untuk <span class="math inline">\(0&lt;a&lt;1\)</span> , dengan parameter pencampuran <span class="math inline">\(a\)</span> dan <span class="math inline">\((1-a)\)</span> masing-masing mewakili proporsi titik data yang termasuk dalam masing-masing dua subpopulasi. Rata-rata tertimbang ini dapat diterapkan pada sejumlah besaran terkait distribusi lainnya. Momen mentah ke-k dan fungsi pembangkit momen dari <span class="math inline">\(X\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = a\mathrm{E}\left( X_{1}^{K} \right) + \left( 1 - a \right)\mathrm{E}\left( X_{2}^{k} \right)
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+M_{X}(t) = aM_{X_{1}}(t) + \left( 1 - a \right)M_{X_{2}}(t),
+\end{equation}\]</span></p>
+<p>masing-masing.</p>
+<p><em>Contoh 3.3.5. Pertanyaan Ujian Aktuaria.</em> Kumpulan polis asuransi terdiri dari dua jenis. 25% polis adalah Tipe 1 dan 75% polis adalah Tipe 2. Untuk polis Tipe 1, jumlah kerugian per tahun mengikuti distribusi eksponensial dengan rata-rata 200, dan untuk polis Tipe 2, jumlah kerugian per tahun mengikuti distribusi Pareto dengan parameter <span class="math inline">\(α = 3\)</span> dan <span class="math inline">\(θ = 200\)</span> . Untuk sebuah polis yang dipilih secara acak dari seluruh kumpulan kedua jenis polis tersebut, tentukan probabilitas bahwa kerugian tahunan akan kurang dari 100, dan tentukan rata-rata kerugiannya.</p>
+<p>solusi:
+Dua jenis kerugian tersebut adalah variabel acak <span class="math inline">\(X_1\)</span> dan <span class="math inline">\(X_2\)</span>. <span class="math inline">\(X_1\)</span> memiliki distribusi eksponensial dengan rata-rata 100, sehingga <span class="math inline">\(F_{X_1}\left(100\right)=1-e^{-\frac{100}{200}}=0.393\)</span>. <span class="math inline">\(X_2\)</span> memiliki distribusi Pareto dengan parameter <span class="math inline">\(\alpha=3\)</span> dan <span class="math inline">\(\theta=200\)</span>, sehingga <span class="math inline">\(F_{X_1}\left(100\right)=1-\left(\frac{200}{100+200}\right)^3=0.704\)</span>. Oleh karena itu, <span class="math inline">\(F_X\left(100\right)=\left(0.25\times0.393\right)+\left(0.75\times0.704\right)=0.626\)</span>.</p>
+<p>Kerugian rata-rata diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left(X\right)=0.25\mathrm{E}\left(X_1\right)+0.75\mathrm{E}\left(X_2\right)=\left(0.25\times200\right)+\left(0.75\times100\right)=125
+\end{equation}\]</span></p>
+</div>
+<div id="k-point-mixture" class="section level4 hasAnchor" number="3.3.5.2">
+<h4><span class="header-section-number">3.3.5.2</span> k-point Mixture<a href="modeling-loss-severity.html#k-point-mixture" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dalam kasus distribusi campuran berhingga, variabel acak yang diminati <span class="math inline">\(X\)</span> memiliki probabilitas <span class="math inline">\(p_i\)</span> untuk terambil dari subpopulasi homogen <span class="math inline">\(i\)</span> dengan <span class="math inline">\(i = 1,2,...,k\)</span> dan <span class="math inline">\(k\)</span> adalah jumlah subpopulasi yang ditentukan pada awalnya dalam campuran. Parameter pencampuran <span class="math inline">\(p_i\)</span> merepresentasikan proporsi observasi dari subpopulasi <span class="math inline">\(i\)</span> . Pertimbangkan variabel acak <span class="math inline">\(X\)</span> yang dihasilkan dari k subpopulasi yang berbeda, di mana subpopulasi <span class="math inline">\(i\)</span> dimodelkan dengan distribusi kontinu <span class="math inline">\(fX_i(x)\)</span> . Distribusi probabilitas dari <span class="math inline">\(X\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left(X\right)=0.25\mathrm{E}\left(X_1\right)+0.75\mathrm{E}\left(X_2\right)=\left(0.25\times200\right)+\left(0.75\times100\right)=125
+\end{equation}\]</span></p>
+<p>dimana <span class="math inline">\(0 &lt; p_{i} &lt; 1\)</span> dan <span class="math inline">\(\sum_{i = 1}^{k} p_{i} = 1\)</span></p>
+<p>Model ini sering disebut sebagai campuran terbatas atau campuran k-point mixture. Fungsi distribusi, r momen mentah ke-k dan fungsi pembangkit momen dari k-point mixture ke-k diberikan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = \sum_{i = 1}^{k}{p_{i}F_{X_{i}}\left( x \right)},
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = \sum_{i = 1}^{k}{p_{i}F_{X_{i}}\left( x \right)},
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+M_{X}(t) = \sum_{i = 1}^{k}{p_{i}M_{X_{i}}(t)},
+\end{equation}\]</span></p>
+<p>masing-masing</p>
+<p><em>Contoh 3.3.6. Pertanyaan Ujian Aktuaria.</em> <span class="math inline">\(Y_1\)</span> adalah campuran dari <span class="math inline">\(X_1\)</span> dan <span class="math inline">\(X_2\)</span> dengan bobot-bobot pencampuran <span class="math inline">\(a\)</span> dan <span class="math inline">\((1-a)\)</span>. <span class="math inline">\(Y_2\)</span> adalah campuran dari <span class="math inline">\(X_3\)</span> dan <span class="math inline">\(X_4\)</span> dengan bobot pencampuran <span class="math inline">\(b\)</span> dan <span class="math inline">\((1-b)\)</span>. <span class="math inline">\(Z\)</span> adalah campuran dari <span class="math inline">\(Y_1\)</span> dan <span class="math inline">\(Y_2\)</span> dengan bobot pencampuran <span class="math inline">\(c\)</span> dan <span class="math inline">\((1-c)\)</span>. Tunjukkan bahwa <span class="math inline">\(Z\)</span> adalah campuran dari <span class="math inline">\(X_1, X_2, X_3 dan X_4\)</span> dan tentukan bobot pencampurannya.</p>
+<p>solusi:
+Dengan menerapkan rumus untuk distribusi campuran (mixed distribution), kita dapatkan:</p>
+<p><span class="math display">\[\begin{equation}
+f_{Y_{1}}\left( x \right) = af_{X_{1}}\left( x \right) + \left( 1 - a \right)f_{X_{2}}\left( x \right)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+f_{Y_{2}}\left( x \right) = bf_{X_{3}}\left( x \right) + \left( 1 - b \right)f_{X_{4}}\left( x \right)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+f_{Z}\left( x \right) = cf_{Y_{1}}\left( x \right) + \left( 1 - c \right)f_{Y_{2}}\left( x \right)
+\end{equation}\]</span></p>
+<p>Dengan menggantikan persamaan pertama dan kedua ke dalam persamaan ketiga, kita dapatkan:</p>
+<p><span class="math display">\[\begin{equation}
+f_{Z}\left( x \right) = c\left\lbrack af_{X_{1}}\left( x \right) + \left( 1 - a \right)f_{X_{2}}\left( x \right) \right\rbrack + \left( 1 - c \right)\left\lbrack bf_{X_{3}}\left( x \right) + \left( 1 - b \right)f_{X_{4}}\left( x \right) \right\rbrack
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+= caf_{X_{1}}\left( x \right) + c\left( 1 - a \right)f_{X_{2}}\left( x \right) + \left( 1 - c \right)bf_{X_{3}}\left( x \right) + (1 - c)\left( 1 - b \right)f_{X_{4}}\left( x \right)
+\end{equation}\]</span></p>
+<p>Kemudian, <span class="math inline">\(Z\)</span> adalah campuran dari <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, <span class="math inline">\(X_3\)</span>, dan <span class="math inline">\(X_4\)</span>, dengan bobot campuran <span class="math inline">\(ca\)</span>, <span class="math inline">\(c(1−a)\)</span>, <span class="math inline">\((1−c)b\)</span>, dan <span class="math inline">\((1−c)(1−b)\)</span> secara berturut-turut. Mudah dilihat bahwa jumlah bobot campuran tersebut adalah satu.</p>
+</div>
+</div>
+<div id="continuous-mixtures" class="section level3 hasAnchor" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Continuous Mixtures<a href="modeling-loss-severity.html#continuous-mixtures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Campuran dengan jumlah subpopulasi yang sangat banyak (k menuju tak terhingga) sering disebut sebagai campuran kontinu. Dalam campuran kontinu, subpopulasi tidak dibedakan oleh parameter pencampuran diskrit tetapi oleh variabel kontinu <span class="math inline">\(Θ\)</span> dimana <span class="math inline">\(Θ\)</span> memainkan peran sebagai <span class="math inline">\(p_i\)</span> dalam campuran berhingga. Pertimbangkan variabel acak <span class="math inline">\(X\)</span> dengan distribusi yang bergantung pada parameter <span class="math inline">\(Θ\)</span> , dimana <span class="math inline">\(Θ\)</span> itu sendiri adalah variabel acak kontinu. Deskripsi ini menghasilkan model berikut untuk <span class="math inline">\(X\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+f_{X}\left( x \right) = \int_{-\infty}^{\infty}{f_{X}\left(x \left| \theta \right.  \right)g_{\Theta}( \theta )} d \theta ,
+\end{equation}\]</span></p>
+<p>di mana <span class="math inline">\(f_X(x|θ)\)</span> adalah distribusi bersyarat dari <span class="math inline">\(X\)</span> pada nilai tertentu dari <span class="math inline">\(Θ = θ\)</span> dan <span class="math inline">\(g_Θ(θ)\)</span> adalah pernyataan probabilitas yang dibuat tentang parameter <span class="math inline">\(θ\)</span> yang tidak diketahui . Dalam konteks Bayesian (dijelaskan pada Bagian 4.4), hal ini dikenal sebagai distribusi prior dari <span class="math inline">\(Θ\)</span> (informasi sebelumnya atau pendapat ahli yang akan digunakan dalam analisis).</p>
+<p>Fungsi distribusi, k momen mentah ke-k dan fungsi pembangkit momen dari campuran kontinu diberikan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+F_{X}\left( x \right) = \int_{-\infty}^{\infty}{F_{X}\left(x \left| \theta \right.  \right) g_{\Theta}(\theta)} d \theta,
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = \int_{-\infty}^{\infty}{\mathrm{E}\left( X^{k}\left| \theta \right.  \right)g_{\Theta}(\theta)}d \theta,
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+M_{X}(t) = \mathrm{E}\left( e^{t X} \right) = \int_{-\infty}^{\infty}{\mathrm{E}\left( e^{ tx}\left| \theta \right.  \right)g_{\Theta}(\theta)}d \theta,
+\end{equation}\]</span></p>
+<p>masing-masing</p>
+<p>Momen mentah ke-k ke-k dari distribusi campuran dapat ditulis ulang sebagai</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X^{k} \right) = \int_{-\infty}^{\infty}{\mathrm{E}\left( X^{k}\left| \theta \right.  \right)g_{\Theta}(\theta)}d\theta ~=~ \mathrm{E}\left\lbrack \mathrm{E}\left( X^{k}\left| \Theta \right.  \right) \right\rbrack .
+\end{equation}\]</span></p>
+<p>Dengan menggunakan hukum ekspektasi berulang (lihat Lampiran Bab 16), dapat mendefinisikan rata-rata dan varians dari <span class="math inline">\(X\)</span> sebagai</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left( X \right) = \mathrm{E}\left\lbrack \mathrm{E}\left( X\left| \Theta \right.  \right) \right\rbrack
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{Var}\left( X \right) = \mathrm{E}\left\lbrack \mathrm{Var}\left( X\left| \Theta \right.  \right) \right\rbrack + \mathrm{Var}\left\lbrack \mathrm{E}\left( X\left| \Theta \right.  \right) \right\rbrack .
+\end{equation}\]</span></p>
+<p><em>Contoh 3.3.7. Pertanyaan Ujian Aktuaria.</em> <span class="math inline">\(X\)</span> memiliki distribusi normal dengan mean sebesar <span class="math inline">\(Λ\)</span> sebesar 1 dan variansi sebesar 1. <span class="math inline">\(Λ\)</span> memiliki distribusi normal dengan mean 1 dan varians 1. Tentukan mean dan varians dari <span class="math inline">\(X\)</span> .</p>
+<p>solusi:</p>
+<p>X adalah campuran kontinu dengan rata-rata</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{E}\left(X\right)=\mathrm{E}\left[\mathrm{E}\left(X\middle|\Lambda\right)\right]=\mathrm{E}\left(\Lambda\right)=1 \text{ and } \mathrm{V}\left(X\right)=\mathrm{V}\left[\mathrm{E}\left(X\middle|\Lambda\right)\right]+\mathrm{E}\left[\mathrm{V}\left(X\middle|\Lambda\right)\right]=\mathrm{V}\left(\Lambda\right)+\mathrm{E}\left(1\right)=1+1=2.
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="modifikasi-pertanggungan" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> modifikasi pertanggungan<a href="modeling-loss-severity.html#modifikasi-pertanggungan" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Coverage modifications atau modifikasi pertanggungan adalah perubahan yang dibuat pada syarat dan ketentuan polis asuransi. Perubahan ini dapat diprakarsai oleh pemegang polis atau perusahaan asuransi, dan dirancang untuk mengubah pertanggungan yang diberikan oleh polis.</p>
+<p>Modifikasi pertanggungan dapat dilakukan karena berbagai alasan. Sebagai contoh, pemegang polis mungkin ingin meningkatkan batas pertanggungan pada polis mereka untuk melindungi diri mereka sendiri dari potensi kerugian. Atau, mereka mungkin ingin menambah atau menghapus jenis pertanggungan tertentu, seperti menambahkan asuransi banjir pada polis pemilik rumah atau menghapus pertanggungan tabrakan dari polis mobil.</p>
+<p>pada bagian ini membahas mengenai</p>
+<div id="policy-deductibles" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> policy deductibles<a href="modeling-loss-severity.html#policy-deductibles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>pada polis deductible biasa, pemegang polis setuju untuk menanggung sejumlah klaim asuransi sebelum perusahaan asuransi membayarkan klaim. Sehingga bagian kerugian yang ditanggung dan menjadi tanggung jawab pemegang polis untuk membayar deductible dengan uang mereka sendiri.</p>
+<p>sebagai contoh jika sebuah polis memiliki daductible sebesar Rp.500 dan pemegang polis mengalami kerugian dengan biaya sebesar Rp.2500, maka perusahaan asuransi hanya akan membayar Rp.2000 (yaitu total biaya perbaikan dikurangi deductible Rp.500)</p>
+<p>deductible sendiri di notasikan dengan <span class="math inline">\(d\)</span>, maka</p>
+<ul>
+<li><p>jika kerugian melebihi <span class="math inline">\(d\)</span> atau nilai deductible, maka perusahaan asuransi bertanggung jawab untuk menanggung total kerugian dikurangin dengan deductible atau <span class="math inline">\(d\)</span></p></li>
+<li><p>tergantung dengan perjanjiannya, deductible dapat berlaku untuk setiap kerugian atau total dari seluruh kerugian.</p></li>
+</ul>
+<p>jumlah dari deductible biasanya dipilih pada saat pemegang polis membeli polis dan disesuaikan dengan kebutuhannya selama masa berlaku polis. deductible yang lebih tinggi akan menghasilkan pembayaran premi yang lebih rendah, dikarenakan pemegang polis menanggung lebih banyak saat terjadinya kerugian.</p>
+<p>lalu jika <span class="math inline">\(X\)</span> di notasikan sebagai kerugian yang diterima oleh pemegang polis dan <span class="math inline">\(Y\)</span> dinotasikan sebagai jumlah klaim yang dibayarkan oleh perusahaan asuransi, maka ada dua variabel berdasarkan pembayarannya kepada pemegang polis.
+a. pembayaran per kerugian
+b. pembayaran per pembayaran</p>
+<p>pada variabel perbayaran per kerugian, dinotasikan sebagai <span class="math inline">\(Y^L\)</span> atau <span class="math inline">\((X-d)_+\)</span> atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai</p>
+<p><span class="math display">\[
+Y^{L} = \left( X - d \right)_{+}
+= \left\{ \begin{array}{cc}
+0 &amp; X \le d, \\
+X - d &amp; X &gt; d  
+\end{array} \right. .
+\]</span></p>
+<p>disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai <span class="math inline">\(Y^P\)</span> didefinisikan ketika hanya terjadinya pembayaran, terutama <span class="math inline">\(Y^P\)</span> sama dengan <span class="math inline">\(X-d\)</span> dengan syarat <span class="math inline">\([X&gt;d]\)</span>, atau dinotasikan sebagai <span class="math inline">\(Y^P=X-d||X&gt;d\)</span> atau dituliskan sebagai</p>
+<p><span class="math display">\[
+Y^{P} = \left\{ \begin{matrix}
+\text{Undefined} &amp; X \le d \\
+X - d &amp; X &gt; d .
+\end{matrix}  \right.
+\]</span></p>
+<p>disini <span class="math inline">\(Y^P\)</span> disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari <span class="math inline">\(d\)</span> tidak dilaporkan dan nilai dari <span class="math inline">\(d\)</span> berubah sebesar <span class="math inline">\(d\)</span></p>
+<p>ketika nilai distribusi dari nilai kerugian bersifat kontinu, namun distribusi dari <span class="math inline">\(Y^L\)</span> adalah gabungan kombinasi dari komponen nilai diskrit dan kontinu. bagian diskrit terletak pada <span class="math inline">\(Y=0\)</span> atau saat <span class="math inline">\((X \leq d)\)</span> dan komponen nilai kontinu terletak pada interval <span class="math inline">\(Y&gt;0\)</span> atau saat <span class="math inline">\(X&gt;d\)</span></p>
+</div>
+<div id="policy-limit" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Policy Limit<a href="modeling-loss-severity.html#policy-limit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh perusahaan asuransi untuk pertanggungan tertentu berdasarkan polis asuransinya. sehingga kerugian yang ditanggung dinotasikan sebagai <span class="math inline">\(X\)</span>, dan batas pertanggunannya atau batas polisnya dinotasikan sebagai <span class="math inline">\(u\)</span>, jika kerugian melebihi batas polis <span class="math inline">\(X-u\)</span> harus dibayar oleh pemegang polis sendiri. batas polis yang lebih tinggi berarti premi yang dibayar oleh pemegang polis semakin besar.</p>
+<p>sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis.
+dimana biaya kerugian pemegang polis dinotasikan sebagai <span class="math inline">\(X\)</span> dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai <span class="math inline">\(Y\)</span>, dan variabel policy limit dinotasikan sebagai <span class="math inline">\(X \land u\)</span>. atau disebut sebagai right censored variable dikarenakan nilai dari <span class="math inline">\(u\)</span> di set sama dengan <span class="math inline">\(u\)</span>. maka variabel <span class="math inline">\(Y\)</span> didefinisikan sebagai</p>
+<p><span class="math display">\[
+Y = X \land u = \left\{ \begin{matrix}
+X &amp; X \leq u \\
+u &amp; X &gt; u. \\
+\end{matrix} \right.\
+\]</span></p>
+<p>pada batas polis, perbedaan antara <span class="math inline">\(Y^L\)</span> dan <span class="math inline">\(Y^P\)</span> tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.</p>
+<p>dengan <span class="math inline">\((X-u)\)</span> dan <span class="math inline">\((X \land u)\)</span> maka expektasi dari pembayaran terjadi tanpa modifikasi pertangguangan <span class="math inline">\(X\)</span>. jumlah ekspektasi pembayaran dari deductible <span class="math inline">\(u\)</span> dan limit <span class="math inline">\(u\)</span> maka, <span class="math inline">\(X=(X-u)_++(X\land u)\)</span></p>
+<p>jika kerugian merupakan subjek dari deductible <span class="math inline">\(d\)</span> dan limit <span class="math inline">\(u\)</span>, maka didefinisikan sebagai</p>
+<p><span class="math display">\[
+Y^{L} = \left\{ \begin{matrix}
+0 &amp; X \leq d \\
+X - d  &amp; d &lt;  X \leq u \\
+u - d  &amp; X &gt; u. \\
+\end{matrix} \right.\
+\]</span></p>
+<p>maka, <span class="math inline">\(Y^L\)</span> dapat dinyatakan sebagai <span class="math inline">\(Y^L=(X\land u)-(X\land u)\)</span>.</p>
+</div>
+<div id="policy-deductible-and-policy-limit" class="section level3 hasAnchor" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> policy deductible and policy limit<a href="modeling-loss-severity.html#policy-deductible-and-policy-limit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>pada policy deductible atau pengurangan polis, jika kerugian yang dialami oleh pemegang polis kurang dari nilai deductible maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika lebih besar dari nilai deductible maka klaim yang dibayarkan merupakan total dari kerugian dikurangi dengan nilai deductible, sehingga sisa biaya kerugian ditanggung pemegang polis.
+semakin besar nilai deductible maka besar premi yang perlu dibayarkan oleh pemegang polis semakin rendah</p></li>
+<li><p>pada policy limit atau pembatasaan polis, jika kerugian yang dialami oleh pemegang polis lebih besar dari nilai limit maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika masih dibawah dari batas limit maka perusahaan asuransi akan selalu membayarkan total kerugian tersebut. akan tetapi jika lebih besar dari limit sisa biaya kerugian ditanggung pemegang polis.
+semakin besar nilai limit maka besar premi yang dibayarkan oleh pemegang polis semakin besar</p></li>
+</ul>
+</div>
+<div id="coinsurance-and-inflation" class="section level3 hasAnchor" number="3.4.4">
+<h3><span class="header-section-number">3.4.4</span> Coinsurance and inflation<a href="modeling-loss-severity.html#coinsurance-and-inflation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>coinsurance atau koasuransi adalah jenis pengaturan asuransi di mana dua atau lebih perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Dalam pengaturan koasuransi, setiap perusahaan asuransi mengasumsikan sebagian risiko yang terkait dengan polis dan bertanggung jawab untuk membayar bagian proporsional dari setiap klaim yang muncul. Coinsurance sering digunakan pada asuransi properti dan asuransi kecelakaan, di mana besarnya risiko dapat melebihi kapasitas penanggung tunggal untuk menanggungnya.</p>
+<p>pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis sampai dengan nilai dari deductible <span class="math inline">\(d\)</span>. kerugian yang dapat ditanggung juga dapat berupa presentase dari klaim. presentase <span class="math inline">\(\alpha\)</span> sering disebut sebagai faktor koasuransi. jika polis merupakan subjek dari deductible dan limit polis, maka koasuransi mengacu pada presentase klaim yang harus ditanggung oleh perusahaan asuransi.</p>
+<p>setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau <span class="math inline">\(Y^L\)</span> didefinisikan sebagai:</p>
+<p><span class="math display">\[
+Y^{L} = \left\{ \begin{matrix}
+0 &amp; X \leq d, \\
+\alpha\left( X - d \right) &amp; d &lt;  X \leq u, \\
+\alpha\left( u - d \right) &amp; X &gt; u. \\
+\end{matrix} \right.\
+\]</span></p>
+<p>jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah <span class="math inline">\(\alpha (u-d)\)</span>, dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible <span class="math inline">\(d\)</span> dan limit <span class="math inline">\(u\)</span> untuk variabel per kerugian atau <span class="math inline">\(Y^L\)</span>, maka dapat dinyatakan sebagai <span class="math inline">\(Y^L=(X\land u)-(X\land d)\)</span>, maka pada koasuransi <span class="math inline">\(Y^L\)</span> dapat dinyatakan sebagai<span class="math inline">\(Y^L=\alpha[(X\land u)-(X\land d)]\)</span>.</p>
+</div>
+<div id="reinsurance" class="section level3 hasAnchor" number="3.4.5">
+<h3><span class="header-section-number">3.4.5</span> Reinsurance<a href="modeling-loss-severity.html#reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reinsurance atau Reasuransi adalah jenis asuransi yang digunakan perusahaan asuransi untuk mengalihkan sebagian risiko yang telah mereka tanggung dalam menjamin polis asuransi kepada perusahaan asuransi lain. Dalam pengaturan reasuransi, perusahaan asuransi menyerahkan sebagian risiko yang terkait dengan polis atau portofolio polis kepada perusahaan reasuransi, yang mengasumsikan risiko tersebut dengan imbalan sebagian premi yang dibayarkan oleh pemegang polis. Reasuransi biasanya digunakan oleh perusahaan asuransi untuk melindungi diri mereka sendiri dari kerugian akibat bencana atau untuk mengelola eksposur mereka terhadap risiko di lini bisnis tertentu.</p>
+<p>pada Policy deductible berdasarkan polis tersebut, pemegang polis harus membayar semua kerugian hingga batas nilai deductible, dan perusahaan asuransi hanya membayar jumlah (jika ada) di atas batas nilai deductible. terdapat peraturan dimana di mana perusahaan asuransi mengalihkan sebagian risiko polis dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan membayarkan juga premi asuransi.</p>
+<p>Reasuransi adalah pengaturan kontrak di mana perusahaan asuransi mengalihkan sebagian dari risiko yang diasuransikan dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan imbalan premi reasuransi. Dalam kontrak tersebut, penanggung utama atau perusahaan asuransi awal harus melakukan semua pembayaran yang diperlukan kepada pemegang polis hingga total pembayaran penanggung utama mencapai deductible reasuransi yang telah ditetapkan. lalu Perusahaan asuransi lainnya kemudian hanya bertanggung jawab untuk membayar kerugian di atas deductible reasuransi. Jumlah maksimum yang dipertahankan oleh penanggung utama dalam perjanjian reasuransi disebut retensi.</p>
+</div>
+<div id="coinsurance-and-reinsurance" class="section level3 hasAnchor" number="3.4.6">
+<h3><span class="header-section-number">3.4.6</span> Coinsurance and Reinsurance<a href="modeling-loss-severity.html#coinsurance-and-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Perbedaan utama antara reasuransi dan koasuransi adalah arah pengalihan risiko. Dalam pengaturan reasuransi, perusahaan asuransi mengalihkan risiko kepada perusahaan asuransi lain, sedangkan dalam pengaturan koasuransi, beberapa perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Selain itu, reasuransi biasanya digunakan untuk melindungi penanggung dari kerugian akibat bencana atau untuk mengelola eksposur risiko mereka, sementara koasuransi sering digunakan untuk memungkinkan penanggung menanggung polis yang lebih besar daripada yang dapat mereka tangani sendiri.</p>
+</div>
+</div>
+<div id="maximum-likelihood-estimation" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Maximum Likelihood Estimation<a href="modeling-loss-severity.html#maximum-likelihood-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="maximum-likelihood-estimators-for-complete-data" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Maximum Likelihood Estimators for Complete Data<a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hingga saat ini, bab ini berfokus pada distribusi parametrik yang biasa digunakan dalam aplikasi asuransi. Namun, agar berguna dalam pekerjaan terapan, distribusi ini harus menggunakan nilai “realistis” untuk parameter dan untuk ini kita beralih ke data. Pada tingkat dasar, kami berasumsi bahwa analis telah menyediakan sampel acak <span class="math inline">\(X_1,... , X_n\)</span> dari distribusi dengan fungsi distribusi <span class="math inline">\(F_x\)</span> (untuk singkatnya, kita terkadang menjatuhkan subskrip <span class="math inline">\(X\)</span>). Vektor <span class="math inline">\(θ\)</span> untuk menunjukkan kumpulan parameter untuk <span class="math inline">\(F\)</span>.</p>
+<p>Sebelum menggambar dari distribusi, kami mempertimbangkan hasil potensial yang dirangkum oleh variabel acak <span class="math inline">\(X_i\)</span> (<span class="math inline">\(i\)</span> = 1,2,..,n). Dari Bab sebelumnya yang membahas perkiraan distribusi frekuensi, dimana <span class="math inline">\(Pr(X_1 = x_1,...,X_n = x_n)\)</span> untuk mengukur “kemungkinan” menggambar sampel <span class="math inline">\({x_1,...,x_n}\)</span> Dengan data kontinu, kami menggunakan fungsi kerapatan probabilitas bersama alih-alih probabilitas bersama. Dengan asumsi independensi, pdf bersama dapat ditulis sebagai produk pdf. Dengan demikian, kami mendefinisikan kemungkinannya menjadi</p>
+<p><span class="math display">\[\begin{equation}
+L(\boldsymbol \theta) = \prod_{i=1}^n f(x_i) .
+\end{equation}\]</span></p>
+<p>Dari notasi, perhatikan bahwa kami menganggap ini sebagai fungsi dari parameter di <span class="math inline">\(θ\)</span>, dengan data <span class="math inline">\({x_1,...,x_n}\)</span> iadakan tetap. Penaksir kemungkinan maksimum adalah nilai parameter di <span class="math inline">\(θ\)</span> yang memaksimalkan <span class="math inline">\(L(θ)\)</span>.</p>
+<p>Dari kalkulus, kita tahu bahwa memaksimalkan fungsi menghasilkan hasil yang sama dengan memaksimalkan logaritma suatu fungsi (ini karena logaritma adalah fungsi monoton). Karena kita mendapatkan hasil yang sama, untuk memudahkan pertimbangan komputasi, adalah umum untuk mempertimbangkan kemungkinan logaritmik, yang dilambangkan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+l(\boldsymbol \theta) = \log L(\boldsymbol \theta) = \sum_{i=1}^n \log f(x_i) .
+\end{equation}\]</span></p>
+<p><strong>Contoh 3.5.1. Soal Ujian Aktuaria.</strong> Anda diberikan lima pengamatan berikut: 521, 658, 702, 819, 1217. Anda menggunakan Pareto parameter tunggal dengan fungsi distribusi:
+<span class="math display">\[F(x) = 1- \left(\frac{500}{x}\right)^{\alpha}, ~~~~ x&gt;500 .\]</span></p>
+<p>Dengan <span class="math inline">\(n = 5\)</span>, fungsi log-likelihood adalah</p>
+<p><span class="math display">\[l(\alpha) =  \sum_{i=1}^5 \log f(x_i;\alpha ) =  5 \alpha \log 500 + 5 \log \alpha-(\alpha+1) \sum_{i=1}^5 \log x_i.\]</span></p>
+<p>Gambar dibawah menunjukkan kemungkinan logaritmik sebagai fungsi parameter <span class="math inline">\(α\)</span></p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap34.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+<p>Kita dapat menentukan nilai maksimum kemungkinan logaritmik dengan mengambil turunan dan mengaturnya sama dengan nol. Ini menghasilkan</p>
+<p><span class="math display">\[\begin{array}{ll}
+\frac{ \partial}{\partial \alpha } l(\alpha ) &amp;=    5  \log 500 + 5 / \alpha -  \sum_{i=1}^5 \log x_i
+=_{set} 0 \Rightarrow \\
+\hat{\alpha}_{MLE} &amp;= \frac{5}{\sum_{i=1}^5 \log x_i - 5  \log 500 } = 2.453 .
+\end{array}\]</span></p>
+<p>Secara alami, ada banyak masalah di mana tidak praktis menggunakan perhitungan tangan untuk optimasi. Untungnya ada banyak rutinitas statistik yang tersedia seperti fungsi .<code>R optim</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modeling-loss-severity.html#cb1-1" aria-hidden="true" tabindex="-1"></a>c1 <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="dv">521</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">658</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">702</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">819</span>)<span class="sc">+</span><span class="fu">log</span>(<span class="dv">1217</span>)</span>
+<span id="cb1-2"><a href="modeling-loss-severity.html#cb1-2" aria-hidden="true" tabindex="-1"></a>nloglike <span class="ot">&lt;-</span> <span class="cf">function</span>(alpha){<span class="sc">-</span>(<span class="dv">5</span><span class="sc">*</span>alpha<span class="sc">*</span><span class="fu">log</span>(<span class="dv">500</span>)<span class="sc">+</span><span class="dv">5</span><span class="sc">*</span><span class="fu">log</span>(alpha)<span class="sc">-</span>(alpha<span class="sc">+</span><span class="dv">1</span>)<span class="sc">*</span>c1)}</span>
+<span id="cb1-3"><a href="modeling-loss-severity.html#cb1-3" aria-hidden="true" tabindex="-1"></a>MLE <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par=</span><span class="dv">1</span>, <span class="at">fn=</span>nloglike)<span class="sc">$</span>par</span></code></pre></div>
+<pre><code>## Warning in optim(par = 1, fn = nloglike): one-dimensional optimization by Nelder-Mead is unreliable:
+## use &quot;Brent&quot; or optimize() directly</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="modeling-loss-severity.html#cb3-1" aria-hidden="true" tabindex="-1"></a>MLE</span></code></pre></div>
+<pre><code>## [1] 2.453125</code></pre>
+<p><span class="math inline">\(2.453125\)</span> mengkonfirmasi hasil perhitungan tangan kita di mana penaksir kemungkinan maksimum</p>
+<p><strong>Contoh 3.5.4. Dana Properti Wisconsin</strong>. Untuk melihat bagaimana penaksir kemungkinan maksimum bekerja dengan data nyata, kami kembali ke data klaim 2010</p>
+<p>Cuplikan kode berikut menunjukkan cara menyesuaikan eksponensial, gamma, Pareto, lognormal, dan <span class="math inline">\(GB2\)</span> Model. Untuk konsistensi, kode menggunakan package <code>R</code> dan <code>VGAM</code>. Akronim adalah singkatan dari Vector Generalized Linear and Additive Models; Seperti yang disarankan oleh namanya, paket ini dapat melakukan jauh lebih dari sesuai dengan model-model ini meskipun cukup untuk tujuan kita. Satu-satunya pengecualian adalah GB2 kepadatan yang tidak banyak digunakan di luar aplikasi asuransi; Namun, kita dapat mengkodekan kepadatan ini dan menghitung penaksir kemungkinan maksimum menggunakan <code>optim</code> General Purpose Optimizer.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="modeling-loss-severity.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library(VGAM)</span></span>
+<span id="cb5-2"><a href="modeling-loss-severity.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_lev &lt;- read.csv(&quot;CLAIMLEVEL.csv&quot;, header = TRUE) </span></span>
+<span id="cb5-3"><a href="modeling-loss-severity.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#claim_data &lt;- subset(claim_lev, Year == 2010); </span></span>
+<span id="cb5-4"><a href="modeling-loss-severity.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="modeling-loss-severity.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a GB2 Distribution - this is more complicated</span></span>
+<span id="cb5-6"><a href="modeling-loss-severity.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #The likelihood function of GB2 distribution (negative for optimization)</span></span>
+<span id="cb5-7"><a href="modeling-loss-severity.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#lik_gb2 &lt;- function (param) {</span></span>
+<span id="cb5-8"><a href="modeling-loss-severity.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- param[1]</span></span>
+<span id="cb5-9"><a href="modeling-loss-severity.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- param[2]</span></span>
+<span id="cb5-10"><a href="modeling-loss-severity.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- param[3]</span></span>
+<span id="cb5-11"><a href="modeling-loss-severity.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- param[4]</span></span>
+<span id="cb5-12"><a href="modeling-loss-severity.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  yt &lt;- (log(claim_data$Claim) - mu) / sigma</span></span>
+<span id="cb5-13"><a href="modeling-loss-severity.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpyt &lt;- ifelse(yt &gt; 23, yt, log(1 + exp(yt)))</span></span>
+<span id="cb5-14"><a href="modeling-loss-severity.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * yt - log(sigma) - log(beta(a_1,a_2)) - </span></span>
+<span id="cb5-15"><a href="modeling-loss-severity.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpyt - log(claim_data$Claim) </span></span>
+<span id="cb5-16"><a href="modeling-loss-severity.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  return(-sum(logdens))</span></span>
+<span id="cb5-17"><a href="modeling-loss-severity.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#}</span></span>
+<span id="cb5-18"><a href="modeling-loss-severity.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;optim&quot; is a general purpose minimization function</span></span>
+<span id="cb5-19"><a href="modeling-loss-severity.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_bop &lt;- optim(c(1, 1, 0, 1), lik_gb2, method = c(&quot;L-BFGS-B&quot;), </span></span>
+<span id="cb5-20"><a href="modeling-loss-severity.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co">#                 lower = c(0.01, 0.01, -500, 0.01), </span></span>
+<span id="cb5-21"><a href="modeling-loss-severity.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#                 upper = c(500, 500, 500, 500), hessian = TRUE)</span></span>
+<span id="cb5-22"><a href="modeling-loss-severity.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># #Nonparametric Plot</span></span>
+<span id="cb5-23"><a href="modeling-loss-severity.html#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(density(log(claim_data$Claim)), main = &quot;&quot;, xlab = &quot;Log Expenditures&quot;,</span></span>
+<span id="cb5-24"><a href="modeling-loss-severity.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     ylim = c(0 ,0.37))</span></span>
+<span id="cb5-25"><a href="modeling-loss-severity.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co">#x &lt;- seq(0, 15, by = 0.01)</span></span>
+<span id="cb5-26"><a href="modeling-loss-severity.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># #Exponential</span></span>
+<span id="cb5-27"><a href="modeling-loss-severity.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.exp &lt;- vglm(Claim ~ 1, exponential, data = claim_data)</span></span>
+<span id="cb5-28"><a href="modeling-loss-severity.html#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co">#theta = 1 / exp(coef(fit.exp))</span></span>
+<span id="cb5-29"><a href="modeling-loss-severity.html#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#fexp_ex &lt;- dgamma(exp(x), scale = exp(-coef(fit.exp)), shape = 1) * exp(x)</span></span>
+<span id="cb5-30"><a href="modeling-loss-severity.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fexp_ex, col = &quot;red&quot;, lty =2)</span></span>
+<span id="cb5-31"><a href="modeling-loss-severity.html#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># #Inference assuming a gamma distribution</span></span>
+<span id="cb5-32"><a href="modeling-loss-severity.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.gamma &lt;- vglm(Claim ~ 1, family = gamma2, data = claim_data)</span></span>
+<span id="cb5-33"><a href="modeling-loss-severity.html#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co">#theta &lt;- exp(coef(fit.gamma)[1]) / exp(coef(fit.gamma)[2])  # theta = mu / alpha</span></span>
+<span id="cb5-34"><a href="modeling-loss-severity.html#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co">#alpha &lt;- exp(coef(fit.gamma)[2]) </span></span>
+<span id="cb5-35"><a href="modeling-loss-severity.html#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co">#fgamma_ex &lt;- dgamma(exp(x), shape = alpha, scale = theta) * exp(x)</span></span>
+<span id="cb5-36"><a href="modeling-loss-severity.html#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fgamma_ex, col = &quot;blue&quot;, lty =3)</span></span>
+<span id="cb5-37"><a href="modeling-loss-severity.html#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co"># #Pareto</span></span>
+<span id="cb5-38"><a href="modeling-loss-severity.html#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.pareto &lt;- vglm(Claim ~ 1, paretoII, loc = 0, data = claim_data)</span></span>
+<span id="cb5-39"><a href="modeling-loss-severity.html#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="co">#fpareto_ex &lt;- dparetoII(exp(x), loc = 0, shape = exp(coef(fit.pareto)[2]), </span></span>
+<span id="cb5-40"><a href="modeling-loss-severity.html#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                        scale = exp(coef(fit.pareto)[1])) * exp(x)</span></span>
+<span id="cb5-41"><a href="modeling-loss-severity.html#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fpareto_ex, col = &quot;purple&quot;)</span></span>
+<span id="cb5-42"><a href="modeling-loss-severity.html#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># #Lognormal</span></span>
+<span id="cb5-43"><a href="modeling-loss-severity.html#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co">#fit.LN &lt;- vglm(Claim ~ 1, family = lognormal, data = claim_data)</span></span>
+<span id="cb5-44"><a href="modeling-loss-severity.html#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="co">#flnorm_ex &lt;- dlnorm(exp(x), mean = coef(fit.LN)[1],</span></span>
+<span id="cb5-45"><a href="modeling-loss-severity.html#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="co">#                    sd = exp(coef(fit.LN)[2])) * exp(x)</span></span>
+<span id="cb5-46"><a href="modeling-loss-severity.html#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, flnorm_ex, col = &quot;lightblue&quot;)</span></span>
+<span id="cb5-47"><a href="modeling-loss-severity.html#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="co"># #Density for GB II</span></span>
+<span id="cb5-48"><a href="modeling-loss-severity.html#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="co">#gb2_density &lt;- function (x) {</span></span>
+<span id="cb5-49"><a href="modeling-loss-severity.html#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_1 &lt;- gb2_bop$par[1]</span></span>
+<span id="cb5-50"><a href="modeling-loss-severity.html#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="co">#  a_2 &lt;- gb2_bop$par[2]</span></span>
+<span id="cb5-51"><a href="modeling-loss-severity.html#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="co">#  mu &lt;- gb2_bop$par[3]</span></span>
+<span id="cb5-52"><a href="modeling-loss-severity.html#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="co">#  sigma &lt;- gb2_bop$par[4]</span></span>
+<span id="cb5-53"><a href="modeling-loss-severity.html#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="co">#  xt &lt;- (log(x) - mu) / sigma</span></span>
+<span id="cb5-54"><a href="modeling-loss-severity.html#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="co">#  logexpxt &lt;- ifelse (xt &gt; 23, yt, log(1 + exp(xt)))</span></span>
+<span id="cb5-55"><a href="modeling-loss-severity.html#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co">#  logdens &lt;- a_1 * xt - log(sigma) - log(beta(a_1, a_2)) - </span></span>
+<span id="cb5-56"><a href="modeling-loss-severity.html#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="co">#    (a_1+a_2) * logexpxt -log(x) </span></span>
+<span id="cb5-57"><a href="modeling-loss-severity.html#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="co">#  exp(logdens)</span></span>
+<span id="cb5-58"><a href="modeling-loss-severity.html#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="co">#  }</span></span>
+<span id="cb5-59"><a href="modeling-loss-severity.html#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="co">#fGB2_ex = gb2_density(exp(x)) * exp(x)</span></span>
+<span id="cb5-60"><a href="modeling-loss-severity.html#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(x, fGB2_ex, col=&quot;green&quot;)</span></span>
+<span id="cb5-61"><a href="modeling-loss-severity.html#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="co">#legend(&quot;topleft&quot;, c(&quot;log(Expend)&quot;, &quot;Exponential&quot;, &quot;Gamma&quot;, &quot;Pareto&quot;, </span></span>
+<span id="cb5-62"><a href="modeling-loss-severity.html#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="co">#                    &quot;Lognormal&quot;, &quot;GB2&quot;), cex=0.8,</span></span>
+<span id="cb5-63"><a href="modeling-loss-severity.html#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="co">#       lty = c(4,2,3,1,1,1), #4 is &quot;longdash&quot;</span></span>
+<span id="cb5-64"><a href="modeling-loss-severity.html#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="co">#       col = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;purple&quot;,&quot;lightblue&quot;,&quot;green&quot;))</span></span></code></pre></div>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/chap35.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+</div>
+<div id="maximum-likehood-estimators-using-modified-data" class="section level3 hasAnchor" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Maximum Likehood Estimators using Modified Data<a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada subbab ini, saya ingin menjelaskan estimasi kemungkinan maksimal pada grup data(group data), sensor data(cencored), dan data terpotong(truncated data).</p>
+<div id="mle-fro-group-data" class="section level4 hasAnchor" number="3.5.2.1">
+<h4><span class="header-section-number">3.5.2.1</span> MLE fro Group Data<a href="modeling-loss-severity.html#mle-fro-group-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Pada bagian ini, saya ingin memperoleh perkiraan kemungkinan maksimum parameter data grup data(dalam kategori rentang) dan setiap pengamatan terhadap fungsi likehood adalah probabbilitas jatuh dalam kelompok tertentu(interval). Biarkan <span class="math inline">\(N_j\)</span> mewakili jumlah pengamatan dalam interval <span class="math inline">\((C_{j-1},C_j]\)</span>. Fungsi likehood untuk grup data dinyatakan sebagai berikut:</p>
+<p><span class="math display">\[\begin{equation}
+L\left( \theta \right) = \prod_{j = 1}^{k}\left\lbrack F_X\left( \left. \ c_{j} \right|\theta \right) - F_X\left( \left. \ c_{j - 1} \right|\theta \right) \right\rbrack^{n_{j}},
+\end{equation}\]</span></p>
+<p>Dimana, <span class="math inline">\(C_0\)</span> adalah kemungkinan pengamatan kecil dan <span class="math inline">\(C_k\)</span> adalah pengamatan terbesar yang mungkin.</p>
+<div id="contoh" class="section level5 hasAnchor" number="3.5.2.1.1">
+<h5><span class="header-section-number">3.5.2.1.1</span> Contoh<a href="modeling-loss-severity.html#contoh" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>For a group of policies, you are given that losses follow the distribution function <span class="math inline">\(F_X(x) = 1 - \frac{\theta}{x},\)</span>for <span class="math inline">\(\theta &lt; x &lt; \infty\)</span>. Further, a sample of 20 losses resulted in the following:</p>
+<p><span class="math display">\[{\small
+\begin{matrix}\hline
+\text{Interval} &amp; \text{Number of Losses}  \\ \hline
+(\theta, 10] &amp; 9 \\
+(10, 25] &amp; 6 \\
+(25, \infty) &amp; 5  \\ \hline
+\end{matrix}
+}\]</span></p>
+<p>Calculate the maksimum likehood estimate of <span class="math inline">\(\theta\)</span></p>
+<p>Jawab:</p>
+<p>Kontribusi dari setiap dari 9 pengamatan dalam interval pertama terhadap fungsi likelihood adalah probabilitas dari <span class="math inline">\(X \leq 10\)</span>; yaitu, <span class="math inline">\(\Pr\left( X \leq 10 \right) = F_X\left( 10 \right)\)</span>. Demikian pula, kontribusi dari masing-masing 6 dan 5 pengamatan dalam interval kedua dan ketiga adalah <span class="math inline">\(\Pr\left( 10 &lt; X \leq 25 \right) = F_X\left( 25 \right) - F_X(10\)</span> dan <span class="math inline">\(P(X&gt;25)=1-F_X(25)\)</span>, secara berturut-turut. Fungsi likelihood diberikan oleh:</p>
+<p><span class="math display">\[\begin{array}{ll}
+L\left( \theta \right) &amp; = \left\lbrack F_X\left( 10 \right) \right\rbrack^{9}\left\lbrack F_X\left( 25 \right) - F_X(10) \right\rbrack^{6}\left\lbrack 1 - F_X(25) \right\rbrack^{5} \\
+&amp; = {\left( 1 - \frac{\theta}{10} \right)}^{9}\left( \frac{\theta}{10} - \frac{\theta}{25} \right)^{6}\left( \frac{\theta}{25} \right)^{5} \\
+&amp; = {\left( \frac{10 - \theta}{10} \right)}^{9}\left( \frac{15\theta}{250} \right)^{6}\left( \frac{\theta}{25} \right)^{5}.
+\end{array}\]</span></p>
+<p>Setelah itu, mencari likehood algoritma</p>
+<p><span class="math display">\[\begin{array}{ll}
+\log L \left( \theta \right) &amp;= 9\log \left( 10 - \theta \right) + 6\log \theta + 5\log \theta - 9\log 10 + 6\log 15 - 6\log 250 - 5\log 25  \\
+&amp;= 9\log \left( 10 - \theta \right) + 11\log \theta + constant .
+\end{array}\]</span></p>
+<p>Constant disini maksudnya adalah angka yang tidak bergantung pada <span class="math inline">\(\theta\)</span>. Kita turunkan dan mendapatkan,</p>
+<p><span class="math display">\[\begin{equation}
+\frac{d \log L \left( \theta \right)}{d \theta} = \frac{- 9}{\left( 10 - \theta \right)} + \frac{11}{\theta} .
+\end{equation}\]</span></p>
+<p>Estimator maksimum likelihood, <span class="math inline">\(\hat{\theta}\)</span>, adalah solusi dari persamaan:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{- 9}{\left( 10 - \hat{\theta} \right)} + \frac{11}{\hat{\theta}} = 0
+\end{equation}\]</span></p>
+<p>yang menghasilkan <span class="math inline">\(\hat{\theta} = 5.5\)</span></p>
+</div>
+</div>
+<div id="mle-for-cencored-data" class="section level4 hasAnchor" number="3.5.2.2">
+<h4><span class="header-section-number">3.5.2.2</span> MLE for Cencored Data<a href="modeling-loss-severity.html#mle-for-cencored-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Kontribusi pengamatan tersensor terhadap fungsi kemungkinan adalah probabilitas variabel acak melebihi batas spesifik ini. Perhatikan bahwa kontribusi data lengkap dan tersensor berbagi fungsi bertahan hidup, untuk titik lengkap fungsi bertahan hidup ini dikalikan dengan fungsi hazard, tetapi untuk pengamatan tersensor tidak demikian. Fungsi kemungkinan untuk data yang disensor kemudian diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+L(\theta) = \left[ \prod_{i=1}^r f_X(x_i) \right] \left[  S_X(u)  \right]^m ,
+\end{equation}\]</span></p>
+<p>Dimana <span class="math inline">\(R\)</span> adalah jumlah kerugian yang diketahui dibawah batas limit <span class="math inline">\(u\)</span> <span class="math inline">\(m\)</span> adalah jumla loss yang lebih besar dari batas <span class="math inline">\(u\)</span></p>
+</div>
+<div id="mle-for-truncated-data" class="section level4 hasAnchor" number="3.5.2.3">
+<h4><span class="header-section-number">3.5.2.3</span> MLE for Truncated Data<a href="modeling-loss-severity.html#mle-for-truncated-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>berkaitan dengan estimasi kemungkinan maksimum dari distribusi kontinu dari variabel acak <span class="math inline">\(X\)</span> ketika data tidak lengkap karena truncated atau pemotongan. Kontribusi terhadap fungsi kemungkinan pengamatan X terpotong di D akan menjadi probabilitas bersyarat dan <span class="math inline">\(F_X(x)\)</span> akan digantikan oleh <span class="math inline">\(\frac{F_X(x)}{S_X(d)}\)</span>. Fungsi likehood untuk data truncated diberikan</p>
+<p><span class="math display">\[\begin{equation}
+L(\theta) = \prod_{i=1}^k \frac{f_X(x_i)}{S_X(d)} ,
+\end{equation}\]</span></p>
+<p>Dimana <span class="math inline">\(k\)</span> adalah jumlah loss yang lebih besar dari yang dapat dikurangkan <span class="math inline">\(D\)</span></p>
+
+</div>
+</div>
+</div>
 </div>
             </section>
 
@@ -377,6 +1273,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
