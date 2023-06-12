@@ -275,7 +275,5 @@ illustrative-graph
 >>>>>>> 23c605b7d3d0e2e76a27abc576fc78d4af087499
 >>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
 >>>>>>> 8b5601b8369ad00ee0b5943c72f16a7f3ce3c667
-<<<<<<< HEAD
 section
-=======
 >>>>>>> d1904965f4836ef2198ffda59ce9301912244350
