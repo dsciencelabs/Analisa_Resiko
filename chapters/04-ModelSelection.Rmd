@@ -251,7 +251,7 @@ Kemudian perkiraan densitas kernel di $x = 2,5$ adalah
 
 $$f_n(2.5) = \frac{1}{5(2)}\left( \frac{3}{4} + (3) \frac{3}{4} + 0 \right) = \frac{3}{10}$$
 
-#### Plug-in Principle
+#### Prinsip Pengaya
 
 Salah satu cara untuk membuat penaksir nonparametrik dari beberapa kuantitas adalah dengan menggunakan prinsip analog atau plug-in di mana seseorang menggantikan cdf yang tidak diketahui  $F$ dengan estimasi yang diketahui seperti cdf empiris  $F_N$ . Jadi, jika kita mencoba memperkirakan $\mathrm{E}~[\mathrm{g}(X)]=\mathrm{E}_F~[\mathrm{g}(X)]$ untuk fungsi generik g , maka kami mendefinisikan estimator nonparametrik menjadi $\mathrm{E}_{F_n}~[\mathrm{g}(X)]=n^{-1}\sum_{i=1}^n \mathrm{g}(X_i)$.
 
@@ -270,7 +270,7 @@ $$LER_n(d) = \frac{n^{-1} \sum_{i=1}^n \min(X_i,d)}{n^{-1} \sum_{i=1}^n X_i} = \
 Gambar 4.6 menunjukkan estimator $LER_n(d)$ untuk berbagai pilihan $d$ . Misalnya, di $d= 1.000$ dan punya $LER_n( 1000 ) ≈ 0,1442$. Dengan demikian, memberlakukan batas 1.000 berarti ekspektasi klaim yang ditahan 14,42 persen lebih rendah bila dibandingkan dengan ekspektasi klaim dengan deductible nol.
 
 
-### Tools for Model Selection and Diagnostics
+### Alat untuk Pemilihan Model dan Diagnostik
 
 Bagian sebelumnya memperkenalkan estimator nonparametrik di mana tidak ada bentuk parametrik yang diasumsikan tentang distribusi yang mendasarinya. Namun, dalam banyak aplikasi aktuaria, analis berusaha menggunakan kecocokan parametrik dari distribusi untuk kemudahan penjelasan dan kemampuan untuk memperluasnya ke situasi yang lebih kompleks seperti memasukkan variabel penjelas dalam pengaturan regresi. Saat memasang distribusi parametrik, seorang analis mungkin mencoba menggunakan distribusi gamma untuk mewakili sekumpulan data kerugian. Namun, analis lain mungkin lebih suka menggunakan distribusi Pareto. Bagaimana cara menentukan model mana yang akan dipilih?
 
@@ -288,7 +288,7 @@ Itu QQ plot membandingkan dua model yang dipasang melalui kuantilnya. Seperti ha
 
 Solusi. Ekor dari distribusi yang pas terlalu tebal di sebelah kiri, terlalu tipis di sebelah kanan, dan distribusi yang pas memiliki probabilitas yang lebih kecil di sekitar median daripada sampel. Untuk melihat ini, ingat bahwa hal hal plot grafik distribusi kumulatif dari dua distribusi pada sumbunya (empiris pada sumbu x dan dipasang pada sumbu y dalam kasus ini). Untuk nilai kecil dari X , model yang dipasang memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu daripada yang terjadi dalam sampel (mis  F( x ) >FN( x ) ). Ini menunjukkan bahwa model memiliki ekor kiri yang lebih berat daripada datanya. Untuk nilai besar dari X , model kembali memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu dan dengan demikian lebih kecil kemungkinannya untuk berada di atas nilai itu (mis  S( x ) <SN( x ) ). Hal ini menunjukkan bahwa model memiliki ekor kanan yang lebih ringan dari pada data. Selain itu, saat kita mulai dari 0,4 hingga 0,6 pada sumbu horizontal (dengan demikian melihat 20% tengah data), hal hal plot meningkat dari sekitar 0,3 menjadi 0,4. Ini menunjukkan bahwa model hanya menempatkan sekitar 10% dari probabilitas dalam kisaran ini.
 
-#### Graphical Comparison of Distributions
+#### Perbandingan Statistik Distribusi
 
 Saat memilih model, akan sangat membantu untuk menampilkan tampilan grafis. Namun, untuk melaporkan hasil, melengkapi tampilan grafis dengan statistik terpilih yang meringkas kebaikan kesesuaian model dapat efektif. Tabel 4.2 menyediakan tiga statistik kebaikan yang umum digunakan . Dalam tabel ini, $F_N$ adalah distribusi empiris, $F$ adalah distribusi pas atau hipotesis, dan $F_i^* = F(x_i)$ .
 
@@ -336,11 +336,11 @@ Oleh karena itu, statistik uji Kolmogorov-Smirnov adalah
 
 $$KS = \max(0.2517, 0.2727, 0.1934, 0.1408, 0.1620) = 0.2727 .$$
 
-### Starting Values
+### Nilai Awal
 
 Metode pencocokan momen dan persentil merupakan metode estimasi nonparametrik yang memberikan alternatif kemungkinan maksimum. Umumnya, kemungkinan maksimum adalah teknik yang lebih disukai karena menggunakan data secara lebih efisien. (Lihat Lampiran Bab 17 untuk definisi efisiensi yang tepat.) Namun, metode pencocokan momen dan persentil berguna karena lebih mudah diinterpretasikan dan karena itu memungkinkan aktuaris atau analis untuk menjelaskan prosedur kepada orang lain. Selain itu, prosedur estimasi numerik (misalnya jika dilakukan di _R_) untuk kemungkinan maksimum adalah iteratif dan membutuhkan nilai awal untuk memulai proses rekursif. Meskipun banyak masalah yang kuat untuk pemilihan nilai awal, untuk beberapa situasi kompleks, penting untuk memiliki nilai awal yang mendekati nilai optimal (tidak diketahui). Metode momen dan pencocokan persentil adalah teknik yang dapat menghasilkan perkiraan yang diinginkan tanpa investasi komputasi yang serius dan dengan demikian dapat digunakan sebagai nilai awal untuk menghitung kemungkinan maksimum.
 
-#### Method of Moments
+#### Metode Momen
 
 Metode ini merupakan estimasi parameter populasi dengan pendekatan momen parametrik menggunakan momen sampel empiris. pada momen ini, momen distribusi parametrik menggunakan momen empiris atau nonparametrik kemudian dapat dipecahkan secara aljabar untuk estimasi parameter.     
 
@@ -382,7 +382,7 @@ Nilai kemungkinan maksimum berubah menjadi $\hat{\alpha}_{MLE} = 0.9990936$ Dan 
 
 Seperti contoh di atas, ada fleksibilitas dengan metode momen. Misalnya, kita dapat mencocokkan momen kedua dan ketiga alih-alih yang pertama dan kedua, menghasilkan estimator yang berbeda. Selain itu, tidak ada jaminan bahwa solusi akan ada untuk setiap masalah. Untuk data yang disensor atau terpotong, momen pencocokan dimungkinkan untuk beberapa masalah, tetapi secara umum, ini adalah skenario yang lebih sulit. Terakhir, untuk distribusi di mana momen tidak ada atau tidak terbatas, metode momen tidak tersedia. Sebagai alternatif, seseorang dapat menggunakan teknik pencocokan persentil.
 
-#### Percentile Matching
+#### Pencocokan Persentil
 
 Di bawah pencocokan persentil , kami memperkirakan kuantil atau persentil dari distribusi parametrik menggunakan kuantil atau persentil empiris (nonparametrik) yang dijelaskan di Bagian 4.1.1.3 . 
 
@@ -435,6 +435,8 @@ Pemecahan untuk setiap ekspresi kurung memberi $\frac{2}{3}=(89.2/\theta)^{\hat{
 
 Seperti metode momen, pencocokan persentil hampir terlalu fleksibel dalam arti bahwa estimator dapat bervariasi tergantung pada persentil berbeda yang dipilih. Misalnya, seorang aktuaris dapat menggunakan estimasi pada persentil ke-25 dan ke-95 sedangkan yang lain menggunakan persentil ke-20 dan ke-80. Secara umum estimasi parameter akan berbeda dan tidak ada alasan kuat untuk memilih salah satu dari yang lain. Seperti halnya metode momen, pencocokan persentil menarik karena memberikan teknik yang dapat diterapkan dengan mudah dalam situasi tertentu dan memiliki dasar intuitif. Meskipun sebagian besar aplikasi aktuaria menggunakan estimator kemungkinan maksimum, akan lebih mudah untuk memiliki pendekatan alternatif seperti metode momen dan pencocokan persentil yang tersedia.
 
+<<<<<<< HEAD
+=======
 ## Model Selection
 
 Menjelaskan proses pemilihan model berdasarkan:
@@ -896,3 +898,4 @@ Di mana,
 
 
 
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641

@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 tab:unnamed-chunk-18
 fig:unnamed-chunk-38
 fig:unnamed-chunk-39
+=======
+<<<<<<< HEAD
+=======
+tab:unnamed-chunk-16
+fig:unnamed-chunk-36
+fig:unnamed-chunk-37
+>>>>>>> 6fa4781668e337b176fc85db84f4a9eb21b326c1
 fig:TransitionSwitz
 fig:PremEvolution
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 pengantar-analitika-data-kerugian
 relevansi-analitika-dalam-aktivitas-asuransi
 sifat-dan-relevansi-asuransi
@@ -79,9 +88,15 @@ estimator-momen
 fungsi-distribusi-empiris
 quartiles-percentiles-and-quantiles
 penduga-kepadatan
-plug-in-principle
-tools-for-model-selection-and-diagnostics
+prinsip-pengaya
+alat-untuk-pemilihan-model-dan-diagnostik
 perbandingan-grafik-distribusi
+<<<<<<< HEAD
+perbandingan-statistik-distribusi
+nilai-awal
+metode-momen
+pencocokan-persentil
+=======
 graphical-comparison-of-distributions
 starting-values
 method-of-moments
@@ -105,6 +120,7 @@ bayesian-inference-1
 summarizing-the-posterior-distributiob-of-paremeters
 bayesian-predictive-distribution
 conjugate-distributions
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 aggregate-loss-models
 introduction
 moments-and-distribution
@@ -124,12 +140,6 @@ pengenalan-ratemaking
 metode-penentuan-tarif-gabungan
 metode-penghitungan-premi-murni
 metode-rasio-kerugian
-prinsip-prinsip-penetapan-harga
-prinsip-prinsip-premi
-sifat-prinsip-premium
-risiko-heterogen
-paparan-risiko
-faktor-penilaian
 risk-classification
 introduction-1
 poisson-regression-model
@@ -198,6 +208,18 @@ r-code-for-chain-ladder-predictions
 glms-and-bootstrap-for-loss-reserves
 model-specification
 model-estimation-and-prediction
+<<<<<<< HEAD
+ChapBonusMalus
+S:ERBM:Intro
+S:ERBM:NCD
+ncd-system-in-malaysia
+ncd-systems-in-other-countries
+S:ERBM:BMS
+transition-probability
+S:ERBM:StatDist
+stationary-distribution
+r-code-for-a-stationary-distribution
+=======
 experience-rating-using-bonus-malus
 introduction-2
 sistem-ncd-di-beberapa-negara
@@ -219,6 +241,7 @@ pemodelan-heterogenitas-residual
 distribusi-stasioner-yang-memungkinkan-heterogenitas-residual
 penentuan-relativitas-optimal
 ilustrasi-numerik
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 aggregate-loss-models-1
 dependence-modeling
 appendix-a-review-of-statistical-inference
@@ -238,6 +261,35 @@ konsep-dasar-1
 uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
+<<<<<<< HEAD
+<<<<<<< HEAD
+fig:unnamed-chunk-2
+fig:unnamed-chunk-4
+fig:TransitionSwitz
+introduction-1
+ncd-system-in-several-countries
+fig:unnamed-chunk-1
+sistem-ncd-di-beberapa-negara
+sistem-ncd-di-malaysia
+sistem-ncd-di-negara-lain
+model-rantai-bms-dan-markov
+probabilitas-transisi
+bms-dan-distribusi-stasioner
+distribusi-stasioner
+kode-untuk-distribusi-stasioner-r
+fig:PremEvolution
+evolusi-premium
+program-untuk-evolusi-premium-r
+tingkat-konvergensi
+r-program-untuk-tingkat-konvergensi
+bms-dan-peringkat-premium
+peringkat-premium
+klasifikasi-risiko-apriori
+pemodelan-heterogenitas-residual
+distribusi-stasioner-yang-memungkinkan-heterogenitas-residual
+penentuan-relativitas-optimal
+ilustrasi-numerik
+=======
 appendix-b-iterated-expectations
 conditional-distribution-and-conditional-expectation
 conditional-distribution
@@ -265,6 +317,7 @@ statistical-inference-based-on-maximum-likelihood-estimation
 hypothesis-testing
 mle-and-model-validation
 appendix-d-summary-of-distributions
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
 distribusi-diskrit
 the-ab0-class-1
 the-ab1-class
@@ -278,7 +331,23 @@ distributions-with-finite-support
 limited-expected-values
 functions
 illustrative-graph
+<<<<<<< HEAD
+=======
+appendix-b-iterated-expectations
+appendix-c-maximum-likelihood-theory
+likelihood-function
+likelihood-and-log-likelihood-functions
+properties-of-likelihood-functions
+maximum-likelihood-estimators
+definition-and-derivation-of-mle
+asymptotic-properties-of-mle
+use-of-maximum-likelihood-estimation
+statistical-inference-based-on-maximum-likelihood-estimation
+hypothesis-testing
+mle-and-model-validation
+appendix-d-summary-of-distributions
 appendix-e-conventions-for-notation
+<<<<<<< HEAD
 other-frequency-distributions
 actuarial-exam-question-1
 variable-types
@@ -315,3 +384,16 @@ why-is-dependence-modeling-important
 further-resources-and-contributors-1
 referensi
 qualitative-variables
+=======
+prinsip-prinsip-penetapan-harga
+prinsip-prinsip-premi
+sifat-prinsip-premium
+risiko-heterogen
+paparan-risiko
+faktor-penilaian
+>>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
+experience-rating-using-bonus-malus
+=======
+appendix-e-conventions-for-notation
+>>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641
+>>>>>>> 6fa4781668e337b176fc85db84f4a9eb21b326c1
