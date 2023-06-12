@@ -388,11 +388,7 @@ Ingatlah bahwa tujuan dari pertanyaan ini adalah untuk menghitung $E(S_N-15)_+$ 
 - Step 1:
 
 $$\begin{aligned}
-<<<<<<< HEAD
-\mathrm{E~}(S_N-5)_+ &= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 0) \right] \
-=======
 \mathrm{E~}(S_N-5)_+ &= \mathrm{E}(S_N) - 5 \left[1-\Pr(S_N \leq 5) \right] \
->>>>>>> 16a5dfb74365b3fdb59c15e620c650d54720c38c
 &= 28 - 5 \left(1 - \frac{1}{3}\right) \
 &= 28 - 5 \left(\frac{2}{3}\right) \
 &= 28 - \frac{10}{3} \
