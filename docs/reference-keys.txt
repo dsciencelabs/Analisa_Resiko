@@ -149,7 +149,8 @@ sifat-prinsip-premium
 risiko-heterogen
 paparan-risiko
 faktor-penilaian
-head-1
+development-and-trending
+paparan-dan-premi
 risk-classification
 introduction-1
 poisson-regression-model
@@ -292,7 +293,7 @@ uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
 appendix-b-iterated-expectations
-head-2
+head-1
 conditional-distribution-and-conditional-expectation
 conditional-distribution
 discrete-case

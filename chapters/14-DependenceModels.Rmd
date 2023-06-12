@@ -974,6 +974,9 @@ Kode R untuk Korelasi Spearman yang Dikoreksi dengan Tie.
 rs_ties<-cor(AlarmCredit,NoClaimCredit, method = c("spearman"))
 round(rs_ties,2)
 ```
+<<<<<<< HEAD
 
 ## Referensi 
 - https://openacttexts.github.io/Loss-Data-Analytics/ChapFrequency-Modeling.html#S:goodness-of-fit
+=======
+>>>>>>> 2b87845f7c3bc16ab57388bb56dc493594911fc0
