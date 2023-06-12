@@ -402,21 +402,135 @@ Penyisihan kerugian adalah topik di mana terdapat perbedaan yang signifikan anta
 \hypertarget{modeling-loss-severity}{%
 \chapter{Modeling Loss Severity}\label{modeling-loss-severity}}
 
-\hypertarget{mdmmm}{%
-\section{mdmmm}\label{mdmmm}}
-
-\hypertarget{mdmem}{%
-\section{mdmem}\label{mdmem}}
-
-\hypertarget{mdmm}{%
-\section{mdmm}\label{mdmm}}
-
 \hypertarget{modifikasi-pertanggungan}{%
 \section{modifikasi pertanggungan}\label{modifikasi-pertanggungan}}
 
 Coverage modifications atau modifikasi pertanggungan adalah perubahan yang dibuat pada syarat dan ketentuan polis asuransi. Perubahan ini dapat diprakarsai oleh pemegang polis atau perusahaan asuransi, dan dirancang untuk mengubah pertanggungan yang diberikan oleh polis.
 
 Modifikasi pertanggungan dapat dilakukan karena berbagai alasan. Sebagai contoh, pemegang polis mungkin ingin meningkatkan batas pertanggungan pada polis mereka untuk melindungi diri mereka sendiri dari potensi kerugian. Atau, mereka mungkin ingin menambah atau menghapus jenis pertanggungan tertentu, seperti menambahkan asuransi banjir pada polis pemilik rumah atau menghapus pertanggungan tabrakan dari polis mobil.
+
+pada bagian ini membahas mengenai
+
+\hypertarget{policy-deductibles}{%
+\subsection{policy deductibles}\label{policy-deductibles}}
+
+pada polis deductible biasa, pemegang polis setuju untuk menanggung sejumlah klaim asuransi sebelum perusahaan asuransi membayarkan klaim. Sehingga bagian kerugian yang ditanggung dan menjadi tanggung jawab pemegang polis untuk membayar deductible dengan uang mereka sendiri.
+
+sebagai contoh jika sebuah polis memiliki daductible sebesar Rp.500 dan pemegang polis mengalami kerugian dengan biaya sebesar Rp.2500, maka perusahaan asuransi hanya akan membayar Rp.2000 (yaitu total biaya perbaikan dikurangi deductible Rp.500)
+
+deductible sendiri di notasikan dengan \(d\), maka
+
+\begin{itemize}
+\item
+  jika kerugian melebihi \(d\) atau nilai deductible, maka perusahaan asuransi bertanggung jawab untuk menanggung total kerugian dikurangin dengan deductible atau \(d\)
+\item
+  tergantung dengan perjanjiannya, deductible dapat berlaku untuk setiap kerugian atau total dari seluruh kerugian.
+\end{itemize}
+
+jumlah dari deductible biasanya dipilih pada saat pemegang polis membeli polis dan disesuaikan dengan kebutuhannya selama masa berlaku polis. deductible yang lebih tinggi akan menghasilkan pembayaran premi yang lebih rendah, dikarenakan pemegang polis menanggung lebih banyak saat terjadinya kerugian.
+
+lalu jika \(X\) di notasikan sebagai kerugian yang diterima oleh pemegang polis dan \(Y\) dinotasikan sebagai jumlah klaim yang dibayarkan oleh perusahaan asuransi, maka ada dua variabel berdasarkan pembayarannya kepada pemegang polis.
+a. pembayaran per kerugian
+b. pembayaran per pembayaran
+
+pada variabel perbayaran per kerugian, dinotasikan sebagai \(Y^L\) atau \((X-d)_+\) atau left censor, atau ketika jumlah atau total kerugian yang dialami kurang dari deductible, maka dinilai sama dengan 0 atau tidak dilakukan pembayaran. maka variabel ini didefinisikan sebagai
+
+\begin{align*}
+Y^{L} = \left( X - d \right)_{+} 
+= \left\{ \begin{array}{cc}
+0 & X \le d, \\
+X - d & X > d  
+\end{array} \right. .
+\end{align*}
+
+disisi lain, variabel pembayaran per pembayaran dinotasikan sebagai \(Y^P\) didefinisikan ketika hanya terjadinya pembayaran, terutama \(Y^P\) sama dengan \(X-d\) dengan syarat \([X>d]\), atau dinotasikan sebagai \(Y^P=X-d||X>d\) atau dituliskan sebagai
+
+\begin{align*}
+Y^{P} = \left\{ \begin{matrix}
+\text{Undefined} & X \le d \\
+X - d & X > d .
+\end{matrix}  \right.
+\end{align*}
+
+disini \(Y^P\) disebut juga sebagai left truncated atau variabel kerugian berlebih, karena klaim yang lebih kecil dari \(d\) tidak dilaporkan dan nilai dari \(d\) berubah sebesar \(d\)
+
+ketika nilai distribusi dari nilai kerugian bersifat kontinu, namun distribusi dari \(Y^L\) adalah gabungan kombinasi dari komponen nilai diskrit dan kontinu. bagian diskrit terletak pada \(Y=0\) atau saat \((X \leq d)\) dan komponen nilai kontinu terletak pada interval \(Y>0\) atau saat \(X>d\)
+
+\hypertarget{policy-limit}{%
+\subsection{2. Policy Limit}\label{policy-limit}}
+
+policy limit atau batas polis adalah bentuk jumlah maksimum yang dibayarkan oleh perusahaan asuransi untuk pertanggungan tertentu berdasarkan polis asuransinya. sehingga kerugian yang ditanggung dinotasikan sebagai \(X\), dan batas pertanggunannya atau batas polisnya dinotasikan sebagai \(u\), jika kerugian melebihi batas polis \(X-u\) harus dibayar oleh pemegang polis sendiri. batas polis yang lebih tinggi berarti premi yang dibayar oleh pemegang polis semakin besar.
+
+sebagai contoh sebuah polis mungkin memiliki batas pertanggungan sebesar Rp100.000 per kejadian, yang berarti bahwa perusahaan asuransi tidak akan membayar lebih dari Rp100.000 untuk setiap klaim atau tanggung jawab yang menjadi bagian dari polis.
+dimana biaya kerugian pemegang polis dinotasikan sebagai \(X\) dan klaim yang dibayarkan oleh perusahaan asuransi dinotasikan sebagai \(Y\), dan variabel policy limit dinotasikan sebagai \(X \land u\). atau disebut sebagai right censored variable dikarenakan nilai dari \(u\) di set sama dengan \(u\). maka variabel \(Y\) didefinisikan sebagai
+
+\begin{align*}
+Y = X \land u = \left\{ \begin{matrix}
+X & X \leq u \\
+u & X > u. \\
+\end{matrix} \right.\
+\end{align*}\textbackslash end\{align*\}
+
+pada batas polis, perbedaan antara \(Y^L\) dan \(Y^P\) tidak dibutuhkan dikarenakan perusahaan asuransi akan selalu melakukan pembayaran.
+
+dengan \((X-u)\) dan \((X \land u)\) maka expektasi dari pembayaran terjadi tanpa modifikasi pertangguangan \(X\). jumlah ekspektasi pembayaran dari deductible \(u\) dan limit \(u\) maka, \(X=(X-u)_++(X\land u)\)
+
+jika kerugian merupakan subjek dari deductible \(d\) dan limit \(u\), maka didefinisikan sebagai
+
+\begin{align*}
+Y^{L} = \left\{ \begin{matrix}
+0 & X \leq d \\
+X - d  & d <  X \leq u \\
+ u - d  & X > u. \\
+\end{matrix} \right.\
+\end{align*}\textbackslash end\{align*\}
+
+maka, \(Y^L\) dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land u)\).
+
+\hypertarget{policy-deductible-and-policy-limit}{%
+\subsection{policy deductible and policy limit}\label{policy-deductible-and-policy-limit}}
+
+\begin{itemize}
+\item
+  pada policy deductible atau pengurangan polis, jika kerugian yang dialami oleh pemegang polis kurang dari nilai deductible maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika lebih besar dari nilai deductible maka klaim yang dibayarkan merupakan total dari kerugian dikurangi dengan nilai deductible, sehingga sisa biaya kerugian ditanggung pemegang polis.
+  semakin besar nilai deductible maka besar premi yang perlu dibayarkan oleh pemegang polis semakin rendah
+\item
+  pada policy limit atau pembatasaan polis, jika kerugian yang dialami oleh pemegang polis lebih besar dari nilai limit maka perusahaan asuransi tidak akan membayarkan kerugian tersebut, dan jika masih dibawah dari batas limit maka perusahaan asuransi akan selalu membayarkan total kerugian tersebut. akan tetapi jika lebih besar dari limit sisa biaya kerugian ditanggung pemegang polis.
+  semakin besar nilai limit maka besar premi yang dibayarkan oleh pemegang polis semakin besar
+\end{itemize}
+
+\hypertarget{coinsurance-and-inflation}{%
+\subsection{Coinsurance and inflation}\label{coinsurance-and-inflation}}
+
+coinsurance atau koasuransi adalah jenis pengaturan asuransi di mana dua atau lebih perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Dalam pengaturan koasuransi, setiap perusahaan asuransi mengasumsikan sebagian risiko yang terkait dengan polis dan bertanggung jawab untuk membayar bagian proporsional dari setiap klaim yang muncul. Coinsurance sering digunakan pada asuransi properti dan asuransi kecelakaan, di mana besarnya risiko dapat melebihi kapasitas penanggung tunggal untuk menanggungnya.
+
+pada Policy Deductibles jumlah kerugian yang ditanggung oleh pemegang polis sampai dengan nilai dari deductible \(d\). kerugian yang dapat ditanggung juga dapat berupa presentase dari klaim. presentase \(\alpha\) sering disebut sebagai faktor koasuransi. jika polis merupakan subjek dari deductible dan limit polis, maka koasuransi mengacu pada presentase klaim yang harus ditanggung oleh perusahaan asuransi.
+
+setelah dilakukan deductible dan limit pada polis maka, variabel pembayaran per kerugiaan atau \(Y^L\) didefinisikan sebagai:
+
+\begin{align*}
+Y^{L} = \left\{ \begin{matrix}
+0 & X \leq d, \\
+\alpha\left( X - d \right) & d <  X \leq u, \\
+\alpha\left( u - d \right) & X > u. \\
+\end{matrix} \right.\
+\end{align*}\textbackslash end\{align*\}
+
+jumlah maksimum yang dapat dibayarkan oleh perusahaan asuransi adalah \(\alpha (u-d)\), dimana u adalah maksimum klaim yang dibayarkan dan pada Policy limit ketika kerugian merupakan subjek pada deductible \(d\) dan limit \(u\) untuk variabel per kerugian atau \(Y^L\), maka dapat dinyatakan sebagai \(Y^L=(X\land u)-(X\land d)\), maka pada koasuransi \(Y^L\) dapat dinyatakan sebagai\(Y^L=\alpha[(X\land u)-(X\land d)]\).
+
+\hypertarget{reinsurance}{%
+\subsection{Reinsurance}\label{reinsurance}}
+
+Reinsurance atau Reasuransi adalah jenis asuransi yang digunakan perusahaan asuransi untuk mengalihkan sebagian risiko yang telah mereka tanggung dalam menjamin polis asuransi kepada perusahaan asuransi lain. Dalam pengaturan reasuransi, perusahaan asuransi menyerahkan sebagian risiko yang terkait dengan polis atau portofolio polis kepada perusahaan reasuransi, yang mengasumsikan risiko tersebut dengan imbalan sebagian premi yang dibayarkan oleh pemegang polis. Reasuransi biasanya digunakan oleh perusahaan asuransi untuk melindungi diri mereka sendiri dari kerugian akibat bencana atau untuk mengelola eksposur mereka terhadap risiko di lini bisnis tertentu.
+
+pada Policy deductible berdasarkan polis tersebut, pemegang polis harus membayar semua kerugian hingga batas nilai deductible, dan perusahaan asuransi hanya membayar jumlah (jika ada) di atas batas nilai deductible. terdapat peraturan dimana di mana perusahaan asuransi mengalihkan sebagian risiko polis dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan membayarkan juga premi asuransi.
+
+Reasuransi adalah pengaturan kontrak di mana perusahaan asuransi mengalihkan sebagian dari risiko yang diasuransikan dengan mendapatkan pertanggungan dari perusahaan asuransi lain dengan imbalan premi reasuransi. Dalam kontrak tersebut, penanggung utama atau perusahaan asuransi awal harus melakukan semua pembayaran yang diperlukan kepada pemegang polis hingga total pembayaran penanggung utama mencapai deductible reasuransi yang telah ditetapkan. lalu Perusahaan asuransi lainnya kemudian hanya bertanggung jawab untuk membayar kerugian di atas deductible reasuransi. Jumlah maksimum yang dipertahankan oleh penanggung utama dalam perjanjian reasuransi disebut retensi.
+
+\hypertarget{coinsurance-and-reinsurance}{%
+\subsection{Coinsurance and Reinsurance}\label{coinsurance-and-reinsurance}}
+
+Perbedaan utama antara reasuransi dan koasuransi adalah arah pengalihan risiko. Dalam pengaturan reasuransi, perusahaan asuransi mengalihkan risiko kepada perusahaan asuransi lain, sedangkan dalam pengaturan koasuransi, beberapa perusahaan asuransi berbagi risiko yang terkait dengan satu polis. Selain itu, reasuransi biasanya digunakan untuk melindungi penanggung dari kerugian akibat bencana atau untuk mengelola eksposur risiko mereka, sementara koasuransi sering digunakan untuk memungkinkan penanggung menanggung polis yang lebih besar daripada yang dapat mereka tangani sendiri.
 
 \hypertarget{model-selection-and-estimation}{%
 \chapter{Model Selection and Estimation}\label{model-selection-and-estimation}}
@@ -442,11 +556,328 @@ Sejumlah klaim acak \(N\) yang dapat mewakili baik jumlah kerugian atau jumlah p
 
 Misalnya, mungkin ada banyak klaim yang timbul dari satu kontrak. Itu wajar untuk dipikirkan \(X_i>0\) karena jika \(X_i=0\) maka tidak ada klaim yang terjadi. Biasanya kita menganggap bahwa kondisional pada \(X_{1},X_{2},\ldots ,X_{n}\) adalah iid variabel acak. Distribusi dari N dikenal sebagai distribusi frekuensi , dan distribusi umum dari \(X\) dikenal sebagai distribusi keparahan . Dengan berasumsi \(N\) Dan \(X\) sendiri. Dengan model risiko kolektif, sehingga dapat menguraikan kerugian agregat menjadi frekuensi \(( N )\) proses dan tingkat keparahan \(( X )\) model. Fleksibilitas ini memungkinkan analis untuk mengomentari dua komponen terpisah ini. Misalnya, pertumbuhan penjualan karena standar penjaminan emisi yang lebih rendah dapat menyebabkan frekuensi kerugian yang lebih tinggi tetapi mungkin tidak memengaruhi keparahan. Demikian pula, inflasi atau kekuatan ekonomi lainnya dapat berdampak pada keparahan tetapi tidak pada frekuensi.
 
+\hypertarget{menghitung-distribusi-klaim-agregat}{%
+\chapter{5.4 Menghitung Distribusi Klaim Agregat}\label{menghitung-distribusi-klaim-agregat}}
+
+Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
+
+\hypertarget{metode-rekursif}{%
+\section{metode rekursif}\label{metode-rekursif}}
+
+penggunaan metode rekursif untuk membangun model majemuk dengan komponen frekuensi \(N\) yang termasuk dalam kelas \((a,b,0)\) atau \((a,b,1)\), dan komponen tingkat keparahan \(X\) yang memiliki distribusi diskrit.
+
+Namun, jika distribusi tingkat keparahan \(X\) kontinu, praktik yang umum dilakukan adalah mendiskritkan distribusinya terlebih dahulu agar metode rekursif dapat diterapkan.
+
+Dalam hal ini, diasumsikan bahwa N termasuk dalam kelas \((a,b,1)\), sehingga nilai probabilitas \(N\) pada waktu \(k\) dinyatakan sebagai \(pk = (a + bk) pk-1\). Selanjutnya, diasumsikan bahwa support (nilai yang mungkin) dari \(X\) terbatas pada \({0,1,...,m}\), dan distribusinya diskrit. Oleh karena itu, fungsi probabilitas dari \(S_N\) dapat dinyatakan dalam
+
+\begin{aligned}
+f_{S_N}(s)&=\Pr (S_N=s) \\
+&=\frac{1}{1-af_{X}(0)}\left\{ \left[ p_1 -(a+b)p_{0}\right]
+f_X (s)+\sum_{x=1}^{s\wedge m}\left( a+\frac{bx}{s} \right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{aligned}
+
+Jika \(N\) berada dalam kelas \((a,b,0)\) maka \(p1 = (a + b)p0\) dan seterusnya
+
+\begin{align*}
+f_{S_N}(s)=\frac{1}{1-af_X (0)}\left\{ \sum_{x=1}^{s\wedge m}\left( a+\frac{bx
+}{s}\right) f_X (x)f_{S_N}(s-x)\right\}.
+\end{align*}
+
+karena model ARIMA yang digunakan berbeda. Persamaan tersebut hanya memperhitungkan faktor skala \(a\) dan \(b\) dan mengakumulasi probabilitas dari setiap nilai \(x\) dari \(X\) hingga mencapai nilai \(s\) yang diinginkan
+
+\hypertarget{contoh}{%
+\subsection{contoh}\label{contoh}}
+
+Jumlah klaim dalam suatu periode \(N\) memiliki distribusi geometrik dengan mean 4. Besarnya setiap klaim \(X\) mengikuti \(Pr(X=x)=0.25\), untuk \(x=1,2,3,4\). Jumlah klaim dan jumlah klaim bersifat independen. \(S_N\) adalah jumlah klaim keseluruhan pada periode tersebut.
+
+Hitunglah \(F_{S_N}(3)\).
+
+Solusi Distribusi tingkat keparahan \(X\) adalah sebagai berikut
+\(f_X(x)=\frac14\), \(x=1,2,3,4\). Distribusi frekuensi \(N\) adalah geometris dengan rata-rata 4, yang merupakan anggota dari kelas \((a,b,0)\) dengan \(b=0\), \(a=\frac\beta{1+\beta}=\frac45\), dan \(p0=\frac1{1+\beta}=\frac15\). nilai dari komponen tingkat keparahan \(X\) adalah \({1,…,m=4}\), yang bersifat diskrit dan terbatas. Dengan demikian, kita dapat menggunakan metode rekursif
+
+\begin{aligned}
+f_{S_N} (x) &= 1 \sum_{y=1}^{x\wedge m} (a+0) f_X (y) f_{S_N} (x-y) \\
+&= \frac{4}{5} \sum_{y=1}^{x\wedge m} f_X (y) f_{S_N} (x-y) .
+\end{aligned}
+
+Solusi ditemukan dengan menggunakan metode rekursif, di mana fungsi probabilitas \(f_{S_N}(x)\) untuk setiap nilai \(x\) dihitung menggunakan rumus \(f_{S_N}(x) = \sum_{y=1}^{x\wedge m} (a+0) f_X(y) f_{S_N}(x-y)\), di mana \(m=4\) adalah nilai maksimum dari distribusi nilai klaim \(X\), dan \(a=\frac{\beta}{1+\beta}=\frac{4}{5}\) dan \(p_0=\frac{1}{1+\beta}=\frac{1}{5}\) adalah parameter dari distribusi frekuensi geometri yang diberikan.
+
+khususnya kita memiliki
+
+\begin{aligned}
+f_{S_N} (0) &= \Pr(N=0) = p_0=\frac{1}{5}\\
+f_{S_N} (1) &= \frac{4}{5}\sum_{y=1}^{1} f_X (y) f_{S_N} (1-y) = \frac{4}{5} f_X(1) f_{S_N}(0)\\
+&= \frac{4}{5}\left( \frac{1}{4}\right)\left(\frac{1}{5} \right) = \frac{1}{25}\\
+f_{S_N} (2) &=  \frac{4}{5}\sum_{y=1}^{2} f_X (y) f_{S_N} (2-y) = \frac{4}{5} \left[ f_X(1)f_{S_N}(1) + f_X(2) f_{S_N}(0) \right] \\
+&= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5}\right) \right] =
+\frac{4}{5}\left( \frac{6}{100}\right) = \frac{6}{125}\\
+f_{S_N} (3) &= \frac{4}{5} \left[ f_X(1) f_{S_N}(2) + f_X(2)f_{S_N}(1) + f_X(3) f_{S_N}(0) \right]\\
+&= \frac{4}{5}\left[ \frac{1}{4} \left( \frac{1}{25} + \frac{1}{5} +
+\frac{6}{125}\right) \right] = \frac{1}{5}\left( \frac{5+25+6}{125}\right) = 0.0576\\
+\Rightarrow \ F_{S_N} (3) &= f_{S_N} (0)+f_{S_N} (1)+f_{S_N} (2) +f_{S_N} (3) = 0.3456 .
+\end{aligned}
+
+Setelah menghitung nilai \(f_{S_N}(0)\), \(f_{S_N}(1)\), \(f_{S_N}(2)\), dan \(f_{S_N}(3)\), fungsi distribusi kumulatif \(F_{S_N}(3)\) diperoleh dengan menjumlahkan nilai-nilai tersebut. Hasil akhirnya adalah \(F_{S_N}(3) = 0.3456\).
+
+\hypertarget{simulasi}{%
+\section{simulasi}\label{simulasi}}
+
+Distribusi kerugian agregat dapat dievaluasi dengan menggunakan simulasi Monte Carlo. Untuk kerugian agregat, Simulasi Monte Carlo digunakan untuk menghasilkan sampel acak dari kerugian keseluruhan berdasarkan distribusi probabilitas yang dianggap sesuai untuk distribusi frekuensi dan tingkat keparahan klaim.
+
+gunanya adalah seseorang dapat menghitung distribusi empiris dari \(S_N\) dengan menggunakan sampel acak. Nilai ekspektasi dan varians dari kerugian agregat juga dapat diperkirakan dengan menggunakan rata-rata sampel dan varians sampel dari nilai simulasi.
+
+Sekarang kita rangkum prosedur simulasi untuk model kerugian agregat. Misalkan \(m\) adalah ukuran sampel acak yang dihasilkan dari kerugian agregat.
+
+Individual Risk Model: \$S\_n = X\_1 + ⋯ + X\_n \$
+
+\begin{itemize}
+\tightlist
+\item
+  misalkan \(j=1,...,m\) menjadi penghitung, dimulai dari \(j = 1\)
+\item
+  Hitung setiap realisasi kerugian individu \(x_{ij}\) untuk \(i=1,...,n\) . Sebagai contoh, hal ini dapat dilakukan dengan menggunakan metode transformasi invers
+\item
+  Hitung kerugian keseluruhan \(s_j = x_{1j} + ⋯ + x_{nj}\).
+\item
+  terkahir Ulangi dua langkah di atas untuk \(j=2,...,m\) untuk mendapatkan sampel berukuran \(m\) dari \(S_n\), dengan kata lain \({s_1,...,s_m}\).
+\end{itemize}
+
+Collective Risk Model : \(S_n = X_1 + ... + X_n\)
+
+\begin{itemize}
+\tightlist
+\item
+  misalkan \(j=1,...,m\) menjadi penghitung, dimulai dari \(j = 1\)
+\item
+  Hitung jumlah klaim \(n_j\) dari distribusi frekuensi \(N\).
+\item
+  Diberikan \(n_j\), hasilkan jumlah setiap klaim secara independen dari distribusi tingkat keparahan \(X\), dilambangkan dengan \(x_{1j},...,x_{{n_j}j}\).
+\item
+  Hitung kerugian keseluruhan \(s_j = x_{1j} + ⋯ + x_{{n_j}j}\).
+\item
+  Ulangi tiga langkah di atas untuk \(j=2,...,m\) untuk mendapatkan sampel berukuran \(m\) dari \(S_N\), dengan kata lain \({s_1,...,s_m}\)
+\end{itemize}
+
+Dengan sampel acak \(S\), distribusi empiris dapat dihitung sebagai
+
+\begin{aligned}
+\hat{F}_S(s)=\frac{1}{m}\sum_{i=1}^{m}I(s_i\leq s),
+\end{aligned}
+
+Untuk individual risk model, kerugian keseluruhan dihitung sebagai jumlah kerugian individu yang acak,
+
+sedangkan untuk collective Risk Model, kerugian keseluruhan dihitung sebagai jumlah kerugian dari sejumlah klaim.
+
+Dalam kedua kasus, sampel acak dihasilkan dari distribusi probabilitas yang dianggap sesuai, dan kemudian distribusi empiris dari sampel tersebut dihitung untuk memperkirakan distribusi probabilitas dari kerugian agregat.
+
+dimana \(I(\cdot)\) adalah fungsi indikator. distribusi empiris \(\hat{F}_S(s)\) akan dikonvergen ke \({F}_S(s)\), dikarenakan ukuran sampel \(m\rightarrow \infty\)
+
+Dalam perhitungannya, asumsi-asumsi awal dibuat tentang distribusi probabilitas dan parameter-parameternya, kemudian model-model ini diestimasi menggunakan data yang tersedia dan kualitas kecocokan model dievaluasi menggunakan alat validasi model. Proses ini memberikan cara yang berguna untuk memperkirakan risiko yang terkait dengan kerugian agregat, dan dapat membantu perusahaan atau organisasi dalam merencanakan dan mengelola risiko mereka.
+
+Prosedur di atas mengasumsikan bahwa distribusi probabilitas, termasuk nilai parameter, dari distribusi frekuensi dan tingkat keparahan telah diketahui. Dalam praktiknya, kita perlu mengasumsikan distribusi-distribusi ini terlebih dahulu, mengestimasi parameter-parameternya dari data, dan kemudian menilai kualitas kecocokan model dengan menggunakan berbagai alat validasi model. Sebagai contoh, asumsi-asumsi dalam model risiko kolektif menyarankan estimasi dua tahap di mana satu model dikembangkan untuk jumlah klaim \(N\) dari data jumlah klaim, dan model lainnya dikembangkan untuk tingkat keparahan klaim \(X\) dari data jumlah klaim.
+
+(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry
+
 \hypertarget{simulation-and-resampling}{%
 \chapter{Simulation and Resampling}\label{simulation-and-resampling}}
 
 \hypertarget{premium-foundations}{%
 \chapter{Premium Foundations}\label{premium-foundations}}
+
+\hypertarget{pengenalan-ratemaking}{%
+\chapter{7.1 Pengenalan Ratemaking}\label{pengenalan-ratemaking}}
+
+Pada bagian ini, Anda akan belajar cara:
+
+Menggambarkan ekspektasi sebagai metode dasar untuk menentukan premi asuransi
+Menganalisis persamaan akuntansi untuk menghubungkan premi dengan kerugian, biaya, dan keuntungan
+Merangkum strategi untuk memperluas penetapan harga untuk mencakup risiko heterogen dan tren dari waktu ke waktu.
+
+Bab ini menjelaskan bagaimana menentukan harga yang tepat untuk produk asuransi, yang dikenal sebagai premi. Premi adalah jumlah uang yang dibebankan untuk perlindungan asuransi terhadap kejadian yang tidak pasti. Dalam asuransi, harga/premi ini dikenal sebagai tarif karena dinyatakan dalam unit standar, misalnya harga per seribu dolar pertanggungan atas rumah atau manfaat jika terjadi kematian.
+
+Namun, keunikan asuransi adalah bahwa biaya perlindungan asuransi tidak diketahui pada saat penjualan kontrak. Biaya mungkin tidak terungkap selama berbulan-bulan atau bertahun-tahun, tergantung pada kejadian yang diasuransikan. Oleh karena itu, penetapan harga asuransi berbeda dengan pendekatan ekonomi pada umumnya.
+
+Dalam pendekatan penetapan harga aktuaria tradisional, harga ditentukan sebagai fungsi dari biaya asuransi. Premi dianggap sebagai sumber pendapatan yang menyediakan pembayaran klaim, biaya kontrak, dan margin operasi, yang dapat dirumuskan dalam persamaan akuntansi:
+
+\begin{equation}
+\small{
+\text{Premium = Loss + Expense + UW Profit} .
+}
+\end{equation}
+
+Namun, ada pasar asuransi di mana harga aktuaria hanya memberikan masukan untuk harga pasar umum. Untuk memperkuat perbedaan ini, premi berbasis biaya aktuaria kadang-kadang dikenal sebagai harga teknis. Oleh karena itu, keputusan perusahaan seperti penetapan harga harus dievaluasi dengan mengacu pada dampaknya terhadap nilai pasar perusahaan. Tujuan ini lebih komprehensif daripada gagasan statis tentang maksimalisasi laba.
+
+Istilah Biaya dapat dibagi menjadi biaya yang bervariasi berdasarkan premi, seperti komisi penjualan, dan yang tidak, seperti biaya bangunan dan gaji karyawan. Istilah Keuntungan UW adalah singkatan dari keuntungan underwriting dan dapat mencakup biaya modal. Persamaan ini berlaku untuk jumlah banyak kontrak, atau portofolio, dan digunakan untuk membantu menetapkan premi, seperti dengan menetapkan tujuan laba.
+
+Istilah kerugian dalam persamaan tersebut didasarkan pada biaya yang diharapkan, karena sulit untuk memprediksi kerugian yang tepat untuk masing-masing kontrak. Namun, teks tersebut mengakui bahwa pendekatan ini mengasumsikan adanya ketidakpastian dan memperkenalkan prinsip-prinsip premi alternatif yang memasukkan ketidakpastian ke dalam penetapan harga. Bab ini juga memperluas pertimbangan penetapan harga ke kumpulan risiko yang heterogen dan membahas perkembangan dan tren pengalaman kerugian untuk mengembangkan tingkat suku bunga ke depan.
+
+Terakhir, bab ini memperkenalkan metode untuk memilih premi dengan membandingkan metode pemeringkatan premi dengan kerugian dari portofolio yang ditahan dan memilih metode yang menghasilkan kecocokan terbaik dengan data yang ditahan. Bab ini juga mencakup suplemen teknis mengenai peraturan pemerintah tentang tarif asuransi.
+
+\hypertarget{metode-penentuan-tarif-gabungan}{%
+\chapter{7.2 Metode Penentuan Tarif Gabungan}\label{metode-penentuan-tarif-gabungan}}
+
+Pada bagian ini, Anda akan belajar tentang:
+
+\begin{itemize}
+\tightlist
+\item
+  Definisi pure premium sebagai biaya kerugian serta dalam hal frekuensi dan keparahan.
+\item
+  Menghitung tarif yang diindikasikan menggunakan pure premiums, biaya, dan beban keuntungan.
+\item
+  Definisi rasio kerugian.
+\item
+  Menghitung perubahan tarif yang diindikasikan menggunakan rasio kerugian.
+\item
+  Membandingkan metode pure premium dan rasio kerugian untuk menentukan premi.
+\end{itemize}
+
+Dalam kasus ini, diasumsikan terdapat \(n\) kontrak asuransi dengan kerugian (losses) \(X1,...,Xn\). Kontrak-kontrak tersebut memiliki distribusi kerugian yang sama dan dianggap sebagai portofolio homogen yang terdiri dari kontrak-kontrak yang sama. Hal ini dapat diterapkan pada asuransi pribadi seperti asuransi mobil atau asuransi rumah di mana perusahaan asuransi menulis banyak kontrak pada risiko yang sangat mirip. Selain itu, asumsi tentang distribusi yang identik tidak terlalu membatasi karena dalam bagian selanjutnya akan diperkenalkan variabel paparan yang memungkinkan pengalaman dapat diskalakan agar dapat dibandingkan. Dalam kasus ini, diasumsikan bahwa \(X1,...,Xn\) adalah iid (independen dan identik terdistribusi).
+
+\hypertarget{metode-penghitungan-premi-murni}{%
+\section{7.2.1 Metode Penghitungan Premi Murni}\label{metode-penghitungan-premi-murni}}
+
+Dalam metode ini, diperoleh estimasi kerugian yang diharapkan dengan menghitung rata-rata dari kerugian yang terjadi pada seluruh polis dalam suatu kumpulan (n polis).
+
+\begin{equation}
+\small{
+\mathrm{E}(X) \approx \frac{\sum_{i=1}^n X_i}{n} = \frac{\text{Kerugian}}{\text{Eksposur}} = \text{Premi Murni}.
+}
+\end{equation}
+
+Dalam kasus risiko homogen, di mana semua polis dianggap sama, jumlah polis n dapat digunakan sebagai ukuran eksposur. Namun, pada Bagian 7.4.1, konsep eksposur diperluas ketika polis tidak memiliki karakteristik yang sama.
+
+Untuk mendapatkan premi murni, kita juga dapat menggunakan pendekatan frekuensi-keparahan. Dalam hal ini, premi murni dihitung sebagai hasil kali antara frekuensi klaim dan besar kerugian.
+
+\begin{equation}
+\small{
+\text{Premi Murni} = \frac{\text{jumlah klaim}}{\text{Eksposur}} \times \frac{\text{Kerugian}}{\text{jumlah klaim}} = \text{frekuensi} \times \text{keparahan}.
+}
+\end{equation}
+
+Ketika menggunakan metode premi murni, dapat digunakan baik rata-rata kerugian (biaya kerugian) maupun pendekatan frekuensi-keparahan untuk menentukan premi.
+
+Untuk lebih mendekatkan diri pada aplikasi dalam praktik, sekarang kita kembali ke persamaan (7.1) yang menyertakan biaya. Persamaan (7.1) juga mengacu pada Laba UW untuk laba underwriting. Ketika diskalakan dengan premi, ini dikenal sebagai pembebanan laba. Karena klaim tidak pasti, perusahaan asuransi harus memiliki modal untuk memastikan bahwa semua klaim dibayar. Memegang modal ekstra ini adalah biaya menjalankan bisnis, investor di perusahaan perlu dikompensasi untuk ini, dengan demikian pemuatan ekstra.
+
+Sekarang kita menguraikan Beban menjadi beban yang bervariasi berdasarkan premi, Variabel, beban yang tidak bervariasi,dan Premi Tetap, sehingga Beban = Variabel + Premi Tetap. Dengan menganggap biaya variabel dan laba sebagai bagian dari premi, kita mendefinisikan
+
+\begin{equation}
+\small{
+V =  \frac{\text{Variable}}{\text{Premium}} ~~~ \text{and}~~~
+Q = \frac{\text{UW Profit}}{\text{Premium}} ~.
+}
+\end{equation}
+
+Dengan definisi dan persamaan (7.1) ini, kita dapat menulis
+
+\begin{equation}
+\small{
+\begin{matrix}
+\begin{array}{ll}
+\text{Premium} &= \text{Losses + Fixed} + \text{Premium} \times \frac{\text{Variable + UW Profit}}{\text{Premium}}  \\
+& = \text{Losses + Fixed} + \text{Premium} \times (V+Q) .
+\end{array}
+\end{matrix}
+}
+\end{equation}
+
+Penyelesaian untuk hasil premi
+
+\begin{equation}
+\small{
+\text{Premium} = \frac{\text{Losses + Fixed}}{1-V-Q} .
+}
+\end{equation}
+
+Dibagi dengan eksposur, tarif dapat dihitung sebagai
+
+\begin{equation}
+\begin{matrix}
+\begin{array}{ll}
+\text{Rate} &= \frac{\text{Premium}}{\text{Exposure}} = \frac{\text{Losses/Exposure + Fixed/Exposure}}{1-V-Q} \\
+&=   \frac{\text{Pure Premium + Fixed/Exposure}}{1-V-Q} ~.
+\end{array}
+\end{matrix}
+\end{equation}
+
+Dengan kata lain, ini adalah
+
+\begin{equation}
+\small{
+\text{Rate} =\frac{\text{pure premium + fixed expense per exposure}}{\text{1 - variable expense factor - profit and contingencies factor}}  .
+}
+\end{equation}
+
+\hypertarget{metode-rasio-kerugian}{%
+\section{7.2.2 Metode Rasio Kerugian}\label{metode-rasio-kerugian}}
+
+Rasio kerugian adalah rasio jumlah kerugian terhadap premi
+
+\begin{equation}
+\small{
+\text{Loss Ratio} = \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}
+
+Ketika menentukan premi, agak berlawanan dengan intuisi untuk menekankan rasio ini karena komponen premi dimasukkan ke dalam penyebut. Seperti yang akan kita lihat, metode rasio kerugian mengembangkan perubahan tingkat daripada tingkat; kita dapat menggunakan perubahan tingkat untuk memperbarui pengalaman masa lalu untuk mendapatkan tingkat saat ini. Untuk melakukan hal ini, perubahan tingkat terdiri dari rasio rasio kerugian pengalaman terhadap rasio kerugian target. Faktor penyesuaian ini kemudian diterapkan pada rate saat ini untuk mendapatkan rate yang baru.
+
+Untuk melihat cara kerjanya dalam konteks yang sederhana, mari kita kembali ke persamaan (7.1) tetapi sekarang abaikan biaya untuk mendapatkan \$ Premi = Kerugian + Keuntungan UW \$. Membagi dengan premi menghasilkan
+
+\begin{equation}
+\small{
+\frac{\text{UW Profit}}{\text{Premium}} = 1 - LR = 1 - \frac{\text{Loss}}{\text{Premium}} .
+}
+\end{equation}
+
+Misalkan kita memiliki pemuatan laba ``target'' baru, katakanlah \(Q_{target}\) . Dengan asumsi bahwa kerugian, eksposur, dan hal-hal lain mengenai kontrak tetap sama, maka untuk mencapai target pemuatan laba yang baru, kita akan menyesuaikan premi. Gunakan ICF untuk faktor perubahan yang ditunjukkan yang didefinisikan melalui ekspresi
+
+\begin{equation}
+\small{
+\frac{\text{New UW Profit}}{\text{Premium}} = Q_{target} =  1 - \frac{\text{Loss}}{ICF \times \text{Premium}}.
+}
+\end{equation}
+
+Menyelesaikan untuk \(ICF\), kita mendapatkan
+
+\}\begin{equation}
+\small{
+ICF =  \frac{\text{Loss}}{\text{Premium} \times (1-Q_{target})} = \frac{LR}{1-Q_{target}}.
+}
+\end{equation}
+
+Jadi, sebagai contoh, jika kita memiliki rasio kerugian saat ini = 85\% dan target keuntungan \(Q_{target} = 0,20\), maka \(ICF = 0,85/0,80 = 1,0625\), yang berarti kita meningkatkan premi sebesar 6,25\%.
+
+Sekarang mari kita lihat bagaimana hal ini bekerja dengan biaya dalam persamaan (7.1). Kita dapat menggunakan pengembangan yang sama seperti pada Bagian 7.2.1 dan mulai dengan persamaan (7.2), selesaikan pembebanan laba untuk mendapatkan
+
+\begin{equation}
+\small{
+Q = 1 - \frac{\text{Loss+Fixed}}{\text{Premium}} - V .
+}
+\end{equation}
+
+Kita menginterpretasikan kuantitas \(Rugi + Premi Tetap + V\) sebagai ``rasio biaya operasional''. Sekarang, tetapkan persentase keuntungan Q pada target dan sesuaikan premi melalui ``faktor perubahan yang ditunjukkan'' \$ ICF
+
+\begin{equation}
+\small{
+Q_{target} = 1
+-\frac{\text{Loss + Fixed}}{\text{Premium}\times ICF} - V .
+}
+\end{equation}
+
+Menyelesaikan untuk hasil \$ ICF\$
+
+\begin{equation}
+{\small
+\begin{array}{ll}
+ICF &= \frac{\text{Loss + Fixed}}{\text{Premium} \times (1 - V - Q_{target})} \\
+&= \frac{\text{Loss Ratio + Fixed Expense Ratio}}{1 - V - Q_{target}} .
+\end{array}
+}
+\end{equation}
+
+(edit sendiri kalo ga pas, kalimatnya di ganti juga gapapa)
+tertanda -Garry
 
 \hypertarget{risk-classification}{%
 \chapter{Risk Classification}\label{risk-classification}}
