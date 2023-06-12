@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,9 +52,99 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -102,9 +192,63 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#frequency-distributions"><i class="fa fa-check"></i><b>2.1</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian"><i class="fa fa-check"></i><b>2.1.1</b> Bagaimana Frekuensi menambah infromasi pada tingkat keparahan suatu kejadian</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a></li>
+<li class="chapter" data-level="2.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#basic-frequency-distributions"><i class="fa fa-check"></i><b>2.2</b> Basic Frequency Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#the-ab0-class"><i class="fa fa-check"></i><b>2.3</b> The <span class="math inline">\((a,b,0)\)</span> Class</a></li>
+<li class="chapter" data-level="2.4" data-path="frequency-modeling.html"><a href="frequency-modeling.html#mengestimasi-distibusi-frekuensi"><i class="fa fa-check"></i><b>2.4</b> Mengestimasi Distibusi Frekuensi</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
+<li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
@@ -139,19 +283,51 @@
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
-<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.6</b> metode rekursif</a></li>
-<li class="chapter" data-level="5.2.7" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.7</b> simulasi</a></li>
+<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.5</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.6</b> simulasi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
@@ -167,7 +343,7 @@
 <li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
 <li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
 <li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
@@ -233,7 +409,33 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution-and-conditional-expectation"><i class="fa fa-check"></i><b>16.1</b> Conditional Distribution and Conditional Expectation</a>
@@ -276,7 +478,7 @@
 <ul>
 <li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
 <ul>
-<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class-1"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
 <li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
@@ -315,7 +517,250 @@
             <section class="normal" id="section-">
 <div id="experience-rating-using-credibility-theory" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Bab 9</span> Experience Rating Using Credibility Theory<a href="experience-rating-using-credibility-theory.html#experience-rating-using-credibility-theory" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="pengantar-aplikasi-teori-kredibilitas" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Pengantar Aplikasi Teori Kredibilitas<a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Berapa premi yang harus dibebankan untuk menyediakan asuransi? Jawabannya tergantung pada eksposur risiko kerugian. Metode yang umum digunakan untuk menghitung premi asuransi adalah dengan menilai tertanggung menggunakan <abbr title="Rencana pemeringkatan yang menggunakan karakterisitik risiko tertanggung untuk menentukan"><strong>rencana peringkat klasifikasi</strong>.</abbr> Rencana klasifikasi digunakan untuk memilih tarif asuransi berdasarkan karakteristik peringkat tertanggung seperti wilayah geografis, usia, dll. Semua rencana pemeringkatan klasifikasi menggunakan seperangkat kriteria terbatas untuk mengelompokkan tertanggung ke dalam “kelas” dan akan ada variasi risiko kerugian di antara tertanggung di dalam kelas tersebut.</p>
+<p>Rencana pemeringkatan pengalaman mencoba untuk menangkap beberapa variasi dalam risiko kerugian di antara tertanggung dalam kelas pemeringkatan dengan menggunakan pengalaman kerugian tertanggung sendiri untuk melengkapi tingkat dari rencana pemeringkatan klasifikasi. Salah satu cara untuk melakukan hal ini adalah dengan menggunakan <abbr title="Bobot yang diberikan pada pengalaman kerugian historis tertanggung untuk tujuan menentukan premi mereka dalam rencana pemeringkatan pengalaman"><strong>bobot kredibilitas</strong> </abbr> <span class="math inline">\(Z\)</span> dengan <span class="math inline">\(0\leq Z \leq 1\)</span> untuk menghitung</p>
+<p><span class="math display">\[\hat{R}=Z\bar{X}+(1-Z)M,\]</span>
+<span class="math display">\[\begin{eqnarray*}
+\hat{R}&amp;=&amp;\textrm{tingkat bobot kredibilitas untuk risiko,}\\
+           \bar{X}&amp;=&amp;\textrm{kerugian rata-rata untuk risiko selama periode waktu tertentu,}\\
+                  M&amp;=&amp;\textrm{tingkat untuk kelompok klasifikasi, sering disebut tingkat manual.}\\
+\end{eqnarray*}\]</span></p>
+<p>Untuk risiko yang pengalaman kerugiannya stabil dari tahun ke tahun, <span class="math inline">\(Z\)</span> mungkin mendekati <span class="math inline">\(1\)</span>. Untuk risiko yang kerugiannya sangat bervariasi dari tahun ke tahun, <span class="math inline">\(Z\)</span> mungkin mendekati <span class="math inline">\(0\)</span>.</p>
+<p>Teori kredibilitas juga digunakan untuk menghitung tingkat untuk masing-masing kelas dalam rencana peringkat klasifikasi. Ketika tingkat rencana klasifikasi sedang ditentukan, beberapa atau banyak kelompok mungkin tidak memiliki data yang cukup untuk menghasilkan tingkat yang stabil dan dapat diandalkan. Pengalaman kerugian aktual untuk suatu kelompok akan diberi bobot kredibilitas <span class="math inline">\(Z\)</span> dan <abbr title="Sisa bobot yang tidak diberikan pada pengalaman kerugian historis tertanggung dalam rencana pemeringkatan pengalaman"><strong>komplemen kredibilitas</strong> </abbr> <span class="math inline">\(1-Z\)</span> dapat diberikan pada pengalaman rata-rata untuk risiko di seluruh kelas. Atau, jika rencana pemeringkatan kelas sedang diperbarui, komplemen kredibilitas dapat diberikan pada <abbr title="Tingkat rata-rata per eksposur untuk tertanggung dalam kelompok klasifikasi tertentu"><strong>tingkat kelas</strong> </abbr> saat ini. Teori kredibilitas juga dapat diterapkan pada perhitungan frekuensi dan tingkat keparahan yang diharapkan.</p>
+<p>Menghitung nilai numerik untuk <span class="math inline">\(Z\)</span> membutuhkan analisis dan pemahaman data. Apa saja varians dalam jumlah kerugian dan ukuran kerugian untuk risiko? Berapa varians antara nilai yang diharapkan di seluruh risiko?</p>
+</div>
+<div id="limited-fluctuation-credibility" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Limited Fluctuation Credibility<a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Di bagian ini, kita akan mempelajari cara:</p>
+<ul>
+<li>Hitung standar kredibilitas penuh untuk jumlah klaim, ukuran rata-rata klaim, dan kerugian agregat.</li>
+<li>Pelajari bagaimana hubungan antara sarana dan varians distribusi yang mendasari mempengaruhi standar kredibilitas penuh.</li>
+<li>Menentukan bobot kredibilitas <span class="math inline">\(Z\)</span> menggunakan rumus kredibilitas parsial akar kuadrat.</li>
+</ul>
+<p><abbr title="Metode kredibilitas yang berupaya membatasi fluktuasi dalam perkiraannya"><strong>Kredibilitas fluktuasi terbatas</strong></abbr>, juga disebut “kredibilitas klasik” dan “kredibilitas Amerika”, diberi nama ini karena metode ini secara eksplisit mencoba untuk membatasi fluktuasi dalam estimasi frekuensi klaim, tingkat keparahan, atau kerugian. Sebagai contoh, anggaplah Anda ingin memperkirakan jumlah klaim yang diharapkan sebanyak <span class="math inline">\(N\)</span> untuk sekelompok risiko dalam suatu kelas peringkat asuransi. Berapa banyak risiko yang diperlukan dalam kelas tersebut untuk memastikan bahwa tingkat akurasi tertentu dapat dicapai dalam estimasi? Pertama, pertanyaan ini akan dipertimbangkan dari perspektif berapa banyak klaim yang dibutuhkan.</p>
+<div id="kredibilitas-penuh-untuk-frekuensi-klaim" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Kredibilitas Penuh untuk Frekuensi Klaim<a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Misalkan N adalah variabel acak yang mewakili jumlah klaim untuk sekelompok risiko, misalnya, risiko dalam klasifikasi peringkat tertentu. Jumlah klaim yang teramati akan digunakan untuk mengestimasi <span class="math inline">\(\mu_N=\mathrm{E}[N]\)</span>, jumlah klaim yang diharapkan. Seberapa besar <span class="math inline">\(μ_N\)</span> yang dibutuhkan untuk mendapatkan estimasi yang baik? Salah satu cara untuk mengukur keakuratan estimasi adalah dengan pernyataan seperti: “Nilai <span class="math inline">\(N\)</span> yang teramati harus berada dalam rentang 5% dari μN setidaknya 90% dari waktu.” Menuliskan ini sebagai ekspresi matematis akan menghasilkan <span class="math inline">\(\Pr[0.95 \mu_N \leq N \leq 1.05 \mu_N] \geq 0.90\)</span>. Menggeneralisasi pernyataan ini dengan membiarkan parameter rentang k menggantikan 5% dan tingkat probabilitas <span class="math inline">\(p\)</span> menggantikan 0,90 memberikan persamaan</p>
+<p><span class="math display">\[\begin{equation}
+\Pr[(1-k) \mu_N \leq N \leq (1+k) \mu_N] \geq p .
+\tag{9.1}
+\end{equation}\]</span></p>
+<p>Jumlah klaim yang diharapkan yang diperlukan agar probabilitas di sisi kiri (9.1) sama dengan <span class="math inline">\(p\)</span> disebut standar kredibilitas penuh.</p>
+<p>Jika jumlah klaim yang diharapkan lebih besar atau sama dengan standar kredibilitas penuh maka kredibilitas penuh dapat diberikan pada data sehingga <span class="math inline">\(Z = 1\)</span> . Biasanya nilai yang diharapkan <span class="math inline">\(μ_N\)</span> tidak diketahui sehingga kredibilitas penuh akan diberikan pada data jika jumlah klaim aktual yang diamati <span class="math inline">\(n\)</span> lebih besar atau sama dengan standar kredibilitas penuh. Nilai <span class="math inline">\(k\)</span> dan <span class="math inline">\(p\)</span> harus dipilih dan aktuaris dapat mengandalkan pengalaman, penilaian, dan faktor-faktor lain dalam membuat pilihan.</p>
+<p>Mengurangkan <span class="math inline">\(μ_N\)</span> dari setiap suku dalam (9.1) dan membaginya dengan deviasi standar <span class="math inline">\(σ_N\)</span> dari <span class="math inline">\(N\)</span> memberikan</p>
+<p><span class="math display">\[\begin{equation}
+\Pr\left[\frac{-k\mu_N}{\sigma_N}\leq \frac{N-\mu_N}{\sigma_N} \leq \frac{k\mu_N}{\sigma_N}\right] \geq p.
+\tag{9.2}
+\end{equation}\]</span></p>
+<p>Dalam kredibilitas fluktuasi terbatas, distribusi normal standar digunakan untuk mendekati distribusi <span class="math inline">\((N-\mu_N)/\sigma_N\)</span> . Jika <span class="math inline">\(N\)</span> adalah jumlah dari banyak klaim dari sekelompok besar risiko yang sama dan klaim-klaim tersebut independen, maka perkiraannya mungkin masuk akal.</p>
+<p>Biarkan <span class="math inline">\(y_p\)</span> adalah nilai yang sedemikian rupa sehingga</p>
+<p><span class="math display">\[\Pr[-y_p\leq \frac{N-\mu_N}{\sigma_N} \leq y_p]=\Phi(y_p)-\Phi(-y_p)=p\]</span></p>
+<p>di mana <span class="math inline">\(Φ()\)</span> adalah <abbr title="Fungsi densitas kumulatif untuk distribusi normal dengan mean 0 dan standar deviasi 1"><strong>fungsi distribusi kumulatif dari normal standar</strong></abbr>. Karena <span class="math inline">\(\Phi(-y_p)=1-\Phi(y_p)\)</span> persamaan tersebut dapat ditulis ulang sebagai <span class="math inline">\(2\Phi(y_p)-1=p\)</span> . Penyelesaian untuk <span class="math inline">\(y_p\)</span> memberikan <span class="math inline">\(y_p=\Phi^{-1}((p+1)/2)\)</span> dimana <span class="math inline">\(\Phi^{-1}( )\)</span> adalah kebalikan dari <span class="math inline">\(Φ()\)</span> .</p>
+<p>Persamaan (9.2) akan terpenuhi jika <span class="math inline">\(k\mu_N/\sigma_N \geq y_p\)</span> dengan mengasumsikan aproksimasi normal. Pertama, kita akan mempertimbangkan ketidaksamaan ini untuk kasus ketika <span class="math inline">\(N\)</span> memiliki distribusi Poisson: <span class="math inline">\(\Pr[N=n] = \lambda^n\textrm{e}^{-\lambda}/n!\)</span> . Karena <span class="math inline">\(\lambda=\mu_N=\sigma_N^2\)</span> untuk Poisson, mengambil akar kuadrat menghasilkan <span class="math inline">\(\mu_N^{1/2}=\sigma_N\)</span> . Jadi, <span class="math inline">\(k\mu_N/\mu_N^{1/2} \geq y_p\)</span> yang setara dengan <span class="math inline">\(\mu_N \geq (y_p/k)^2\)</span> . Mari kita definisikan <span class="math inline">\(\lambda_{kp}\)</span> sebagai nilai dari <span class="math inline">\(μ_N\)</span> yang mana kesetaraan berlaku. Maka standar kredibilitas penuh untuk distribusi Poisson adalah</p>
+<p><span class="math display">\[\begin{equation}
+\lambda_{kp} = \left(\frac{y_p}{k}\right)^2 \textrm{with } y_p=\Phi^{-1}((p+1)/2).
+\tag{9.3}
+\end{equation}\]</span></p>
+<p>Jika jumlah klaim yang diharapkan <span class="math inline">\(μ_N\)</span> lebih besar atau sama dengan <span class="math inline">\(\lambda_{kp}\)</span> maka persamaan (9.1) diasumsikan berlaku dan kredibilitas penuh dapat diberikan pada data. Sebagaimana disebutkan sebelumnya, karena <span class="math inline">\(μ_N\)</span> biasanya tidak diketahui, kredibilitas penuh diberikan jika jumlah klaim yang diamati <span class="math inline">\(n\)</span> memenuhi <span class="math inline">\(n≥\lambda_{kp}\)</span>.</p>
+<p><strong>Contoh 9.2.1</strong>. Standar kredibilitas penuh ditetapkan sehingga jumlah klaim yang teramati berada dalam kisaran 5% dari nilai yang diharapkan dengan probabilitas <span class="math inline">\(p = 0.95\)</span> . Jika jumlah klaim berdistribusi Poisson, tentukan jumlah klaim yang dibutuhkan untuk kredibilitas penuh.</p>
+<p><strong>Solusi</strong>. Mengacu pada tabel distribusi normal standar,
+<span class="math inline">\(y_p=\Phi^{-1}((p+1)/2)=\Phi^{-1}((0.95+1)/2)\)</span><span class="math inline">\(\Phi^{-1}(0.975)=1.960\)</span>. Dengan menggunakan nilai ini dan <span class="math inline">\(k=.05\)</span> lalu <span class="math inline">\(\lambda_{kp} = (y_p/k)^{2}=(1.960/0.05)^{2}=1,536.64\)</span>. Setelah dibulatkan, standar kredibilitas penuhnya adalah 1.537.</p>
+</div>
+<div id="kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni<a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kerugian agregat adalah total dari semua jumlah kerugian untuk risiko atau kelompok risiko. Membiarkan <span class="math inline">\(S\)</span> mewakili kerugian agregat</p>
+<p><span class="math display">\[S=X_1+X_2+\cdots+X_N.\]</span></p>
+<p>Variabel acak <span class="math inline">\(N\)</span> mewakili jumlah kerugian dan variabel acak <span class="math inline">\(X_1, X_2,\ldots,X_N\)</span> adalah jumlah kerugian individu. Pada bagian ini diasumsikan bahwa <span class="math inline">\(N\)</span> tidak bergantung pada jumlah kerugian dan bahwa <span class="math inline">\(X_1, X_2,\ldots,X_N\)</span> adalah Independen dan berdistribusi identik.</p>
+<p>Rata-rata dan varians dari <span class="math inline">\(S\)</span> adalah</p>
+<p><span class="math display">\[\mu_S=\mathrm{E}(S)=\mathrm{E}(N)\mathrm{E}(X)=\mu_N\mu_X\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\sigma^{2}_S=\mathrm{Var}(S)=\mathrm{E}(N)\mathrm{Var}(X)+[\mathrm{E}(X)]^{2}\mathrm{Var}(N)=\mu_N\sigma^{2}_X+\mu^{2}_X\sigma^{2}_N ,\]</span></p>
+<p>dimana <span class="math inline">\(X\)</span> adalah jumlah kerugian tunggal. Lihat diskusi tentang model risiko kolektif</p>
+<p>Kerugian yang teramati <span class="math inline">\(S\)</span> akan digunakan untuk mengestimasi kerugian yang diharapkan <span class="math inline">\(μ_S = E(S)\)</span> . Seperti halnya model frekuensi pada bagian sebelumnya, kerugian yang teramati harus mendekati kerugian yang diharapkan seperti yang dikuantifikasikan dalam persamaan</p>
+<p><span class="math display">\[\Pr[(1-k)\mu_S\leq S \leq(1+k)\mu_S] \geq p.\]</span></p>
+<p>Setelah mengurangi rata-rata dan membaginya dengan deviasi standar,</p>
+<p><span class="math display">\[\Pr\left[\frac{-k\mu_S}{\sigma_S}\leq (S-\mu_S)/\sigma_S \leq \frac{k\mu_S}{\sigma_S}\right] \geq p .\]</span></p>
+<p>Seperti yang dilakukan pada bagian sebelumnya, diasumsikan bahwa distribusi <span class="math inline">\((S-\mu_S)/\sigma_S\)</span> adalah standar normal dan <span class="math inline">\(k\mu_S/\sigma_S=y_p=\Phi^{-1}((p+1)/2)\)</span>. Persamaan ini dapat ditulis ulang sebagai <span class="math inline">\(\mu_S^2=(y_p/k)^2\sigma_S^2\)</span>. Dengan menggunakan rumus sebelumnya untuk <span class="math inline">\(μ_S\)</span> dan <span class="math inline">\(\sigma_{S}^2\)</span>, maka didapatkan <span class="math inline">\((\mu_N\mu_X)^2=(y_p/k)^2(\mu_N\sigma^{2}_X+\mu^{2}_X\sigma^{2}_N)\)</span>. Dengan membagi kedua sisi dengan <span class="math inline">\(\mu_N\mu_X^2\)</span> dan mengurutkan sisi kanan, maka didapatkan standar kredibilitas penuh <span class="math inline">\(n_S\)</span> untuk kerugian agregat.</p>
+<p><span class="math display">\[\begin{equation}
+n_S=\left(\frac{y_p}{k}\right)^2\left[\left(\frac{\sigma_N^2}{\mu_N}\right)+\left(\frac{\sigma_X}{\mu_X}\right)^2\right]=\lambda_{kp}\left[\left(\frac{\sigma_N^2}{\mu_N}\right)+\left(\frac{\sigma_X}{\mu_X}\right)^2\right].
+\tag{9.5}
+\end{equation}\]</span></p>
+<p><strong>Contoh 9.2.5</strong>. Jumlah klaim memiliki distribusi Poisson. Jumlah kerugian individu didistribusikan secara independen dan identik dengan distribusi Pareto <span class="math inline">\(F(x)=1-[\theta/(x+\theta)]^{\alpha}\)</span>. Jumlah klaim dan jumlah kerugian adalah independen. Jika kerugian agregat yang diamati harus berada dalam 5% dari nilai yang diharapkan dengan probabilitas <span class="math inline">\(p=0.95\)</span>, berapa banyak kerugian yang diperlukan untuk kredibilitas penuh?</p>
+<p><strong>Solusi</strong>. Karena jumlah klaim berdistribusi Poisson, maka <span class="math inline">\((\sigma_N^2/\mu_N)=1\)</span>. Rata-rata dari distribusi Pareto adalah <span class="math inline">\(\mu_X=\theta/(\alpha-1)\)</span> dan variansinya adalah <span class="math inline">\(\sigma_X^2=\theta^{2}\alpha/[(\alpha-1)^{2}(\alpha-2)]\)</span>, sehingga <span class="math inline">\((\sigma_X/\mu_X)^2=\alpha/(\alpha-2)\)</span>. Menggabungkan istilah frekuensi dan severity memberikan <span class="math inline">\([(\sigma_N^2/\mu_N)+(\sigma_X/\mu_X)^2]=2(\alpha-1)/(\alpha-2)\)</span>. Dari tabel distribusi normal standar, didapatkan <span class="math inline">\(y_p=\Phi^{-1}((0.95+1)/2)=1.960\)</span>. Standar kredibilitas penuh adalah <span class="math inline">\(n_S=(1.96/0.05)^{2}[2(\alpha-1)/(\alpha-2)]=3,073.28(\alpha-1)/(\alpha-2)\)</span>. Jika <span class="math inline">\(α=3\)</span> maka <span class="math inline">\(n_S=6,146.56\)</span> untuk standar kredibilitas penuh sebesar 6.147. Perlu diperhatikan bahwa jumlah klaim yang jauh lebih banyak diperlukan untuk kredibilitas penuh untuk kerugian agregat dibandingkan dengan frekuensi saja.</p>
+</div>
+<div id="kredibilitas-penuh-untuk-tingkat-keparahan" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Kredibilitas Penuh untuk Tingkat Keparahan<a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Misalkan X adalah variabel acak yang merepresentasikan besarnya satu klaim. Severity klaim adalah <span class="math inline">\(\mu_X=\mathrm{E}(X)\)</span>. Anggaplah <span class="math inline">\({X_1,X_2, \ldots, X_n}\)</span> adalah sampel acak dari n klaim yang akan digunakan untuk mengestimasi severity klaim <span class="math inline">\(μ_X\)</span>. Klaim-klaim tersebut diasumsikan iid. Nilai rata-rata dari sampel adalah</p>
+<p><span class="math display">\[\bar{X}=\frac{1}{n}\left(X_1+X_2+\cdots+X_n\right).\]</span></p>
+<p>Seberapa besar nilai n yang diperlukan untuk mendapatkan estimasi yang baik? Perhatikan bahwa n bukanlah variabel acak sedangkan di model kerugian agregat ia adalah variabel acak.</p>
+<p>Pada Bagian 9.2.1, akurasi sebuah estimator untuk frekuensi didefinisikan dengan menentukan agar jumlah klaim berada di dalam interval tertentu sekitar rata-rata jumlah klaim dengan probabilitas tertentu. Untuk severity, persyaratan ini adalah</p>
+<p><span class="math display">\[\Pr[(1-k)\mu_X\leq \bar{X} \leq(1+k)\mu_X ]\geq p ,\]</span></p>
+<p>dimana <span class="math inline">\(k\)</span> dan <span class="math inline">\(p\)</span> harus ditentukan. Dengan mengikuti langkah-langkah pada Bagian 9.2.1, rata-rata severity klaim <span class="math inline">\(μ_X\)</span> dikurangi dari setiap termin dan simpangan baku estimator severity klaim <span class="math inline">\(\sigma_{\bar{X}}\)</span> dibagi ke dalam setiap termin sehingga diperoleh</p>
+<p><span class="math display">\[\Pr\left[\frac{-k~\mu_X}{\sigma_{\bar{X}}}\leq (\bar{X}-\mu_X)/\sigma_{\bar{X}} \leq \frac{k~\mu_X}{\sigma_{\bar{X}}}\right] \geq p .\]</span></p>
+<p>Seperti pada bagian sebelumnya, diasumsikan bahwa <span class="math inline">\((\bar{X}-\mu_X)/\sigma_{\bar{X}}\)</span> secara kasar terdistribusi normal dan persamaan sebelumnya terpenuhi jika <span class="math inline">\(k\mu_X/\sigma_{\bar{X}}\geq y_p\)</span> dengan <span class="math inline">\(y_p=\Phi^{-1}((p+1)/2)\)</span>. Karena <span class="math inline">\(\bar{X}\)</span> adalah rata-rata klaim individual <span class="math inline">\(X_1, X_2,\dots, X_n\)</span>, simpangan baku X¯ sama dengan simpangan baku klaim individual dibagi <span class="math inline">\(\sigma_{\bar{X}}=\sigma_X/\sqrt{n}\)</span>. Sehingga, <span class="math inline">\(k\mu_X/(\sigma_X/\sqrt{n})\geq y_p\)</span> dan dengan sedikit aljabar, persamaan ini dapat dituliskan ulang sebagai <span class="math inline">\(n \geq (y_p/k)^2(\sigma_X/\mu_X)^2\)</span>. Standar kredibilitas penuh untuk keparahan adalah</p>
+<p><span class="math display">\[\begin{equation}
+n_X=\left(\frac{y_p}{k}\right)^2\left(\frac{\sigma_X}{\mu_X}\right)^2=\lambda_{kp}\left(\frac{\sigma_X}{\mu_X}\right)^2.
+\tag{9.6}
+\end{equation}\]</span></p>
+<p>Perhatikan bahwa istilah <span class="math inline">\(\sigma_X/\mu_X\)</span> adalah koefisien variasi untuk klaim individual. Meskipun <span class="math inline">\(\lambda_{kp}\)</span> adalah standar kredibilitas penuh untuk frekuensi dengan diasumsikan distribusi Poisson, tidak ada asumsi tentang distribusi untuk jumlah klaim.</p>
+<p><strong>Contoh 9.2.6</strong>. Besaran klaim individual didistribusikan secara independen dan identik dengan distribusi Pareto Tipe <span class="math inline">\(F(x)=1-[\theta/(x+\theta)]^{\alpha}\)</span>. Berapa banyak klaim yang dibutuhkan agar rata-rata keparahan klaim yang diamati berada dalam 5% dari nilai harapan dengan probabilitas <span class="math inline">\(p=0.95\)</span>?</p>
+<p><strong>Solusi</strong>. Rata-rata Pareto adalah <span class="math inline">\(\mu_X=\theta/(\alpha-1)\)</span> dan variansnya adalah <span class="math inline">\(\sigma_X^2=\theta^{2}\alpha/[(\alpha-1)^{2}(\alpha-2)]\)</span> sehingga <span class="math inline">\((\sigma_X/\mu_X)^2=\alpha/(\alpha-2)\)</span>. Dari tabel distribusi normal standar, kita dapat menggunakan <span class="math inline">\(y_p=\Phi^{-1}((0.95+1)/2)=1.960\)</span>. Standar kredibilitas penuh adalah <span class="math inline">\(n_X=(1.96/0.05)^{2}[\alpha/(\alpha-2)]=1,536.64\alpha/(\alpha-2)\)</span>. Misalkan <span class="math inline">\(α=3\)</span> maka <span class="math inline">\(n_X=4,609.92\)</span> untuk standar kredibilitas penuh sebesar 4.610.</p>
+</div>
+<div id="kredibilitas-parsial" class="section level3 hasAnchor" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Kredibilitas parsial<a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada bagian sebelumnya, standar kredibilitas penuh dihitung untuk memperkirakan frekuensi (<span class="math inline">\(n_f\)</span>), premi murni (<span class="math inline">\(n_{PP}\)</span>), dan tingkat keparahan (<span class="math inline">\(n_X\)</span>) - pada bagian ini, standar kredibilitas penuh ini akan ditandai dengan <span class="math inline">\(n_0\)</span>. Dalam setiap kasus, standar kredibilitas penuh adalah jumlah klaim yang diharapkan untuk mencapai tingkat akurasi tertentu saat menggunakan data empiris untuk memperkirakan nilai yang diharapkan. Jika jumlah klaim yang diamati lebih besar atau sama dengan standar kredibilitas penuh, maka bobot kredibilitas penuh <span class="math inline">\(Z = 1\)</span> diberikan pada data.</p>
+<p>Dalam kredibilitas fluktuasi terbatas, bobot kredibilitas <span class="math inline">\(Z\)</span> yang ditugaskan pada data adalah:</p>
+<p><span class="math display">\[Z=
+\left\{
+\begin{array}{ll}
+\sqrt{n /n_{0}} &amp;\textrm{if }   n &lt; n_{0} \\
+1 &amp; \textrm{if }   n \ge n_{0} ,
+\end{array}
+\right.\]</span></p>
+<p>Di mana <span class="math inline">\(n_0\)</span> merupakan standar kredibilitas penuh. Jumlah klaim <span class="math inline">\(n\)</span> merupakan jumlah klaim untuk data yang digunakan untuk memperkirakan frekuensi yang diharapkan, tingkat keparahan, atau premi murni.</p>
+<p><strong>Contoh 9.2.7</strong>. Jumlah klaim memiliki distribusi Poisson. Jumlah kerugian individu didistribusikan secara independen dan identik dengan distribusi Pareto Tipe II <span class="math inline">\(F(x)=1-[\theta/(x+\theta)]^{\alpha}\)</span>. Dalam hal ini, <span class="math inline">\(α=3\)</span>. Jumlah klaim dan jumlah kerugian adalah independen. Standar kredibilitas penuh adalah bahwa premi murni yang diamati harus berada dalam 5% dari nilai yang diharapkan dengan probabilitas <span class="math inline">\(p=0.95\)</span>. Berapa kredibilitas <span class="math inline">\(Z\)</span> yang diberikan untuk premi murni yang dihitung dari 1.000 klaim?</p>
+<p><strong>Solusi</strong>. Karena jumlah klaim adalah Poisson,
+<span class="math display">\[\frac{\mathrm{E}(X^2)}{[\mathrm{E}~(X)]^2}
+=\frac{\sigma_N^2}{\mu_N}+\left(\frac{\sigma_X}{\mu_X}\right)^2.\]</span>
+Rata-rata dari Pareto adalah <span class="math inline">\(μX=θ/(α−1)\)</span> dan momen kedua adalah <span class="math inline">\(\mathrm{E}(X^2)=2\theta^{2}/[(\alpha-1)(\alpha-2)]\)</span> sehingga <span class="math inline">\(\mathrm{E}(X^2)/[\mathrm{E}~(X)]^2=2(\alpha-1)/(\alpha-2)\)</span>. Dari tabel distribusi normal standar, <span class="math inline">\(y_p=\Phi^{-1}((0.95+1)/2)=1.960\)</span>. Standar kredibilitas penuh adalah
+<span class="math display">\[n_{PP}=(1.96/0.05)^{2}[2(\alpha-1)/(\alpha-2)]=3,073.28(\alpha-1)/(\alpha-2)\]</span> dan jika <span class="math inline">\(α=3\)</span>, maka <span class="math inline">\(n_0=n_{PP}=6,146.56\)</span> atau 6.147 jika dibulatkan ke atas. Kredibilitas yang diberikan untuk 1.000 klaim adalah <span class="math inline">\(Z=(1,000/6,147)^{1/2}=0.40\)</span>.</p>
+<p>Kredibilitas fluktuasi terbatas menggunakan rumus <span class="math inline">\(Z=\sqrt{n/n_0}\)</span> untuk membatasi fluktuasi dalam perkiraan yang diboboti kredibilitas untuk sesuai dengan fluktuasi yang diizinkan untuk data dengan jumlah klaim yang diharapkan pada standar kredibilitas penuh. Varians atau simpangan baku digunakan sebagai ukuran fluktuasi. Selanjutnya, kami akan menunjukkan contoh untuk menjelaskan mengapa rumus akar kuadrat digunakan.</p>
+<p>Misalkan tingkat keparahan klaim rata-rata sedang diestimasi dari sampel ukuran <span class="math inline">\(n\)</span> yang lebih kecil dari standar kredibilitas penuh <span class="math inline">\(n_0=n_X\)</span>. Dengan menerapkan teori kredibilitas, perkiraan <span class="math inline">\(\hat{\mu}_X\)</span> akan menjadi:</p>
+<p><span class="math display">\[\hat{\mu}_X=Z\bar{X}+(1-Z)M_X ,\]</span></p>
+<p>dengan <span class="math inline">\(\bar{X}=(X_1+X_2+\cdots+X_n)/n\)</span> dan variabel acak iid <span class="math inline">\(X_i\)</span> yang mewakili ukuran klaim individu. Kredibilitas komplementer diterapkan pada <span class="math inline">\(M_X\)</span> yang bisa menjadi perkiraan tingkat keparahan rata-rata tahun lalu yang disesuaikan dengan inflasi, rata-rata tingkat keparahan untuk kumpulan risiko yang jauh lebih besar, atau kuantitas relevan lainnya yang dipilih oleh aktuaris. Diasumsikan bahwa varians dari <span class="math inline">\(M_X\)</span> adalah nol atau bisa diabaikan. Dengan asumsi ini,</p>
+<p><span class="math display">\[\mathrm{Var}(\hat{\mu}_X)=\mathrm{Var}(Z\bar{X})=Z^2\mathrm{Var}(\bar{X})=\frac{n}{n_0}\mathrm{Var}(\bar{X}).\]</span></p>
+<p>Karena <span class="math inline">\(\bar{X}=(X_1+X_2+\cdots+X_n)/n\)</span> maka berlaku bahwa <span class="math inline">\(\mathrm{Var}(\bar{X})=\mathrm{Var}(X_i)/n\)</span> di mana variabel acak <span class="math inline">\(X_i\)</span> adalah satu klaim. Oleh karena itu,</p>
+<p><span class="math display">\[\mathrm{Var}(\hat{\mu}_X)=\frac{n}{n_0}\mathrm{Var}(\bar{X})=\frac{n}{n_0}\frac{\mathrm{Var}(X_i)}{n}=\frac{\mathrm{Var}(X_i)}{n_0}.\]</span></p>
+<p>Term terakhir adalah varians tepat dari rata-rata sampel <span class="math inline">\(\bar{X}\)</span> ketika ukuran sampel sama dengan standar kredibilitas penuh <span class="math inline">\(n_0=n_X\)</span>.</p>
+</div>
+</div>
+<div id="bühlmann-credibility" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Bühlmann Credibility<a href="experience-rating-using-credibility-theory.html#bühlmann-credibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p>Dalam bagian ini, kita akan mempelajari:</p>
+<ul>
+<li>Menghitung perkiraan yang ditimbang kredibilitas untuk kerugian yang diharapkan untuk suatu risiko atau kelompok risiko.</li>
+<li>Menentukan kredibilitas <span class="math inline">\(Z\)</span> yang diberikan kepada pengamatan.</li>
+<li>Menghitung nilai yang diperlukan dalam kredibilitas Bühlmann, termasuk Nilai Harapan Variansi Proses <span class="math inline">\(( EPV )\)</span>, Variansi Rata-rata Hipotetis <span class="math inline">\(( VHM )\)</span> dan rata-rata kolektif <span class="math inline">\(μ\)</span> .</li>
+<li>Mengenali situasi di mana model Bühlmann sesuai.</li>
+</ul>
+<hr />
+<p>Rencana peringkat klasifikasi mengelompokkan pemegang polis ke dalam kelas berdasarkan karakteristik risiko. Meskipun pemegang polis dalam satu kelas memiliki kesamaan, mereka tidak identik dan kerugian yang diharapkan tidak akan sama persis. Rencana peringkat pengalaman dapat melengkapi rencana peringkat kelas dengan menimbang kredibilitas pengalaman kerugian individu pemegang polis dengan tarif kelas untuk menghasilkan tarif yang lebih akurat bagi pemegang polis.</p>
+<p>Dalam penyajian kredibilitas Bühlmann, disarankan untuk menetapkan parameter risiko <span class="math inline">\(θ\)</span> untuk setiap pemegang polis. Kerugian <span class="math inline">\(X\)</span> untuk pemegang polis akan memiliki fungsi distribusi yang umum <span class="math inline">\(Fθ(x)\)</span> dengan rata-rata <span class="math inline">\(μ(θ)=E(X|θ)\)</span> dan varians <span class="math inline">\(σ2(θ)=Var(X|θ)\)</span>. Kerugian <span class="math inline">\(X\)</span> dapat mewakili premi murni, kerugian agregat, jumlah klaim, keparahan klaim, atau ukuran kerugian lainnya untuk periode waktu, seringkali selama satu tahun. Parameter risiko <span class="math inline">\(θ\)</span> dapat bersifat kontinu atau diskrit dan dapat multivariat tergantung pada model yang digunakan.</p>
+<p>Jika seorang pemegang polis dengan parameter risiko <span class="math inline">\(θ\)</span> mengalami kerugian <span class="math inline">\(X1,...,Xn\)</span> selama <span class="math inline">\(n\)</span> periode waktu, maka tujuannya adalah untuk menemukan <span class="math inline">\(E(μ(θ)|X1,...,Xn)\)</span>, yaitu ekspektasi bersyarat dari <span class="math inline">\(μ(θ)\)</span> yang diberikan <span class="math inline">\(X1,...,Xn\)</span>. Perkiraan yang ditimbang kredibilitas Bühlmann untuk <span class="math inline">\(E(μ(θ)|X1,...,Xn)\)</span> untuk pemegang polis adalah sebagai berikut:</p>
+<p><span class="math display">\[\begin{equation}\hat{\mu}(\theta)=Z\bar{X}+(1-Z)\mu \tag{9.7}\end{equation}\]</span></p>
+<p>Dengan :</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\theta&amp;=&amp;\textrm{a risk parameter that identifies a policyholder&#39;s risk level}\\
+\hat{\mu}(\theta)&amp;=&amp;\textrm{estimated expected loss for a policyholder with parameter }\theta\\
+&amp; &amp; \textrm{and loss experience } \bar{X}\\
+\bar{X}&amp;=&amp;(X_1+\cdots+X_n)/n \textrm{ is the average of $n$ observations of the policyholder } \\
+Z&amp;=&amp;\textrm{credibility assigned to $n$ observations } \\
+\mu&amp;=&amp;\textrm{the expected loss for a randomly chosen policyholder in the class.}\\
+\end{eqnarray*}\]</span></p>
+<p>Untuk pemegang polis yang dipilih, asumsi variabel acak <span class="math inline">\(Xj\)</span> dianggap iid untuk <span class="math inline">\(j=1,...,n\)</span> karena diasumsi8kan bahwa paparan pemegang polis terhadap kerugian tidak berubah dari waktu ke waktu. Kuantitas <span class="math inline">\(\bar{X}\)</span> adalah rata-rata dari <span class="math inline">\(n\)</span> pengamatan dan <span class="math inline">\(E(\bar{X}|θ)=E(Xj|θ)=μ(θ)\)</span>.</p>
+<p>Jika seorang pemegang polis dipilih secara acak dari kelas dan tidak ada informasi kerugian tentang risiko, maka kerugian yang diharapkan adalah <span class="math inline">\(μ=E(μ(θ))\)</span> di mana harapan diambil dari semua <span class="math inline">\(θ\)</span> dalam kelas. Dalam situasi ini, <span class="math inline">\(Z=0\)</span> dan kerugian yang diharapkan adalah <span class="math inline">\(μ^(θ)=μ\)</span> untuk risiko tersebut. Kuantitas <span class="math inline">\(μ\)</span> juga dapat ditulis sebagai <span class="math inline">\(μ=E(Xj)\)</span> atau <span class="math inline">\(μ=E(\bar{X})\)</span> dan sering disebut sebagai mean keseluruhan atau collective mean. Perhatikan bahwa <span class="math inline">\(E(Xj)\)</span> dievaluasi dengan hukum total ekspektasi: <span class="math inline">\(E(Xj)=E(E[Xj|θ])\)</span>.</p>
+<p><strong>Example 9.3.1</strong> Jumlah klaim <span class="math inline">\(X\)</span> untuk seorang tertanggung dalam suatu kelas memiliki distribusi Poisson dengan mean <span class="math inline">\(θ&gt;0\)</span>. Parameter risiko <span class="math inline">\(θ\)</span> didistribusikan secara eksponensial di dalam kelas dengan pdf <span class="math inline">\(f(θ)=e−θ\)</span>. Berapakah jumlah klaim yang diharapkan untuk seorang tertanggung yang dipilih secara acak dari kelas tersebut?</p>
+<p><strong>Solusi</strong>
+Variabel acak <span class="math inline">\(X\)</span> memiliki distribusi Poisson dengan parameter <span class="math inline">\(θ\)</span> dan <span class="math inline">\(E(X|θ)=θ\)</span>. Jumlah klaim yang diharapkan untuk seorang tertanggung yang dipilih secara acak adalah <span class="math inline">\(μ=E(μ(θ))=E(E(X|θ))=E(θ)=∫∞0θe−θdθ=1\)</span>.</p>
+<p>Pada contoh di atas, parameter risiko <span class="math inline">\(θ\)</span> adalah variabel acak dengan distribusi eksponensial. Pada contoh berikutnya, terdapat tiga jenis risiko dan parameter risiko memiliki distribusi diskrit.</p>
+<p><strong>Example 9.3.2</strong> Untuk setiap risiko (pemegang polis) dalam populasi, jumlah kerugian <span class="math inline">\(N\)</span> dalam setahun memiliki distribusi Poisson dengan parameter <span class="math inline">\(λ\)</span>. Jumlah kerugian individu <span class="math inline">\(Xi\)</span> untuk sebuah risiko independen dari <span class="math inline">\(N\)</span> dan identik dan memiliki distribusi Pareto Tipe II dengan <span class="math inline">\(F(x) = 1 - [θ / (x + θ)]α\)</span>. Ada tiga jenis risiko dalam populasi sebagai berikut:</p>
+<p><span class="math display">\[\small{
+\begin{array}{|c|c|c|c|}
+\hline
+\text{Risk } &amp; \text{Percentage} &amp; \text{Poisson} &amp; \text{Pareto} \\
+\text{Type} &amp; \text{of Population} &amp; \text{Parameter} &amp; \text{Parameters} \\
+\hline
+A &amp; 50\% &amp; \lambda=0.5 &amp; \theta=1000, \alpha=2.0 \\
+B &amp; 30\% &amp; \lambda=1.0 &amp; \theta=1500, \alpha=2.0 \\  
+C &amp; 20\% &amp; \lambda=2.0 &amp; \theta=2000, \alpha=2.0 \\              
+\hline
+\end{array}
+}\]</span></p>
+<p>Jika sebuah risiko dipilih secara acak dari populasi tersebut, berapa kerugian total yang diharapkan dalam setahun?</p>
+<p><strong>Solusi</strong>
+Untuk suatu risiko, jumlah klaim yang diharapkan adalah <span class="math inline">\(E(N|λ) = λ\)</span>. Nilai harapan dari suatu variabel acak yang didistribusikan Pareto adalah <span class="math inline">\(E(X|θ,α) = θ/(α-1)\)</span>. Nilai harapan dari variabel acak kehilangan agregat <span class="math inline">\(S = X1 +⋯+XN\)</span> untuk risiko dengan parameter <span class="math inline">\(λ\)</span>, <span class="math inline">\(α\)</span>, dan <span class="math inline">\(θ\)</span> adalah <span class="math inline">\(E(S) = E(N)E(X) = λθ/(α-1)\)</span>. Kerugian agregat yang diharapkan untuk suatu risiko jenis A adalah <span class="math inline">\(E(SA) = (0,5)(1000)/(2-1) = 500\)</span>. Kerugian agregat yang diharapkan untuk suatu risiko yang dipilih secara acak dari populasi adalah <span class="math inline">\(E(S) = 0,5[(0,5)(1000)]+0,3[(1,0)(1500)]+0,2[(2,0)(2000)] = 1500\)</span>.</p>
+<hr />
+<p>Berapa parameter risiko untuk suatu risiko (pemegang polis) pada contoh sebelumnya? Dapat dikatakan bahwa parameter risiko memiliki tiga komponen <span class="math inline">\((λ, θ, α)\)</span> dengan nilai mungkin (0,5, 1000, 2,0), (1,0, 1500, 2,0), dan (2,0, 2000, 2,0) tergantung pada jenis risiko.</p>
+<p>Perlu diperhatikan bahwa pada kedua contoh tersebut, parameter risiko adalah kuantitas acak dengan distribusi probabilitasnya sendiri. Kita tidak tahu nilai parameter risiko untuk risiko yang dipilih secara acak.</p>
+<p>Meskipun formula (9.7) diperkenalkan dengan menggunakan rating pengalaman sebagai contoh, model kredibilitas Bühlmann memiliki aplikasi yang lebih luas. Misalkan ada rencana rating dengan beberapa kelas. Formula kredibilitas (9.7) dapat digunakan untuk menentukan tarif kelas individu. Rata-rata keseluruhan <span class="math inline">\(μ\)</span> akan menjadi rata-rata kerugian untuk semua kelas yang digabungkan, <span class="math inline">\(\bar{X}\)</span> akan menjadi pengalaman untuk kelas individu, dan <span class="math inline">\(μ^(θ)\)</span> akan menjadi perkiraan kerugian untuk kelas tersebut.</p>
+<div id="credibility-z-epv-and-vhm" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Credibility Z, EPV, and VHM<a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ketika menghitung estimasi kredibilitas <span class="math inline">\(μ^(θ)=Z\bar{X}+(1−Z)μ\)</span>, berapa bobot <span class="math inline">\(Z\)</span> yang harus diberikan pada pengalaman <span class="math inline">\(\bar{X}\)</span> dan berapa bobot <span class="math inline">\((1−Z)\)</span> pada rata-rata keseluruhan <span class="math inline">\(μ\)</span>? Dalam kredibilitas Bühlmann, terdapat tiga faktor yang perlu dipertimbangkan:</p>
+<ol style="list-style-type: decimal">
+<li>Berapa variasi dalam satu pengamatan <span class="math inline">\(Xj\)</span> untuk risiko yang dipilih? Dengan <span class="math inline">\(\bar{X} = (X1 + ⋯ + Xn) / n\)</span> dan dengan asumsi bahwa pengamatan adalah iid kondisional pada <span class="math inline">\(θ\)</span>, maka mengikuti bahwa <span class="math inline">\(Var(\bar{X}|θ) = Var(Xj|θ) / n\)</span>. Untuk <span class="math inline">\(Var(\bar{X}|θ)\)</span> yang lebih besar, bobot kredibilitas <span class="math inline">\(Z\)</span> yang lebih kecil harus diberikan pada pengalaman <span class="math inline">\(\bar{X}\)</span>. Nilai Harapan dari Varians Proses, disingkat <span class="math inline">\(EPV\)</span>, adalah nilai harapan dari <span class="math inline">\(Var(Xj|θ)\)</span> di seluruh risiko:</li>
+</ol>
+<p><span class="math inline">\(EPV = \mathrm{E}(\mathrm{Var}(X_j|\theta)).\)</span></p>
+<p>karena <span class="math inline">\(Var(\bar{X}|θ) = Var(Xj|θ)/n)\)</span> maka berlaku bahwa <span class="math inline">\(E(Var(\bar{X}|θ))=EPV/n\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Seberapa homogen populasi risiko yang pengalaman kerugiannya digabungkan untuk menghitung rata-rata keseluruhan <span class="math inline">\(μ\)</span>? Jika semua risiko memiliki potensi kerugian yang serupa, maka bobot yang lebih besar <span class="math inline">\((1-Z)\)</span> diberikan pada rata-rata keseluruhan <span class="math inline">\(μ\)</span> karena <span class="math inline">\(μ\)</span> adalah rata-rata untuk sekelompok risiko yang serupa dan rata-rata <span class="math inline">\(μ(θ)\)</span> tidak terlalu jauh. Homogenitas atau heterogenitas populasi diukur dengan Variance of the Hypothetical Means dengan singkatan <span class="math inline">\(VHM\)</span>:</li>
+</ol>
+<p><span class="math display">\[VHM=\mathrm{Var}(\mathrm{E}(X_j|\theta))=\mathrm{Var}(\mathrm{E}(\bar{X}|\theta)).\]</span></p>
+<p>Perhatikan bahwa kita menggunakan <span class="math inline">\(E(\bar{X}|θ)=E(Xj|θ)\)</span> untuk kesamaan kedua.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Berapa banyak pengamatan n yang digunakan untuk menghitung <span class="math inline">\(\bar{X}\)</span>? Sampel yang lebih besar akan menghasilkan <span class="math inline">\(Z\)</span> yang lebih besar.</li>
+</ol>
+<p><strong>Example 9.3.3</strong> Jumlah klaim <span class="math inline">\(N\)</span> dalam setahun untuk suatu risiko dalam populasi memiliki distribusi Poisson dengan mean <span class="math inline">\(λ&gt;0\)</span>. Parameter risiko <span class="math inline">\(λ\)</span> didistribusikan secara seragam di selang (0,2). Hitung <span class="math inline">\(EPV\)</span> dan <span class="math inline">\(VHM\)</span> untuk populasi.</p>
+<p><strong>Solusi</strong></p>
+<p>Variabel acak N berdistribusi Poisson dengan parameter λ sehingga Var(N|λ)=λ . Nilai harapan dari varian proses adalah EPV=E(Var(N|λ)) = E(λ)=∫20λ12dλ=1 . Varians dari rata-rata hipotetis adalah <span class="math inline">\(VHM=Var(E(N|λ)) = Var(λ)=E(λ^2)−(E(λ))^2 = \int_{0}^{2}\lambda^2 \frac{1}{2} d\lambda-(1)^2=\frac{1}{3}\)</span></p>
+<p>Formula kepercayaan Bühlmann meliputi nilai untuk <span class="math inline">\(n\)</span>, <span class="math inline">\(EPV\)</span>, dan <span class="math inline">\(VHM\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+Z=\frac{n}{n+K} \quad , \quad K =\frac{EPV}{VHM}.
+\tag{9.8}
+\end{equation}\]</span></p>
+<p>Jika <span class="math inline">\(VHM\)</span> meningkat maka <span class="math inline">\(Z\)</span> juga meningkat. Jika <span class="math inline">\(EPV\)</span> meningkat maka <span class="math inline">\(Z\)</span> menjadi lebih kecil. Berbeda dengan kredibilitas fluktuasi terbatas di mana <span class="math inline">\(Z=1\)</span> ketika jumlah klaim yang diharapkan lebih besar dari standar kredibilitas penuh, <span class="math inline">\(Z\)</span> dapat mendekati tetapi tidak sama dengan 1 ketika jumlah pengamatan n mendekati tak hingga.</p>
+<p>Jika Anda mengalikan pembilang dan penyebut rumus <span class="math inline">\(Z\)</span> dengan <span class="math inline">\(( VHM/n )\)</span>, maka <span class="math inline">\(Z\)</span> dapat ditulis kembali sebagai:</p>
+<p><span class="math display">\[Z=\frac{VHM}{VHM+(EPV/n)} .\]</span></p>
+<p>Jumlah pengamatan <span class="math inline">\(n\)</span> tertangkap dalam istilah <span class="math inline">\((EPV/n)\)</span>. Seperti yang ditunjukkan di bullet (1) di awal bagian, <span class="math inline">\(E(Var(\bar{X}|θ)) = EPV/n\)</span>. Seiring dengan bertambahnya jumlah pengamatan, varians yang diharapkan dari <span class="math inline">\(\bar{X}\)</span> menjadi lebih kecil dan kredibilitas <span class="math inline">\(Z\)</span> meningkat sehingga lebih banyak bobot diberikan pada <span class="math inline">\(\bar{X}\)</span> dalam perkiraan yang dibobotkan kredibilitas <span class="math inline">\(μ^(θ)\)</span>.</p>
+</div>
+</div>
+<div id="bühlmann-straub-credibility" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Bühlmann-Straub Credibility<a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p>Di bagian ini, Anda akan belajar cara:</p>
+<ul>
+<li>Menghitung perkiraan bobot kredibilitas untuk kerugian yang diharapkan untuk risiko atau kelompok risiko menggunakan model Bühlmann-Straub.</li>
+<li>Menentukan kredibilitas <span class="math inline">\(Z\)</span> yang diberikan kepada pengamatan.</li>
+<li>Menghitung nilai yang dibutuhkan termasuk Expected Value of the Process Variance <span class="math inline">\((EPV)\)</span>, Variance of the Hypothetical Means <span class="math inline">\((VHM)\)</span>, dan mean kolektif <span class="math inline">\(μ\)</span>.</li>
+<li>Mengenali situasi di mana model Bühlmann-Straub sesuai.</li>
+</ul>
+<hr />
+<p>Dengan kredibilitas Bühlmann standar atau least-squares seperti yang dijelaskan pada bagian sebelumnya, kerugian <span class="math inline">\(X1,…,Xn\)</span> yang timbul dari pemegang polis yang dipilih diasumsikan sebagai iid. Jika subskrip menunjukkan tahun 1, tahun 2, dan seterusnya hingga tahun <span class="math inline">\(n\)</span>, maka asumsi iid berarti bahwa pemegang polis memiliki paparan kerugian yang sama setiap tahun.</p>
+<p>Misalkan ada pemegang polis komersial yang menggunakan armada kendaraan dalam bisnisnya. Pada tahun 1, ada <span class="math inline">\(m1\)</span> kendaraan dalam armada, <span class="math inline">\(m2\)</span> kendaraan pada tahun 2, .., dan <span class="math inline">\(mn\)</span> kendaraan pada tahun n. Paparan kerugian dari kepemilikan dan penggunaan armada ini akan tidak konstan dari tahun ke tahun. Kerugian tahunan untuk armada tersebut tidak dapat didefinisikan sebagai iid. Maka untuk permisalan tersebut <span class="math inline">\(Yjk\)</span> didefinisikan sebagai kerugian untuk kendaraan ke-k dalam armada untuk tahun ke-j. Kemudian, total kerugian untuk armada pada tahun ke-j adalah <span class="math inline">\(Yj1+⋯+Yjmj\)</span>, di mana kita menambahkan kerugian untuk masing-masing dari <span class="math inline">\(mj\)</span> kendaraan.</p>
+<p>Sedangkan dalam model Bühlmann-Straub, diasumsikan bahwa variabel acak <span class="math inline">\(Yjk\)</span>, iid di semua kendaraan dan tahun untuk pemegang polis. Dengan asumsi ini, rata-rata <span class="math inline">\(E(Yjk|θ)=μ(θ)\)</span> dan variansi <span class="math inline">\(Var(Yjk|θ)=σ2(θ)\)</span> sama untuk semua kendaraan dan tahun. Jumlah <span class="math inline">\(μ(θ)\)</span> adalah kerugian yang diharapkan dan <span class="math inline">\(σ2(θ)\)</span> adalah varians pada kerugian untuk satu tahun untuk satu kendaraan untuk pemegang polis dengan parameter risiko <span class="math inline">\(θ\)</span>.</p>
+<p>Jika <span class="math inline">\(Xj\)</span> adalah kerugian rata-rata per unit paparan pada tahun ke-j, <span class="math inline">\(Xj=(Yj1+⋯+Yjmj)/mj\)</span>, maka <span class="math inline">\(E(Xj|θ)=μ(θ)\)</span> dan <span class="math inline">\(Var(Xj|θ)=σ^2(θ)/mj\)</span> untuk pemegang polis dengan parameter risiko <span class="math inline">\(θ\)</span>. Kerugian rata-rata per kendaraan untuk seluruh periode <span class="math inline">\(n\)</span> tahun adalah:</p>
+<p><span class="math display">\[\begin{equation*}
+\bar{X}= \frac{1}{m} \sum_{j=1}^{n} m_j X_{j} \quad , \quad  m=\sum_{j=1}^{n}  m_j.
+\end{equation*}\]</span></p>
+<p>Maka berikutnya <span class="math inline">\(E (\bar{X}|θ)=μ(θ)\)</span> dan <span class="math inline">\(Var(\bar{X}|θ)=σ2(θ)/m\)</span> di mana <span class="math inline">\(μ(θ)\)</span> dan <span class="math inline">\(σ^2(θ)\)</span> adalah rata-rata dan varians untuk satu kendaraan selama satu tahun untuk pemegang polis.</p>
+<p><strong>Example 9.4.1</strong> Prove that <span class="math inline">\(Var(\bar{X}|θ)=σ^2(θ)/m\)</span> for a risk with risk parameter <span class="math inline">\(θ\)</span>.</p>
+<p><strong>Solusi</strong></p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mathrm{Var}(\bar{X}|\theta)&amp;=&amp;\mathrm{Var}\left(\frac{1}{m} \sum_{j=1}^{n} m_j X_j|\theta \right)\\
+                                  &amp;=&amp;\frac{1}{m^2}\sum_{j=1}^{n} \mathrm{Var}(m_j X_{j}|\theta)=\frac{1}{m^2}\sum_{j=1}^{n} m_j^2 \mathrm{Var}(X_j|\theta)\\
+                                  &amp;=&amp;\frac{1}{m^2}\sum_{j=1}^{n} m_j^2 (\sigma^2(\theta)/m_j)=\frac{\sigma^2(\theta)}{m^2}\sum_{j=1}^{n} m_j=\sigma^2(\theta)/m.\\
+\end{eqnarray*}\]</span></p>
+<hr />
+<p>Dimana Buhlmann-Straub credibility adalah:</p>
+<p><span class="math display">\[\begin{equation}\hat{\mu}(\theta)=Z\bar{X}+(1-Z)\mu
+\tag{9.9}
+\end{equation}\]</span></p>
+<p>Dengan :</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\theta&amp;=&amp;\textrm{a risk parameter that identifies a policyholder&#39;s risk level}\\
+\hat{\mu}(\theta)&amp;=&amp;\textrm{estimated expected loss for one exposure for the policyholder}\\
+&amp; &amp; \textrm{with loss experience } \bar{X}\\
+\bar{X}&amp;=&amp; \frac{1}{m} \sum_{j=1}^{n} m_j X_j \textrm{ is the average loss per exposure for $m$ exposures.}\\
+&amp; &amp; \textrm{$X_j$ is the average loss per exposure and $m_j$ is the number of exposures in year $j$.} \\
+Z&amp;=&amp;\textrm{credibility assigned to $m$ exposures } \\
+\mu&amp;=&amp;\textrm{expected loss for one exposure for randomly chosen}\\
+&amp; &amp; \textrm{ policyholder from population.}\\
+\end{eqnarray*}\]</span></p>
+<p>Perlu diperhatikan bahwa <span class="math inline">\(μ^(θ)\)</span> merupakan estimator untuk kerugian yang diharapkan untuk satu paparan. Jika pemegang polis memiliki mj paparan maka kerugian yang diharapkan adalah <span class="math inline">\(mjμ^(θ)\)</span>.</p>
 
+</div>
 </div>
             </section>
 
@@ -377,6 +822,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

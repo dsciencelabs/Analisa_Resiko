@@ -447,10 +447,7 @@ Menjelaskan proses pemilihan model berdasarkan:
 
 Dalam memeriksa data secara grafis, membuat hipotesis struktur model, dan membandingkan data dengan model kandidat untuk merumuskan model yang lebih baik. Box ( 1980 ) menggambarkan ini sebagai proses berulang yang ditunjukkan pada Gambar dibawah ini
 
-
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/4.2.1.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.2.1-1png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Proses berulang ini memberikan resep yang berguna untuk menyusun tugas menentukan model untuk mewakili satu set data.
 
@@ -512,30 +509,23 @@ $$
 Fungsi massa probabilitas yang sesuai untuk pengamatan adalah
 
 
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/4.3.1.1.png")
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 ```
 
 Sekarang, tentukan $N_J$ menjadi jumlah pengamatan yang termasuk dalam $J$th interval, $(C_{j − 1},C_J]$. Jadi, fungsi kemungkinan (sehubungan dengan parameter) $θ$) adalah
 
 
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/4.3.1.1-1.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-2.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Dan fungsi log-kemungkinan adalah
 
-```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("images/4.3.1.1-2.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-3png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Diberikan data :
 1. Kerugian mengikuti distribusi eksponensial dengan rata-rata $θ$.
 2. Sebuah sampel acak dari 20 kerugian didistribusikan sebagai berikut:
 
-```{r image1, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("example4.3.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Hitung estimasi kemungkinan maksimum dari $θ$
 
@@ -640,8 +630,7 @@ dengan waktu penyensoran potensial ${(C_{U1},...,C_{Un})}$ . Di sini, notasi "$�
 
 Di sisi lain, data terpotong ditangani dalam inferensi kemungkinan melalui probabilitas bersyarat. Secara khusus, kontribusi likelihood dapat disesuaikan dengan membaginya dengan probabilitas bahwa variabel tersebut diamati. Sebagai rangkuman, kami memiliki kontribusi berikut pada fungsi likelihood untuk enam jenis hasil:
 
-```{r image4, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("table4-1.png")
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 ```
 
 Untuk hasil yang diketahui dan data yang disensor, kemungkinannya adalah
@@ -728,9 +717,7 @@ Example 4.3.4. Actuarial Exam Question
 
 Diberikan informasi berikut ini mengenai jumlah klaim untuk 100 klaim:
 
-```{r image5, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("example4.3.4.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.4-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Dengan menggunakan ogive, hitunglah estimasi probabilitas bahwa klaim yang dipilih secara acak adalah antara 2000 dan 6000.
 
@@ -811,9 +798,7 @@ Dengan menggunakan estimator batas produk Kaplan-Meier, hitunglah probabilitas b
 
 Terdapat empat waktu kejadian (pengamatan yang tidak disensor). Untuk setiap waktu tj kita dapat menghitung jumlah kejadian sj dan himpunan risiko $R_j$ sebagai berikut:
   
-```{r image7, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("example4.3.6.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.6-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Dengan demikian, estimasi Kaplan-Meier dari S(11) adalah
 
@@ -882,9 +867,7 @@ Sebaliknya, di bawah kerangka Bayesian , kami melihat parameter model dan data s
 
 Dibawah ini merupakan rumus aturan bayes:
 
-```{r image7, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
-knitr::include_graphics("4.4.1.png")
-```
+src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.4.1-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
 
 Di mana,
 
@@ -895,115 +878,21 @@ Di mana,
 
 ### Bayesian Model
 
-Distribusi Sebelumnya. Secara khusus, pikirkan tentang parameter θ sebagai vektor acak dan biarkan π( θ ) menunjukkan fungsi massa atau kepadatan yang sesuai. Ini adalah pengetahuan yang kita miliki sebelum hasil diamati dan disebut distribusi sebelumnya . Biasanya, distribusi sebelumnya adalah distribusi reguler dan terintegrasi atau dijumlahkan menjadi satu, tergantung pada apakah θ
- kontinu atau diskrit. Namun, kami mungkin sangat tidak yakin (atau tidak tahu) tentang distribusinya θ; mesin Bayesian memungkinkan situasi berikut
- 
-$$
-\int \pi(\theta) ~d\theta = \infty,
-$$
-
-dalam hal ini $\pi(\cdot)$ disebut prior yang tidak tepat.
-
-Distribusi Model. Distribusi hasil diberi nilai asumsi θ dikenal sebagai model distribusi dan dilambangkan sebagai $f(x | \boldsymbol \theta) = f_{X|\boldsymbol \theta} (x|\boldsymbol \theta )$ Ini adalah fungsi massa atau kerapatan frequentist yang biasa. Ini hanyalah kemungkinan dalam konteks frequentist dan karenanya juga nyaman untuk menggunakan ini sebagai deskriptor untuk distribusi model.
-
-Distribusi Bersama. Distribusi hasil dan parameter model adalah distribusi gabungan dari dua besaran acak. Fungsi kerapatan persendiannya dilambangkan sebagai
-
-$$
-f(x , \boldsymbol \theta) = f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)
-$$
-Distribusi Hasil Marginal. Distribusi hasil dapat dinyatakan sebagai
-
-$$
-f(x) = \int f(x | \boldsymbol \theta)\pi(\boldsymbol \theta) ~d \boldsymbol \theta.
-$$
-
-Ini analog dengan distribusi campuran frequentist. Dalam distribusi campuran, kami menggabungkan (atau "mencampur") subpopulasi yang berbeda. Dalam konteks Bayesian, distribusi marjinal adalah kombinasi dari realisasi parameter yang berbeda (dalam beberapa literatur, Anda dapat menganggap ini sebagai kombinasi "keadaan alam" yang berbeda).
-
-Distribusi Parameter Posterior. Setelah hasil diamati (karenanya terminologi "posterior"), seseorang dapat menggunakan teorema Bayes untuk menulis fungsi kerapatan sebagai
-
-$$
-\pi(\boldsymbol \theta | x) =\frac{f(x , \boldsymbol \theta)}{f(x)} =\frac{f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)}{f(x)} .
-$$
 
 
 ### Bayesian Inference
 
+
 #### Summarizing the Posterior Distributiob of Paremeters
-
-Salah satu cara untuk meringkas distribusi adalah dengan menggunakan pernyataan tipe interval kepercayaan . Untuk meringkas distribusi parameter posterior , interval $[a,b]$ dikatakan sebagai $100(1-\alpha)\%$ interval kredibilitas untuk θ jika
-  
-$$
-\Pr (a \le \theta \le b | \mathbf{x}) \ge 1- \alpha.
-$$
-
-Contoh:
-* Dalam portofolio risiko, setiap pemegang polis dapat memiliki paling banyak satu klaim per tahun.
-* Probabilitas klaim untuk pemegang polis selama setahun adalah Q
-* Kepadatan sebelumnya adalah
-
-$$
-\pi(q) = q^3/0.07, \ \ \ 0.6 < q < 0.8
-$$
-Pemegang polis yang dipilih secara acak memiliki satu klaim pada Tahun 1 dan nol klaim pada Tahun 2. Untuk pemegang polis ini, hitung probabilitas posterior bahwa
-
-$$
-0.7 < q < 0.8
-$$
-JAWAB:
-
-Kepadatan posterior sebanding dengan produk dari fungsi kemungkinan dan kepadatan sebelumnya. Dengan demikian,
-
-$$
-\pi(q|1,0) \propto f(1|q)\ f(0|q)\ \pi(q) \propto q(1-q)q^3 = q^4-q^5
-$$
-
-Untuk mendapatkan kerapatan posterior yang tepat, kami mengintegrasikan fungsi di atas pada jangkauannya (0.6, 0.8)
-
-$$
-\int_{0.6}^{0.8} q^4-q^5 dq = \frac{q^5}{5} - \left. \frac{q^6}{6} \right|_{0.6}^{0.8} = 0.014069 \ \Rightarrow \ \pi(q|1,0)=\frac{q^4-q^5}{0.014069}
-$$
-
-kemudian,
-
-$$
-\Pr(0.7<q<0.8|1,0)= \int_{0.7}^{0.8} \frac{q^4-q^5}{0.014069}dq = 0.5572
-$$
 
 
 #### Bayesian Predictive Distribution
 
-Untuk jenis inferensi statistik lainnya, seringkali menarik untuk "memprediksi" nilai hasil acak yang belum diamati. Khususnya untuk data baru y,  distribusi prediktifnya adalah
-
-$$
-f(y|x) = \int f(y|\theta) \pi(\theta|x) d\theta .
-$$
-
-Ini juga kadang-kadang disebut distribusi "prediktif posterior" karena distribusi data baru tergantung pada kumpulan data dasar.
-
-Menggunakan kerugian kesalahan kuadrat untuk fungsi kerugian, prediksi Bayesian dari Y adalah
-
-$$
-\begin{aligned}
-\mathrm{E}(Y|X) &=  \int ~y f(y|X) dy = \int y \left(\int f(y|\theta) \pi(\theta|X) d\theta \right) dy \\
-&= \int \left(\int y f(y|\theta)  ~dy \right) \pi(\theta|X) ~d\theta \\
-&=  \int  \mathrm{E}(Y|\theta) \pi(\theta|X) ~d\theta .
-\end{aligned}
-$$
-
-Seperti disebutkan sebelumnya, untuk beberapa situasi distribusi parameter adalah diskrit, tidak kontinu. Memiliki serangkaian kemungkinan parameter yang terpisah memungkinkan kita untuk menganggapnya sebagai "keadaan alam" alternatif, sebuah interpretasi yang membantu.
 
 ### Conjugate Distributions
 
-Untuk menghubungkan distribusi parameter sebelum dan sesudah, kami memiliki hubungan
 
-$$
-\begin{array}{ccc}
-\pi(\boldsymbol \theta | x) & = & \frac{f(x|\boldsymbol \theta )\pi(\boldsymbol \theta)}{f(x)}  \\
- & \propto  & f(x|\boldsymbol \theta ) \pi(\boldsymbol \theta) \\
-\text{Posterior} & \text{is proportional to} & \text{likelihood} \times \text{prior} .
-\end{array}
-$$
 
-Untuk distribusi konjugasi, posterior dan sebelumnya milik keluarga distribusi yang sama. Ilustrasi berikut melihat kasus khusus gamma-Poisson, yang paling terkenal dalam aplikasi aktuaria.
+
 
 

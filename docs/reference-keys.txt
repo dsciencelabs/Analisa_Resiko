@@ -1,5 +1,6 @@
-fig:unnamed-chunk-1
-fig:unnamed-chunk-2
+tab:unnamed-chunk-16
+fig:unnamed-chunk-36
+fig:unnamed-chunk-37
 fig:TransitionSwitz
 fig:PremEvolution
 pengantar-analitika-data-kerugian
@@ -13,7 +14,27 @@ memperbarui-asuransi
 pengelolaan-klaim-dan-produk
 penyisihan-klaim
 frequency-modeling
-goodness-of-fit
+frequency-distributions
+bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian
+basic-terminology
+pentingnya-frekuensi
+mengapa-perlu-memeriksa-informasi-frekuensi
+basic-frequency-distributions
+formula
+fungsi-pembangkit-momen-dan-probabilitas
+binomial-distribusi
+poisson-distribution
+distribusi-binomial-negatif
+the-ab0-class
+mengestimasi-distibusi-frekuensi
+estimasi-parameter
+distribusi-frekuensi-mle
+zero-truncation-or-modification
+distribusi-campuran
+contoh-soal-ujian-aktuaria
+jawaban-1
+jawaban-2
+goodnes-of-fit
 modeling-loss-severity
 basic-distributional-quantities
 moments
@@ -73,9 +94,6 @@ model-selection-based-on-cross-validation
 estimasi-menggunakan-data-modifikasi
 estimasi-parametrik-menggunakan-data-modifikasi
 estimasi-parametrik-menggunakan-data-yang-dikelompokkan
-cencored-data
-truncated-data
-parametric-estimation-using-cencored-and-truncated-data
 nonparametric-estimation-using-modified-data
 grouped-data
 right-censored-empirical-distribution-function
@@ -93,33 +111,14 @@ moments-and-distribution
 actuarial-exam-question
 example-5.3.2.-actuarial-exam-question
 stop-loss-insurance
-actuarial-exam-question-1
 actuarial-exam-question---continued
 analytic-results
 example-2
 tweedie-distribution
-menghitung-distribusi-klaim-agregat
 metode-rekursif
 contoh-1
 simulasi
 simulation-and-resampling
-dasar-dasar-simulasi
-menghasilkan-pengamatan-seragam-independen
-metode-transformasi-invers
-presisi-simulasi
-simulasi-dan-inferensi-statistik
-bootstrap-dan-resampling
-dasar-dasar-bootstrap
-presisi-bootstrap-bias-standar-deviasi-dan-mean-square-error
-interval-keyakinan
-bootstrap-parametrik
-cross-validation
-k-fold-cross-validation
-leave-one-out-cross-validation
-cross-validation-and-bootstrap
-importance-sampling
-metropolis-hastings
-gibbs-sampler
 premium-foundations
 pengenalan-ratemaking
 metode-penentuan-tarif-gabungan
@@ -229,22 +228,6 @@ uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle
 uji-rasio-kemungkinan-likelihood-ratio-test
 kriteria-informasi
 appendix-b-iterated-expectations
-<<<<<<< HEAD
-=======
-appendix-c-maximum-likelihood-theory
-likelihood-function
-likelihood-and-log-likelihood-functions
-properties-of-likelihood-functions
-maximum-likelihood-estimators
-definition-and-derivation-of-mle
-asymptotic-properties-of-mle
-use-of-maximum-likelihood-estimation
-statistical-inference-based-on-maximum-likelihood-estimation
-hypothesis-testing
-mle-and-model-validation
-appendix-d-summary-of-distributions
-appendix-e-conventions-for-notation
->>>>>>> d02416738c6b51874a89217f815da8e053a677f9
 conditional-distribution-and-conditional-expectation
 conditional-distribution
 discrete-case
@@ -259,8 +242,20 @@ application
 conjugate-distributions-1
 linear-exponential-family
 conjugate-distributions-2
+appendix-c-maximum-likelihood-theory
+likelihood-function
+likelihood-and-log-likelihood-functions
+properties-of-likelihood-functions
+maximum-likelihood-estimators
+definition-and-derivation-of-mle
+asymptotic-properties-of-mle
+use-of-maximum-likelihood-estimation
+statistical-inference-based-on-maximum-likelihood-estimation
+hypothesis-testing
+mle-and-model-validation
+appendix-d-summary-of-distributions
 distribusi-diskrit
-the-ab0-class
+the-ab0-class-1
 the-ab1-class
 continuous-distribution
 one-parameter-distributions
@@ -272,8 +267,4 @@ distributions-with-finite-support
 limited-expected-values
 functions
 illustrative-graph
->>>>>>> 23c605b7d3d0e2e76a27abc576fc78d4af087499
->>>>>>> 956a53d7e72565ba06f915d93205b1b48b0c6e8e
->>>>>>> 8b5601b8369ad00ee0b5943c72f16a7f3ce3c667
-section
->>>>>>> d1904965f4836ef2198ffda59ce9301912244350
+appendix-e-conventions-for-notation

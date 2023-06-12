@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,9 +52,99 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -102,9 +192,63 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="frequency-modeling.html"><a href="frequency-modeling.html"><i class="fa fa-check"></i><b>2</b> Frequency Modeling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodness-of-fit"><i class="fa fa-check"></i><b>2.1</b> Goodness of Fit</a></li>
+<li class="chapter" data-level="2.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#frequency-distributions"><i class="fa fa-check"></i><b>2.1</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#bagaimana-frekuensi-menambah-infromasi-pada-tingkat-keparahan-suatu-kejadian"><i class="fa fa-check"></i><b>2.1.1</b> Bagaimana Frekuensi menambah infromasi pada tingkat keparahan suatu kejadian</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a></li>
+<li class="chapter" data-level="2.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#basic-frequency-distributions"><i class="fa fa-check"></i><b>2.2</b> Basic Frequency Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#the-ab0-class"><i class="fa fa-check"></i><b>2.3</b> The <span class="math inline">\((a,b,0)\)</span> Class</a></li>
+<li class="chapter" data-level="2.4" data-path="frequency-modeling.html"><a href="frequency-modeling.html#mengestimasi-distibusi-frekuensi"><i class="fa fa-check"></i><b>2.4</b> Mengestimasi Distibusi Frekuensi</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
+<li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#basic-distributional-quantities"><i class="fa fa-check"></i><b>3.1</b> Basic Distributional Quantities</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moments"><i class="fa fa-check"></i><b>3.1.1</b> Moments</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#quantiles"><i class="fa fa-check"></i><b>3.1.2</b> Quantiles</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#moment-generating-function"><i class="fa fa-check"></i><b>3.1.3</b> Moment Generating Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-kontinu-untuk-memodelkan-tingkat-keparahan-dari-kerugian"><i class="fa fa-check"></i><b>3.2</b> Distribusi Kontinu untuk Memodelkan Tingkat Keparahan dari Kerugian</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#gamma-distribution"><i class="fa fa-check"></i><b>3.2.1</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-pareto"><i class="fa fa-check"></i><b>3.2.2</b> Distribusi Pareto</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-weibull"><i class="fa fa-check"></i><b>3.2.3</b> Distribusi Weibull</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#distribusi-beta-umum-jenis-kedua"><i class="fa fa-check"></i><b>3.2.4</b> Distribusi Beta Umum Jenis Kedua</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#methods-of-creating-new-distributions"><i class="fa fa-check"></i><b>3.3</b> Methods of Creating New Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#functions-of-random-variables-and-their-distributions"><i class="fa fa-check"></i><b>3.3.1</b> Functions of Random Variables and their Distributions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#multiplication-by-a-constant"><i class="fa fa-check"></i><b>3.3.2</b> Multiplication by a Constant</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#raising-to-a-power"><i class="fa fa-check"></i><b>3.3.3</b> Raising to a Power</a></li>
+<li class="chapter" data-level="3.3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#exponentiation"><i class="fa fa-check"></i><b>3.3.4</b> Exponentiation</a></li>
+<li class="chapter" data-level="3.3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#finite-mixtures"><i class="fa fa-check"></i><b>3.3.5</b> Finite Mixtures</a></li>
+<li class="chapter" data-level="3.3.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#continuous-mixtures"><i class="fa fa-check"></i><b>3.3.6</b> Continuous Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#modifikasi-pertanggungan"><i class="fa fa-check"></i><b>3.4</b> modifikasi pertanggungan</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductibles"><i class="fa fa-check"></i><b>3.4.1</b> policy deductibles</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-limit"><i class="fa fa-check"></i><b>3.4.2</b> Policy Limit</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#policy-deductible-and-policy-limit"><i class="fa fa-check"></i><b>3.4.3</b> policy deductible and policy limit</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-inflation"><i class="fa fa-check"></i><b>3.4.4</b> Coinsurance and inflation</a></li>
+<li class="chapter" data-level="3.4.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#reinsurance"><i class="fa fa-check"></i><b>3.4.5</b> Reinsurance</a></li>
+<li class="chapter" data-level="3.4.6" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#coinsurance-and-reinsurance"><i class="fa fa-check"></i><b>3.4.6</b> Coinsurance and Reinsurance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>3.5</b> Maximum Likelihood Estimation</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likelihood-estimators-for-complete-data"><i class="fa fa-check"></i><b>3.5.1</b> Maximum Likelihood Estimators for Complete Data</a></li>
+<li class="chapter" data-level="3.5.2" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html#maximum-likehood-estimators-using-modified-data"><i class="fa fa-check"></i><b>3.5.2</b> Maximum Likehood Estimators using Modified Data</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html"><i class="fa fa-check"></i><b>4</b> Model Selection and Estimation</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="model-selection-and-estimation.html"><a href="model-selection-and-estimation.html#nonparametric-inference"><i class="fa fa-check"></i><b>4.1</b> Nonparametric Inference</a>
@@ -139,19 +283,51 @@
 <li class="chapter" data-level="5.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> 5.3.2 Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> * 5.3.6. Actuarial Exam Question*</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> 5.3.7. Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> 5.3.4 Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> 5.3.4 Tweedie Distribution</a></li>
-<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.6</b> metode rekursif</a></li>
-<li class="chapter" data-level="5.2.7" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.7</b> simulasi</a></li>
+<li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.2.5</b> metode rekursif</a></li>
+<li class="chapter" data-level="5.2.6" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.2.6</b> simulasi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html"><i class="fa fa-check"></i><b>6</b> Simulation and Resampling</a></li>
-<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a></li>
+<li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="premium-foundations.html"><a href="premium-foundations.html#pengenalan-ratemaking"><i class="fa fa-check"></i><b>7.1</b> Pengenalan Ratemaking</a></li>
+<li class="chapter" data-level="7.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penentuan-tarif-gabungan"><i class="fa fa-check"></i><b>7.2</b> Metode Penentuan Tarif Gabungan</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-penghitungan-premi-murni"><i class="fa fa-check"></i><b>7.2.1</b> Metode Penghitungan Premi Murni</a></li>
+<li class="chapter" data-level="7.2.2" data-path="premium-foundations.html"><a href="premium-foundations.html#metode-rasio-kerugian"><i class="fa fa-check"></i><b>7.2.2</b> Metode Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-penetapan-harga"><i class="fa fa-check"></i><b>7.3</b> Prinsip-prinsip Penetapan Harga</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="premium-foundations.html"><a href="premium-foundations.html#prinsip-prinsip-premi"><i class="fa fa-check"></i><b>7.3.1</b> Prinsip-Prinsip Premi</a></li>
+<li class="chapter" data-level="7.3.2" data-path="premium-foundations.html"><a href="premium-foundations.html#sifat-prinsip-premium"><i class="fa fa-check"></i><b>7.3.2</b> Sifat Prinsip Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="premium-foundations.html"><a href="premium-foundations.html#risiko-heterogen"><i class="fa fa-check"></i><b>7.4</b> Risiko Heterogen</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-risiko"><i class="fa fa-check"></i><b>7.4.1</b> Paparan Risiko</a></li>
+<li class="chapter" data-level="7.4.2" data-path="premium-foundations.html"><a href="premium-foundations.html#faktor-penilaian"><i class="fa fa-check"></i><b>7.4.2</b> Faktor Penilaian</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a></li>
-<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a></li>
+<li class="chapter" data-level="9" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html"><i class="fa fa-check"></i><b>9</b> Experience Rating Using Credibility Theory</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#pengantar-aplikasi-teori-kredibilitas"><i class="fa fa-check"></i><b>9.1</b> Pengantar Aplikasi Teori Kredibilitas</a></li>
+<li class="chapter" data-level="9.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#limited-fluctuation-credibility"><i class="fa fa-check"></i><b>9.2</b> Limited Fluctuation Credibility</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-frekuensi-klaim"><i class="fa fa-check"></i><b>9.2.1</b> Kredibilitas Penuh untuk Frekuensi Klaim</a></li>
+<li class="chapter" data-level="9.2.2" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-kerugian-agregat-dan-premi-murni"><i class="fa fa-check"></i><b>9.2.2</b> Kredibilitas Penuh untuk Kerugian Agregat dan Premi Murni</a></li>
+<li class="chapter" data-level="9.2.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-penuh-untuk-tingkat-keparahan"><i class="fa fa-check"></i><b>9.2.3</b> Kredibilitas Penuh untuk Tingkat Keparahan</a></li>
+<li class="chapter" data-level="9.2.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#kredibilitas-parsial"><i class="fa fa-check"></i><b>9.2.4</b> Kredibilitas parsial</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-credibility"><i class="fa fa-check"></i><b>9.3</b> Bühlmann Credibility</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#credibility-z-epv-and-vhm"><i class="fa fa-check"></i><b>9.3.1</b> Credibility Z, EPV, and VHM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="experience-rating-using-credibility-theory.html"><a href="experience-rating-using-credibility-theory.html#bühlmann-straub-credibility"><i class="fa fa-check"></i><b>9.4</b> Bühlmann-Straub Credibility</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html"><i class="fa fa-check"></i><b>10</b> Insurance Portfolio Management including Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#introduction-to-insurance-portfolios"><i class="fa fa-check"></i><b>10.1</b> Introduction to Insurance Portfolios</a></li>
@@ -167,7 +343,7 @@
 <li class="chapter" data-level="10.3.3" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#example-10.3.2.-var-for-the-normal-distribution."><i class="fa fa-check"></i><b>10.3.3</b> Example 10.3.2. VaR for the normal distribution.</a></li>
 <li class="chapter" data-level="10.3.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#tail-value-at-risk"><i class="fa fa-check"></i><b>10.3.4</b> Tail Value-at-Risk</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
+<li class="chapter" data-level="10.4" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#reinsurance-1"><i class="fa fa-check"></i><b>10.4</b> Reinsurance</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.1</b> Proportional Reinsurance</a></li>
 <li class="chapter" data-level="10.4.2" data-path="insurance-portfolio-management-including-reinsurance.html"><a href="insurance-portfolio-management-including-reinsurance.html#non-proportional-reinsurance"><i class="fa fa-check"></i><b>10.4.2</b> Non-Proportional Reinsurance</a></li>
@@ -233,7 +409,33 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="aggregate-loss-models-1.html"><a href="aggregate-loss-models-1.html"><i class="fa fa-check"></i><b>13</b> Aggregate Loss Models</a></li>
 <li class="chapter" data-level="14" data-path="dependence-modeling.html"><a href="dependence-modeling.html"><i class="fa fa-check"></i><b>14</b> Dependence Modeling</a></li>
-<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a></li>
+<li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar"><i class="fa fa-check"></i><b>15.1</b> konsep dasar</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#sampel-acak"><i class="fa fa-check"></i><b>15.1.1</b> Sampel Acak</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel"><i class="fa fa-check"></i><b>15.1.2</b> Distribusi Sampel</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral"><i class="fa fa-check"></i><b>15.1.3</b> Teorema Limit Sentral</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti"><i class="fa fa-check"></i><b>15.2</b> Estimasi Titik dan Properti</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen"><i class="fa fa-check"></i><b>15.2.1</b> Estimasi Metode Momen</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.2.2</b> Estimasi Maksimum Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#estimasi-interval"><i class="fa fa-check"></i><b>15.3</b> Estimasi Interval</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal"><i class="fa fa-check"></i><b>15.3.1</b> Distribusi Tepat untuk Rata-rata Sampel Normal</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood"><i class="fa fa-check"></i><b>15.3.2</b> Properti Sampel Besar dari Estimasi Maksimum Likelihood</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan"><i class="fa fa-check"></i><b>15.3.3</b> Interval Kepercayaan</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis"><i class="fa fa-check"></i><b>15.4</b> Pengujian Hipotesis</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1"><i class="fa fa-check"></i><b>15.4.1</b> Konsep Dasar</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle"><i class="fa fa-check"></i><b>15.4.2</b> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test"><i class="fa fa-check"></i><b>15.4.3</b> Uji Rasio Kemungkinan (Likelihood Ratio Test)</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi"><i class="fa fa-check"></i><b>15.4.4</b> Kriteria Informasi</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html"><i class="fa fa-check"></i><b>16</b> Appendix B: Iterated Expectations</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="appendix-b-iterated-expectations.html"><a href="appendix-b-iterated-expectations.html#conditional-distribution-and-conditional-expectation"><i class="fa fa-check"></i><b>16.1</b> Conditional Distribution and Conditional Expectation</a>
@@ -276,7 +478,7 @@
 <ul>
 <li class="chapter" data-level="18.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#distribusi-diskrit"><i class="fa fa-check"></i><b>18.1</b> Distribusi Diskrit</a>
 <ul>
-<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
+<li class="chapter" data-level="18.1.1" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab0-class-1"><i class="fa fa-check"></i><b>18.1.1</b> The <em>(a,b,0)</em> Class</a></li>
 <li class="chapter" data-level="18.1.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#the-ab1-class"><i class="fa fa-check"></i><b>18.1.2</b> The <em>(a,b,1)</em> Class</a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="appendix-d-summary-of-distributions.html"><a href="appendix-d-summary-of-distributions.html#continuous-distribution"><i class="fa fa-check"></i><b>18.2</b> Continuous Distribution</a>
@@ -315,7 +517,220 @@
             <section class="normal" id="section-">
 <div id="appendix-a-review-of-statistical-inference" class="section level1 hasAnchor" number="15">
 <h1><span class="header-section-number">Bab 15</span> Appendix A: Review of Statistical Inference<a href="appendix-a-review-of-statistical-inference.html#appendix-a-review-of-statistical-inference" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="konsep-dasar" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> konsep dasar<a href="appendix-a-review-of-statistical-inference.html#konsep-dasar" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Inferensi statistik adalah proses membuat kesimpulan tentang karakteristik dari sekumpulan besar item/individu (yaitu, populasi), menggunakan set data yang mewakili (misalnya, sampel acak) dari daftar item atau individu dari populasi yang dapat diambil sampel. Meskipun proses ini memiliki berbagai aplikasi di berbagai bidang termasuk ilmu pengetahuan, rekayasa, kesehatan, sosial, dan ekonomi, inferensi statistik penting bagi perusahaan asuransi yang menggunakan data dari pemegang polis mereka yang ada untuk membuat inferensi tentang karakteristik (misalnya, profil risiko) dari segmen target pelanggan tertentu (yaitu, populasi) yang tidak langsung diamati oleh perusahaan asuransi tersebut.</p>
+<div id="sampel-acak" class="section level3 hasAnchor" number="15.1.1">
+<h3><span class="header-section-number">15.1.1</span> Sampel Acak<a href="appendix-a-review-of-statistical-inference.html#sampel-acak" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam statistika, <em>kesalahan</em> sampling terjadi ketika <em>kerangka sampling</em>, yaitu daftar dari mana sampel diambil, tidak cukup mewakili populasi yang menjadi tujuan. Sampel harus merupakan subset yang representatif dari populasi atau universum yang menjadi tujuan. Jika sampel tidak representatif, mengambil sampel yang lebih besar tidak akan menghilangkan bias, karena kesalahan yang sama terulang berulang kali. Oleh karena itu, kita memperkenalkan konsep sampling acak yang menghasilkan <em>sampel acak</em> sederhana yang mewakili populasi.</p>
+<p>Kita mengasumsikan bahwa variabel acak <span class="math inline">\(X\)</span> mewakili pengambilan dari populasi dengan fungsi distribusi <span class="math inline">\(F(\cdot)\)</span> dengan rata-rata <span class="math inline">\(\mathrm{E}[X]=\mu\)</span> dan varians <span class="math inline">\(\mathrm{Var}[X]=\mathrm{E}[(X-\mu)^2]\)</span>, di mana <span class="math inline">\(E(\cdot)\)</span> menunjukkan ekspektasi dari variabel acak. Dalam <em>sampling acak</em>, kita melakukan total <span class="math inline">\(n\)</span> pengambilan seperti yang direpresentasikan oleh <span class="math inline">\(X_1,...,X_n\)</span>, yang masing-masing tidak saling berhubungan (yaitu, statistik independen). Kita mengacu pada <span class="math inline">\(X_1,...,X_n\)</span> sebagai sampel acak (dengan penggantian) dari <span class="math inline">\(F(\cdot)\)</span>, baik dalam bentuk parametrik maupun nonparametrik. Alternatifnya, kita dapat mengatakan bahwa <span class="math inline">\(X_1,...,X_n\)</span> secara identik dan independen didistribusikan (iid) dengan fungsi distribusi <span class="math inline">\(F(\cdot)\)</span>.</p>
+</div>
+<div id="distribusi-sampel" class="section level3 hasAnchor" number="15.1.2">
+<h3><span class="header-section-number">15.1.2</span> Distribusi Sampel<a href="appendix-a-review-of-statistical-inference.html#distribusi-sampel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dengan menggunakan sampel acak <span class="math inline">\(X_1,...,X_n\)</span>, kita tertarik untuk membuat kesimpulan tentang atribut tertentu dari distribusi populasi <span class="math inline">\(F(\cdot)\)</span>. Misalnya, kita mungkin tertarik untuk membuat inferensi tentang rata-rata populasi yang ditandai dengan <span class="math inline">\(\mu\)</span>. Alami untuk mempertimbangkan <em>rata-rata sampel</em>, <span class="math inline">\(\bar{X}=\sum_{i=1}^nX_i\)</span>, sebagai estimasi dari rata-rata populasi <span class="math inline">\(\mu\)</span>. Kita menyebut rata-rata sampel sebagai <em>statistik</em> yang dihitung dari sampel acak <span class="math inline">\(X_1,...,X_n\)</span>. Statistik ringkasan lain yang umum digunakan termasuk simpangan baku sampel dan kuantil sampel.</p>
+<p>Ketika menggunakan statistik (misalnya, rata-rata sampel <span class="math inline">\(\bar{X}\)</span>) untuk membuat inferensi statistik tentang atribut populasi (misalnya, rata-rata populasi <span class="math inline">\(\mu\)</span>), kualitas inferensi ditentukan oleh bias dan ketidakpastian dalam estimasi, karena menggunakan sampel sebagai pengganti populasi. Oleh karena itu, penting untuk mempelajari <em>distribusi statistik</em> yang mengukur bias dan variabilitas statistik tersebut. Secara khusus, distribusi rata-rata sampel, <span class="math inline">\(\bar{X}\)</span> (atau statistik lainnya), disebut sebagai distribusi sampling. Distribusi sampling bergantung pada proses sampling, statistik, ukuran sampel <span class="math inline">\(n\)</span>, dan distribusi populasi <span class="math inline">\(F(\cdot)\)</span>. Teorema limit sentral memberikan distribusi sampel (sampling) dari rata-rata sampel dalam sampel besar di bawah kondisi tertentu.</p>
+</div>
+<div id="teorema-limit-sentral" class="section level3 hasAnchor" number="15.1.3">
+<h3><span class="header-section-number">15.1.3</span> Teorema Limit Sentral<a href="appendix-a-review-of-statistical-inference.html#teorema-limit-sentral" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam statistika, terdapat variasi dari teorema limit sentral (Central Limit Theorem, CLT) yang menjamin bahwa, dalam kondisi tertentu, rata-rata sampel akan mendekati rata-rata populasi dengan distribusi samplingnya mendekati distribusi normal saat ukuran sampel mendekati tak hingga. Kami menyebutkan teorema limit sentral Lindeberg-Levy yang menetapkan distribusi sampling asimtotik dari rata-rata sampel <span class="math inline">\(\bar{X}\)</span> yang dihitung menggunakan sampel acak dari populasi universe dengan distribusi <span class="math inline">\(F(\cdot)\)</span>.</p>
+<p><em>Teorema limit sentral Lindeberg-Levy</em>. Misalkan <span class="math inline">\(X_1,...,X_n\)</span> adalah sampel acak dari distribusi populasi <span class="math inline">\(F(\cdot)\)</span> dengan rata-rata <span class="math inline">\(\mu\)</span> dan varians <span class="math inline">\(\sigma^2&lt;\infty\)</span>. Selisih antara rata-rata sampel <span class="math inline">\(\bar{X}\)</span> dan <span class="math inline">\(\mu\)</span>, ketika dikalikan dengan akar kuadrat <span class="math inline">\(n\)</span>, konvergen dalam distribusi menjadi distribusi normal saat ukuran sampel mendekati tak hingga. Artinya,</p>
+<p><span class="math display">\[\begin{equation}
+\sqrt{n}(\bar{X}-\mu)\xrightarrow[]{d}N(0,\sigma).
+\end{equation}\]</span></p>
+<p>Perlu dicatat bahwa teorema limit sentral tidak memerlukan bentuk parametrik untuk <span class="math inline">\(F(\cdot)\)</span>. Berdasarkan teorema limit sentral, kita dapat melakukan inferensi statistik pada rata-rata populasi (kita menyimpulkan, bukan menyimpulkan secara deduktif). Jenis inferensi yang dapat kita lakukan meliputi <em>estimasi</em> populasi, <em>pengujian hipotesis</em> tentang kebenaran suatu pernyataan nol, dan <em>prediksi</em> sampel masa depan dari populasi.</p>
+</div>
+</div>
+<div id="estimasi-titik-dan-properti" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Estimasi Titik dan Properti<a href="appendix-a-review-of-statistical-inference.html#estimasi-titik-dan-properti" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Fungsi distribusi populasi <span class="math inline">\(F(\cdot)\)</span> biasanya dapat dikarakterisasi oleh sejumlah terbatas (terbatas) parameter yang disebut <em>parameter</em>, dalam hal ini kita mengacu pada distribusi sebagai <em>distribusi parametrik</em>. Sebaliknya, dalam analisis <em>nonparametrik</em> , atribut-atribut distribusi sampling tidak terbatas pada sejumlah kecil parameter.</p>
+<p>Untuk memperoleh karakteristik populasi, terdapat berbagai atribut yang terkait dengan distribusi populasi <span class="math inline">\(F(\cdot)\)</span>. Ukuran-ukuran tersebut meliputi rata-rata, median, persentil (misalnya persentil ke-95), dan simpangan baku. Karena ukuran-ukuran ringkasan ini tidak bergantung pada referensi parametrik tertentu, mereka adalah ukuran ringkasan <em>nonparametrik</em>.</p>
+<p>Di sisi lain, dalam analisis <em>parametrik</em>, kita dapat mengasumsikan keluarga distribusi tertentu dengan parameter-parameter tertentu. Misalnya, orang biasanya menganggap bahwa logaritma jumlah klaim memiliki distribusi normal dengan rata-rata <span class="math inline">\(\mu\)</span> dan simpangan baku <span class="math inline">\(\sigma\)</span>. Dengan kata lain, kita mengasumsikan bahwa klaim memiliki distribusi lognormal dengan parameter-parameter <span class="math inline">\(\mu\)</span> dan <span class="math inline">\(\sigma\)</span>. Sebagai alternatif, perusahaan asuransi umumnya mengasumsikan bahwa tingkat keparahan klaim mengikuti distribusi gamma dengan parameter bentuk <span class="math inline">\(\alpha\)</span> dan parameter skala <span class="math inline">\(\boldsymbol{\theta}\)</span>. Di sini, distribusi normal, lognormal, dan gamma adalah contoh dari distribusi parametrik. Dalam contoh di atas, besaran <span class="math inline">\(\mu\)</span>, <span class="math inline">\(sigma\)</span>, <span class="math inline">\(alpha\)</span>, dan <span class="math inline">\(\boldsymbol{\theta}\)</span> dikenal sebagai parameter. Untuk keluarga distribusi parametrik yang diberikan, distribusi secara unik ditentukan oleh nilai-nilai parameter tersebut.</p>
+<p>Seringkali, kita menggunakan <span class="math inline">\(\boldsymbol{\theta}\)</span> untuk menyatakan atribut ringkasan dari populasi. Dalam model-parametrik, <span class="math inline">\(\boldsymbol{\theta}\)</span> dapat berupa parameter atau fungsi parameter dari suatu distribusi, seperti parameter rata-rata dan varians normal. Dalam analisis nonparametrik, <span class="math inline">\(\theta\)</span> dapat berbentuk ukuran ringkasan nonparametrik seperti rata-rata atau simpangan baku populasi. Misalkan <span class="math inline">\(\hat{\theta} =\hat{\theta}(X_1, \ldots, X_n)\)</span> adalah fungsi dari sampel yang memberikan representasi atau <em>estimasi</em> dari <span class="math inline">\(\theta\)</span>. Ini disebut sebagai <em>statistik</em>, yaitu fungsi dari sampel <span class="math inline">\(X_1,…,X_n\)</span>.</p>
+<div id="estimasi-metode-momen" class="section level3 hasAnchor" number="15.2.1">
+<h3><span class="header-section-number">15.2.1</span> Estimasi Metode Momen<a href="appendix-a-review-of-statistical-inference.html#estimasi-metode-momen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sebelum mendefinisikan estimasi metode momen, kita akan mendefinisikan konsep momen terlebih dahulu. Momen adalah atribut populasi yang menggambarkan fungsi distribusi <span class="math inline">\(F(\cdot)\)</span>. Diberikan pengambilan acak <span class="math inline">\(X\)</span> dari <span class="math inline">\(F(\cdot)\)</span>, ekspektasi <span class="math inline">\(\mu_k=\mathrm{E}[X^k]\)</span> disebut sebagai <em>momen ke-</em><span class="math inline">\(k\)</span> dari <span class="math inline">\(X\)</span>, dengan <span class="math inline">\(k=1,2,3,…\)</span> Sebagai contoh, rata-rata populasi <span class="math inline">\(\mu\)</span> adalah momen pertama. Selain itu, ekspektasi <span class="math inline">\(\mathrm{E}[(X-\mu)^k]\)</span> disebut <em>momen sentral ke-</em><span class="math inline">\(k\)</span>. Oleh karena itu, varians adalah momen sentral kedua.</p>
+<p>Dengan menggunakan sampel acak <span class="math inline">\(X_1,…,X_n\)</span>, kita dapat membuat momen sampel yang sesuai, <span class="math inline">\(\hat{\mu}_k=(1/n)\sum_{i=1}^n X_i^k\)</span>, untuk mengestimasi atribut populasi <span class="math inline">\(\mu_k\)</span>. Sebagai contoh, kita telah menggunakan rata-rata sampel <span class="math inline">\(\bar{X}\)</span> sebagai estimator untuk rata-rata populasi <span class="math inline">\(\mu\)</span>. Demikian pula, momen sentral kedua dapat diestimasi sebagai <span class="math inline">\((1/n)\sum_{i=1}^n(X_i-\bar{X})^2\)</span>. Tanpa mengasumsikan bentuk parametrik untuk <span class="math inline">\(F(\cdot)\)</span>, momen sampel merupakan estimasi nonparametrik dari atribut populasi yang sesuai. Estimator seperti itu yang didasarkan pada pencocokan momen sampel dan momen populasi yang sesuai disebut sebagai <em>estimator metode momen</em> (mme).</p>
+<p>Meskipun mme secara alami digunakan dalam model nonparametrik, itu juga dapat digunakan untuk mengestimasi parameter ketika diasumsikan sebuah keluarga distribusi parametrik tertentu untuk <span class="math inline">\(F(\cdot)\)</span>. Misalkan <span class="math inline">\(\boldsymbol{\theta}=(\theta_1,\cdots,\theta_m)\)</span> merupakan vektor parameter yang sesuai dengan distribusi parametrik <span class="math inline">\(F(\cdot)\)</span>. Dalam keluarga distribusi tersebut, biasanya kita mengetahui hubungan antara parameter dan momen. Khususnya, kita mengetahui bentuk spesifik dari fungsi-fungsi <span class="math inline">\(h_1(\cdot),h_2(\cdot),\cdots,h_m(\cdot)\)</span> sehingga <span class="math inline">\(\mu_1=h_1(\boldsymbol{\theta}),\,\mu_2=h_2(\boldsymbol{\theta}),\,\cdots,\,\mu_m=h_m(\boldsymbol{\theta})\)</span>. Diberikan mme <span class="math inline">\(\hat{\mu}_1, \ldots, \hat{\mu}_m\)</span> dari sampel acak, mme parameter <span class="math inline">\(\hat{\theta}_1,\cdots,\hat{\theta}_m\)</span> dapat diperoleh dengan memecahkan persamaan-persamaan dari</p>
+<p><span class="math display">\[\begin{equation}
+\hat{\mu}_1=h_1(\hat{\theta}_1,\cdots,\hat{\theta}_m);
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\hat{\mu}_2=h_2(\hat{\theta}_1,\cdots,\hat{\theta}_m);
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\cdots
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\hat{\mu}_m=h_m(\hat{\theta}_1,\cdots,\hat{\theta}_m).
+\end{equation}\]</span></p>
+</div>
+<div id="estimasi-maksimum-likelihood" class="section level3 hasAnchor" number="15.2.2">
+<h3><span class="header-section-number">15.2.2</span> Estimasi Maksimum Likelihood<a href="appendix-a-review-of-statistical-inference.html#estimasi-maksimum-likelihood" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ketika <span class="math inline">\(F(\cdot)\)</span> mengambil bentuk parametrik, metode estimasi likelihood maksimum (maximum likelihood estimation) banyak digunakan untuk mengestimasi parameter populasi <span class="math inline">\(\boldsymbol{\theta}\)</span>. Estimasi likelihood maksimum didasarkan pada fungsi likelihood, yang merupakan fungsi dari parameter-parameter yang diberikan sampel yang diamati. Misalkan <span class="math inline">\(f(x_i|\boldsymbol{\theta})\)</span> adalah fungsi probabilitas dari <span class="math inline">\(X_i\)</span> yang dievaluasi pada <span class="math inline">\(X_i=x_i\)</span> <span class="math inline">\((i=1,2,\cdots,n)\)</span>; ini adalah fungsi massa probabilitas dalam kasus <span class="math inline">\(X\)</span> yang diskrit dan fungsi densitas probabilitas dalam kasus <span class="math inline">\(X\)</span> yang kontinu. Dengan asumsi independensi, <em>fungsi likelihood</em> dari <span class="math inline">\(\boldsymbol{\theta}\)</span> yang terkait dengan pengamatan <span class="math inline">\((X_1,X_2,\cdots,X_n)=(x_1,x_2,\cdots,x_n)=\mathbf{x}\)</span> dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+L(\boldsymbol{\theta}|\mathbf{x})=\prod_{i=1}^nf(x_i|\boldsymbol{\theta}),
+\end{equation}\]</span></p>
+<p>dengan fungsi log-likelihood yang sesuai diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+l(\boldsymbol{\theta}|\mathbf{x})=\log(L(\boldsymbol{\theta}|\mathbf{x}))=\sum_{i=1}^n\log f(x_i|\boldsymbol{\theta}).
+\end{equation}\]</span></p>
+<p>Estimator maximum likelihood (MLE) dari <span class="math inline">\(\boldsymbol{\theta}\)</span> adalah himpunan nilai <span class="math inline">\(\boldsymbol{\theta}\)</span> yang memaksimalkan fungsi likelihood <em>(fungsi log-likelihood)</em>, dengan mempertimbangkan sampel yang diamati. Dengan demikian, MLE <span class="math inline">\(\hat{\boldsymbol{\theta}}\)</span> dapat ditulis sebagai</p>
+<p><span class="math display">\[\begin{equation}
+\hat{\boldsymbol{\theta}}={\mbox{argmax}}_{\boldsymbol{\theta}\in\Theta}l(\boldsymbol{\theta}|\mathbf{x}),
+\end{equation}\]</span></p>
+<p>di mana <span class="math inline">\(\theta\)</span> adalah ruang parameter dari <span class="math inline">\(\boldsymbol{\theta}\)</span>, dan <span class="math inline">\({\mbox{argmax}}_{\boldsymbol{\theta}\in\Theta}l(\boldsymbol{\theta}|\mathbf{x})\)</span> didefinisikan sebagai nilai <span class="math inline">\(\boldsymbol{\theta}\)</span> di mana fungsi <span class="math inline">\(l(\boldsymbol{\theta}|\mathbf{x})\)</span> mencapai nilai maksimumnya.</p>
+<p>Diberikan bentuk analitis dari fungsi likelihood, mle dapat diperoleh dengan mengambil turunan pertama dari fungsi log-likelihood terhadap <span class="math inline">\(\boldsymbol{\theta}\)</span>, dan menetapkan nilai-nilai turunan parsial menjadi nol. Dengan kata lain, mle adalah solusi dari persamaan-persamaan:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_1}=0;
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_2}=0;
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\cdots
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial l(\hat{\boldsymbol{\theta}}|\mathbf{x})}{\partial\hat{\theta}_m}=0,
+\end{equation}\]</span></p>
+<p>asalkan turunan parsial kedua negatif.</p>
+<p>Untuk model parametrik, mle dari parameter-parameter dapat diperoleh secara analitis (misalnya, dalam kasus distribusi normal dan estimasi linear), atau secara numerik melalui algoritma iteratif seperti metode Newton-Raphson dan versi adaptifnya (misalnya, dalam kasus model linier umum dengan variabel respons non-normal).</p>
+<p><em>Distribusi normal</em>. Anggaplah <span class="math inline">\((X_1,X_2,⋯,X_n)\)</span> sebagai sampel acak dari distribusi normal <span class="math inline">\(N(\mu, \sigma^2)\)</span>. Dengan sampel yang diamati <span class="math inline">\((X_1,X_2,\cdots,X_n)=(x_1,x_2,\cdots,x_n)\)</span> kita dapat menulis fungsi likelihood dari <span class="math inline">\(\mu,\sigma^2\)</span> sebagai</p>
+<p><span class="math display">\[\begin{equation}
+L(\mu,\sigma^2)=\prod_{i=1}^n\left[\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{\left(x_i-\mu\right)^2}{2\sigma^2}}\right],
+\end{equation}\]</span></p>
+<p>dengan fungsi log-likelihood yang sesuai diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+l(\mu,\sigma^2)=-\frac{n}{2}[\log(2\pi)+\log(\sigma^2)]-\frac{1}{2\sigma^2}\sum_{i=1}^n\left(x_i-\mu\right)^2.
+\end{equation}\]</span></p>
+<p>Dengan memecahkan</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial l(\hat{\mu},\sigma^2)}{\partial \hat{\mu}}=0,
+\end{equation}\]</span></p>
+<p>kita mendapatkan <span class="math inline">\(\hat{\mu}=\bar{x}=(1/n)\sum_{i=1}^nx_i\)</span>. Mudah untuk diverifikasi bahwa <span class="math inline">\(\frac{\partial l^2(\hat{\mu},\sigma^2)}{\partial \hat{\mu}^2}\left|_{\hat{\mu}=\bar{x}}\right.&lt;0\)</span>. Karena ini berlaku untuk <span class="math inline">\(x\)</span> yang sembarang, <span class="math inline">\(\hat{\mu}=\bar{X}\)</span> adalah mle dari <span class="math inline">\(\mu\)</span>. Demikian pula, dengan memecahkan</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial l(\mu,\hat{\sigma}^2)}{\partial \hat{\sigma}^2}=0,
+\end{equation}\]</span></p>
+<p>kita mendapatkan <span class="math inline">\(\hat{\sigma}^2=(1/n)\sum_{i=1}^n(x_i-\mu)^2\)</span>. Dengan menggantikan <span class="math inline">\(\mu\)</span> oleh <span class="math inline">\(\hat{\mu}\)</span>, kita mendapatkan mle dari <span class="math inline">\(\sigma^2\)</span> sebagai <span class="math inline">\(\hat{\sigma}^2=(1/n)\sum_{i=1}^n(X_i-\bar{X})^2\)</span>.</p>
+<p>Dengan demikian, rata-rata sampel <span class="math inline">\(\bar{X}\)</span> dan <span class="math inline">\(\sigma^2\)</span> keduanya adalah mme dan MLE untuk rata-rata <span class="math inline">\(\mu\)</span> dan varian <span class="math inline">\(\sigma^2\)</span>, dalam distribusi populasi normal <span class="math inline">\(F(\cdot)\)</span>. Lebih banyak detail mengenai sifat-sifat fungsi likelihood diberikan dalam Lampiran Bagian 17.1.</p>
+</div>
+</div>
+<div id="estimasi-interval" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> Estimasi Interval<a href="appendix-a-review-of-statistical-inference.html#estimasi-interval" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Setelah kita memperkenalkan mme dan mle, kita dapat melakukan jenis pertama dari inferensi statistik, yaitu <em>estimasi interval</em> yang mengukur ketidakpastian akibat penggunaan sampel yang terbatas. Dengan mendapatkan distribusi sampling dari mle, kita dapat mengestimasi interval (interval kepercayaan) untuk parameter tersebut. Dalam pendekatan frequentist (misalnya, yang didasarkan pada estimasi maksimum likelihood), interval kepercayaan yang dihasilkan dari kerangka sampling yang sama akan mencakup nilai sebenarnya sebagian besar waktu (misalnya, 95% dari waktu), jika kita mengulangi proses sampling dan menghitung ulang interval berulang kali. Proses tersebut membutuhkan derivasi distribusi sampling untuk mle.</p>
+<div id="distribusi-tepat-untuk-rata-rata-sampel-normal" class="section level3 hasAnchor" number="15.3.1">
+<h3><span class="header-section-number">15.3.1</span> Distribusi Tepat untuk Rata-rata Sampel Normal<a href="appendix-a-review-of-statistical-inference.html#distribusi-tepat-untuk-rata-rata-sampel-normal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Karena sifat <em>aditivitas</em> dari distribusi normal (yaitu, jumlah dari variabel acak normal yang mengikuti distribusi normal multivariat tetap mengikuti distribusi normal) dan distribusi normal termasuk dalam <em>keluarga lokasi–skala</em> (yaitu, transformasi lokasi dan/atau skala dari variabel acak normal menghasilkan distribusi normal), maka rata-rata sampel <span class="math inline">\(\bar{X}\)</span> dari sampel acak dari distribusi normal <span class="math inline">\(F(\cdot)\)</span> memiliki distribusi sampling normal untuk setiap <span class="math inline">\(n\)</span> yang terbatas. Diberikan <span class="math inline">\(X_i\sim^{iid} N(\mu,\sigma^2)\)</span>, mle dari <span class="math inline">\(\mu\)</span> memiliki distribusi yang tepat</p>
+<p><span class="math display">\[\begin{equation}
+\bar{X}\sim N\left(\mu,\frac{\sigma^2}{n}\right).
+\end{equation}\]</span></p>
+<p>Oleh karena itu, rata-rata sampel adalah estimator tidak bias dari <span class="math inline">\(\mu\)</span>. Selain itu, ketidakpastian dalam estimasi dapat diukur dengan varian <span class="math inline">\(\sigma^2/n\)</span>, yang akan berkurang seiring dengan pertambahan ukuran sampel <span class="math inline">\(n\)</span>. Ketika ukuran sampel mendekati tak terhingga, rata-rata sampel akan mendekati titik tunggal pada nilai sebenarnya.</p>
+</div>
+<div id="properti-sampel-besar-dari-estimasi-maksimum-likelihood" class="section level3 hasAnchor" number="15.3.2">
+<h3><span class="header-section-number">15.3.2</span> Properti Sampel Besar dari Estimasi Maksimum Likelihood<a href="appendix-a-review-of-statistical-inference.html#properti-sampel-besar-dari-estimasi-maksimum-likelihood" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk mle dari parameter mean dan parameter-parameter lain dari keluarga distribusi parametrik lainnya, kita biasanya tidak dapat mendapatkan distribusi sampling yang tepat untuk sampel yang terbatas. Untungnya, ketika ukuran sampel cukup besar, mle dapat diaproksimasi dengan distribusi normal. Berkat teori maximum likelihood secara umum, mle memiliki beberapa sifat yang baik dalam sampel yang cukup besar.</p>
+<ul>
+<li>MLE (Maximum Likelihood Estimator) <span class="math inline">\(\hat{\theta}\)</span> dari parameter <span class="math inline">\(\theta\)</span> merupakan estimator yang <em>konsisten</em>. Artinya, <span class="math inline">\(\hat{\theta}\)</span> konvergen dalam probabilitas ke nilai sebenarnya <span class="math inline">\(\theta\)</span>, ketika ukuran sampel <span class="math inline">\(n\)</span> mendekati tak hingga.</li>
+<li>MLE memiliki sifat <em>asimptotik normalitas</em>, yang berarti bahwa estimator akan konvergen dalam distribusi menjadi distribusi normal yang berpusat di sekitar nilai sebenarnya, ketika ukuran sampel mendekati tak hingga. Secara khusus,</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\sqrt{n}(\hat{\theta}-\theta)\rightarrow_d N\left(0,\,V\right),\quad \mbox{as}\quad n\rightarrow \infty,
+\end{equation}\]</span></p>
+<p>di mana <span class="math inline">\(V\)</span> adalah invers dari Informasi Fisher. Dengan demikian, mle <span class="math inline">\(\hat{\theta}\)</span> mengikuti secara aproksimatif distribusi normal dengan mean <span class="math inline">\(\theta\)</span> dan varian <span class="math inline">\(V/n\)</span>, ketika ukuran sampel besar.
+- MLE adalah <em>efisien</em>, yang berarti bahwa ia memiliki varian asimptotik terkecil <span class="math inline">\(V\)</span>, umumnya disebut sebagai <em>batas bawah Cramer-Rao</em>. Secara khusus, batas bawah Cramer-Rao adalah invers dari informasi Fisher yang didefinisikan sebagai <span class="math inline">\(\mathcal{I}(\theta)=-\mathrm{E}(\partial^2\log f(X;\theta)/\partial \theta^2)\)</span>. Oleh karena itu, <span class="math inline">\(\mathrm{Var}(\hat{\theta})\)</span> dapat diestimasi berdasarkan informasi Fisher yang diamati yang dapat ditulis sebagai <span class="math inline">\(-\sum_{i=1}^n \partial^2\log f(X_i;\theta)/\partial \theta^2\)</span>.</p>
+<p>Untuk banyak distribusi parametrik, informasi Fisher dapat dihitung secara analitik untuk mle dari parameter-parameter tersebut. Untuk model parametrik yang lebih kompleks, informasi Fisher dapat dievaluasi secara numerik menggunakan integrasi numerik untuk distribusi kontinu, atau penjumlahan numerik untuk distribusi diskrit. Informasi lebih lanjut tentang estimasi maximum likelihood dapat ditemukan di Bagian Lampiran 17.2.</p>
+</div>
+<div id="interval-kepercayaan" class="section level3 hasAnchor" number="15.3.3">
+<h3><span class="header-section-number">15.3.3</span> Interval Kepercayaan<a href="appendix-a-review-of-statistical-inference.html#interval-kepercayaan" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Diberikan bahwa mle <span class="math inline">\(\hat{\theta}\)</span> memiliki distribusi normal yang tepat atau mendekati dengan mean <span class="math inline">\(\theta\)</span> dan varian <span class="math inline">\(\mathrm{Var}(\hat{\theta})\)</span>, kita dapat mengambil akar kuadrat dari varian dan memasukkan estimasi untuk mendefinisikan <span class="math inline">\(se(\hat{\theta}) = \sqrt{\mathrm{Var}(\hat{\theta})}\)</span>. <em>Standar error</em> adalah simpangan baku yang diestimasi yang mengukur ketidakpastian dalam estimasi yang dihasilkan dari penggunaan sampel terbatas. Dalam beberapa kondisi keberaturan yang mengatur distribusi populasi, kita dapat menunjukkan bahwa statistik</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\hat{\theta}-\theta}{se(\hat{\theta})}
+\end{equation}\]</span></p>
+<p>konvergen dalam distribusi ke distribusi Student-<span class="math inline">\(t\)</span> dengan derajat kebebasan (sebuah parameter dari distribusi) <span class="math inline">\(n−p\)</span>, di mana <span class="math inline">\(p\)</span> adalah jumlah parameter dalam model selain varians. Sebagai contoh, untuk kasus distribusi normal, kita memiliki <span class="math inline">\(p=1\)</span> untuk parameter <span class="math inline">\(\mu\)</span>; untuk model regresi linear dengan satu variabel independen, kita memiliki <span class="math inline">\(p=2\)</span> untuk parameter intercept dan variabel independen. Misalkan <span class="math inline">\(t_{n-p}(1-\alpha/2)\)</span> adalah persentil ke-<span class="math inline">\(100\times(1-\alpha/2)\)</span> dari distribusi Student-<span class="math inline">\(t\)</span> yang memenuhi <span class="math inline">\(\Pr\left[t&lt; t_{n-p}\left(1-{\alpha}/{2}\right) \right]= 1-{\alpha}/{2}\)</span>. Maka, kita memiliki,</p>
+<p><span class="math display">\[\begin{equation}
+\Pr\left[-t_{n-p}\left(1-\frac{\alpha}{2}\right)&lt;\frac{\hat{\theta}-\theta}{se(\hat{\theta})}&lt; t_{n-p}\left(1-\frac{\alpha}{2}\right) \right]= 1-{\alpha},
+\end{equation}\]</span></p>
+<p>dari mana kita dapat menentukan <em>interval kepercayaan</em> untuk <span class="math inline">\(\theta\)</span>. Dari persamaan di atas, kita dapat mendapatkan sepasang statistik, <span class="math inline">\(\hat{\theta}_1\)</span> dan <span class="math inline">\(\hat{\theta}_2\)</span>, yang memberikan interval dalam bentuk <span class="math inline">\([\hat{\theta}_1, \hat{\theta}_2]\)</span>. Interval ini adalah interval kepercayaan <span class="math inline">\(1-\alpha\)</span> untuk <span class="math inline">\(\theta\)</span>, sehingga <span class="math inline">\(\Pr\left(\hat{\theta}_1 \le \theta \le \hat{\theta}_2\right) = 1-\alpha,\)</span>, di mana probabilitas 1−α disebut tingkat kepercayaan. Perlu diperhatikan bahwa <em>interval kepercayaan</em> di atas tidak valid untuk sampel kecil, kecuali untuk kasus rata-rata normal.</p>
+<p>Dalam <em>distribusi normal</em>. Untuk rata-rata populasi normal <span class="math inline">\(\mu\)</span>, mle memiliki distribusi sampling yang tepat <span class="math inline">\(\bar{X}\sim N(\mu,\sigma/\sqrt{n})\)</span>, di mana kita dapat mengestimasi <span class="math inline">\(se(\hat{\theta})\)</span> dengan <span class="math inline">\(\hat{\sigma}/\sqrt{n}\)</span>. Berdasarkan <em>Teorema Cochran</em>, statistik yang dihasilkan memiliki distribusi Student-<em>t</em> yang tepat dengan derajat kebebasan <span class="math inline">\(n−1\)</span>. Oleh karena itu, kita dapat menentukan batas bawah dan batas atas dari interval kepercayaan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+\hat{\mu}_1 = \hat{\mu} - t_{n-1}\left(1-\frac{\alpha}{2}\right)\frac{ \hat{\sigma}}{\sqrt{n}}
+\end{equation}\]</span></p>
+<p>dan</p>
+<p><span class="math display">\[\begin{equation}
+\hat{\mu}_2 = \hat{\mu} + t_{n-1}\left(1-\frac{\alpha}{2}\right)\frac{ \hat{\sigma}}{\sqrt{n}}.
+\end{equation}\]</span></p>
+<p>Ketika <span class="math inline">\(\alpha = 0.05\)</span>, <span class="math inline">\(t_{n-1}(1-\alpha/2) \approx 1.96\)</span> untuk nilai n yang besar. Berdasarkan Teorema Cochran, interval kepercayaan tetap valid tidak peduli dengan ukuran sampel.</p>
+</div>
+</div>
+<div id="pengujian-hipotesis" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> Pengujian Hipotesis<a href="appendix-a-review-of-statistical-inference.html#pengujian-hipotesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Untuk parameter <span class="math inline">\(\boldsymbol{\theta}\)</span> dari distribusi parametrik, jenis lain dari inferensi statistik adalah <em>pengujian hipotesis</em> yang memverifikasi apakah hipotesis mengenai parameter tersebut benar, dengan menggunakan tingkat signifikansi tertentu yang disebut <em>level of significance</em> <span class="math inline">\(\alpha\)</span> (misalnya, 5%). Dalam pengujian hipotesis, kita menolak hipotesis nol, yaitu pernyataan yang membatasi mengenai parameter, jika probabilitas mengamati sampel acak seekstrem sampai dengan yang diamati lebih kecil daripada <span class="math inline">\(\alpha\)</span>, jika hipotesis nol benar.</p>
+<div id="konsep-dasar-1" class="section level3 hasAnchor" number="15.4.1">
+<h3><span class="header-section-number">15.4.1</span> Konsep Dasar<a href="appendix-a-review-of-statistical-inference.html#konsep-dasar-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada pengujian statistik, biasanya kita tertarik untuk menguji apakah pernyataan mengenai beberapa parameter, <em>hipotesis nol</em> (dinyatakan sebagai <span class="math inline">\(H_0\)</span>), benar berdasarkan data yang diamati. Hipotesis nol dapat memiliki bentuk umum <span class="math inline">\(H_0:\theta\in\Theta_0\)</span>, di mana <span class="math inline">\(\Theta_0\)</span> adalah subset dari ruang parameter <span class="math inline">\(Θ\)</span> dari <span class="math inline">\(θ\)</span> yang mungkin berisi beberapa parameter. Untuk kasus dengan satu parameter <span class="math inline">\(θ\)</span>, hipotesis nol biasanya memiliki bentuk <span class="math inline">\(H_0:\theta=\theta_0\)</span> atau <span class="math inline">\(H_0:\theta\leq\theta_0\)</span>. Kebalikan dari hipotesis nol disebut <em>hipotesis alternatif</em> yang dapat dituliskan sebagai <span class="math inline">\(H_a:\theta\neq\theta_0\)</span> atau <span class="math inline">\(H_a:\theta&gt;\theta_0\)</span>. Uji statistik pada <span class="math inline">\(H_0:\theta=\theta_0\)</span> disebut uji <em>dua sisi</em> karena hipotesis alternatif berisi dua ketidaksamaan, sedangkan uji dengan <span class="math inline">\(H_0:\theta\leq\theta_0\)</span> atau <span class="math inline">\(H_0:\theta\geq\theta_0\)</span> disebut uji <em>satu sisi</em>.</p>
+<p>Uji statistik biasanya dibangun berdasarkan statistik <span class="math inline">\(T\)</span> dan distribusinya yang eksak atau berdasarkan sampel besar. Uji tersebut umumnya menolak uji dua sisi ketika <span class="math inline">\(T&gt;c_1\)</span> atau <span class="math inline">\(T&lt;c_2\)</span>, di mana dua konstanta <span class="math inline">\(c_1\)</span> dan <span class="math inline">\(c_2\)</span> diperoleh berdasarkan distribusi sampel dari <span class="math inline">\(T\)</span> pada tingkat probabilitas <span class="math inline">\(\alpha\)</span> yang disebut <em>tingkat signifikansi</em>. Secara khusus, tingkat signifikansi <span class="math inline">\(\alpha\)</span> memenuhi</p>
+<p><span class="math display">\[\begin{equation}
+\alpha=\Pr(\mbox{reject }H_0|H_0\mbox{ is true}),
+\end{equation}\]</span></p>
+<p>Artinya, jika hipotesis nol benar, kita hanya akan menolak hipotesis nol sebanyak 5% dari jumlah pengujian yang dilakukan, jika kita mengulangi proses sampling dan pengujian berulang kali.</p>
+<p>Oleh karena itu, tingkat signifikansi adalah probabilitas terjadinya <em>kesalahan tipe I</em> (kesalahan jenis pertama), yaitu kesalahan menolak hipotesis nol yang sebenarnya benar. Untuk alasan ini, tingkat signifikansi <span class="math inline">\(\alpha\)</span> juga disebut sebagai tingkat kesalahan tipe I. Jenis kesalahan lain yang dapat kita buat dalam pengujian hipotesis adalah <em>kesalahan tipe II</em> (kesalahan jenis kedua), yaitu kesalahan menerima hipotesis nol yang sebenarnya salah. Demikian pula, kita dapat mendefinisikan <em>tingkat kesalahan tipe II</em> sebagai probabilitas tidak menolak (menerima) hipotesis nol yang sebenarnya salah. Dengan kata lain, tingkat kesalahan tipe II diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+\Pr(\mbox{accept }H_0|H_0\mbox{ is false}).
+\end{equation}\]</span></p>
+<p>Jumlah lain yang penting mengenai kualitas uji statistik disebut daya uji (power of the test) <span class="math inline">\(\beta\)</span>, yang didefinisikan sebagai probabilitas menolak hipotesis nol yang salah. Definisi matematis dari daya uji adalah sebagai berikut:</p>
+<p><span class="math display">\[\begin{equation}
+\beta=\Pr(\mbox{reject }H_0|H_0\mbox{ is false}).
+\end{equation}\]</span></p>
+<p>Perlu diperhatikan bahwa daya uji biasanya dihitung berdasarkan nilai alternatif tertentu <span class="math inline">\(\theta=\theta_a\)</span>, dengan distribusi sampling yang spesifik dan ukuran sampel yang spesifik pula. Dalam penelitian eksperimen sebenarnya, orang biasanya menghitung ukuran sampel yang diperlukan untuk memilih ukuran sampel yang akan memastikan peluang besar mendapatkan uji statistik yang signifikan secara statistik (misalnya, dengan daya uji yang telah ditentukan sebelumnya seperti 85%).</p>
+</div>
+<div id="uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle" class="section level3 hasAnchor" number="15.4.2">
+<h3><span class="header-section-number">15.4.2</span> Uji Student-t berdasarkan Estimasi Maksimum Likelihood (MLE)<a href="appendix-a-review-of-statistical-inference.html#uji-student-t-berdasarkan-estimasi-maksimum-likelihood-mle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berdasarkan hasil dari Bagian 15.3.1, kita dapat mendefinisikan uji Student-<span class="math inline">\(t\)</span> untuk menguji <span class="math inline">\(H_0:\theta=\theta_0\)</span>. Secara khusus, kita mendefinisikan statistik uji sebagai</p>
+<p><span class="math display">\[\begin{equation}
+t\text{-stat}=\frac{\hat{\theta}-\theta_0}{se(\hat{\theta})},
+\end{equation}\]</span></p>
+<p>distribusi besar-sampel dari distribusi student-<span class="math inline">\(t\)</span> dengan derajat kebebasan <span class="math inline">\(n−p\)</span>, ketika hipotesis nol benar (yaitu, ketika <span class="math inline">\(\theta=\theta_0\)</span>.</p>
+<p>Dengan <em>tingkat signifikansi</em> tertentu <span class="math inline">\(α\)</span>, misalnya 5%, kita menolak hipotesis nol jika kejadian <span class="math inline">\(t\text{-stat}&lt;-t_{n-p}\left(1-{\alpha}/{2}\right)\)</span> atau <span class="math inline">\(t\text{-stat}&gt; t_{n-p}\left(1-{\alpha}/{2}\right)\)</span> terjadi (<em>daerah penolakan</em>). Dalam hipotesis nol <span class="math inline">\(H_0\)</span>, kita memiliki</p>
+<p><span class="math display">\[\begin{equation}
+\Pr\left[t\text{-stat}&lt;-t_{n-p}\left(1-\frac{\alpha}{2}\right)\right]=\Pr\left[t\text{-stat}&gt; t_{n-p}\left(1-\frac{\alpha}{2}\right) \right]= \frac{\alpha}{2}.
+\end{equation}\]</span></p>
+<p>Selain konsep daerah penolakan, kita dapat menolak uji berdasarkan nilai <span class="math inline">\(p\)</span><em>-value</em> yang didefinisikan sebagai <span class="math inline">\(2\Pr(T&gt;|t\text{-stat}|)\)</span> untuk uji dua sisi yang disebutkan sebelumnya, di mana variabel acak <span class="math inline">\(T\sim T_{n-p}\)</span>. Kita menolak hipotesis nol jika nilai <span class="math inline">\(p\)</span>-<em>value</em> lebih kecil dari atau sama dengan <span class="math inline">\(α\)</span>. Untuk sampel yang diberikan, nilai <span class="math inline">\(p\)</span>-<em>value</em> didefinisikan sebagai tingkat signifikansi terkecil di mana hipotesis nol akan ditolak.</p>
+<p>Demikian pula, kita dapat membuat uji satu sisi untuk hipotesis nol <span class="math inline">\(H_0:\theta\leq\theta_0\)</span> (atau <span class="math inline">\(H_0:\theta\geq\theta_0\)</span>). Dengan menggunakan statistik uji yang sama, kita menolak hipotesis nol ketika <span class="math inline">\(t\text{-stat}&gt; t_{n-p}\left(1-{\alpha}\right)\)</span> (atau <span class="math inline">\(t\text{-stat}&lt;- t_{n-p}\left(1-{\alpha}\right)\)</span> untuk uji pada <span class="math inline">\(H_0:\theta\geq\theta_0\)</span>). Nilai <span class="math inline">\(p\)</span>-<em>value</em> yang sesuai didefinisikan sebagai <span class="math inline">\(\Pr(T&gt;|t\text{-stat}|)\)</span> (atau <span class="math inline">\(\Pr(T&lt;|t\text{-stat}|)\)</span>) untuk uji pada <span class="math inline">\(H_0:\theta\geq\theta_0\)</span>). Perlu diperhatikan bahwa uji ini tidak valid untuk sampel kecil, kecuali untuk kasus uji pada rata-rata normal.</p>
+<p><em>Uji <span class="math inline">\(t\)</span> Satu-Sampel untuk Rata-Rata Normal</em>. Untuk uji pada rata-rata normal dengan bentuk <span class="math inline">\(H_0:\mu=\mu_0\)</span>, <span class="math inline">\(H_0:\mu\leq\mu_0\)</span>, atau <span class="math inline">\(H_0:\mu\geq\mu_0\)</span>, kita dapat mendefinisikan statistik uji sebagai</p>
+<p><span class="math display">\[\begin{equation}
+t\text{-stat}=\frac{\bar{X}-\mu_0}{{\hat{\sigma}}/{\sqrt{n}}},
+\end{equation}\]</span></p>
+<p>untuk mana kita memiliki distribusi sampling yang tepat <span class="math inline">\(t\text{-stat}\sim T_{n-1}\)</span> berdasarkan teorema Cochran, dengan <span class="math inline">\(T_{n-1}\)</span> mengindikasikan distribusi Student-<span class="math inline">\(t\)</span> dengan derajat kebebasan <span class="math inline">\(n−1\)</span>. Menurut teorema Cochran, uji ini valid baik untuk sampel kecil maupun besar.</p>
+</div>
+<div id="uji-rasio-kemungkinan-likelihood-ratio-test" class="section level3 hasAnchor" number="15.4.3">
+<h3><span class="header-section-number">15.4.3</span> Uji Rasio Kemungkinan (Likelihood Ratio Test)<a href="appendix-a-review-of-statistical-inference.html#uji-rasio-kemungkinan-likelihood-ratio-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada subbagian sebelumnya, kami telah memperkenalkan uji Student-<span class="math inline">\(t\)</span> pada satu parameter, berdasarkan sifat-sifat mle. Dalam bagian ini, kami mendefinisikan uji alternatif yang disebut <em>uji rasio kemungkinan</em> (likelihood ratio test, LRT). LRT dapat digunakan untuk menguji beberapa parameter dari model statistik yang sama.</p>
+<p>Diberikan fungsi kemungkinan <span class="math inline">\(L(\theta|\mathbf{x})\)</span> dan <span class="math inline">\(\Theta_0 \subset \Theta\)</span>, statistik uji rasio kemungkinan untuk menguji <span class="math inline">\(H_0:\theta\in\Theta_0\)</span> terhadap <span class="math inline">\(H_a:\theta\notin\Theta_0\)</span> diberikan oleh</p>
+<p><span class="math display">\[\begin{equation}
+L=\frac{\sup_{\theta\in\Theta_0}L(\theta|\mathbf{x})}{\sup_{\theta\in\Theta}L(\theta|\mathbf{x})},
+\end{equation}\]</span></p>
+<p>dan untuk menguji <span class="math inline">\(H_0:\theta=\theta_0\)</span> versus <span class="math inline">\(H_a:\theta\neq\theta_0\)</span> adalah</p>
+<p><span class="math display">\[\begin{equation}
+L=\frac{L(\theta_0|\mathbf{x})}{\sup_{\theta\in\Theta}L(\theta|\mathbf{x})}.
+\end{equation}\]</span></p>
+<p>LRT menolak hipotesis nol ketika <span class="math inline">\(L &lt; c\)</span>, dengan ambang batas tergantung pada tingkat signifikansi <span class="math inline">\(α\)</span>, ukuran sampel <span class="math inline">\(n\)</span>, dan jumlah parameter dalam <span class="math inline">\(θ\)</span>. Berdasarkan <em>Lembaran Neyman-Pearson</em>, LRT adalah uji <em>paling kuat secara seragam</em> untuk menguji <span class="math inline">\(H_0:\theta=\theta_0\)</span> dengan <span class="math inline">\(H_a:\theta=\theta_a\)</span>. Artinya, LRT memberikan daya paling besar <span class="math inline">\(β\)</span> untuk <span class="math inline">\(α\)</span> dan nilai alternatif <span class="math inline">\(\theta_a\)</span> yang diberikan.</p>
+<p>Berdasarkan <em>Teorema Wilks</em>, statistik uji rasio kemungkinan <span class="math inline">\(-2\log(L)\)</span> konvergen dalam distribusi ke distribusi Chi-square dengan derajat kebebasan adalah selisih antara dimensionalitas ruang parameter <span class="math inline">\(Θ\)</span> dan <span class="math inline">\(\Theta_0\)</span>, ketika ukuran sampel mendekati tak terhingga dan ketika model nol tertanam dalam model alternatif. Dengan kata lain, ketika model nol adalah kasus khusus dari model alternatif yang berisi ruang sampel yang terbatas, kita dapat memperkirakan <span class="math inline">\(c\)</span> dengan <span class="math inline">\(\chi^2_{p_1 - p_2}(1-\alpha)\)</span>, persentil ke-<span class="math inline">\(100\times(1-\alpha)\)</span> dari distribusi Chi-square, dengan <span class="math inline">\(p1−p2\)</span> sebagai derajat kebebasan, dan <span class="math inline">\(p1\)</span> dan <span class="math inline">\(p2\)</span> adalah jumlah parameter dalam model alternatif dan nol, masing-masing. Perlu diperhatikan bahwa LRT juga adalah uji berukuran besar yang tidak akan valid untuk sampel kecil.</p>
+</div>
+<div id="kriteria-informasi" class="section level3 hasAnchor" number="15.4.4">
+<h3><span class="header-section-number">15.4.4</span> Kriteria Informasi<a href="appendix-a-review-of-statistical-inference.html#kriteria-informasi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dalam aplikasi kehidupan nyata, LRT (Likelihood Ratio Test) umumnya digunakan untuk membandingkan dua model yang saling bersarang. Namun, pendekatan LRT sebagai alat seleksi model memiliki dua kelemahan utama: 1) Biasanya membutuhkan model nol yang bersarang di dalam model alternatif; 2) Model yang dipilih dari LRT cenderung menghasilkan overfitting dalam sampel, sehingga mengakibatkan prediksi di luar sampel yang buruk. Untuk mengatasi masalah ini, pemilihan model berdasarkan kriteria informasi, yang berlaku untuk model non-bersarang sambil mempertimbangkan kompleksitas model, lebih banyak digunakan untuk pemilihan model. Di sini, kami memperkenalkan dua kriteria yang paling umum digunakan, yaitu kriteria informasi Akaike dan kriteria informasi Bayes.</p>
+<p>Secara khusus, <em>kriteria informasi Akaike</em> (<span class="math inline">\(AIC\)</span>) didefinisikan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+AIC = -2\log L(\hat{\boldsymbol \theta}) + 2p,
+\end{equation}\]</span></p>
+<p>dimana <span class="math inline">\(\hat{\boldsymbol \theta}\)</span> merupakan MLE dari <span class="math inline">\({\boldsymbol \theta}\)</span>, dan <span class="math inline">\(p\)</span> adalah jumlah parameter dalam model. Istilah tambahan <span class="math inline">\(2p\)</span> mewakili penalti untuk kompleksitas model. Dengan kata lain, dengan fungsi likelihood yang maksimum yang sama, <span class="math inline">\(AIC\)</span> memilih model dengan jumlah parameter yang lebih sedikit. Perlu diperhatikan bahwa <span class="math inline">\(AIC\)</span> tidak mempertimbangkan pengaruh dari ukuran sampel <span class="math inline">\(n\)</span>.</p>
+<p>Secara alternatif, orang menggunakan <em>kriteria informasi Bayesian</em> (<span class="math inline">\(BIC\)</span>) yang mempertimbangkan ukuran sampel. <span class="math inline">\(BIC\)</span> didefinisikan sebagai</p>
+<p><span class="math display">\[\begin{equation}
+BIC = -2\log L(\hat{\boldsymbol \theta}) + p\,\log(n).
+\end{equation}\]</span></p>
+<p>Kita dapat mengamati bahwa <span class="math inline">\(BIC\)</span> cenderung memberikan bobot yang lebih tinggi pada jumlah parameter. Dengan fungsi likelihood yang dimaksimumkan yang sama, <span class="math inline">\(BIC\)</span> akan menyarankan model yang lebih parsimonius dibandingkan dengan <span class="math inline">\(AIC\)</span>.</p>
 
+</div>
+</div>
 </div>
             </section>
 
@@ -377,6 +792,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

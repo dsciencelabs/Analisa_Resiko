@@ -339,5 +339,4 @@ Dengan kata lain, perusahaan asuransi diizinkan untuk menetapkan tarif yang berb
 
 Selain kriteria statistik untuk menilai signifikansi faktor rating, analis harus memperhatikan masalah bisnis perusahaan (misalnya, apakah mahal untuk menerapkan faktor rating?), kriteria sosial (apakah variabel berada di bawah kendali pemegang polis?), kriteria hukum (apakah ada regulasi yang melarang penggunaan faktor rating seperti gender?), dan masalah sosial lainnya. Pertanyaan-pertanyaan ini sebagian besar di luar cakupan teks ini. Namun demikian, karena mereka sangat mendasar untuk penetapan harga asuransi, gambaran singkat diberikan di Bab 8, termasuk Lampiran Teknis TS 8.B.
 
-## 
->>>>>>> ec258e087f551391bb1c51ef716f9984815fce57
+
