@@ -14,11 +14,10 @@ Kontrak merupakan perjanjian antara pemegang polis dan perusahaan asuransi. Pena
 
 Secara konseptual bahwa perusahaan asuransi tidak lebih dari sebuah kumpulan atau portofolio, kontrak asuransi. Pada Bab 5 telah mempelajari tentang pemodelan portofolio asuransi sebagai jumlah kontrak individu berdasarkan asumsi independensi antar kontrak. Karena pentingnya hal tersebut, bab ini berfokus langsung pada distribusi portofolio.
 
-1. Portofolio asuransi (Kumpulan, atau agregasi, kontrak asuransi) mewakili kewajiban perusahaan asuransi dengan membahas probabilitas hasil yang besar dengan menggunakan gagasan distribusi heavy-tail di Bagian 10.2.
+1. Portofolio asuransi (Kumpulan, atau agregasi, kontrak asuransi) mewakili kewajiban perusahaan asuransi dengan membahas probabilitas hasil yang besar dengan menggunakan gagasan distribusi heavy-tail
 
-2. Portofolio asuransi mewakili kewajiban perusahaan sehingga perusahaan asuransi menyimpan aset dalam jumlah yang setara untuk memenuhi kewajiban tersebut. Ukuran risiko yang diperkenalkan pada Bagian 10.3, meringkas distribusi portofolio asuransi dan ukuran ringkasan ini digunakan untuk mengukur jumlah aset yang perlu dipertahankan oleh perusahaan asuransi untuk memenuhi kewajiban.
+2. Portofolio asuransi mewakili kewajiban perusahaan sehingga perusahaan asuransi menyimpan aset dalam jumlah yang setara untuk memenuhi kewajiban tersebut.
 
-3. Pada Bagian 3.4 mempelajari mekanisme yang digunakan pemegang polis untuk menyebarkan risiko seperti deductible dan batasan polis. Dengan cara yang sama, perusahaan asuransi menggunakan mekanisme yang sama untuk menyebarkan risiko portofolio. Mereka membeli perlindungan risiko dari reasuradur, sebuah perusahaan asuransi untuk perusahaan asuransi.4.
 
 ## Tails of Distributions
 
@@ -30,7 +29,21 @@ Pada subab ini akan membahas mengenai:
 
 3. Membandingkan ekor dari dua distribusi.
 
-Pada tahun 1998, hujan es turun di Ontario bagian timur, barat daya Quebec dan berlangsung selama enam hari. Peristiwa ini merupakan dua kali lipat dari curah hujan yang pernah terjadi pada badai es sebelumnya dan mengakibatkan bencana yang menghasilkan lebih dari 840.000 klaim asuransi. Jumlah ini adalah 20 lebih banyak daripada klaim yang disebabkan oleh Badai Andrew. Bencana ini menyebabkan sekitar 1,44 miliar dolar Kanada dalam penyelesaian asuransi yang merupakan beban kerugian tertinggi dalam sejarah Kanada. Ini bukan contoh yang terisolasi dengan peristiwa bencana serupa yang menyebabkan kerugian asuransi yang ekstrim adalah Badai Harvey, Superstorm Sandy, gempa bumi dan tsunami Jepang tahun 2011, dan lain sebagainya.
+Dalam statistik, distribusi tails adalah distribusi yang memiliki "ekor" panjang yang perlahan mengecil menuju akhir distribusi.
+
+Distribusi tails sangat penting untuk dipahami dalam bisnis karena mereka menghadirkan peluang untuk model bisnis yang berputar di sekitar menghasilkan sedikit penjualan untuk banyak produk.
+
+"Ekor panjang" dari distribusi adalah istilah yang menunjukkan seberapa cepat ekstrem ini mendekati nol.
+
+Untuk distribusi berekor pendek, ekor mendekati nol dengan sangat cepat. Distribusi seperti itu biasanya memiliki tampilan terpotong ("digergaji"). Distribusi berekor pendek klasik adalah distribusi seragam (persegi panjang) di mana probabilitasnya konstan pada rentang tertentu dan kemudian turun menjadi nol di mana pun - kita akan membicarakannya sebagai tidak memiliki ekor, atau ekor yang sangat pendek.
+
+Untuk distribusi berekor sedang, ekor menurun ke nol secara moderat. Distribusi berekor sedang klasik adalah distribusi normal (Gaussian).
+
+Untuk distribusi berekor panjang, ekor menurun ke nol dengan sangat lambat—dan karenanya orang cenderung melihat probabilitas jauh dari badan distribusi. Distribusi ekor panjang klasik adalah distribusi Cauchy.
+
+Dalam hal panjang ekor, histogram yang ditunjukkan di atas akan menjadi karakteristik distribusi "berekor pendek".
+
+Estimator optimal (tidak bias dan paling tepat) untuk lokasi pusat distribusi sangat bergantung pada panjang ekor distribusi. 
 
 Dalam konteks asuransi, beberapa kerugian besar yang menimpa portofolio dan kemudian dikonversi menjadi klaim biasanya mewakili bagian terbesar dari ganti rugi yang dibayarkan oleh perusahaan asuransi. Kerugian juga disebut 'ekstrem', dimodelkan secara kuantitatif oleh ekor dari distribusi probabilitas terkait. Misalnya, periode tekanan pada keuangan dapat muncul dengan frekuensi yang lebih tinggi dari yang diharapkan, dan kerugian asuransi dapat terjadi dengan tingkat keparahan yang lebih buruk. Oleh karena itu, studi tentang perilaku probabilistik pada bagian ekor model aktuaria sangat penting dalam kerangka kerja modern manajemen risiko kuantitatif. Untuk alasan ini, bagian ini dikhususkan untuk pengenalan beberapa gagasan matematika yang mencirikan bobot ekor variabel acak. 
 
@@ -107,7 +120,6 @@ $$\lim_{y\rightarrow \infty} \frac{(y-\theta)^k {y^{-(\alpha+1)}}}{y^{k-\alpha-1
 
 Penerapan teorema perbandingan limit untuk integral tak tentu menghasilkan μ′k terbatas jika dan hanya jika gk terbatas. Oleh karena itu, kita dapat menyimpulkan bahwa momen mentah dari variabel acak Pareto hanya ada sampai k < α , yaitu, k∗ = α , dan dengan demikian distribusinya berekor berat. Terlebih lagi, orde maksimal dari momen berhingga hanya bergantung pada parameter bentuk α dan merupakan fungsi yang meningkat dari α . Dengan kata lain, berdasarkan metode momen, bobot ekor dari variabel acak Pareto hanya dimanipulasi oleh α - semakin kecil nilai α , semakin berat bobot ekornya. Karena k∗<∞ , ekor dari distribusi Pareto lebih berat dibandingkan dengan distribusi gamma dan Weibull.
 
-kami menyimpulkan bagian ini dengan diskusi terbuka tentang keterbatasan metode berbasis momen. Meskipun implementasinya sederhana dan interpretasi intuitif, ada beberapa keadaan tertentu di mana penerapan metode berbasis momen tidak cocok. Pertama, untuk model probabilistik yang lebih rumit, momen mentah ke-k mungkin tidak mudah untuk diperoleh, dan dengan demikian identifikasi urutan maksimal dari momen hingga dapat menjadi tantangan. Kedua, metode berbasis momen tidak sesuai dengan bagian utama dari teori heavy tail yang sudah mapan dalam literatur. Secara khusus, keberadaan fungsi pembangkit momen merupakan metode yang paling populer untuk mengklasifikasikan heavy tail versus light tail di dalam komunitas aktuaris akademis. Namun, untuk beberapa variabel acak seperti variabel acak lognormal, fungsi pembangkit momennya tidak ada bahkan semua momen positifnya terbatas. Dalam kasus ini, penerapan metode berbasis momen dapat menghasilkan penilaian bobot ekor yang berbeda. Ketiga, ketika kita perlu membandingkan bobot ekor antara dua distribusi berekor ringan yang memiliki semua momen positif, metode berbasis momen tidak lagi informatif (lihat, misalnya, Contoh 10.2.1 dan 10.2.2).
 
 ### Comparison Based on Limiting Tail Behavior
 
@@ -173,6 +185,8 @@ Materi ini akan mempelajari :
 
 
 Dapat menyatakan bahwa risiko yang terkait dengan satu distribusi lebih berbahaya (secara asimtotik) dibandingkan distribusi lainnya jika ekornya lebih berat. Namun, mengetahui bahwa satu risiko lebih berbahaya (secara asimtotik) daripada risiko lainnya mungkin tidak memberikan informasi yang cukup untuk tujuan manajemen risiko yang canggih, dan sebagai tambahan, kita juga tertarik untuk mengukur seberapa besar risiko tersebut. Faktanya, besarnya risiko yang terkait dengan distribusi kerugian yang diberikan merupakan input penting untuk banyak aplikasi asuransi, seperti penentuan harga aktuaria, pemesanan, lindung nilai, pengawasan peraturan asuransi, dan sebagainya.
+
+Menurut pemahaman saya berdasarkan apa yang saya baca dalam beberapa laman mengenai ukuran resiko, Ukuran risiko adalah ukuran statistik yang merupakan prediktor historis risiko dan volatilitas investasi , dan juga merupakan komponen utama dalam teori portofolio modern (MPT). MPT adalah metodologi keuangan dan akademik standar untuk menilai kinerja saham atau dana saham dibandingkan dengan indeks tolok ukurnya .
 
 ### Coherent Risk Measures
 
