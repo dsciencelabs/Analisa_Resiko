@@ -251,7 +251,7 @@ Kemudian perkiraan densitas kernel di $x = 2,5$ adalah
 
 $$f_n(2.5) = \frac{1}{5(2)}\left( \frac{3}{4} + (3) \frac{3}{4} + 0 \right) = \frac{3}{10}$$
 
-#### Prinsip Pengaya
+#### Plug-in Principle
 
 Salah satu cara untuk membuat penaksir nonparametrik dari beberapa kuantitas adalah dengan menggunakan prinsip analog atau plug-in di mana seseorang menggantikan cdf yang tidak diketahui  $F$ dengan estimasi yang diketahui seperti cdf empiris  $F_N$ . Jadi, jika kita mencoba memperkirakan $\mathrm{E}~[\mathrm{g}(X)]=\mathrm{E}_F~[\mathrm{g}(X)]$ untuk fungsi generik g , maka kami mendefinisikan estimator nonparametrik menjadi $\mathrm{E}_{F_n}~[\mathrm{g}(X)]=n^{-1}\sum_{i=1}^n \mathrm{g}(X_i)$.
 
@@ -270,7 +270,7 @@ $$LER_n(d) = \frac{n^{-1} \sum_{i=1}^n \min(X_i,d)}{n^{-1} \sum_{i=1}^n X_i} = \
 Gambar 4.6 menunjukkan estimator $LER_n(d)$ untuk berbagai pilihan $d$ . Misalnya, di $d= 1.000$ dan punya $LER_n( 1000 ) ≈ 0,1442$. Dengan demikian, memberlakukan batas 1.000 berarti ekspektasi klaim yang ditahan 14,42 persen lebih rendah bila dibandingkan dengan ekspektasi klaim dengan deductible nol.
 
 
-### Alat untuk Pemilihan Model dan Diagnostik
+### Tools for Model Selection and Diagnostics
 
 Bagian sebelumnya memperkenalkan estimator nonparametrik di mana tidak ada bentuk parametrik yang diasumsikan tentang distribusi yang mendasarinya. Namun, dalam banyak aplikasi aktuaria, analis berusaha menggunakan kecocokan parametrik dari distribusi untuk kemudahan penjelasan dan kemampuan untuk memperluasnya ke situasi yang lebih kompleks seperti memasukkan variabel penjelas dalam pengaturan regresi. Saat memasang distribusi parametrik, seorang analis mungkin mencoba menggunakan distribusi gamma untuk mewakili sekumpulan data kerugian. Namun, analis lain mungkin lebih suka menggunakan distribusi Pareto. Bagaimana cara menentukan model mana yang akan dipilih?
 
@@ -288,7 +288,7 @@ Itu QQ plot membandingkan dua model yang dipasang melalui kuantilnya. Seperti ha
 
 Solusi. Ekor dari distribusi yang pas terlalu tebal di sebelah kiri, terlalu tipis di sebelah kanan, dan distribusi yang pas memiliki probabilitas yang lebih kecil di sekitar median daripada sampel. Untuk melihat ini, ingat bahwa hal hal plot grafik distribusi kumulatif dari dua distribusi pada sumbunya (empiris pada sumbu x dan dipasang pada sumbu y dalam kasus ini). Untuk nilai kecil dari X , model yang dipasang memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu daripada yang terjadi dalam sampel (mis  F( x ) >FN( x ) ). Ini menunjukkan bahwa model memiliki ekor kiri yang lebih berat daripada datanya. Untuk nilai besar dari X , model kembali memberikan probabilitas yang lebih besar untuk berada di bawah nilai itu dan dengan demikian lebih kecil kemungkinannya untuk berada di atas nilai itu (mis  S( x ) <SN( x ) ). Hal ini menunjukkan bahwa model memiliki ekor kanan yang lebih ringan dari pada data. Selain itu, saat kita mulai dari 0,4 hingga 0,6 pada sumbu horizontal (dengan demikian melihat 20% tengah data), hal hal plot meningkat dari sekitar 0,3 menjadi 0,4. Ini menunjukkan bahwa model hanya menempatkan sekitar 10% dari probabilitas dalam kisaran ini.
 
-#### Perbandingan Statistik Distribusi
+#### Graphical Comparison of Distributions
 
 Saat memilih model, akan sangat membantu untuk menampilkan tampilan grafis. Namun, untuk melaporkan hasil, melengkapi tampilan grafis dengan statistik terpilih yang meringkas kebaikan kesesuaian model dapat efektif. Tabel 4.2 menyediakan tiga statistik kebaikan yang umum digunakan . Dalam tabel ini, $F_N$ adalah distribusi empiris, $F$ adalah distribusi pas atau hipotesis, dan $F_i^* = F(x_i)$ .
 
@@ -336,11 +336,11 @@ Oleh karena itu, statistik uji Kolmogorov-Smirnov adalah
 
 $$KS = \max(0.2517, 0.2727, 0.1934, 0.1408, 0.1620) = 0.2727 .$$
 
-### Nilai Awal
+### Starting Values
 
 Metode pencocokan momen dan persentil merupakan metode estimasi nonparametrik yang memberikan alternatif kemungkinan maksimum. Umumnya, kemungkinan maksimum adalah teknik yang lebih disukai karena menggunakan data secara lebih efisien. (Lihat Lampiran Bab 17 untuk definisi efisiensi yang tepat.) Namun, metode pencocokan momen dan persentil berguna karena lebih mudah diinterpretasikan dan karena itu memungkinkan aktuaris atau analis untuk menjelaskan prosedur kepada orang lain. Selain itu, prosedur estimasi numerik (misalnya jika dilakukan di _R_) untuk kemungkinan maksimum adalah iteratif dan membutuhkan nilai awal untuk memulai proses rekursif. Meskipun banyak masalah yang kuat untuk pemilihan nilai awal, untuk beberapa situasi kompleks, penting untuk memiliki nilai awal yang mendekati nilai optimal (tidak diketahui). Metode momen dan pencocokan persentil adalah teknik yang dapat menghasilkan perkiraan yang diinginkan tanpa investasi komputasi yang serius dan dengan demikian dapat digunakan sebagai nilai awal untuk menghitung kemungkinan maksimum.
 
-#### Metode Momen
+#### Method of Moments
 
 Metode ini merupakan estimasi parameter populasi dengan pendekatan momen parametrik menggunakan momen sampel empiris. pada momen ini, momen distribusi parametrik menggunakan momen empiris atau nonparametrik kemudian dapat dipecahkan secara aljabar untuk estimasi parameter.     
 
@@ -382,7 +382,7 @@ Nilai kemungkinan maksimum berubah menjadi $\hat{\alpha}_{MLE} = 0.9990936$ Dan 
 
 Seperti contoh di atas, ada fleksibilitas dengan metode momen. Misalnya, kita dapat mencocokkan momen kedua dan ketiga alih-alih yang pertama dan kedua, menghasilkan estimator yang berbeda. Selain itu, tidak ada jaminan bahwa solusi akan ada untuk setiap masalah. Untuk data yang disensor atau terpotong, momen pencocokan dimungkinkan untuk beberapa masalah, tetapi secara umum, ini adalah skenario yang lebih sulit. Terakhir, untuk distribusi di mana momen tidak ada atau tidak terbatas, metode momen tidak tersedia. Sebagai alternatif, seseorang dapat menggunakan teknik pencocokan persentil.
 
-#### Pencocokan Persentil
+#### Percentile Matching
 
 Di bawah pencocokan persentil , kami memperkirakan kuantil atau persentil dari distribusi parametrik menggunakan kuantil atau persentil empiris (nonparametrik) yang dijelaskan di Bagian 4.1.1.3 . 
 
@@ -434,4 +434,479 @@ $$0.4=\frac{(89.2/{\hat{\theta}})^{\hat{\gamma}}}{1+(89.2/{\hat{\theta}})^{\hat{
 Pemecahan untuk setiap ekspresi kurung memberi $\frac{2}{3}=(89.2/\theta)^{\hat{\gamma}}$ Dan $4=(206/{\hat{\theta}})^{\hat{\gamma}}$ . Mengambil rasio persamaan kedua dengan yang pertama memberi $6=(206/89.2)^{\hat{\gamma}}\Rightarrow {\hat{\gamma}}=\frac{\log(6)}{\log(206/89.2)} = 2.1407$. Kemudian $4^{1/2.1407}=206/{\hat{\theta}} \Rightarrow {\hat{\theta}}=107.8$.
 
 Seperti metode momen, pencocokan persentil hampir terlalu fleksibel dalam arti bahwa estimator dapat bervariasi tergantung pada persentil berbeda yang dipilih. Misalnya, seorang aktuaris dapat menggunakan estimasi pada persentil ke-25 dan ke-95 sedangkan yang lain menggunakan persentil ke-20 dan ke-80. Secara umum estimasi parameter akan berbeda dan tidak ada alasan kuat untuk memilih salah satu dari yang lain. Seperti halnya metode momen, pencocokan persentil menarik karena memberikan teknik yang dapat diterapkan dengan mudah dalam situasi tertentu dan memiliki dasar intuitif. Meskipun sebagian besar aplikasi aktuaria menggunakan estimator kemungkinan maksimum, akan lebih mudah untuk memiliki pendekatan alternatif seperti metode momen dan pencocokan persentil yang tersedia.
+
+## Model Selection
+
+Menjelaskan proses pemilihan model berdasarkan:
+
+* dataset dalam sampel atau pelatihan,
+* dataset out -of-sampel atau uji, dan
+* metode yang menggabungkan pendekatan ini dikenal sebagai cross-validation .
+
+### Pemilihan Model Iteratif
+
+Dalam memeriksa data secara grafis, membuat hipotesis struktur model, dan membandingkan data dengan model kandidat untuk merumuskan model yang lebih baik. Box ( 1980 ) menggambarkan ini sebagai proses berulang yang ditunjukkan pada Gambar dibawah ini
+
+
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/4.2.1.png")
+```
+
+Proses berulang ini memberikan resep yang berguna untuk menyusun tugas menentukan model untuk mewakili satu set data.
+
+Langkah pertama, tahap perumusan model, dilakukan dengan memeriksa data secara grafis dan menggunakan pengetahuan hubungan sebelumnya, seperti dari teori ekonomi atau praktik industri.
+Langkah kedua dalam iterasi adalah fitting berdasarkan asumsi model yang ditentukan. Asumsi ini harus konsisten dengan data untuk menggunakan model secara valid.
+Langkah ketiga adalah pemeriksaan diagnostik ; data dan model harus konsisten satu sama lain sebelum kesimpulan tambahan dapat dibuat. Pengecekan diagnostik adalah bagian penting dari formulasi model; itu dapat mengungkapkan kesalahan yang dilakukan pada langkah sebelumnya dan memberikan cara untuk memperbaiki kesalahan ini.
+
+### Model Selection Based on a Training Dataset
+
+Biasanya merujuk ke kumpulan data yang digunakan untuk analisis sebagai kumpulan data dalam sampel atau pelatihan . Teknik yang tersedia untuk memilih model tergantung pada apakah hasilnya X diskrit, kontinu, atau campuran dari keduanya, meskipun prinsipnya sama.
+
+Grafik dan Tindakan Ringkasan Dasar lainnya. Mulailah dengan meringkas data secara grafis dan dengan statistik yang tidak bergantung pada bentuk parametrik tertentu.
+
+Tes Rasio Kemungkinan. Untuk membandingkan kecocokan model, jika satu model merupakan bagian dari model lainnya, maka uji rasio kemungkinan dapat digunakan; pendekatan umum untuk pengujian rasio kemungkinan
+
+Kebaikan Statistik Fit. Secara umum, model bukan himpunan bagian yang tepat satu sama lain sehingga statistik kecocokan secara keseluruhan sangat membantu untuk membandingkan model. Kriteria informasi adalah salah satu jenis kebaikan statistik.
+
+Untuk memilih distribusi yang sesuai, statistik yang membandingkan kecocokan parametrik dengan alternatif nonparametrik.
+
+###  Model Selection Based on a Test Dataset
+
+Validasi model adalah proses konfirmasi bahwa model yang diusulkan sesuai, terutama mengingat tujuan penyelidikan. Keterbatasan penting dari proses pemilihan model hanya berdasarkan data dalam sampel adalah bahwa hal itu dapat rentan terhadap data-snooping , yaitu menyesuaikan sejumlah besar model ke satu set data. Memilih model hanya berdasarkan data dalam sampel juga tidak mendukung tujuan inferensi prediktif . 
+
+### Model Selection Based on Cross-Validation
+
+Meskipun validasi out-of-sample adalah standar emas dalam pemodelan prediktif, tidak selalu praktis untuk melakukannya. Alasan utamanya adalah kita memiliki ukuran sampel yang terbatas dan kriteria pemilihan model di luar sampel dalam persamaan (4.4) bergantung pada pemisahan data secara acak . Ini berarti bahwa analis yang berbeda, bahkan ketika mengerjakan kumpulan data yang sama dan pendekatan pemodelan yang sama, dapat memilih model yang berbeda.
+
+Prosedur Validasi Silang. Sebagai alternatif, seseorang dapat menggunakan cross-validation , sebagai berikut.
+
+* Prosedur dimulai dengan menggunakan mekanisme acak untuk membagi data menjadi K himpunan bagian dengan ukuran yang kira-kira sama yang dikenal sebagai lipatan , di mana analis biasanya menggunakan 5 hingga 10.
+* Selanjutnya, yang satu menggunakan yang pertama K-1 subsampel untuk memperkirakan parameter model. Kemudian, “prediksi” hasil untuk K th subsampel dan gunakan ukuran seperti pada persamaan (4.4) untuk meringkas kecocokan.
+* Sekarang, ulangi ini dengan menahan masing-masing K
+ subsampel, meringkas dengan statistik out-of-sample. Jadi, rangkumlah ini K statistik, biasanya dengan rata-rata, untuk memberikan satu statistik keseluruhan untuk tujuan perbandingan.
+ 
+Ulangi langkah-langkah ini untuk beberapa model kandidat dan pilih model dengan statistik validasi silang terendah secara keseluruhan.
+
+## Estimasi Menggunakan Data Modifikasi
+
+Penjelasan pada subbab ini:
+
+* Mendeskripsikan data yang dikelompokkan, disensor, dan terpotong
+* Perkirakan distribusi parametrik berdasarkan data yang dikelompokkan, disensor, dan terpotong
+* Perkirakan distribusi secara nonparametrik berdasarkan data yang dikelompokkan, disensor, dan terpotong
+
+### Estimasi Parametrik menggunakan Data Modifikasi
+
+Seperti yang kita ketahui bahwa Estimasi parametrik bersifat kuantitatif dan menggunakan statistik untuk menghitung perkiraan jumlah sumber daya yang dibutuhkan untuk menyelesaikan proyek Anda, baik itu biaya atau waktu, atau bahkan sumber daya manusia. Bagian 3.5 memperkenalkan konsep observasi yang “ dimodifikasi ” karena dua jenis batasan umum: penyensoran dan pemotongan. Misalnya, adalah umum untuk berpikir tentang asuransi yang dapat dikurangkan sebagai menghasilkan data yang terpotong (dari kiri) atau batasan polis sebagai menghasilkan data yang disensor (dari kanan). Sudut pandang ini dari perusahaan asuransi utama (penjual asuransi). Secara khusus, bagian ini akan membahas metode estimasi parametrik untuk tiga alternatif data individual, lengkap, dan tidak dimodifikasi: data dengan sensor interval hanya tersedia dalam kelompok, data yang terbatas ataudisensor , dan data yang tidak dapat diamati karena pemotongan .
+
+#### Estimasi Parametrik menggunakan Data yang Dikelompokkan
+
+Pertimbangkan sampel ukuran N diamati dari distribusinya $F( ⋅ )$, tetapi dalam kelompok sehingga kita hanya mengetahui kelompok tempat setiap pengamatan jatuh, bukan nilai pastinya. Ini disebut sebagai data yang dikelompokkan atau disensor interval .
+
+Memformalkan ide ini, misalkan ada k kelompok atau interval yang dibatasi oleh batas $C_0<C_1< ⋯ <C_k.$ Untuk setiap pengamatan, kami hanya mengamati interval jatuhnya $((C_{j − 1},C_J))$, bukan nilai yang tepat. Dengan demikian, kita hanya mengetahui jumlah observasi pada setiap interval. Konstanta ${C_0<C_1< ⋯ <C_k}$ membentuk beberapa partisi dari domain $F( ⋅ )$. Kemudian probabilitas pengamatan $X_i$ jatuh di $J$th interval ke- adalah
+
+$$
+Pr(X_i \in (c_{j-1},c_j])=F(c_j)-F(c_{j-1})
+$$
+
+Fungsi massa probabilitas yang sesuai untuk pengamatan adalah
+
+
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/4.3.1.1.png")
+```
+
+Sekarang, tentukan $N_J$ menjadi jumlah pengamatan yang termasuk dalam $J$th interval, $(C_{j − 1},C_J]$. Jadi, fungsi kemungkinan (sehubungan dengan parameter) $θ$) adalah
+
+
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/4.3.1.1-1.png")
+```
+
+Dan fungsi log-kemungkinan adalah
+
+```{r image2, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("images/4.3.1.1-2.png")
+```
+
+Diberikan data :
+1. Kerugian mengikuti distribusi eksponensial dengan rata-rata $θ$.
+2. Sebuah sampel acak dari 20 kerugian didistribusikan sebagai berikut:
+
+```{r image1, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("example4.3.png")
+```
+
+Hitung estimasi kemungkinan maksimum dari $θ$
+
+
+$$
+\begin{aligned}
+L(\theta) &= F(1000)^7[F(2000)-F(1000)]^6[1-F(2000)]^7 \\
+&= (1-e^{-1000/\theta})^7(e^{-1000/\theta} - e^{-2000/\theta})^6(e^{-2000/\theta})^7 \\
+&= (1-p)^7(p-p^2)^6(p^2)^7 \\
+&= p^{20}(1-p)^{13}
+\end{aligned}
+$$
+
+di mana $p = e^{-1000/θ}$. Memaksimalkan ekspresi ini sehubungan dengan $p$ setara dengan memaksimalkan kemungkinan terhadap $θ$. Maksimum terjadi pada $p=\frac{20}{33}$. sehingga $\hat{\theta}=\frac{-1000}{\log(20/33)}= 1996.90$
+
+
+#### Cencored Data
+
+Penyensoran terjadi ketika kita hanya mencatat nilai yang terbatas dari sebuah observasi. Bentuk yang paling umum adalah penyensoran kanan, di mana kita mencatat nilai yang lebih kecil dari variabel dependen "benar" dan nilai penyensoran. Dengan menggunakan notasi, dengan `X` mewakili hasil yang diminati, seperti kerugian akibat kejadian yang diasuransikan atau waktu hingga kejadian. Dengan $C_U$ menyatakan jumlah penyensoran. Dengan pengamatan tersensor kanan, mencatat $X_U^* = min(X, C_U) = X∧C_U$. Lalu juga mencatat apakah penyensoran telah terjadi atau tidak. $δ_U = I(X≤C_U)$ adalah variabel biner yang bernilai 0 jika penyensoran terjadi dan 1 jika tidak, yaitu, $δ_U$ menunjukkan apakah X tidak disensor atau tidak.
+
+Sebagai contoh $C_U$ dapat merepresentasikan batas atas pertanggungan sebuah polis asuransi. Kerugian dapat melebihi jumlah $C_U$ tetapi perusahaan asuransi hanya memiliki $C_U$ dalam catatannya sebagai jumlah yang dibayarkan dan tidak memiliki jumlah kerugian aktual $X$ dalam catatannya.
+
+Sama halnya dengan penyensoran kiri, dapat mencatat yang lebih besar dari variabel yang diminati dan variabel yang disensor. Jika $C_L$ digunakan untuk merepresentasikan jumlah penyensoran, maka mencatat $X_L^*=max(X,C_L)$ bersama dengan indikator penyensoran $δ_L=I(X>C_L)$.
+
+Sebagai contoh,  reasuradur akan menanggung kerugian penanggung yang lebih besar dari $C_L$ ini berarti reasuradur bertanggung jawab atas kelebihan $X_L^*$ pada $C_L$. Dengan menggunakan notasi, kerugian reasuradur adalah $Y = X_L^*L-C_L$ Untuk melihat hal ini, pertama-tama pertimbangkan kasus di mana pemegang polis mengalami kerugian $X < C_L$. Kemudian, penanggung akan membayar seluruh klaim dan $Y=C_L-C_L=0$ tidak ada kerugian bagi reasuradur. Sebaliknya, jika kerugian $X≥C_L$ maka $Y = X-C_L$ merupakan klaim yang ditahan oleh reasuradur. Dengan kata lain, jika terjadi kerugian, reasuradur mencatat jumlah sebenarnya jika melebihi batas $C_L$ dan jika tidak, hanya mencatat akan mengalami kerugian sebesar 0.
+
+#### Truncated data
+
+Pengamatan yang disensor dicatat untuk studi, meskipun dalam bentuk yang terbatas. Sebaliknya, hasil yang terpotong adalah jenis data yang hilang. Sebuah hasil berpotensi terpotong ketika ketersediaan pengamatan bergantung pada hasil.
+
+Dalam asuransi, biasanya pengamatan terpotong kiri pada $C_L$ ketika jumlahnya adalah
+
+$$
+\begin{aligned}
+Y &=
+\left\{
+\begin{array}{cl}
+\text{we do not observe }X & X \le C_L \\
+X & X > C_L
+\end{array}
+\right.\end{aligned}
+$$
+
+Dengan kata lain, jika X kurang dari ambang batas $C_L$ maka ia tidak teramati. 
+
+$C_L$ dapat merepresentasikan deductible dari sebuah polis asuransi. Jika kerugian yang diasuransikan kurang dari deductible, maka perusahaan asuransi mungkin tidak mengamati atau mencatat kerugian sama sekali. Jika kerugian melebihi deductible, maka kelebihan $X-C_L$ adalah klaim yang ditanggung oleh penanggung. Dimana dapat didefinisikan kerugian per pembayaran sebagai
+
+$$
+\begin{aligned}
+Y^{P} = \left\{ \begin{matrix}
+\text{Undefined} & X \le d \\
+X - d & X > d 
+\end{matrix} \right. 
+\end{aligned}
+$$
+
+sehingga jika kerugian melebihi deductible, kami mencatat jumlah kelebihan $X-d$. Hal ini sangat penting ketika mempertimbangkan jumlah yang akan dibayarkan oleh perusahaan asuransi. Namun, untuk tujuan estimasi pada bagian ini, tidak terlalu penting jika kita mengurangkan konstanta yang diketahui seperti $C_L = d$. Sehingga, untuk variabel terpotong $Y$ kita menggunakan konvensi yang lebih sederhana dan tidak mengurangkan $d$.
+
+Demikian pula untuk data terpotong kanan, jika X melebihi ambang batas $C_U$ maka data tersebut tidak diobservasi. Dalam hal ini, jumlahnya adalah
+
+$$
+\begin{aligned}
+Y &=
+\left\{
+\begin{array}{cl}
+X & X \le C_U \\
+\text{we do not observe }X & X > C_U.
+\end{array}
+\right.\end{aligned}
+$$
+
+Contoh klasik dari pemotongan dari kanan termasuk X sebagai ukuran jarak ke bintang. Ketika jaraknya melebihi tingkat tertentu $C_U$ maka bintang tersebut tidak lagi dapat diamati.
+
+Gambar dibawah ini membandingkan pengamatan yang terpotong dan tersensor. Nilai-nilai X yang lebih besar dari batas penyensoran "atas" $C_U$ tidak teramati sama sekali (tersensor kanan), sedangkan nilai X yang lebih kecil dari batas pemotongan "bawah" $C_L$ tetap diamati, tetapi diamati sebagai $C_L$ daripada nilai X yang sebenarnya (tersensor kiri).
+
+#### Parametric Estimation using Cencored and Truncated data
+
+Untuk mempermudah, dapat diasumsikan jumlah penyensoran tidak acak dan hasil yang kontinu X . Sebagai permulaan, pertimbangkan kasus data tersensor kanan di mana merekam $X_U^* = min(X, C_U) = X∧C_U$) dan indikator penyensoran $δ = I(X≤C_U)$ . Jika penyensoran terjadi sehingga $δ=0$ maka $X>C_U$ dan peluangnya adalah $Pr(X>C_U)=1-F(C_U)$. Jika penyensoran tidak terjadi sehingga $δ = 1$ maka $X≤C_U$ dan likelihoodnya adalah $f(x)$ . Ringkasnya, didapatkan likelihood dari sebuah pengamatan tunggal sebagai
+
+$$
+\begin{aligned}
+\left\{
+\begin{array}{ll}
+1-F(C_U) & \text{if }\delta=0 \\
+f(x) & \text{if } \delta = 1 
+\end{array}
+\right. = \left\{ f(x)\right\}^{\delta} \left\{1-F(C_U)\right\}^{1-\delta} .
+\end{aligned}
+$$
+
+Ekspresi ruas kanan memungkinkan dalam menyajikan peluang dengan lebih ringkas. Sekarang, untuk sampel ke-i dengan ukuran n , peluangnya adalah
+
+$$
+\begin{aligned}
+L(\theta) = 
+\prod_{i=1}^n \left\{ f(x_i)\right\}^{\delta_i} \left\{1-F(C_{Ui})\right\}^{1-\delta_i} = \prod_{\delta_i=1} f(x_i) \prod_{\delta_i=0} \{1-F(C_{Ui})\}
+\end{aligned}
+$$
+
+dengan waktu penyensoran potensial ${(C_{U1},...,C_{Un})}$ . Di sini, notasi "$∏{δi} = 1$" berarti mengambil hasil kali dari pengamatan yang tidak disensor, dan demikian pula untuk "$∏{δi} = 0$ " 
+
+
+Di sisi lain, data terpotong ditangani dalam inferensi kemungkinan melalui probabilitas bersyarat. Secara khusus, kontribusi likelihood dapat disesuaikan dengan membaginya dengan probabilitas bahwa variabel tersebut diamati. Sebagai rangkuman, kami memiliki kontribusi berikut pada fungsi likelihood untuk enam jenis hasil:
+
+```{r image4, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("table4-1.png")
+```
+
+Untuk hasil yang diketahui dan data yang disensor, kemungkinannya adalah
+
+$$
+\begin{aligned}
+L(\theta) = \prod_{E} f(x_i) \prod_{R} \{1-F(C_{Ui})\} \prod_{L}
+F(C_{Li}) \prod_{I} (F(C_{Ui})-F(C_{Li})),
+\end{aligned}
+$$
+
+di mana $"∏_E"$ adalah hasil kali pengamatan dengan nilai Exact, dan demikian pula untuk Right-,Left-
+and  Interval-censoring.
+
+Untuk data yang disensor kanan dan terpotong kiri, kemungkinannya adalah
+
+$$
+\begin{aligned}
+L(\theta) = \prod_{E} \frac{f(x_i)}{1-F(C_{Li})} \prod_{R} \frac{1-F(C_{Ui})}{1-F(C_{Li})},
+\end{aligned}
+$$
+dan juga untuk kombinasi lainnya.
+
+Example 4.3.2. Actuarial Exam Question
+
+Diberikan data :
+
+i. Sebuah contoh kerugian adalah: 600 700 900
+ii. Tidak ada informasi yang tersedia mengenai kerugian sebesar 500 atau kurang.
+iii. Kerugian diasumsikan mengikuti distribusi eksponensial dengan rata-rata $θ$.
+
+
+Hitung estimasi kemungkinan maksimum dari $θ$
+
+Pengamatan ini terpotong pada angka 500. Kontribusi dari setiap pengamatan terhadap fungsi likelihood adalah
+
+$\frac{f(x)}{1-F(500)} = \frac{\theta^{-1}e^{-x/\theta}}{e^{-500/\theta}}$
+
+Lalu Fungsi Likelihoodnya adalah
+
+$L(\theta)= \frac{\theta^{-1} e^{-600/\theta} \theta^{-1} e^{-700/\theta} \theta^{-1} e^{-900/\theta}}{(e^{-500/\theta})^3} = \theta^{-3}e^{-700/\theta}$
+
+Log-Likehoodnya adalah
+
+$l(\theta) = \log L(\theta) = -3 \log \theta - 700 \theta^{-1}$
+
+Memaksimalkan ekspresi ini dengan menetapkan turunan terhadap θ sama dengan 0, Maka memiliki
+
+$L'(\theta) = -3 \theta^{-1} + 700 \theta^{-2} = 0 \ \Rightarrow \ \hat{\theta} = \frac{700}{3} = 233.33 .$
+
+### Nonparametric Estimation using Modified Data
+
+Estimator nonparametrik memberikan tolok ukur yang berguna, sehingga akan sangat membantu untuk memahami prosedur estimasi untuk data yang dikelompokkan, disensor, dan dipotong
+
+####  Grouped Data
+
+Pengamatan dapat dikelompokkan (juga disebut sebagai interval tersensor) dalam arti bahwa pengamatan sebagai bagian dari salah satu dari k interval dalam bentuk $(c_{j-1},c_j)$ , untuk $j = 1,...,k$ . Pada batas-batasnya, fungsi distribusi empiris didefinisikan dengan cara yang biasa:
+
+$$
+\begin{aligned}
+F_n(c_j) = \frac{\text{number of observations } \le c_j}{n}
+\end{aligned}
+$$
+
+*Ogive Estimator*
+
+Untuk nilai lain dari $x∈(c_{j-1},c_j)$ dapat mengestimasi fungsi distribusi dengan ogive estimator yang menginterpolasi secara linear antara $F_n(c_{j-1})$ dan $Fn_(c_j)$ yaitu nilai dari batas-batas $F_n(c_{j-1})$ dan $Fn_(c_j)$ dihubungkan dengan sebuah garis lurus. Hal ini secara formal dapat dinyatakan sebagai
+
+$$
+\begin{aligned}
+F_n(x) = \frac{c_j-x}{c_j-c_{j-1}} F_n(c_{j-1}) + \frac{x-c_{j-1}}{c_j-c_{j-1}} F_n(c_j) \ \ \ \text{for } c_{j-1} \le x < c_j
+\end{aligned}
+$$
+
+Sehinga Densitas yang sesuai adalah 
+
+$$
+\begin{aligned}
+f_n(x) = F^{\prime}n(x) = \frac{F_n(c_j)-F_n(c{j-1})}{c_j - c_{j-1}} \ \ \  \text{for } c_{j-1} < x < c_j .
+\end{aligned}
+$$
+
+Example 4.3.4. Actuarial Exam Question
+
+Diberikan informasi berikut ini mengenai jumlah klaim untuk 100 klaim:
+
+```{r image5, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("example4.3.4.png")
+```
+
+Dengan menggunakan ogive, hitunglah estimasi probabilitas bahwa klaim yang dipilih secara acak adalah antara 2000 dan 6000.
+
+
+Pada batas-batasnya, fungsi distribusi empiris didefinisikan dengan cara yang biasa, sehingga memiliki
+
+$F_{100}(1000) = 0.16, \ F_{100}(3000)=0.38, \ F_{100}(5000)=0.63, \ F_{100}(10000)=0.81$
+
+Untuk ukuran klaim lainnya, penaksir ogive melakukan interpolasi linier di antara nilai-nilai ini:
+
+$$
+\begin{array}{ll}
+F_{100}(2000) &= 0.5F_{100}(1000) + 0.5F_{100}(3000) = 0.5(0.16)+0.5(0.38)=0.27 \\
+F_{100}(6000) &=0.8F_{100}(5000)+0.2F_{100}(10000) = 0.8(0.63)+0.2(0.81)=0.666
+\end{array}
+$$
+
+Dengan demikian, probabilitas klaim antara 2000 dan 6000 adalah
+
+$F_{100}(6000) - F_{100}(2000) = 0.666-0.27 = 0.396$
+
+
+
+#### Right-Censored Empirical Distribution Function
+
+Akan sangat berguna untuk mengkalibrasi penaksir parametrik dengan metode nonparametrik yang tidak bergantung pada bentuk parametrik distribusi. Penaksir batas produk menurut (Kaplan dan Meier 1958) merupakan penaksir yang terkenal untuk fungsi distribusi dengan adanya penyensoran. 
+
+*Motivasi untuk Penaksir Batas Produk Kaplan-Meier*
+
+Untuk menjelaskan mengapa product-limit bekerja dengan sangat baik dengan observasi tersensor, pertama-tama dapat melihat ke kasus tanpa penyensoran. Di sini, fungsi distribusi empiris $F_n(x)$ adalah penaksir tak bias dari fungsi distribusi $F(x)$ . Hal ini karena $F_n(x)$ adalah rata-rata dari variabel indikator yang masing-masing tidak bias, yaitu, $E [I(X_i≤x)]=Pr(X_i≤x)=F(x)$
+
+Sekarang misalkan hasil acak disensor di sebelah kanan dengan jumlah yang membatasi, katakanlah, CU sehingga dapat mencatat yang lebih kecil dari keduanya, $X^* = min(X, C_U)$ . Untuk nilai-nilai $x$ yang lebih kecil dari $C_U$, variabel indikator masih memberikan penaksir yang tidak bias terhadap fungsi distribusi sebelum kita mencapai batas penyensoran. Artinya, $E [I(X^∗≤x)]=F(x)$ karena $I(X^∗≤x)=I(X≤x)$ untuk $x<C_U$ . Dengan cara yang sama, $E[I(X^∗>x)]=1-F(x)=S(x)$ . Tetapi, untuk $x>C_U$ , $I(X^∗≤x)$ secara umum bukan merupakan penaksir tak bias dari F(x). Sebagai alternatif, pertimbangkan dua peubah acak yang memiliki batas penyensoran yang berbeda. Sebagai ilustrasi, misalkan kita mengamati $X^∗1=min(X_1,5)$ dan $X^∗2 = min(X_2,10)$ di mana $X_1$ dan $X_2$ adalah undian independen dari distribusi yang sama. Untuk $x≤5$ fungsi distribusi empiris $F_2(x)$ adalah penaksir tak bias dari $F(x)$. Akan tetapi, untuk $5<x≤10$ pengamatan pertama tidak dapat digunakan untuk fungsi distribusi karena adanya batasan penyensoran. Sebagai gantinya, strategi yang dikembangkan oleh (Kaplan dan Meier 1958) adalah dengan menggunakan $S_2(5)$ sebagai penaksir dari $S(5)$ dan kemudian menggunakan observasi kedua untuk mengestimasi fungsi survival bersyarat pada kelangsungan hidup hingga waktu ke-5, $Pr(X>x|X>5)=\frac{S(x)}{S(5)}$ . Secara khusus, untuk $5<x≤10$ penaksir dari fungsi survival adalah
+
+$$
+\begin{aligned}
+\hat{S}(x) = S_2(5) \times I(X_2^* > x )
+\end{aligned}
+$$
+
+
+
+*Kaplan-Meier Product Limit Estimator*
+
+Dengen memperluas ide dalam setiap observasi `i`,dengan `ui` menjadi batas atas penyensoran $(=∞) jikatidakadapenyensoran$. Dengan demikian, nilai yang tercatat adalah `xi` dalam kasus tidak ada penyensoran dan `ui` jika ada penyensoran. Dengan $t_1<⋯<t_k$menjadi k titik berbeda di mana kerugian yang tidak disensor terjadi, dan biarkan $s_j$ adalah jumlah kerugian yang tidak tersensor $x_i$ yang tidak tersensor pada $t_j$. Himpunan risiko yang sesuai adalah jumlah observasi yang aktif (tidak tersensor) pada nilai yang kurang dari $t_j$ yang dinotasikan sebagai 
+$R_j = \sum_{i=1}^n I(x_i \geq t_{j}) + \sum_{i=1}^n I(u_i \geq t_{j})$
+
+
+
+Dengan notasi ini, penaksir product-limit dari fungsi distribusi
+
+$$
+\begin{equation}
+\hat{F}(x) =
+\left\{
+\begin{array}{ll}
+0 & x<t_{1} \\
+1-\prod_{j:t_{j} \leq x}\left( 1-\frac{s_j}{R_{j}}\right) & x \geq t_{1} 
+\end{array}
+\right. .
+\tag{4.6}
+\end{equation}
+$$
+
+
+Sebagai contohnya, jika `x` lebih kecil dari kerugian terkecil yang tidak tersensor, maka $x<t1$ dan $F^(x)=0$ . Sebagai contoh lain, jika $x$ berada di antara kerugian tersensor terkecil kedua dan ketiga, maka $x∈(t_2,t_3]$ dan $\hat{F}(x) = 1 - \left(1- \frac{s_1}{R_{1}}\right)\left(1- \frac{s_2}{R_{2}}\right)$ .Taksiran yang sesuai dari fungsi survival adalah $\hat{S}(x) = 1 - \hat{F}(x)$
+
+### Example 4.3.5. Actuarial Exam Question. 
+
+Berikut ini adalah contoh dari 10 pembayaran:
+
+$$
+4 \space \space 4 \space \space 5+\space \space 5+ \space\space 5+ \space\space 8 \space\space 10+ \space\space 10+ \space\space 12 \space\space 15
+$$
+ 
+dimana + menunjukkan bahwa kerugian telah melebihi batas polis.
+
+Dengan menggunakan estimator batas produk Kaplan-Meier, hitunglah probabilitas bahwa kerugian pada suatu polis melebihi 11, $\hat{S}(11)$
+
+Terdapat empat waktu kejadian (pengamatan yang tidak disensor). Untuk setiap waktu tj kita dapat menghitung jumlah kejadian sj dan himpunan risiko $R_j$ sebagai berikut:
+  
+```{r image7, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("example4.3.6.png")
+```
+
+Dengan demikian, estimasi Kaplan-Meier dari S(11) adalah
+
+
+$$
+\begin{aligned}
+\hat{S}(11) &= \prod_{j:t_j\leq 11} \left( 1- \frac{s_j}{R_j} \right) =  \prod_{j=1}^{2} \left( 1- \frac{s_j}{R_j} \right)\\
+&= \left(1-\frac{2}{10} \right) \left(1-\frac{1}{5} \right) = (0.8)(0.8)= 0.64. \\
+\end{aligned}
+$$
+
+
+
+*Right-Censored, Left-Truncated Empirical Distribution Function*
+
+Selain penyensoran kanan, selanjutnya adalah memperluas kerangka kerja untuk memungkinkan data terpotong ke kiri. Seperti sebelumnya, untuk setiap observasi  `i` , dengan $u_i$ menjadi batas penyensoran atas ( $=∞$ jika tidak ada penyensoran). Selanjutnya, $d_i$ merupakan batas pemotongan bawah (0 jika tidak ada pemotongan). Dengan demikian, nilai yang tercatat (jika lebih besar dari $d_i$ ) adalah $x_i$ dalam kasus tidak ada penyensoran dan $u_i$ jika ada penyensoran. Lalu untuk $t_1<⋯<t_k $menjadi $k$ titik-titik yang berbeda di mana sebuah kejadian yang menarik terjadi, dan biarkan $s_j$ adalah jumlah kejadian yang terekam $x_i$  pada titik waktu $t_j$.
+
+Himpunan risiko yang sesuai adalah
+
+$R_j = \sum_{i=1}^n I(x_i \geq t_{j}) + \sum_{i=1}^n I(u_i \geq t_{j}) - \sum_{i=1}^n I(d_i \geq t_{j}).$
+
+Dengan definisi baru dari himpunan risiko ini, penaksir batas hasil kali dari fungsi distribusi adalah seperti pada persamaan product limit estimator.
+
+*Rumus Greenwood* (Greenwood 1926) menurunkan rumus untuk estimasi varians dari penaksir batas-produk menjadi
+
+$\widehat{Var}(\hat{F}(x)) = (1-\hat{F}(x))^{2} \sum {j:t{j} \leq x} \dfrac{s_j}{R_{j}(R_{j}-s_j)}.$
+
+Seperti biasa, dapat mengacu pada akar kuadrat dari estimasi varians sebagai kesalahan standar, sebuah kuantitas yang secara rutin digunakan dalam interval kepercayaan dan untuk pengujian hipotesis. Untuk menghitungnya, metode `survfit R` mengambil sebuah objek data survival dan membuat sebuah objek baru yang berisi estimasi Kaplan-Meier dari fungsi survival bersama dengan interval kepercayaan. Metode Kaplan-Meier `(type='kaplan-meier')` digunakan secara default untuk membuat estimasi kurva survival. Fungsi survival diskrit yang dihasilkan memiliki massa titik pada waktu kejadian yang diamati (tanggal pelepasan) $t_j$ dimana probabilitas suatu kejadian yang diberi ketahanan hidup pada durasi tersebut diestimasi sebagai jumlah kejadian yang diamati pada durasi sj dibagi dengan jumlah subjek yang terpapar atau 'berisiko' sesaat sebelum durasi kejadian $R_j$.
+
+*Penaksir Alternatif*
+
+Dua jenis estimasi alternatif juga tersedia untuk metode  `survfit`. Alternatif pertama (`type='fh2'`) menangani hubungan, pada dasarnya, dengan mengasumsikan bahwa beberapa kejadian pada durasi yang sama terjadi dalam urutan yang berubah-ubah. Alternatif lain (`type='fleming-harrington'`) menggunakan estimasi Nelson-Aalen  (Aalen 1978) dari fungsi hazard kumulatif untuk mendapatkan estimasi fungsi survival. Estimasi bahaya kumulatif $H^(x)$ dimulai dari nol dan bertambah pada setiap durasi kejadian yang diamati $t_j$ dengan jumlah kejadian $s_j$ dibagi dengan jumlah yang berisiko $R_j$. Dengan notasi yang sama seperti di atas, penaksir Nelson-Äalen dari fungsi distribusi adalah
+
+$$
+\begin{aligned}
+\hat{F}_{NA}(x) &=
+\left\{
+\begin{array}{ll}
+0 & x<t_{1} \\
+1- \exp \left(-\sum_{j:t_{j} \leq x}\frac{s_j}{R_j} \right) & x \geq t_{1} 
+\end{array}
+\right. .\end{aligned}
+$$
+
+Itu merupakan hasil dari estimator Nelson-Äalen dari fungsi hazard kumulatif
+
+$\hat{H}(x)=\sum_{j:t_j\leq x}  \frac{s_j}{R_j}$
+
+dan hubungan antara fungsi survival dan fungsi hazard kumulatif,
+
+$\hat{S}_{NA}(x)=e^{-\hat{H}(x)}$
+
+## Bayesian Inference
+
+Penjelasan pada subbab ini:
+
+* Jelaskan model Bayesian sebagai alternatif dari pendekatan frequentist dan rangkum lima komponen dari pendekatan pemodelan ini.
+* Ringkas distribusi parameter posterior dan gunakan distribusi posterior ini untuk memprediksi hasil baru.
+* Gunakan distribusi konjugat untuk menentukan distribusi parameter posterior.
+
+### Introduction to Bayesian Inference
+
+Sampai saat ini, metode inferensial kami berfokus pada pengaturan frequentist , di mana sampel diambil berulang kali dari suatu populasi. Vektor parameter θ adalah tetap belum diketahui, sedangkan hasil X adalah realisasi variabel acak.
+
+Sebaliknya, di bawah kerangka Bayesian , kami melihat parameter model dan data sebagai variabel acak. Kami tidak yakin tentang parameternya θ dan gunakan alat probabilitas untuk mencerminkan ketidakpastian ini.
+
+Dibawah ini merupakan rumus aturan bayes:
+
+```{r image7, echo=FALSE, fig.cap="",fig.align='center', out.width = '100%'}
+knitr::include_graphics("4.4.1.png")
+```
+
+Di mana,
+
+* Pr(parameters): adalah distribusi parameter, yang dikenal sebagai distribusi sebelumnya .
+* Pr(data|parameters): adalah distribusi sampling. Dalam konteks frequentist, ini digunakan untuk membuat kesimpulan tentang parameter dan dikenal sebagai kemungkinan .
+* Pr(parameters|data):adalah distribusi parameter setelah mengamati data, yang dikenal sebagai distribusi posterior .
+* Pr(data): adalah distribusi marjinal dari data. Ini umumnya diperoleh dengan mengintegrasikan (atau menjumlahkan) distribusi gabungan data dan parameter di atas nilai parameter.
+
+### Bayesian Model
+
+
+
+### Bayesian Inference
+
+#### Summarizing the Posterior Distributiob of Paremeters
+
+#### Bayesian Predictive Distribution
+
+### Conjugate Distributions
+
+
+
+
+
 

@@ -1,1 +1,55 @@
 # Appendix B: Iterated Expectations
+
+Apendiks ini memperkenalkan undang-undang yang terkait dengan harapan berulang.Dalam beberapa situasi, kami hanya mengamati satu hasil tetapi dapat membuat konsep hasil sebagai hasil dari proses dua (atau lebih) tahap. Jenis model statistik semacam itu disebut model dua tahap , atau hierarkis . Beberapa kasus khusus model hirarkis meliputi:
+
+* model yang parameter distribusinya adalah variabel acak;
+* distribusi campuran, di mana Tahap 1 mewakili undian sub-populasi dan Tahap 2 mewakili variabel acak dari distribusi yang ditentukan oleh sub-populasi yang ditarik pada Tahap 1;
+* distribusi agregat, di mana Tahap 1 mewakili pengundian jumlah peristiwa dan Tahap dua mewakili jumlah kerugian yang terjadi per peristiwa.
+
+## Conditional Distribution and Conditional Expectation
+
+Ekspektasi iterasi adalah hukum mengenai perhitungan ekspektasi dan varian dari variabel acak menggunakan distribusi bersyarat dari variabel yang diberikan variabel lain. Oleh karena itu, pertama-tama kami memperkenalkan konsep yang terkait dengan distribusi bersyarat, dan perhitungan ekspektasi bersyarat dan variabel berdasarkan distribusi bersyarat yang diberikan.
+
+### Conditional Distribution
+
+
+
+#### Discrete Case
+
+#### Continuous Case
+
+### Conditional Expectation and Conditional Variance
+
+#### Discrete Case
+
+#### Continuous Case
+
+## Iterated Expectations and Total Varians
+
+###  Law of Iterated Expectations
+
+### Law of Total Variance
+
+### Application
+
+## Conjugate Distributions
+
+###  Linear Exponential Family
+
+###  Conjugate Distributions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
