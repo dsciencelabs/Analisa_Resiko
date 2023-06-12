@@ -343,3 +343,4 @@ selecting-a-premium
 kurva-lorenz-klasik
 performance-curve-and-a-gini-statistic
 validasi-di-luar-sampel
+referensi

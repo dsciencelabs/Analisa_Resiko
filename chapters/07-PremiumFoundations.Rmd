@@ -361,7 +361,6 @@ Beberapa ukuran paparan yang umum digunakan adalah:
 
 Tabel di bawah memberikan perhitungan terperinci untuk empat kebijakan ilustratif:
 
-<<<<<<< HEAD
 $$\small{
 \begin{matrix}
 \begin{array}{cl|cc|cc|cc|c}
@@ -637,6 +636,3 @@ $$\begin{eqnarray}
 -	Gunakan variabel penjelas dari sampel validasi untuk membentuk premi dalam bentuk  P(xi)
 -	Hitung statistik Gini untuk setiap model. Pilih model dengan statistik Gini terendah.
 
-
-=======
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
