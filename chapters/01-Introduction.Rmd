@@ -53,7 +53,6 @@ Kerangka kerja ini akan dikembangkan seiring berjalannya waktu, tetapi yang pert
 
 Gambar 1.1 menggambarkan garis waktu dari suatu kontrak asuransi yang khas. Sepanjang masa berlakunya kontrak, perusahaan secara rutin memproses peristiwa seperti pengumpulan premi dan penilaian, yang dijelaskan dalam Bagian 1.2; peristiwa-peristiwa ini ditandai dengan tanda *x* pada garis waktu. Peristiwa-peristiwa yang tidak teratur dan tak terduga juga terjadi. Sebagai contoh, $t_2$ dan $t_4$ menandai peristiwa klaim asuransi (beberapa kontrak, seperti asuransi jiwa, mungkin hanya memiliki satu klaim). Waktu $t_3$ dan $t_5$ menandai peristiwa ketika pemegang polis ingin mengubah fitur-fitur tertentu dalam kontrak, seperti pilihan klaim dan jumlah perlindungan. Dari perspektif perusahaan, kita bahkan dapat mempertimbangkan inisiasi kontrak (kedatangan, waktu $t_1$) dan terminasi kontrak (kepergian, waktu $t_6$) sebagai peristiwa yang tidak pasti. (Sebagai alternatif, untuk beberapa tujuan, Anda dapat mengkondisikan peristiwa-peristiwa ini dan memperlakukannya sebagai pasti.)
 
-( Gambar 1)
 
 ## Operasi Perusahaan Asuransi
 

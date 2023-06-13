@@ -1,1 +1,371 @@
 # Aggregate Loss Models
+
+## Data 
+
+### Tipe Data dan Sumbernya 
+
+Dalam hal bagaimana data dikumpulkan, data dapat dibagi menjadi dua tipe (Hox dan Boeije 2005): data primer dan data sekunder. Data primer adalah data asli yang dikumpulkan untuk masalah penelitian tertentu. Data sekunder adalah data yang awalnya dikumpulkan untuk tujuan lain dan digunakan kembali untuk masalah penelitian lain. Keuntungan utama menggunakan data primer adalah bahwa konstruk teoritis, desain penelitian, dan strategi pengumpulan data dapat disesuaikan dengan pertanyaan penelitian yang mendasarinya untuk memastikan bahwa data yang dikumpulkan membantu memecahkan masalah. Kelemahan menggunakan data primer adalah bahwa pengumpulan data dapat mahal dan memakan waktu. Menggunakan data sekunder memiliki keuntungan biaya yang lebih rendah dan akses lebih cepat ke informasi relevan. Namun, menggunakan data sekunder mungkin tidak optimal untuk pertanyaan penelitian yang sedang dipertimbangkan.
+
+Dalam hal tingkat organisasi data, data juga dapat dibagi menjadi dua tipe (Inmon dan Linstedt 2014; O'Leary 2013; Hashem et al. 2015; Abdullah dan Ahmad 2013; Pries dan Dunnigan 2015): data terstruktur dan data tak terstruktur. Data terstruktur memiliki format yang dapat diprediksi dan terjadi secara teratur. Sebaliknya, data tak terstruktur tidak memiliki format yang terjadi secara teratur dan tidak memiliki struktur yang dapat dikenali oleh komputer. Data terstruktur terdiri dari catatan, atribut, kunci, dan indeks, dan biasanya dikelola oleh sistem manajemen basis data (DBMS) seperti IBM DB2, Oracle, MySQL, dan Microsoft SQL Server. Akibatnya, sebagian besar unit data terstruktur dapat ditemukan dengan cepat dan mudah. Data tak terstruktur memiliki berbagai bentuk dan variasi yang berbeda. Salah satu bentuk umum data tak terstruktur adalah teks. Mengakses data tak terstruktur bisa sulit. Untuk menemukan unit data tertentu dalam teks panjang, misalnya, biasanya dilakukan pencarian berurutan.
+
+Data dapat diklasifikasikan sebagai data kualitatif atau kuantitatif. Data kualitatif adalah data tentang kualitas yang tidak dapat diukur secara faktual. Akibatnya, data kualitatif sangat bervariasi dalam sifatnya dan meliputi wawancara, dokumen, dan artefak (Miles, Hberman, dan Sdana 2014). Data kuantitatif adalah data tentang kuantitas yang dapat diukur secara numerik dengan angka. Dalam hal tingkat pengukuran, data kuantitatif dapat dikelompokkan lebih lanjut sebagai data nominal, ordinal, interval, atau rasio (Gan 2011). Data nominal, juga disebut data kategorikal, adalah data diskrit tanpa urutan alami. Data ordinal adalah data diskrit dengan urutan alami. Data interval adalah data kontinu dengan urutan tertentu dan interval yang sama. Data rasio adalah data interval dengan nol alami.
+
+Ada beberapa sumber data yang ada. Pertama, data dapat diperoleh dari peneliti berbasis universitas yang mengumpulkan data primer. Kedua, data dapat diperoleh dari organisasi yang didirikan untuk tujuan melepaskan data sekunder untuk komunitas penelitian umum. Ketiga, data dapat diperoleh dari lembaga statistik nasional dan regional yang mengumpulkan data. Terakhir, perusahaan memiliki data korporat yang dapat diperoleh untuk tujuan penelitian.
+
+Meskipun mungkin sulit untuk mendapatkan data untuk menangani masalah penelitian tertentu atau menjawab pertanyaan bisnis, relatif mudah untuk mendapatkan data untuk menguji model atau algoritma analisis data. Di era modern ini, peneliti dapat memperoleh dataset dari Internet. Berikut adalah daftar beberapa situs web untuk memperoleh data:
+
+**-	UCI Machine Learning Repository.** Situs web ini (url: http://archive.ics.uci.edu/ml/index.php) menyimpan lebih dari 400 dataset yang dapat digunakan untuk menguji algoritma pembelajaran mesin.
+
+**-	Kaggle.** Situs web Kaggle (url: https://www.kaggle.com/) menyediakan dataset yang biasa digunakan untuk kompetisi ilmu data.  
+
+**-	DrivenData.** DrivenData bertujuan untuk membawa praktik terkini dalam ilmu data untuk memecahkan beberapa tantangan sosial terbesar di dunia. Di situs webnya (url: https://www.drivendata.org/), dapat berpartisipasi dalam kompetisi ilmu data dan mengunduh dataset.
+
+**-	Analytics Vidhya**. Situs web ini (url: https://datahack.analyticsvidhya.com/contest/all/) memungkinkan berpartisipasi dan mengunduh dataset dari masalah latihan dan masalah hackathon.
+
+**-	KDD Cup.** KDD Cup adalah kompetisi tahunan dalam Penambangan Data dan Penemuan Pengetahuan yang diselenggarakan oleh ACM Special Interest Group on Knowledge Discovery and Data Mining. Situs web ini (url: http://www.kdd.org/kdd-cup) berisi dataset yang digunakan dalam kompetisi KDD Cup sejak tahun 1997.
+
+**-	Data terbuka** Pemerintah Amerika Serikat. Situs web ini (url: https://www.data.gov/) berisi sekitar 200.000 dataset yang mencakup berbagai bidang, termasuk iklim, pendidikan, energi, dan keuangan.
+
+**-	AWS Public Datasets.** Di situs web ini (url: https://aws.amazon.com/datasets/), Amazon menyediakan repositori terpusat dataset publik, termasuk beberapa dataset yang sangat besar.
+
+### Struktur Data dan Penyimpanannya
+	
+Seperti yang disebutkan pada subbagian sebelumnya, ada data terstruktur dan data tak terstruktur. Data terstruktur adalah data yang sangat terorganisir dan biasanya memiliki format tabel berikut:
+
+$$\begin{matrix}
+\begin{array}{lllll} \hline
+ & V_1 & V_2 & \cdots & V_d \  
+\\\hline
+\textbf{x}_1 & x_{11} & x_{12} & \cdots & x_{1d} \\
+\textbf{x}_2 & x_{21} & x_{22} & \cdots & x_{2d} \\
+\vdots & \vdots & \vdots & \cdots & \vdots \\
+\textbf{x}_n & x_{n1} & x_{n2} & \cdots & x_{nd} \\
+\hline
+\end{array}
+\end{matrix}$$
+
+Dalam kata lain, data terstruktur dapat diorganisir menjadi tabel yang terdiri dari baris dan kolom. Biasanya, setiap baris mewakili sebuah rekaman dan setiap kolom mewakili sebuah atribut. Tabel dapat diuraikan menjadi beberapa tabel yang dapat disimpan dalam basis data relasional seperti Microsoft SQL Server. SQL (Structured Query Language) dapat digunakan untuk mengakses dan memodifikasi data dengan mudah dan efisien.
+
+Data tak terstruktur tidak mengikuti format yang teratur (Abdullah dan Ahmad 2013). Contoh data tak terstruktur meliputi dokumen, video, dan file audio. Sebagian besar data yang kita temui adalah data tak terstruktur. Bahkan, istilah "big data" diciptakan untuk mencerminkan fakta ini. Basis data relasional tradisional tidak dapat mengatasi tantangan dalam variasi dan skala yang dibawa oleh data tak terstruktur yang besar saat ini. Basis data NoSQL telah digunakan untuk menyimpan data tak terstruktur yang besar.
+
+Ada tiga basis data NoSQL utama (Chen et al. 2014): basis data kunci-nilai, basis data berorientasi kolom, dan basis data berorientasi dokumen. Basis data kunci-nilai menggunakan model data sederhana dan menyimpan data berdasarkan nilai kunci. Basis data kunci-nilai modern memiliki skalabilitas yang lebih tinggi dan waktu tanggapan kueri yang lebih kecil daripada basis data relasional. Contoh basis data kunci-nilai termasuk Dynamo yang digunakan oleh Amazon dan Voldemort yang digunakan oleh LinkedIn. Basis data berorientasi kolom menyimpan dan memproses data berdasarkan kolom daripada baris. Kolom dan baris tersebut dipecah menjadi beberapa node untuk mencapai skalabilitas. Contoh basis data berorientasi kolom termasuk BigTable yang dikembangkan oleh Google dan Cassandra yang dikembangkan oleh Facebook. Basis data dokumen dirancang untuk mendukung bentuk data yang lebih kompleks daripada yang disimpan dalam basis data kunci-nilai. Contoh basis data dokumen termasuk MongoDB, SimpleDB, dan CouchDB. MongoDB adalah basis data berorientasi dokumen sumber terbuka yang menyimpan dokumen sebagai objek biner. SimpleDB adalah basis data NoSQL terdistribusi yang digunakan oleh Amazon. CouchDB adalah basis data berorientasi dokumen sumber terbuka lainnya.
+
+
+### Kualitas Data
+	
+Data yang akurat sangat penting untuk analisis data yang berguna. Kurangnya data yang akurat dapat menyebabkan biaya yang signifikan bagi organisasi dalam berbagai hal, seperti kegiatan koreksi, kehilangan pelanggan, peluang yang terlewatkan, dan keputusan yang salah (Olson 2003).
+
+Data memiliki kualitas jika memenuhi penggunaan yang dimaksudkan; yaitu, data tersebut akurat, tepat waktu, relevan, lengkap, dapat dimengerti, dan dapat dipercaya (Olson 2003). Oleh karena itu, kita perlu mengetahui spesifikasi penggunaan yang dimaksudkan dan kemudian menilai kesesuaiannya untuk penggunaan tersebut guna menilai kualitas data. Penggunaan data yang tidak disengaja dapat timbul dari berbagai alasan dan menyebabkan masalah serius.
+
+Akurasi adalah komponen paling penting dari data berkualitas tinggi. Data yang akurat memiliki 
+sifat-sifat berikut (Olson 2003):
+
+-	Elemen data tidak hilang dan memiliki nilai yang valid.
+
+-	Nilai elemen data berada dalam rentang yang tepat dan memiliki representasi yang benar.
+
+Data yang tidak akurat dapat timbul dari berbagai sumber. Khususnya, berikut adalah area-area umum di mana data yang tidak akurat terjadi:
+
+-	Entri data awal. Kesalahan (termasuk kesalahan yang disengaja) dan kesalahan sistem dapat terjadi selama entri data awal. Proses entri data yang cacat dapat menghasilkan data yang tidak akurat.
+
+-	Kerusakan data. Kerusakan data, juga dikenal sebagai degradasi data, merujuk pada kerusakan bertahap data komputer akibat akumulasi kegagalan non-kritis pada perangkat penyimpanan.
+
+-	Pemindahan dan restrukturisasi data. Data yang tidak akurat juga dapat timbul dari ekstraksi, pembersihan, transformasi, pengisian, atau integrasi data.
+
+-	Penggunaan data. Pelaporan yang cacat dan kurang pemahaman dapat menyebabkan data yang tidak akurat.
+
+Reverifikasi dan analisis adalah dua pendekatan yang digunakan untuk menemukan elemen data yang tidak akurat. Pendekatan pertama dilakukan oleh orang-orang, yang memeriksa setiap elemen data secara manual dengan kembali ke sumber asli data. Pendekatan kedua dilakukan oleh perangkat lunak dengan keterampilan seorang analis untuk mencari data yang mungkin tidak akurat. Untuk memastikan bahwa elemen data 100% akurat, kita harus menggunakan reverifikasi. Namun, reverifikasi dapat memakan waktu dan mungkin tidak mungkin dilakukan untuk beberapa data. Teknik analisis juga dapat digunakan untuk mengidentifikasi elemen data yang tidak akurat. Ada lima jenis analisis yang dapat digunakan untuk mengidentifikasi data yang tidak akurat (Olson 2003): analisis elemen data, analisis struktural, korelasi nilai, korelasi agregasi, dan inspeksi nilai.
+
+Perusahaan dapat membuat program jaminan kualitas data untuk membuat basis data berkualitas tinggi. Untuk informasi lebih lanjut tentang manajemen masalah kualitas data dan teknik profil data, disarankan untuk merujuk ke Olson (2003).
+
+### Data Cleaning
+	
+Data mentah biasanya perlu dibersihkan sebelum analisis yang berguna dapat dilakukan. Khususnya, area-area berikut perlu diperhatikan saat mempersiapkan data untuk analisis (Janert 2010):
+
+- Nilai yang hilang. Sangat umum memiliki nilai yang hilang dalam data mentah. Tergantung pada situasinya, kita dapat membuang catatan tersebut, membuang variabelnya, atau mengisi nilai yang hilang.
+
+- Pencilan. Data mentah mungkin mengandung titik data yang tidak biasa seperti pencilan. Kita perlu menangani pencilan dengan hati-hati. Kita tidak bisa hanya menghapus pencilan tanpa mengetahui alasan keberadaannya. Meskipun terkadang pencilan bisa menjadi kesalahan sederhana seperti yang disebabkan oleh kesalahan administrasi, terkadang perilaku yang tidak biasa dari pencilan dapat menunjukkan jenis efek yang sedang kita cari.
+
+- Sampah. Data mentah mungkin berisi sampah, seperti karakter non-printable. Ketika hal ini terjadi, sampah biasanya jarang dan sulit untuk diperhatikan. Namun, sampah dapat menyebabkan masalah serius dalam aplikasi lanjutan.
+
+- Format. Data mentah mungkin diformat dengan cara yang tidak nyaman untuk analisis selanjutnya. Misalnya, komponen dari sebuah catatan dapat terbagi menjadi beberapa baris dalam file teks. Dalam kasus seperti itu, baris yang sesuai dengan satu catatan harus digabungkan sebelum dimuat ke perangkat lunak analisis data seperti R.
+
+- Catatan duplikat. Data mentah mungkin berisi catatan duplikat. Catatan duplikat harus dikenali dan dihapus. Tugas ini mungkin tidak sederhana tergantung pada apa yang Anda anggap sebagai "duplikat".
+
+- Menggabungkan dataset. Data mentah mungkin berasal dari sumber yang berbeda. Dalam hal ini, kita perlu menggabungkan data dari berbagai sumber untuk memastikan kompatibilitasnya.
+
+## Preliminari Analisis Data
+
+Analisis data melibatkan pemeriksaan, pembersihan, transformasi, dan pemodelan data untuk menemukan informasi yang berguna untuk menyimpulkan dan membuat keputusan. Analisis data memiliki sejarah yang panjang. Pada tahun 1962, ahli statistik John Tukey mendefinisikan analisis data sebagai prosedur untuk menganalisis data, teknik untuk menginterpretasikan hasil dari prosedur tersebut, cara merencanakan pengumpulan data untuk memudahkan analisis, membuatnya lebih presisi atau akurat, dan semua alat dan hasil dari statistik (matematika) yang berlaku untuk menganalisis data. Baru-baru ini, Judd dan rekan-rekannya mendefinisikan analisis data sebagai persamaan berikut (Judd, McClelland, dan Ryan 2017):
+
+$$Data = Model + Error,$$
+
+Dimana data mewakili kumpulan skor dasar atau pengamatan yang akan dianalisis, model adalah representasi ringkas dari data, dan error adalah selisih antara pengamatan dengan representasi modelnya. Dengan menggunakan persamaan di atas untuk analisis data, seorang analis harus menyelesaikan dua tujuan yang bertentangan yaitu:
+
+-	Menambahkan lebih banyak parameter ke dalam model agar model mewakili data dengan lebih baik, dan
+-	Menghapus parameter dari model agar model menjadi sederhana dan parsimonius.
+
+### Proses Analisis Data
+
+Analisis data merupakan bagian dari studi secara keseluruhan. Sebagai contoh, Gambar di atas menunjukkan proses studi tipikal dalam ilmu perilaku dan sosial seperti yang dijelaskan dalam Albers (2017). Analisis data terdiri dari langkah-langkah berikut:
+
+**-	Analisis eksploratori.** Melalui statistik ringkasan dan representasi grafis, memahami semua karakteristik data yang relevan dan menentukan jenis analisis yang sesuai untuk data tersebut.
+
+**-	Analisis statistik.** Melakukan analisis statistik seperti menentukan signifikansi statistik dan ukuran efek.
+
+**-	Memahami hasil.** Menginterpretasikan hasil statistik dalam konteks studi secara keseluruhan.
+
+**-	Menentukan implikasi.** Menginterpretasikan data dengan menghubungkannya dengan tujuan studi dan bidang yang lebih luas dalam studi ini.
+
+Shmueli (2010) menggambarkan proses umum untuk pemodelan statistik, yang ditunjukkan dalam gambar di bawah ini. Proses bergantung pada tujuan analisis, langkah-langkahnya berbeda dalam hal pemilihan metode, kriteria, data, dan informasi.
+
+
+### Exploratory vs Confirmatory
+
+Terdapat dua fase dalam analisis data (Good 1983): analisis data eksploratif (EDA) dan analisis data konfirmatori (CDA). Tabel di bawah merangkum beberapa perbedaan antara EDA dan CDA. EDA biasanya digunakan pada data observasional dengan tujuan mencari pola dan merumuskan hipotesis. Sebaliknya, CDA sering digunakan pada data eksperimental (yaitu data yang diperoleh melalui desain eksperimen formal) dengan tujuan mengukur sejauh mana ketidaksesuaian antara model dan data dapat diharapkan terjadi secara kebetulan. Gelman (2004).
+
+$$\small{
+\begin{array}{lll} \hline
+ & \textbf{EDA} & \textbf{CDA} \\\hline
+\text{Data} & \text{Observational data} & \text{Experimental data}\\[3mm]
+\text{Goal} & \text{Pattern recognition,}  & \text{Hypothesis testing,}  \\
+& \text{formulate hypotheses} & \text{estimation, prediction} \\[3mm]
+\text{Techniques} & \text{Descriptive statistics,} & \text{Traditional statistical tools of} \\
+& \text{visualization, clustering} & \text{inference, significance, and}\\
+& & \text{confidence} \\
+\hline
+\end{array}
+}$$
+
+### Supervise vs Unsupervised
+
+Metode untuk analisis data dapat dibagi menjadi dua jenis (Abbott 2014; Igual and Segu 2017): metode pembelajaran supervised dan metode pembelajaran unsupervised. Metode pembelajaran supervised bekerja dengan data yang dilabeli, yang mencakup variabel target. Secara matematis, metode pembelajaran supervised mencoba untuk memperkirakan fungsi berikut:
+
+$$Y = f(X_1, X_2, \ldots, X_p),$$
+ 
+Di mana $Y$ adalah variabel target dan $X1, X2, ..., X_p$ adalah variabel penjelas. Tabel 13.2 memberikan daftar nama umum untuk berbagai jenis variabel (Frees 2009). Ketika variabel target adalah variabel kategorikal, metode pembelajaran berawasan disebut metode klasifikasi. Ketika variabel target adalah kontinu, metode pembelajaran berawasan disebut metode regresi.
+
+$$\small{
+\begin{array}{ll}
+\hline
+\textbf{Target Variable}  &  \textbf{Explanatory Variable}\\\hline
+\text{Dependent variable} & \text{Independent variable}\\
+\text{Response} & \text{Treatment} \\
+\text{Output} & \text{Input} \\
+\text{Endogenous variable} & \text{Exogenous variable} \\
+\text{Predicted variable} & \text{Predictor variable} \\
+\text{Regressand} & \text{Regressor} \\
+\hline
+\end{array}
+}$$
+
+Metode pembelajaran unsupervised bekerja dengan data tanpa label, yang hanya mencakup variabel penjelas. Dengan kata lain, metode pembelajaran unsupervised tidak menggunakan variabel target. Akibatnya, metode pembelajaran unsupervised juga disebut metode pemodelan deskriptif.
+
+### Parametrik vs Nonparametrik
+
+Metode untuk analisis data dapat bersifat parametrik atau nonparametrik (Abbott 2014). Metode parametrik mengasumsikan bahwa data mengikuti distribusi tertentu. Metode nonparametrik, yang diperkenalkan dalam Bagian 4.1, tidak mengasumsikan distribusi untuk data dan oleh karena itu disebut metode bebas distribusi.
+
+Metode parametrik memiliki keuntungan bahwa jika distribusi data diketahui, sifat-sifat data dan sifat-sifat metode (misalnya, kesalahan, konvergensi, koefisien) dapat diturunkan. Kerugian dari metode parametrik adalah bahwa analis perlu menghabiskan waktu yang cukup untuk menemukan distribusinya. Misalnya, analis dapat mencoba berbagai metode transformasi untuk mengubah data sehingga mengikuti distribusi tertentu.
+
+Karena metode nonparametrik membuat asumsi yang lebih sedikit, metode nonparametrik memiliki keunggulan bahwa mereka lebih fleksibel, lebih tahan terhadap gangguan, dan lebih dapat diterapkan pada data non-kuantitatif. Namun, kelemahan dari metode nonparametrik adalah lebih sulit untuk menggeneralisasi temuan di luar domain data yang diamati, yang merupakan pertimbangan penting dalam *pemodelan prediktif.*
+
+###  Explanation vs Prediction
+
+Ada dua tujuan dalam analisis data (Breiman 2001; Shmueli 2010): penjelasan dan prediksi. Di beberapa bidang ilmiah seperti ekonomi, psikologi, dan ilmu lingkungan, fokus dari analisis data adalah untuk menjelaskan hubungan kausal antara variabel input dan variabel respons. Di bidang ilmiah lain seperti pemrosesan bahasa alami dan bioinformatika, fokus dari analisis data adalah untuk memprediksi apa respons yang akan terjadi berdasarkan variabel input.
+
+Shmueli (2010) membahas dengan detail perbedaan antara pemodelan penjelasan dan pemodelan prediktif. Pemodelan penjelasan umumnya digunakan untuk membangun dan menguji teori. Namun, pemodelan prediktif jarang digunakan dalam banyak bidang ilmiah sebagai alat untuk mengembangkan teori.
+
+Pemodelan penjelasan biasanya dilakukan sebagai berikut:
+
+1.	Menyatakan teori yang berlaku.
+2.	Menyatakan hipotesis kausal, yang dinyatakan dalam istilah konstruk teoritis daripada variabel yang dapat diukur. Diagram kausal biasanya disertakan untuk menggambarkan hubungan kausal yang dihipotesiskan antara konstruk teoritis.
+3.	Mengoperasionalisasikan konstruk. Pada langkah ini, literatur sebelumnya dan pembenaran teoritis digunakan untuk membangun jembatan antara konstruk teoritis dan pengukuran yang dapat diamati.
+4.	Mengumpulkan data dan membangun model bersama hipotesis statistik, yang dioperasionalisasikan dari hipotesis penelitian.
+5.	Mencapai kesimpulan penelitian dan merekomendasikan kebijakan. Kesimpulan statistik dikonversi menjadi kesimpulan penelitian atau rekomendasi kebijakan.
+
+Shmueli (2010) mendefinisikan pemodelan prediktif sebagai proses menerapkan model statistik atau algoritme penambangan data pada data dengan tujuan memprediksi pengamatan baru atau masa depan. Prediksi meliputi prediksi titik, prediksi interval, daerah, distribusi, dan peringkat pengamatan baru. Model prediktif dapat berupa metode apa pun yang menghasilkan prediksi.
+
+### Data Modeling vs Algorithmic Modeling
+
+Breiman (2001) membahas dua budaya dalam penggunaan pemodelan statistik untuk mencapai kesimpulan dari data: budaya pemodelan data dan budaya pemodelan algoritmik. Dalam budaya pemodelan data, diasumsikan bahwa data dihasilkan oleh model data stokastik yang diberikan. Dalam budaya pemodelan algoritmik, mekanisme data diperlakukan sebagai yang tidak diketahui dan digunakan model algoritmik.
+
+Pemodelan data memungkinkan statistikawan untuk menganalisis data dan memperoleh informasi tentang mekanisme data. Namun, Breiman (2001) berpendapat bahwa fokus pada pemodelan data dalam komunitas statistik telah menghasilkan efek samping seperti:
+
+1.	Menghasilkan teori yang tidak relevan dan kesimpulan ilmiah yang dipertanyakan.
+2.	Mencegah statistikawan menggunakan model algoritmik yang mungkin lebih sesuai.
+3.	Membatasi kemampuan statistikawan untuk menangani berbagai masalah.
+
+Pemodelan algoritmik telah digunakan oleh statistikawan industri sejak lama. Sayangnya, pengembangan metode algoritmik diambil oleh komunitas di luar statistik (Breiman 2001). Tujuan dari pemodelan algoritmik adalah akurasi prediksi. Untuk beberapa masalah prediksi kompleks, model data tidak cocok. Masalah prediksi ini termasuk pengenalan suara, pengenalan gambar, pengenalan tulisan tangan, prediksi deret waktu nonlinear, dan prediksi pasar keuangan. Teori dalam pemodelan algoritmik berfokus pada sifat-sifat algoritma, seperti konvergensi dan akurasi prediksi.
+
+### Analisis Big Data
+
+Berbeda dengan analisis data tradisional, analisis big data menggunakan metode dan alat tambahan yang dapat dengan cepat mengambil informasi dari data yang sangat besar. Secara khusus, analisis big data menggunakan metode pemrosesan berikut (Chen et al. 2014):
+
+1.	Filter bloom adalah struktur data probabilitas yang efisien dalam penggunaan ruang yang digunakan untuk menentukan apakah suatu elemen termasuk dalam sebuah himpunan. Keuntungannya adalah efisiensi penggunaan ruang yang tinggi dan kecepatan kueri yang tinggi. Kekurangannya adalah adanya tingkat kesalahan pengenalan tertentu.
+2.	Hashing adalah metode yang mengubah data menjadi nilai numerik dengan panjang tetap melalui fungsi hash. Keuntungannya adalah kecepatan baca dan tulis yang tinggi. Namun, menemukan fungsi hash yang baik bisa sulit.
+3.	Indexing merujuk pada proses membagi data untuk mempercepat pembacaan. Hashing adalah kasus khusus dari indexing.
+4.	Trie, juga disebut pohon digital, adalah metode untuk meningkatkan efisiensi kueri dengan menggunakan awalan umum dari string karakter untuk mengurangi perbandingan antara string karakter.
+5.	Komputasi paralel menggunakan beberapa sumber daya komputasi untuk menyelesaikan tugas komputasi. Alat komputasi paralel termasuk Message Passing Interface (MPI), MapReduce, dan Dryad.
+
+Analisis big data dapat dilakukan dalam beberapa tingkatan (Chen et al. 2014): tingkat memori, tingkat business intelligence (BI), dan tingkat massif. Analisis tingkat memori dilakukan ketika data dapat dimuat ke memori kluster komputer. Perangkat keras saat ini dapat menangani ratusan gigabyte (GB) data dalam memori. Analisis tingkat BI dapat dilakukan ketika data melebihi tingkat memori. Umumnya, produk analisis tingkat BI mendukung data hingga terabyte (TB). Analisis tingkat massif dilakukan ketika data melebihi kemampuan produk untuk analisis tingkat BI. Biasanya Hadoop dan MapReduce digunakan dalam analisis tingkat massif.
+
+### Reproducible Analysis
+
+Seperti yang disebutkan di sebelumnya, alur kerja analisis data yang umum meliputi pengumpulan data, analisis data, dan pelaporan hasil. Data yang terkumpul disimpan dalam database atau file. Data kemudian dianalisis oleh satu atau lebih skrip, yang mungkin menyimpan beberapa hasil sementara atau selalu bekerja pada data mentah. Akhirnya, laporan dibuat untuk menjelaskan hasil, yang mencakup plot, tabel, dan ringkasan data yang relevan. Alur kerja ini dapat menghadapi masalah potensial berikut (Mailund 2017, Bab 2):
+
+1.	Data terpisah dari skrip analisis.
+2.	Dokumentasi analisis terpisah dari analisis itu sendiri.
+
+Jika analisis dilakukan pada data mentah dengan satu skrip, maka masalah pertama bukanlah masalah utama. Jika analisis terdiri dari beberapa skrip dan skrip menyimpan hasil sementara yang dibaca oleh skrip berikutnya, maka skrip-skrip tersebut menggambarkan alur kerja analisis data. Untuk mereproduksi analisis, skrip-skrip tersebut harus dieksekusi dalam urutan yang benar. Alur kerja ini dapat menyebabkan masalah besar jika urutan skrip tidak didokumentasikan atau dokumentasinya tidak diperbarui atau hilang. Salah satu cara untuk mengatasi masalah pertama adalah menulis skrip sehingga bagian mana pun dari alur kerja dapat dijalankan secara otomatis kapan pun.
+
+Jika dokumentasi analisis disinkronkan dengan analisis itu sendiri, maka masalah kedua bukanlah masalah utama. Namun, dokumentasi dapat menjadi tidak berguna jika skrip diubah tetapi dokumentasinya tidak diperbarui.
+
+Literate programming adalah pendekatan untuk mengatasi kedua masalah yang disebutkan di atas, di mana dokumentasi program dan kode program ditulis bersama. Untuk melakukan literate programming dalam R, salah satu cara adalah menggunakan R Markdown dan paket knitr.
+
+### Isu Etika
+
+Analis dapat menghadapi isu dan dilema etika selama proses analisis data. Dalam beberapa bidang, isu dan dilema etika meliputi persetujuan peserta, manfaat, risiko, kerahasiaan, dan kepemilikan data (Miles, Hberman, dan Sdana 2014). Khusus untuk analisis data dalam ilmu aktuaria dan asuransi, kita menghadapi masalah dan isu etika berikut (Miles, Hberman, dan Sdana 2014):
+
+1.	Keberhargaan proyek. Apakah proyek ini layak dilakukan? Apakah proyek ini akan memberikan kontribusi yang signifikan pada domain yang lebih luas dari karier saya? Jika sebuah proyek hanya bersifat opportunistic dan tidak memiliki signifikansi yang lebih besar, maka proyek tersebut mungkin dijalankan dengan kurang hati-hati. Hasilnya mungkin terlihat bagus tetapi tidak benar.
+2.	Kompetensi. Apakah saya atau tim memiliki keahlian untuk melaksanakan proyek ini? Ketidakmampuan dapat menyebabkan kelemahan dalam analitika, seperti pengumpulan data yang buruk dan kesimpulan yang dangkal.
+3.	Manfaat, biaya, dan saling menguntungkan. Apakah setiap pemangku kepentingan akan mendapatkan manfaat dari proyek ini? Apakah manfaat dan biaya yang adil? Sebuah proyek kemungkinan akan gagal jika manfaat dan biaya bagi pemangku kepentingan tidak seimbang.
+4.	Privasi dan kerahasiaan. Bagaimana kita memastikan bahwa informasi tetap dirahasiakan? Bagaimana kita memverifikasi di mana data mentah dan hasil analisis disimpan? Bagaimana kita akan mengaksesnya? Pertanyaan-pertanyaan ini harus dijawab dan didokumentasikan dalam perjanjian kerahasiaan yang jelas.
+
+## Teknik Analisis Data
+
+Teknik-teknik untuk analisis data berasal dari berbagai bidang yang saling terkait, seperti statistika, pembelajaran mesin, pengenalan pola, dan penambangan data. Statistika adalah bidang yang mengatasi cara yang dapat diandalkan untuk mengumpulkan data dan membuat inferensi, Bandyopadhyay dan Forster (2011), Bluman (2012). Istilah pembelajaran mesin pertama kali diciptakan oleh Samuel pada tahun 1959 (Samuel 1959). Awalnya, pembelajaran mesin merujuk pada bidang studi di mana komputer memiliki kemampuan untuk belajar tanpa diprogram secara eksplisit. Saat ini, pembelajaran mesin telah berkembang menjadi bidang studi yang luas di mana metode komputasi menggunakan pengalaman (yaitu, informasi masa lalu yang tersedia untuk analisis) untuk meningkatkan kinerja atau membuat prediksi yang akurat (Bishop 2007; Clarke, Fokoue, dan Zhang 2009; Mohri, Rostamizadeh, dan Talwalkar 2012; Kubat 2017). Terdapat empat jenis algoritma pembelajaran mesin (lihat tabel di bawah) tergantung pada jenis data dan jenis tugas pembelajaran.
+
+$$\small{
+\begin{array}{rll} \hline
+& \textbf{Supervised} & \textbf{Unsupervised} \\\hline
+\textbf{Discrete Data} & \text{Classification} & \text{Clustering} \\
+\textbf{Continuous Data} & \text{Regression} & \text{Dimension reduction} \\
+\hline
+\end{array}
+}$$
+
+Pengenalan pola, yang berasal dari bidang teknik, merupakan bidang yang erat hubungannya dengan pembelajaran mesin, yang tumbuh dari ilmu komputer. Sebenarnya, pengenalan pola dan pembelajaran mesin dapat dianggap sebagai dua aspek dari bidang yang sama (Bishop 2007). Penambangan data adalah bidang yang berkaitan dengan mengumpulkan, membersihkan, memproses, menganalisis, dan memperoleh wawasan yang berguna dari data (Aggarwal 2015).
+
+### Teknik Eksplorasi
+Teknik analisis data eksploratori mencakup statistik deskriptif serta banyak teknik pembelajaran tanpa pengawasan seperti pengelompokan data dan analisis komponen utama.
+
+#### Statistik Deskriptif
+
+Secara satu pengertian (sebagai "mass noun"), "statistik deskriptif" adalah area statistik yang berkaitan dengan pengumpulan, pengorganisasian, ringkasan, dan penyajian data (Bluman 2012). Secara lain pengertian (sebagai "count noun"), "statistik deskriptif" adalah statistik ringkasan yang menggambarkan atau merangkum data secara kuantitatif.
+
+$$\small{
+\begin{array}{ll} \hline
+& \textbf{Descriptive Statistics} \\\hline
+\text{Measures of central tendency} & \text{Mean, median, mode, midrange}\\
+\text{Measures of variation} & \text{Range, variance, standard deviation} \\
+\text{Measures of position} & \text{Quantile} \\
+\hline
+\end{array}
+}$$
+
+Tabel di atas  mencantumkan beberapa statistik deskriptif yang sering digunakan. Di R, kita dapat menggunakan fungsi summary untuk menghitung beberapa statistik deskriptif. Untuk data numerik, kita dapat memvisualisasikan statistik deskriptif menggunakan boxplot.
+
+Selain statistik deskriptif kuantitatif ini, kita juga dapat menggambarkan secara kualitatif bentuk distribusi (Bluman 2012). Misalnya, kita dapat mengatakan bahwa distribusi tersebut cenderung condong positif, simetris, atau cenderung condong negatif. Untuk memvisualisasikan distribusi variabel, kita dapat menggambar histogram.
+
+#### Analisis Komponen Utama
+
+Analisis komponen utama (Principal Component Analysis/PCA) adalah prosedur statistik yang mentransformasikan dataset yang dijelaskan oleh variabel-variabel yang mungkin saling berkorelasi menjadi dataset yang dijelaskan oleh variabel-variabel yang tidak berkorelasi secara linear, yang disebut komponen utama, dan diurutkan berdasarkan varian mereka. PCA adalah teknik untuk reduksi dimensi. Jika variabel asli saling berkorelasi tinggi, maka beberapa komponen utama pertama dapat menjelaskan sebagian besar variasi dari data asli.
+
+Komponen utama dari variabel-variabel terkait dengan eigenvalue dan eigenvector dari matriks kovarian dari variabel-variabel. Untuk $i=1,2,…,d$, biarkan $(λ_i,e_i)$ menjadi pasangan eigenvalue-eigenvector ke-$i$ dari matriks kovarian $Σ$ dari $d$ variabel $X_1,X_2,…,X_d$, sehingga $λ_1≥λ_2≥…≥λ_d≥0$ dan eigenvector dinormalisasi. Maka komponen utama ke-i diberikan oleh:
+
+$$Z_{i} = \textbf{e}_i' \textbf{X} =\sum_{j=1}^d e_{ij} X_j,$$
+
+	
+dimana  $X=(X_1,X_2,…,X_d)'$. Dapat ditunjukkan bahwa  Var (Zi)=λi. Sebagai hasilnya, proporsi varians yang dijelaskan oleh komponen utama ke-i dihitung sebagai:
+
+$$\frac{\mathrm{Var~}{(Z_i)}}{ \sum_{j=1}^{d} \mathrm{Var~}{(Z_j)}} = \frac{\lambda_i}{\lambda_1+\lambda_2+\cdots+\lambda_d}.$$
+
+#### Analisis Klaster
+
+Analisis klaster (dikenal juga sebagai pengelompokan data) merujuk pada proses membagi dataset menjadi kelompok atau klaster yang homogen, di mana titik-titik dalam klaster yang sama serupa dan titik-titik dari klaster yang berbeda cukup berbeda (Gan, Ma, dan Wu 2007; Gan 2011). Pengelompokan data adalah salah satu alat yang paling populer untuk analisis data eksploratif dan telah diterapkan dalam berbagai bidang ilmiah.
+
+Selama beberapa dekade terakhir, banyak algoritma pengelompokan telah diusulkan. Salah satu algoritma pengelompokan yang paling terkenal adalah algoritma k-means karena kesimpulannya. Untuk menjelaskan algoritma k-means, mari kita anggap X={x1,x2,…,xn} sebagai dataset yang berisi n titik, masing-masing dijelaskan oleh d fitur numerik. Diberikan jumlah klaster yang diinginkan k, algoritma k-means bertujuan untuk meminimalkan fungsi tujuan berikut:
+
+$$P(U,Z) = \sum_{l=1}^k\sum_{i=1}^n u_{il} \Vert \textbf{x}_i-\textbf{z}_l\Vert^2,$$
+
+di mana U=(uil)n×k adalah matriks partisi berukuran n×k, Z={z1,z2,…,zk} adalah himpunan pusat klaster, dan ∥⋅∥ adalah norma L2 atau jarak Euclidean. Matriks partisi U memenuhi kondisi-kondisi berikut:
+
+$$u_{il}\in \{0,1\},\quad i=1,2,\ldots,n,\:l=1,2,\ldots,k,
+\sum_{l=1}^k u_{il}=1,\quad i=1,2,\ldots,n.$$
+
+### Teknik Konfirmatori
+Teknik analisis data konfirmatori meliputi alat statistik tradisional untuk inferensi, signifikansi, dan kepercayaan.
+
+#### Model Linier
+
+Model linier, juga disebut model regresi linier, bertujuan untuk menggunakan fungsi linier untuk mendekati hubungan antara variabel dependen dan variabel independen. Model regresi linier disebut model regresi linier sederhana jika hanya ada satu variabel independen. Ketika lebih dari satu variabel independen terlibat, model regresi linier disebut model regresi linier berganda.
+
+Misalkan $X$ dan $Y$ mewakili variabel independen dan dependen, secara berturut-turut. Untuk $i=1,2,…,n$, misalkan $(x_i,y_i)$ adalah nilai yang diamati dari $(X,Y)$ dalam kasus ke-i. Maka model regresi linier sederhana dinyatakan sebagai berikut (Frees 2009):
+
+$y_i  = \beta_0 + \beta_1 x_i + \epsilon_i,\quad i=1,2,\ldots,n,$
+
+di mana $β_0$ dan $β_1$ adalah parameter dan $ε_i$ adalah variabel acak yang mewakili kesalahan untuk kasus ke-i.
+Ketika terdapat beberapa variabel independen, digunakan model regresi linier berganda berikut ini:
+
+$y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik} + \epsilon_i,$
+
+di mana $β_0$, $β_1$, ..., $β_k$ adalah parameter yang tidak diketahui yang akan diestimasi.
+Model regresi linier umumnya membuat asumsi berikut:
+
+-	$x_i1, xi2, ..., xik$ adalah variabel nonstokastik.
+-	$Var (yi) = σ^2$, di mana $Var (yi)$ menunjukkan varian dari $y_i$.
+-	$y1, y2, ..., yn$ adalah variabel acak yang independen.
+Untuk tujuan mendapatkan pengujian dan pernyataan kepercayaan dengan sampel kecil, juga dibuat asumsi normalitas yang kuat berikut ini:
+-	$ϵ1, ϵ2, ..., ϵn$ berdistribusi secara normal.
+
+
+#### Model General Linear
+
+Model general linear (GLM) adalah model yang diawasi yang memperluas regresi linear dengan memungkinkan komponen linear terkait dengan variabel respons melalui fungsi tautan dan dengan memungkinkan varians setiap pengukuran menjadi fungsi dari nilai prediksinya. Model ini terdiri dari keluarga model regresi yang luas yang mencakup model regresi linear sebagai kasus khusus. Dalam GLM, rata-rata dari respons (yaitu, variabel dependen) diasumsikan sebagai fungsi kombinasi linear dari variabel penjelas, yaitu:
+
+$$\mu_i = \mathrm{E}~[y_i],
+\eta_i = \textbf{x}_i'\boldsymbol{\beta} = g(\mu_i),$$
+
+di mana  $x_i=(1,x_i1,x_i2,…,x_ik)$′  adalah vektor nilai regresor,  μi  adalah respons rata-rata untuk kasus ke-i, dan  ηi  adalah komponen sistematis dari GLM. Fungsi  $g(⋅)$  diketahui dan disebut fungsi tautan. Respons rata-rata dapat bervariasi di antara pengamatan dengan memungkinkan beberapa parameter berubah. Namun, parameter regresi  $β$  diasumsikan sama di antara pengamatan yang berbeda.
+GLM membuat asumsi sebagai berikut:
+
+-	$xi1,xi2,…,xin$  adalah variabel nonstokastik.
+-	$y1,y2,…,yn$  adalah independen.
+-	Variabel dependen diasumsikan mengikuti distribusi dari keluarga eksponensial linear.
+-	Varians variabel dependen tidak diasumsikan konstan tetapi merupakan fungsi dari rata-ratanya, yaitu,
+Seperti yang dapat kita lihat dari spesifikasi di atas, GLM menyediakan kerangka kerja yang menyatukan untuk menangani berbagai jenis variabel dependen, termasuk variabel diskrit dan kontinu.
+
+#### Model Berbasis Pohon
+
+Pohon keputusan, juga dikenal sebagai model berbasis pohon, melibatkan pembagian ruang prediktor (yaitu, ruang yang terbentuk oleh variabel independen) menjadi sejumlah wilayah sederhana dan menggunakan nilai rata-rata atau modus wilayah tersebut untuk prediksi (Breiman et al. 1984). Terdapat dua jenis model berbasis pohon: pohon klasifikasi dan pohon regresi. Ketika variabel dependen bersifat kategorikal, model pohon yang dihasilkan disebut pohon klasifikasi. Ketika variabel dependen bersifat kontinu, model pohon yang dihasilkan disebut pohon regresi.
+
+Proses pembangunan pohon klasifikasi serupa dengan pembangunan pohon regresi. Di sini kita hanya menjelaskan secara singkat bagaimana membangun pohon regresi. Untuk melakukannya, ruang prediktor dibagi menjadi wilayah yang saling tidak tumpang tindih sehingga fungsi tujuan berikut ini dapat diminimalkan:
+
+$$f(R_1,R_2,\ldots,R_J) = \sum_{j=1}^J \sum_{i=1}^n I_{R_j}(\textbf{x}_i)(y_i - \mu_j)^2$$
+
+dapat diminimalkan, di mana  $I$ adalah fungsi indikator,  $R_j$ menyatakan himpunan indeks observasi yang termasuk dalam kotak ke- $j$,  $μ_j$  adalah rerata respons observasi dalam kotak ke- $j$ ,  $x_i$  adalah vektor nilai prediktor untuk observasi ke- $i$ , dan  $y_i$  adalah nilai respons untuk observasi ke- $i$ .
+
+Dalam hal akurasi prediksi, pohon keputusan umumnya tidak mencapai tingkat model regresi dan klasifikasi lainnya. Namun, model berbasis pohon dapat melampaui model linier ketika hubungan antara respons dan prediktor bersifat nonlinier.
+
+## R Function
+
+$$\small{
+\begin{array}{lll} \hline
+\text{Data Analysis Task} & \text{R Package} & \text{R Function} \\\hline
+\text{Descriptive Statistics} & \texttt{base} & \texttt{summary}\\
+\text{Principal Component Analysis} & \texttt{stats} & \texttt{prcomp} \\
+\text{Data Clustering} & \texttt{stats} & \texttt{kmeans}, \texttt{hclust} \\
+\text{Fitting Distributions} & \texttt{MASS} & \texttt{fitdistr} \\
+\text{Linear Regression Models} & \texttt{stats} & \texttt{lm} \\
+\text{Generalized Linear Models} & \texttt{stats} & \texttt{glm} \\
+\text{Regression Trees} & \texttt{rpart} & \texttt{rpart} \\
+\text{Survival Analysis} & \texttt{survival} & \texttt{survfit} \\
+\hline
+\end{array}
+}$$
+
+Tabel di atas menampilkan beberapa fungsi R untuk tugas analisis data yang berbeda. Pembaca dapat mengunjungi dokumentasi R untuk mempelajari cara menggunakan fungsi-fungsi ini. Ada juga paket R lain yang melakukan hal-hal serupa. Namun, fungsi-fungsi yang tercantum dalam tabel ini memberikan titik awal yang baik bagi pembaca untuk melakukan analisis data dalam R.
+
+## Summary
+
+Pada bab ini, memberikan gambaran tingkat tinggi tentang analisis data dengan memperkenalkan jenis data, struktur data, penyimpanan data, sumber data, proses analisis data, dan teknik analisis data. Secara khusus, menyajikan berbagai aspek analisis data. Selain itu, bab ini menyediakan beberapa situs web yang dapat memperoleh dataset dunia nyata untuk mengasah keterampilan analisis data. Bab ini juga mencantumkan beberapa paket dan fungsi R yang dapat digunakan untuk melakukan berbagai tugas analisis data.
