@@ -557,9 +557,8 @@ ${\rm E} (S_N)=\mu~~~~{\rm and}~~~~{\rm Var} (S_N)=\phi\mu^{p}.$
 
 Hal ini memungkinkan kita untuk menggunakan distribusi Tweedie dengan model linear umum untuk memodelkan klaim. Perlu juga disebutkan dua kasus pembatas dari model Tweedie: $p→1$ menghasilkan distribusi Poisson dan $p → 2$ menghasilkan distribusi gamma. Dengan demikian, model Tweedie mengakomodasi situasi di antara distribusi gamma dan Poisson, yang secara intuitif masuk akal karena merupakan jumlah Poisson dari variabel acak gamma.
 
-=======
 
-## 5.4 Menghitung Distribusi Klaim Agregat
+## Menghitung Distribusi Klaim Agregat
 
 Bagian ini membahas dua pendekatan praktis untuk menghitung distribusi kerugian agregat, yaitu metode rekursif dan simulasi.
 

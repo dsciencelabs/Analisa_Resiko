@@ -333,19 +333,3 @@ $$
 $$
 
 dimana $C$ adalah konstanta. Disini $a_1(\tau)=a_1$ dan $a_2(\tau)=a_2$ adalah fungsi dari parameter $\gamma$.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> b4abc2c5d190cd1ea18e0207c8734a0abd5b5641

@@ -52,9 +52,99 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -115,16 +205,13 @@
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
 <li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -200,12 +287,11 @@
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
+<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
+<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
+<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> Menghitung Distribusi Klaim Agregat</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
 <li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
@@ -234,8 +320,8 @@
 <li class="chapter" data-level="6.3.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation-and-bootstrap"><i class="fa fa-check"></i><b>6.3.3</b> Cross-Validation and Bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#importance-sampling"><i class="fa fa-check"></i><b>6.4</b> Importance Sampling</a></li>
-<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> 6.5.1 Metropolis Hastings</a></li>
-<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> 6.5.2 Gibbs Sampler</a></li>
+<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> Metropolis Hastings</a></li>
+<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> Gibbs Sampler</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
 <ul>
@@ -386,9 +472,8 @@
 <ul>
 <li class="chapter" data-level="14.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#variable-types"><i class="fa fa-check"></i><b>14.1</b> Variable Types</a>
 <ul>
-<li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#qualitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Qualitative Variables</a></li>
-<li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.2</b> Quantitative Variables</a></li>
-<li class="chapter" data-level="14.1.3" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.3</b> Multivariate Variables</a></li>
+<li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Quantitative Variables</a></li>
+<li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.2</b> Multivariate Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#classic-measures-of-scalar-associations"><i class="fa fa-check"></i><b>14.2</b> Classic Measures of Scalar Associations</a>
 <ul>
@@ -416,7 +501,6 @@
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="dependence-modeling.html"><a href="dependence-modeling.html#why-is-dependence-modeling-important"><i class="fa fa-check"></i><b>14.6</b> Why is Dependence Modeling Important?</a></li>
 <li class="chapter" data-level="14.7" data-path="dependence-modeling.html"><a href="dependence-modeling.html#further-resources-and-contributors-1"><i class="fa fa-check"></i><b>14.7</b> Further Resources and Contributors</a></li>
-<li class="chapter" data-level="14.8" data-path="dependence-modeling.html"><a href="dependence-modeling.html#referensi"><i class="fa fa-check"></i><b>14.8</b> Referensi</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
 <ul>
@@ -788,7 +872,7 @@ Dengan basis data terperinci ini, dalam prinsipnya mudah untuk menjumlahkan deta
 <div id="paparan-dan-premi" class="section level3 hasAnchor" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> Paparan dan Premi<a href="premium-foundations.html#paparan-dan-premi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Periode pelaporan keuangan adalah jangka waktu yang tetap dalam kalender; kami menggunakan 1 Januari hingga 31 Desember untuk contoh dalam buku ini meskipun periode pelaporan lain juga umum. Periode pelaporan adalah tetap tetapi kebijakan dapat dimulai kapan saja selama setahun. Meskipun semua kebijakan memiliki durasi kontrak yang sama selama satu tahun (misalnya), karena waktu mulai yang berbeda, kebijakan dapat berakhir kapan saja selama pelaporan keuangan. Gambar 7.1 menunjukkan empat kebijakan yang menggambarkan. Perlu adanya standar mengenai jenis-jenis ukuran yang paling berguna untuk merangkum pengalaman dalam periode pelaporan tertentu karena perbedaan waktu mulai dan berakhir ini.</p>
-<p><img src="images/tujuhsatu.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/tujuhsatu.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Beberapa ukuran paparan yang umum digunakan adalah:
 - Paparan tertulis, jumlah paparan pada kebijakan yang diterbitkan (ditulis) selama periode yang dimaksud,
 - Paparan diperoleh, unit paparan yang benar-benar terpapar risiko selama periode tersebut, yaitu, di mana perlindungan telah diberikan
@@ -841,7 +925,7 @@ E. &amp; 900 &amp; 750 &amp; 900 \\\hline
 <p>Teks ini akan mengikuti poin kedua. Namun, ketika membaca sumber lain, Anda perlu berhati-hati dalam memahami definisi untuk istilah kerugian dan klaim.</p>
 <p>Untuk menggambarkan terminologi tambahan, sangat membantu untuk mengikuti kronologi klaim saat berkembang. Pada Gambar 7.2, klaim terjadi pada waktu t1 dan perusahaan asuransi diberitahu pada waktu t3. Ada celah yang panjang antara kejadian dan pemberitahuan sehingga akhir periode pelaporan keuangan perusahaan, yang dikenal sebagai tanggal penilaian, terjadi (t2) sebelum kerugian dilaporkan. Dalam kasus ini, klaim dikatakan terjadi tetapi belum dilaporkan pada tanggal penilaian ini.</p>
 <p>Setelah pemberitahuan klaim, mungkin ada satu atau lebih pembayaran kerugian. Tidak semua pembayaran dapat dilakukan sebelum tanggal penilaian berikutnya (t4). Saat klaim berkembang, akhirnya perusahaan menganggap kewajiban keuangannya terhadap klaim telah selesai dan menyatakan klaim ditutup. Namun, mungkin muncul fakta baru dan klaim harus dibuka kembali, yang menghasilkan pembayaran kerugian tambahan sebelum ditutup kembali.</p>
-<p><img src="images/tujuhdua.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/tujuhdua.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <ul>
 <li>Tanggal kecelakaan - tanggal kejadian yang menyebabkan klaim. Ini juga dikenal sebagai tanggal kerugian atau tanggal kejadian.</li>
 <li>Tanggal laporan - tanggal dimana perusahaan asuransi menerima pemberitahuan tentang klaim. Klaim yang saat ini tidak diketahui oleh perusahaan asuransi disebut sebagai klaim yang tidak dilaporkan atau klaim yang terjadi tetapi belum dilaporkan (IBNR).</li>
@@ -970,7 +1054,7 @@ Premium_{experience}
 <h3><span class="header-section-number">7.6.1</span> Kurva Lorenz Klasik<a href="premium-foundations.html#kurva-lorenz-klasik" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Dalam ekonomi kesejahteraan, umumnya digunakan untuk membandingkan distribusi melalui kurva Lorenz, yang dikembangkan oleh Max Otto Lorenz (Lorenz 1905). Kurva Lorenz adalah grafik proporsi populasi pada sumbu horizontal dan fungsi distribusi yang diminati pada sumbu vertikal. Biasanya digunakan untuk mewakili distribusi pendapatan. Ketika distribusi pendapatan sepenuhnya sejalan dengan distribusi populasi, kurva Lorenz menghasilkan garis 45 derajat yang dikenal sebagai garis kesetaraan. Karena grafik membandingkan dua fungsi distribusi, kurva Lorenz juga dapat dianggap sebagai jenis plot pp yang diperkenalkan dalam Bagian 4.1.2.1. Luas antara kurva Lorenz dan garis kesetaraan adalah ukuran ketidaksesuaian antara distribusi pendapatan dan distribusi populasi. Dua kali lipat dari luas ini dikenal sebagai indeks Gini, yang diperkenalkan oleh Corrado Gini pada tahun 1912.</p>
 <p>Contoh - Kurva Lorenz Klasik. Untuk contoh asuransi, Gambar 7.3 menunjukkan distribusi kerugian asuransi. Gambar ini didasarkan pada sampel acak 2000 kerugian. Panel sebelah kiri menunjukkan histogram yang condong ke kanan dari kerugian. Panel sebelah kanan menunjukkan kurva Lorenz yang sesuai, yang juga menunjukkan distribusi yang condong. Misalnya, panah menandai titik di mana 60 persen pemegang polis memiliki 30 persen kerugian. Garis 45 derajat adalah garis kesetaraan; jika setiap pemegang polis memiliki kerugian yang sama, maka distribusi kerugian akan berada pada garis ini. Indeks Gini, dua kali lipat dari luas antara kurva Lorenz dan garis 45 derajat, adalah 37,6 persen untuk kumpulan data ini.</p>
-<p><img src="images/tujuhtiga.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/tujuhtiga.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 </div>
 <div id="performance-curve-and-a-gini-statistic" class="section level3 hasAnchor" number="7.6.2">
 <h3><span class="header-section-number">7.6.2</span> Performance Curve and a Gini Statistic<a href="premium-foundations.html#performance-curve-and-a-gini-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -994,12 +1078,11 @@ Premium_{experience}
 \tag{7.6}
 \end{equation}\]</span></p>
 <p>di mana <span class="math inline">\(I(⋅\)</span>) adalah fungsi indikator, menghasilkan 1 jika peristiwa benar dan nol sebaliknya. Untuk nilai tertentu <span class="math inline">\(s\)</span>, <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi premi kurang dari atau sama dengan <span class="math inline">\(s\)</span>, dan <span class="math inline">\(\hat{F}_P(s)\)</span> memberikan proporsi kerugian bagi pemegang kebijakan dengan premi kurang dari atau sama dengan <span class="math inline">\(s\)</span> . Grafik <span class="math inline">\(\left(\hat{F}_P(s),\hat{F}_{L}(s) \right)\)</span> dikenal sebagai kurva kinerja.</p>
-<p><img src="images/tujuhempat.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>`Gambar di atas membandingkan Kurva Lorenz dengan kurva kinerja. Panel sebelah kiri menunjukkan kurva Lorenz. Sumbu horizontal adalah proporsi kumulatif pemegang kebijakan (0, 0,2, 0,4, 0,6, 0,8, 1,0) dan sumbu vertikal adalah proporsi kumulatif kerugian (0, 2/36, 7/36, 13/36, 19/39, 36/36). Untuk kurva Lorenz, Anda pertama-tama mengurutkan berdasarkan ukuran kerugian (yang ternyata sama urutannya dengan premi untuk dataset sederhana ini). Gambar ini menunjukkan pemisahan besar antara distribusi kerugian dan pemegang kebijakan.</p>
-<pre><code>Panel sebelah kanan menunjukkan kurva kinerja. Karena pengamatan diurutkan berdasarkan premi, titik pertama setelah titik asal (dibaca dari kiri ke kanan) adalah (2/34, 2/36). Titik kedua adalah (6/34, 7/36), dengan pola berlanjut. Dari gambar, kita melihat bahwa ada sedikit pemisahan antara kerugian dan premi.</code></pre>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/tujuhempat.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
+<p>Gambar di atas membandingkan Kurva Lorenz dengan kurva kinerja. Panel sebelah kiri menunjukkan kurva Lorenz. Sumbu horizontal adalah proporsi kumulatif pemegang kebijakan (0, 0,2, 0,4, 0,6, 0,8, 1,0) dan sumbu vertikal adalah proporsi kumulatif kerugian (0, 2/36, 7/36, 13/36, 19/39, 36/36). Untuk kurva Lorenz, Anda pertama-tama mengurutkan berdasarkan ukuran kerugian (yang ternyata sama urutannya dengan premi untuk dataset sederhana ini). Gambar ini menunjukkan pemisahan besar antara distribusi kerugian dan pemegang kebijakan.</p>
+<p>Panel sebelah kanan menunjukkan kurva kinerja. Karena pengamatan diurutkan berdasarkan premi, titik pertama setelah titik asal (dibaca dari kiri ke kanan) adalah (2/34, 2/36). Titik kedua adalah (6/34, 7/36), dengan pola berlanjut. Dari gambar, kita melihat bahwa ada sedikit pemisahan antara kerugian dan premi.</p>
 <p>Kurva kinerja dapat membantu analis dalam merancang portofolio yang menguntungkan bagi perusahaan asuransi. Sebagai contoh, anggaplah bahwa s dipilih untuk mewakili persentil ke-95 dari distribusi premi. Maka, sumbu horizontal, F^P(s), mewakili fraksi premi untuk portofolio ini dan sumbu vertikal, F^L(s), mewakili fraksi kerugian untuk portofolio ini. Ketika mengembangkan prinsip premi, para analis ingin menghindari situasi yang tidak menguntungkan dan mencapai keuntungan, atau setidaknya impas.</p>
-<pre><code>Denominator dalam persamaan (7.6) adalah $\sum_{i=1}^n \mathrm{E}~ [y_i]=\sum_{i=1}^n \mu_i$</code></pre>
-<p>Dengan demikian, jika prinsip premi dipilih sedemikian rupa sehingga Pi=μi, maka kita dapat mengantisipasi hubungan yang erat antara distribusi premi dan kerugian, menghasilkan garis 45 derajat. Garis 45 derajat menunjukkan kesetaraan antara kerugian dan premi, situasi impas yang menjadi tolak ukur dalam penetapan harga asuransi.</p>
+<p>Denominator dalam persamaan (7.6) adalah <span class="math inline">\(\sum_{i=1}^n \mathrm{E}~ [y_i]=\sum_{i=1}^n \mu_i\)</span>. Dengan demikian, jika prinsip premi dipilih sedemikian rupa sehingga Pi=μi, maka kita dapat mengantisipasi hubungan yang erat antara distribusi premi dan kerugian, menghasilkan garis 45 derajat. Garis 45 derajat menunjukkan kesetaraan antara kerugian dan premi, situasi impas yang menjadi tolak ukur dalam penetapan harga asuransi.</p>
 <p><strong>Gini Statistic</strong></p>
 <p>Kurva Lorenz klasik menunjukkan proporsi pemegang kebijakan pada sumbu horizontal dan fungsi distribusi kerugian pada sumbu vertikal. Kurva kinerja meluaskan kurva Lorenz klasik dalam dua cara, (1) melalui pengurutan risiko dan harga berdasarkan harga dan (2) dengan memperbolehkan variasi harga berdasarkan pengamatan. Kami menyimpulkan kurva kinerja dengan cara yang sama seperti kurva Lorenz klasik menggunakan statistik Gini, yang didefinisikan sebagai dua kali luas antara kurva dan garis 45 derajat. Analis mencari kurva kinerja yang diurutkan yang mendekati melalui garis 45 derajat; ini memiliki pemisahan yang paling sedikit antara distribusi kerugian dan premi dan oleh karena itu memiliki statistik Gini yang kecil.</p>
 <p>Secara khusus, statistik Gini dapat dihitung sebagai berikut. Anggaplah bahwa kurva kinerja empiris diberikan oleh <span class="math inline">\({(a0=0,b0=0),(a1,b1),…, (an=1,bn=1)}\)</span> untuk sampel <span class="math inline">\(n\)</span> pengamatan. Di sini, kita menggunakan <span class="math inline">\(b_j = \hat{F}_{L}(P_j)\)</span>. Maka, statistik Gini empiris adalah:</p>

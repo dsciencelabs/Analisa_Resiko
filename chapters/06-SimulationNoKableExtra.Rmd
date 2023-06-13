@@ -1181,7 +1181,7 @@ Oleh karena itu, dari sifat ini, dapat melihat bahwa tidak selalu mungkin untuk 
 
 Dengan mempertimbangkan kasus vektor Gaussian terkendala: kami ingin menghasilkan pasangan acak dari vektor acak $X$ , tetapi kami hanya tertarik pada kasus di mana jumlah komposisinya cukup besar, yang dapat ditulis $X^T1>m$ untuk nilai nyata $m$ . Tentu saja, dimungkinkan untuk menggunakan algoritme terima-tolak, tetapi kami telah melihat bahwa ini mungkin sangat tidak efisien. Satu dapat menggunakan Metropolis Hastingsand Gibbs sampler untuk menghasilkan proses Markov dengan ukuran invarian tersebut.
 
-## 6.5.1 Metropolis Hastings
+## Metropolis Hastings
 
 Algoritma agak sederhana untuk dihasilkan dari $f$ : dapat dimulai dengan nilai layak $x_1$ . Kemudian, pada langkah $t$ , kita perlu menentukan kernel transisi : diberikan $x_t$ , kita memerlukan distribusi bersyarat untuk $X_{t+1}$ diberikan $x_t$ . Algoritme akan bekerja dengan baik jika distribusi bersyarat itu dapat dengan mudah disimulasikan. dengan $π(⋅|xt)$ menunjukkan probabilitas itu.
 
@@ -1251,7 +1251,7 @@ qqnorm(simx)
 acf(simx,lag=100,lwd=2,col="light blue")
 ```
 
-## 6.5.2 Gibbs Sampler
+## Gibbs Sampler
 
 Dapat mempertimbangkan beberapa vektor $X=(X_1,⋯,X_d)$ dengan komponen independen, $X_i∼E(λ_i)$ . Selanjutnya mengambil sampel untuk sampel dari $X$ yang diberikan $X^T1>s$ untuk beberapa ambang batas $s>0$ .
 

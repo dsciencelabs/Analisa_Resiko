@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bab 4 Model Selection and Estimation | Analisis Resiko</title>
   <meta name="description" content="Loss Data Analytics adalah teks yang interaktif, online, tersedia secara bebas. - Versi online akan berisi banyak objek interaktif (kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya) untuk mempromosikan pembelajaran yang lebih dalam. - Sebagian dari buku ini akan tersedia dalam format pdf untuk pencetakan dengan biaya rendah. - Teks online akan tersedia dalam berbagai bahasa untuk mempromosikan akses ke audiens di seluruh dunia." />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bab 4 Model Selection and Estimation | Analisis Resiko" />
   <meta property="og:type" content="book" />
@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -119,6 +123,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -179,16 +205,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#estimasi-parameter"><i class="fa fa-check"></i><b>2.4.1</b> Estimasi Parameter</a></li>
 <li class="chapter" data-level="2.4.2" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-frekuensi-mle"><i class="fa fa-check"></i><b>2.4.2</b> Distribusi Frekuensi MLE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.4.3</b> Zero Truncation or Modification</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#other-frequency-distributions"><i class="fa fa-check"></i><b>2.5</b> Other Frequency Distributions</a>
+<li class="chapter" data-level="2.5" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.5</b> Distribusi Campuran</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#zero-truncation-or-modification"><i class="fa fa-check"></i><b>2.5.1</b> Zero Truncation or Modification</a></li>
+<li class="chapter" data-level="2.5.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.5.1</b> Contoh Soal Ujian Aktuaria</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#distribusi-campuran"><i class="fa fa-check"></i><b>2.6</b> Distribusi Campuran</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="frequency-modeling.html"><a href="frequency-modeling.html#contoh-soal-ujian-aktuaria"><i class="fa fa-check"></i><b>2.6.1</b> Contoh Soal Ujian Aktuaria</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.7</b> Goodnes of Fit</a></li>
+<li class="chapter" data-level="2.6" data-path="frequency-modeling.html"><a href="frequency-modeling.html#goodnes-of-fit"><i class="fa fa-check"></i><b>2.6</b> Goodnes of Fit</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modeling-loss-severity.html"><a href="modeling-loss-severity.html"><i class="fa fa-check"></i><b>3</b> Modeling Loss Severity</a>
 <ul>
@@ -264,18 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#moments-and-distribution"><i class="fa fa-check"></i><b>5.2</b> Moments and Distribution</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#stop-loss-insurance"><i class="fa fa-check"></i><b>5.2.1</b> Stop-loss Insurance</a></li>
-<<<<<<< HEAD
-<li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question-1"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question</a></li>
-<li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.3</b> Actuarial Exam Question - Continued</a></li>
-<li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.4</b> Analytic Results</a></li>
-<li class="chapter" data-level="5.2.5" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.5</b> Tweedie Distribution</a></li>
-=======
 <li class="chapter" data-level="5.2.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#actuarial-exam-question---continued"><i class="fa fa-check"></i><b>5.2.2</b> Actuarial Exam Question - Continued</a></li>
 <li class="chapter" data-level="5.2.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#analytic-results"><i class="fa fa-check"></i><b>5.2.3</b> Analytic Results</a></li>
 <li class="chapter" data-level="5.2.4" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#tweedie-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Tweedie Distribution</a></li>
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> 5.4 Menghitung Distribusi Klaim Agregat</a>
+<li class="chapter" data-level="5.3" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#menghitung-distribusi-klaim-agregat"><i class="fa fa-check"></i><b>5.3</b> Menghitung Distribusi Klaim Agregat</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#metode-rekursif"><i class="fa fa-check"></i><b>5.3.1</b> metode rekursif</a></li>
 <li class="chapter" data-level="5.3.2" data-path="aggregate-loss-models.html"><a href="aggregate-loss-models.html#simulasi"><i class="fa fa-check"></i><b>5.3.2</b> simulasi</a></li>
@@ -304,8 +320,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.3" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#cross-validation-and-bootstrap"><i class="fa fa-check"></i><b>6.3.3</b> Cross-Validation and Bootstrap</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#importance-sampling"><i class="fa fa-check"></i><b>6.4</b> Importance Sampling</a></li>
-<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> 6.5.1 Metropolis Hastings</a></li>
-<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> 6.5.2 Gibbs Sampler</a></li>
+<li class="chapter" data-level="6.5" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#metropolis-hastings"><i class="fa fa-check"></i><b>6.5</b> Metropolis Hastings</a></li>
+<li class="chapter" data-level="6.6" data-path="simulation-and-resampling.html"><a href="simulation-and-resampling.html#gibbs-sampler"><i class="fa fa-check"></i><b>6.6</b> Gibbs Sampler</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="premium-foundations.html"><a href="premium-foundations.html"><i class="fa fa-check"></i><b>7</b> Premium Foundations</a>
 <ul>
@@ -328,6 +344,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="premium-foundations.html"><a href="premium-foundations.html#development-and-trending"><i class="fa fa-check"></i><b>7.5</b> Development and Trending</a>
 <ul>
 <li class="chapter" data-level="7.5.1" data-path="premium-foundations.html"><a href="premium-foundations.html#paparan-dan-premi"><i class="fa fa-check"></i><b>7.5.1</b> Paparan dan Premi</a></li>
+<li class="chapter" data-level="7.5.2" data-path="premium-foundations.html"><a href="premium-foundations.html#kerugian-klaim-dan-pembayaran"><i class="fa fa-check"></i><b>7.5.2</b> Kerugian, Klaim, dan Pembayaran</a></li>
+<li class="chapter" data-level="7.5.3" data-path="premium-foundations.html"><a href="premium-foundations.html#membandingkan-metode-premi-murni-dan-rasio-kerugian"><i class="fa fa-check"></i><b>7.5.3</b> Membandingkan Metode Premi Murni dan Rasio Kerugian</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="premium-foundations.html"><a href="premium-foundations.html#selecting-a-premium"><i class="fa fa-check"></i><b>7.6</b> Selecting a Premium</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="premium-foundations.html"><a href="premium-foundations.html#kurva-lorenz-klasik"><i class="fa fa-check"></i><b>7.6.1</b> Kurva Lorenz Klasik</a></li>
+<li class="chapter" data-level="7.6.2" data-path="premium-foundations.html"><a href="premium-foundations.html#performance-curve-and-a-gini-statistic"><i class="fa fa-check"></i><b>7.6.2</b> Performance Curve and a Gini Statistic</a></li>
+<li class="chapter" data-level="7.6.3" data-path="premium-foundations.html"><a href="premium-foundations.html#validasi-di-luar-sampel"><i class="fa fa-check"></i><b>7.6.3</b> Validasi di Luar Sampel</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="risk-classification.html"><a href="risk-classification.html"><i class="fa fa-check"></i><b>8</b> Risk Classification</a>
@@ -448,14 +472,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="14.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#variable-types"><i class="fa fa-check"></i><b>14.1</b> Variable Types</a>
 <ul>
-<<<<<<< HEAD
-<li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#qualitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Qualitative Variables</a></li>
-<li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.2</b> Quantitative Variables</a></li>
-<li class="chapter" data-level="14.1.3" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.3</b> Multivariate Variables</a></li>
-=======
 <li class="chapter" data-level="14.1.1" data-path="dependence-modeling.html"><a href="dependence-modeling.html#quantitative-variables"><i class="fa fa-check"></i><b>14.1.1</b> Quantitative Variables</a></li>
 <li class="chapter" data-level="14.1.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#multivariate-variables"><i class="fa fa-check"></i><b>14.1.2</b> Multivariate Variables</a></li>
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="dependence-modeling.html"><a href="dependence-modeling.html#classic-measures-of-scalar-associations"><i class="fa fa-check"></i><b>14.2</b> Classic Measures of Scalar Associations</a>
 <ul>
@@ -483,10 +501,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="dependence-modeling.html"><a href="dependence-modeling.html#why-is-dependence-modeling-important"><i class="fa fa-check"></i><b>14.6</b> Why is Dependence Modeling Important?</a></li>
 <li class="chapter" data-level="14.7" data-path="dependence-modeling.html"><a href="dependence-modeling.html#further-resources-and-contributors-1"><i class="fa fa-check"></i><b>14.7</b> Further Resources and Contributors</a></li>
-<<<<<<< HEAD
-=======
-<li class="chapter" data-level="14.8" data-path="dependence-modeling.html"><a href="dependence-modeling.html#referensi"><i class="fa fa-check"></i><b>14.8</b> Referensi</a></li>
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 </ul></li>
 <li class="chapter" data-level="15" data-path="appendix-a-review-of-statistical-inference.html"><a href="appendix-a-review-of-statistical-inference.html"><i class="fa fa-check"></i><b>15</b> Appendix A: Review of Statistical Inference</a>
 <ul>
@@ -665,9 +679,9 @@ F_n(x) &amp;=
 1 &amp; \text{ for }\ x \geq 30,
 \end{array}
 \right.\end{aligned}\]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="model-selection-and-estimation.html#cb1-1" aria-hidden="true" tabindex="-1"></a>(xExample <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="fu">rep</span>(<span class="dv">15</span>,<span class="dv">3</span>),<span class="dv">20</span>,<span class="fu">rep</span>(<span class="dv">23</span>,<span class="dv">4</span>),<span class="dv">30</span>))</span>
-<span id="cb1-2"><a href="model-selection-and-estimation.html#cb1-2" aria-hidden="true" tabindex="-1"></a>PercentilesxExample <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(xExample)</span>
-<span id="cb1-3"><a href="model-selection-and-estimation.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(PercentilesxExample, <span class="at">main=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;x&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="model-selection-and-estimation.html#cb9-1" aria-hidden="true" tabindex="-1"></a>(xExample <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="fu">rep</span>(<span class="dv">15</span>,<span class="dv">3</span>),<span class="dv">20</span>,<span class="fu">rep</span>(<span class="dv">23</span>,<span class="dv">4</span>),<span class="dv">30</span>))</span>
+<span id="cb9-2"><a href="model-selection-and-estimation.html#cb9-2" aria-hidden="true" tabindex="-1"></a>PercentilesxExample <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(xExample)</span>
+<span id="cb9-3"><a href="model-selection-and-estimation.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(PercentilesxExample, <span class="at">main=</span><span class="st">&quot;&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;x&quot;</span>)</span></code></pre></div>
 </div>
 <div id="quartiles-percentiles-and-quantiles" class="section level4 hasAnchor" number="4.1.1.3">
 <h4><span class="header-section-number">4.1.1.3</span> Quartiles, Percentiles and Quantiles<a href="model-selection-and-estimation.html#quartiles-percentiles-and-quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -683,7 +697,7 @@ F(q_F-) \le q \le F(q_F)
 <p>Gambar 4.3 menunjukkan tiga kasus untuk fungsi distribusi. Panel kiri sesuai dengan kasus kontinu yang baru saja dibahas. Panel tengah menampilkan titik lompatan yang serupa dengan yang telah kita lihat dalam fungsi distribusi empiris Gambar 4.1 . Untuk nilai <span class="math inline">\(q\)</span> ditampilkan di panel ini, kami masih memiliki nilai kuantil yang unik <span class="math inline">\(q_F\)</span> . Meskipun ada banyak nilai Q seperti yang <span class="math inline">\(F(q_F-) \le q \le F(q_F)\)</span> , untuk nilai tertentu dari <span class="math inline">\(q\)</span> , hanya ada satu solusi untuk persamaan (4.1) . Panel kanan menggambarkan situasi di mana kuantil tidak dapat ditentukan secara unik untuk <span class="math inline">\(q\)</span> ditampilkan karena ada berbagai <span class="math inline">\(q_F\)</span> persamaan yang memuaskan (4.1) .</p>
 <p><em>Contoh 4.1.2. Kumpulan Data Mainan: Lanjutan.</em> Tentukan kuantil yang sesuai dengan persentil ke-20, ke-50, dan ke-95.</p>
 <p>Solusi . Perhatikan Gambar 4.1 . Kasus <span class="math inline">\(q=0.20\)</span> sesuai dengan panel tengah Gambar Gambar 4.3 , jadi persentil ke-20 adalah 15. Kasus <span class="math inline">\(q=0.50\)</span> sesuai dengan panel kanan, jadi mediannya adalah angka antara 20 dan 23 inklusif. Banyak paket perangkat lunak menggunakan rata-rata 21,5 (misalnya R, seperti yang terlihat di bawah). Untuk persentil ke-95, solusinya adalah 30. Kita dapat melihat dari Gambar 4.1 bahwa 30 juga sesuai dengan persentil ke-99 dan ke-99,99.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="model-selection-and-estimation.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(xExample, <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>), <span class="at">type=</span><span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="model-selection-and-estimation.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(xExample, <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>), <span class="at">type=</span><span class="dv">6</span>)</span></code></pre></div>
 <p>Dengan mengambil rata-rata tertimbang antara pengamatan data, kuantil empiris yang dihaluskan dapat menangani kasus seperti panel kanan pada Gambar 4.3 . Itu Q kuantil empiris yang dihaluskan didefinisikan sebagai</p>
 <p><span class="math display">\[\hat{\pi}_q = (1-h) X_{(j)} + h X_{(j+1)}\]</span></p>
 <p>Di mana <span class="math inline">\(j=\lfloor(n+1)q\rfloor\)</span> , Dan<span class="math inline">\(X_{(1)}, \ldots, X_{(n)}\)</span> adalah nilai yang diurutkan (dikenal sebagai statistik urutan ) yang sesuai dengan <span class="math inline">\(X_1, \ldots, X_n\)</span>. (Ingat bahwa tanda kurung ⌊ ⋅ ⌋ adalah fungsi lantai yang menunjukkan nilai bilangan bulat terbesar.) Perhatikan bah wa <span class="math inline">\(\hat{\pi}_q\)</span>$ hanyalah sebuah interpolasi linear antara <span class="math inline">\(X_{( j )}\)</span> dan <span class="math inline">\(X_{(j+1)}\)</span>.</p>
@@ -727,16 +741,16 @@ f_n(x) = \frac{1}{nb} \sum_{i=1}^n w\left(\frac{x-X_i}{b}\right) ,
 }\]</span></p>
 <p>Di Sini, <span class="math inline">\(\phi(\cdot)\)</span> adalah fungsi kepadatan normal standar. Seperti yang akan kita lihat pada contoh berikut, pilihan bandwidth <span class="math inline">\(B\)</span> hadir dengan tradeoff bias-varians antara mencocokkan fitur distribusi lokal dan mengurangi volatilitas.</p>
 <p><em>Contoh 4.1.4. Dana Properti.</em> Gambar 4.4 menunjukkan histogram (dengan persegi panjang abu-abu yang diarsir) dari klaim properti logaritmik dari tahun 2010. Kurva tebal (biru) mewakili kerapatan kernel Gaussian di mana bandwidth dipilih secara otomatis menggunakan aturan ad hoc berdasarkan ukuran sampel dan volatilitas data ini . Untuk dataset ini, bandwidth ternyata b = 0,3255 . Sebagai perbandingan, kurva putus-putus (merah) menunjukkan penaksir densitas dengan lebar pita sama dengan 0,1 dan kurva halus berwarna hijau menggunakan lebar pita 1. Sebagaimana diantisipasi, lebar pita yang lebih kecil (0,1) menunjukkan mengambil rata-rata lokal dengan data yang lebih sedikit sehingga kita mendapatkan ide yang lebih baik dari rata-rata lokal, tetapi dengan harga volatilitas yang lebih tinggi. Sebaliknya, bandwidth yang lebih besar (1) memperhalus fluktuasi lokal, menghasilkan kurva yang lebih halus yang mungkin melewatkan gangguan pada rata-rata lokal. Untuk aplikasi aktuaria, kami terutama menggunakan estimator densitas kernel untuk mendapatkan kesan visual cepat dari data. Dari perspektif ini, Anda cukup menggunakan aturan ad hoc default untuk pemilihan bandwidth, mengetahui bahwa Anda memiliki kemampuan untuk mengubahnya tergantung pada situasi yang dihadapi.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="model-selection-and-estimation.html#cb3-1" aria-hidden="true" tabindex="-1"></a>ClaimLev <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Data/CLAIMLEVEL.csv&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>); <span class="co">#nrow(ClaimLev); # 6258</span></span>
-<span id="cb3-2"><a href="model-selection-and-estimation.html#cb3-2" aria-hidden="true" tabindex="-1"></a>ClaimData<span class="ot">&lt;-</span><span class="fu">subset</span>(ClaimLev,Year<span class="sc">==</span><span class="dv">2010</span>);     <span class="co">#2010 subset</span></span>
-<span id="cb3-3"><a href="model-selection-and-estimation.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Density Comparison</span></span>
-<span id="cb3-4"><a href="model-selection-and-estimation.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">main=</span><span class="st">&quot;&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">35</span>),<span class="at">xlab=</span><span class="st">&quot;Log Expenditures&quot;</span>, <span class="at">freq=</span><span class="cn">FALSE</span>, <span class="at">col=</span><span class="st">&quot;lightgray&quot;</span>)</span>
-<span id="cb3-5"><a href="model-selection-and-estimation.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim)), <span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-6"><a href="model-selection-and-estimation.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span><span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span>
-<span id="cb3-7"><a href="model-selection-and-estimation.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span>.<span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lty=</span><span class="dv">3</span>)</span>
-<span id="cb3-8"><a href="model-selection-and-estimation.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;b=0.3255 (default)&quot;</span>, <span class="st">&quot;b=0.1&quot;</span>, <span class="st">&quot;b=1.0&quot;</span>), <span class="at">lty=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>), <span class="at">lwd=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="dv">1</span>,<span class="dv">1</span>),</span>
-<span id="cb3-9"><a href="model-selection-and-estimation.html#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>), <span class="at">cex=</span><span class="dv">1</span>)</span>
-<span id="cb3-10"><a href="model-selection-and-estimation.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#density(log(ClaimData$Claim))$bw   ##default bandwidth</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="model-selection-and-estimation.html#cb11-1" aria-hidden="true" tabindex="-1"></a>ClaimLev <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Data/CLAIMLEVEL.csv&quot;</span>, <span class="at">header=</span><span class="cn">TRUE</span>); <span class="co">#nrow(ClaimLev); # 6258</span></span>
+<span id="cb11-2"><a href="model-selection-and-estimation.html#cb11-2" aria-hidden="true" tabindex="-1"></a>ClaimData<span class="ot">&lt;-</span><span class="fu">subset</span>(ClaimLev,Year<span class="sc">==</span><span class="dv">2010</span>);     <span class="co">#2010 subset</span></span>
+<span id="cb11-3"><a href="model-selection-and-estimation.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Density Comparison</span></span>
+<span id="cb11-4"><a href="model-selection-and-estimation.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">main=</span><span class="st">&quot;&quot;</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">35</span>),<span class="at">xlab=</span><span class="st">&quot;Log Expenditures&quot;</span>, <span class="at">freq=</span><span class="cn">FALSE</span>, <span class="at">col=</span><span class="st">&quot;lightgray&quot;</span>)</span>
+<span id="cb11-5"><a href="model-selection-and-estimation.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim)), <span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">lwd=</span><span class="fl">2.5</span>)</span>
+<span id="cb11-6"><a href="model-selection-and-estimation.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span><span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb11-7"><a href="model-selection-and-estimation.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(<span class="fu">log</span>(ClaimData<span class="sc">$</span>Claim), <span class="at">bw=</span>.<span class="dv">1</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lty=</span><span class="dv">3</span>)</span>
+<span id="cb11-8"><a href="model-selection-and-estimation.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;b=0.3255 (default)&quot;</span>, <span class="st">&quot;b=0.1&quot;</span>, <span class="st">&quot;b=1.0&quot;</span>), <span class="at">lty=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>), <span class="at">lwd=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="dv">1</span>,<span class="dv">1</span>),</span>
+<span id="cb11-9"><a href="model-selection-and-estimation.html#cb11-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>), <span class="at">cex=</span><span class="dv">1</span>)</span>
+<span id="cb11-10"><a href="model-selection-and-estimation.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#density(log(ClaimData$Claim))$bw   ##default bandwidth</span></span></code></pre></div>
 <p>Estimator densitas nonparametrik, seperti estimator kernel, sering digunakan dalam praktik. Konsep ini juga dapat diperluas untuk memberikan versi halus dari fungsi distribusi empiris. Mengingat definisi penaksir densitas kernel, penaksir kernel dari fungsi distribusi dapat ditemukan sebagai</p>
 <p><span class="math display">\[\begin{aligned}
 \tilde{F}_n(x) = \frac{1}{n} \sum_{i=1}^n W\left(\frac{x-X_i}{b}\right).\end{aligned}\]</span></p>
@@ -913,7 +927,7 @@ m_2 = \frac{1}{n} \sum_{i=1}^n X_i^2 = 136154.6 .\]</span></p>
 <div id="pemilihan-model-iteratif" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Pemilihan Model Iteratif<a href="model-selection-and-estimation.html#pemilihan-model-iteratif" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Dalam memeriksa data secara grafis, membuat hipotesis struktur model, dan membandingkan data dengan model kandidat untuk merumuskan model yang lebih baik. Box ( 1980 ) menggambarkan ini sebagai proses berulang yang ditunjukkan pada Gambar dibawah ini</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.2.1-1png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.2.1-1png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.2.1-1png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Proses berulang ini memberikan resep yang berguna untuk menyusun tugas menentukan model untuk mewakili satu set data.</p>
 <p>Langkah pertama, tahap perumusan model, dilakukan dengan memeriksa data secara grafis dan menggunakan pengetahuan hubungan sebelumnya, seperti dari teori ekonomi atau praktik industri.
 Langkah kedua dalam iterasi adalah fitting berdasarkan asumsi model yang ditentukan. Asumsi ini harus konsisten dengan data untuk menggunakan model secara valid.
@@ -963,70 +977,23 @@ subsampel, meringkas dengan statistik out-of-sample. Jadi, rangkumlah ini K stat
 Pr(X_i \in (c_{j-1},c_j])=F(c_j)-F(c_{j-1})
 \]</span></p>
 <p>Fungsi massa probabilitas yang sesuai untuk pengamatan adalah</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
-<<<<<<< HEAD
-<pre><code>
-Sekarang, tentukan $N_J$ menjadi jumlah pengamatan yang termasuk dalam $J$th interval, $(C_{j − 1},C_J]$. Jadi, fungsi kemungkinan (sehubungan dengan parameter) $θ$) adalah
-
-
-src=&quot;https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-2.png?raw=true&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; margin-top: 10px;&quot;&gt;
-
-Dan fungsi log-kemungkinan adalah
-
-src=&quot;https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-3png?raw=true&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; margin-top: 10px;&quot;&gt;
-
-Diberikan data :
-1. Kerugian mengikuti distribusi eksponensial dengan rata-rata $θ$.
-2. Sebuah sampel acak dari 20 kerugian didistribusikan sebagai berikut:
-
-src=&quot;https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3-1.png?raw=true&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; margin-top: 10px;&quot;&gt;
-
-Hitung estimasi kemungkinan maksimum dari $θ$
-
-
-$$
-=======
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Sekarang, tentukan <span class="math inline">\(N_J\)</span> menjadi jumlah pengamatan yang termasuk dalam <span class="math inline">\(J\)</span>th interval, <span class="math inline">\((C_{j − 1},C_J]\)</span>. Jadi, fungsi kemungkinan (sehubungan dengan parameter) <span class="math inline">\(θ\)</span>) adalah</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-2.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-2.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-2.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Dan fungsi log-kemungkinan adalah</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-3png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-3png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.3.1-3.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Diberikan data :
 1. Kerugian mengikuti distribusi eksponensial dengan rata-rata <span class="math inline">\(θ\)</span>.
 2. Sebuah sampel acak dari 20 kerugian didistribusikan sebagai berikut:</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Hitung estimasi kemungkinan maksimum dari <span class="math inline">\(θ\)</span></p>
 <p><span class="math display">\[
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 \begin{aligned}
 L(\theta) &amp;= F(1000)^7[F(2000)-F(1000)]^6[1-F(2000)]^7 \\
 &amp;= (1-e^{-1000/\theta})^7(e^{-1000/\theta} - e^{-2000/\theta})^6(e^{-2000/\theta})^7 \\
 &amp;= (1-p)^7(p-p^2)^6(p^2)^7 \\
 &amp;= p^{20}(1-p)^{13}
 \end{aligned}
-<<<<<<< HEAD
-$$
-
-di mana $p = e^{-1000/θ}$. Memaksimalkan ekspresi ini sehubungan dengan $p$ setara dengan memaksimalkan kemungkinan terhadap $θ$. Maksimum terjadi pada $p=\frac{20}{33}$. sehingga $\hat{\theta}=\frac{-1000}{\log(20/33)}= 1996.90$
-
-
-#### Cencored Data
-
-Penyensoran terjadi ketika kita hanya mencatat nilai yang terbatas dari sebuah observasi. Bentuk yang paling umum adalah penyensoran kanan, di mana kita mencatat nilai yang lebih kecil dari variabel dependen &quot;benar&quot; dan nilai penyensoran. Dengan menggunakan notasi, dengan `X` mewakili hasil yang diminati, seperti kerugian akibat kejadian yang diasuransikan atau waktu hingga kejadian. Dengan $C_U$ menyatakan jumlah penyensoran. Dengan pengamatan tersensor kanan, mencatat $X_U^* = min(X, C_U) = X∧C_U$. Lalu juga mencatat apakah penyensoran telah terjadi atau tidak. $δ_U = I(X≤C_U)$ adalah variabel biner yang bernilai 0 jika penyensoran terjadi dan 1 jika tidak, yaitu, $δ_U$ menunjukkan apakah X tidak disensor atau tidak.
-
-Sebagai contoh $C_U$ dapat merepresentasikan batas atas pertanggungan sebuah polis asuransi. Kerugian dapat melebihi jumlah $C_U$ tetapi perusahaan asuransi hanya memiliki $C_U$ dalam catatannya sebagai jumlah yang dibayarkan dan tidak memiliki jumlah kerugian aktual $X$ dalam catatannya.
-
-Sama halnya dengan penyensoran kiri, dapat mencatat yang lebih besar dari variabel yang diminati dan variabel yang disensor. Jika $C_L$ digunakan untuk merepresentasikan jumlah penyensoran, maka mencatat $X_L^*=max(X,C_L)$ bersama dengan indikator penyensoran $δ_L=I(X&gt;C_L)$.
-
-Sebagai contoh,  reasuradur akan menanggung kerugian penanggung yang lebih besar dari $C_L$ ini berarti reasuradur bertanggung jawab atas kelebihan $X_L^*$ pada $C_L$. Dengan menggunakan notasi, kerugian reasuradur adalah $Y = X_L^*L-C_L$ Untuk melihat hal ini, pertama-tama pertimbangkan kasus di mana pemegang polis mengalami kerugian $X &lt; C_L$. Kemudian, penanggung akan membayar seluruh klaim dan $Y=C_L-C_L=0$ tidak ada kerugian bagi reasuradur. Sebaliknya, jika kerugian $X≥C_L$ maka $Y = X-C_L$ merupakan klaim yang ditahan oleh reasuradur. Dengan kata lain, jika terjadi kerugian, reasuradur mencatat jumlah sebenarnya jika melebihi batas $C_L$ dan jika tidak, hanya mencatat akan mengalami kerugian sebesar 0.
-
-#### Truncated data
-
-Pengamatan yang disensor dicatat untuk studi, meskipun dalam bentuk yang terbatas. Sebaliknya, hasil yang terpotong adalah jenis data yang hilang. Sebuah hasil berpotensi terpotong ketika ketersediaan pengamatan bergantung pada hasil.
-
-Dalam asuransi, biasanya pengamatan terpotong kiri pada $C_L$ ketika jumlahnya adalah
-
-$$
-=======
 \]</span></p>
 <p>di mana <span class="math inline">\(p = e^{-1000/θ}\)</span>. Memaksimalkan ekspresi ini sehubungan dengan <span class="math inline">\(p\)</span> setara dengan memaksimalkan kemungkinan terhadap <span class="math inline">\(θ\)</span>. Maksimum terjadi pada <span class="math inline">\(p=\frac{20}{33}\)</span>. sehingga <span class="math inline">\(\hat{\theta}=\frac{-1000}{\log(20/33)}= 1996.90\)</span></p>
 </div>
@@ -1042,7 +1009,6 @@ $$
 <p>Pengamatan yang disensor dicatat untuk studi, meskipun dalam bentuk yang terbatas. Sebaliknya, hasil yang terpotong adalah jenis data yang hilang. Sebuah hasil berpotensi terpotong ketika ketersediaan pengamatan bergantung pada hasil.</p>
 <p>Dalam asuransi, biasanya pengamatan terpotong kiri pada <span class="math inline">\(C_L\)</span> ketika jumlahnya adalah</p>
 <p><span class="math display">\[
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 \begin{aligned}
 Y &amp;=
 \left\{
@@ -1051,28 +1017,6 @@ Y &amp;=
 X &amp; X &gt; C_L
 \end{array}
 \right.\end{aligned}
-<<<<<<< HEAD
-$$
-
-Dengan kata lain, jika X kurang dari ambang batas $C_L$ maka ia tidak teramati. 
-
-$C_L$ dapat merepresentasikan deductible dari sebuah polis asuransi. Jika kerugian yang diasuransikan kurang dari deductible, maka perusahaan asuransi mungkin tidak mengamati atau mencatat kerugian sama sekali. Jika kerugian melebihi deductible, maka kelebihan $X-C_L$ adalah klaim yang ditanggung oleh penanggung. Dimana dapat didefinisikan kerugian per pembayaran sebagai
-
-$$
-\begin{aligned}
-Y^{P} = \left\{ \begin{matrix}
-\text{Undefined} &amp; X \le d \\
-X - d &amp; X &gt; d 
-\end{matrix} \right. 
-\end{aligned}
-$$
-
-sehingga jika kerugian melebihi deductible, kami mencatat jumlah kelebihan $X-d$. Hal ini sangat penting ketika mempertimbangkan jumlah yang akan dibayarkan oleh perusahaan asuransi. Namun, untuk tujuan estimasi pada bagian ini, tidak terlalu penting jika kita mengurangkan konstanta yang diketahui seperti $C_L = d$. Sehingga, untuk variabel terpotong $Y$ kita menggunakan konvensi yang lebih sederhana dan tidak mengurangkan $d$.
-
-Demikian pula untuk data terpotong kanan, jika X melebihi ambang batas $C_U$ maka data tersebut tidak diobservasi. Dalam hal ini, jumlahnya adalah
-
-$$
-=======
 \]</span></p>
 <p>Dengan kata lain, jika X kurang dari ambang batas <span class="math inline">\(C_L\)</span> maka ia tidak teramati.</p>
 <p><span class="math inline">\(C_L\)</span> dapat merepresentasikan deductible dari sebuah polis asuransi. Jika kerugian yang diasuransikan kurang dari deductible, maka perusahaan asuransi mungkin tidak mengamati atau mencatat kerugian sama sekali. Jika kerugian melebihi deductible, maka kelebihan <span class="math inline">\(X-C_L\)</span> adalah klaim yang ditanggung oleh penanggung. Dimana dapat didefinisikan kerugian per pembayaran sebagai</p>
@@ -1087,7 +1031,6 @@ X - d &amp; X &gt; d
 <p>sehingga jika kerugian melebihi deductible, kami mencatat jumlah kelebihan <span class="math inline">\(X-d\)</span>. Hal ini sangat penting ketika mempertimbangkan jumlah yang akan dibayarkan oleh perusahaan asuransi. Namun, untuk tujuan estimasi pada bagian ini, tidak terlalu penting jika kita mengurangkan konstanta yang diketahui seperti <span class="math inline">\(C_L = d\)</span>. Sehingga, untuk variabel terpotong <span class="math inline">\(Y\)</span> kita menggunakan konvensi yang lebih sederhana dan tidak mengurangkan <span class="math inline">\(d\)</span>.</p>
 <p>Demikian pula untuk data terpotong kanan, jika X melebihi ambang batas <span class="math inline">\(C_U\)</span> maka data tersebut tidak diobservasi. Dalam hal ini, jumlahnya adalah</p>
 <p><span class="math display">\[
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 \begin{aligned}
 Y &amp;=
 \left\{
@@ -1096,19 +1039,6 @@ X &amp; X \le C_U \\
 \text{we do not observe }X &amp; X &gt; C_U.
 \end{array}
 \right.\end{aligned}
-<<<<<<< HEAD
-$$
-
-Contoh klasik dari pemotongan dari kanan termasuk X sebagai ukuran jarak ke bintang. Ketika jaraknya melebihi tingkat tertentu $C_U$ maka bintang tersebut tidak lagi dapat diamati.
-
-Gambar dibawah ini membandingkan pengamatan yang terpotong dan tersensor. Nilai-nilai X yang lebih besar dari batas penyensoran &quot;atas&quot; $C_U$ tidak teramati sama sekali (tersensor kanan), sedangkan nilai X yang lebih kecil dari batas pemotongan &quot;bawah&quot; $C_L$ tetap diamati, tetapi diamati sebagai $C_L$ daripada nilai X yang sebenarnya (tersensor kiri).
-
-#### Parametric Estimation using Cencored and Truncated data
-
-Untuk mempermudah, dapat diasumsikan jumlah penyensoran tidak acak dan hasil yang kontinu X . Sebagai permulaan, pertimbangkan kasus data tersensor kanan di mana merekam $X_U^* = min(X, C_U) = X∧C_U$) dan indikator penyensoran $δ = I(X≤C_U)$ . Jika penyensoran terjadi sehingga $δ=0$ maka $X&gt;C_U$ dan peluangnya adalah $Pr(X&gt;C_U)=1-F(C_U)$. Jika penyensoran tidak terjadi sehingga $δ = 1$ maka $X≤C_U$ dan likelihoodnya adalah $f(x)$ . Ringkasnya, didapatkan likelihood dari sebuah pengamatan tunggal sebagai
-
-$$
-=======
 \]</span></p>
 <p>Contoh klasik dari pemotongan dari kanan termasuk X sebagai ukuran jarak ke bintang. Ketika jaraknya melebihi tingkat tertentu <span class="math inline">\(C_U\)</span> maka bintang tersebut tidak lagi dapat diamati.</p>
 <p>Gambar dibawah ini membandingkan pengamatan yang terpotong dan tersensor. Nilai-nilai X yang lebih besar dari batas penyensoran “atas” <span class="math inline">\(C_U\)</span> tidak teramati sama sekali (tersensor kanan), sedangkan nilai X yang lebih kecil dari batas pemotongan “bawah” <span class="math inline">\(C_L\)</span> tetap diamati, tetapi diamati sebagai <span class="math inline">\(C_L\)</span> daripada nilai X yang sebenarnya (tersensor kiri).</p>
@@ -1117,34 +1047,10 @@ $$
 <h4><span class="header-section-number">4.3.1.4</span> Parametric Estimation using Cencored and Truncated data<a href="model-selection-and-estimation.html#parametric-estimation-using-cencored-and-truncated-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Untuk mempermudah, dapat diasumsikan jumlah penyensoran tidak acak dan hasil yang kontinu X . Sebagai permulaan, pertimbangkan kasus data tersensor kanan di mana merekam <span class="math inline">\(X_U^* = min(X, C_U) = X∧C_U\)</span>) dan indikator penyensoran <span class="math inline">\(δ = I(X≤C_U)\)</span> . Jika penyensoran terjadi sehingga <span class="math inline">\(δ=0\)</span> maka <span class="math inline">\(X&gt;C_U\)</span> dan peluangnya adalah <span class="math inline">\(Pr(X&gt;C_U)=1-F(C_U)\)</span>. Jika penyensoran tidak terjadi sehingga <span class="math inline">\(δ = 1\)</span> maka <span class="math inline">\(X≤C_U\)</span> dan likelihoodnya adalah <span class="math inline">\(f(x)\)</span> . Ringkasnya, didapatkan likelihood dari sebuah pengamatan tunggal sebagai</p>
 <p><span class="math display">\[
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
 \begin{aligned}
 \left\{
 \begin{array}{ll}
 1-F(C_U) &amp; \text{if }\delta=0 \\
-<<<<<<< HEAD
-f(x) &amp; \text{if } \delta = 1 
-\end{array}
-\right. = \left\{ f(x)\right\}^{\delta} \left\{1-F(C_U)\right\}^{1-\delta} .
-\end{aligned}
-$$
-
-Ekspresi ruas kanan memungkinkan dalam menyajikan peluang dengan lebih ringkas. Sekarang, untuk sampel ke-i dengan ukuran n , peluangnya adalah
-
-$$
-\begin{aligned}
-L(\theta) = 
-\prod_{i=1}^n \left\{ f(x_i)\right\}^{\delta_i} \left\{1-F(C_{Ui})\right\}^{1-\delta_i} = \prod_{\delta_i=1} f(x_i) \prod_{\delta_i=0} \{1-F(C_{Ui})\}
-\end{aligned}
-$$
-
-dengan waktu penyensoran potensial ${(C_{U1},...,C_{Un})}$ . Di sini, notasi &quot;$∏{δi} = 1$&quot; berarti mengambil hasil kali dari pengamatan yang tidak disensor, dan demikian pula untuk &quot;$∏{δi} = 0$ &quot; 
-
-
-Di sisi lain, data terpotong ditangani dalam inferensi kemungkinan melalui probabilitas bersyarat. Secara khusus, kontribusi likelihood dapat disesuaikan dengan membaginya dengan probabilitas bahwa variabel tersebut diamati. Sebagai rangkuman, kami memiliki kontribusi berikut pada fungsi likelihood untuk enam jenis hasil:
-
-src=&quot;https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;display: block; margin-left: auto; margin-right: auto; margin-top: 10px;&quot;&gt;</code></pre>
-=======
 f(x) &amp; \text{if } \delta = 1
 \end{array}
 \right. = \left\{ f(x)\right\}^{\delta} \left\{1-F(C_U)\right\}^{1-\delta} .
@@ -1159,8 +1065,7 @@ L(\theta) =
 \]</span></p>
 <p>dengan waktu penyensoran potensial <span class="math inline">\({(C_{U1},...,C_{Un})}\)</span> . Di sini, notasi “<span class="math inline">\(∏{δi} = 1\)</span>” berarti mengambil hasil kali dari pengamatan yang tidak disensor, dan demikian pula untuk “<span class="math inline">\(∏{δi} = 0\)</span>”</p>
 <p>Di sisi lain, data terpotong ditangani dalam inferensi kemungkinan melalui probabilitas bersyarat. Secara khusus, kontribusi likelihood dapat disesuaikan dengan membaginya dengan probabilitas bahwa variabel tersebut diamati. Sebagai rangkuman, kami memiliki kontribusi berikut pada fungsi likelihood untuk enam jenis hasil:</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
->>>>>>> 5d613b23d7fd4fbad2af82680ec5f1e0bea7881e
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/table4-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Untuk hasil yang diketahui dan data yang disensor, kemungkinannya adalah</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1221,7 +1126,7 @@ f_n(x) = F^{\prime}n(x) = \frac{F_n(c_j)-F_n(c{j-1})}{c_j - c_{j-1}} \ \ \  \tex
 \]</span></p>
 <p>Example 4.3.4. Actuarial Exam Question</p>
 <p>Diberikan informasi berikut ini mengenai jumlah klaim untuk 100 klaim:</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.4-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.4-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.4-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Dengan menggunakan ogive, hitunglah estimasi probabilitas bahwa klaim yang dipilih secara acak adalah antara 2000 dan 6000.</p>
 <p>Pada batas-batasnya, fungsi distribusi empiris didefinisikan dengan cara yang biasa, sehingga memiliki</p>
 <p><span class="math inline">\(F_{100}(1000) = 0.16, \ F_{100}(3000)=0.38, \ F_{100}(5000)=0.63, \ F_{100}(10000)=0.81\)</span></p>
@@ -1274,7 +1179,7 @@ F_{100}(6000) &amp;=0.8F_{100}(5000)+0.2F_{100}(10000) = 0.8(0.63)+0.2(0.81)=0.6
 <p>dimana + menunjukkan bahwa kerugian telah melebihi batas polis.</p>
 <p>Dengan menggunakan estimator batas produk Kaplan-Meier, hitunglah probabilitas bahwa kerugian pada suatu polis melebihi 11, <span class="math inline">\(\hat{S}(11)\)</span></p>
 <p>Terdapat empat waktu kejadian (pengamatan yang tidak disensor). Untuk setiap waktu tj kita dapat menghitung jumlah kejadian sj dan himpunan risiko <span class="math inline">\(R_j\)</span> sebagai berikut:</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.6-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.6-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/example4.3.6-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Dengan demikian, estimasi Kaplan-Meier dari S(11) adalah</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1321,7 +1226,7 @@ F_{100}(6000) &amp;=0.8F_{100}(5000)+0.2F_{100}(10000) = 0.8(0.63)+0.2(0.81)=0.6
 <p>Sampai saat ini, metode inferensial kami berfokus pada pengaturan frequentist , di mana sampel diambil berulang kali dari suatu populasi. Vektor parameter θ adalah tetap belum diketahui, sedangkan hasil X adalah realisasi variabel acak.</p>
 <p>Sebaliknya, di bawah kerangka Bayesian , kami melihat parameter model dan data sebagai variabel acak. Kami tidak yakin tentang parameternya θ dan gunakan alat probabilitas untuk mencerminkan ketidakpastian ini.</p>
 <p>Dibawah ini merupakan rumus aturan bayes:</p>
-<p>src=“<a href="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.4.1-1.png?raw=true" class="uri">https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.4.1-1.png?raw=true</a>” width=“300” height=“300” style=“display: block; margin-left: auto; margin-right: auto; margin-top: 10px;”&gt;</p>
+<p><img src="https://github.com/dsciencelabs/Analisa_Resiko/blob/main/images/4.4.1-1.png?raw=true" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;"></p>
 <p>Di mana,</p>
 <ul>
 <li>Pr(parameters): adalah distribusi parameter, yang dikenal sebagai distribusi sebelumnya .</li>

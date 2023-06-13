@@ -153,6 +153,12 @@ paparan-risiko
 faktor-penilaian
 development-and-trending
 paparan-dan-premi
+kerugian-klaim-dan-pembayaran
+membandingkan-metode-premi-murni-dan-rasio-kerugian
+selecting-a-premium
+kurva-lorenz-klasik
+performance-curve-and-a-gini-statistic
+validasi-di-luar-sampel
 risk-classification
 introduction-1
 poisson-regression-model
@@ -334,13 +340,3 @@ limited-expected-values
 functions
 illustrative-graph
 appendix-e-conventions-for-notation
-other-frequency-distributions
-actuarial-exam-question-1
-qualitative-variables
-kerugian-klaim-dan-pembayaran
-membandingkan-metode-premi-murni-dan-rasio-kerugian
-selecting-a-premium
-kurva-lorenz-klasik
-performance-curve-and-a-gini-statistic
-validasi-di-luar-sampel
-referensi
